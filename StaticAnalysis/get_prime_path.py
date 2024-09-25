@@ -2,10 +2,19 @@ import coverage
 import subprocess
 import os
 import sys
+import json
 import pygraphviz as pgv
 import networkx as nx
 from py2cfgPlus.py2cfgPlus.builder import CFGBuilder
 # please do include folder py2cfgPlus in the project path as it's built with local modifications based on original py2cfg
+
+def initialize_jsonl(filename):
+    with open(filename, 'w') as file:
+        file.write('\n')
+
+def write_jsonl(filename, data):
+    with open(filename, 'a') as file:
+        file.write(json.dumps(data) + '\n')
 
 def extract_all_simple_paths(graph):
     nodes = list(graph.nodes)
@@ -30,25 +39,33 @@ def generate_prime_paths(cfg):
     prime_paths = [path for path in all_paths if is_prime_path(path, all_paths)]
     return prime_paths
 
-def get_prime_paths(python_file):
+def get_prime_paths(python_file, logsdir, cfg_id):
     cfg_builder = CFGBuilder()
     cfg = cfg_builder.build_from_file('CFG', python_file)
-    cfg.build_visual(f'CFG_{python_file}', 'dot')
-    cfg.build_visual(f'CFG_{python_file}', 'png')
-    G = pgv.AGraph(f"CFG_{python_file}.dot")
+    cfg.build_visual(f'{cfg_id}_CFG', 'dot')
+    cfg.build_visual(f'{cfg_id}_CFG', 'png')
+    G = pgv.AGraph(f"{cfg_id}_CFG.dot")
     nx_graph = nx.nx_agraph.from_agraph(G)
     # for node in nx_graph.nodes:
     #     print(nx_graph.nodes[node]['label'])
     #     print(nx_graph.nodes[node]['linenum'])
-    #     exit(0)
     
     prime_paths = generate_prime_paths(nx_graph)
     prime_paths_stats = []
+    prime_paths_linenums = []
     for path in prime_paths:
         stats = [nx_graph.nodes[node].get('label') for node in path]
+        linenums = [int(nx_graph.nodes[node].get('linenum')) for node in path]
         prime_paths_stats.append(stats)
-        print("Prime Path:", stats)
-    return prime_paths, prime_paths_stats, nx_graph
+        # print("Prime Path:", linenums) # stats
+        prime_paths_linenums.append(linenums)
+        
+    os.makedirs(os.path.dirname(logsdir), exist_ok=True)
+    cfg_png = f'{logsdir}/{cfg_id}_CFG.png'
+    cfg_dot = f'{logsdir}/{cfg_id}_CFG.dot'
+    os.rename(f'{cfg_id}_CFG.png', cfg_png)
+    os.rename(f'{cfg_id}_CFG.dot', cfg_dot)
+    return prime_paths, prime_paths_stats, prime_paths_linenums, nx_graph, cfg_png, cfg_dot
 
 
 def run_coverage(script):
@@ -68,7 +85,7 @@ def run_coverage(script):
         for line in executed_lines:
             covered_statements_linenos.append(line)
         missing_statements_linenos = cov.analysis(filename)[2]
-        print(f"Covered statements in {filename}: {sorted(executed_lines)} Missing statements: {sorted(missing_statements_linenos)}")
+        # print(f"Covered statements in {filename}: {sorted(executed_lines)} Missing statements: {sorted(missing_statements_linenos)}")
     
     subprocess.run(['coverage', 'erase'], check=True)
 
@@ -90,8 +107,9 @@ def write_file(file_path,content):
     f.close()
     
 def get_prime_path_coverage(prime_paths, missing_statements_linenos, combination_file, nx_graph):
-    # missing_statements = [get_statement_from_line(combination_file, lineno) for lineno in missing_statements_linenos]
+    missing_statements = [get_statement_from_line(combination_file, lineno) for lineno in missing_statements_linenos]
     covered_paths = []
+    missing_paths_linenums = []
     for prime_path in prime_paths:
         prime_path_linenos = [int(nx_graph.nodes[node]['linenum']) for node in prime_path]
         path_missed = bool(set(prime_path_linenos) & set(missing_statements_linenos))
@@ -99,11 +117,12 @@ def get_prime_path_coverage(prime_paths, missing_statements_linenos, combination
         if not path_missed:
             covered_paths.append(prime_path)
         else:
-            print("Missing paths (linenums):", prime_path_linenos)
+            # print("Missing paths (linenums):", prime_path_linenos)
+            missing_paths_linenums.append(prime_path_linenos)
             
-    print("#Covered prime paths:", len(covered_paths), "\n#Total prime paths:",len(prime_paths))
+    # print("#Covered prime paths:", len(covered_paths), "\n#Total prime paths:",len(prime_paths))
     
-    return covered_paths
+    return covered_paths, missing_paths_linenums
 
 def get_statement_from_line(file_path, line_number):
     try:
@@ -119,13 +138,66 @@ def get_statement_from_line(file_path, line_number):
         return f"Error: The file {file_path} was not found."
     except Exception as e:
         return f"An error occurred: {e}"
+    
+def generate_coverage(python_file, input_file, humaneval_id, logsdir):
+    os.makedirs(os.path.dirname(logsdir), exist_ok=True)
+    combination_file = f"{logsdir}/{python_file}"
+    write_file(combination_file, f"{read_file(python_file)}\n{read_file(input_file)}")
+    prime_paths, prime_paths_stats, prime_paths_linenums, nx_graph, cfg_png, cfg_dot = get_prime_paths(combination_file, logsdir, humaneval_id)
+    covered_statements_linenos, missing_statements_linenos = run_coverage(combination_file)
+    covered_paths, missing_paths_linenums = get_prime_path_coverage(prime_paths, missing_statements_linenos, combination_file, nx_graph)
+    # print(prime_paths, prime_paths_stats, prime_paths_linenums)
+    # print(covered_statements_linenos, missing_statements_linenos)
+    # print(covered_paths, missing_paths_linenums)
+    results = {
+        "humaneval_id": humaneval_id,
+        "python_file": python_file.replace("/home/yang/humaneval_inputs/", ""),
+        "input_file": input_file.replace("/home/yang/humaneval_inputs/", ""),
+        "prime_paths_nodes": prime_paths,
+        "prime_paths_statements": prime_paths_stats,
+        "prime_paths_linenumbers": prime_paths_linenums,
+        "covered_statements_linenumbers": covered_statements_linenos,
+        "missing_statements_linenumbers": missing_statements_linenos,
+        "covered_prime_paths_linenumbers": covered_paths,
+        "missing_prime_paths_linenumbers": missing_paths_linenums,
+        "num_total_prime_paths": len(prime_paths_linenums),
+        "num_covered_paths": len(covered_paths),
+        "prime_path_coverage": round(len(covered_paths)/len(prime_paths_linenums), 2),
+        "cfg_png": cfg_png,
+        "cfg_dot": cfg_dot
+    }
+    return results
+
+def main(humaneval_folder, savetojson, logsdir):
+    inputs = {}
+    for dirpath, _, files in os.walk(humaneval_folder):
+        for file in files:
+            humaneval_id = dirpath.split("/")[-1]
+            if "HumanEval_" not in humaneval_id:
+                continue
+            if humaneval_id not in inputs:
+                inputs[humaneval_id] = {"main_path": "", "input_path": ""}
+            if file == "main.py":
+                main_path = os.path.join(dirpath, file)
+                inputs[humaneval_id]["main_path"] = main_path
+            elif file == "input.txt":
+                input_path = os.path.join(dirpath, file)
+                inputs[humaneval_id]["input_path"] = input_path
+    for humaneval_id in inputs:
+        print(humaneval_id, inputs[humaneval_id])
+        try:
+            results = generate_coverage(inputs[humaneval_id]["main_path"], inputs[humaneval_id]["input_path"], humaneval_id, logsdir)
+            write_jsonl(savetojson, results)
+        except Exception as e:
+            print(humaneval_id, e)
+                
+    
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    python_file = args[0]
-    input_file = args[1]
-    combination_file = f"test_{python_file}"
-    write_file(combination_file, f"{read_file(python_file)}\n{read_file(input_file)}")
-    prime_paths, prime_paths_stats, nx_graph = get_prime_paths(combination_file)
-    covered_statements_linenos, missing_statements_linenos = run_coverage(combination_file)
-    get_prime_path_coverage(prime_paths, missing_statements_linenos, combination_file, nx_graph)
+    humaneval_folder = args[0]
+    savetojson = args[1]
+    logsdir = args[2]
+    initialize_jsonl(savetojson)
+    main(humaneval_folder, savetojson, logsdir)
+    
