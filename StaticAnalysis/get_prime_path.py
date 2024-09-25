@@ -1,3 +1,4 @@
+import ast
 import coverage
 import subprocess
 import os
@@ -55,7 +56,9 @@ def get_prime_paths(python_file, logsdir, cfg_id):
     prime_paths_linenums = []
     for path in prime_paths:
         stats = [nx_graph.nodes[node].get('label') for node in path]
-        linenums = [int(nx_graph.nodes[node].get('linenum')) for node in path]
+        linenums = []
+        for node in path:
+            linenums.extend(ast.literal_eval(nx_graph.nodes[node].get('linenum')))
         prime_paths_stats.append(stats)
         # print("Prime Path:", linenums) # stats
         prime_paths_linenums.append(linenums)
@@ -83,6 +86,7 @@ def run_coverage(script):
     for filename in cov.get_data().measured_files():
         executed_lines = cov.get_data().lines(filename)
         for line in executed_lines:
+            # print(line)
             covered_statements_linenos.append(line)
         missing_statements_linenos = cov.analysis(filename)[2]
         # print(f"Covered statements in {filename}: {sorted(executed_lines)} Missing statements: {sorted(missing_statements_linenos)}")
@@ -111,11 +115,15 @@ def get_prime_path_coverage(prime_paths, missing_statements_linenos, combination
     covered_paths = []
     missing_paths_linenums = []
     for prime_path in prime_paths:
-        prime_path_linenos = [int(nx_graph.nodes[node]['linenum']) for node in prime_path]
+        prime_path_linenos = []
+        for node in prime_path:
+            # print(nx_graph.nodes[node]['linenum'])
+            prime_path_linenos.extend(ast.literal_eval(nx_graph.nodes[node]['linenum']))
+        # prime_path_linenos = [int(nx_graph.nodes[node]['linenum']) for node in prime_path]
         path_missed = bool(set(prime_path_linenos) & set(missing_statements_linenos))
         # print(prime_path_linenos, missing_statements_linenos, path_missed)
         if not path_missed:
-            covered_paths.append(prime_path)
+            covered_paths.append(prime_path_linenos)
         else:
             # print("Missing paths (linenums):", prime_path_linenos)
             missing_paths_linenums.append(prime_path_linenos)
