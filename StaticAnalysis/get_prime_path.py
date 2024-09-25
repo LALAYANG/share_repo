@@ -5,6 +5,7 @@ import sys
 import pygraphviz as pgv
 import networkx as nx
 from py2cfgPlus.py2cfgPlus.builder import CFGBuilder
+# please do include folder py2cfgPlus in the project path as it's built with local modifications based on original py2cfg
 
 def extract_all_simple_paths(graph):
     nodes = list(graph.nodes)
