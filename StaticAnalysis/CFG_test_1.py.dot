@@ -1,0 +1,233 @@
+digraph cluster0CFG {
+	graph [bb="0,0,933.5,642",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="466.75,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="218.5,506,400.5,558",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		19	[color="#E552FF",
+			height=0.5,
+			label=has_close_elements,
+			linenum=11,
+			pos="309.5,532",
+			shape=tab,
+			style=filled,
+			width=2.2917];
+	}
+	subgraph cluster0has_close_elements {
+		graph [bb="57.5,31,925.5,489",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=has_close_elements,
+			lheight=0.21,
+			lp="491.5,477.5",
+			lwidth=2.07,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [bb="65.5,339,173.5,391",
+				color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			4	[color="#E552FF",
+				height=0.5,
+				label=enumerate,
+				linenum=3,
+				pos="119.5,365",
+				shape=tab,
+				style=filled,
+				width=1.2639];
+		}
+		subgraph cluster_5 {
+			graph [bb="322.5,256,430.5,308",
+				color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			7	[color="#E552FF",
+				height=0.5,
+				label=enumerate,
+				linenum=4,
+				pos="376.5,282",
+				shape=tab,
+				style=filled,
+				width=1.2639];
+		}
+		subgraph cluster_10 {
+			graph [bb="441.5,106,511.5,158",
+				color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			12	[color="#E552FF",
+				height=0.5,
+				label=abs,
+				linenum=6,
+				pos="476.5,132",
+				shape=tab,
+				style=filled,
+				width=0.75];
+		}
+		3	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for idx, elem in enumerate(numbers):\l",
+			linenum=3,
+			pos="309.5,440",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.5459];
+		3 -> 4	[label=calls,
+			lp="250.5,406.5",
+			pos="e,152.02,383.04 254.35,421.97 228.31,413.46 196.99,402.52 169.5,391 166.81,389.87 164.07,388.67 161.32,387.42",
+			style=dashed];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for idx2, elem2 in enumerate(numbers):\l",
+			linenum=4,
+			pos="669.5,365",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.8795];
+		3 -> 5	[color=green,
+			label="enumerate(numbers)",
+			lp="498,406.5",
+			pos="e,526.15,380.22 351.38,422 372.67,413.95 399.13,404.85 423.5,399 453.18,391.88 485.27,386.18 516.16,381.65"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum=10,
+			pos="293.5,365",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 6	[color=green,
+			pos="e,297.26,383.18 305.71,421.7 303.84,413.15 301.53,402.65 299.43,393.07"];
+		5 -> 3	[color=green,
+			pos="e,490.45,431.52 642.99,383.17 624.98,393.94 600.21,407.05 576.5,414 552.23,421.11 526.25,426.32 500.36,430.13"];
+		5 -> 7	[label=calls,
+			lp="414.5,323.5",
+			pos="e,378.1,300.27 511.16,351.98 455.33,346.42 403.77,339.21 393.5,331 387,325.8 382.98,317.92 380.49,310.05",
+			style=dashed];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if idx != idx2:\l",
+			linenum=5,
+			pos="574.5,282",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		5 -> 8	[color=green,
+			label="enumerate(numbers)",
+			lp="521,323.5",
+			pos="e,497.79,289.39 501.3,353.42 476.03,348.49 455.42,341.33 446.5,331 428.08,309.66 454.31,297.79 487.72,291.19"];
+		8 -> 5	[color=red,
+			label="(idx == idx2)",
+			lp="668.5,323.5",
+			pos="e,636.85,346.87 585.57,298.87 593.02,308.84 603.46,321.54 614.5,331 618.73,334.62 623.4,338.09 628.19,341.32"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="distance = abs(elem - elem2)\l",
+			linenum=6,
+			pos="574.5,207",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		8 -> 10	[color=green,
+			label="idx != idx2",
+			lp="620,240.5",
+			pos="e,574.5,225.18 574.5,263.7 574.5,255.25 574.5,244.87 574.5,235.37"];
+		10 -> 12	[label=calls,
+			lp="558.5,173.5",
+			pos="e,497.38,150.11 550.07,189 537.26,179.96 521.4,168.57 507.5,158 506.78,157.45 506.05,156.89 505.31,156.33",
+			style=dashed];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if distance < threshold:\l",
+			linenum=7,
+			pos="719.5,132",
+			shape=diamond,
+			style="filled,solid",
+			width=5.4894];
+		10 -> 13	[color=black,
+			pos="e,690.61,147.55 608.5,188.88 630.42,177.85 658.96,163.48 681.61,152.07"];
+		13 -> 5	[color=red,
+			label="(distance >= threshold)",
+			lp="835.5,240.5",
+			pos="e,707.74,346.98 724.98,149.72 735.68,185.59 755.55,271.49 722.5,331 720.63,334.37 718.25,337.45 715.55,340.24"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum=8,
+			pos="719.5,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		13 -> 14	[color=green,
+			label="distance < threshold",
+			lp="802.5,90.5",
+			pos="e,719.5,75.176 719.5,113.7 719.5,105.25 719.5,94.869 719.5,85.373"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef has_close_elements(numbers: List[float], threshold: float) ->bool:...\lhas_close_elements([1.0, 2.0, 3.9, \
+4.0, 5.0, 2.2], 0.3)\l",
+		linenum=1,
+		pos="309.5,615.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=8.5972];
+	1 -> 19	[label=calls,
+		lp="330.5,573.5",
+		pos="e,309.5,550.13 309.5,588.71 309.5,579.66 309.5,569.47 309.5,560.3",
+		style=dashed];
+	19 -> 3	[color=green,
+		pos="e,309.5,458.3 309.5,513.65 309.5,500.82 309.5,483.11 309.5,468.38"];
+}
