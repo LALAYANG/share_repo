@@ -1,0 +1,125 @@
+digraph cluster420CFG {
+	graph [bb="0,0,1245,393",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="622.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="521,257,611,309",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=any_int,
+			linenum="[12]",
+			pos="566,283",
+			shape=tab,
+			style=filled,
+			width=1.0278];
+	}
+	subgraph cluster2any_int {
+		graph [bb="8,31,1189,240",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=any_int,
+			lheight=0.21,
+			lp="598.5,228.5",
+			lwidth=0.81,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if isinstance(x, int) and isinstance(y, int) and isinstance(z, int):\l",
+			linenum="[6]",
+			pos="566,191",
+			shape=diamond,
+			style="filled,solid",
+			width=14.758];
+		4	[fillcolor="#FF6752",
+			height=0.5,
+			label="if x + y == z or x + z == y or y + z == x:\l",
+			linenum="[7]",
+			pos="350,124",
+			shape=diamond,
+			style="filled,solid",
+			width=9.2682];
+		3 -> 4	[color=green,
+			label="isinstance(x, int) and isinstance(y, int) and isinstance(z, int)",
+			lp="299.5,157.5",
+			pos="e,143.43,130.87 249.65,183.71 140.79,179.95 43.66,174.08 35,165 30.398,160.18 30.476,154.9 35,150 43.288,141.03 83.936,135.27 133.42,\
+131.58"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[10]",
+			pos="812,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 5	[color=red,
+			label="(not (isinstance(x, int) and isinstance(y, int) and isinstance(z, int)))",
+			lp="947.5,157.5",
+			pos="e,737.98,135.42 594.7,173.76 610.55,165.46 630.86,155.9 650,150 657.99,147.54 692.75,142.07 728.03,136.88"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[8]",
+			pos="234,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		4 -> 6	[color=green,
+			label="x + y == z or x + z == y or y + z == x",
+			lp="392,90.5",
+			pos="e,229.96,75.232 261.09,110.72 249.02,107.38 239.3,103.2 235,98 232.03,94.41 230.55,89.955 229.98,85.336"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[9]",
+			pos="571,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		4 -> 7	[color=red,
+			label="(not (x + y == z or x + z == y or y + z == x))",
+			lp="751,90.5",
+			pos="e,565.63,75.349 494.56,113.73 518.35,110.1 538.63,105.04 549,98 554.04,94.578 558.04,89.604 561.16,84.319"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef any_int(x, y, z):...\lany_int(3, 4, 7)\l",
+		linenum="[1]",
+		pos="566,366.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 12	[label=calls,
+		lp="587,324.5",
+		pos="e,566,301.13 566,339.71 566,330.66 566,320.47 566,311.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,566,209.3 566,264.65 566,251.82 566,234.11 566,219.38"];
+}

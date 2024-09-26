@@ -1,0 +1,136 @@
+digraph cluster428CFG {
+	graph [bb="0,0,1056,379",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="528,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="150,243,298,295",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=circular_shift,
+			linenum="[11]",
+			pos="224,269",
+			shape=tab,
+			style=filled,
+			width=1.8333];
+	}
+	subgraph cluster0circular_shift {
+		graph [bb="8,31,1048,226",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=circular_shift,
+			lheight=0.21,
+			lp="528,214.5",
+			lwidth=1.61,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="s = str(x)\l",
+			linenum="[5]",
+			pos="224,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if shift > len(s):\l",
+			linenum="[6]",
+			pos="224,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.2128];
+		3 -> 5	[color=black,
+			pos="e,224,142.25 224,158.73 224,156.66 224,154.5 224,152.32"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return s[::-1]\l",
+			linenum="[7]",
+			pos="142,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		5 -> 7	[color=green,
+			label="shift > len(s)",
+			lp="248,90.5",
+			pos="e,163.52,75.057 204.98,107.92 195.01,100.02 182.57,90.157 171.39,81.293"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return s[len(s) - shift:] + s[:len(s) - shift]\l",
+			linenum="[9]",
+			pos="663,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=10.482];
+		5 -> 9	[color=red,
+			label="(shift <= len(s))",
+			lp="552.5,90.5",
+			pos="e,547.99,75.028 287.83,113.55 353.06,103.89 456.06,88.641 537.65,76.56"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef circular_shift(x, shift):...\lcircular_shift(12, 1)\l",
+		linenum="[1]",
+		pos="224,352.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 13	[label=calls,
+		lp="245,310.5",
+		pos="e,224,287.13 224,325.71 224,316.66 224,306.47 224,297.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,224,195.3 224,250.65 224,237.82 224,220.11 224,205.38"];
+}

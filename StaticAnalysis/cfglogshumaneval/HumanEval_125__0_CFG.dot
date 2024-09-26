@@ -1,0 +1,124 @@
+digraph cluster714CFG {
+	graph [bb="0,0,1670,393",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="835,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="549,257,671,309",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		14	[color="#E552FF",
+			height=0.5,
+			label=split_words,
+			linenum="[12]",
+			pos="610,283",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster2split_words {
+		graph [bb="8,31,1662,240",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=split_words,
+			lheight=0.21,
+			lp="835,228.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if ' ' in txt:\l",
+			linenum="[5]",
+			pos="610,191",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return txt.split()\l",
+			linenum="[6]",
+			pos="509,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.3676];
+		3 -> 4	[color=green,
+			label="' ' in txt",
+			lp="609.5,157.5",
+			pos="e,535.54,142.08 588.08,175.9 575.3,167.67 558.88,157.1 544.32,147.73"];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if ',' in txt:\l",
+			linenum="[7]",
+			pos="806,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		3 -> 6	[color=red,
+			label="(' ' not in txt)",
+			lp="791.5,157.5",
+			pos="e,770.44,136.79 645.49,178.23 677.86,167.49 725.84,151.58 760.91,139.95"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return txt.replace(',', ' ').split()\l",
+			linenum="[8]",
+			pos="315,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=8.3117];
+		6 -> 7	[color=green,
+			label="',' in txt",
+			lp="645.5,90.5",
+			pos="e,443.57,75.02 745.3,114.96 672.94,105.39 549.74,89.076 453.66,76.357"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return len([i for i in txt if i.islower() and ord(i) % 2 == 0])\l",
+			linenum="[10]",
+			pos="1143,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=14.188];
+		6 -> 9	[color=red,
+			label="(',' not in txt)",
+			lp="1070.5,90.5",
+			pos="e,1054.6,75.044 856.09,113.34 905.59,103.79 982.66,88.927 1044.5,77.006"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef split_words(txt):...\lsplit_words('')\l",
+		linenum="[1]",
+		pos="610,366.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 14	[label=calls,
+		lp="631,324.5",
+		pos="e,610,301.13 610,339.71 610,330.66 610,320.47 610,311.3",
+		style=dashed];
+	14 -> 3	[color=green,
+		pos="e,610,209.3 610,264.65 610,251.82 610,234.11 610,219.38"];
+}

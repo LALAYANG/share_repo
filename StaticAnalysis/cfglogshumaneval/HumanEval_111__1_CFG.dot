@@ -1,0 +1,222 @@
+digraph cluster902CFG {
+	graph [bb="0,0,784,597",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="392,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="360,461,468,513",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		20	[color="#E552FF",
+			height=0.5,
+			label=histogram,
+			linenum="[19]",
+			pos="414,487",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster2histogram {
+		graph [bb="8,31,776,444",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=histogram,
+			lheight=0.21,
+			lp="392,432.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_13 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="dict1 = {}\llist1 = test.split(' ')\lt = 0\l",
+			linenum="[5, 6, 7]",
+			pos="414,386.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.8611];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in list1:\l",
+			linenum="[9]",
+			pos="414,325",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.9186];
+		3 -> 5	[color=black,
+			pos="e,414,343.14 414,359.92 414,357.71 414,355.46 414,353.23"];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if list1.count(i) > t and i != '':\l",
+			linenum="[10]",
+			pos="475,258",
+			shape=diamond,
+			style="filled,solid",
+			width=7.583];
+		5 -> 6	[color=green,
+			label=list1,
+			lp="409,291.5",
+			pos="e,402.18,271.39 392.93,306.91 386.55,299.69 382.52,291.28 388,284 389.82,281.59 391.85,279.4 394.06,277.41"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if t > 0:\l",
+			linenum="[12]",
+			pos="100,258",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		5 -> 7	[color=green,
+			pos="e,140.42,267.37 350.08,310.77 291.12,298.56 204.75,280.68 150.49,269.45"];
+		6 -> 5	[color=red,
+			label="(not (list1.count(i) > t and i != ''))",
+			lp="605,291.5",
+			pos="e,427.79,306.87 457.28,274.84 454.13,277.82 450.92,280.96 448,284 443.45,288.75 438.76,294 434.37,299.09"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="t = list1.count(i)\l",
+			linenum="[11]",
+			pos="591,191",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		6 -> 8	[color=green,
+			label="list1.count(i) > t and i != ''",
+			lp="638,224.5",
+			pos="e,529.25,209.02 487.61,240.73 494.62,232.62 503.95,223.25 514,217 515.94,215.79 517.94,214.64 520,213.54"];
+		8 -> 5	[color=black,
+			pos="e,515.34,323.6 673.6,194.07 711.28,196.93 750.13,203.27 762,217 785.83,244.57 786.83,272.32 762,299 745.96,316.24 621.01,321.76 \
+525.38,323.44"];
+		11	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in list1:\l",
+			linenum="[13]",
+			pos="288,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.9186];
+		7 -> 11	[color=green,
+			label="t > 0",
+			lp="231,224.5",
+			pos="e,238.66,209.06 130.62,246.41 157.23,237.21 196.53,223.63 229.19,212.33"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return dict1\l",
+			linenum="[17]",
+			pos="130,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		7 -> 12	[color=red,
+			label="(t <= 0)",
+			lp="140.5,191",
+			pos="e,119.88,142.19 99.628,239.95 99.666,222.76 100.87,195.6 107,173 109,165.64 112.1,158.04 115.38,151.12"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if list1.count(i) == t:\l",
+			linenum="[14]",
+			pos="472,124",
+			shape=diamond,
+			style="filled,solid",
+			width=5.2596];
+		11 -> 13	[color=green,
+			label=list1,
+			lp="491,157.5",
+			pos="e,472.39,141.97 379.36,186.28 414.99,182.96 450.32,176.71 463,165 466.73,161.56 469.07,156.93 470.52,152.05"];
+		11 -> 12	[color=green,
+			pos="e,171.51,142.08 246.49,172.92 226.43,164.67 202.17,154.69 181,145.98"];
+		13 -> 11	[color=red,
+			label="(list1.count(i) != t)",
+			lp="376,157.5",
+			pos="e,283.79,172.99 346.87,130.17 320.5,133.9 297.93,140.02 289,150 285.84,153.53 284.29,158.02 283.72,162.71"];
+		16	[fillcolor="#FFFB81",
+			height=0.5,
+			label="dict1[i] = t\l",
+			linenum="[16]",
+			pos="322,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		13 -> 16	[color=green,
+			label="list1.count(i) == t",
+			lp="488.5,90.5",
+			pos="e,361.33,75.042 439.82,109.06 419.71,100.34 393.42,88.949 370.78,79.138"];
+		16 -> 11	[color=black,
+			pos="e,279.88,172.97 298.06,75.121 288.7,83.285 279.01,93.914 274,106 266.46,124.21 270.57,146.24 276.24,163.17"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef histogram(test):...\lhistogram('b b b b a')\l",
+		linenum="[1]",
+		pos="414,570.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.8611];
+	1 -> 20	[label=calls,
+		lp="435,528.5",
+		pos="e,414,505.13 414,543.71 414,534.66 414,524.47 414,515.3",
+		style=dashed];
+	20 -> 3	[color=green,
+		pos="e,414,413.34 414,468.84 414,456.39 414,439.1 414,423.65"];
+}

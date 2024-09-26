@@ -1,0 +1,148 @@
+digraph cluster388CFG {
+	graph [bb="0,0,466,460",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="233,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="157,324,273,376",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=choose_num,
+			linenum="[11]",
+			pos="215,350",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster4choose_num {
+		graph [bb="8,31,458,307",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=choose_num,
+			lheight=0.21,
+			lp="233,295.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if x > y:\l",
+			linenum="[3]",
+			pos="215,258",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return -1\l",
+			linenum="[4]",
+			pos="103,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 4	[color=green,
+			label="x > y",
+			lp="190,224.5",
+			pos="e,132.57,209.16 193.41,244.47 178.68,235.92 158.78,224.37 141.39,214.28"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if y % 2 == 0:\l",
+			linenum="[5]",
+			pos="329,191",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		3 -> 5	[color=red,
+			label="(x <= y)",
+			lp="315.5,224.5",
+			pos="e,305.01,205.68 236.71,244.62 253.55,235.02 277.17,221.55 296.3,210.64"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return y\l",
+			linenum="[6]",
+			pos="147,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		5 -> 7	[color=green,
+			label="y % 2 == 0",
+			lp="285.5,157.5",
+			pos="e,185.81,142.1 288.08,178.91 274.01,174.84 258.22,170.01 244,165 227.92,159.34 210.64,152.47 195.18,146.04"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if x == y:\l",
+			linenum="[7]",
+			pos="335,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		5 -> 8	[color=red,
+			label="(y % 2 != 0)",
+			lp="382,157.5",
+			pos="e,333.45,141.74 330.58,172.92 331.17,166.45 331.87,158.92 332.53,151.77"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return -1\l",
+			linenum="[8]",
+			pos="123,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		8 -> 10	[color=green,
+			label="x == y",
+			lp="272,90.5",
+			pos="e,178.48,75.01 300.94,112.56 270.64,103.27 225.49,89.424 188.26,78.008"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return y - 1\l",
+			linenum="[9]",
+			pos="338,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		8 -> 11	[color=red,
+			label="(x != y)",
+			lp="369.5,90.5",
+			pos="e,337.21,75.19 335.79,105.92 336.08,99.702 336.41,92.5 336.73,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef choose_num(x, y):...\lchoose_num(12, 15)\l",
+		linenum="[1]",
+		pos="215,433.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 15	[label=calls,
+		lp="236,391.5",
+		pos="e,215,368.13 215,406.71 215,397.66 215,387.47 215,378.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,215,276.3 215,331.65 215,318.82 215,301.11 215,286.38"];
+}

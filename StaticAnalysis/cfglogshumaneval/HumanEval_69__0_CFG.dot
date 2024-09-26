@@ -1,0 +1,187 @@
+digraph cluster100CFG {
+	graph [bb="0,0,657,566",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="328.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="281,430,363,482",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=search,
+			linenum="[16]",
+			pos="322,456",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster0search {
+		graph [bb="149,31,649,413",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=search,
+			lheight=0.21,
+			lp="399,401.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="frq = [0] * (max(lst) + 1)\l",
+			linenum="[5]",
+			pos="322,364",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in lst:\l",
+			linenum="[6]",
+			pos="322,311",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.585];
+		3 -> 5	[color=black,
+			pos="e,322,329.25 322,345.73 322,343.66 322,341.5 322,339.32"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="frq[i] += 1\l",
+			linenum="[7]",
+			pos="291,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		5 -> 6	[color=green,
+			label=lst,
+			lp="300.5,277.5",
+			pos="e,285.88,262.12 293.66,292.88 291.41,290.5 289.46,287.88 288,285 286.02,281.09 285.2,276.67 285.08,272.25"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans = -1\l",
+			linenum="[9]",
+			pos="404,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		5 -> 7	[color=green,
+			pos="e,382.31,262.19 343.54,292.92 352.98,285.44 364.21,276.54 374.41,268.46"];
+		6 -> 5	[color=black,
+			pos="e,322.37,292.92 311.69,262.07 313.75,264.54 315.6,267.2 317,270 318.98,273.94 320.28,278.37 321.13,282.8"];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(1, len(frq)):\l",
+			linenum="[10]",
+			pos="404,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.17];
+		7 -> 8	[color=black,
+			pos="e,404,209.25 404,225.73 404,223.66 404,221.5 404,219.32"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if frq[i] >= i:\l",
+			linenum="[11]",
+			pos="492,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		8 -> 11	[color=green,
+			label="range(1, len(frq))",
+			lp="412.5,157.5",
+			pos="e,421.82,132.23 346.88,172.94 336.02,166.86 330.19,159.18 338,150 343.23,143.85 377,138.01 411.58,133.52"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ans\l",
+			linenum="[14]",
+			pos="251,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		8 -> 12	[color=green,
+			pos="e,282.04,142.01 350.31,172.87 343.42,170.38 336.5,167.73 330,165 317.12,159.6 303.44,152.99 291.14,146.72"];
+		11 -> 8	[color=red,
+			label="(frq[i] < i)",
+			lp="546,157.5",
+			pos="e,483.17,172.97 495.81,141.68 496.62,149.51 496.01,158.51 491,165 490.78,165.28 490.56,165.56 490.34,165.83"];
+		13	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans = i\l",
+			linenum="[12]",
+			pos="573,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		11 -> 13	[color=green,
+			label="frq[i] >= i",
+			lp="584.5,90.5",
+			pos="e,551.54,75.223 510.38,108.25 520.22,100.35 532.57,90.44 543.7,81.509"];
+		13 -> 8	[color=black,
+			pos="e,542.4,181.66 610.08,65.363 619.43,69.068 628.39,74.636 634,83 648.64,104.83 642.69,118.98 630,142 621.89,156.71 615.54,158.61 \
+600,165 585.03,171.16 568.91,175.9 552.58,179.54"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef search(lst):...\lsearch([2, 7, 8, 8, 4, 8, 7, 3, 9, 6, 5, 10, 4, 3, 6, 7, 1, 7, 4, 10, 8, 1])\l",
+		linenum="[1]",
+		pos="322,539.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=8.9444];
+	1 -> 17	[label=calls,
+		lp="343,497.5",
+		pos="e,322,474.13 322,512.71 322,503.66 322,493.47 322,484.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,322,382.3 322,437.65 322,424.82 322,407.11 322,392.38"];
+}

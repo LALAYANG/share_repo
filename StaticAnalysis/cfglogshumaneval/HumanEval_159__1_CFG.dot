@@ -1,0 +1,100 @@
+digraph cluster308CFG {
+	graph [bb="0,0,1215,326",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="607.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="503,190,573,242",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		10	[color="#E552FF",
+			height=0.5,
+			label=eat,
+			linenum="[10]",
+			pos="538,216",
+			shape=tab,
+			style=filled,
+			width=0.75];
+	}
+	subgraph cluster0eat {
+		graph [bb="8,31,1207,173",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=eat,
+			lheight=0.21,
+			lp="607.5,161.5",
+			lwidth=0.35,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if need <= remaining:\l",
+			linenum="[5]",
+			pos="538,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.8511];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [number + need, remaining - need]\l",
+			linenum="[6]",
+			pos="347,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=9.1853];
+		3 -> 4	[color=green,
+			label="need <= remaining",
+			lp="529.5,90.5",
+			pos="e,397.21,75.086 499.35,109.85 472.79,100.81 437.01,88.632 406.8,78.351"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [number + remaining, 0]\l",
+			linenum="[8]",
+			pos="947,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=6.9882];
+		3 -> 6	[color=red,
+			label="(need > remaining)",
+			lp="853.5,90.5",
+			pos="e,839.73,75.048 603.26,112.63 664,102.98 755.96,88.361 829.48,76.677"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef eat(number, need, remaining):...\leat(2, 11, 5)\l",
+		linenum="[1]",
+		pos="538,299.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.3611];
+	1 -> 10	[label=calls,
+		lp="559,257.5",
+		pos="e,538,234.13 538,272.71 538,263.66 538,253.47 538,244.3",
+		style=dashed];
+	10 -> 3	[color=green,
+		pos="e,538,142.3 538,197.65 538,184.82 538,167.11 538,152.38"];
+}

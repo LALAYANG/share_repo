@@ -1,0 +1,188 @@
+digraph cluster554CFG {
+	graph [bb="0,0,862,517",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="431,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="570,381,652,433",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=digits,
+			linenum="[17]",
+			pos="611,407",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster4digits {
+		graph [bb="8,31,854,364",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=digits,
+			lheight=0.21,
+			lp="431,352.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="product = 1\lodd_count = 0\l",
+			linenum="[5, 6]",
+			pos="611,314",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for digit in str(n):\l",
+			linenum="[7]",
+			pos="611,260",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.7941];
+		3 -> 4	[color=black,
+			pos="e,611,278.22 611,294.81 611,292.71 611,290.53 611,288.33"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="int_digit = int(digit)\l",
+			linenum="[8]",
+			pos="201,193",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.75];
+		4 -> 6	[color=green,
+			label="str(n)",
+			lp="467,226.5",
+			pos="e,300.11,209.71 528.03,245.85 465.25,235.89 378.46,222.13 310.07,211.29"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if odd_count == 0:\l",
+			linenum="[12]",
+			pos="472,193",
+			shape=diamond,
+			style="filled,solid",
+			width=4.2128];
+		4 -> 7	[color=green,
+			pos="e,501.28,207.69 574.48,241.92 554.76,232.7 530.43,221.32 510.42,211.97"];
+		9	[fillcolor="#FF6752",
+			height=0.5,
+			label="if int_digit % 2 == 1:\l",
+			linenum="[9]",
+			pos="198,126",
+			shape=diamond,
+			style="filled,solid",
+			width=5.0554];
+		6 -> 9	[color=black,
+			pos="e,198.79,144.19 200.21,174.92 199.92,168.7 199.59,161.5 199.27,154.6"];
+		9 -> 4	[color=red,
+			label="(int_digit % 2 != 1)",
+			lp="747,193",
+			pos="e,628.42,241.62 283.02,135.64 316.07,138.72 354.27,141.93 389,144 403.76,144.88 644.7,141.39 655,152 677.12,174.79 655.13,210.25 \
+635.08,234.03"];
+		10	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="product = product * int_digit\lodd_count += 1\l",
+			linenum="[10, 11]",
+			pos="588,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.5556];
+		9 -> 10	[color=green,
+			label="int_digit % 2 == 1",
+			lp="501.5,92.5",
+			pos="e,481.44,77.033 261.53,114.25 318.21,104.66 402.62,90.372 471.41,78.73"];
+		10 -> 4	[color=black,
+			pos="e,709.23,249.86 716.07,69.586 767.81,76.763 819.08,88.615 835,108 864.05,143.38 863.03,175.6 834,211 818.85,229.48 768.42,241.2 \
+719.35,248.43"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 0\l",
+			linenum="[13]",
+			pos="477,126",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		7 -> 12	[color=green,
+			label="odd_count == 0",
+			lp="441,159.5",
+			pos="e,422.6,135.61 408.22,182.55 387.03,176.58 371.44,167.04 383,152 387.35,146.34 399.07,141.7 412.82,138.01"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return product\l",
+			linenum="[15]",
+			pos="700,126",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		7 -> 14	[color=red,
+			label="(odd_count != 0)",
+			lp="672.5,159.5",
+			pos="e,640.26,144.03 514.35,179.93 546.86,170.66 592.44,157.66 630.3,146.87"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef digits(n):...\ldigits(120)\l",
+		linenum="[1]",
+		pos="611,490.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 18	[label=calls,
+		lp="632,448.5",
+		pos="e,611,425.13 611,463.71 611,454.66 611,444.47 611,435.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,611,333.29 611,388.88 611,376.12 611,358.4 611,343.52"];
+}

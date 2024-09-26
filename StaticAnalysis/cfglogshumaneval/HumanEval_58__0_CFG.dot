@@ -1,0 +1,167 @@
+digraph cluster808CFG {
+	graph [bb="0,0,662.5,513",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="331.25,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="107.5,377,189.5,429",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=common,
+			linenum="[12]",
+			pos="148.5,403",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster4common {
+		graph [bb="24.5,31,654.5,360",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=common,
+			lheight=0.21,
+			lp="339.5,348.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ret = set()\l",
+			linenum="[5]",
+			pos="148.5,311",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for e1 in l1:\l",
+			linenum="[6]",
+			pos="148.5,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.585];
+		3 -> 5	[color=black,
+			pos="e,148.5,276.25 148.5,292.73 148.5,290.66 148.5,288.5 148.5,286.32"];
+		6	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for e2 in l2:\l",
+			linenum="[7]",
+			pos="125.5,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.585];
+		5 -> 6	[color=green,
+			label=l1,
+			lp="131,224.5",
+			pos="e,120.76,209.31 127.23,239.78 125.33,237.37 123.68,234.77 122.5,232 120.86,228.15 120.15,223.89 120.04,219.64"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sorted(list(ret))\l",
+			linenum="[10]",
+			pos="441.5,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.6912];
+		5 -> 7	[color=green,
+			pos="e,364.67,209.04 206.04,244.24 248.45,234.83 306.86,221.87 354.9,211.21"];
+		6 -> 5	[color=green,
+			pos="e,148.22,239.8 139.46,209.11 141.03,211.65 142.44,214.31 143.5,217 145.08,221.03 146.19,225.45 146.97,229.83"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if e1 == e2:\l",
+			linenum="[8]",
+			pos="139.5,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.9617];
+		6 -> 8	[color=green,
+			label=l2,
+			lp="118,157.5",
+			pos="e,118.19,138.61 112.2,172.69 108.39,165.58 106.07,157.32 109.5,150 110.07,148.79 110.72,147.62 111.45,146.49"];
+		8 -> 6	[color=red,
+			label="(e1 != e2)",
+			lp="175,157.5",
+			pos="e,129.18,172.92 135.89,141.74 134.49,148.25 132.85,155.86 131.29,163.1"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ret.add(e1)\l",
+			linenum="[9]",
+			pos="228.5,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		8 -> 10	[color=green,
+			label="e1 == e2",
+			lp="227,90.5",
+			pos="e,204.36,75.159 158.43,108.85 168.77,101.16 181.8,91.51 193.5,83 194.38,82.363 195.26,81.718 196.16,81.068"];
+		10 -> 6	[color=black,
+			pos="e,195.05,181.78 255.19,75.302 257.3,77.644 259.14,80.212 260.5,83 272.04,106.65 269.28,119.58 255.5,142 244.24,160.31 225,171.69 \
+204.73,178.74"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef common(l1: list, l2: list):...\lcommon([4, 3, 2, 8], [3, 2, 4])\l",
+		linenum="[1]",
+		pos="148.5,486.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.125];
+	1 -> 15	[label=calls,
+		lp="169.5,444.5",
+		pos="e,148.5,421.13 148.5,459.71 148.5,450.66 148.5,440.47 148.5,431.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,148.5,329.3 148.5,384.65 148.5,371.82 148.5,354.11 148.5,339.38"];
+}

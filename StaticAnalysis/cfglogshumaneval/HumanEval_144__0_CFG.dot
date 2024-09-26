@@ -1,0 +1,136 @@
+digraph cluster366CFG {
+	graph [bb="0,0,800,411",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="400,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="349,275,449,327",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=simplify,
+			linenum="[13]",
+			pos="399,301",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster2simplify {
+		graph [bb="8,31,792,258",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=simplify,
+			lheight=0.21,
+			lp="400,246.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.94444,
+			label="a, b = x.split('/')\lc, d = n.split('/')\lnumerator = int(a) * int(c)\ldenom = int(b) * int(d)\l",
+			linenum="[5, 6, 7, 8]",
+			pos="399,193",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if numerator / denom == int(numerator / denom):\l",
+			linenum="[9]",
+			pos="399,124",
+			shape=diamond,
+			style="filled,solid",
+			width=10.315];
+		3 -> 10	[color=black,
+			pos="e,399,142.13 399,158.89 399,156.72 399,154.54 399,152.39"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[10]",
+			pos="118,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		10 -> 12	[color=green,
+			label="numerator / denom == int(numerator / denom)",
+			lp="222.5,90.5",
+			pos="e,56.173,73.842 155.54,117.77 99.979,114.11 54.346,108.03 45,98 38.199,90.702 40.374,84.431 47.178,79.164"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[11]",
+			pos="412,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 13	[color=red,
+			label="(numerator / denom != int(numerator / denom))",
+			lp="592,90.5",
+			pos="e,408.56,75.19 402.42,105.92 403.69,99.553 405.17,92.156 406.58,85.108"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef simplify(x, n):...\lsimplify('2/4', '8/4')\l",
+		linenum="[1]",
+		pos="399,384.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.75];
+	1 -> 17	[label=calls,
+		lp="420,342.5",
+		pos="e,399,319.13 399,357.71 399,348.66 399,338.47 399,329.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,399,227.25 399,282.97 399,270.68 399,253.5 399,237.52"];
+}

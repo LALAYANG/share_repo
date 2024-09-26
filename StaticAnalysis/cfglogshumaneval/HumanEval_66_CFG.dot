@@ -1,0 +1,100 @@
+digraph cluster718CFG {
+	graph [bb="0,0,1184,326",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="592,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="95,190,195,242",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		9	[color="#E552FF",
+			height=0.5,
+			label=digitSum,
+			linenum="[5]",
+			pos="145,216",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster4digitSum {
+		graph [bb="8,31,1176,173",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=digitSum,
+			lheight=0.21,
+			lp="592,161.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if s == '':\l",
+			linenum="[3]",
+			pos="145,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.7319];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 0\l",
+			linenum="[3]",
+			pos="95,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		3 -> 4	[color=green,
+			label="s == ''",
+			lp="153,90.5",
+			pos="e,108.3,75.291 133.4,107.92 127.78,100.61 120.87,91.627 114.47,83.305"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum(ord(char) if char.isupper() else 0 for char in s)\l",
+			linenum="[4]",
+			pos="680,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=13.553];
+		3 -> 5	[color=red,
+			label="(s != '')",
+			lp="497.5,90.5",
+			pos="e,539.92,75.019 200.99,116.2 278.23,106.81 420.33,89.549 529.77,76.252"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef digitSum(s):...\ldigitSum('You arE Very Smart')\l",
+		linenum="[1]",
+		pos="145,299.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.6667];
+	1 -> 9	[label=calls,
+		lp="166,257.5",
+		pos="e,145,234.13 145,272.71 145,263.66 145,253.47 145,244.3",
+		style=dashed];
+	9 -> 3	[color=green,
+		pos="e,145,142.3 145,197.65 145,184.82 145,167.11 145,152.38"];
+}

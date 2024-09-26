@@ -1,0 +1,164 @@
+digraph cluster548CFG {
+	graph [bb="0,0,606.5,513",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="303.25,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="173.5,377,263.5,429",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=longest,
+			linenum="[11]",
+			pos="218.5,403",
+			shape=tab,
+			style=filled,
+			width=1.0278];
+	}
+	subgraph cluster4longest {
+		graph [bb="38.5,31,598.5,360",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=longest,
+			lheight=0.21,
+			lp="318.5,348.5",
+			lwidth=0.81,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not strings:\l",
+			linenum="[3]",
+			pos="218.5,311",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return None\l",
+			linenum="[4]",
+			pos="148.5,244",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		3 -> 4	[color=green,
+			label="not strings",
+			lp="235,277.5",
+			pos="e,166.87,262.06 202.26,294.92 194,287.25 183.75,277.73 174.42,269.07"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="maxlen = max(len(x) for x in strings)\l",
+			linenum="[6]",
+			pos="429.5,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.4722];
+		3 -> 5	[color=red,
+			label="(not not strings)",
+			lp="413,277.5",
+			pos="e,374.1,262.07 256.71,298.23 286.67,289 329.06,275.94 364.35,265.07"];
+		9	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for s in strings:\l",
+			linenum="[7]",
+			pos="429.5,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.273];
+		5 -> 9	[color=black,
+			pos="e,429.5,209.25 429.5,225.73 429.5,223.66 429.5,221.5 429.5,219.32"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(s) == maxlen:\l",
+			linenum="[8]",
+			pos="386.5,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.6469];
+		9 -> 10	[color=green,
+			label=strings,
+			lp="380.5,157.5",
+			pos="e,361.36,139.67 362.38,175.51 358.23,172.6 354.52,169.14 351.5,165 346.99,158.82 349.08,152.44 353.96,146.64"];
+		10 -> 9	[color=red,
+			label="(len(s) != maxlen)",
+			lp="495,157.5",
+			pos="e,424.51,172.82 405.09,140.13 408.16,143.18 411.11,146.53 413.5,150 416.32,154.1 418.75,158.77 420.81,163.43"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return s\l",
+			linenum="[9]",
+			pos="386.5,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		10 -> 13	[color=green,
+			label="len(s) == maxlen",
+			lp="453,90.5",
+			pos="e,386.5,75.19 386.5,105.92 386.5,99.702 386.5,92.5 386.5,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef longest(strings: List[str]) ->Optional[str]:...\llongest(['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc'])\l",
+		linenum="[1]",
+		pos="218.5,486.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=6.0694];
+	1 -> 17	[label=calls,
+		lp="239.5,444.5",
+		pos="e,218.5,421.13 218.5,459.71 218.5,450.66 218.5,440.47 218.5,431.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,218.5,329.3 218.5,384.65 218.5,371.82 218.5,354.11 218.5,339.38"];
+}

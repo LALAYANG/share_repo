@@ -1,0 +1,207 @@
+digraph cluster824CFG {
+	graph [bb="0,0,651,582",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="325.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="178,446,334,498",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		19	[color="#E552FF",
+			height=0.5,
+			label=get_max_triples,
+			linenum="[14]",
+			pos="256,472",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster2get_max_triples {
+		graph [bb="8,31,643,429",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=get_max_triples,
+			lheight=0.21,
+			lp="325.5,417.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="A = [(i * i - i + 1) for i in range(1, n + 1)]\lans = []\l",
+			linenum="[5, 6]",
+			pos="256,379",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.5];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(n):\l",
+			linenum="[7]",
+			pos="256,325",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.4397];
+		3 -> 5	[color=black,
+			pos="e,256,343.22 256,359.81 256,357.71 256,355.53 256,353.33"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for j in range(i + 1, n):\l",
+			linenum="[8]",
+			pos="183,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		5 -> 7	[color=green,
+			label="range(n)",
+			lp="213.5,291.5",
+			pos="e,176.96,276.33 189.25,308.34 185.75,305.69 182.61,302.6 180,299 177.38,295.38 176.26,291.07 176.06,286.63"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return len(ans)\l",
+			linenum="[12]",
+			pos="502,258",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.7059];
+		5 -> 8	[color=green,
+			pos="e,437.42,276.06 319.03,307.35 352.07,298.62 392.75,287.87 427.36,278.72"];
+		7 -> 5	[color=green,
+			pos="e,257.68,306.9 242.93,276.14 245.92,278.44 248.65,281.05 251,284 253.92,287.67 255.65,292.17 256.62,296.8"];
+		10	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for k in range(j + 1, n):\l",
+			linenum="[9]",
+			pos="309,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		7 -> 10	[color=green,
+			label="range(i + 1, n)",
+			lp="240,224.5",
+			pos="e,203.4,204.28 175.51,239.81 173.37,232.05 172.83,223.26 178,217 181.06,213.3 186.57,210.14 193.65,207.45"];
+		10 -> 7	[color=green,
+			pos="e,283.25,243.53 312.08,209.37 312.46,217.16 311.34,225.94 306,232 303.26,235.1 298.64,237.83 292.74,240.24"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if (A[i] + A[j] + A[k]) % 3 == 0:\l",
+			linenum="[10]",
+			pos="286,124",
+			shape=diamond,
+			style="filled,solid",
+			width=7.3788];
+		10 -> 13	[color=green,
+			label="range(j + 1, n)",
+			lp="229,157.5",
+			pos="e,183.59,135.09 196.88,179.01 183.07,175.55 172.03,170.99 167,165 156.98,153.06 161.84,144.67 174.05,138.78"];
+		13 -> 10	[color=red,
+			label="((A[i] + A[j] + A[k]) % 3 != 0)",
+			lp="427,157.5",
+			pos="e,302.96,172.92 291.92,141.74 294.25,148.32 296.98,156.04 299.57,163.35"];
+		15	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans += [(A[i], A[j], A[k])]\l",
+			linenum="[11]",
+			pos="420,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		13 -> 15	[color=green,
+			label="(A[i] + A[j] + A[k]) % 3 == 0",
+			lp="446,90.5",
+			pos="e,342.24,75.129 298.87,106.51 306.05,98.346 315.62,88.981 326,83 328.24,81.709 330.55,80.483 332.91,79.319"];
+		15 -> 10	[color=black,
+			pos="e,443.13,183.78 539.6,69.856 551.76,73.203 561.36,77.496 566,83 589.58,110.96 584.92,139.19 559,165 550.58,173.39 504.02,179.16 \
+453.32,183.03"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef get_max_triples(n):...\lget_max_triples(100)\l",
+		linenum="[1]",
+		pos="256,555.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.2083];
+	1 -> 19	[label=calls,
+		lp="277,513.5",
+		pos="e,256,490.13 256,528.71 256,519.66 256,509.47 256,500.3",
+		style=dashed];
+	19 -> 3	[color=green,
+		pos="e,256,398.29 256,453.88 256,441.12 256,423.4 256,408.52"];
+}

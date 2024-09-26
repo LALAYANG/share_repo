@@ -1,0 +1,193 @@
+digraph cluster686CFG {
+	graph [bb="0,0,672,515",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="336,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="453,379,553,431",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=exchange,
+			linenum="[17]",
+			pos="503,405",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster4exchange {
+		graph [bb="8,31,664,362",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=exchange,
+			lheight=0.21,
+			lp="336,350.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="odd = 0\leven = 0\l",
+			linenum="[5, 6]",
+			pos="503,312",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in lst1:\l",
+			linenum="[7]",
+			pos="503,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.7518];
+		3 -> 4	[color=black,
+			pos="e,503,276.22 503,292.81 503,290.71 503,288.53 503,286.33"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 1:\l",
+			linenum="[8]",
+			pos="515,191",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4 -> 5	[color=green,
+			label=lst1,
+			lp="489,224.5",
+			pos="e,483.8,204.71 477.41,239.92 475.25,237.51 473.37,234.87 472,232 469.12,225.99 468.68,222.78 472,217 473.15,214.99 474.54,213.13 \
+476.09,211.41"];
+		6	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in lst2:\l",
+			linenum="[10]",
+			pos="277,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.7518];
+		4 -> 6	[color=green,
+			pos="e,330.82,207.48 449.15,241.51 416.6,232.15 374.91,220.16 340.72,210.33"];
+		5 -> 4	[color=red,
+			label="(i % 2 != 1)",
+			lp="562,224.5",
+			pos="e,508.16,239.87 513.46,208.83 512.85,214.27 512.05,220.44 510.24,229.81"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd += 1\l",
+			linenum="[9]",
+			pos="614,124",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		5 -> 7	[color=green,
+			label="i % 2 == 1",
+			lp="608.5,157.5",
+			pos="e,580.23,142.08 532.28,175.54 542.15,167.58 554.94,157.77 567,150 568.44,149.07 569.92,148.15 571.43,147.23"];
+		7 -> 4	[color=black,
+			pos="e,582.48,250.7 644.31,142.27 646.55,144.59 648.52,147.17 650,150 662.2,173.32 657.77,185.99 645,209 633.94,228.92 613.84,240.83 \
+592.18,247.88"];
+		9	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 0:\l",
+			linenum="[11]",
+			pos="433,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		6 -> 9	[color=green,
+			label=lst2,
+			lp="444,157.5",
+			pos="e,430.59,142.05 344.8,179.47 379.42,173.84 414.93,167.55 418,165 422.17,161.53 425.18,156.78 427.36,151.76"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if even >= odd:\l",
+			linenum="[13]",
+			pos="145,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		6 -> 10	[color=green,
+			pos="e,171.95,138.27 242.32,172.92 223.41,163.61 200.04,152.11 180.95,142.7"];
+		9 -> 6	[color=red,
+			label="(i % 2 != 0)",
+			lp="368,157.5",
+			pos="e,290.52,172.91 368.39,132.48 351.32,136.19 333.38,141.72 318,150 310.61,153.98 303.64,159.68 297.61,165.53"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="even += 1\l",
+			linenum="[12]",
+			pos="523,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		9 -> 11	[color=green,
+			label="i % 2 == 0",
+			lp="527.5,90.5",
+			pos="e,499.35,75.079 452.53,108.9 463.81,100.75 478.27,90.302 491.16,80.995"];
+		11 -> 6	[color=black,
+			pos="e,280.17,172.76 477.44,72.765 474.6,73.557 471.77,74.309 469,75 396.18,93.191 359.05,56.082 303,106 294.43,113.63 286.95,141.29 \
+282.25,162.81"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'YES'\l",
+			linenum="[14]",
+			pos="349,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 13	[color=green,
+			label="even >= odd",
+			lp="242.5,90.5",
+			pos="e,275.08,68.518 162.34,108.18 174.39,98.174 189.58,86.219 197,83 203.84,80.034 233.52,74.913 264.87,70.075"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'NO'\l",
+			linenum="[15]",
+			pos="118,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		10 -> 14	[color=red,
+			label="(even < odd)",
+			lp="124,90.5",
+			pos="e,80.274,75.234 92.896,113.25 85.473,109.65 78.758,104.72 74,98 71.111,93.919 70.669,90.763 74.69,83.733"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef exchange(lst1, lst2):...\lexchange([100, 200], [200, 200])\l",
+		linenum="[1]",
+		pos="503,488.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 18	[label=calls,
+		lp="524,446.5",
+		pos="e,503,423.13 503,461.71 503,452.66 503,442.47 503,433.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,503,331.29 503,386.88 503,374.12 503,356.4 503,341.52"];
+}

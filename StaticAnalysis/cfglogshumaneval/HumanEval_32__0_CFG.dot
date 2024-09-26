@@ -1,0 +1,242 @@
+digraph cluster856CFG {
+	graph [bb="0,0,1134,706",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="567,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="395,540,503,592",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		21	[color="#E552FF",
+			height=0.5,
+			label=find_zero,
+			linenum="[22]",
+			pos="449,566",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster4poly {
+		graph [bb="8,31,1126,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=poly,
+			lheight=0.21,
+			lp="567,94.5",
+			lwidth=0.47,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum([(coeff * math.pow(x, i)) for i, coeff in enumerate(xs)])\l",
+			linenum="[6]",
+			pos="567,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=15.3];
+	}
+	subgraph cluster4find_zero {
+		graph [bb="169,123,1023,523",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=find_zero,
+			lheight=0.21,
+			lp="596,511.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_13 {
+			graph [bb="501,131,643,183",
+				color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			14	[color="#E552FF",
+				height=0.5,
+				label=poly,
+				linenum="[16]",
+				pos="536,157",
+				shape=tab,
+				style=filled,
+				width=0.75];
+			15	[color="#E552FF",
+				height=0.5,
+				label=poly,
+				linenum="[16]",
+				pos="608,157",
+				shape=tab,
+				style=filled,
+				width=0.75];
+		}
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="begin, end = -1.0, 1.0\l",
+			linenum="[10]",
+			pos="449,474",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.75];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while poly(xs, begin) * poly(xs, end) > 0:\l",
+			linenum="[11]",
+			pos="449,421",
+			shape=hexagon,
+			style="filled,solid",
+			width=7.5674];
+		7 -> 8	[color=black,
+			pos="e,449,439.25 449,455.73 449,453.66 449,451.5 449,449.32"];
+		9	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="begin *= 2.0\lend *= 2.0\l",
+			linenum="[12, 13]",
+			pos="360,353",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		8 -> 9	[color=green,
+			label="poly(xs, begin) * poly(xs, end) > 0",
+			lp="517.5,387.5",
+			pos="e,362.04,372.26 382.74,402.88 379.22,400.57 375.93,397.96 373,395 369.45,391.41 366.86,386.85 364.98,382.08"];
+		10	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while end - begin > 1e-10:\l",
+			linenum="[14]",
+			pos="653,353",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.8156];
+		8 -> 10	[color=red,
+			label="(poly(xs, begin) * poly(xs, end) <= 0)",
+			lp="822,387.5",
+			pos="e,663.01,371.3 617.09,407.15 640.29,403.83 657.73,399.8 662,395 665.48,391.08 666.3,386.13 665.67,381.04"];
+		9 -> 8	[color=black,
+			pos="e,364.92,402.96 351.15,372.25 348.78,379.95 348.05,388.6 353,395 353.78,396.01 354.79,396.98 356,397.92"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="center = (begin + end) / 2.0\l",
+			linenum="[15]",
+			pos="653,285",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		10 -> 11	[color=green,
+			label="end - begin > 1e-10",
+			lp="731.5,318.5",
+			pos="e,653,303.45 653,334.66 653,328.19 653,320.68 653,313.52"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return begin\l",
+			linenum="[20]",
+			pos="400,285",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 12	[color=red,
+			label="(end - begin <= 1e-10)",
+			lp="558,318.5",
+			pos="e,423.35,303.1 531.75,342.19 509.83,338.42 487.45,333.2 467,326 454.92,321.75 442.63,315.18 431.92,308.59"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if poly(xs, center) * poly(xs, begin) > 0:\l",
+			linenum="[16]",
+			pos="604,232",
+			shape=diamond,
+			style="filled,solid",
+			width=9.2682];
+		11 -> 13	[color=black,
+			pos="e,619.58,249.22 636.41,266.73 633.26,263.46 629.92,259.98 626.63,256.55"];
+		13 -> 14	[label=calls,
+			lp="579,198.5",
+			pos="e,540.83,175.11 569.54,215.57 565.33,212.77 561.35,209.59 558,206 552.28,199.88 547.84,192.01 544.5,184.42",
+			style=dashed];
+		13 -> 15	[label=calls,
+			lp="626,198.5",
+			pos="e,606.23,175.11 604.18,213.86 604.32,206.78 604.57,198.49 605,191 605.11,189.14 605.24,187.23 605.38,185.3",
+			style=dashed];
+		16	[fillcolor="#FFFB81",
+			height=0.5,
+			label="begin = center\l",
+			linenum="[17]",
+			pos="243,157",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		13 -> 16	[color=green,
+			label="poly(xs, center) * poly(xs, begin) > 0",
+			lp="387,198.5",
+			pos="e,231.33,175.02 359.32,227.19 295.07,223.67 240.59,217.32 230,206 224.47,200.08 224.74,192.05 227.3,184.26"];
+		18	[fillcolor="#FFFB81",
+			height=0.5,
+			label="end = center\l",
+			linenum="[19]",
+			pos="832,157",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		13 -> 18	[color=red,
+			label="(poly(xs, center) * poly(xs, begin) <= 0)",
+			lp="839.5,198.5",
+			pos="e,773.85,164.44 631.42,215.34 636.62,212.29 642,209.08 647,206 657.39,199.6 658.71,195.63 670,191 699.57,178.86 734.07,171.04 763.62,\
+166.08"];
+		16 -> 10	[color=black,
+			pos="e,533.98,341.64 228.82,175.18 225.62,180.01 222.68,185.46 221,191 219.07,197.38 219.2,199.58 221,206 234.62,254.59 237.99,275.04 \
+280,303 300.34,316.54 424.3,330.99 523.82,340.66"];
+		18 -> 10	[color=black,
+			pos="e,772.45,341.69 890.2,161.01 935.83,164.74 994.02,172.97 1009,191 1013.3,196.13 1012.1,200.08 1009,206 966.58,288.13 866,324.13 \
+782.54,339.87"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=1.1528,
+		label="from typing import *\limport math\ldef poly(xs: list, x: float):...\ldef find_zero(xs: list):...\lfind_zero([5, 3, -5])\l",
+		linenum="[1]",
+		pos="449,664.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 21	[label=calls,
+		lp="470,607.5",
+		pos="e,449,584.05 449,622.85 449,613.19 449,603.1 449,594.2",
+		style=dashed];
+	21 -> 7	[color=green,
+		pos="e,449,492.3 449,547.65 449,534.82 449,517.11 449,502.38"];
+	14 -> 3	[color=green,
+		pos="e,561.56,75.203 541.4,138.93 546.13,123.99 553.07,102.02 558.54,84.746"];
+	15 -> 3	[color=green,
+		pos="e,574.2,75.203 600.86,138.93 594.61,123.99 585.42,102.02 578.19,84.746"];
+}

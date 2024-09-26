@@ -1,0 +1,168 @@
+digraph cluster680CFG {
+	graph [bb="0,0,915,526",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="457.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="229,390,385,442",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=order_by_points,
+			linenum="[11]",
+			pos="307,416",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster4order_by_points {
+		graph [bb="8,31,907,373",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=order_by_points,
+			lheight=0.21,
+			lp="457.5,361.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster10digits_sum {
+			graph [bb="606,39,899,342",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=digits_sum,
+				lheight=0.21,
+				lp="752.5,330.5",
+				lwidth=1.15,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			subgraph cluster_8 {
+				graph [color=purple,
+					compound=true,
+					fontname="DejaVu Sans Mono",
+					label="",
+					rankdir=TB,
+					ranksep=0.02,
+					shape=tab,
+					style=filled
+				];
+				node [fontname="DejaVu Sans Mono"];
+				edge [fontname="DejaVu Sans Mono"];
+			}
+			5	[fillcolor="#FFFB81",
+				height=0.5,
+				label="neg = 1\l",
+				linenum="[4]",
+				pos="772,293",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.0278];
+			6	[fillcolor="#FF6752",
+				height=0.5,
+				label="if n < 0:\l",
+				linenum="[5]",
+				pos="772,240",
+				shape=diamond,
+				style="filled,solid",
+				width=2.3234];
+			5 -> 6	[color=black,
+				pos="e,772,258.25 772,274.73 772,272.66 772,270.5 772,268.32"];
+			7	[fillcolor="#FFFB81",
+				height=0.5,
+				label="n, neg = -1 * n, -1\l",
+				linenum="[5]",
+				pos="701,173",
+				shape=rectangle,
+				style="filled,solid",
+				width=2.4028];
+			6 -> 7	[color=green,
+				label="n < 0",
+				lp="763,206.5",
+				pos="e,719.57,191 756.94,225.22 748.25,217.26 737.08,207.03 727,197.8"];
+			8	[fillcolor="#FFFB81",
+				height=0.52778,
+				label="n = [int(i) for i in str(n)]\ln[0] = n[0] * neg\l",
+				linenum="[6, 7]",
+				pos="752,119",
+				shape=rectangle,
+				style="filled,solid",
+				width=3.4444];
+			6 -> 8	[color=red,
+				label="(n >= 0)",
+				lp="834.5,173",
+				pos="e,783.47,138.33 782.81,224.19 793.95,206.96 808.23,177.96 797,155 795.34,151.6 793.17,148.43 790.68,145.51"];
+			7 -> 8	[color=black,
+				pos="e,734.03,138.32 717.7,154.97 720.64,151.97 723.76,148.79 726.87,145.62"];
+			11	[fillcolor="#98fb98",
+				height=0.5,
+				label="return sum(n)\l",
+				linenum="[8]",
+				pos="752,65",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.2823];
+			8 -> 11	[color=black,
+				pos="e,752,83.216 752,99.813 752,97.708 752,95.527 752,93.334"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="def digits_sum(n):...\l",
+			linenum="[3]",
+			pos="307,293",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.6389];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sorted(nums, key=digits_sum)\l",
+			linenum="[9]",
+			pos="307,240",
+			shape=parallelogram,
+			style="filled,solid",
+			width=8.0735];
+		3 -> 14	[color=black,
+			pos="e,307,258.25 307,274.73 307,272.66 307,270.5 307,268.32"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef order_by_points(nums):...\lorder_by_points([1, 11, -1, -11, -12])\l",
+		linenum="[1]",
+		pos="307,499.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.5833];
+	1 -> 17	[label=calls,
+		lp="328,457.5",
+		pos="e,307,434.13 307,472.71 307,463.66 307,453.47 307,444.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,307,311.38 307,397.92 307,378.04 307,344.92 307,321.42"];
+}

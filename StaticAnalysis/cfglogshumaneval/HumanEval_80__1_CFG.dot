@@ -1,0 +1,164 @@
+digraph cluster126CFG {
+	graph [bb="0,0,1256,460",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="628,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="365,324,465,376",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=is_happy,
+			linenum="[14]",
+			pos="415,350",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster0is_happy {
+		graph [bb="8,31,1248,307",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=is_happy,
+			lheight=0.21,
+			lp="628,295.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(s) < 3:\l",
+			linenum="[5]",
+			pos="415,258",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[6]",
+			pos="262,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 5	[color=green,
+			label="len(s) < 3",
+			lp="393.5,224.5",
+			pos="e,302.21,209.08 385.14,244.31 364.25,235.44 335.87,223.38 311.62,213.08"];
+		6	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(s) - 2):\l",
+			linenum="[8]",
+			pos="570,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.9824];
+		3 -> 6	[color=red,
+			label="(len(s) >= 3)",
+			lp="560,224.5",
+			pos="e,529.26,209.08 445.25,244.31 466.41,235.44 495.16,223.38 519.73,213.08"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if s[i] == s[i + 1] or s[i + 1] == s[i + 2] or s[i] == s[i + 2]:\l",
+			linenum="[10]",
+			pos="517,124",
+			shape=diamond,
+			style="filled,solid",
+			width=13.915];
+		6 -> 10	[color=green,
+			label="range(len(s) - 2)",
+			lp="473.5,157.5",
+			pos="e,412.54,138.26 439.82,180.99 422.83,177.3 409.17,172.16 403,165 395.04,155.76 396.58,148.66 403.7,143.19"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[12]",
+			pos="1138,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		6 -> 11	[color=green,
+			pos="e,1136,142.03 729.65,187.06 887.3,183.5 1107.2,176.51 1123,165 1127.5,161.76 1130.6,157.03 1132.8,151.94"];
+		10 -> 6	[color=red,
+			label="(not (s[i] == s[i + 1] or s[i + 1] == s[i + 2] or s[i] == s[i + 2]))",
+			lp="838,157.5",
+			pos="e,562.36,172.73 539.32,141.22 542.42,143.96 545.42,146.93 548,150 551.47,154.15 554.66,158.92 557.46,163.7"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[11]",
+			pos="517,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 12	[color=green,
+			label="s[i] == s[i + 1] or s[i + 1] == s[i + 2] or s[i] == s[i + 2]",
+			lp="765,90.5",
+			pos="e,517,75.19 517,105.92 517,99.702 517,92.5 517,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef is_happy(s):...\lis_happy('xyy')\l",
+		linenum="[1]",
+		pos="415,433.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 17	[label=calls,
+		lp="436,391.5",
+		pos="e,415,368.13 415,406.71 415,397.66 415,387.47 415,378.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,415,276.3 415,331.65 415,318.82 415,301.11 415,286.38"];
+}

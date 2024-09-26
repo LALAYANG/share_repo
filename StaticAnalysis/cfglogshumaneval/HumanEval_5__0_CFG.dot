@@ -1,0 +1,170 @@
+digraph cluster146CFG {
+	graph [bb="0,0,599.5,501",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="299.75,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="223.5,365,345.5,417",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		16	[color="#E552FF",
+			height=0.5,
+			label=intersperse,
+			linenum="[18]",
+			pos="284.5,391",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster2intersperse {
+		graph [bb="111.5,31,591.5,348",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=intersperse,
+			lheight=0.21,
+			lp="351.5,336.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_9 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not numbers:\l",
+			linenum="[5]",
+			pos="284.5,299",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return []\l",
+			linenum="[6]",
+			pos="206.5,232",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 4	[color=green,
+			label="not numbers",
+			lp="286,265.5",
+			pos="e,218.89,250.15 257.46,284.62 251.61,281.19 245.64,277.26 240.5,273 235.25,268.65 230.16,263.43 225.59,258.21"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result = []\l",
+			linenum="[8]",
+			pos="364.5,232",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		3 -> 5	[color=red,
+			label="(not not numbers)",
+			lp="416,265.5",
+			pos="e,352.64,250.28 313.46,284.89 319.71,281.45 326.06,277.44 331.5,273 336.72,268.74 341.7,263.55 346.15,258.35"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for n in numbers[:-1]:\l",
+			linenum="[10]",
+			pos="353.5,179",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		5 -> 7	[color=black,
+			pos="e,357.22,197.25 360.78,213.73 360.31,211.57 359.83,209.33 359.34,207.06"];
+		8	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="result.append(n)\lresult.append(delimeter)\l",
+			linenum="[11, 12]",
+			pos="227.5,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.9861];
+		7 -> 8	[color=green,
+			label="numbers[:-1]",
+			lp="278.5,145.5",
+			pos="e,223.26,130.11 256.91,166.37 243.78,162.96 233.2,158.59 228.5,153 225.48,149.41 223.95,144.95 223.34,140.3"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(numbers[-1])\l",
+			linenum="[14]",
+			pos="468.5,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		7 -> 9	[color=green,
+			pos="e,438.74,129.08 383.41,160.83 397.66,152.66 414.86,142.79 430.06,134.06"];
+		8 -> 7	[color=black,
+			pos="e,348.12,160.64 320.42,130.09 324.67,132.42 328.73,135.04 332.5,138 337.05,141.57 340.72,146.4 343.65,151.47"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return result\l",
+			linenum="[16]",
+			pos="465.5,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		9 -> 13	[color=black,
+			pos="e,466.49,75.243 467.52,92.973 467.37,90.485 467.22,87.872 467.07,85.242"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef intersperse(numbers: List[int], delimeter: int) ->List[int]:...\lintersperse([5, 6, 3, 2], 8)\l",
+		linenum="[1]",
+		pos="284.5,474.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=7.9028];
+	1 -> 16	[label=calls,
+		lp="305.5,432.5",
+		pos="e,284.5,409.13 284.5,447.71 284.5,438.66 284.5,428.47 284.5,419.3",
+		style=dashed];
+	16 -> 3	[color=green,
+		pos="e,284.5,317.3 284.5,372.65 284.5,359.82 284.5,342.11 284.5,327.38"];
+}

@@ -1,0 +1,136 @@
+digraph cluster202CFG {
+	graph [bb="0,0,507,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="253.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="119,310,275,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=is_simple_power,
+			linenum="[12]",
+			pos="197,336",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster0is_simple_power {
+		graph [bb="8,31,499,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=is_simple_power,
+			lheight=0.21,
+			lp="253.5,281.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 1:\l",
+			linenum="[5]",
+			pos="197,244",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return x == 1\l",
+			linenum="[6]",
+			pos="134,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		3 -> 4	[color=green,
+			label="n == 1",
+			lp="196,210.5",
+			pos="e,150.62,195.15 183.02,228.57 175.62,220.94 166.32,211.35 157.82,202.58"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="power = 1\l",
+			linenum="[7]",
+			pos="316,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		3 -> 5	[color=red,
+			label="(n != 1)",
+			lp="300.5,210.5",
+			pos="e,284.58,195.16 219.94,230.47 235.73,221.84 257.12,210.16 275.71,200"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while power < x:\l",
+			linenum="[8]",
+			pos="268,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.1062];
+		5 -> 7	[color=black,
+			pos="e,284.23,142.25 299.75,158.73 297.01,155.83 294.13,152.76 291.25,149.71"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="power = power * n\l",
+			linenum="[9]",
+			pos="95,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.1806];
+		7 -> 8	[color=green,
+			label="power < x",
+			lp="148.5,90.5",
+			pos="e,97.812,75.129 179.54,116.5 150.23,112.76 122.21,106.96 111,98 106.73,94.586 103.59,89.859 101.29,84.847"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return power == x\l",
+			linenum="[10]",
+			pos="341,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.1559];
+		7 -> 9	[color=red,
+			label="(power >= x)",
+			lp="361,90.5",
+			pos="e,321.69,75.19 287.18,105.92 295.41,98.591 305.18,89.897 314.11,81.94"];
+		8 -> 7	[color=black,
+			pos="e,238.32,105.86 166.6,75.052 174.57,77.478 182.51,80.134 190,83 203.14,88.029 216.96,94.642 229.25,101.04"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef is_simple_power(x, n):...\lis_simple_power(1, 1)\l",
+		linenum="[1]",
+		pos="197,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.5556];
+	1 -> 12	[label=calls,
+		lp="218,377.5",
+		pos="e,197,354.13 197,392.71 197,383.66 197,373.47 197,364.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,197,262.3 197,317.65 197,304.82 197,287.11 197,272.38"];
+}

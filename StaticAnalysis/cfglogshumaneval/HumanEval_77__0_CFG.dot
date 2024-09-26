@@ -1,0 +1,99 @@
+digraph cluster662CFG {
+	graph [bb="0,0,740,312",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="370,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="329,176,411,228",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		8	[color="#E552FF",
+			height=0.5,
+			label=iscube,
+			linenum="[8]",
+			pos="370,202",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster0iscube {
+		graph [bb="8,31,732,159",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=iscube,
+			lheight=0.21,
+			lp="370,147.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="a = abs(a)\l",
+			linenum="[5]",
+			pos="370,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return int(round(a ** (1.0 / 3))) ** 3 == a\l",
+			linenum="[6]",
+			pos="370,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=9.8206];
+		3 -> 5	[color=black,
+			pos="e,370,75.248 370,91.734 370,89.657 370,87.498 370,85.322"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef iscube(a):...\liscube(2)\l",
+		linenum="[1]",
+		pos="370,285.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 8	[label=calls,
+		lp="391,243.5",
+		pos="e,370,220.13 370,258.71 370,249.66 370,239.47 370,230.3",
+		style=dashed];
+	8 -> 3	[color=green,
+		pos="e,370,128.3 370,183.65 370,170.82 370,153.11 370,138.38"];
+}

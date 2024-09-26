@@ -1,0 +1,164 @@
+digraph cluster10CFG {
+	graph [bb="0,0,880,448",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="440,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="356,312,504,364",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=even_odd_count,
+			linenum="[14]",
+			pos="430,338",
+			shape=tab,
+			style=filled,
+			width=1.8333];
+	}
+	subgraph cluster0even_odd_count {
+		graph [bb="8,31,872,295",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=even_odd_count,
+			lheight=0.21,
+			lp="440,283.5",
+			lwidth=1.61,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="even_count = 0\lodd_count = 0\l",
+			linenum="[5, 6]",
+			pos="430,245",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in str(abs(num)):\l",
+			linenum="[7]",
+			pos="430,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.2945];
+		3 -> 4	[color=black,
+			pos="e,430,209.22 430,225.81 430,223.71 430,221.53 430,219.33"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if int(i) % 2 == 0:\l",
+			linenum="[8]",
+			pos="685,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		4 -> 7	[color=green,
+			label="str(abs(num))",
+			lp="634,157.5",
+			pos="e,638.55,136.84 497,172.92 537.91,162.49 589.63,149.31 628.47,139.41"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return even_count, odd_count\l",
+			linenum="[12]",
+			pos="272,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=6.5647];
+		4 -> 8	[color=green,
+			pos="e,313.51,142.08 388.49,172.92 368.43,164.67 344.17,154.69 323,145.98"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="even_count += 1\l",
+			linenum="[9]",
+			pos="325,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		7 -> 10	[color=green,
+			label="int(i) % 2 == 0",
+			lp="599,90.5",
+			pos="e,395.2,70.675 626.76,112.48 566.66,101.63 472.48,84.628 405.32,72.503"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_count += 1\l",
+			linenum="[11]",
+			pos="703,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		7 -> 12	[color=red,
+			label="(int(i) % 2 != 0)",
+			lp="765.5,90.5",
+			pos="e,698.19,75.363 689.64,106.26 691.4,99.892 693.46,92.458 695.42,85.359"];
+		10 -> 4	[color=black,
+			pos="e,307.22,183.5 254.74,59.197 176.03,62.2 55.671,72.341 27,106 16.625,118.18 16.376,130.04 27,142 44.977,162.25 186.64,175.48 296.99,\
+182.83"];
+		12 -> 4	[color=black,
+			pos="e,555.67,184.23 769.01,64.701 798.11,68.722 828.33,74.695 840,83 861.88,98.567 870.59,121.72 853,142 834.18,163.7 682.21,176.75 \
+565.76,183.65"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef even_odd_count(num):...\leven_odd_count(-345821)\l",
+		linenum="[1]",
+		pos="430,421.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.3194];
+	1 -> 15	[label=calls,
+		lp="451,379.5",
+		pos="e,430,356.13 430,394.71 430,385.66 430,375.47 430,366.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,430,264.29 430,319.88 430,307.12 430,289.4 430,274.52"];
+}

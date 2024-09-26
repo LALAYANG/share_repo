@@ -1,0 +1,133 @@
+digraph cluster104CFG {
+	graph [bb="0,0,1223,365",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="611.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="343,229,459,281",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=string_xor,
+			linenum="[13]",
+			pos="401,255",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster0string_xor {
+		graph [bb="8,31,1215,212",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=string_xor,
+			lheight=0.21,
+			lp="611.5,200.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster0xor {
+			graph [bb="796,39,1207,181",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=xor,
+				lheight=0.21,
+				lp="1001.5,169.5",
+				lwidth=0.35,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			5	[fillcolor="#FF6752",
+				height=0.5,
+				label="if i == j:\l",
+				linenum="[6]",
+				pos="967,132",
+				shape=diamond,
+				style="filled,solid",
+				width=2.5277];
+			6	[fillcolor="#98fb98",
+				height=0.5,
+				label="return '0'\l",
+				linenum="[7]",
+				pos="898,65",
+				shape=parallelogram,
+				style="filled,solid",
+				width=2.6206];
+			5 -> 6	[color=green,
+				label="i == j",
+				lp="963,98.5",
+				pos="e,916.13,83.079 952.03,116.9 943.71,109.06 933.13,99.094 923.54,90.063"];
+			8	[fillcolor="#98fb98",
+				height=0.5,
+				label="return '1'\l",
+				linenum="[9]",
+				pos="1105,65",
+				shape=parallelogram,
+				style="filled,solid",
+				width=2.6206];
+			5 -> 8	[color=red,
+				label="(i != j)",
+				lp="1081.5,98.5",
+				pos="e,1068.8,83.033 992.63,118.93 1011.4,110.09 1037.3,97.872 1059.6,87.399"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="def xor(i, j):...\l",
+			linenum="[5]",
+			pos="401,132",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.1806];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ''.join(xor(x, y) for x, y in zip(a, b))\l",
+			linenum="[11]",
+			pos="401,65",
+			shape=parallelogram,
+			style="filled,solid",
+			width=10.694];
+		3 -> 12	[color=black,
+			pos="e,401,83.19 401,113.92 401,107.7 401,100.5 401,93.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef string_xor(a: str, b: str) ->str:...\lstring_xor('0101', '0000')\l",
+		linenum="[1]",
+		pos="401,338.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.8194];
+	1 -> 15	[label=calls,
+		lp="422,296.5",
+		pos="e,401,273.13 401,311.71 401,302.66 401,292.47 401,283.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,401,150.38 401,236.92 401,217.04 401,183.92 401,160.42"];
+}

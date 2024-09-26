@@ -1,0 +1,193 @@
+digraph cluster144CFG {
+	graph [bb="0,0,560,518",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="280,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="193,382,301,434",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		16	[color="#E552FF",
+			height=0.5,
+			label=factorize,
+			linenum="[19]",
+			pos="247,408",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster4factorize {
+		graph [bb="8,31,517,365",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=factorize,
+			lheight=0.21,
+			lp="262.5,353.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="import math\lfact = []\li = 2\l",
+			linenum="[5, 6, 7]",
+			pos="247,307.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while i <= int(math.sqrt(n) + 1):\l",
+			linenum="[8]",
+			pos="247,246",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.0248];
+		3 -> 4	[color=black,
+			pos="e,247,264.14 247,280.92 247,278.71 247,276.46 247,274.23"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % i == 0:\l",
+			linenum="[9]",
+			pos="157,179",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4 -> 5	[color=green,
+			label="i <= int(math.sqrt(n) + 1)",
+			lp="149.5,212.5",
+			pos="e,80.642,185.66 101.82,234.11 71.491,230.4 47.066,225.72 42,220 26.898,202.94 44.89,193.16 70.789,187.55"];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n > 1:\l",
+			linenum="[15]",
+			pos="400,179",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		4 -> 6	[color=red,
+			label="(i > int(math.sqrt(n) + 1))",
+			lp="448.5,212.5",
+			pos="e,373.07,191.44 287.2,227.92 310.9,217.85 340.67,205.21 363.66,195.44"];
+		7	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="fact.append(i)\ln //= i\l",
+			linenum="[10, 11]",
+			pos="83,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		5 -> 7	[color=green,
+			label="n % i == 0",
+			lp="131.5,145.5",
+			pos="e,82.258,130.41 110.38,167.88 102.63,164.32 95.383,159.5 90,153 87.019,149.4 85.098,145 83.892,140.43"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="i += 1\l",
+			linenum="[13]",
+			pos="211,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.91667];
+		5 -> 9	[color=red,
+			label="(n % i != 0)",
+			lp="238,145.5",
+			pos="e,197.02,129.08 169.52,162.69 175.76,155.07 183.45,145.67 190.51,137.04"];
+		7 -> 4	[color=black,
+			pos="e,82.443,237.3 53.385,130.14 43.033,138.18 32.605,148.65 27,161 16.109,185 13.114,202.7 33,220 40.709,226.71 54.874,231.69 72.388,\
+235.38"];
+		9 -> 4	[color=black,
+			pos="e,264.21,227.97 244.13,125.02 249.08,126.79 254.15,128.51 259,130 273.42,134.44 282.67,126.14 292,138 311.5,162.8 290.33,197.28 \
+270.93,220.33"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="fact.append(n)\l",
+			linenum="[16]",
+			pos="334,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		6 -> 11	[color=green,
+			label="n > 1",
+			lp="395,145.5",
+			pos="e,351.27,129.27 386,164 378,156 367.74,145.74 358.45,136.45"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return fact\l",
+			linenum="[17]",
+			pos="371,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		6 -> 12	[color=red,
+			label="(n <= 1)",
+			lp="453.5,111",
+			pos="e,394.65,75.129 413.89,163.94 416.39,160.61 418.64,156.88 420,153 426.21,135.28 412.38,97.664 409,92 406.97,88.591 404.48,85.332 \
+401.76,82.277"];
+		11 -> 12	[color=black,
+			pos="e,358.73,75.243 346.12,92.973 348.26,89.952 350.55,86.747 352.82,83.55"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef factorize(n: int) ->List[int]:...\lfactorize(3 * 19 * 3 * 19)\l",
+		linenum="[1]",
+		pos="247,491.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.4722];
+	1 -> 16	[label=calls,
+		lp="268,449.5",
+		pos="e,247,426.13 247,464.71 247,455.66 247,445.47 247,436.3",
+		style=dashed];
+	16 -> 3	[color=green,
+		pos="e,247,334.34 247,389.84 247,377.39 247,360.1 247,344.65"];
+}

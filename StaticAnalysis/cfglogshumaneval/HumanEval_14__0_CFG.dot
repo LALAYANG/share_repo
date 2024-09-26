@@ -1,0 +1,136 @@
+digraph cluster394CFG {
+	graph [bb="0,0,542,379",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="271,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="233,243,365,295",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=all_prefixes,
+			linenum="[11]",
+			pos="299,269",
+			shape=tab,
+			style=filled,
+			width=1.6111];
+	}
+	subgraph cluster2all_prefixes {
+		graph [bb="8,31,534,226",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=all_prefixes,
+			lheight=0.21,
+			lp="271,214.5",
+			lwidth=1.39,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result = []\l",
+			linenum="[5]",
+			pos="299,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(string)):\l",
+			linenum="[7]",
+			pos="299,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.17];
+		3 -> 4	[color=black,
+			pos="e,299,142.25 299,158.73 299,156.66 299,154.5 299,152.32"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(string[:i + 1])\l",
+			linenum="[8]",
+			pos="144,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.5556];
+		4 -> 7	[color=green,
+			label="range(len(string))",
+			lp="215.5,90.5",
+			pos="e,137.58,75.293 171.76,112.44 157.58,108.92 146.32,104.23 141,98 137.97,94.449 136.73,90.013 136.55,85.401"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return result\l",
+			linenum="[9]",
+			pos="408,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		4 -> 8	[color=green,
+			pos="e,379.17,75.19 327.64,105.92 340.68,98.146 356.29,88.838 370.27,80.501"];
+		7 -> 4	[color=black,
+			pos="e,301.19,105.85 272.1,71.832 281.93,74.85 289.7,78.524 294,83 297.31,86.444 299.21,90.893 300.21,95.567"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef all_prefixes(string: str) ->List[str]:...\lall_prefixes('WWW')\l",
+		linenum="[1]",
+		pos="299,352.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=5.3889];
+	1 -> 12	[label=calls,
+		lp="320,310.5",
+		pos="e,299,287.13 299,325.71 299,316.66 299,306.47 299,297.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,299,195.3 299,250.65 299,237.82 299,220.11 299,205.38"];
+}

@@ -1,0 +1,123 @@
+digraph cluster170CFG {
+	graph [bb="0,0,578,383",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="289,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="158,247,332,299",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		10	[color="#E552FF",
+			height=0.5,
+			label=special_factorial,
+			linenum="[12]",
+			pos="245,273",
+			shape=tab,
+			style=filled,
+			width=2.1806];
+	}
+	subgraph cluster2special_factorial {
+		graph [bb="8,31,570,230",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=special_factorial,
+			lheight=0.21,
+			lp="289,218.5",
+			lwidth=1.96,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="fact_i = 1\lspecial_fact = 1\l",
+			linenum="[5, 6]",
+			pos="245,180",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(1, n + 1):\l",
+			linenum="[7]",
+			pos="245,126",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		3 -> 4	[color=black,
+			pos="e,245,144.22 245,160.81 245,158.71 245,156.53 245,154.33"];
+		6	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="fact_i *= i\lspecial_fact *= fact_i\l",
+			linenum="[8, 9]",
+			pos="115,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.75];
+		4 -> 6	[color=green,
+			label="range(1, n + 1)",
+			lp="174,92.5",
+			pos="e,108.46,77.07 138.1,112.93 126.04,109.61 116.46,105.38 112,100 109,96.38 107.74,91.906 107.53,87.258"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return special_fact\l",
+			linenum="[10]",
+			pos="397,58",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.5794];
+		4 -> 7	[color=green,
+			pos="e,357.66,76.082 284.54,107.83 304.07,99.352 327.8,89.046 348.43,80.091"];
+		6 -> 4	[color=black,
+			pos="e,247.09,107.95 214.09,75.99 227.43,79.097 237.45,82.23 240,85 243.24,88.509 245.1,92.989 246.1,97.672"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef special_factorial(n):...\lspecial_factorial(5)\l",
+		linenum="[1]",
+		pos="245,356.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.4444];
+	1 -> 10	[label=calls,
+		lp="266,314.5",
+		pos="e,245,291.13 245,329.71 245,320.66 245,310.47 245,301.3",
+		style=dashed];
+	10 -> 3	[color=green,
+		pos="e,245,199.29 245,254.88 245,242.12 245,224.4 245,209.52"];
+}

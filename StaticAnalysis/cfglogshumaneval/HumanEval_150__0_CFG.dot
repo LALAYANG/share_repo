@@ -1,0 +1,141 @@
+digraph cluster250CFG {
+	graph [bb="0,0,494,460",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="247,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="96,324,178,376",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=x_or_y,
+			linenum="[14]",
+			pos="137,350",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster0x_or_y {
+		graph [bb="8,31,486,307",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=x_or_y,
+			lheight=0.21,
+			lp="247,295.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 1:\l",
+			linenum="[5]",
+			pos="137,258",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return y\l",
+			linenum="[6]",
+			pos="95,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		3 -> 4	[color=green,
+			label="n == 1",
+			lp="144,224.5",
+			pos="e,106.17,209.29 127.26,241.92 122.63,234.76 116.97,226 111.69,217.83"];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(2, n):\l",
+			linenum="[7]",
+			pos="335,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.9609];
+		3 -> 5	[color=red,
+			label="(n != 1)",
+			lp="286.5,224.5",
+			pos="e,282.88,209.11 169.7,246.27 197.69,237.08 238.77,223.59 272.97,212.36"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % i == 0:\l",
+			linenum="[8]",
+			pos="299,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		5 -> 8	[color=green,
+			label="range(2, n)",
+			lp="284.5,157.5",
+			pos="e,259.62,136.31 255.75,174.9 247.98,172.04 241.9,168.75 239,165 231.42,155.2 238.67,146.99 250.42,140.62"];
+		8 -> 5	[color=red,
+			label="(n % i != 0)",
+			lp="387,157.5",
+			pos="e,337.87,172.79 324.05,138.39 328.04,141.65 331.62,145.51 334,150 336.05,153.87 337.15,158.25 337.65,162.67"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return y\l",
+			linenum="[9]",
+			pos="299,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		8 -> 10	[color=green,
+			label="n % i == 0",
+			lp="340.5,90.5",
+			pos="e,299,75.19 299,105.92 299,99.702 299,92.5 299,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef x_or_y(n, x, y):...\lx_or_y(3, 33, 5212)\l",
+		linenum="[1]",
+		pos="137,433.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.8611];
+	1 -> 15	[label=calls,
+		lp="158,391.5",
+		pos="e,137,368.13 137,406.71 137,397.66 137,387.47 137,378.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,137,276.3 137,331.65 137,318.82 137,301.11 137,286.38"];
+}

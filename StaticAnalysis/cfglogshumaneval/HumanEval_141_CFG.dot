@@ -1,0 +1,268 @@
+digraph cluster410CFG {
+	graph [bb="0,0,702,702",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="351,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="126,566,282,618",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		28	[color="#E552FF",
+			height=0.5,
+			label=file_name_check,
+			linenum="[18]",
+			pos="204,592",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster4file_name_check {
+		graph [bb="8,31,686,549",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=file_name_check,
+			lheight=0.21,
+			lp="347,537.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_18 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="suf = ['txt', 'exe', 'dll']\llst = file_name.split(sep='.')\l",
+			linenum="[3, 4]",
+			pos="204,499",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.6667];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(lst) != 2:\l",
+			linenum="[5]",
+			pos="204,445",
+			shape=diamond,
+			style="filled,solid",
+			width=4.0085];
+		3 -> 5	[color=black,
+			pos="e,204,463.22 204,479.81 204,477.71 204,475.53 204,473.33"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'No'\l",
+			linenum="[6]",
+			pos="140,378",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		5 -> 7	[color=green,
+			label="len(lst) != 2",
+			lp="231,411.5",
+			pos="e,156.86,396.12 188.83,428.6 181.4,421.05 172.27,411.78 163.93,403.3"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not lst[1] in suf:\l",
+			linenum="[7]",
+			pos="435,378",
+			shape=diamond,
+			style="filled,solid",
+			width=4.8511];
+		5 -> 8	[color=red,
+			label="(len(lst) == 2)",
+			lp="402,411.5",
+			pos="e,390.43,391.54 246.1,432.15 283.85,421.53 339.46,405.88 380.58,394.31"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'No'\l",
+			linenum="[8]",
+			pos="162,311",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		8 -> 10	[color=green,
+			label="not lst[1] in suf",
+			lp="365.5,344.5",
+			pos="e,213.73,329.07 368.8,366.79 345.36,362.75 318.89,357.71 295,352 271.4,346.36 245.81,338.98 223.44,332.09"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(lst[0]) == 0:\l",
+			linenum="[9]",
+			pos="449,311",
+			shape=diamond,
+			style="filled,solid",
+			width=4.6469];
+		8 -> 11	[color=red,
+			label="(not not lst[1] in suf)",
+			lp="538,344.5",
+			pos="e,445.36,328.91 438.61,360.26 440.02,353.72 441.67,346.05 443.23,338.77"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'No'\l",
+			linenum="[10]",
+			pos="118,244",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		11 -> 14	[color=green,
+			label="len(lst[0]) == 0",
+			lp="381.5,277.5",
+			pos="e,200.37,262.03 390.26,299.25 366.83,294.91 339.62,289.8 315,285 280.85,278.35 243.43,270.81 210.45,264.09"];
+		15	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not lst[0][0].isalpha():\l",
+			linenum="[11]",
+			pos="458,244",
+			shape=diamond,
+			style="filled,solid",
+			width=6.1022];
+		11 -> 15	[color=red,
+			label="(len(lst[0]) != 0)",
+			lp="528.5,277.5",
+			pos="e,455.62,262.19 451.36,292.92 452.25,286.55 453.27,279.16 454.25,272.11"];
+		17	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'No'\l",
+			linenum="[12]",
+			pos="160,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		15 -> 17	[color=green,
+			label="not lst[0][0].isalpha()",
+			lp="361,210.5",
+			pos="e,198.58,195.02 356.53,234.23 327.07,230.5 295.02,225.26 266,218 246.68,213.17 226.06,205.9 208.19,198.88"];
+		18	[fillcolor="#FFFB81",
+			height=0.5,
+			label="t = len([x for x in lst[0] if x.isdigit()])\l",
+			linenum="[13]",
+			pos="465,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.1528];
+		15 -> 18	[color=red,
+			label="(not not lst[0][0].isalpha())",
+			lp="582,210.5",
+			pos="e,463.15,195.19 459.84,225.92 460.51,219.7 461.28,212.5 462.03,205.6"];
+		22	[fillcolor="#FF6752",
+			height=0.5,
+			label="if t > 3:\l",
+			linenum="[14]",
+			pos="465,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		18 -> 22	[color=black,
+			pos="e,465,142.25 465,158.73 465,156.66 465,154.5 465,152.32"];
+		23	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'No'\l",
+			linenum="[15]",
+			pos="310,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		22 -> 23	[color=green,
+			label="t > 3",
+			lp="422,90.5",
+			pos="e,350.66,75.051 438,111.68 416.53,102.67 385.89,89.824 359.97,78.955"];
+		24	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'Yes'\l",
+			linenum="[16]",
+			pos="541,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		22 -> 24	[color=red,
+			label="(t <= 3)",
+			lp="542.5,90.5",
+			pos="e,521.12,75.004 481.12,109.22 490.51,101.18 502.62,90.826 513.48,81.534"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef file_name_check(file_name):...\lfile_name_check('example.txt')\l",
+		linenum="[1]",
+		pos="204,675.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.125];
+	1 -> 28	[label=calls,
+		lp="225,633.5",
+		pos="e,204,610.13 204,648.71 204,639.66 204,629.47 204,620.3",
+		style=dashed];
+	28 -> 3	[color=green,
+		pos="e,204,518.29 204,573.88 204,561.12 204,543.4 204,528.52"];
+}

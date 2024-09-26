@@ -1,0 +1,197 @@
+digraph cluster898CFG {
+	graph [bb="0,0,1173,513",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="586.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="198,377,306,429",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		21	[color="#E552FF",
+			height=0.5,
+			label=is_sorted,
+			linenum="[15]",
+			pos="252,403",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster4is_sorted {
+		graph [bb="8,31,1159,360",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=is_sorted,
+			lheight=0.21,
+			lp="583.5,348.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="count_digit = dict([(i, 0) for i in lst])\l",
+			linenum="[5]",
+			pos="252,311",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.9306];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in lst:\l",
+			linenum="[6]",
+			pos="252,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.585];
+		3 -> 5	[color=black,
+			pos="e,252,276.25 252,292.73 252,290.66 252,288.5 252,286.32"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="count_digit[i] += 1\l",
+			linenum="[7]",
+			pos="221,191",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.4028];
+		5 -> 6	[color=green,
+			label=lst,
+			lp="230.5,224.5",
+			pos="e,215.88,209.12 223.66,239.88 221.41,237.5 219.46,234.88 218,232 216.02,228.09 215.2,223.67 215.08,219.25"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if any(count_digit[i] > 2 for i in lst):\l",
+			linenum="[8]",
+			pos="644,191",
+			shape=diamond,
+			style="filled,solid",
+			width=8.8597];
+		5 -> 7	[color=green,
+			pos="e,567.21,204.73 315.42,246.48 381.02,235.61 483.93,218.54 557.09,206.41"];
+		6 -> 5	[color=black,
+			pos="e,252.37,239.92 241.69,209.07 243.75,211.54 245.6,214.2 247,217 248.98,220.94 250.28,225.37 251.13,229.8"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[9]",
+			pos="127,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		7 -> 9	[color=green,
+			label="any(count_digit[i] > 2 for i in lst)",
+			lp="515,157.5",
+			pos="e,218.69,142.03 513.66,180.34 467,176.34 414.06,171.17 366,165 320.8,159.19 271.07,151.14 228.72,143.78"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if all(lst[i - 1] <= lst[i] for i in range(1, len(lst))):\l",
+			linenum="[10]",
+			pos="703,124",
+			shape=diamond,
+			style="filled,solid",
+			width=12.434];
+		7 -> 10	[color=red,
+			label="(not any(count_digit[i] > 2 for i in lst))",
+			lp="851.5,157.5",
+			pos="e,687.91,141.62 658.89,173.6 665.61,166.19 673.7,157.28 681.09,149.13"];
+		15	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[11]",
+			pos="203,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		10 -> 15	[color=green,
+			label="all(lst[i - 1] <= lst[i] for i in range(1, len(lst)))",
+			lp="457,90.5",
+			pos="e,213.41,75.357 430.35,116.94 339.91,113.24 257.22,107.35 238,98 231.04,94.614 224.88,89.153 219.75,83.34"];
+		17	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[13]",
+			pos="664,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 17	[color=red,
+			label="(not all(lst[i - 1] <= lst[i] for i in range(1, len(lst))))",
+			lp="929.5,90.5",
+			pos="e,674.42,75.363 692.96,106.26 688.96,99.596 684.26,91.764 679.82,84.371"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef is_sorted(lst):...\lis_sorted([3, 2, 1])\l",
+		linenum="[1]",
+		pos="252,486.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.75];
+	1 -> 21	[label=calls,
+		lp="273,444.5",
+		pos="e,252,421.13 252,459.71 252,450.66 252,440.47 252,431.3",
+		style=dashed];
+	21 -> 3	[color=green,
+		pos="e,252,329.3 252,384.65 252,371.82 252,354.11 252,339.38"];
+}

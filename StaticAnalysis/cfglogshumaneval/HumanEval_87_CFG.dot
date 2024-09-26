@@ -1,0 +1,99 @@
+digraph cluster14CFG {
+	graph [bb="0,0,1332,354",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="666,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="621,218,711,270",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		11	[color="#E552FF",
+			height=0.5,
+			label=get_row,
+			linenum="[6]",
+			pos="666,244",
+			shape=tab,
+			style=filled,
+			width=1.0278];
+	}
+	subgraph cluster0get_row {
+		graph [bb="8,31,1324,201",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=get_row,
+			lheight=0.21,
+			lp="666,189.5",
+			lwidth=0.81,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="coords = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if \l    lst[i][j] == x]\l",
+			linenum="[3]",
+			pos="666,151",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.5972];
+		8	[fillcolor="#98fb98",
+			height=1.0556,
+			label="return sorted(sorted(coords, key=lambda x: x[1], reverse=True), key=lambda\l    x: x[0])\l",
+			linenum="[4]",
+			pos="666,77",
+			shape=parallelogram,
+			style="filled,solid",
+			width=18.057];
+		3 -> 8	[color=black,
+			pos="e,666,115.27 666,131.83 666,129.77 666,127.6 666,125.36"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef get_row(lst, x):...\lget_row([], 1)\l",
+		linenum="[1]",
+		pos="666,327.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.8611];
+	1 -> 11	[label=calls,
+		lp="687,285.5",
+		pos="e,666,262.13 666,300.71 666,291.66 666,281.47 666,272.3",
+		style=dashed];
+	11 -> 3	[color=green,
+		pos="e,666,170.29 666,225.88 666,213.12 666,195.4 666,180.52"];
+}

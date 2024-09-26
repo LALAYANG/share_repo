@@ -1,0 +1,100 @@
+digraph cluster156CFG {
+	graph [bb="0,0,899,326",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="449.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="369,190,477,242",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		9	[color="#E552FF",
+			height=0.5,
+			label=monotonic,
+			linenum="[9]",
+			pos="423,216",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster0monotonic {
+		graph [bb="8,31,891,173",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=monotonic,
+			lheight=0.21,
+			lp="449.5,161.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if l == sorted(l) or l == sorted(l, reverse=True):\l",
+			linenum="[5]",
+			pos="423,124",
+			shape=diamond,
+			style="filled,solid",
+			width=10.953];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[6]",
+			pos="118,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		3 -> 4	[color=green,
+			label="l == sorted(l) or l == sorted(l, reverse=True)",
+			lp="234,90.5",
+			pos="e,55.757,73.545 155.41,118.2 99.107,114.49 53.633,108.29 44,98 36.889,90.404 39.468,83.938 46.894,78.561"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[7]",
+			pos="437,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 5	[color=red,
+			label="(not (l == sorted(l) or l == sorted(l, reverse=True)))",
+			lp="654,90.5",
+			pos="e,433.3,75.19 426.68,105.92 428.05,99.553 429.64,92.156 431.16,85.108"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef monotonic(l: list):...\lmonotonic([4, 1, 0, -10])\l",
+		linenum="[1]",
+		pos="423,299.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.2083];
+	1 -> 9	[label=calls,
+		lp="444,257.5",
+		pos="e,423,234.13 423,272.71 423,263.66 423,253.47 423,244.3",
+		style=dashed];
+	9 -> 3	[color=green,
+		pos="e,423,142.3 423,197.65 423,184.82 423,167.11 423,152.38"];
+}

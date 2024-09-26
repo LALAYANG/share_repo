@@ -1,0 +1,221 @@
+digraph cluster330CFG {
+	graph [bb="0,0,782,656",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="391,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="423,520,629,572",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		22	[color="#E552FF",
+			height=0.5,
+			label=separate_paren_groups,
+			linenum="[23]",
+			pos="526,546",
+			shape=tab,
+			style=filled,
+			width=2.6389];
+	}
+	subgraph cluster2separate_paren_groups {
+		graph [bb="8,31,693,503",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=separate_paren_groups,
+			lheight=0.21,
+			lp="350.5,491.5",
+			lwidth=2.42,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_14 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="result = []\lcurrent_string = []\lcurrent_depth = 0\l",
+			linenum="[5, 6, 7]",
+			pos="526,445.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.4028];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for c in paren_string:\l",
+			linenum="[9]",
+			pos="526,384",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		3 -> 4	[color=black,
+			pos="e,526,402.14 526,418.92 526,416.71 526,414.46 526,412.23"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if c == '(':\l",
+			linenum="[10]",
+			pos="496,317",
+			shape=diamond,
+			style="filled,solid",
+			width=2.9617];
+		4 -> 5	[color=green,
+			label=paren_string,
+			lp="563,350.5",
+			pos="e,503.31,333.85 518.12,365.92 514.9,358.94 511.1,350.72 507.58,343.08"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return result\l",
+			linenum="[21]",
+			pos="253,317",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		4 -> 6	[color=green,
+			pos="e,324.72,335.08 454.27,365.92 417.58,357.19 372.76,346.52 334.74,337.46"];
+		7	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="current_depth += 1\lcurrent_string.append(c)\l",
+			linenum="[11, 12]",
+			pos="355,249",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.9861];
+		5 -> 7	[color=green,
+			label="c == '('",
+			lp="475.5,283.5",
+			pos="e,393.47,268.01 469.15,303.43 450.41,294.66 424.89,282.72 402.73,272.34"];
+		9	[fillcolor="#FF6752",
+			height=0.5,
+			label="if c == ')':\l",
+			linenum="[13]",
+			pos="123,249",
+			shape=diamond,
+			style="filled,solid",
+			width=2.9617];
+		5 -> 9	[color=red,
+			label="(c != '(')",
+			lp="366.5,283.5",
+			pos="e,167,259.67 442,308.07 422.47,305.21 400.24,301.96 380,299 355.56,295.43 349.34,295.24 325,291 274.62,282.23 217.55,270.48 176.95,\
+261.8"];
+		7 -> 4	[color=black,
+			pos="e,607.35,367.51 462.68,266.75 479.56,269.66 496.77,272.78 513,276 557.31,284.78 581.95,265.27 612,299 629.31,318.42 625.38,347.01 \
+617,358 616.3,358.91 615.58,359.79 614.83,360.64"];
+		9 -> 4	[color=red,
+			label="(c != ')')",
+			lp="84.5,317",
+			pos="e,397.89,379 89.41,261.41 72.256,269.14 52.95,281.24 43,299 35.181,312.96 32.26,323.14 43,335 65.918,360.31 253.4,372.81 387.9,378.58"];
+		10	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="current_depth -= 1\lcurrent_string.append(c)\l",
+			linenum="[14, 15]",
+			pos="248,180",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.9861];
+		9 -> 10	[color=green,
+			label="c == ')'",
+			lp="229.5,214.5",
+			pos="e,214.21,199.11 147.4,234.92 163.84,226.11 185.96,214.25 205.27,203.9"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if current_depth == 0:\l",
+			linenum="[17]",
+			pos="483,126",
+			shape=diamond,
+			style="filled,solid",
+			width=5.0554];
+		10 -> 13	[color=black,
+			pos="e,429.6,138.82 329.53,160.96 359.05,154.43 391.92,147.15 419.64,141.02"];
+		13 -> 4	[color=red,
+			label="(current_depth != 0)",
+			lp="596,249",
+			pos="e,608.58,367.76 481.04,144.22 478.7,174.09 478.71,235.42 513,268 529.31,283.5 541.27,270.16 563,276 590.58,283.41 606.29,275.84 \
+623,299 640.63,323.43 632.02,348.99 625,358 623.42,360.03 620.93,361.92 617.76,363.67"];
+		14	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="result.append(''.join(current_string))\lcurrent_string.clear()\l",
+			linenum="[18, 19]",
+			pos="510,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.5833];
+		13 -> 14	[color=green,
+			label="current_depth == 0",
+			lp="572.5,92.5",
+			pos="e,502.52,77.275 489.81,108.35 492.48,101.83 495.6,94.188 498.59,86.884"];
+		14 -> 4	[color=black,
+			pos="e,630.07,373.18 633.42,77.096 639.48,79.425 645.38,82.047 651,85 671.4,95.722 684,101.95 684,125 684,318 684,318 684,318 684,344.55 \
+664.68,360.48 639.56,369.97"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef separate_paren_groups(paren_string: str) ->List[str]:...\lseparate_paren_groups('(()(())((())))')\l",
+		linenum="[1]",
+		pos="526,629.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=7.1111];
+	1 -> 22	[label=calls,
+		lp="547,587.5",
+		pos="e,526,564.13 526,602.71 526,593.66 526,583.47 526,574.3",
+		style=dashed];
+	22 -> 3	[color=green,
+		pos="e,526,472.34 526,527.84 526,515.39 526,498.1 526,482.65"];
+}

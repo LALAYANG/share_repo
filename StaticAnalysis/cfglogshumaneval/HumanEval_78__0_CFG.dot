@@ -1,0 +1,140 @@
+digraph cluster864CFG {
+	graph [bb="0,0,626,448",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="313,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="290,312,380,364",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=hex_key,
+			linenum="[12]",
+			pos="335,338",
+			shape=tab,
+			style=filled,
+			width=1.0278];
+	}
+	subgraph cluster2hex_key {
+		graph [bb="8,31,618,295",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=hex_key,
+			lheight=0.21,
+			lp="313,283.5",
+			lwidth=0.81,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="primes = '2', '3', '5', '7', 'B', 'D'\ltotal = 0\l",
+			linenum="[5, 6]",
+			pos="335,245",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.4722];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(0, len(num)):\l",
+			linenum="[7]",
+			pos="335,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.17];
+		3 -> 4	[color=black,
+			pos="e,335,209.22 335,225.81 335,223.71 335,221.53 335,219.33"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if num[i] in primes:\l",
+			linenum="[8]",
+			pos="423,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.6469];
+		4 -> 7	[color=green,
+			label="range(0, len(num))",
+			lp="320.5,157.5",
+			pos="e,307.8,129.6 252.35,172.9 241.97,167.19 237.56,159.72 246,150 254.05,140.73 274.02,134.81 297.78,131.04"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return total\l",
+			linenum="[10]",
+			pos="127,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		4 -> 8	[color=green,
+			pos="e,170.82,142.06 264.64,172.95 255.3,170.42 245.89,167.74 237,165 218.4,159.26 198.33,152.22 180.48,145.65"];
+		7 -> 4	[color=red,
+			label="(num[i] not in primes)",
+			lp="502,157.5",
+			pos="e,387.65,172.85 416.16,141.56 412.16,149.55 406.42,158.73 399,165 398.13,165.73 397.24,166.44 396.33,167.13"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="total += 1\l",
+			linenum="[9]",
+			pos="514,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		7 -> 9	[color=green,
+			label="num[i] in primes",
+			lp="537.5,90.5",
+			pos="e,483.07,75.138 440.22,107.45 449.12,99.72 460.34,90.464 471,83 472.07,82.248 473.17,81.497 474.29,80.75"];
+		9 -> 4	[color=black,
+			pos="e,483.28,183.61 563.54,60.355 578.94,63.719 594.38,70.348 604,83 626.13,112.12 622.98,139.25 597,165 588.56,173.37 543.69,179.06 \
+493.4,182.88"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef hex_key(num):...\lhex_key('2020')\l",
+		linenum="[1]",
+		pos="335,421.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 13	[label=calls,
+		lp="356,379.5",
+		pos="e,335,356.13 335,394.71 335,385.66 335,375.47 335,366.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,335,264.29 335,319.88 335,307.12 335,289.4 335,274.52"];
+}

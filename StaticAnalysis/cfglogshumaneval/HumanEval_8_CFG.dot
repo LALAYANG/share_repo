@@ -1,0 +1,110 @@
+digraph cluster622CFG {
+	graph [bb="0,0,755.5,383",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="377.75,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="182.5,247,304.5,299",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		9	[color="#E552FF",
+			height=0.5,
+			label=sum_product,
+			linenum="[11]",
+			pos="243.5,273",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster2sum_product {
+		graph [bb="101.5,31,747.5,230",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=sum_product,
+			lheight=0.21,
+			lp="424.5,218.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="sum_value = 0\lprod_value = 1\l",
+			linenum="[3, 4]",
+			pos="243.5,180",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for n in numbers:\l",
+			linenum="[6]",
+			pos="243.5,126",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.273];
+		3 -> 4	[color=black,
+			pos="e,243.5,144.22 243.5,160.81 243.5,158.71 243.5,156.53 243.5,154.33"];
+		5	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="sum_value += n\lprod_value *= n\l",
+			linenum="[7, 8]",
+			pos="179.5,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		4 -> 5	[color=green,
+			label=numbers,
+			lp="205.5,92.5",
+			pos="e,173.39,77.091 184.01,108.1 181.17,105.75 178.62,103.06 176.5,100 173.86,96.204 172.75,91.705 172.57,87.102"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum_value, prod_value\l",
+			linenum="[9]",
+			pos="503.5,58",
+			shape=parallelogram,
+			style="filled,solid",
+			width=6.5647];
+		4 -> 6	[color=green,
+			pos="e,436.43,76.025 306.11,109.11 342.25,99.934 387.99,88.322 426.34,78.587"];
+		5 -> 4	[color=black,
+			pos="e,244.99,107.64 230.79,77.071 233.68,79.406 236.29,82.037 238.5,85 241.18,88.6 242.83,92.906 243.8,97.338"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef sum_product(numbers: List[int]) ->Tuple[int, int]:...\lsum_product([1, 1, 1])\l",
+		linenum="[1]",
+		pos="243.5,356.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=6.7639];
+	1 -> 9	[label=calls,
+		lp="264.5,314.5",
+		pos="e,243.5,291.13 243.5,329.71 243.5,320.66 243.5,310.47 243.5,301.3",
+		style=dashed];
+	9 -> 3	[color=green,
+		pos="e,243.5,199.29 243.5,254.88 243.5,242.12 243.5,224.4 243.5,209.52"];
+}

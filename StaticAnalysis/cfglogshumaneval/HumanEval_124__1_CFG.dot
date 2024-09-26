@@ -1,0 +1,90 @@
+digraph cluster294CFG {
+	graph [bb="0,0,249,274",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="124.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="8,123,241,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		28	[color="#E552FF",
+			height=0.5,
+			label=valid_date,
+			linenum="[21]",
+			pos="66,149",
+			shape=tab,
+			style=filled,
+			width=1.375];
+		29	[color="#E552FF",
+			height=0.5,
+			label=valid_date,
+			linenum="[23]",
+			pos="183,149",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster2valid_date {
+		graph [bb="90,31,189,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=valid_date,
+			lheight=0.21,
+			lp="139.5,94.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="",
+			linenum="[]",
+			pos="136,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.75];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.94444,
+		label="from typing import *\ldef valid_date(date):...\lvalid_date('04-2003')\lvalid_date('04-2003')\l",
+		linenum="[1]",
+		pos="124,240",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 28	[label=calls,
+		lp="118,190.5",
+		pos="e,77.364,167.44 102.4,205.86 95.959,195.97 88.993,185.28 82.897,175.93",
+		style=dashed];
+	1 -> 29	[label=calls,
+		lp="181,190.5",
+		pos="e,171.44,167.44 145.97,205.86 152.52,195.97 159.61,185.28 165.81,175.93",
+		style=dashed];
+	28 -> 3	[color=green,
+		pos="e,122.54,75.3 79.497,130.65 89.955,117.2 104.6,98.376 116.35,83.259"];
+	29 -> 3	[color=green,
+		pos="e,145.03,75.3 173.94,130.65 167.11,117.57 157.63,99.418 149.85,84.527"];
+}

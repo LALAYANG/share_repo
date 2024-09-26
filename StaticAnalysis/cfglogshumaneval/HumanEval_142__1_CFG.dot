@@ -1,0 +1,216 @@
+digraph cluster772CFG {
+	graph [bb="0,0,792,513",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="396,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="308,377,430,429",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		20	[color="#E552FF",
+			height=0.5,
+			label=sum_squares,
+			linenum="[15]",
+			pos="369,403",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster8sum_squares {
+		graph [bb="8,31,784,360",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=sum_squares,
+			lheight=0.21,
+			lp="396,348.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_9 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_12 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_14 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result = []\l",
+			linenum="[5]",
+			pos="369,311",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(lst)):\l",
+			linenum="[6]",
+			pos="369,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		3 -> 4	[color=black,
+			pos="e,369,276.25 369,292.73 369,290.66 369,288.5 369,286.32"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 3 == 0:\l",
+			linenum="[7]",
+			pos="509,191",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4 -> 7	[color=green,
+			label="range(len(lst))",
+			lp="513,224.5",
+			pos="e,480.86,205.06 405.78,239.92 426.07,230.51 451.19,218.84 471.57,209.38"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum(result)\l",
+			linenum="[13]",
+			pos="193,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.3676];
+		4 -> 8	[color=green,
+			pos="e,239.24,209.08 322.76,239.92 300.11,231.56 272.66,221.42 248.85,212.63"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(lst[i] ** 2)\l",
+			linenum="[8]",
+			pos="152,124",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		7 -> 9	[color=green,
+			label="i % 3 == 0",
+			lp="465.5,157.5",
+			pos="e,267.75,140.96 471.13,178.57 432.94,167.08 378.93,150.92 374,150 334.39,142.58 321.72,146.12 277.92,142"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 4 == 0 and i % 3 != 0:\l",
+			linenum="[9]",
+			pos="521,124",
+			shape=diamond,
+			style="filled,solid",
+			width=6.5362];
+		7 -> 11	[color=red,
+			label="(i % 3 != 0)",
+			lp="566,157.5",
+			pos="e,517.88,141.91 512.09,173.26 513.3,166.72 514.71,159.05 516.06,151.77"];
+		9 -> 4	[color=black,
+			pos="e,372.19,239.89 247.55,142.01 297.95,151.88 351.01,164.09 359,173 372.6,188.18 374.4,211.58 373.19,229.83"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(lst[i] ** 3)\l",
+			linenum="[10]",
+			pos="198,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		11 -> 12	[color=green,
+			label="i % 4 == 0 and i % 3 != 0",
+			lp="386.5,90.5",
+			pos="e,227.73,75.007 383.59,116.47 350.26,112.73 315.01,106.94 283,98 267.28,93.611 250.86,86.541 236.69,79.556"];
+		14	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(lst[i])\l",
+			linenum="[12]",
+			pos="588,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.6389];
+		11 -> 14	[color=red,
+			label="(not (i % 4 == 0 and i % 3 != 0))",
+			lp="633.5,90.5",
+			pos="e,504.38,75.293 502.55,107.29 495.85,99.692 491.21,90.6 497,83 497.07,82.91 497.14,82.821 497.21,82.732"];
+		12 -> 4	[color=black,
+			pos="e,216.88,254.72 100.58,75.075 68.173,82.865 37.811,93.234 28,106 12.647,125.98 17.907,198.54 27,209 51.095,236.71 130.44,248.9 206.64,\
+254.06"];
+		14 -> 4	[color=black,
+			pos="e,489.31,247.86 683.34,59.934 720.98,62.899 758.1,69.358 770,83 787.3,102.83 779.81,120.24 765,142 713.33,217.92 668.15,209.97 579,\
+232 553.56,238.29 525.98,243.01 499.43,246.56"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef sum_squares(lst):...\lsum_squares([-16, -9, -2, 36, 36, 26, -20, 25, -40, 20, -4, 12, -26, 35, 37])\l",
+		linenum="[1]",
+		pos="369,486.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=9.0556];
+	1 -> 20	[label=calls,
+		lp="390,444.5",
+		pos="e,369,421.13 369,459.71 369,450.66 369,440.47 369,431.3",
+		style=dashed];
+	20 -> 3	[color=green,
+		pos="e,369,329.3 369,384.65 369,371.82 369,354.11 369,339.38"];
+}

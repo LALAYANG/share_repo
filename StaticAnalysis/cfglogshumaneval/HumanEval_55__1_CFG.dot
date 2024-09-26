@@ -1,0 +1,124 @@
+digraph cluster346CFG {
+	graph [bb="0,0,712,393",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="356,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="102,257,172,309",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=fib,
+			linenum="[11]",
+			pos="137,283",
+			shape=tab,
+			style=filled,
+			width=0.75];
+	}
+	subgraph cluster2fib {
+		graph [bb="8,31,704,240",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=fib,
+			lheight=0.21,
+			lp="356,228.5",
+			lwidth=0.35,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 0:\l",
+			linenum="[5]",
+			pos="137,191",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 0\l",
+			linenum="[6]",
+			pos="116,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		3 -> 4	[color=green,
+			label="n == 0",
+			lp="153,157.5",
+			pos="e,121.57,142.25 131.81,173.93 129.67,167.32 127.14,159.47 124.73,152.01"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 1:\l",
+			linenum="[7]",
+			pos="304,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		3 -> 5	[color=red,
+			label="(n != 0)",
+			lp="268.5,157.5",
+			pos="e,274.96,136.3 166.09,178.68 193.66,167.95 235.26,151.76 265.56,139.96"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 1\l",
+			linenum="[8]",
+			pos="95,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		5 -> 7	[color=green,
+			label="n == 1",
+			lp="243,90.5",
+			pos="e,149.69,75.01 270.42,112.56 240.55,103.27 196.04,89.424 159.33,78.008"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return fib(n - 1) + fib(n - 2)\l",
+			linenum="[9]",
+			pos="444,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=6.9882];
+		5 -> 8	[color=red,
+			label="(n != 1)",
+			lp="419.5,90.5",
+			pos="e,407.15,75.111 329.68,111.08 348.76,102.22 375.3,89.896 398.01,79.354"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef fib(n: int):...\lfib(11)\l",
+		linenum="[1]",
+		pos="137,366.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 12	[label=calls,
+		lp="158,324.5",
+		pos="e,137,301.13 137,339.71 137,330.66 137,320.47 137,311.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,137,209.3 137,264.65 137,251.82 137,234.11 137,219.38"];
+}

@@ -1,0 +1,124 @@
+digraph cluster710CFG {
+	graph [bb="0,0,832,396",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="416,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="290,260,398,312",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		16	[color="#E552FF",
+			height=0.5,
+			label=odd_count,
+			linenum="[20]",
+			pos="344,286",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster2odd_count {
+		graph [bb="8,31,824,243",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=odd_count,
+			lheight=0.21,
+			lp="416,231.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res = []\l",
+			linenum="[5]",
+			pos="344,194",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for arr in lst:\l",
+			linenum="[6]",
+			pos="344,141",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.9186];
+		3 -> 4	[color=black,
+			pos="e,344,159.25 344,175.73 344,173.66 344,171.5 344,169.32"];
+		5	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="n = sum(int(d) % 2 == 1 for d in arr)\lres.append('the number of odd el...' + str(n) + 'n the str' + str(n) +\l    'ng ' + str(n) + ' \
+of the ' + str(n) + 'nput.')\l",
+			linenum="[7, 8]",
+			pos="313,65.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.25];
+		4 -> 5	[color=green,
+			label=lst,
+			lp="322.5,107.5",
+			pos="e,306.57,92.184 315.66,122.88 313.41,120.5 311.46,117.88 310,115 308.03,111.1 306.98,106.8 306.55,102.42"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return res\l",
+			linenum="[18]",
+			pos="722,65.5",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		4 -> 6	[color=green,
+			pos="e,664.15,81.576 414.62,129.07 470.33,120.11 549.88,106.57 619,92 630.48,89.581 642.62,86.787 654.38,83.956"];
+		5 -> 4	[color=black,
+			pos="e,343.85,122.75 335.13,92.381 336.61,94.859 337.93,97.415 339,100 340.66,104 341.8,108.41 342.59,112.78"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef odd_count(lst):...\lodd_count(['3', '11111111'])\l",
+		linenum="[1]",
+		pos="344,369.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.4444];
+	1 -> 16	[label=calls,
+		lp="365,327.5",
+		pos="e,344,304.13 344,342.71 344,333.66 344,323.47 344,314.3",
+		style=dashed];
+	16 -> 3	[color=green,
+		pos="e,344,212.3 344,267.65 344,254.82 344,237.11 344,222.38"];
+}

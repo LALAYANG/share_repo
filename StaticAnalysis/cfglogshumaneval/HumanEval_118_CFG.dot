@@ -1,0 +1,192 @@
+digraph cluster568CFG {
+	graph [bb="0,0,1129,580",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="564.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="110,444,284,496",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		20	[color="#E552FF",
+			height=0.5,
+			label=get_closest_vowel,
+			linenum="[13]",
+			pos="197,470",
+			shape=tab,
+			style=filled,
+			width=2.1806];
+	}
+	subgraph cluster4get_closest_vowel {
+		graph [bb="8,31,1121,427",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=get_closest_vowel,
+			lheight=0.21,
+			lp="564.5,415.5",
+			lwidth=1.96,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(word) < 3:\l",
+			linenum="[3]",
+			pos="197,378",
+			shape=diamond,
+			style="filled,solid",
+			width=4.0085];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ''\l",
+			linenum="[4]",
+			pos="103,311",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 5	[color=green,
+			label="len(word) < 3",
+			lp="212,344.5",
+			pos="e,127.8,329.15 176.14,362.57 164.42,354.47 149.54,344.18 136.25,334.99"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'O', 'U', 'I'}\l",
+			linenum="[6]",
+			pos="459,311",
+			shape=rectangle,
+			style="filled,solid",
+			width=6.9861];
+		3 -> 6	[color=red,
+			label="(len(word) >= 3)",
+			lp="417.5,344.5",
+			pos="e,390.27,329.05 242.64,365.68 280.61,356.26 335.53,342.63 380.53,331.47"];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(word) - 2, 0, -1):\l",
+			linenum="[7]",
+			pos="397,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.7127];
+		6 -> 8	[color=black,
+			pos="e,417.97,276.25 438.01,292.73 434.07,289.49 429.89,286.05 425.76,282.66"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if word[i] in vowels:\l",
+			linenum="[8]",
+			pos="382,191",
+			shape=diamond,
+			style="filled,solid",
+			width=4.8511];
+		8 -> 11	[color=green,
+			label="range(len(word) - 2, 0, -1)",
+			lp="272.5,224.5",
+			pos="e,290.39,199.59 228.7,247.05 194.35,243.36 166.8,238.45 161,232 156.54,227.04 156.56,221.97 161,217 165.26,212.23 224.35,205.7 280.35,\
+200.51"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ''\l",
+			linenum="[11]",
+			pos="103,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		8 -> 12	[color=green,
+			pos="e,119.44,209.18 230.38,246.77 197.58,243.16 168.52,238.35 153,232 143.78,228.23 134.89,222.2 127.23,215.95"];
+		11 -> 8	[color=red,
+			label="(word[i] not in vowels)",
+			lp="485,224.5",
+			pos="e,393.06,239.92 385.86,208.74 387.36,215.25 389.12,222.86 390.79,230.1"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if word[i + 1] not in vowels and word[i - 1] not in vowels:\l",
+			linenum="[9]",
+			pos="535,124",
+			shape=diamond,
+			style="filled,solid",
+			width=12.843];
+		11 -> 13	[color=green,
+			label="word[i] in vowels",
+			lp="517.5,157.5",
+			pos="e,474.58,139.78 402.86,175.12 415.22,166.83 431.47,156.83 447,150 452.72,147.48 458.77,145.15 464.9,143"];
+		13 -> 8	[color=red,
+			label="(not (word[i + 1] not in vowels and word[i - 1] not in vowels))",
+			lp="862,191",
+			pos="e,556.54,245.6 579.39,140.64 582.75,143.29 585.71,146.39 588,150 607.54,180.82 608.84,205.27 584,232 580.15,236.14 573.94,239.62 \
+566.08,242.54"];
+		15	[fillcolor="#98fb98",
+			height=0.5,
+			label="return word[i]\l",
+			linenum="[10]",
+			pos="535,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		13 -> 15	[color=green,
+			label="word[i + 1] not in vowels and word[i - 1] not in vowels",
+			lp="762,90.5",
+			pos="e,535,75.19 535,105.92 535,99.702 535,92.5 535,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef get_closest_vowel(word):...\lget_closest_vowel('yogurt')\l",
+		linenum="[1]",
+		pos="197,553.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.7778];
+	1 -> 20	[label=calls,
+		lp="218,511.5",
+		pos="e,197,488.13 197,526.71 197,517.66 197,507.47 197,498.3",
+		style=dashed];
+	20 -> 3	[color=green,
+		pos="e,197,396.3 197,451.65 197,438.82 197,421.11 197,406.38"];
+}

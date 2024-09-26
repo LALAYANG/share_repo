@@ -1,0 +1,123 @@
+digraph cluster614CFG {
+	graph [bb="0,0,767,396",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="383.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="290,260,430,312",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		11	[color="#E552FF",
+			height=0.5,
+			label=triangle_area,
+			linenum="[10]",
+			pos="360,286",
+			shape=tab,
+			style=filled,
+			width=1.7222];
+	}
+	subgraph cluster2triangle_area {
+		graph [bb="8,31,759,243",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=triangle_area,
+			lheight=0.21,
+			lp="383.5,231.5",
+			lwidth=1.50,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if a + b <= c or a + c <= b or b + c <= a:\l",
+			linenum="[3]",
+			pos="360,194",
+			shape=diamond,
+			style="filled,solid",
+			width=9.2682];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return -1\l",
+			linenum="[4]",
+			pos="103,118.5",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 4	[color=green,
+			label="a + b <= c or a + c <= b or b + c <= a",
+			lp="216,160.5",
+			pos="e,72.354,136.61 162.19,186.62 110.83,182.94 67.412,177.14 59,168 51.541,159.9 56.029,150.98 64.489,143.03"];
+		5	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="s = (a + b + c) / 2\larea = (s * (s - a) * (s - b) * (s - c)) ** 0.5\larea = round(area, 2)\l",
+			linenum="[5, 6, 7]",
+			pos="410,118.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.6111];
+		3 -> 5	[color=red,
+			label="(not (a + b <= c or a + c <= b or b + c <= a))",
+			lp="576,160.5",
+			pos="e,392.61,145.06 371.35,176.32 375.96,169.54 381.47,161.45 386.86,153.52"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return area\l",
+			linenum="[8]",
+			pos="410,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		5 -> 8	[color=black,
+			pos="e,410,75.14 410,91.921 410,89.707 410,87.461 410,85.233"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef triangle_area(a, b, c):...\ltriangle_area(3, 4, 5)\l",
+		linenum="[1]",
+		pos="360,369.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.6667];
+	1 -> 11	[label=calls,
+		lp="381,327.5",
+		pos="e,360,304.13 360,342.71 360,333.66 360,323.47 360,314.3",
+		style=dashed];
+	11 -> 3	[color=green,
+		pos="e,360,212.3 360,267.65 360,254.82 360,237.11 360,222.38"];
+}

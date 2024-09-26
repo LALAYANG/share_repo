@@ -1,0 +1,135 @@
+digraph cluster184CFG {
+	graph [bb="0,0,548,499",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="274,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="211,363,327,415",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=below_zero,
+			linenum="[12]",
+			pos="269,389",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster0below_zero {
+		graph [bb="8,31,540,346",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=below_zero,
+			lheight=0.21,
+			lp="274,334.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="balance = 0\l",
+			linenum="[3]",
+			pos="269,297",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for op in operations:\l",
+			linenum="[5]",
+			pos="269,244",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.9609];
+		3 -> 4	[color=black,
+			pos="e,269,262.25 269,278.73 269,276.66 269,274.5 269,272.32"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="balance += op\l",
+			linenum="[6]",
+			pos="78,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		4 -> 5	[color=green,
+			label=operations,
+			lp="223.5,210.5",
+			pos="e,119.95,195.09 207.01,225.91 198.57,223.37 190.05,220.7 182,218 164.75,212.22 146.14,205.28 129.5,198.83"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[10]",
+			pos="269,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		4 -> 6	[color=green,
+			pos="e,269,195.19 269,225.92 269,219.7 269,212.5 269,205.6"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if balance < 0:\l",
+			linenum="[7]",
+			pos="274,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		5 -> 7	[color=black,
+			pos="e,231.29,136.11 140.02,159.86 166.25,153.04 196.49,145.17 221.59,138.64"];
+		7 -> 4	[color=red,
+			label="(balance >= 0)",
+			lp="453,177",
+			pos="e,346.28,227.47 347,131.82 363.31,136.92 378.78,145.32 389,159 398.58,171.82 397.97,181.75 389,195 380.72,207.23 368.77,216.34 355.58,\
+223.13"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[8]",
+			pos="274,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		7 -> 8	[color=green,
+			label="balance < 0",
+			lp="319.5,90.5",
+			pos="e,274,75.19 274,105.92 274,99.702 274,92.5 274,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef below_zero(operations: List[int]) ->bool:...\lbelow_zero([1, 2, -3, 1, 2, -3])\l",
+		linenum="[1]",
+		pos="269,472.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=5.7361];
+	1 -> 13	[label=calls,
+		lp="290,430.5",
+		pos="e,269,407.13 269,445.71 269,436.66 269,426.47 269,417.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,269,315.3 269,370.65 269,357.82 269,340.11 269,325.38"];
+}

@@ -1,0 +1,125 @@
+digraph cluster28CFG {
+	graph [bb="0,0,618,396",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="309,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="150,260,324,312",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=strange_sort_list,
+			linenum="[12]",
+			pos="237,286",
+			shape=tab,
+			style=filled,
+			width=2.1806];
+	}
+	subgraph cluster0strange_sort_list {
+		graph [bb="8,31,610,243",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=strange_sort_list,
+			lheight=0.21,
+			lp="309,231.5",
+			lwidth=1.96,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res, switch = [], True\l",
+			linenum="[5]",
+			pos="237,194",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.75];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while lst:\l",
+			linenum="[6]",
+			pos="237,141",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.0638];
+		3 -> 4	[color=black,
+			pos="e,237,159.25 237,175.73 237,173.66 237,171.5 237,169.32"];
+		5	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="res.append(min(lst) if switch else max(lst))\llst.remove(res[-1])\lswitch = not switch\l",
+			linenum="[7, 8, 9]",
+			pos="206,65.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.2778];
+		4 -> 5	[color=green,
+			label=lst,
+			lp="215.5,107.5",
+			pos="e,199.57,92.184 208.66,122.88 206.41,120.5 204.46,117.88 203,115 201.03,111.1 199.98,106.8 199.55,102.42"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return res\l",
+			linenum="[10]",
+			pos="508,65.5",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		4 -> 6	[color=red,
+			label="(not lst)",
+			lp="417.5,107.5",
+			pos="e,450.6,82.067 283.28,127.45 326.56,115.71 391.69,98.045 440.71,84.749"];
+		5 -> 4	[color=black,
+			pos="e,236.85,122.75 228.13,92.381 229.61,94.859 230.93,97.415 232,100 233.66,104 234.8,108.41 235.59,112.78"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef strange_sort_list(lst):...\lstrange_sort_list([111111])\l",
+		linenum="[1]",
+		pos="237,369.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.6667];
+	1 -> 13	[label=calls,
+		lp="258,327.5",
+		pos="e,237,304.13 237,342.71 237,333.66 237,323.47 237,314.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,237,212.3 237,267.65 237,254.82 237,237.11 237,222.38"];
+}

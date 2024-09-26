@@ -1,0 +1,140 @@
+digraph cluster954CFG {
+	graph [bb="0,0,610,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="305,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="256,310,378,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=count_upper,
+			linenum="[11]",
+			pos="317,336",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster4count_upper {
+		graph [bb="8,31,602,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=count_upper,
+			lheight=0.21,
+			lp="305,281.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="count = 0\l",
+			linenum="[5]",
+			pos="317,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(0, len(s), 2):\l",
+			linenum="[6]",
+			pos="317,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.3368];
+		3 -> 4	[color=black,
+			pos="e,317,209.25 317,225.73 317,223.66 317,221.5 317,219.32"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if s[i] in 'AEIOU':\l",
+			linenum="[7]",
+			pos="415,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		4 -> 7	[color=green,
+			label="range(0, len(s), 2)",
+			lp="308.5,157.5",
+			pos="e,325.27,131.87 236.52,172.82 226.09,167.1 221.58,159.64 230,150 236.19,142.91 274.86,137.11 315.26,132.88"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return count\l",
+			linenum="[9]",
+			pos="127,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		4 -> 8	[color=green,
+			pos="e,163.57,142.05 246.65,172.96 237.95,170.48 229.23,167.81 221,165 205.01,159.55 187.91,152.62 172.74,146.06"];
+		7 -> 4	[color=red,
+			label="(s[i] not in 'AEIOU')",
+			lp="490,157.5",
+			pos="e,378.96,172.93 408.48,141.31 404.51,149.43 398.69,158.8 391,165 389.96,165.84 388.89,166.65 387.8,167.43"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="count += 1\l",
+			linenum="[8]",
+			pos="503,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		7 -> 9	[color=green,
+			label="s[i] in 'AEIOU'",
+			lp="526,90.5",
+			pos="e,475.46,75.094 432.76,107.68 441.9,100.01 453.33,90.735 464,83 465.03,82.256 466.07,81.51 467.13,80.763"];
+		9 -> 4	[color=black,
+			pos="e,469.36,183.47 552.52,61.684 566.16,65.254 579.52,71.669 588,83 609.91,112.29 606.99,139.26 581,165 572.64,173.28 528.89,178.93 \
+479.34,182.73"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef count_upper(s):...\lcount_upper('dBBE')\l",
+		linenum="[1]",
+		pos="317,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.75];
+	1 -> 13	[label=calls,
+		lp="338,377.5",
+		pos="e,317,354.13 317,392.71 317,383.66 317,373.47 317,364.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,317,262.3 317,317.65 317,304.82 317,287.11 317,272.38"];
+}

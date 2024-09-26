@@ -1,0 +1,76 @@
+digraph cluster324CFG {
+	graph [bb="0,0,944,259",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="472,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="422,123,522,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=find_max,
+			linenum="[7]",
+			pos="472,149",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster4find_max {
+		graph [bb="8,31,936,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=find_max,
+			lheight=0.21,
+			lp="472,94.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sorted(words, key=lambda x: (-len(set(x)), x))[0]\l",
+			linenum="[5]",
+			pos="472,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=12.679];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef find_max(words):...\lfind_max(['name', 'enam', 'game'])\l",
+		linenum="[1]",
+		pos="472,232.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.125];
+	1 -> 6	[label=calls,
+		lp="493,190.5",
+		pos="e,472,167.13 472,205.71 472,196.66 472,186.47 472,177.3",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,472,75.3 472,130.65 472,117.82 472,100.11 472,85.381"];
+}

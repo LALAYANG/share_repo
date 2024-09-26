@@ -1,0 +1,100 @@
+digraph cluster696CFG {
+	graph [bb="0,0,634,326",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="317,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="59,190,215,242",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		9	[color="#E552FF",
+			height=0.5,
+			label=starts_one_ends,
+			linenum="[9]",
+			pos="137,216",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster2starts_one_ends {
+		graph [bb="8,31,626,173",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=starts_one_ends,
+			lheight=0.21,
+			lp="317,161.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 1:\l",
+			linenum="[5]",
+			pos="137,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 1\l",
+			linenum="[6]",
+			pos="95,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		3 -> 4	[color=green,
+			label="n == 1",
+			lp="144,90.5",
+			pos="e,106.17,75.291 127.26,107.92 122.63,100.76 116.97,92.001 111.69,83.826"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 18 * 10 ** (n - 2)\l",
+			linenum="[7]",
+			pos="405,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.9029];
+		3 -> 5	[color=red,
+			label="(n != 1)",
+			lp="328.5,90.5",
+			pos="e,334.9,75.001 175.68,113.62 214.54,104.19 275.56,89.395 324.89,77.431"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef starts_one_ends(n):...\lstarts_one_ends(2)\l",
+		linenum="[1]",
+		pos="137,299.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.2083];
+	1 -> 9	[label=calls,
+		lp="158,257.5",
+		pos="e,137,234.13 137,272.71 137,263.66 137,253.47 137,244.3",
+		style=dashed];
+	9 -> 3	[color=green,
+		pos="e,137,142.3 137,197.65 137,184.82 137,167.11 137,152.38"];
+}

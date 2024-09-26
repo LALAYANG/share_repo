@@ -1,0 +1,99 @@
+digraph cluster672CFG {
+	graph [bb="0,0,462,312",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="231,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="157,176,305,228",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		8	[color="#E552FF",
+			height=0.5,
+			label=reverse_delete,
+			linenum="[8]",
+			pos="231,202",
+			shape=tab,
+			style=filled,
+			width=1.8333];
+	}
+	subgraph cluster4reverse_delete {
+		graph [bb="8,31,454,159",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=reverse_delete,
+			lheight=0.21,
+			lp="231,147.5",
+			lwidth=1.61,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="s = ''.join([char for char in s if char not in c])\l",
+			linenum="[5]",
+			pos="231,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.9583];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return s, s[::-1] == s\l",
+			linenum="[6]",
+			pos="231,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.2412];
+		3 -> 5	[color=black,
+			pos="e,231,75.248 231,91.734 231,89.657 231,87.498 231,85.322"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef reverse_delete(s, c):...\lreverse_delete('abcdedcba', 'v')\l",
+		linenum="[1]",
+		pos="231,285.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 8	[label=calls,
+		lp="252,243.5",
+		pos="e,231,220.13 231,258.71 231,249.66 231,239.47 231,230.3",
+		style=dashed];
+	8 -> 3	[color=green,
+		pos="e,231,128.3 231,183.65 231,170.82 231,153.11 231,138.38"];
+}

@@ -1,0 +1,123 @@
+digraph cluster446CFG {
+	graph [bb="0,0,873,379",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="436.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="187,243,303,295",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=prod_signs,
+			linenum="[10]",
+			pos="245,269",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster2prod_signs {
+		graph [bb="8,31,865,226",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=prod_signs,
+			lheight=0.21,
+			lp="436.5,214.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not arr:\l",
+			linenum="[5]",
+			pos="245,177",
+			shape=diamond,
+			style="filled,solid",
+			width=2.7319];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return None\l",
+			linenum="[6]",
+			pos="118,110",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		3 -> 4	[color=green,
+			label="not arr",
+			lp="221,143.5",
+			pos="e,151.53,128.16 220.51,163.47 203.51,154.77 180.42,142.95 160.45,132.73"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="prod = 0 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))\l",
+			linenum="[7]",
+			pos="547,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.5972];
+		3 -> 5	[color=red,
+			label="(not not arr)",
+			lp="477,143.5",
+			pos="e,467.96,128.01 287.95,166.76 332.04,157.27 401.94,142.22 458.02,130.15"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return prod * sum([abs(i) for i in arr])\l",
+			linenum="[8]",
+			pos="526,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=9.1853];
+		5 -> 10	[color=black,
+			pos="e,533.1,75.248 539.89,91.734 538.93,89.407 537.93,86.979 536.93,84.537"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef prod_signs(arr):...\lprod_signs([1, 1, 1, 2, 3, -1, 1])\l",
+		linenum="[1]",
+		pos="245,352.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.125];
+	1 -> 13	[label=calls,
+		lp="266,310.5",
+		pos="e,245,287.13 245,325.71 245,316.66 245,306.47 245,297.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,245,195.3 245,250.65 245,237.82 245,220.11 245,205.38"];
+}

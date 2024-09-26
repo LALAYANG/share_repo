@@ -1,0 +1,184 @@
+digraph cluster734CFG {
+	graph [bb="0,0,1696,489",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="848,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="463,353,653,405",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=parse_nested_parens,
+			linenum="[19]",
+			pos="558,379",
+			shape=tab,
+			style=filled,
+			width=2.4028];
+	}
+	subgraph cluster4parse_nested_parens {
+		graph [bb="8,31,1688,336",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=parse_nested_parens,
+			lheight=0.21,
+			lp="848,324.5",
+			lwidth=2.18,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster4parse_paren_group {
+			graph [bb="1108,39,1680,305",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=parse_paren_group,
+				lheight=0.21,
+				lp="1394,293.5",
+				lwidth=1.96,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			subgraph cluster_9 {
+				graph [color=purple,
+					compound=true,
+					fontname="DejaVu Sans Mono",
+					label="",
+					rankdir=TB,
+					ranksep=0.02,
+					shape=tab,
+					style=filled
+				];
+				node [fontname="DejaVu Sans Mono"];
+				edge [fontname="DejaVu Sans Mono"];
+			}
+			5	[fillcolor="#FFFB81",
+				height=0.52778,
+				label="depth = 0\lmax_depth = 0\l",
+				linenum="[6, 7]",
+				pos="1381,255",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.7222];
+			6	[fillcolor="#FFBE52",
+				height=0.5,
+				label="for c in s:\l",
+				linenum="[8]",
+				pos="1381,201",
+				shape=hexagon,
+				style="filled,solid",
+				width=2.2306];
+			5 -> 6	[color=black,
+				pos="e,1381,219.22 1381,235.81 1381,233.71 1381,231.53 1381,229.33"];
+			7	[fillcolor="#FF6752",
+				height=0.5,
+				label="if c == '(':\l",
+				linenum="[9]",
+				pos="1545,134",
+				shape=diamond,
+				style="filled,solid",
+				width=2.9617];
+			6 -> 7	[color=green,
+				label=s,
+				lp="1481.5,167.5",
+				pos="e,1514.8,146.99 1422.4,183.6 1447.8,173.54 1480.1,160.72 1505.2,150.78"];
+			8	[fillcolor="#98fb98",
+				height=0.5,
+				label="return max_depth\l",
+				linenum="[15]",
+				pos="1278,134",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.9441];
+			6 -> 8	[color=green,
+				pos="e,1305.2,152.19 1353.9,182.92 1341.7,175.22 1327.1,166.01 1314,157.74"];
+			9	[fillcolor="#FFFB81",
+				height=0.52778,
+				label="depth += 1\lmax_depth = max(depth, max_depth)\l",
+				linenum="[10, 11]",
+				pos="1316,66",
+				shape=rectangle,
+				style="filled,solid",
+				width=4.0139];
+			7 -> 9	[color=green,
+				label="c == '('",
+				lp="1490.5,100.5",
+				pos="e,1378.8,85.098 1507.7,122.25 1475.5,112.97 1428.1,99.296 1388.4,87.874"];
+			11	[fillcolor="#FFFB81",
+				height=0.5,
+				label="depth -= 1\l",
+				linenum="[13]",
+				pos="1584,66",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.375];
+			7 -> 11	[color=red,
+				label="(c != '(')",
+				lp="1608.5,100.5",
+				pos="e,1573.7,84.387 1554.2,117.36 1558.5,110.16 1563.7,101.42 1568.5,93.249"];
+			9 -> 6	[color=black,
+				pos="e,1327.3,188.96 1190.8,85.015 1140,97.666 1099.1,118.5 1127,152 1151.6,181.49 1259.3,175.75 1297,183 1303.6,184.27 1310.4,185.61 \
+1317.3,186.97"];
+			11 -> 6	[color=black,
+				pos="e,1454.1,197.8 1633.8,78.912 1641.3,82.459 1648.4,87.054 1654,93 1672.1,112.23 1678,131.81 1661,152 1636.2,181.44 1537.5,192.82 \
+1464.2,197.23"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="def parse_paren_group(s):...\l",
+			linenum="[5]",
+			pos="558,255",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		15	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [parse_paren_group(x) for x in paren_string.split(' ') if x]\l",
+			linenum="[17]",
+			pos="558,201",
+			shape=parallelogram,
+			style="filled,solid",
+			width=15.062];
+		3 -> 15	[color=black,
+			pos="e,558,219.24 558,236.97 558,234.57 558,232.06 558,229.52"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef parse_nested_parens(paren_string: str) ->List[int]:...\lparse_nested_parens('((()))')\l",
+		linenum="[1]",
+		pos="558,462.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=6.875];
+	1 -> 18	[label=calls,
+		lp="579,420.5",
+		pos="e,558,397.13 558,435.71 558,426.66 558,416.47 558,407.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,558,273.13 558,360.78 558,340.62 558,306.96 558,283.25"];
+}

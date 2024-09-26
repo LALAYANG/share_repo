@@ -1,0 +1,160 @@
+digraph cluster636CFG {
+	graph [bb="0,0,950,448",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="475,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="298,312,368,364",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=fib4,
+			linenum="[15]",
+			pos="333,338",
+			shape=tab,
+			style=filled,
+			width=0.75];
+	}
+	subgraph cluster0fib4 {
+		graph [bb="8,31,942,295",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=fib4,
+			lheight=0.21,
+			lp="475,283.5",
+			lwidth=0.47,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_9 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="results = [0, 0, 2, 0]\l",
+			linenum="[5]",
+			pos="333,246",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.75];
+		4	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n < 4:\l",
+			linenum="[6]",
+			pos="333,193",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		3 -> 4	[color=black,
+			pos="e,333,211.25 333,227.73 333,225.66 333,223.5 333,221.32"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return results[n]\l",
+			linenum="[7]",
+			pos="166,126",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.1559];
+		4 -> 5	[color=green,
+			label="n < 4",
+			lp="285,159.5",
+			pos="e,209.89,144.08 304.67,180.97 281.34,171.89 247.62,158.77 219.27,147.73"];
+		6	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for _ in range(4, n + 1):\l",
+			linenum="[9]",
+			pos="501,126",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		4 -> 6	[color=red,
+			label="(n >= 4)",
+			lp="465.5,159.5",
+			pos="e,456.85,144.08 361.5,180.97 384.96,171.89 418.89,158.77 447.41,147.73"];
+		9	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="results.append(results[-1] + results[-2] + results[-3] + results[-4])\lresults.pop(0)\l",
+			linenum="[10, 11]",
+			pos="309,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.1389];
+		6 -> 9	[color=green,
+			label="range(4, n + 1)",
+			lp="385,92.5",
+			pos="e,310.95,77.388 376.11,116.79 352.57,113.1 332.38,107.75 323,100 318.9,96.613 316,91.97 313.94,87.024"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return results[-1]\l",
+			linenum="[13]",
+			pos="777,58",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.3676];
+		6 -> 10	[color=green,
+			pos="e,705.86,76.011 572.44,107.92 610.28,98.868 656.9,87.72 696.07,78.352"];
+		9 -> 6	[color=black,
+			pos="e,483.94,107.81 430.72,77.082 437.69,79.41 444.5,82.036 451,85 459.91,89.065 468.61,95.072 476.19,101.2"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef fib4(n: int):...\lfib4(12)\l",
+		linenum="[1]",
+		pos="333,421.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 15	[label=calls,
+		lp="354,379.5",
+		pos="e,333,356.13 333,394.71 333,385.66 333,375.47 333,366.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,333,264.3 333,319.65 333,306.82 333,289.11 333,274.38"];
+}

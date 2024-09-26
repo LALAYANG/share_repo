@@ -1,0 +1,195 @@
+digraph cluster570CFG {
+	graph [bb="0,0,767,580",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="383.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="328,444,510,496",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		19	[color="#E552FF",
+			height=0.5,
+			label=has_close_elements,
+			linenum="[12]",
+			pos="419,470",
+			shape=tab,
+			style=filled,
+			width=2.2917];
+	}
+	subgraph cluster2has_close_elements {
+		graph [bb="8,31,759,427",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=has_close_elements,
+			lheight=0.21,
+			lp="383.5,415.5",
+			lwidth=2.07,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for idx, elem in enumerate(numbers):\l",
+			linenum="[3]",
+			pos="419,378",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.5459];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for idx2, elem2 in enumerate(numbers):\l",
+			linenum="[4]",
+			pos="264,311",
+			shape=hexagon,
+			style="filled,solid",
+			width=6.8795];
+		3 -> 5	[color=green,
+			label="enumerate(numbers)",
+			lp="335.5,344.5",
+			pos="e,257.58,329.29 280.3,363.09 271.59,360.09 264.79,356.43 261,352 257.97,348.45 256.73,344.01 256.55,339.4"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[10]",
+			pos="640,311",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 6	[color=green,
+			pos="e,581.94,329.08 477.07,359.92 506.26,351.33 541.81,340.88 572.25,331.93"];
+		5 -> 3	[color=green,
+			pos="e,421.19,359.85 397.51,327.64 404.78,330.29 410.53,333.38 414,337 417.31,340.44 419.21,344.89 420.21,349.57"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if idx != idx2:\l",
+			linenum="[5]",
+			pos="230,244",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		5 -> 8	[color=green,
+			label="enumerate(numbers)",
+			lp="164.5,277.5",
+			pos="e,130.69,248.23 111.66,297.06 101.88,293.86 94.247,289.9 90,285 73.119,265.52 91.9,255.21 120.61,249.86"];
+		8 -> 5	[color=red,
+			label="(idx == idx2)",
+			lp="304,277.5",
+			pos="e,255.07,292.92 238.29,260.85 241.9,267.75 246.23,276.03 250.3,283.81"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="distance = abs(elem - elem2)\l",
+			linenum="[6]",
+			pos="233,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		8 -> 10	[color=green,
+			label="idx != idx2",
+			lp="276.5,210.5",
+			pos="e,232.21,195.19 230.79,225.92 231.08,219.7 231.41,212.5 231.73,205.6"];
+		13	[fillcolor="#FF6752",
+			height=0.5,
+			label="if distance < threshold:\l",
+			linenum="[7]",
+			pos="343,124",
+			shape=diamond,
+			style="filled,solid",
+			width=5.4894];
+		10 -> 13	[color=black,
+			pos="e,312.21,139.28 269.93,158.88 280.55,153.95 292.19,148.56 302.98,143.55"];
+		13 -> 5	[color=red,
+			label="(distance >= threshold)",
+			lp="479,210.5",
+			pos="e,352.22,292.94 356.5,140.96 360.29,146.35 363.94,152.63 366,159 383.21,212.32 401.72,245.49 362,285 361.44,285.56 360.87,286.1 \
+360.29,286.64"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[8]",
+			pos="343,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		13 -> 14	[color=green,
+			label="distance < threshold",
+			lp="426,90.5",
+			pos="e,343,75.19 343,105.92 343,99.702 343,92.5 343,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef has_close_elements(numbers: List[float], threshold: float) ->bool:...\lhas_close_elements([1.0, 2.0, 3.9, \
+4.0, 5.0, 2.2], 0.3)\l",
+		linenum="[1]",
+		pos="419,553.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=8.5972];
+	1 -> 19	[label=calls,
+		lp="440,511.5",
+		pos="e,419,488.13 419,526.71 419,517.66 419,507.47 419,498.3",
+		style=dashed];
+	19 -> 3	[color=green,
+		pos="e,419,396.3 419,451.65 419,438.82 419,421.11 419,406.38"];
+}

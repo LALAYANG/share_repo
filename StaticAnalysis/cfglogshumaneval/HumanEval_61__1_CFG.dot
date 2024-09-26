@@ -1,0 +1,161 @@
+digraph cluster160CFG {
+	graph [bb="0,0,649,566",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="324.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="306,430,488,482",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=correct_bracketing,
+			linenum="[15]",
+			pos="397,456",
+			shape=tab,
+			style=filled,
+			width=2.2917];
+	}
+	subgraph cluster2correct_bracketing {
+		graph [bb="8,31,575,413",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=correct_bracketing,
+			lheight=0.21,
+			lp="291.5,401.5",
+			lwidth=2.07,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="depth = 0\l",
+			linenum="[5]",
+			pos="397,364",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for b in brackets:\l",
+			linenum="[6]",
+			pos="397,311",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.4397];
+		3 -> 4	[color=black,
+			pos="e,397,329.25 397,345.73 397,343.66 397,341.5 397,339.32"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if b == '(':\l",
+			linenum="[7]",
+			pos="123,244",
+			shape=diamond,
+			style="filled,solid",
+			width=2.9617];
+		4 -> 5	[color=green,
+			label=brackets,
+			lp="317.5,277.5",
+			pos="e,165.27,255.03 330.67,294.27 282.92,282.94 219.39,267.87 175.22,257.39"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return depth == 0\l",
+			linenum="[13]",
+			pos="397,244",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.1559];
+		4 -> 6	[color=green,
+			pos="e,397,262.19 397,292.92 397,286.7 397,279.5 397,272.6"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="depth += 1\l",
+			linenum="[8]",
+			pos="123,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		5 -> 7	[color=green,
+			label="b == '('",
+			lp="156.5,210.5",
+			pos="e,123,195.19 123,225.92 123,219.7 123,212.5 123,205.6"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="depth -= 1\l",
+			linenum="[10]",
+			pos="240,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.375];
+		5 -> 9	[color=red,
+			label="(b != '(')",
+			lp="255.5,210.5",
+			pos="e,223.29,195.26 161.39,232.43 172.3,228.66 183.95,223.85 194,218 201.63,213.56 209.16,207.77 215.86,201.98"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if depth < 0:\l",
+			linenum="[11]",
+			pos="240,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.166];
+		7 -> 8	[color=black,
+			pos="e,211.36,137.48 162.28,158.88 175.09,153.3 189.27,147.11 201.98,141.57"];
+		8 -> 4	[color=red,
+			label="(depth >= 0)",
+			lp="599,210.5",
+			pos="e,490.51,302.14 334.8,127.04 408.3,134.24 505.82,157.28 556,226 565.44,238.92 565.54,249.16 556,262 542.37,280.35 521.94,291.94 \
+500.22,299.19"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[12]",
+			pos="240,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		8 -> 10	[color=green,
+			label="depth < 0",
+			lp="277.5,90.5",
+			pos="e,240,75.19 240,105.92 240,99.702 240,92.5 240,85.6"];
+		9 -> 8	[color=black,
+			pos="e,240,142.25 240,158.73 240,156.66 240,154.5 240,152.32"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef correct_bracketing(brackets: str):...\lcorrect_bracketing('(')\l",
+		linenum="[1]",
+		pos="397,539.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.9306];
+	1 -> 15	[label=calls,
+		lp="418,497.5",
+		pos="e,397,474.13 397,512.71 397,503.66 397,493.47 397,484.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,397,382.3 397,437.65 397,424.82 397,407.11 397,392.38"];
+}

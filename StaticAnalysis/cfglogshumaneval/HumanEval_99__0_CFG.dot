@@ -1,0 +1,305 @@
+digraph cluster16CFG {
+	graph [bb="0,0,662,686",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="331,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="237,550,393,602",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		28	[color="#E552FF",
+			height=0.5,
+			label=closest_integer,
+			linenum="[25]",
+			pos="315,576",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster0closest_integer {
+		graph [bb="8,31,632,533",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=closest_integer,
+			lheight=0.21,
+			lp="320,521.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_21 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_23 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_14 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_16 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="from math import floor, ceil\l",
+			linenum="[5]",
+			pos="315,484",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		4	[fillcolor="#FF6752",
+			height=0.5,
+			label="if value.count('.') == 1:\l",
+			linenum="[7]",
+			pos="315,431",
+			shape=diamond,
+			style="filled,solid",
+			width=5.6937];
+		3 -> 4	[color=black,
+			pos="e,315,449.25 315,465.73 315,463.66 315,461.5 315,459.32"];
+		6	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while value[-1] == '0':\l",
+			linenum="[9]",
+			pos="208,364",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.2945];
+		4 -> 6	[color=green,
+			label="value.count('.') == 1",
+			lp="331,397.5",
+			pos="e,220.11,382.01 267.58,417.04 259.37,413.77 251.18,409.79 244,405 237.69,400.79 231.77,395.24 226.62,389.61"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="num = float(value)\l",
+			linenum="[12]",
+			pos="285,297",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		4 -> 7	[color=red,
+			label="(value.count('.') != 1)",
+			lp="535,364",
+			pos="e,367.82,305.98 386.6,419.27 401.09,415.63 413.34,410.93 418,405 430.37,389.27 463.6,379.61 414,323 408.25,316.44 394.42,311.57 \
+377.85,307.96"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="value = value[:-1]\l",
+			linenum="[10]",
+			pos="101,297",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		6 -> 8	[color=green,
+			label="value[-1] == '0'",
+			lp="175.5,330.5",
+			pos="e,100.45,315.06 121.33,347.96 116.83,345.15 112.67,341.85 109,338 105.58,334.4 103.43,329.78 102.12,324.96"];
+		6 -> 7	[color=red,
+			label="(value[-1] != '0')",
+			lp="335.5,330.5",
+			pos="e,269.82,315.17 235.5,345.94 239.12,343.4 242.71,340.71 246,338 251.63,333.35 257.32,327.98 262.55,322.72"];
+		8 -> 6	[color=black,
+			pos="e,114.97,349.63 91.814,315.07 89.004,322.79 87.845,331.6 93,338 95.461,341.05 99.77,343.75 105.32,346.14"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if value[-2:] == '.5':\l",
+			linenum="[13]",
+			pos="285,244",
+			shape=diamond,
+			style="filled,solid",
+			width=5.0554];
+		7 -> 11	[color=black,
+			pos="e,285,262.25 285,278.73 285,276.66 285,274.5 285,272.32"];
+		12	[fillcolor="#FF6752",
+			height=0.5,
+			label="if num > 0:\l",
+			linenum="[14]",
+			pos="159,177",
+			shape=diamond,
+			style="filled,solid",
+			width=2.7319];
+		11 -> 12	[color=green,
+			label="value[-2:] == '.5'",
+			lp="306.5,210.5",
+			pos="e,181.82,190.97 254.3,228.9 246.95,225.42 239.16,221.65 232,218 218.32,211.03 203.43,202.96 190.68,195.9"];
+		14	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(value) > 0:\l",
+			linenum="[18]",
+			pos="427,177",
+			shape=diamond,
+			style="filled,solid",
+			width=4.2128];
+		11 -> 14	[color=red,
+			label="(value[-2:] != '.5')",
+			lp="484,210.5",
+			pos="e,412.59,193.66 344.98,231.93 357.29,228.42 369.88,223.86 381,218 389.66,213.43 398.07,206.94 405.28,200.51"];
+		21	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res = ceil(num)\l",
+			linenum="[15]",
+			pos="86,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		12 -> 21	[color=green,
+			label="num > 0",
+			lp="152,143.5",
+			pos="e,100.36,128.13 138.24,162.73 133.09,159.13 127.71,155.09 123,151 117.63,146.33 112.22,140.95 107.25,135.68"];
+		23	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res = floor(num)\l",
+			linenum="[17]",
+			pos="249,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		12 -> 23	[color=red,
+			label="(num <= 0)",
+			lp="253.5,143.5",
+			pos="e,225.46,128 178.09,162.22 189.43,154.02 204.11,143.42 217.16,133.99"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return res\l",
+			linenum="[23]",
+			pos="343,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		21 -> 13	[color=black,
+			pos="e,281.1,69.583 156.22,93.996 159.53,93.316 162.8,92.647 166,92 200.46,85.031 238.76,77.63 270.89,71.52"];
+		23 -> 13	[color=black,
+			pos="e,311.36,75.166 280.56,91.876 287.54,88.091 295.02,84.03 302.3,80.08"];
+		16	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res = int(round(num))\l",
+			linenum="[19]",
+			pos="437,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.6389];
+		14 -> 16	[color=green,
+			label="len(value) > 0",
+			lp="403,143.5",
+			pos="e,352.46,128.23 368.65,165.81 348.83,159.68 334.13,150.22 345,136 345.14,135.82 345.28,135.64 345.42,135.46"];
+		18	[fillcolor="#FFFB81",
+			height=0.5,
+			label="res = 0\l",
+			linenum="[21]",
+			pos="587,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		14 -> 18	[color=red,
+			label="(len(value) <= 0)",
+			lp="591.5,143.5",
+			pos="e,549.8,126.11 459.76,162.69 482.95,153.27 514.38,140.5 540.2,130.01"];
+		16 -> 13	[color=black,
+			pos="e,374.64,75.166 405.44,91.876 398.46,88.091 390.98,84.03 383.7,80.08"];
+		18 -> 13	[color=black,
+			pos="e,431.48,69.631 549.78,94.592 546.83,93.651 543.88,92.772 541,92 509.08,83.44 473.67,76.559 441.72,71.286"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef closest_integer(value):...\lclosest_integer('14.5')\l",
+		linenum="[1]",
+		pos="315,659.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.6667];
+	1 -> 28	[label=calls,
+		lp="336,617.5",
+		pos="e,315,594.13 315,632.71 315,623.66 315,613.47 315,604.3",
+		style=dashed];
+	28 -> 3	[color=green,
+		pos="e,315,502.3 315,557.65 315,544.82 315,527.11 315,512.38"];
+}

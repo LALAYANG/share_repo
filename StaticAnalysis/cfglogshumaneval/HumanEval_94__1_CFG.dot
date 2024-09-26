@@ -1,0 +1,236 @@
+digraph cluster866CFG {
+	graph [bb="0,0,1574,560.5",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="787,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="774,424.5,882,476.5",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		26	[color="#E552FF",
+			height=0.5,
+			label=skjkasdkd,
+			linenum="[20]",
+			pos="828,450.5",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster2skjkasdkd {
+		graph [bb="8,31,1566,407.5",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=skjkasdkd,
+			lheight=0.21,
+			lp="787,396",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_17 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster2isPrime {
+			graph [bb="1058,159,1558,376.5",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=isPrime,
+				lheight=0.21,
+				lp="1308,365",
+				lwidth=0.81,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			subgraph cluster_5 {
+				graph [color=purple,
+					compound=true,
+					fontname="DejaVu Sans Mono",
+					label="",
+					rankdir=TB,
+					ranksep=0.02,
+					shape=tab,
+					style=filled
+				];
+				node [fontname="DejaVu Sans Mono"];
+				edge [fontname="DejaVu Sans Mono"];
+			}
+			5	[fillcolor="#FFBE52",
+				height=0.5,
+				label="for i in range(2, int(n ** 0.5) + 1):\l",
+				linenum="[6]",
+				pos="1308,327.5",
+				shape=hexagon,
+				style="filled,solid",
+				width=6.7127];
+			8	[fillcolor="#FF6752",
+				height=0.5,
+				label="if n % i == 0:\l",
+				linenum="[7]",
+				pos="1191,252",
+				shape=diamond,
+				style="filled,solid",
+				width=3.3702];
+			5 -> 8	[color=green,
+				label="range(2, int(n ** 0.5) + 1)",
+				lp="1192.5,285.5",
+				pos="e,1117.7,259.18 1140.1,316.44 1112.9,311.41 1090.5,303.97 1081,293 1066.9,276.64 1083.5,266.97 1107.7,261.25"];
+			9	[fillcolor="#98fb98",
+				height=0.5,
+				label="return True\l",
+				linenum="[10]",
+				pos="1436,252",
+				shape=parallelogram,
+				style="filled,solid",
+				width=2.8323];
+			5 -> 9	[color=green,
+				pos="e,1431.4,270.17 1390.5,309.41 1400.1,305.11 1409.2,299.73 1417,293 1421.2,289.38 1424.5,284.64 1427.1,279.7"];
+			8 -> 5	[color=red,
+				label="(n % i != 0)",
+				lp="1363,285.5",
+				pos="e,1312.9,309.47 1258.3,260.04 1280.4,263.85 1301.2,269.56 1308,278 1312.8,283.94 1314.2,291.76 1314,299.39"];
+			10	[fillcolor="#98fb98",
+				height=0.5,
+				label="return False\l",
+				linenum="[8]",
+				pos="1191,185",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.0706];
+			8 -> 10	[color=green,
+				label="n % i == 0",
+				lp="1232.5,218.5",
+				pos="e,1191,203.19 1191,233.92 1191,227.7 1191,220.5 1191,213.6"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="def isPrime(n):...\lmaxx = 0\li = 0\l",
+			linenum="[5, 11, 12]",
+			pos="828,327.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		15	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while i < len(lst):\l",
+			linenum="[13]",
+			pos="828,252",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.6065];
+		3 -> 15	[color=black,
+			pos="e,828,270.27 828,300.79 828,294.16 828,287.01 828,280.3"];
+		16	[fillcolor="#FF6752",
+			height=0.5,
+			label="if lst[i] > maxx and isPrime(lst[i]):\l",
+			linenum="[14]",
+			pos="312,185",
+			shape=diamond,
+			style="filled,solid",
+			width=8.2214];
+		15 -> 16	[color=green,
+			label="i < len(lst)",
+			lp="666,218.5",
+			pos="e,403.22,197.49 741.05,240.05 650.48,228.64 508.72,210.78 413.18,198.75"];
+		17	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result = sum(int(digit) for digit in str(maxx))\l",
+			linenum="[17]",
+			pos="828,185",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.6111];
+		15 -> 17	[color=red,
+			label="(i >= len(lst))",
+			lp="890,218.5",
+			pos="e,828,203.19 828,233.92 828,227.7 828,220.5 828,213.6"];
+		18	[fillcolor="#FFFB81",
+			height=0.5,
+			label="maxx = lst[i]\l",
+			linenum="[15]",
+			pos="207,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		16 -> 18	[color=green,
+			label="lst[i] > maxx and isPrime(lst[i])",
+			lp="253.5,143.5",
+			pos="e,144.79,120.06 182.37,174.84 152.54,169.96 126.7,162.47 117,151 106,137.99 117.2,129.04 134.98,122.98"];
+		19	[fillcolor="#FFFB81",
+			height=0.5,
+			label="i += 1\l",
+			linenum="[16]",
+			pos="395,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.91667];
+		16 -> 19	[color=red,
+			label="(not (lst[i] > maxx and isPrime(lst[i])))",
+			lp="571.5,110",
+			pos="e,399.1,75.174 366.72,170.19 375.82,165.53 384.17,159.3 390,151 403.31,132.04 403.29,105.18 400.69,85.196"];
+		18 -> 19	[color=black,
+			pos="e,361.74,67.023 269.08,92.159 296.25,84.79 327.45,76.325 352,69.666"];
+		19 -> 15	[color=black,
+			pos="e,920.57,241.65 428.02,58.109 546.79,58.739 947.94,63.013 997,92 1042.4,118.83 1070.9,161.02 1039,203 1025.2,221.11 977.24,232.83 \
+930.51,240.15"];
+		23	[fillcolor="#98fb98",
+			height=0.5,
+			label="return result\l",
+			linenum="[18]",
+			pos="870,110",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		17 -> 23	[color=black,
+			pos="e,860.12,128.18 837.95,166.7 843.08,157.79 849.43,146.75 855.13,136.85"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef skjkasdkd(lst):...\lskjkasdkd([0, 8, 1, 2, 1, 7])\l",
+		linenum="[1]",
+		pos="828,534",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.5556];
+	1 -> 26	[label=calls,
+		lp="849,492",
+		pos="e,828,468.63 828,507.21 828,498.16 828,487.97 828,478.8",
+		style=dashed];
+	26 -> 3	[color=green,
+		pos="e,828,354.38 828,432.42 828,414.87 828,387.03 828,364.58"];
+}

@@ -1,0 +1,269 @@
+digraph cluster142CFG {
+	graph [bb="0,0,940,686",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="470,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="491,550,665,602",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		24	[color="#E552FF",
+			height=0.5,
+			label=words_in_sentence,
+			linenum="[17]",
+			pos="578,576",
+			shape=tab,
+			style=filled,
+			width=2.1806];
+	}
+	subgraph cluster0words_in_sentence {
+		graph [bb="8,31,932,533",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=words_in_sentence,
+			lheight=0.21,
+			lp="470,521.5",
+			lwidth=1.96,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_14 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_19 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_lst = []\l",
+			linenum="[5]",
+			pos="578,484",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for word in sentence.split():\l",
+			linenum="[6]",
+			pos="578,431",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.3368];
+		3 -> 4	[color=black,
+			pos="e,578,449.25 578,465.73 578,463.66 578,461.5 578,459.32"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="flg = 0\l",
+			linenum="[7]",
+			pos="152,364",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		4 -> 6	[color=green,
+			label="sentence.split()",
+			lp="366.5,397.5",
+			pos="e,189.21,379.45 438.27,421.09 368.43,414.53 282.79,403.3 198.9,381.96"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ' '.join(new_lst)\l",
+			linenum="[15]",
+			pos="412,364",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.6912];
+		4 -> 7	[color=green,
+			pos="e,455.61,382.08 534.39,412.92 513.12,404.6 487.36,394.51 464.98,385.74"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(word) == 1:\l",
+			linenum="[8]",
+			pos="168,311",
+			shape=diamond,
+			style="filled,solid",
+			width=4.2128];
+		6 -> 8	[color=black,
+			pos="e,162.81,328.56 157.42,345.73 158.18,343.31 158.97,340.77 159.77,338.22"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="flg = 1\l",
+			linenum="[9]",
+			pos="170,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		8 -> 10	[color=green,
+			label="len(word) == 1",
+			lp="204,277.5",
+			pos="e,150.57,262.09 151.64,294.75 149.33,291.76 147.31,288.46 146,285 144.27,280.42 143.74,277.81 146.37,271.17"];
+		11	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(2, len(word)):\l",
+			linenum="[10]",
+			pos="231,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.3368];
+		8 -> 11	[color=red,
+			label="(len(word) != 1)",
+			lp="334.5,244",
+			pos="e,245.38,209.02 227.98,300.07 243.5,296.23 257.21,291.23 262,285 277.27,265.14 264.73,237.36 251.31,217.35"];
+		10 -> 11	[color=black,
+			pos="e,210.37,209.25 190.65,225.73 194.43,222.58 198.43,219.23 202.39,215.92"];
+		14	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(word) % i == 0:\l",
+			linenum="[11]",
+			pos="218,124",
+			shape=diamond,
+			style="filled,solid",
+			width=5.0554];
+		11 -> 14	[color=green,
+			label="range(2, len(word))",
+			lp="371.5,157.5",
+			pos="e,275.47,136.53 282.23,172.92 292.08,166.83 297.55,159.17 291,150 288.98,147.17 286.61,144.65 283.99,142.42"];
+		15	[fillcolor="#FF6752",
+			height=0.5,
+			label="if flg == 0 or len(word) == 2:\l",
+			linenum="[13]",
+			pos="661,124",
+			shape=diamond,
+			style="filled,solid",
+			width=6.7405];
+		11 -> 15	[color=green,
+			pos="e,601.88,137.72 353.92,177.99 386.52,174.32 421.65,169.93 454,165 500.2,157.96 551.81,147.99 591.94,139.77"];
+		14 -> 11	[color=red,
+			label="(len(word) % i != 0)",
+			lp="208,157.5",
+			pos="e,136.97,172.97 147.72,135.06 127.39,141.02 113.44,150.39 125,165 125.81,166.02 126.83,167 128.05,167.95"];
+		17	[fillcolor="#FFFB81",
+			height=0.5,
+			label="flg = 1\l",
+			linenum="[12]",
+			pos="95,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		14 -> 17	[color=green,
+			label="len(word) % i == 0",
+			lp="241.5,90.5",
+			pos="e,127.46,75.152 190.7,108.57 174.79,100.17 154.4,89.391 136.53,79.949"];
+		17 -> 11	[color=black,
+			pos="e,117.91,176.1 58.145,75.004 45.954,82.635 33.781,92.913 27,106 19.639,120.21 17.203,129.35 27,142 38.094,156.33 71.435,166.77 108.03,\
+174.18"];
+		15 -> 4	[color=red,
+			label="(not (flg == 0 or len(word) == 2))",
+			lp="776.5,277.5",
+			pos="e,605.98,412.81 650.83,141.44 643.91,154.2 636,172.59 636,190 636,365 636,365 636,365 636,381.25 625.78,395.31 613.92,406.16"];
+		19	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_lst.append(word)\l",
+			linenum="[14]",
+			pos="767,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.5278];
+		15 -> 19	[color=green,
+			label="flg == 0 or len(word) == 2",
+			lp="810.5,90.5",
+			pos="e,717.47,75.081 674.96,107.02 682.61,98.989 692.64,89.595 703,83 704.7,81.919 706.45,80.872 708.24,79.86"];
+		19 -> 4	[color=black,
+			pos="e,748.48,426.91 858.25,64.086 884.73,67.748 908.98,73.612 918,83 930.41,95.918 923,105.08 923,123 923,365 923,365 923,365 923,402.78 \
+842.11,419.21 758.66,426.11"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef words_in_sentence(sentence):...\lwords_in_sentence('go for it')\l",
+		linenum="[1]",
+		pos="578,659.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.2361];
+	1 -> 24	[label=calls,
+		lp="599,617.5",
+		pos="e,578,594.13 578,632.71 578,623.66 578,613.47 578,604.3",
+		style=dashed];
+	24 -> 3	[color=green,
+		pos="e,578,502.3 578,557.65 578,544.82 578,527.11 578,512.38"];
+}

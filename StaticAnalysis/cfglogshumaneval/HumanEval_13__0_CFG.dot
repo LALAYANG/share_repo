@@ -1,0 +1,102 @@
+digraph cluster358CFG {
+	graph [bb="0,0,474,326",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="237,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="116,190,338,242",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		8	[color="#E552FF",
+			height=0.5,
+			label=greatest_common_divisor,
+			linenum="[9]",
+			pos="227,216",
+			shape=tab,
+			style=filled,
+			width=2.8611];
+	}
+	subgraph cluster4greatest_common_divisor {
+		graph [bb="134,31,466,173",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=greatest_common_divisor,
+			lheight=0.21,
+			lp="300,161.5",
+			lwidth=2.64,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while b:\l",
+			linenum="[5]",
+			pos="227,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=1.7303];
+		4	[fillcolor="#FFFB81",
+			height=0.5,
+			label="a, b = b, a % b\l",
+			linenum="[6]",
+			pos="212,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		3 -> 4	[color=green,
+			label=b,
+			lp="217.5,90.5",
+			pos="e,210.63,75 216.07,105.98 214.82,103.39 213.74,100.69 213,98 211.89,93.97 211.25,89.625 210.92,85.336"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return a\l",
+			linenum="[7]",
+			pos="379,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		3 -> 5	[color=red,
+			label="(not b)",
+			lp="345,90.5",
+			pos="e,339.19,75.023 261.87,108.09 282.04,99.462 307.74,88.472 329.93,78.985"];
+		4 -> 3	[color=black,
+			pos="e,225.81,105.69 219.48,75.02 220.44,77.656 221.32,80.375 222,83 223.03,87.002 223.85,91.287 224.51,95.511"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef greatest_common_divisor(a: int, b: int) ->int:...\lgreatest_common_divisor(10, 15)\l",
+		linenum="[1]",
+		pos="227,299.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=6.3056];
+	1 -> 8	[label=calls,
+		lp="248,257.5",
+		pos="e,227,234.13 227,272.71 227,263.66 227,253.47 227,244.3",
+		style=dashed];
+	8 -> 3	[color=green,
+		pos="e,227,142.3 227,197.65 227,184.82 227,167.11 227,152.38"];
+}

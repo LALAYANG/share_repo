@@ -1,0 +1,216 @@
+digraph cluster846CFG {
+	graph [bb="0,0,466,688",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="233,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="242,552,364,604",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		20	[color="#E552FF",
+			height=0.5,
+			label=count_up_to,
+			linenum="[16]",
+			pos="303,578",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster4count_up_to {
+		graph [bb="8,31,458,535",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=count_up_to,
+			lheight=0.21,
+			lp="233,523.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_15 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="primes = []\l",
+			linenum="[5]",
+			pos="303,486",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(2, n):\l",
+			linenum="[6]",
+			pos="303,433",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.9609];
+		3 -> 4	[color=black,
+			pos="e,303,451.25 303,467.73 303,465.66 303,463.5 303,461.32"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="is_prime = True\l",
+			linenum="[7]",
+			pos="86,366",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		4 -> 6	[color=green,
+			label="range(2, n)",
+			lp="246.5,399.5",
+			pos="e,131.84,384.06 230.61,415.15 220.62,412.57 210.53,409.82 201,407 181.41,401.21 160.22,394.09 141.43,387.47"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return primes\l",
+			linenum="[14]",
+			pos="292,366",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		4 -> 7	[color=green,
+			pos="e,294.91,384.19 300.11,414.92 299.03,408.55 297.78,401.16 296.59,394.11"];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for j in range(2, i):\l",
+			linenum="[8]",
+			pos="172,313",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.9609];
+		6 -> 8	[color=black,
+			pos="e,143.21,331.08 115.12,347.73 121.35,344.04 128.01,340.08 134.51,336.23"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % j == 0:\l",
+			linenum="[9]",
+			pos="163,246",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		8 -> 10	[color=green,
+			label="range(2, i)",
+			lp="213.5,279.5",
+			pos="e,165.32,263.74 169.64,294.92 168.74,288.45 167.7,280.92 166.71,273.77"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if is_prime:\l",
+			linenum="[12]",
+			pos="312,124",
+			shape=diamond,
+			style="filled,solid",
+			width=2.9617];
+		8 -> 11	[color=green,
+			pos="e,313.65,142.15 252.37,297.17 268.89,290.05 283.98,279.54 293,264 313.16,229.3 315.24,181.69 314.16,152.16"];
+		10 -> 8	[color=red,
+			label="(i % j != 0)",
+			lp="113,279.5",
+			pos="e,85.544,298.8 96.152,254.08 69.943,259.65 49.078,269.52 63,287 65.52,290.16 70.105,292.96 76.018,295.42"];
+		12	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="is_prime = False\lbreak\l",
+			linenum="[10, 11]",
+			pos="187,178",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		10 -> 12	[color=green,
+			label="i % j == 0",
+			lp="218.5,212.5",
+			pos="e,180.29,197.46 168.93,228.69 171.3,222.18 174.09,214.49 176.77,207.14"];
+		12 -> 11	[color=black,
+			pos="e,282.84,137.13 230.37,158.96 244.33,153.15 259.69,146.76 273.29,141.1"];
+		11 -> 4	[color=red,
+			label="(not is_prime)",
+			lp="386,279.5",
+			pos="e,378.06,415.82 317.09,141.3 317.83,144.17 318.51,147.16 319,150 329.28,210.15 297.53,234.13 328,287 328.81,288.4 463.5,317.42 419,\
+384 411.15,395.74 399.85,404.61 387.34,411.31"];
+		15	[fillcolor="#FFFB81",
+			height=0.5,
+			label="primes.append(i)\l",
+			linenum="[13]",
+			pos="366,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		11 -> 15	[color=green,
+			label=is_prime,
+			lp="376.5,90.5",
+			pos="e,351.64,75.291 324.52,107.92 330.66,100.54 338.22,91.44 345.19,83.045"];
+		15 -> 4	[color=black,
+			pos="e,397.11,420.72 411.87,75.209 431.07,85.643 449,101.22 449,123 449,367 449,367 449,367 449,392.23 430.58,407.74 406.83,417.25"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef count_up_to(n):...\lcount_up_to(22)\l",
+		linenum="[1]",
+		pos="303,661.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.75];
+	1 -> 20	[label=calls,
+		lp="324,619.5",
+		pos="e,303,596.13 303,634.71 303,625.66 303,615.47 303,606.3",
+		style=dashed];
+	20 -> 3	[color=green,
+		pos="e,303,504.3 303,559.65 303,546.82 303,529.11 303,514.38"];
+}

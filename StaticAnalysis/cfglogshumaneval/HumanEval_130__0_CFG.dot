@@ -1,0 +1,201 @@
+digraph cluster390CFG {
+	graph [bb="0,0,761,513",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="380.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="197,377,267,429",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=tri,
+			linenum="[15]",
+			pos="232,403",
+			shape=tab,
+			style=filled,
+			width=0.75];
+	}
+	subgraph cluster0tri {
+		graph [bb="8,31,753,360",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=tri,
+			lheight=0.21,
+			lp="380.5,348.5",
+			lwidth=0.35,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_13 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n == 0:\l",
+			linenum="[5]",
+			pos="232,311",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [1]\l",
+			linenum="[6]",
+			pos="169,244",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		3 -> 4	[color=green,
+			label="n == 0",
+			lp="231,277.5",
+			pos="e,185.62,262.15 218.02,295.57 210.62,287.94 201.32,278.35 192.82,269.58"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="my_tri = [1, 3]\l",
+			linenum="[7]",
+			pos="351,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		3 -> 5	[color=red,
+			label="(n != 0)",
+			lp="335.5,277.5",
+			pos="e,319.58,262.16 254.94,297.47 270.73,288.84 292.12,277.16 310.71,267"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(2, n + 1):\l",
+			linenum="[8]",
+			pos="351,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		5 -> 7	[color=black,
+			pos="e,351,209.25 351,225.73 351,223.66 351,221.5 351,219.32"];
+		9	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 0:\l",
+			linenum="[9]",
+			pos="452,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		7 -> 9	[color=green,
+			label="range(2, n + 1)",
+			lp="472,157.5",
+			pos="e,430.4,138.9 377.54,172.92 391.06,164.22 407.56,153.6 421.59,144.57"];
+		10	[fillcolor="#98fb98",
+			height=0.5,
+			label="return my_tri\l",
+			linenum="[13]",
+			pos="195,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		7 -> 10	[color=green,
+			pos="e,235.98,142.08 310.01,172.92 290.21,164.67 266.26,154.69 245.35,145.98"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="my_tri.append(i / 2 + 1)\l",
+			linenum="[10]",
+			pos="124,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.9861];
+		9 -> 11	[color=green,
+			label="i % 2 == 0",
+			lp="358.5,90.5",
+			pos="e,209.82,75.007 402.9,113.27 354.65,103.71 279.74,88.863 219.7,76.965"];
+		13	[fillcolor="#FFFB81",
+			height=0.5,
+			label="my_tri.append(my_tri[i - 1] + my_tri[i - 2] + (i + 3) / 2)\l",
+			linenum="[12]",
+			pos="497,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=6.875];
+		9 -> 13	[color=red,
+			label="(i % 2 != 0)",
+			lp="528,90.5",
+			pos="e,484.94,75.419 462.89,107.27 467.78,100.2 473.68,91.683 479.19,83.731"];
+		11 -> 7	[color=black,
+			pos="e,218,183.63 94.99,75.203 84.448,83.125 73.725,93.552 68,106 61.314,120.54 57.675,129.78 68,142 86.81,164.27 147.53,176.21 207.92,\
+182.61"];
+		13 -> 7	[color=black,
+			pos="e,471.65,180.87 574.45,75.099 577.24,77.423 579.79,80.044 582,83 597.71,104 595.58,119.57 582,142 570.53,160.93 527.58,172.43 481.77,\
+179.4"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef tri(n):...\ltri(20)\l",
+		linenum="[1]",
+		pos="232,486.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.5278];
+	1 -> 18	[label=calls,
+		lp="253,444.5",
+		pos="e,232,421.13 232,459.71 232,450.66 232,440.47 232,431.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,232,329.3 232,384.65 232,371.82 232,354.11 232,339.38"];
+}

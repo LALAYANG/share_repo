@@ -1,0 +1,189 @@
+digraph cluster826CFG {
+	graph [bb="0,0,1826.8,552.5",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="913.41,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="1057,416.5,1247,468.5",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		19	[color="#E552FF",
+			height=0.5,
+			label=even_odd_palindrome,
+			linenum="[18]",
+			pos="1152,442.5",
+			shape=tab,
+			style=filled,
+			width=2.4028];
+	}
+	subgraph cluster4even_odd_palindrome {
+		graph [bb="8,31,1818,399.5",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=even_odd_palindrome,
+			lheight=0.21,
+			lp="913,388",
+			lwidth=2.18,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster14is_palindrome {
+			graph [bb="1289,293.5,1793,368.5",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=is_palindrome,
+				lheight=0.21,
+				lp="1541,357",
+				lwidth=1.50,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			5	[fillcolor="#98fb98",
+				height=0.5,
+				label="return str(n) == str(n)[::-1]\l",
+				linenum="[6]",
+				pos="1541,319.5",
+				shape=parallelogram,
+				style="filled,solid",
+				width=6.7765];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="def is_palindrome(n):...\leven_palindrome_count = 0\lodd_palindrome_count = 0\l",
+			linenum="[5, 8, 9]",
+			pos="1152,319.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(1, n + 1):\l",
+			linenum="[11]",
+			pos="1152,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		3 -> 8	[color=black,
+			pos="e,1152,276.14 1152,292.92 1152,290.71 1152,288.46 1152,286.23"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 1 and is_palindrome(i):\l",
+			linenum="[12]",
+			pos="1152,191",
+			shape=diamond,
+			style="filled,solid",
+			width=7.7873];
+		8 -> 10	[color=green,
+			label="range(1, n + 1)",
+			lp="1214,224.5",
+			pos="e,1152,209.19 1152,239.92 1152,233.7 1152,226.5 1152,219.6"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return even_palindrome_count, odd_palindrome_count\l",
+			linenum="[16]",
+			pos="445,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=11.356];
+		8 -> 11	[color=green,
+			pos="e,630.16,209.02 1038,246.52 930.87,236.67 768.31,221.72 640.46,209.97"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_palindrome_count += 1\l",
+			linenum="[13]",
+			pos="311,124",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		10 -> 12	[color=green,
+			label="i % 2 == 1 and is_palindrome(i)",
+			lp="934,157.5",
+			pos="e,422.55,133.62 1031.5,180.69 872.18,168.37 592.95,146.79 432.91,134.42"];
+		14	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 0 and is_palindrome(i):\l",
+			linenum="[14]",
+			pos="1468,124",
+			shape=diamond,
+			style="filled,solid",
+			width=7.7873];
+		10 -> 14	[color=red,
+			label="(not (i % 2 == 1 and is_palindrome(i)))",
+			lp="1302,157.5",
+			pos="e,1271.5,129.39 1141,173.5 1137.2,165.53 1135.1,156.34 1141,150 1150.6,139.61 1202.1,133.53 1261.5,129.96"];
+		12 -> 8	[color=black,
+			pos="e,994.11,255.96 199.04,126.42 96.82,131.42 -30.274,149.23 27,209 59.514,242.93 678.07,252.97 983.81,255.87"];
+		14 -> 8	[color=red,
+			label="(not (i % 2 == 0 and is_palindrome(i)))",
+			lp="1624,191",
+			pos="e,1272.6,247.95 1468,142.18 1466.9,161.94 1461.8,193.63 1441,209 1415.6,227.74 1346.9,239.6 1282.9,246.83"];
+		15	[fillcolor="#FFFB81",
+			height=0.5,
+			label="even_palindrome_count += 1\l",
+			linenum="[15]",
+			pos="1620,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		14 -> 15	[color=green,
+			label="i % 2 == 0 and is_palindrome(i)",
+			lp="1676,90.5",
+			pos="e,1568.2,75.09 1496.5,107.64 1511.6,99.788 1530.5,90.359 1548,83 1551.4,81.553 1555,80.122 1558.6,78.72"];
+		15 -> 8	[color=black,
+			pos="e,1307,255.35 1735.8,61.653 1766.6,65.185 1794,71.588 1804,83 1841.1,125.48 1830,170.32 1789,209 1755.3,240.76 1494.5,251.51 1317.2,\
+255.15"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef even_odd_palindrome(n):...\leven_odd_palindrome(9)\l",
+		linenum="[1]",
+		pos="1152,526",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.6667];
+	1 -> 19	[label=calls,
+		lp="1173,484",
+		pos="e,1152,460.63 1152,499.21 1152,490.16 1152,479.97 1152,470.8",
+		style=dashed];
+	19 -> 3	[color=green,
+		pos="e,1152,346.38 1152,424.42 1152,406.87 1152,379.03 1152,356.58"];
+}

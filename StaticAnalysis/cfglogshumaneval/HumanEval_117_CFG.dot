@@ -1,0 +1,230 @@
+digraph cluster890CFG {
+	graph [bb="0,0,1260,580",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="630,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="962,444,1094,496",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		21	[color="#E552FF",
+			height=0.5,
+			label=select_words,
+			linenum="[14]",
+			pos="1028,470",
+			shape=tab,
+			style=filled,
+			width=1.6111];
+	}
+	subgraph cluster2select_words {
+		graph [bb="8,31,1252,427",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=select_words,
+			lheight=0.21,
+			lp="630,415.5",
+			lwidth=1.39,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_16 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result = []\l",
+			linenum="[3]",
+			pos="1028,378",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for word in s.split():\l",
+			linenum="[4]",
+			pos="1028,325",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		3 -> 4	[color=black,
+			pos="e,1028,343.25 1028,359.73 1028,357.66 1028,355.5 1028,353.32"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="n_consonants = 0\l",
+			linenum="[5]",
+			pos="716,258",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		4 -> 6	[color=green,
+			label="s.split()",
+			lp="926.5,291.5",
+			pos="e,786.11,276.04 943.34,309.46 925.37,306.18 906.53,302.6 889,299 858.48,292.73 825.09,285.18 795.86,278.33"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return result\l",
+			linenum="[11]",
+			pos="927,258",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.2823];
+		4 -> 7	[color=green,
+			pos="e,953.71,276.19 1001.5,306.92 989.5,299.22 975.19,290.01 962.33,281.74"];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(0, len(word)):\l",
+			linenum="[6]",
+			pos="716,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.3368];
+		6 -> 8	[color=black,
+			pos="e,716,209.19 716,239.92 716,233.7 716,226.5 716,219.6"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if word[i].lower() not in ['a', 'e', 'i', 'o', 'u']:\l",
+			linenum="[7]",
+			pos="446,124",
+			shape=diamond,
+			style="filled,solid",
+			width=11.387];
+		8 -> 11	[color=green,
+			label="range(0, len(word))",
+			lp="849.5,157.5",
+			pos="e,675.5,131.95 759.01,172.85 769.49,166.29 775.74,158.36 768,150 760.56,141.96 727.64,136.5 685.51,132.79"];
+		12	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n_consonants == n:\l",
+			linenum="[9]",
+			pos="1049,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.8511];
+		8 -> 12	[color=green,
+			pos="e,1015.5,138.59 846.69,179.43 875.01,175.88 904.66,171.18 932,165 956.97,159.36 984.06,150.29 1005.9,142.22"];
+		11 -> 8	[color=red,
+			label="(word[i].lower() in ['a', 'e', 'i', 'o', 'u'])",
+			lp="578,157.5",
+			pos="e,545.12,186.91 400.89,140.12 387.78,146.84 379.1,155.4 388,165 399.03,176.9 464.92,183.16 534.79,186.45"];
+		14	[fillcolor="#FFFB81",
+			height=0.5,
+			label="n_consonants += 1\l",
+			linenum="[8]",
+			pos="183,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.1806];
+		11 -> 14	[color=green,
+			label="word[i].lower() not in ['a', 'e', 'i', 'o', 'u']",
+			lp="536.5,90.5",
+			pos="e,252.23,75.111 387.31,108.49 350.38,99.368 302.28,87.479 262.02,77.53"];
+		14 -> 8	[color=black,
+			pos="e,529.94,189.83 104.28,63.067 75.221,69.224 45.013,81.611 27,106 17.494,118.87 16.087,130.3 27,142 60.17,177.56 327.97,187.33 519.72,\
+189.71"];
+		12 -> 4	[color=red,
+			label="(n_consonants != n)",
+			lp="1138.5,224.5",
+			pos="e,1040.1,306.64 1052.6,142.09 1057.9,170.43 1066,228.71 1054,276 1052.1,283.45 1048.8,291 1045.2,297.84"];
+		16	[fillcolor="#FFFB81",
+			height=0.5,
+			label="result.append(word)\l",
+			linenum="[10]",
+			pos="1126,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.4028];
+		12 -> 16	[color=green,
+			label="n_consonants == n",
+			lp="1164.5,90.5",
+			pos="e,1105.7,75.123 1067.2,107.6 1076.4,99.894 1087.6,90.401 1097.8,81.79"];
+		16 -> 4	[color=black,
+			pos="e,1124.2,312.24 1212.7,70.982 1224.3,74.239 1233.6,78.209 1238,83 1250.1,96.257 1243,105.08 1243,123 1243,259 1243,259 1243,259 \
+1243,284.15 1188.4,300.45 1134.3,310.44"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef select_words(s, n):...\lselect_words('Mary had a little la...', 4)\l",
+		linenum="[1]",
+		pos="1028,553.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=5.0417];
+	1 -> 21	[label=calls,
+		lp="1049,511.5",
+		pos="e,1028,488.13 1028,526.71 1028,517.66 1028,507.47 1028,498.3",
+		style=dashed];
+	21 -> 3	[color=green,
+		pos="e,1028,396.3 1028,451.65 1028,438.82 1028,421.11 1028,406.38"];
+}

@@ -1,0 +1,139 @@
+digraph cluster514CFG {
+	graph [bb="0,0,637,501",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="318.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="429,365,551,417",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		11	[color="#E552FF",
+			height=0.5,
+			label=can_arrange,
+			linenum="[13]",
+			pos="490,391",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster0can_arrange {
+		graph [bb="8,31,629,348",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=can_arrange,
+			lheight=0.21,
+			lp="318.5,336.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="ind = -1\li = 1\l",
+			linenum="[5, 6]",
+			pos="490,298",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while i < len(arr):\l",
+			linenum="[7]",
+			pos="490,244",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.6065];
+		3 -> 4	[color=black,
+			pos="e,490,262.22 490,278.81 490,276.71 490,274.53 490,272.33"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if arr[i] < arr[i - 1]:\l",
+			linenum="[8]",
+			pos="205,177",
+			shape=diamond,
+			style="filled,solid",
+			width=5.2596];
+		4 -> 5	[color=green,
+			label="i < len(arr)",
+			lp="423,210.5",
+			pos="e,257.6,190 420.65,227.18 373.93,216.53 312.81,202.59 267.58,192.27"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ind\l",
+			linenum="[11]",
+			pos="507,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		4 -> 6	[color=red,
+			label="(i >= len(arr))",
+			lp="553,210.5",
+			pos="e,494.36,195.16 488.42,225.94 488.3,220.41 488.56,214.18 491.21,204.77"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ind = i\l",
+			linenum="[9]",
+			pos="250,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		5 -> 7	[color=green,
+			label="arr[i] < arr[i - 1]",
+			lp="284.5,143.5",
+			pos="e,212.74,127.92 201.83,159 201.29,151.47 201.93,142.79 206,136 206.06,135.91 206.11,135.81 206.17,135.72"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="i += 1\l",
+			linenum="[10]",
+			pos="368,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.91667];
+		5 -> 8	[color=red,
+			label="(arr[i] >= arr[i - 1])",
+			lp="467,110",
+			pos="e,372.84,75.159 312.14,169.11 335.26,165.4 355.14,159.71 363,151 378.77,133.51 378.22,105.83 374.81,85.208"];
+		7 -> 8	[color=black,
+			pos="e,334.72,72.384 287.01,93.003 299.18,87.742 312.81,81.852 325.37,76.425"];
+		8 -> 4	[color=black,
+			pos="e,580.27,233.02 401.05,60.766 449.19,65.296 535.73,75.482 562,92 593.01,111.5 596.84,124.81 610,159 621.21,188.13 621.31,210.3 615,\
+218 610.77,223.17 601.58,227.29 590.01,230.56"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef can_arrange(arr):...\lcan_arrange([1, 2, 4, 5])\l",
+		linenum="[1]",
+		pos="490,474.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.0972];
+	1 -> 11	[label=calls,
+		lp="511,432.5",
+		pos="e,490,409.13 490,447.71 490,438.66 490,428.47 490,419.3",
+		style=dashed];
+	11 -> 3	[color=green,
+		pos="e,490,317.29 490,372.88 490,360.12 490,342.4 490,327.52"];
+}

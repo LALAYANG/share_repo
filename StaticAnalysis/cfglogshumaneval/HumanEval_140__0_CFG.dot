@@ -1,0 +1,266 @@
+digraph cluster282CFG {
+	graph [bb="0,0,923,745",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="461.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="593,609,709,661",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		23	[color="#E552FF",
+			height=0.5,
+			label=fix_spaces,
+			linenum="[26]",
+			pos="651,635",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster0fix_spaces {
+		graph [bb="8,31,915,592",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=fix_spaces,
+			lheight=0.21,
+			lp="461.5,580.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="new_text = ''\li = 0\lstart, end = 0, 0\l",
+			linenum="[5, 6, 7]",
+			pos="651,534.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.1806];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while i < len(text):\l",
+			linenum="[8]",
+			pos="651,473",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.7941];
+		3 -> 4	[color=black,
+			pos="e,651,491.14 651,507.92 651,505.71 651,503.46 651,501.23"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if text[i] == ' ':\l",
+			linenum="[9]",
+			pos="269,406",
+			shape=diamond,
+			style="filled,solid",
+			width=4.2128];
+		4 -> 5	[color=green,
+			label="i < len(text)",
+			lp="548,439.5",
+			pos="e,328.07,417.05 569.99,458.22 501.18,446.51 403.47,429.88 338.25,418.78"];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if end - start > 2:\l",
+			linenum="[20]",
+			pos="651,406",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		4 -> 6	[color=red,
+			label="(i >= len(text))",
+			lp="717.5,439.5",
+			pos="e,651,424.19 651,454.92 651,448.7 651,441.5 651,434.6"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="end += 1\l",
+			linenum="[10]",
+			pos="63,295",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		5 -> 7	[color=green,
+			label="text[i] == ' '",
+			lp="192,372.5",
+			pos="e,70.369,313.1 189.94,397.33 159.12,390.81 125.41,378.85 101,357 90.218,347.35 81.405,333.92 74.991,322.12"];
+		9	[fillcolor="#FF6752",
+			height=0.5,
+			label="if end - start > 2:\l",
+			linenum="[12]",
+			pos="269,339",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		5 -> 9	[color=red,
+			label="(text[i] != ' ')",
+			lp="335.5,372.5",
+			pos="e,269,357.19 269,387.92 269,381.7 269,374.5 269,367.6"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="i += 1\l",
+			linenum="[19]",
+			pos="234,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.91667];
+		7 -> 8	[color=black,
+			pos="e,200.57,58.982 47.426,276.98 34.082,260.57 17,234.41 17,208 17,208 17,208 17,109 17,73.715 127.1,62.821 190.45,59.473"];
+		8 -> 4	[color=black,
+			pos="e,755.09,464.41 267.32,58.764 402.92,62.088 906,76.605 906,109 906,407 906,407 906,407 906,438.3 832.96,454.71 765.06,463.21"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_text += '-' + text[i]\l",
+			linenum="[13]",
+			pos="134,207",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		9 -> 10	[color=green,
+			label="end - start > 2",
+			lp="201,295",
+			pos="e,129,225.24 186.52,330.32 165.07,326.58 146,321.08 139,313 120.76,291.95 122.49,258.68 126.86,235.24"];
+		12	[fillcolor="#FF6752",
+			height=0.5,
+			label="if end - start > 0:\l",
+			linenum="[14]",
+			pos="311,251",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		9 -> 12	[color=red,
+			label="(end - start <= 2)",
+			lp="350.5,295",
+			pos="e,285.56,266.15 267.38,321.05 266.95,308.12 268.15,290.32 276,277 276.76,275.71 277.61,274.47 278.54,273.29"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="start, end = i + 1, i + 1\l",
+			linenum="[18]",
+			pos="234,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		10 -> 11	[color=black,
+			pos="e,122.34,119.34 54.384,188.74 51.66,186.46 49.174,183.89 47,181 37.375,168.22 36.748,157.28 47,145 56.522,133.59 82.491,126 112.16,\
+120.96"];
+		11 -> 8	[color=black,
+			pos="e,234,75.248 234,91.734 234,89.657 234,87.498 234,85.322"];
+		13	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_text += '_' * (end - start) + text[i]\l",
+			linenum="[15]",
+			pos="234,163",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.9306];
+		12 -> 13	[color=green,
+			label="end - start > 0",
+			lp="332,207",
+			pos="e,242.95,181.23 283.58,235.89 278.74,232.69 273.98,229.04 270,225 264.44,219.36 255.36,203.96 247.72,190.04"];
+		15	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_text += text[i]\l",
+			linenum="[17]",
+			pos="516,163",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.4028];
+		12 -> 15	[color=red,
+			label="(end - start <= 0)",
+			lp="491.5,207",
+			pos="e,430.36,181.02 366.77,239.18 376.44,235.69 385.96,231.08 394,225 409.14,213.55 401.6,200.11 417,189 418.43,187.97 419.91,186.98 \
+421.41,186.02"];
+		13 -> 11	[color=black,
+			pos="e,234,128.25 234,144.73 234,142.66 234,140.5 234,138.32"];
+		15 -> 11	[color=black,
+			pos="e,328.21,128.04 429.47,146.35 400.67,141.14 368.29,135.29 338.29,129.86"];
+		16	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_text += '-'\l",
+			linenum="[21]",
+			pos="504,295",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		6 -> 16	[color=green,
+			label="end - start > 2",
+			lp="597,372.5",
+			pos="e,504.21,313.09 577.3,396.27 562.66,392.6 547.86,387.39 535,380 523,373.1 520.04,369.46 514,357 508.98,346.64 506.41,334.26 505.12,\
+323.36"];
+		18	[fillcolor="#FF6752",
+			height=0.5,
+			label="if end - start > 0:\l",
+			linenum="[22]",
+			pos="682,339",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		6 -> 18	[color=red,
+			label="(end - start <= 2)",
+			lp="743.5,372.5",
+			pos="e,674.29,356.17 658.82,388.6 662.19,381.54 666.2,373.12 669.93,365.3"];
+		17	[fillcolor="#98fb98",
+			height=0.5,
+			label="return new_text\l",
+			linenum="[24]",
+			pos="754,163",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.7059];
+		16 -> 17	[color=black,
+			pos="e,665.01,174.38 518.63,276.92 529.34,264.55 544.33,247.52 558,233 561.45,229.34 563.47,229.34 566,225 574.37,210.66 563.51,199.95 \
+576,189 579.39,186.03 615.93,180.65 655.03,175.65"];
+		18 -> 17	[color=red,
+			label="(end - start <= 0)",
+			lp="663.5,251",
+			pos="e,670.95,178.53 653.47,324.1 618.11,304.93 565.25,268.68 589,233 605.7,207.92 633.44,191.94 661.46,181.76"];
+		19	[fillcolor="#FFFB81",
+			height=0.5,
+			label="new_text += '_'\l",
+			linenum="[23]",
+			pos="817,251",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		18 -> 19	[color=green,
+			label="end - start > 0",
+			lp="839,295",
+			pos="e,789.43,269.17 704.6,323.38 723.82,310.97 752.16,292.73 777,277 778.25,276.21 779.53,275.4 780.82,274.58"];
+		19 -> 17	[color=black,
+			pos="e,766.52,181.08 804.25,232.6 795.14,220.16 782.74,203.23 772.53,189.3"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef fix_spaces(text):...\lfix_spaces('Exa   mple')\l",
+		linenum="[1]",
+		pos="651,718.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 23	[label=calls,
+		lp="672,676.5",
+		pos="e,651,653.13 651,691.71 651,682.66 651,672.47 651,663.3",
+		style=dashed];
+	23 -> 3	[color=green,
+		pos="e,651,561.34 651,616.84 651,604.39 651,587.1 651,571.65"];
+}

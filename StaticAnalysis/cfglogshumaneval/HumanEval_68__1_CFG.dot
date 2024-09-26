@@ -1,0 +1,160 @@
+digraph cluster860CFG {
+	graph [bb="0,0,916,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="458,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="160,310,234,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		16	[color="#E552FF",
+			height=0.5,
+			label=pluck,
+			linenum="[12]",
+			pos="197,336",
+			shape=tab,
+			style=filled,
+			width=0.80556];
+	}
+	subgraph cluster4pluck {
+		graph [bb="8,31,908,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=pluck,
+			lheight=0.21,
+			lp="458,281.5",
+			lwidth=0.58,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(arr) == 0:\l",
+			linenum="[5]",
+			pos="197,244",
+			shape=diamond,
+			style="filled,solid",
+			width=4.0085];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return []\l",
+			linenum="[6]",
+			pos="150,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 5	[color=green,
+			label="len(arr) == 0",
+			lp="231,210.5",
+			pos="e,162.6,195.42 185.62,227.27 180.52,220.2 174.36,211.68 168.61,203.73"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="evens = list(filter(lambda x: x % 2 == 0, arr))\l",
+			linenum="[7]",
+			pos="457,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.6111];
+		3 -> 6	[color=red,
+			label="(len(arr) != 0)",
+			lp="412,210.5",
+			pos="e,388.95,195.01 242.59,231.6 280.23,222.19 334.5,208.62 379.03,197.49"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if evens == []:\l",
+			linenum="[8]",
+			pos="457,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		6 -> 10	[color=black,
+			pos="e,457,142.25 457,158.73 457,156.66 457,154.5 457,152.32"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return []\l",
+			linenum="[9]",
+			pos="103,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		10 -> 11	[color=green,
+			label="evens == []",
+			lp="356.5,90.5",
+			pos="e,188.9,73.773 404.38,113.34 350.34,103.42 265.01,87.748 198.92,75.613"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [min(evens), arr.index(min(evens))]\l",
+			linenum="[10]",
+			pos="554,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=9.6088];
+		10 -> 12	[color=red,
+			label="(evens != [])",
+			lp="568,90.5",
+			pos="e,528.51,75.079 478.05,108.9 490.32,100.67 506.09,90.103 520.08,80.729"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef pluck(arr):...\lpluck([5, 0, 3, 0, 4, 2])\l",
+		linenum="[1]",
+		pos="197,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.0972];
+	1 -> 16	[label=calls,
+		lp="218,377.5",
+		pos="e,197,354.13 197,392.71 197,383.66 197,373.47 197,364.3",
+		style=dashed];
+	16 -> 3	[color=green,
+		pos="e,197,262.3 197,317.65 197,304.82 197,287.11 197,272.38"];
+}

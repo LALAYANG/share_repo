@@ -1,0 +1,76 @@
+digraph cluster460CFG {
+	graph [bb="0,0,1242,259",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="621,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="571,123,671,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=solution,
+			linenum="[7]",
+			pos="621,149",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster2solution {
+		graph [bb="8,31,1234,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=solution,
+			lheight=0.21,
+			lp="621,94.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum([x for idx, x in enumerate(lst) if idx % 2 == 0 and x % 2 == 1])\l",
+			linenum="[5]",
+			pos="621,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=16.809];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef solution(lst):...\lsolution([30, 13, 23, 32])\l",
+		linenum="[1]",
+		pos="621,232.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.2083];
+	1 -> 6	[label=calls,
+		lp="642,190.5",
+		pos="e,621,167.13 621,205.71 621,196.66 621,186.47 621,177.3",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,621,75.3 621,130.65 621,117.82 621,100.11 621,85.381"];
+}

@@ -1,0 +1,177 @@
+digraph cluster946CFG {
+	graph [bb="0,0,569,515",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="284.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="263,379,427,431",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=cycpattern_check,
+			linenum="[13]",
+			pos="345,405",
+			shape=tab,
+			style=filled,
+			width=2.0694];
+	}
+	subgraph cluster2cycpattern_check {
+		graph [bb="8,31,561,362",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=cycpattern_check,
+			lheight=0.21,
+			lp="284.5,350.5",
+			lwidth=1.85,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="l = len(b)\lpat = b + b\l",
+			linenum="[5, 6]",
+			pos="345,312",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(a) - l + 1):\l",
+			linenum="[7]",
+			pos="345,258",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.6704];
+		3 -> 5	[color=black,
+			pos="e,345,276.22 345,292.81 345,290.71 345,288.53 345,286.33"];
+		8	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for j in range(l + 1):\l",
+			linenum="[8]",
+			pos="165,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		5 -> 8	[color=green,
+			label="range(len(a) - l + 1)",
+			lp="249,224.5",
+			pos="e,158.52,209.34 197.31,247.94 181.07,244.21 168.17,239.07 162,232 158.93,228.48 157.67,224.06 157.49,219.45"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[11]",
+			pos="442,191",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		5 -> 9	[color=green,
+			pos="e,416.35,209.19 370.49,239.92 381.87,232.29 395.45,223.19 407.71,214.98"];
+		8 -> 5	[color=green,
+			pos="e,347.25,239.8 269.45,201.78 303.61,205.97 334.33,211.23 340,217 343.35,220.41 345.26,224.84 346.28,229.5"];
+		11	[fillcolor="#FF6752",
+			height=0.5,
+			label="if a[i:i + l] == pat[j:j + l]:\l",
+			linenum="[9]",
+			pos="273,124",
+			shape=diamond,
+			style="filled,solid",
+			width=6.7405];
+		8 -> 11	[color=green,
+			label="range(l + 1)",
+			lp="204,157.5",
+			pos="e,186.14,135.6 153.82,172.62 150.44,165 148.83,156.37 154,150 157.82,145.29 165.91,141.44 176.17,138.3"];
+		11 -> 8	[color=red,
+			label="(a[i:i + l] != pat[j:j + l])",
+			lp="383,157.5",
+			pos="e,244.91,174.34 270.38,141.81 268.3,149.85 264.59,159.02 258,165 256.51,166.35 254.96,167.63 253.36,168.84"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[10]",
+			pos="273,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		11 -> 13	[color=green,
+			label="a[i:i + l] == pat[j:j + l]",
+			lp="380.5,90.5",
+			pos="e,273,75.19 273,105.92 273,99.702 273,92.5 273,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef cycpattern_check(a, b):...\lcycpattern_check('winemtt', 'tinem')\l",
+		linenum="[1]",
+		pos="345,488.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.3611];
+	1 -> 18	[label=calls,
+		lp="366,446.5",
+		pos="e,345,423.13 345,461.71 345,452.66 345,442.47 345,433.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,345,331.29 345,386.88 345,374.12 345,356.4 345,341.52"];
+}

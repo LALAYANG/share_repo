@@ -1,0 +1,179 @@
+digraph cluster516CFG {
+	graph [bb="0,0,658,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="329,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="340,310,522,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		16	[color="#E552FF",
+			height=0.5,
+			label=fruit_distribution,
+			linenum="[9]",
+			pos="431,336",
+			shape=tab,
+			style=filled,
+			width=2.2917];
+	}
+	subgraph cluster2fruit_distribution {
+		graph [bb="8,31,650,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=fruit_distribution,
+			lheight=0.21,
+			lp="329,281.5",
+			lwidth=2.07,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="lis = list()\l",
+			linenum="[3]",
+			pos="431,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in s.split(' '):\l",
+			linenum="[4]",
+			pos="431,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		3 -> 5	[color=black,
+			pos="e,431,209.25 431,225.73 431,223.66 431,221.5 431,219.32"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i.isdigit():\l",
+			linenum="[5]",
+			pos="493,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.5745];
+		5 -> 7	[color=green,
+			label="s.split(' ')",
+			lp="417,157.5",
+			pos="e,418.9,131.71 375.73,172.85 365.21,166.76 359.52,159.11 367,150 373.17,142.48 389.78,137.18 408.98,133.46"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return n - sum(lis)\l",
+			linenum="[7]",
+			pos="181,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.5794];
+		5 -> 8	[color=green,
+			pos="e,246.68,142.08 365.32,172.92 332,164.26 291.37,153.7 256.75,144.69"];
+		7 -> 5	[color=red,
+			label="(not i.isdigit())",
+			lp="551.5,157.5",
+			pos="e,461.96,172.96 486.32,141.42 482.6,149.18 477.43,158.21 471,165 470.58,165.45 470.15,165.89 469.71,166.32"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="lis.append(int(i))\l",
+			linenum="[6]",
+			pos="542,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		7 -> 10	[color=green,
+			label="i.isdigit()",
+			lp="566.5,90.5",
+			pos="e,529.09,75.123 504.61,107.6 510.07,100.35 516.73,91.523 522.9,83.333"];
+		10 -> 5	[color=black,
+			pos="e,556.11,185.22 603.47,75.03 607.9,77.366 612.14,80.009 616,83 645.02,105.49 653.06,140.19 626,165 615.89,174.27 592.9,180.18 566.13,\
+183.94"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef fruit_distribution(s, n):...\lfruit_distribution('5 apples and 6 orang...', 19)\l",
+		linenum="[1]",
+		pos="431,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=5.8472];
+	1 -> 16	[label=calls,
+		lp="452,377.5",
+		pos="e,431,354.13 431,392.71 431,383.66 431,373.47 431,364.3",
+		style=dashed];
+	16 -> 3	[color=green,
+		pos="e,431,262.3 431,317.65 431,304.82 431,287.11 431,272.38"];
+}

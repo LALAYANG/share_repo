@@ -1,0 +1,76 @@
+digraph cluster752CFG {
+	graph [bb="0,0,346,259",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="173,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="103,123,243,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=triangle_area,
+			linenum="[7]",
+			pos="173,149",
+			shape=tab,
+			style=filled,
+			width=1.7222];
+	}
+	subgraph cluster6triangle_area {
+		graph [bb="8,31,338,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=triangle_area,
+			lheight=0.21,
+			lp="173,94.5",
+			lwidth=1.50,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return a * h / 2.0\l",
+			linenum="[5]",
+			pos="173,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=4.3676];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef triangle_area(a, h):...\ltriangle_area(2, 2)\l",
+		linenum="[1]",
+		pos="173,232.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.3194];
+	1 -> 6	[label=calls,
+		lp="194,190.5",
+		pos="e,173,167.13 173,205.71 173,196.66 173,186.47 173,177.3",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,173,75.3 173,130.65 173,117.82 173,100.11 173,85.381"];
+}

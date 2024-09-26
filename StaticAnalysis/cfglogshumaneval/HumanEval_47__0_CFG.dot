@@ -1,0 +1,136 @@
+digraph cluster888CFG {
+	graph [bb="0,0,1230,379",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="615,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="344,243,426,295",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		13	[color="#E552FF",
+			height=0.5,
+			label=median,
+			linenum="[11]",
+			pos="385,269",
+			shape=tab,
+			style=filled,
+			width=0.91667];
+	}
+	subgraph cluster2median {
+		graph [bb="8,31,1222,226",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=median,
+			lheight=0.21,
+			lp="615,214.5",
+			lwidth=0.69,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="l = sorted(l)\l",
+			linenum="[5]",
+			pos="385,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(l) % 2 == 1:\l",
+			linenum="[6]",
+			pos="385,124",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		3 -> 5	[color=black,
+			pos="e,385,142.25 385,158.73 385,156.66 385,154.5 385,152.32"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return l[len(l) // 2]\l",
+			linenum="[7]",
+			pos="197,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.0294];
+		5 -> 7	[color=green,
+			label="len(l) % 2 == 1",
+			lp="369,90.5",
+			pos="e,246.18,75.004 347.86,110.16 321.59,101.08 285.84,88.717 255.74,78.308"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return (l[len(l) // 2 - 1] + l[len(l) // 2]) / 2.0\l",
+			linenum="[9]",
+			pos="805,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=11.356];
+		5 -> 9	[color=red,
+			label="(len(l) % 2 != 1)",
+			lp="702.5,90.5",
+			pos="e,694.77,75.059 448.79,113.13 511.16,103.48 607.69,88.535 684.54,76.642"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef median(l: list):...\lmedian([8, 1, 3, 9, 9, 2, 7])\l",
+		linenum="[1]",
+		pos="385,352.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.5556];
+	1 -> 13	[label=calls,
+		lp="406,310.5",
+		pos="e,385,287.13 385,325.71 385,316.66 385,306.47 385,297.3",
+		style=dashed];
+	13 -> 3	[color=green,
+		pos="e,385,195.3 385,250.65 385,237.82 385,220.11 385,205.38"];
+}

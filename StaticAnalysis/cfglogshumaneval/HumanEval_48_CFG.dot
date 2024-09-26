@@ -1,0 +1,140 @@
+digraph cluster768CFG {
+	graph [bb="0,0,860,393",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="430,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="368,257,508,309",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		14	[color="#E552FF",
+			height=0.5,
+			label=is_palindrome,
+			linenum="[8]",
+			pos="438,283",
+			shape=tab,
+			style=filled,
+			width=1.7222];
+	}
+	subgraph cluster12is_palindrome {
+		graph [bb="8,31,852,240",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=is_palindrome,
+			lheight=0.21,
+			lp="430,228.5",
+			lwidth=1.50,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(text)):\l",
+			linenum="[3]",
+			pos="438,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.8156];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if text[i] != text[len(text) - 1 - i]:\l",
+			linenum="[4]",
+			pos="319,124",
+			shape=diamond,
+			style="filled,solid",
+			width=8.4256];
+		3 -> 6	[color=green,
+			label="range(len(text))",
+			lp="345.5,157.5",
+			pos="e,289.02,140.41 314.4,180.54 298.06,176.91 284.9,171.9 279,165 273.88,159.02 275.89,152.86 281.07,147.22"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[6]",
+			pos="742,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		3 -> 7	[color=green,
+			pos="e,740.7,142.26 580.91,184.69 648.31,180.92 716.71,174.76 729,165 733.18,161.68 736.03,156.99 737.98,151.99"];
+		6 -> 3	[color=red,
+			label="(text[i] == text[len(text) - 1 - i])",
+			lp="576,157.5",
+			pos="e,432.15,172.66 393.99,137.56 401.87,140.8 409.41,144.88 416,150 420.62,153.58 424.4,158.42 427.45,163.5"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[5]",
+			pos="319,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		6 -> 9	[color=green,
+			label="text[i] != text[len(text) - 1 - i]",
+			lp="459.5,90.5",
+			pos="e,319,75.19 319,105.92 319,99.702 319,92.5 319,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef is_palindrome(text: str):...\lis_palindrome('xywyx')\l",
+		linenum="[1]",
+		pos="438,366.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 14	[label=calls,
+		lp="459,324.5",
+		pos="e,438,301.13 438,339.71 438,330.66 438,320.47 438,311.3",
+		style=dashed];
+	14 -> 3	[color=green,
+		pos="e,438,209.3 438,264.65 438,251.82 438,234.11 438,219.38"];
+}

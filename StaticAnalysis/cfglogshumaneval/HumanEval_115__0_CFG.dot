@@ -1,0 +1,77 @@
+digraph cluster922CFG {
+	graph [bb="0,0,1008,274",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="504,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="454,123,554,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=max_fill,
+			linenum="[8]",
+			pos="504,149",
+			shape=tab,
+			style=filled,
+			width=1.1528];
+	}
+	subgraph cluster4max_fill {
+		graph [bb="8,31,1000,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=max_fill,
+			lheight=0.21,
+			lp="504,94.5",
+			lwidth=0.93,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum([math.ceil(sum(arr) / capacity) for arr in grid])\l",
+			linenum="[6]",
+			pos="504,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=13.553];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.94444,
+		label="from typing import *\limport math\ldef max_fill(grid, capacity):...\lmax_fill([[0, 0, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 1, \
+1, 1]], 2)\l",
+		linenum="[1]",
+		pos="504,240",
+		shape=rectangle,
+		style="filled,solid",
+		width=8.1389];
+	1 -> 6	[label=calls,
+		lp="525,190.5",
+		pos="e,504,167.44 504,205.86 504,196.58 504,186.6 504,177.68",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,504,75.3 504,130.65 504,117.82 504,100.11 504,85.381"];
+}

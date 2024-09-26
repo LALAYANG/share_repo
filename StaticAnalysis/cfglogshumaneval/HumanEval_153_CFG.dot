@@ -1,0 +1,174 @@
+digraph cluster326CFG {
+	graph [bb="0,0,1128,520",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="564,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="643,384,833,436",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		25	[color="#E552FF",
+			height=0.5,
+			label=Strongest_Extension,
+			linenum="[15]",
+			pos="738,410",
+			shape=tab,
+			style=filled,
+			width=2.4028];
+	}
+	subgraph cluster2Strongest_Extension {
+		graph [bb="8,31,1120,367",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=Strongest_Extension,
+			lheight=0.21,
+			lp="564,355.5",
+			lwidth=2.18,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="strong = extensions[0]\lmy_val = len([x for x in extensions[0] if x.isalpha() and x.isupper()]) - len([\l    x for x in extensions[\
+0] if x.isalpha() and x.islower()])\l",
+			linenum="[3, 4]",
+			pos="738,309.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=9.2778];
+		10	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for s in extensions:\l",
+			linenum="[5]",
+			pos="738,248",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.7941];
+		3 -> 10	[color=black,
+			pos="e,738,266.14 738,282.92 738,280.71 738,278.46 738,276.23"];
+		11	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="val = len([x for x in s if x.isalpha() and x.isupper()]) - len([x for x in\l    s if x.isalpha() and x.islower()])\l",
+			linenum="[6]",
+			pos="619,180",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.7083];
+		10 -> 11	[color=green,
+			label=extensions,
+			lp="733.5,214.5",
+			pos="e,651.46,199 707.04,229.83 692.77,221.91 675.62,212.4 660.26,203.88"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans = class_name + '.' + strong\l",
+			linenum="[11]",
+			pos="152,180",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.7778];
+		10 -> 12	[color=green,
+			pos="e,288.22,197.97 642.46,237.02 555.47,227.84 423.15,213.63 298.34,199.15"];
+		19	[fillcolor="#FF6752",
+			height=0.5,
+			label="if val > my_val:\l",
+			linenum="[7]",
+			pos="955,126",
+			shape=diamond,
+			style="filled,solid",
+			width=3.8043];
+		11 -> 19	[color=black,
+			pos="e,895.24,136.25 735.57,160.96 785.41,153.25 841.92,144.5 885.12,137.82"];
+		19 -> 10	[color=red,
+			label="(val <= my_val)",
+			lp="1018,180",
+			pos="e,827.98,235.67 956.8,143.87 957.55,160.12 955.9,184.35 942,199 927.1,214.7 881.97,226.18 837.94,233.97"];
+		20	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="strong = s\lmy_val = val\l",
+			linenum="[8, 9]",
+			pos="1029,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.6111];
+		19 -> 20	[color=green,
+			label="val > my_val",
+			lp="1048,92.5",
+			pos="e,1008.6,77.21 971.79,110.02 980.41,102.34 991.13,92.778 1001,84.015"];
+		20 -> 10	[color=black,
+			pos="e,858.73,243.76 1087.2,71.734 1093,75.162 1098.1,79.503 1102,85 1131.6,126.92 1123.1,165.78 1084,199 1051.9,226.27 952.84,238.08 \
+868.89,243.17"];
+		22	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ans\l",
+			linenum="[12]",
+			pos="152,126",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		12 -> 22	[color=black,
+			pos="e,152,144.24 152,161.97 152,159.57 152,157.06 152,154.52"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef Strongest_Extension(class_name, extensions):...\lStrongest_Extension('Watashi', ['tEN', 'niNE', 'eIGHt8OKe'])\l",
+		linenum="[1]",
+		pos="738,493.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=7.1111];
+	1 -> 25	[label=calls,
+		lp="759,451.5",
+		pos="e,738,428.13 738,466.71 738,457.66 738,447.47 738,438.3",
+		style=dashed];
+	25 -> 3	[color=green,
+		pos="e,738,336.34 738,391.84 738,379.39 738,362.1 738,346.65"];
+}

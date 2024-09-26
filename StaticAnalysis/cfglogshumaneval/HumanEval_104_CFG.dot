@@ -1,0 +1,153 @@
+digraph cluster62CFG {
+	graph [bb="0,0,1258,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="629,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="802,310,942,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		15	[color="#E552FF",
+			height=0.5,
+			label=unique_digits,
+			linenum="[9]",
+			pos="872,336",
+			shape=tab,
+			style=filled,
+			width=1.7222];
+	}
+	subgraph cluster0unique_digits {
+		graph [bb="8,31,1250,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=unique_digits,
+			lheight=0.21,
+			lp="629,281.5",
+			lwidth=1.50,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_10 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_digit_elements = []\l",
+			linenum="[3]",
+			pos="872,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.8611];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in x:\l",
+			linenum="[4]",
+			pos="872,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.2306];
+		3 -> 4	[color=black,
+			pos="e,872,209.25 872,225.73 872,223.66 872,221.5 872,219.32"];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if all(int(c) % 2 == 1 for c in str(i)):\l",
+			linenum="[5]",
+			pos="903,124",
+			shape=diamond,
+			style="filled,solid",
+			width=8.8597];
+		4 -> 5	[color=green,
+			label=x,
+			lp="873.5,157.5",
+			pos="e,876.24,140.54 866.88,172.88 865.61,165.49 865.48,156.96 869,150 869.28,149.45 869.58,148.91 869.89,148.37"];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sorted(odd_digit_elements)\l",
+			linenum="[7]",
+			pos="291,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=7.65];
+		4 -> 6	[color=green,
+			pos="e,443.08,142.01 809.55,183.01 725.11,173.57 571.51,156.38 453.32,143.16"];
+		5 -> 4	[color=red,
+			label="(not all(int(c) % 2 == 1 for c in str(i)))",
+			lp="1062.5,157.5",
+			pos="e,878.88,172.69 893.41,141.54 891.88,144.34 890.36,147.23 889,150 886.92,154.23 884.85,158.78 882.9,163.23"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_digit_elements.append(i)\l",
+			linenum="[6]",
+			pos="1027,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		5 -> 10	[color=green,
+			label="all(int(c) % 2 == 1 for c in str(i))",
+			lp="1087,90.5",
+			pos="e,953.16,75.024 913.9,106.53 920.08,98.374 928.48,89.008 938,83 939.93,81.782 941.92,80.623 943.96,79.518"];
+		10 -> 4	[color=black,
+			pos="e,950.42,190.17 1151.3,66.203 1192.5,70.2 1229.6,75.74 1236,83 1260.2,110.26 1260.9,138.36 1236,165 1217.6,184.72 1062.4,189.27 \
+960.7,190.1"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef unique_digits(x):...\lunique_digits([15, 33, 1422, 1])\l",
+		linenum="[1]",
+		pos="872,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.9028];
+	1 -> 15	[label=calls,
+		lp="893,377.5",
+		pos="e,872,354.13 872,392.71 872,383.66 872,373.47 872,364.3",
+		style=dashed];
+	15 -> 3	[color=green,
+		pos="e,872,262.3 872,317.65 872,304.82 872,287.11 872,272.38"];
+}

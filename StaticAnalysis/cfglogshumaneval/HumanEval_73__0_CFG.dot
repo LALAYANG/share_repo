@@ -1,0 +1,153 @@
+digraph cluster660CFG {
+	graph [bb="0,0,819,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="409.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="340,310,496,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		14	[color="#E552FF",
+			height=0.5,
+			label=smallest_change,
+			linenum="[11]",
+			pos="418,336",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster2smallest_change {
+		graph [bb="8,31,811,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=smallest_change,
+			lheight=0.21,
+			lp="409.5,281.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_4 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans = 0\l",
+			linenum="[5]",
+			pos="418,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.0278];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(len(arr) // 2):\l",
+			linenum="[6]",
+			pos="418,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.5036];
+		3 -> 4	[color=black,
+			pos="e,418,209.25 418,225.73 418,223.66 418,221.5 418,219.32"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if arr[i] != arr[len(arr) - i - 1]:\l",
+			linenum="[7]",
+			pos="503,124",
+			shape=diamond,
+			style="filled,solid",
+			width=7.7873];
+		4 -> 7	[color=green,
+			label="range(len(arr) // 2)",
+			lp="404,157.5",
+			pos="e,361.62,132.94 325.93,172.8 316.18,167.17 312.5,159.75 321,150 326.54,143.65 337.53,138.86 351.5,135.25"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ans\l",
+			linenum="[9]",
+			pos="110,124",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		4 -> 8	[color=green,
+			pos="e,190.65,142.02 337.08,172.92 295.16,164.08 243.84,153.25 200.6,144.12"];
+		7 -> 4	[color=red,
+			label="(arr[i] == arr[len(arr) - i - 1])",
+			lp="635.5,157.5",
+			pos="e,481.38,172.95 501.47,141.96 499.94,149.86 496.93,158.84 491,165 490.46,165.56 489.91,166.11 489.34,166.65"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans += 1\l",
+			linenum="[8]",
+			pos="650,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		7 -> 10	[color=green,
+			label="arr[i] != arr[len(arr) - i - 1]",
+			lp="669,90.5",
+			pos="e,608.32,61.775 514.99,106.35 521.74,98.144 530.85,88.789 541,83 558.37,73.095 579.41,67.114 598.35,63.502"];
+		10 -> 4	[color=black,
+			pos="e,583,184.93 691.6,59.275 730.23,61.439 783.72,67.275 797,83 821.27,111.75 808.72,146.43 776,165 759.27,174.5 675.39,180.65 593.03,\
+184.47"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef smallest_change(arr):...\lsmallest_change([1, 4, 2])\l",
+		linenum="[1]",
+		pos="418,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.4444];
+	1 -> 14	[label=calls,
+		lp="439,377.5",
+		pos="e,418,354.13 418,392.71 418,383.66 418,373.47 418,364.3",
+		style=dashed];
+	14 -> 3	[color=green,
+		pos="e,418,262.3 418,317.65 418,304.82 418,287.11 418,272.38"];
+}

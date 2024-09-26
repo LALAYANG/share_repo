@@ -1,0 +1,76 @@
+digraph cluster276CFG {
+	graph [bb="0,0,1348,299",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="674,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="616,163,732,215",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=sort_array,
+			linenum="[8]",
+			pos="674,189",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster6sort_array {
+		graph [bb="8,31,1340,146",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=sort_array,
+			lheight=0.21,
+			lp="674,134.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=1.0556,
+			label="return [] if len(array) == 0 else sorted(array, reverse=(array[0] + array[-\l    1]) % 2 == 0)\l",
+			linenum="[5]",
+			pos="674,77",
+			shape=parallelogram,
+			style="filled,solid",
+			width=18.287];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef sort_array(array):...\lsort_array([2, 4, 3, 0, 1, 5, 6])\l",
+		linenum="[1]",
+		pos="674,272.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.0139];
+	1 -> 6	[label=calls,
+		lp="695,230.5",
+		pos="e,674,207.13 674,245.71 674,236.66 674,226.47 674,217.3",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,674,115.09 674,170.81 674,158.62 674,141.62 674,125.5"];
+}

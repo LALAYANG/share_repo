@@ -1,0 +1,206 @@
+digraph cluster486CFG {
+	graph [bb="0,0,772,633",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="386,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="496,497,652,549",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		18	[color="#E552FF",
+			height=0.5,
+			label=get_odd_collatz,
+			linenum="[20]",
+			pos="574,523",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster4get_odd_collatz {
+		graph [bb="8,31,764,480",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=get_odd_collatz,
+			lheight=0.21,
+			lp="386,468.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_12 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % 2 == 0:\l",
+			linenum="[5]",
+			pos="574,431",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_collatz = []\l",
+			linenum="[6]",
+			pos="493,364",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.0694];
+		3 -> 4	[color=green,
+			label="n % 2 == 0",
+			lp="579.5,397.5",
+			pos="e,511.4,382.25 552.75,415.87 547.83,412.43 542.66,408.67 538,405 531.65,400 525.03,394.37 518.88,388.95"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_collatz = [n]\l",
+			linenum="[8]",
+			pos="664,364",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.1806];
+		3 -> 6	[color=red,
+			label="(n % 2 != 0)",
+			lp="688,397.5",
+			pos="e,647.72,382.04 601.56,416.88 608.13,413.34 614.98,409.29 621,405 627.66,400.26 634.36,394.56 640.43,388.98"];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while n > 1:\l",
+			linenum="[9]",
+			pos="570,311",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.4182];
+		4 -> 5	[color=black,
+			pos="e,544.22,329.08 519.07,345.73 524.39,342.21 530.08,338.44 535.64,334.76"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % 2 == 0:\l",
+			linenum="[10]",
+			pos="137,244",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		5 -> 7	[color=green,
+			label="n > 1",
+			lp="413,277.5",
+			pos="e,193.96,253.55 507.5,300.62 426.79,288.5 286.87,267.5 204.02,255.06"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sorted(odd_collatz)\l",
+			linenum="[18]",
+			pos="496,244",
+			shape=parallelogram,
+			style="filled,solid",
+			width=6.1147];
+		5 -> 8	[color=red,
+			label="(n <= 1)",
+			lp="572.5,277.5",
+			pos="e,515.57,262.19 550.56,292.92 542.21,285.59 532.31,276.9 523.25,268.94"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="n = n / 2\l",
+			linenum="[11]",
+			pos="327,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		7 -> 9	[color=green,
+			label="n % 2 == 0",
+			lp="290.5,210.5",
+			pos="e,281.26,193.65 171.85,231.08 199.71,221.55 239.31,208 271.52,196.98"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="n = n * 3 + 1\l",
+			linenum="[13]",
+			pos="492,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		7 -> 11	[color=red,
+			label="(n % 2 != 0)",
+			lp="450,210.5",
+			pos="e,433.16,195.1 197.5,234.9 219.38,232.02 244.3,228.8 267,226 297.64,222.22 305.64,223.62 336,218 364.89,212.65 396.35,204.95 423.4,\
+197.73"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % 2 == 1:\l",
+			linenum="[15]",
+			pos="534,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		9 -> 10	[color=black,
+			pos="e,490.91,135.62 372.68,164.74 404.62,156.88 447.37,146.34 480.84,138.1"];
+		10 -> 5	[color=red,
+			label="(n % 2 != 1)",
+			lp="700,210.5",
+			pos="e,644.18,305.63 547.24,140.04 567.15,161.51 607.05,200.29 650,218 665.5,224.39 713.79,213.54 725,226 735.7,237.9 734.49,249.12 725,\
+262 708.33,284.62 681.11,296.9 654.11,303.46"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="odd_collatz.append(int(n))\l",
+			linenum="[16]",
+			pos="605,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.2083];
+		10 -> 12	[color=green,
+			label="n % 2 == 1",
+			lp="616.5,90.5",
+			pos="e,586.19,75.223 550.11,108.25 558.57,100.51 569.15,90.824 578.75,82.03"];
+		12 -> 5	[color=black,
+			pos="e,644.5,305.68 718.69,75.011 739.61,84.694 755,99.727 755,123 755,245 755,245 755,245 755,270.46 736.67,273.41 714,285 695.75,294.33 \
+674.68,300.26 654.38,304.01"];
+		11 -> 10	[color=black,
+			pos="e,521.48,140.2 506.22,158.73 509.08,155.26 512.13,151.56 515.12,147.92"];
+		6 -> 5	[color=black,
+			pos="e,601.64,329.17 632.44,345.88 625.46,342.09 617.98,338.03 610.7,334.08"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef get_odd_collatz(n):...\lget_odd_collatz(5)\l",
+		linenum="[1]",
+		pos="574,606.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.2083];
+	1 -> 18	[label=calls,
+		lp="595,564.5",
+		pos="e,574,541.13 574,579.71 574,570.66 574,560.47 574,551.3",
+		style=dashed];
+	18 -> 3	[color=green,
+		pos="e,574,449.3 574,504.65 574,491.82 574,474.11 574,459.38"];
+}

@@ -1,0 +1,99 @@
+digraph cluster316CFG {
+	graph [bb="0,0,694,314",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="347,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="260,178,434,230",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		8	[color="#E552FF",
+			height=0.5,
+			label=remove_duplicates,
+			linenum="[7]",
+			pos="347,204",
+			shape=tab,
+			style=filled,
+			width=2.1806];
+	}
+	subgraph cluster0remove_duplicates {
+		graph [bb="8,31,686,161",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=remove_duplicates,
+			lheight=0.21,
+			lp="347,149.5",
+			lwidth=1.96,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="import collections\lc = collections.Counter(numbers)\l",
+			linenum="[3, 4]",
+			pos="347,111",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.9028];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [n for n in numbers if c[n] <= 1]\l",
+			linenum="[5]",
+			pos="347,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=9.1853];
+		3 -> 5	[color=black,
+			pos="e,347,75.216 347,91.813 347,89.708 347,87.527 347,85.334"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef remove_duplicates(numbers: List[int]) ->List[int]:...\lremove_duplicates([1, 2, 3, 2, 4, 3, 5])\l",
+		linenum="[1]",
+		pos="347,287.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=6.7639];
+	1 -> 8	[label=calls,
+		lp="368,245.5",
+		pos="e,347,222.13 347,260.71 347,251.66 347,241.47 347,232.3",
+		style=dashed];
+	8 -> 3	[color=green,
+		pos="e,347,130.29 347,185.88 347,173.12 347,155.4 347,140.52"];
+}

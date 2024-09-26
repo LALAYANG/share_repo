@@ -1,0 +1,187 @@
+digraph cluster174CFG {
+	graph [bb="0,0,548,515",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="274,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="238,379,360,431",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=will_it_fly,
+			linenum="[14]",
+			pos="299,405",
+			shape=tab,
+			style=filled,
+			width=1.4861];
+	}
+	subgraph cluster0will_it_fly {
+		graph [bb="8,31,540,362",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=will_it_fly,
+			lheight=0.21,
+			lp="274,350.5",
+			lwidth=1.26,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if sum(q) > w:\l",
+			linenum="[3]",
+			pos="299,313",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[4]",
+			pos="190,246",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		3 -> 5	[color=green,
+			label="sum(q) > w",
+			lp="295.5,279.5",
+			pos="e,218.65,264.08 276.15,298.37 262.03,289.96 243.58,278.95 227.38,269.29"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="i, j = 0, len(q) - 1\l",
+			linenum="[6]",
+			pos="410,246",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.5278];
+		3 -> 6	[color=red,
+			label="(sum(q) <= w)",
+			lp="418,279.5",
+			pos="e,380.82,264.08 322.27,298.37 336.64,289.96 355.43,278.95 371.94,269.29"];
+		9	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while i < j:\l",
+			linenum="[7]",
+			pos="410,193",
+			shape=hexagon,
+			style="filled,solid",
+			width=2.4182];
+		6 -> 9	[color=black,
+			pos="e,410,211.25 410,227.73 410,225.66 410,223.5 410,221.32"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if q[i] != q[j]:\l",
+			linenum="[8]",
+			pos="153,126",
+			shape=diamond,
+			style="filled,solid",
+			width=3.8043];
+		9 -> 10	[color=green,
+			label="i < j",
+			lp="325,159.5",
+			pos="e,197.42,138.24 357.37,178.69 313.55,167.61 251.38,151.88 207.14,140.69"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return True\l",
+			linenum="[12]",
+			pos="410,126",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.8323];
+		9 -> 11	[color=red,
+			label="(i >= j)",
+			lp="443.5,159.5",
+			pos="e,410,144.19 410,174.92 410,168.7 410,161.5 410,154.6"];
+		12	[fillcolor="#98fb98",
+			height=0.5,
+			label="return False\l",
+			linenum="[9]",
+			pos="153,58",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.0706];
+		10 -> 12	[color=green,
+			label="q[i] != q[j]",
+			lp="203,92.5",
+			pos="e,153,76.454 153,107.66 153,101.19 153,93.682 153,86.525"];
+		13	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="i += 1\lj -= 1\l",
+			linenum="[10, 11]",
+			pos="454,58",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.91667];
+		10 -> 13	[color=red,
+			label="(q[i] == q[j])",
+			lp="388,92.5",
+			pos="e,420.75,66.291 201.7,114.32 259.65,101.61 355.52,80.593 410.9,68.451"];
+		13 -> 9	[color=black,
+			pos="e,469.36,181.32 487.17,74.624 500.2,82.63 513.76,93.736 521,108 528.24,122.27 529.01,130.15 521,144 511.77,159.95 495.83,170.6 478.86,\
+177.72"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef will_it_fly(q, w):...\lwill_it_fly([3, 2, 3], 9)\l",
+		linenum="[1]",
+		pos="299,488.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.0972];
+	1 -> 17	[label=calls,
+		lp="320,446.5",
+		pos="e,299,423.13 299,461.71 299,452.66 299,442.47 299,433.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,299,331.3 299,386.65 299,373.82 299,356.11 299,341.38"];
+}

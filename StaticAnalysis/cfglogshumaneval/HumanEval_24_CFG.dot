@@ -1,0 +1,117 @@
+digraph cluster912CFG {
+	graph [bb="0,0,404,393",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="202,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="124,257,280,309",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=largest_divisor,
+			linenum="[7]",
+			pos="202,283",
+			shape=tab,
+			style=filled,
+			width=1.9444];
+	}
+	subgraph cluster4largest_divisor {
+		graph [bb="8,31,396,240",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=largest_divisor,
+			lheight=0.21,
+			lp="202,228.5",
+			lwidth=1.72,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in reversed(range(n)):\l",
+			linenum="[3]",
+			pos="202,191",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.17];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % i == 0:\l",
+			linenum="[4]",
+			pos="192,124",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		3 -> 6	[color=green,
+			label="reversed(range(n))",
+			lp="146.5,157.5",
+			pos="e,110.6,129.92 92.325,176.18 82.992,173.16 75.696,169.47 72,165 57.302,147.21 74.895,137.28 100.74,131.76"];
+		6 -> 3	[color=red,
+			label="(n % i != 0)",
+			lp="277,157.5",
+			pos="e,220.63,172.83 215.73,138.56 219.48,141.81 222.82,145.62 225,150 227.13,154.29 227.45,156.95 224.94,163.32"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return i\l",
+			linenum="[5]",
+			pos="192,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.1971];
+		6 -> 8	[color=green,
+			label="n % i == 0",
+			lp="233.5,90.5",
+			pos="e,192,75.19 192,105.92 192,99.702 192,92.5 192,85.6"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef largest_divisor(n: int) ->int:...\llargest_divisor(3)\l",
+		linenum="[1]",
+		pos="202,366.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.4722];
+	1 -> 12	[label=calls,
+		lp="223,324.5",
+		pos="e,202,301.13 202,339.71 202,330.66 202,320.47 202,311.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,202,209.3 202,264.65 202,251.82 202,234.11 202,219.38"];
+}

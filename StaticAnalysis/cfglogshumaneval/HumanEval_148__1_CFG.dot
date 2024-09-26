@@ -1,0 +1,158 @@
+digraph cluster192CFG {
+	graph [bb="0,0,1750,518",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="875,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="693,382,763,434",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=bf,
+			linenum="[23]",
+			pos="728,408",
+			shape=tab,
+			style=filled,
+			width=0.75];
+	}
+	subgraph cluster2bf {
+		graph [bb="8,31,1742,365",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=bf,
+			lheight=0.21,
+			lp="875,353.5",
+			lwidth=0.24,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_6 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="planet_names = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn',\l    'Uranus', 'Neptune')\l",
+			linenum="[5]",
+			pos="728,315",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.5972];
+		4	[fillcolor="#FF6752",
+			height=0.5,
+			label="if planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2:\l",
+			linenum="[14]",
+			pos="728,261",
+			shape=diamond,
+			style="filled,solid",
+			width=18.128];
+		3 -> 4	[color=black,
+			pos="e,728,279.22 728,295.81 728,293.71 728,291.53 728,289.33"];
+		5	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ()\l",
+			linenum="[15]",
+			pos="254,178",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		4 -> 5	[color=green,
+			label="planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2",
+			lp="581.5,220",
+			pos="e,247.16,196.2 415.18,251.61 329.53,247.76 257.99,242.37 251,235 243.81,227.43 243.17,216.37 244.86,206.08"];
+		6	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="planet1_index = planet_names.index(planet1)\lplanet2_index = planet_names.index(planet2)\l",
+			linenum="[16, 17]",
+			pos="938,178",
+			shape=rectangle,
+			style="filled,solid",
+			width=5.1528];
+		4 -> 6	[color=red,
+			label="(not (planet1 not in planet_names or planet2 not in planet_names or planet1 ==
+    planet2))",
+			lp="1255,220",
+			pos="e,935.69,197.25 885.11,247.25 898.62,244.04 909.58,240.02 916,235 924.7,228.19 929.96,217.45 933.15,207.19"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if planet1_index < planet2_index:\l",
+			linenum="[18]",
+			pos="938,124",
+			shape=diamond,
+			style="filled,solid",
+			width=7.3788];
+		6 -> 10	[color=black,
+			pos="e,938,142.22 938,158.81 938,156.71 938,154.53 938,152.33"];
+		11	[fillcolor="#98fb98",
+			height=0.5,
+			label="return planet_names[planet1_index + 1:planet2_index]\l",
+			linenum="[19]",
+			pos="441,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=11.806];
+		10 -> 11	[color=green,
+			label="planet1_index < planet2_index",
+			lp="854,90.5",
+			pos="e,571.35,75.047 852.28,111.79 777.81,102.05 668.53,87.757 581.33,76.352"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return planet_names[planet2_index + 1:planet1_index]\l",
+			linenum="[21]",
+			pos="1309,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=11.806];
+		10 -> 13	[color=red,
+			label="(planet1_index >= planet2_index)",
+			lp="1288.5,90.5",
+			pos="e,1211.8,75.037 1008.2,110.7 1062.9,101.13 1139.6,87.68 1201.9,76.766"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef bf(planet1, planet2):...\lbf('Mercury', 'Uranus')\l",
+		linenum="[1]",
+		pos="728,491.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.4444];
+	1 -> 17	[label=calls,
+		lp="749,449.5",
+		pos="e,728,426.13 728,464.71 728,455.66 728,445.47 728,436.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,728,334.29 728,389.88 728,377.12 728,359.4 728,344.52"];
+}

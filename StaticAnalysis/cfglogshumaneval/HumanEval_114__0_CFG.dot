@@ -1,0 +1,209 @@
+digraph cluster530CFG {
+	graph [bb="0,0,662,568",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="331,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="129,432,277,484",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=minSubArraySum,
+			linenum="[17]",
+			pos="203,458",
+			shape=tab,
+			style=filled,
+			width=1.8333];
+	}
+	subgraph cluster2minSubArraySum {
+		graph [bb="8,31,654,415",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=minSubArraySum,
+			lheight=0.21,
+			lp="331,403.5",
+			lwidth=1.61,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_9 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_11 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="max_sum = 0\ls = 0\l",
+			linenum="[5, 6]",
+			pos="203,365",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.4861];
+		4	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for num in nums:\l",
+			linenum="[7]",
+			pos="203,311",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.1062];
+		3 -> 4	[color=black,
+			pos="e,203,329.22 203,345.81 203,343.71 203,341.53 203,339.33"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="s += -num\l",
+			linenum="[8]",
+			pos="119,244",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		4 -> 5	[color=green,
+			label=nums,
+			lp="181,277.5",
+			pos="e,136.84,262.02 174.94,292.77 171.2,290.25 167.46,287.62 164,285 157.44,280.03 150.66,274.33 144.41,268.82"];
+		6	[fillcolor="#FF6752",
+			height=0.5,
+			label="if max_sum == 0:\l",
+			linenum="[12]",
+			pos="359,244",
+			shape=diamond,
+			style="filled,solid",
+			width=3.8043];
+		4 -> 6	[color=green,
+			pos="e,327.65,258.06 243.99,292.92 266.89,283.38 295.35,271.52 318.22,261.99"];
+		7	[fillcolor="#FF6752",
+			height=0.5,
+			label="if s < 0:\l",
+			linenum="[9]",
+			pos="100,177",
+			shape=diamond,
+			style="filled,solid",
+			width=2.3234];
+		5 -> 7	[color=black,
+			pos="e,104.76,194.29 114.01,225.92 112.04,219.2 109.74,211.33 107.58,203.93"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="s = 0\l",
+			linenum="[10]",
+			pos="52,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.80556];
+		7 -> 8	[color=green,
+			label="s < 0",
+			lp="91,143.5",
+			pos="e,57.783,128.28 81.609,162.92 77.44,159.38 73.28,155.32 70,151 66.937,146.97 64.251,142.33 61.953,137.68"];
+		9	[fillcolor="#FFFB81",
+			height=0.5,
+			label="max_sum = max(s, max_sum)\l",
+			linenum="[11]",
+			pos="127,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		7 -> 9	[color=red,
+			label="(s >= 0)",
+			lp="156.5,110",
+			pos="e,125.72,75.138 108.2,160.68 109.64,157.54 110.99,154.22 112,151 118.78,129.37 122.61,103.91 124.71,85.101"];
+		8 -> 9	[color=black,
+			pos="e,101.89,75.075 77.392,91.734 82.579,88.206 88.112,84.444 93.532,80.758"];
+		9 -> 4	[color=black,
+			pos="e,203,292.89 179.37,75.231 192.53,82.99 203,93.905 203,109 203,245 203,245 203,245 203,257.44 203,271.22 203,282.88"];
+		11	[fillcolor="#FFFB81",
+			height=0.5,
+			label="max_sum = max(-i for i in nums)\l",
+			linenum="[13]",
+			pos="510,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.7778];
+		6 -> 11	[color=green,
+			label="max_sum == 0",
+			lp="498,210.5",
+			pos="e,470.31,195.09 389.56,229.85 410.01,221.04 437.37,209.26 460.85,199.16"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="min_sum = -max_sum\l",
+			linenum="[14]",
+			pos="446,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		6 -> 12	[color=red,
+			label="(max_sum != 0)",
+			lp="307,177",
+			pos="e,363.28,120.85 305.59,232.96 284.23,226.05 261.73,214.44 249,195 240.24,181.61 239.12,171.58 249,159 262.44,141.89 308.86,130.11 \
+353.26,122.5"];
+		11 -> 12	[color=black,
+			pos="e,462.93,128.19 493.18,158.92 486.19,151.81 477.92,143.42 470.29,135.66"];
+		14	[fillcolor="#98fb98",
+			height=0.5,
+			label="return min_sum\l",
+			linenum="[15]",
+			pos="446,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		12 -> 14	[color=black,
+			pos="e,446,75.248 446,91.734 446,89.657 446,87.498 446,85.322"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef minSubArraySum(nums):...\lminSubArraySum([1, -1])\l",
+		linenum="[1]",
+		pos="203,541.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.4444];
+	1 -> 17	[label=calls,
+		lp="224,499.5",
+		pos="e,203,476.13 203,514.71 203,505.66 203,495.47 203,486.3",
+		style=dashed];
+	17 -> 3	[color=green,
+		pos="e,203,384.29 203,439.88 203,427.12 203,409.4 203,394.52"];
+}

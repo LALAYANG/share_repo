@@ -1,0 +1,125 @@
+digraph cluster870CFG {
+	graph [bb="0,0,560,434",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="280,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="208,298,340,350",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		10	[color="#E552FF",
+			height=0.5,
+			label=vowels_count,
+			linenum="[11]",
+			pos="274,324",
+			shape=tab,
+			style=filled,
+			width=1.6111];
+	}
+	subgraph cluster4vowels_count {
+		graph [bb="8,31,540,281",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=vowels_count,
+			lheight=0.21,
+			lp="274,269.5",
+			lwidth=1.39,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="vowels = 'aeiouAEIOU'\ln_vowels = sum(c in vowels for c in s)\l",
+			linenum="[5, 6]",
+			pos="274,231",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.5833];
+		5	[fillcolor="#FF6752",
+			height=0.5,
+			label="if s[-1] == 'y' or s[-1] == 'Y':\l",
+			linenum="[7]",
+			pos="274,177",
+			shape=diamond,
+			style="filled,solid",
+			width=7.1745];
+		3 -> 5	[color=black,
+			pos="e,274,195.22 274,211.81 274,209.71 274,207.53 274,205.33"];
+		6	[fillcolor="#FFFB81",
+			height=0.5,
+			label="n_vowels += 1\l",
+			linenum="[8]",
+			pos="107,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		5 -> 6	[color=green,
+			label="s[-1] == 'y' or s[-1] == 'Y'",
+			lp="151,143.5",
+			pos="e,44.971,127.38 132.61,168.85 85.247,164.99 42.452,159.27 35,151 28.74,144.05 30.379,138.04 36.289,132.95"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return n_vowels\l",
+			linenum="[9]",
+			pos="192,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.7059];
+		5 -> 7	[color=red,
+			label="(not (s[-1] == 'y' or s[-1] == 'Y'))",
+			lp="411,110",
+			pos="e,214.77,75.28 273.24,158.95 272.36,151.58 270.57,143.04 267,136 256.43,115.17 238.44,96.176 222.73,82.147"];
+		6 -> 7	[color=black,
+			pos="e,163.54,75.075 135.78,91.734 141.94,88.038 148.53,84.085 154.95,80.232"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef vowels_count(s):...\lvowels_count('bye')\l",
+		linenum="[1]",
+		pos="274,407.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.8611];
+	1 -> 10	[label=calls,
+		lp="295,365.5",
+		pos="e,274,342.13 274,380.71 274,371.66 274,361.47 274,352.3",
+		style=dashed];
+	10 -> 3	[color=green,
+		pos="e,274,250.29 274,305.88 274,293.12 274,275.4 274,260.52"];
+}

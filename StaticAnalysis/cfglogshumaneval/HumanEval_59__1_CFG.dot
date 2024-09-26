@@ -1,0 +1,253 @@
+digraph cluster12CFG {
+	graph [bb="0,0,1405,500",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="702.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="343,364,541,416",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		26	[color="#E552FF",
+			height=0.5,
+			label=largest_prime_factor,
+			linenum="[18]",
+			pos="442,390",
+			shape=tab,
+			style=filled,
+			width=2.5278];
+	}
+	subgraph cluster0largest_prime_factor {
+		graph [bb="8,31,1397,347",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=largest_prime_factor,
+			lheight=0.21,
+			lp="702.5,335.5",
+			lwidth=2.31,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_17 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_21 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster2is_prime {
+			graph [bb="799,39,1389,316",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=is_prime,
+				lheight=0.21,
+				lp="1094,304.5",
+				lwidth=0.93,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			subgraph cluster_7 {
+				graph [color=purple,
+					compound=true,
+					fontname="DejaVu Sans Mono",
+					label="",
+					rankdir=TB,
+					ranksep=0.02,
+					shape=tab,
+					style=filled
+				];
+				node [fontname="DejaVu Sans Mono"];
+				edge [fontname="DejaVu Sans Mono"];
+			}
+			5	[fillcolor="#FF6752",
+				height=0.5,
+				label="if k < 2:\l",
+				linenum="[6]",
+				pos="1066,267",
+				shape=diamond,
+				style="filled,solid",
+				width=2.3234];
+			6	[fillcolor="#98fb98",
+				height=0.5,
+				label="return False\l",
+				linenum="[7]",
+				pos="918,199",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.0706];
+			5 -> 6	[color=green,
+				label="k < 2",
+				lp="1026,232.5",
+				pos="e,956.26,217.06 1040.2,254.5 1019.7,245.33 990.3,232.24 965.51,221.19"];
+			7	[fillcolor="#FFBE52",
+				height=0.5,
+				label="for i in range(2, k - 1):\l",
+				linenum="[8]",
+				pos="1214,199",
+				shape=hexagon,
+				style="filled,solid",
+				width=4.6489];
+			5 -> 7	[color=red,
+				label="(k >= 2)",
+				lp="1190.5,232.5",
+				pos="e,1175.7,217.06 1091.8,254.5 1112.3,245.33 1141.7,232.24 1166.5,221.19"];
+			10	[fillcolor="#FF6752",
+				height=0.5,
+				label="if k % i == 0:\l",
+				linenum="[9]",
+				pos="1035,132",
+				shape=diamond,
+				style="filled,solid",
+				width=3.3702];
+			7 -> 10	[color=green,
+				label="range(2, k - 1)",
+				lp="1088,165.5",
+				pos="e,1025.7,148.64 1095.9,188.39 1061.4,184.39 1031.4,179.21 1026,173 1022.5,168.95 1021.8,163.81 1022.6,158.57"];
+			11	[fillcolor="#98fb98",
+				height=0.5,
+				label="return True\l",
+				linenum="[11]",
+				pos="1279,132",
+				shape=parallelogram,
+				style="filled,solid",
+				width=2.8323];
+			7 -> 11	[color=green,
+				pos="e,1282.1,150.32 1269.5,180.88 1272.3,178.58 1274.9,175.97 1277,173 1279.6,169.38 1281,165.06 1281.7,160.62"];
+			10 -> 7	[color=red,
+				label="(k % i != 0)",
+				lp="1223,165.5",
+				pos="e,1185,180.95 1098.2,140.68 1116.8,144.41 1136.7,149.9 1154,158 1163.7,162.56 1164.2,166.85 1173,173 1174.1,173.75 1175.2,174.5 \
+1176.3,175.25"];
+			12	[fillcolor="#98fb98",
+				height=0.5,
+				label="return False\l",
+				linenum="[10]",
+				pos="1035,65",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.0706];
+			10 -> 12	[color=green,
+				label="k % i == 0",
+				lp="1076.5,98.5",
+				pos="e,1035,83.19 1035,113.92 1035,107.7 1035,100.5 1035,93.6"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="def is_prime(k):...\llargest = 1\l",
+			linenum="[5, 12]",
+			pos="442,267",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.4028];
+		17	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for j in range(2, n + 1):\l",
+			linenum="[13]",
+			pos="442,199",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.6489];
+		3 -> 17	[color=black,
+			pos="e,442,217.1 442,247.97 442,241.65 442,234.41 442,227.51"];
+		19	[fillcolor="#FF6752",
+			height=0.5,
+			label="if n % j == 0 and is_prime(j):\l",
+			linenum="[14]",
+			pos="528,132",
+			shape=diamond,
+			style="filled,solid",
+			width=6.7405];
+		17 -> 19	[color=green,
+			label="range(2, n + 1)",
+			lp="636,165.5",
+			pos="e,560.22,147.71 547.09,185.57 558.61,182.3 567.72,178.18 572,173 577.55,166.28 574.65,159.64 568.27,153.76"];
+		20	[fillcolor="#98fb98",
+			height=0.5,
+			label="return largest\l",
+			linenum="[16]",
+			pos="142,132",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		17 -> 20	[color=green,
+			pos="e,196.18,150.02 342.84,184.3 322.94,181.02 302.24,177.23 283,173 257.55,167.41 229.9,159.89 205.89,152.89"];
+		19 -> 17	[color=red,
+			label="(not (n % j == 0 and is_prime(j)))",
+			lp="431.5,165.5",
+			pos="e,324.95,188.1 391.43,139.92 343.03,143.79 298.58,149.58 291,158 286.54,162.96 286.69,167.92 291,173 295.4,178.19 304.07,182.3 315.13,\
+185.56"];
+		21	[fillcolor="#FFFB81",
+			height=0.5,
+			label="largest = max(largest, j)\l",
+			linenum="[15]",
+			pos="624,65",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.0972];
+		19 -> 21	[color=green,
+			label="n % j == 0 and is_prime(j)",
+			lp="677.5,98.5",
+			pos="e,583.39,83.019 542.51,114.88 550.16,107.01 560.01,97.796 570,91 571.44,90.021 572.92,89.063 574.44,88.127"];
+		21 -> 17	[color=black,
+			pos="e,594.08,195.7 735.57,72.742 758.22,76.463 777.45,82.193 785,91 793.56,100.99 788.46,139.92 780,150 756.79,177.64 679.17,189.84 \
+604.16,195.04"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef largest_prime_factor(n: int):...\llargest_prime_factor(63)\l",
+		linenum="[1]",
+		pos="442,473.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.3611];
+	1 -> 26	[label=calls,
+		lp="463,431.5",
+		pos="e,442,408.13 442,446.71 442,437.66 442,427.47 442,418.3",
+		style=dashed];
+	26 -> 3	[color=green,
+		pos="e,442,286.18 442,371.92 442,352.26 442,319.67 442,296.23"];
+}

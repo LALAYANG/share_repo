@@ -1,0 +1,99 @@
+digraph cluster430CFG {
+	graph [bb="0,0,960,312",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="480,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="369,176,591,228",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		9	[color="#E552FF",
+			height=0.5,
+			label=mean_absolute_deviation,
+			linenum="[8]",
+			pos="480,202",
+			shape=tab,
+			style=filled,
+			width=2.8611];
+	}
+	subgraph cluster2mean_absolute_deviation {
+		graph [bb="8,31,952,159",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=mean_absolute_deviation,
+			lheight=0.21,
+			lp="480,147.5",
+			lwidth=2.64,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="mean = sum(numbers) / len(numbers)\l",
+			linenum="[5]",
+			pos="480,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=4.125];
+		6	[fillcolor="#98fb98",
+			height=0.5,
+			label="return sum(abs(x - mean) for x in numbers) / len(numbers)\l",
+			linenum="[6]",
+			pos="480,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=12.891];
+		3 -> 6	[color=black,
+			pos="e,480,75.248 480,91.734 480,89.657 480,87.498 480,85.322"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef mean_absolute_deviation(numbers: List[float]) ->float:...\lmean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\l",
+		linenum="[1]",
+		pos="480,285.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=7.2222];
+	1 -> 9	[label=calls,
+		lp="501,243.5",
+		pos="e,480,220.13 480,258.71 480,249.66 480,239.47 480,230.3",
+		style=dashed];
+	9 -> 3	[color=green,
+		pos="e,480,128.3 480,183.65 480,170.82 480,153.11 480,138.38"];
+}

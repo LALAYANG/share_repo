@@ -1,0 +1,77 @@
+digraph cluster656CFG {
+	graph [bb="0,0,772,274",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="386,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="291,123,481,175",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		6	[color="#E552FF",
+			height=0.5,
+			label=filter_by_substring,
+			linenum="[7]",
+			pos="386,149",
+			shape=tab,
+			style=filled,
+			width=2.4028];
+	}
+	subgraph cluster4filter_by_substring {
+		graph [bb="8,31,764,106",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=filter_by_substring,
+			lheight=0.21,
+			lp="386,94.5",
+			lwidth=2.18,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#98fb98",
+			height=0.5,
+			label="return [x for x in strings if substring in x]\l",
+			linenum="[5]",
+			pos="386,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=10.271];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.94444,
+		label="from typing import *\ldef filter_by_substring(strings: List[str], substring: str) ->List[str]:...\lfilter_by_substring(['xxx', '\
+asd', 'aaaxxy', 'john doe', 'xxxAAA', 'xxx'], 'xx'\l    )\l",
+		linenum="[1]",
+		pos="386,240",
+		shape=rectangle,
+		style="filled,solid",
+		width=9.2778];
+	1 -> 6	[label=calls,
+		lp="407,190.5",
+		pos="e,386,167.44 386,205.86 386,196.58 386,186.6 386,177.68",
+		style=dashed];
+	6 -> 3	[color=green,
+		pos="e,386,75.3 386,130.65 386,117.82 386,100.11 386,85.381"];
+}

@@ -1,0 +1,150 @@
+digraph cluster728CFG {
+	graph [bb="0,0,706,379",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="353,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="311,243,427,295",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=do_algebra,
+			linenum="[8]",
+			pos="369,269",
+			shape=tab,
+			style=filled,
+			width=1.375];
+	}
+	subgraph cluster4do_algebra {
+		graph [bb="8,31,698,226",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=do_algebra,
+			lheight=0.21,
+			lp="353,214.5",
+			lwidth=1.15,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.5,
+			label="expression = str(operand[0])\l",
+			linenum="[3]",
+			pos="369,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.4444];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for oprt, oprn in zip(operator, operand[1:]):\l",
+			linenum="[4]",
+			pos="369,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=8.0886];
+		3 -> 5	[color=black,
+			pos="e,369,142.25 369,158.73 369,156.66 369,154.5 369,152.32"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="expression += oprt + str(oprn)\l",
+			linenum="[5]",
+			pos="148,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.6667];
+		5 -> 7	[color=green,
+			label="zip(operator, operand[1:])",
+			lp="252.5,90.5",
+			pos="e,141.46,75.402 189.62,110.15 166.54,106.86 149.34,102.85 145,98 141.89,94.519 140.61,90.117 140.42,85.515"];
+		8	[fillcolor="#98fb98",
+			height=0.5,
+			label="return eval(expression)\l",
+			linenum="[6]",
+			pos="494,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=5.4529];
+		5 -> 8	[color=green,
+			pos="e,460.94,75.19 401.84,105.92 417.08,97.998 435.38,88.483 451.64,80.026"];
+		7 -> 5	[color=black,
+			pos="e,371.34,105.71 280.09,73.981 283.09,74.326 286.06,74.666 289,75 305.65,76.892 352.04,71.256 364,83 367.41,86.345 369.35,90.748 \
+370.37,95.407"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef do_algebra(operator, operand):...\ldo_algebra(['**', '*', '+'], [2, 3, 4, 5])\l",
+		linenum="[1]",
+		pos="369,352.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=5.0417];
+	1 -> 12	[label=calls,
+		lp="390,310.5",
+		pos="e,369,287.13 369,325.71 369,316.66 369,306.47 369,297.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,369,195.3 369,250.65 369,237.82 369,220.11 369,205.38"];
+}

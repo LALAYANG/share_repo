@@ -1,0 +1,147 @@
+digraph cluster80CFG {
+	graph [bb="0,0,740,411",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="370,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="352,275,460,327",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		14	[color="#E552FF",
+			height=0.5,
+			label=by_length,
+			linenum="[25]",
+			pos="406,301",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+	}
+	subgraph cluster2by_length {
+		graph [bb="8,31,732,258",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=by_length,
+			lheight=0.21,
+			lp="370,246.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.94444,
+			label="dic = {(1): 'One', (2): 'Two', (3): 'Three', (4): 'Four', (5): 'Five', (6):\l    'Six', (7): 'Seven', (8): 'Eight', (9): 'Nine'}\lsorted_\
+arr = sorted(arr, reverse=True)\lnew_arr = []\l",
+			linenum="[5, 16, 17]",
+			pos="406,193",
+			shape=rectangle,
+			style="filled,solid",
+			width=8.8194];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for var in sorted_arr:\l",
+			linenum="[18]",
+			pos="400,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=4.1277];
+		3 -> 5	[color=black,
+			pos="e,401.53,142.13 403.04,158.89 402.83,156.63 402.63,154.36 402.43,152.13"];
+		7	[fillcolor="#98fb98",
+			height=0.5,
+			label="return new_arr\l",
+			linenum="[23]",
+			pos="148,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=3.4941];
+		5 -> 7	[color=green,
+			pos="e,214.2,75.077 333.79,105.92 300.07,97.223 258.9,86.606 223.9,77.578"];
+		8	[fillcolor=orange,
+			height=0.5,
+			label="new_arr.append(dic[var])\l",
+			linenum="[19, 20]",
+			pos="489,57",
+			shape=Mdiamond,
+			style="filled,solid",
+			width=5.4894];
+		5 -> 8	[color=green,
+			label=sorted_arr,
+			lp="438.5,90.5",
+			pos="e,414.61,68.424 393.89,105.95 392.25,98.232 392.09,89.418 397,83 399.66,79.524 402.75,76.499 406.15,73.869"];
+		8 -> 5	[color=black,
+			pos="e,475.38,106.03 490.86,74.846 490.82,82.709 489.34,91.699 484,98 483.68,98.377 483.36,98.749 483.02,99.115"];
+		10	[fillcolor="#FFFB81",
+			height=0.5,
+			label="",
+			linenum="[]",
+			pos="43,193",
+			shape=rectangle,
+			style="filled,solid",
+			width=0.75];
+		10 -> 5	[color=black,
+			pos="e,277.05,130.32 57.986,174.75 64.175,168.75 71.816,162.63 80,159 113.05,144.36 194.46,135.83 266.89,130.98"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef by_length(arr):...\lby_length([1, -1, 3, 2])\l",
+		linenum="[1]",
+		pos="406,384.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=2.9861];
+	1 -> 14	[label=calls,
+		lp="427,342.5",
+		pos="e,406,319.13 406,357.71 406,348.66 406,338.47 406,329.3",
+		style=dashed];
+	14 -> 3	[color=green,
+		pos="e,406,227.25 406,282.97 406,270.68 406,253.5 406,237.52"];
+}

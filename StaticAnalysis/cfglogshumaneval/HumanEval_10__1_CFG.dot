@@ -1,0 +1,137 @@
+digraph cluster374CFG {
+	graph [bb="0,0,1083,446",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="541.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="343,310,483,362",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		12	[color="#E552FF",
+			height=0.5,
+			label=is_palindrome,
+			linenum="[15]",
+			pos="413,336",
+			shape=tab,
+			style=filled,
+			width=1.7222];
+	}
+	subgraph cluster4is_palindrome {
+		graph [bb="8,31,1075,293",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=is_palindrome,
+			lheight=0.21,
+			lp="541.5,281.5",
+			lwidth=1.50,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		3	[fillcolor="#FF6752",
+			height=0.5,
+			label="if not string:\l",
+			linenum="[5]",
+			pos="413,244",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		4	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ''\l",
+			linenum="[6]",
+			pos="310,177",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.4088];
+		3 -> 4	[color=green,
+			label="not string",
+			lp="411.5,210.5",
+			pos="e,336.94,195 391.16,229.22 377.93,220.87 360.74,210.02 345.58,200.46"];
+		5	[fillcolor="#FFFB81",
+			height=0.5,
+			label="beginning_of_suffix = 0\l",
+			linenum="[8]",
+			pos="518,177",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.8611];
+		3 -> 5	[color=red,
+			label="(not not string)",
+			lp="545.5,210.5",
+			pos="e,492.71,195.1 437.37,229.52 443.8,225.86 450.7,221.85 457,218 465.91,212.55 475.42,206.46 484.21,200.71"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="while not is_palindrome(string[beginning_of_suffix:]):\l",
+			linenum="[10]",
+			pos="518,124",
+			shape=hexagon,
+			style="filled,solid",
+			width=9.6313];
+		5 -> 7	[color=black,
+			pos="e,518,142.25 518,158.73 518,156.66 518,154.5 518,152.32"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="beginning_of_suffix += 1\l",
+			linenum="[11]",
+			pos="124,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.9861];
+		7 -> 8	[color=green,
+			label="not is_palindrome(string[beginning_of_suffix:])",
+			lp="315,90.5",
+			pos="e,117.42,75.117 227.24,118.13 173.17,114.34 130.5,108.12 121,98 117.75,94.537 116.44,90.079 116.28,85.402"];
+		9	[fillcolor="#98fb98",
+			height=0.5,
+			label="return string + string[:beginning_of_suffix][::-1]\l",
+			linenum="[13]",
+			pos="658,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=11.356];
+		7 -> 9	[color=red,
+			label="(not not is_palindrome(string[beginning_of_suffix:]))",
+			lp="819,90.5",
+			pos="e,620.98,75.19 554.78,105.92 572.25,97.813 593.3,88.037 611.83,79.435"];
+		8 -> 7	[color=black,
+			pos="e,520.53,105.91 231.7,74.217 234.49,74.498 237.26,74.76 240,75 255.12,76.325 501.77,72.793 513,83 516.69,86.354 518.71,90.94 519.71,\
+95.812"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef is_palindrome(string: str) ->bool:...\lis_palindrome('x')\l",
+		linenum="[1]",
+		pos="413,419.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.9306];
+	1 -> 12	[label=calls,
+		lp="434,377.5",
+		pos="e,413,354.13 413,392.71 413,383.66 413,373.47 413,364.3",
+		style=dashed];
+	12 -> 3	[color=green,
+		pos="e,413,262.3 413,317.65 413,304.82 413,287.11 413,272.38"];
+}

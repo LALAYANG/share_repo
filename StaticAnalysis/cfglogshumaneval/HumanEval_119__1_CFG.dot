@@ -1,0 +1,194 @@
+digraph cluster298CFG {
+	graph [bb="0,0,1557,613.5",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="778.5,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="272,477.5,404,529.5",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		20	[color="#E552FF",
+			height=0.5,
+			label=match_parens,
+			linenum="[20]",
+			pos="338,503.5",
+			shape=tab,
+			style=filled,
+			width=1.6111];
+	}
+	subgraph cluster2match_parens {
+		graph [bb="8,31,1510,460.5",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=match_parens,
+			lheight=0.21,
+			lp="759,449",
+			lwidth=1.39,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster2check {
+			graph [bb="668,39,1502,429.5",
+				compound=True,
+				fontname="DejaVu Sans Mono",
+				label=check,
+				lheight=0.21,
+				lp="1085,418",
+				lwidth=0.58,
+				pack=False,
+				rankdir=TB,
+				ranksep=0.02
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+			5	[fillcolor="#FFFB81",
+				height=0.5,
+				label="val = 0\l",
+				linenum="[6]",
+				pos="1191,380.5",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.0278];
+			6	[fillcolor="#FFBE52",
+				height=0.5,
+				label="for i in s:\l",
+				linenum="[7]",
+				pos="1191,319",
+				shape=hexagon,
+				style="filled,solid",
+				width=2.2306];
+			5 -> 6	[color=black,
+				pos="e,1191,337.38 1191,362.29 1191,357.64 1191,352.5 1191,347.44"];
+			7	[fillcolor="#FF6752",
+				height=0.5,
+				label="if i == '(':\l",
+				linenum="[8]",
+				pos="783,252",
+				shape=diamond,
+				style="filled,solid",
+				width=2.9617];
+			6 -> 7	[color=green,
+				label=s,
+				lp="1056.5,285.5",
+				pos="e,837,260.92 1137.8,306.79 1127.6,304.76 1117,302.75 1107,301 1094.3,298.78 937.67,275.71 846.92,262.38"];
+			8	[fillcolor="#98fb98",
+				height=0.5,
+				label="return True if val == 0 else False\l",
+				linenum="[14]",
+				pos="1191,252",
+				shape=parallelogram,
+				style="filled,solid",
+				width=7.8617];
+			6 -> 8	[color=green,
+				pos="e,1191,270.19 1191,300.92 1191,294.7 1191,287.5 1191,280.6"];
+			9	[fillcolor="#FFFB81",
+				height=0.5,
+				label="val = val + 1\l",
+				linenum="[9]",
+				pos="783,185",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.7222];
+			7 -> 9	[color=green,
+				label="i == '('",
+				lp="816.5,218.5",
+				pos="e,783,203.19 783,233.92 783,227.7 783,220.5 783,213.6"];
+			11	[fillcolor="#FFFB81",
+				height=0.5,
+				label="val = val - 1\l",
+				linenum="[11]",
+				pos="925,185",
+				shape=rectangle,
+				style="filled,solid",
+				width=1.7222];
+			7 -> 11	[color=red,
+				label="(i != '(')",
+				lp="922.5,218.5",
+				pos="e,897.26,203.12 818.51,239.86 830,235.89 842.69,231.13 854,226 865.48,220.8 877.56,214.37 888.44,208.2"];
+			10	[fillcolor="#FF6752",
+				height=0.5,
+				label="if val < 0:\l",
+				linenum="[12]",
+				pos="925,132",
+				shape=diamond,
+				style="filled,solid",
+				width=2.7319];
+			9 -> 10	[color=black,
+				pos="e,893.31,144.38 830.68,166.88 847.92,160.68 867.23,153.75 883.86,147.78"];
+			10 -> 6	[color=red,
+				label="(val >= 0)",
+				lp="1515.5,218.5",
+				pos="e,1265.4,316.35 1004.9,135.35 1144.3,141.33 1423,162.17 1483,234 1493.3,246.28 1493.4,257.8 1483,270 1456.8,300.87 1352.1,311.93 \
+1275.5,315.86"];
+			12	[fillcolor="#98fb98",
+				height=0.5,
+				label="return False\l",
+				linenum="[13]",
+				pos="925,65",
+				shape=parallelogram,
+				style="filled,solid",
+				width=3.0706];
+			10 -> 12	[color=green,
+				label="val < 0",
+				lp="954,98.5",
+				pos="e,925,83.19 925,113.92 925,107.7 925,100.5 925,93.6"];
+			11 -> 10	[color=black,
+				pos="e,925,150.25 925,166.73 925,164.66 925,162.5 925,160.32"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.73611,
+			label="def check(s):...\lS1 = lst[0] + lst[1]\lS2 = lst[1] + lst[0]\l",
+			linenum="[5, 16, 17]",
+			pos="338,380.5",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.5278];
+		17	[fillcolor="#98fb98",
+			height=0.5,
+			label="return 'Yes' if check(S1) or che...'No'\l",
+			linenum="[18]",
+			pos="338,319",
+			shape=parallelogram,
+			style="filled,solid",
+			width=8.947];
+		3 -> 17	[color=black,
+			pos="e,338,337.14 338,353.92 338,351.71 338,349.46 338,347.23"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef match_parens(lst):...\lmatch_parens(['(()(())', '())())'])\l",
+		linenum="[1]",
+		pos="338,587",
+		shape=rectangle,
+		style="filled,solid",
+		width=4.2361];
+	1 -> 20	[label=calls,
+		lp="359,545",
+		pos="e,338,521.63 338,560.21 338,551.16 338,540.97 338,531.8",
+		style=dashed];
+	20 -> 3	[color=green,
+		pos="e,338,407.38 338,485.42 338,467.87 338,440.03 338,417.58"];
+}

@@ -1,0 +1,209 @@
+digraph cluster536CFG {
+	graph [bb="0,0,878.5,416",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="439.25,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="65.5,159,173.5,278",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		17	[color="#E552FF",
+			height=0.5,
+			label=tuple,
+			linenum="[13]",
+			pos="119.5,252",
+			shape=tab,
+			style=filled,
+			width=0.80556];
+		18	[color="#E552FF",
+			height=0.5,
+			label=sort_even,
+			linenum="[13]",
+			pos="119.5,185",
+			shape=tab,
+			style=filled,
+			width=1.2639];
+		17 -> 18	[color=black,
+			pos="e,119.5,203.19 119.5,233.92 119.5,227.7 119.5,220.5 119.5,213.6"];
+	}
+	subgraph cluster2sort_even {
+		graph [bb="246.5,31,870.5,408",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=sort_even,
+			lheight=0.21,
+			lp="558.5,396.5",
+			lwidth=1.04,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_8 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_12 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.94444,
+			label="evens = l[::2]\lodds = l[1::2]\levens.sort()\lans = []\l",
+			linenum="[3, 4, 5, 6]",
+			pos="476.5,343",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.8333];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for e, o in zip(evens, odds):\l",
+			linenum="[7]",
+			pos="476.5,252",
+			shape=hexagon,
+			style="filled,solid",
+			width=5.3368];
+		3 -> 5	[color=black,
+			pos="e,476.5,270.44 476.5,308.86 476.5,299.58 476.5,289.6 476.5,280.68"];
+		7	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans.extend([e, o])\l",
+			linenum="[8]",
+			pos="337.5,185",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.2917];
+		5 -> 7	[color=green,
+			label="zip(evens, odds)",
+			lp="401,218.5",
+			pos="e,331.13,203.25 357.67,238.17 347.03,234.98 338.68,230.99 334.5,226 331.5,222.42 330.27,217.97 330.1,213.36"];
+		8	[fillcolor="#FF6752",
+			height=0.5,
+			label="if len(evens) > len(odds):\l",
+			linenum="[9]",
+			pos="650.5,185",
+			shape=diamond,
+			style="filled,solid",
+			width=5.8979];
+		5 -> 8	[color=green,
+			pos="e,613.29,199.9 522.22,233.92 547.39,224.52 578.58,212.87 603.89,203.41"];
+		7 -> 5	[color=black,
+			pos="e,478.64,233.9 420.32,201.33 447.71,206.42 471.36,210.86 471.5,211 474.77,214.48 476.66,218.94 477.66,223.62"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans.append(evens[-1])\l",
+			linenum="[10]",
+			pos="493.5,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=2.6389];
+		8 -> 12	[color=green,
+			label="len(evens) > len(odds)",
+			lp="556.5,143.5",
+			pos="e,470.72,128.22 541.05,176.28 507.26,171.47 476.1,163.66 465.5,151 461.66,146.42 462.06,141.33 464.65,136.36"];
+		13	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ans\l",
+			linenum="[11]",
+			pos="573.5,57",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		8 -> 13	[color=red,
+			label="(len(evens) <= len(odds))",
+			lp="746,110",
+			pos="e,597.08,75.28 652.21,166.9 652.49,157.42 651.7,145.65 647.5,136 638.3,114.87 620.76,95.976 605.06,82.078"];
+		12 -> 13	[color=black,
+			pos="e,546.72,75.075 520.58,91.734 526.25,88.122 532.3,84.264 538.21,80.495"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef sort_even(l: list):...\ltuple(sort_even([1, 2, 3]))\l",
+		linenum="[1]",
+		pos="119.5,343",
+		shape=rectangle,
+		style="filled,solid",
+		width=3.3194];
+	1 -> 17	[label=calls,
+		lp="140.5,293.5",
+		pos="e,119.5,270.24 119.5,316.26 119.5,305.05 119.5,291.91 119.5,280.51",
+		style=dashed];
+}

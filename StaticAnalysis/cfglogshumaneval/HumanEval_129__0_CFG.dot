@@ -1,0 +1,461 @@
+digraph cluster376CFG {
+	graph [bb="0,0,749.5,1062",
+		compound=True,
+		fontname="DejaVu Sans Mono",
+		label=CFG,
+		lheight=0.21,
+		lp="374.75,11.5",
+		lwidth=0.35,
+		pack=False,
+		rankdir=TB,
+		ranksep=0.02
+	];
+	node [fontname="DejaVu Sans Mono",
+		label="\N"
+	];
+	edge [fontname="DejaVu Sans Mono"];
+	subgraph cluster_1 {
+		graph [bb="272.5,926,362.5,978",
+			color=purple,
+			compound=true,
+			fontname="DejaVu Sans Mono",
+			label="",
+			rankdir=TB,
+			ranksep=0.02,
+			shape=tab,
+			style=filled
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		39	[color="#E552FF",
+			height=0.5,
+			label=minPath,
+			linenum="[33]",
+			pos="317.5,952",
+			shape=tab,
+			style=filled,
+			width=1.0278];
+	}
+	subgraph cluster0minPath {
+		graph [bb="107.5,31,741.5,909",
+			compound=True,
+			fontname="DejaVu Sans Mono",
+			label=minPath,
+			lheight=0.21,
+			lp="424.5,897.5",
+			lwidth=0.81,
+			pack=False,
+			rankdir=TB,
+			ranksep=0.02
+		];
+		node [fontname="DejaVu Sans Mono"];
+		edge [fontname="DejaVu Sans Mono"];
+		subgraph cluster_3 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_5 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_7 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_15 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_18 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_21 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_24 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_25 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_28 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_32 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		subgraph cluster_34 {
+			graph [color=purple,
+				compound=true,
+				fontname="DejaVu Sans Mono",
+				label="",
+				rankdir=TB,
+				ranksep=0.02,
+				shape=tab,
+				style=filled
+			];
+			node [fontname="DejaVu Sans Mono"];
+			edge [fontname="DejaVu Sans Mono"];
+		}
+		3	[fillcolor="#FFFB81",
+			height=0.52778,
+			label="n = len(grid)\lval = n * n + 1\l",
+			linenum="[5, 6]",
+			pos="317.5,859",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		5	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(n):\l",
+			linenum="[7]",
+			pos="317.5,805",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.4397];
+		3 -> 5	[color=black,
+			pos="e,317.5,823.22 317.5,839.81 317.5,837.71 317.5,835.53 317.5,833.33"];
+		7	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for j in range(n):\l",
+			linenum="[8]",
+			pos="293.5,738",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.4397];
+		5 -> 7	[color=green,
+			label="range(n)",
+			lp="341,771.5",
+			pos="e,299.85,756.19 311.19,786.92 308.79,780.41 305.98,772.81 303.33,765.62"];
+		8	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans = []\l",
+			linenum="[25]",
+			pos="503.5,738",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.1528];
+		5 -> 8	[color=green,
+			pos="e,461.89,753.54 366.37,786.92 392.83,777.68 425.49,766.26 452.3,756.89"];
+		7 -> 5	[color=green,
+			pos="e,302.76,786.96 293.69,756.23 294.13,761.84 295.03,768.13 298.73,777.67"];
+		10	[fillcolor="#FF6752",
+			height=0.5,
+			label="if grid[i][j] == 1:\l",
+			linenum="[9]",
+			pos="294.5,671",
+			shape=diamond,
+			style="filled,solid",
+			width=4.4171];
+		7 -> 10	[color=green,
+			label="range(n)",
+			lp="428,704.5",
+			pos="e,365.03,681.03 368.67,723.62 378.83,720.4 386.98,716.54 390.5,712 400.67,698.87 391.14,690.02 374.76,684.06"];
+		10 -> 7	[color=red,
+			label="(grid[i][j] != 1)",
+			lp="320,704.5",
+			pos="e,255.77,719.77 260.54,685.4 256.14,688.55 252.22,692.38 249.5,697 246.96,701.31 246.35,704.35 250.26,711.31"];
+		12	[fillcolor="#FFFB81",
+			height=0.5,
+			label="temp = []\l",
+			linenum="[10]",
+			pos="181.5,604",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.2639];
+		10 -> 12	[color=green,
+			label="grid[i][j] == 1",
+			lp="203.5,637.5",
+			pos="e,149.2,622.13 196.86,664.04 171.77,660.38 149.56,654.49 141.5,645 137.01,639.72 138.04,634.31 141.87,629.25"];
+		14	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i != 0:\l",
+			linenum="[11]",
+			pos="226.5,537",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		12 -> 14	[color=black,
+			pos="e,216.13,552.97 193.32,585.92 198.52,578.41 204.72,569.46 210.34,561.35"];
+		15	[fillcolor="#FFFB81",
+			height=0.5,
+			label="temp.append(grid[i - 1][j])\l",
+			linenum="[12]",
+			pos="255.5,470",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		14 -> 15	[color=green,
+			label="i != 0",
+			lp="268.5,503.5",
+			pos="e,247.73,488.42 233.52,520.27 236.54,513.5 240.15,505.41 243.57,497.75"];
+		16	[fillcolor="#FF6752",
+			height=0.5,
+			label="if j != 0:\l",
+			linenum="[14]",
+			pos="358.5,417",
+			shape=diamond,
+			style="filled,solid",
+			width=2.5277];
+		14 -> 16	[color=red,
+			label="(i == 0)",
+			lp="423,470",
+			pos="e,372.77,432.31 273.1,528.13 314.71,520.04 371.1,506.08 384.5,488 394.03,475.15 389.63,467.16 384.5,452 383.17,448.07 381.19,444.24 \
+378.9,440.66"];
+		15 -> 16	[color=black,
+			pos="e,333.93,430.17 290.08,451.88 301.32,446.31 313.76,440.16 324.91,434.63"];
+		18	[fillcolor="#FFFB81",
+			height=0.5,
+			label="temp.append(grid[i][j - 1])\l",
+			linenum="[15]",
+			pos="255.5,350",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		16 -> 18	[color=green,
+			label="j != 0",
+			lp="340.5,383.5",
+			pos="e,282.57,368.09 337.66,402.85 324.39,394.47 306.85,383.41 291.39,373.65"];
+		19	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i != n - 1:\l",
+			linenum="[17]",
+			pos="411.5,297",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		16 -> 19	[color=red,
+			label="(j == 0)",
+			lp="432,350",
+			pos="e,405.86,314.37 367.44,400.69 372.71,391.39 379.34,379.19 384.5,368 391.11,353.67 397.51,337.23 402.42,323.89"];
+		18 -> 19	[color=black,
+			pos="e,375.73,309.69 307.88,331.88 326.79,325.69 347.95,318.77 366.2,312.81"];
+		21	[fillcolor="#FFFB81",
+			height=0.5,
+			label="temp.append(grid[i + 1][j])\l",
+			linenum="[18]",
+			pos="255.5,230",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		19 -> 21	[color=green,
+			label="i != n - 1",
+			lp="365,263.5",
+			pos="e,281.16,248.2 366.42,285.57 352.41,281.7 337.08,276.81 323.5,271 312.2,266.17 300.47,259.81 290,253.59"];
+		22	[fillcolor="#FF6752",
+			height=0.5,
+			label="if j != n - 1:\l",
+			linenum="[20]",
+			pos="333.5,177",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		19 -> 22	[color=red,
+			label="(i == n - 1)",
+			lp="453.5,230",
+			pos="e,358.86,191.27 410.65,279 409.97,271.79 408.73,263.37 406.5,256 400.16,235.07 398.97,228.39 384.5,212 379.56,206.41 373.5,201.33 \
+367.31,196.9"];
+		21 -> 22	[color=black,
+			pos="e,312.29,191.87 281.91,211.73 288.87,207.18 296.43,202.24 303.56,197.58"];
+		24	[fillcolor="#FFFB81",
+			height=0.5,
+			label="temp.append(grid[i][j + 1])\l",
+			linenum="[21]",
+			pos="413.5,110",
+			shape=rectangle,
+			style="filled,solid",
+			width=3.3194];
+		22 -> 24	[color=green,
+			label="j != n - 1",
+			lp="422,143.5",
+			pos="e,392.39,128.15 351.25,161.57 361.03,153.63 373.41,143.57 384.55,134.52"];
+		25	[fillcolor="#FFFB81",
+			height=0.5,
+			label="val = min(temp)\l",
+			linenum="[23]",
+			pos="185.5,57",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		22 -> 25	[color=red,
+			label="(j == n - 1)",
+			lp="235.5,110",
+			pos="e,180.26,75.273 259.11,169.99 231.41,163.71 202.57,151.49 185.5,128 176.73,115.94 176.37,99.353 178.37,85.356"];
+		24 -> 25	[color=black,
+			pos="e,255.51,73.661 337.26,91.947 314.15,86.778 288.71,81.087 265.37,75.866"];
+		25 -> 7	[color=black,
+			pos="e,210.45,726.05 139.86,75.139 127.03,83.063 116.5,94.104 116.5,109 116.5,672 116.5,672 116.5,672 116.5,680.77 119.57,683.63 126.5,\
+689 147.85,705.55 174.7,716.4 200.59,723.51"];
+		28	[fillcolor="#FFBE52",
+			height=0.5,
+			label="for i in range(k):\l",
+			linenum="[26]",
+			pos="595.5,671",
+			shape=hexagon,
+			style="filled,solid",
+			width=3.4397];
+		8 -> 28	[color=black,
+			pos="e,571.17,689.19 527.67,719.92 538.47,712.29 551.35,703.19 562.98,694.98"];
+		30	[fillcolor="#FF6752",
+			height=0.5,
+			label="if i % 2 == 0:\l",
+			linenum="[27]",
+			pos="386.5,604",
+			shape=diamond,
+			style="filled,solid",
+			width=3.3702];
+		28 -> 30	[color=green,
+			label="range(k)",
+			lp="488,637.5",
+			pos="e,406.38,619.26 509.95,659.86 491.34,656.28 471.99,651.46 454.5,645 440.78,639.94 426.67,632.14 414.89,624.77"];
+		31	[fillcolor="#98fb98",
+			height=0.5,
+			label="return ans\l",
+			linenum="[31]",
+			pos="639.5,604",
+			shape=parallelogram,
+			style="filled,solid",
+			width=2.6206];
+		28 -> 31	[color=green,
+			pos="e,627.86,622.19 607.06,652.92 611.67,646.11 617.08,638.12 622.15,630.64"];
+		32	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans.append(1)\l",
+			linenum="[28]",
+			pos="397.5,537",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.7222];
+		30 -> 32	[color=green,
+			label="i % 2 == 0",
+			lp="357,570.5",
+			pos="e,335.45,551.79 339.59,592.84 320.62,586.45 305.31,576.76 315.5,563 317.44,560.38 321.11,557.93 325.86,555.66"];
+		34	[fillcolor="#FFFB81",
+			height=0.5,
+			label="ans.append(val)\l",
+			linenum="[30]",
+			pos="547.5,537",
+			shape=rectangle,
+			style="filled,solid",
+			width=1.9444];
+		30 -> 34	[color=red,
+			label="(i % 2 != 0)",
+			lp="471.5,570.5",
+			pos="e,477.32,553.27 396.27,587.33 402.44,578.77 411.19,568.77 421.5,563 437.68,553.94 445.6,557.68 467.17,554.91"];
+		32 -> 28	[color=black,
+			pos="e,512.8,658.96 335.14,553.99 325.8,556.76 316.34,559.8 307.5,563 284.12,571.46 269.99,565.11 256.5,586 247.82,599.44 246.01,609.92 \
+256.5,622 258.54,624.35 403.03,644.17 502.7,657.6"];
+		34 -> 28	[color=black,
+			pos="e,564.66,652.89 539.88,555.28 533.3,572.9 526.33,600.62 536.5,622 541.06,631.58 548.56,639.87 556.72,646.74"];
+	}
+	1	[fillcolor="#FFFB81",
+		height=0.73611,
+		label="from typing import *\ldef minPath(grid, k):...\lminPath([[6, 4, 13, 10], [5, 7, 12, 1], [3, 16, 11, 15], [8, 14, 9, 2]], 7)\l",
+		linenum="[1]",
+		pos="317.5,1035.5",
+		shape=rectangle,
+		style="filled,solid",
+		width=8.8194];
+	1 -> 39	[label=calls,
+		lp="338.5,993.5",
+		pos="e,317.5,970.13 317.5,1008.7 317.5,999.66 317.5,989.47 317.5,980.3",
+		style=dashed];
+	39 -> 3	[color=green,
+		pos="e,317.5,878.29 317.5,933.88 317.5,921.12 317.5,903.4 317.5,888.52"];
+}
