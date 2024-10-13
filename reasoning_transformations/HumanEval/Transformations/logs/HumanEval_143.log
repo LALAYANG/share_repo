@@ -1,0 +1,171 @@
+STARTING AT 2024-10-13 00:02:31.150216
+[START] processing file: HumanEval_143
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+tests_pass HumanEval_143 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_143.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_143
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 52, in <module>\n    check(words_in_sentence)\n  File "/home/yang/Benchmark/tmp_test.py", line 41, in check\n    assert candidate("This is a test") == "is"\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop add_nested_if due to ['error_or_timeout']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_143.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_143.py
+*Running tests for: HumanEval_143
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_143.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_143',
+  'genetic_algorithm': None,
+  'original_code': 'def words_in_sentence(sentence):\n'
+                   '    """\n'
+                   '    You are given a string representing a sentence,\n'
+                   '    the sentence contains some words separated by a '
+                   'space,\n'
+                   '    and you have to return a string that contains the '
+                   'words from the original sentence,\n'
+                   '    whose lengths are prime numbers,\n'
+                   '    the order of the words in the new string should be the '
+                   'same as the original one.\n'
+                   '\n'
+                   '    Example 1:\n'
+                   '        Input: sentence = "This is a test"\n'
+                   '        Output: "is"\n'
+                   '\n'
+                   '    Example 2:\n'
+                   '        Input: sentence = "lets go for swimming"\n'
+                   '        Output: "go for"\n'
+                   '\n'
+                   '    Constraints:\n'
+                   '        * 1 <= len(sentence) <= 100\n'
+                   '        * sentence contains only letters\n'
+                   '    """\n'
+                   '    new_lst = []\n'
+                   '    for word in sentence.split():\n'
+                   '        flg = 0\n'
+                   '        if len(word) == 1:\n'
+                   '            flg = 1\n'
+                   '        for i in range(2, len(word)):\n'
+                   '            if len(word) % i == 0:\n'
+                   '                flg = 1\n'
+                   '        if flg == 0 or len(word) == 2:\n'
+                   '            new_lst.append(word)\n'
+                   "    return ' '.join(new_lst)",
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_143.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_143.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_143.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.367059,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([86, 15, 92], [37, 27, 10])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([10, 18, 64])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.01)\n'
+                      "    parse('2024-10-13 00:02:33')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def words_in_sentence(sentence):\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'31641372910510185693')\n"
+                      '    try:\n'
+                      "        '\\n    You are given a string representing a "
+                      'sentence,\\n    the sentence contains some words '
+                      'separated by a space,\\n    and you have to return a '
+                      'string that contains the words from the original '
+                      'sentence,\\n    whose lengths are prime numbers,\\n    '
+                      'the order of the words in the new string should be the '
+                      'same as the original one.\\n\\n    Example 1:\\n        '
+                      'Input: sentence = "This is a test"\\n        Output: '
+                      '"is"\\n\\n    Example 2:\\n        Input: sentence = '
+                      '"lets go for swimming"\\n        Output: "go '
+                      'for"\\n\\n    Constraints:\\n        * 1 <= '
+                      'len(sentence) <= 100\\n        * sentence contains only '
+                      "letters\\n    '\n"
+                      '        new_lst = [[]][0]\n'
+                      '        LoopChecker122 = 182\n'
+                      '        LoopChecker222 = 181\n'
+                      '        for LoopIndexOut in range(LoopChecker122 // '
+                      'LoopChecker222):\n'
+                      '            for word in sentence.split():\n'
+                      '                newflg_1 = 0\n'
+                      '                if len(word) == 1:\n'
+                      '                    newflg_1 = 1\n'
+                      '\n'
+                      '                def loop_12_16(i, stop, step):\n'
+                      '                    nonlocal newflg_1\n'
+                      '                    if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
+                      '                        return\n'
+                      '                    if len(word) % i == 0:\n'
+                      '                        newflg_1 = 1\n'
+                      '                    loop_12_16(i + step, stop, step)\n'
+                      '                loop_12_16(2, len(word), 1)\n'
+                      '                if newflg_1 == 0 or len(word) == 2:\n'
+                      '                    new_lst.append(word)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      "        return ' '.join(new_lst)\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_143. Total Time: 3.367059
+END AT 2024-10-13 00:02:34.520333

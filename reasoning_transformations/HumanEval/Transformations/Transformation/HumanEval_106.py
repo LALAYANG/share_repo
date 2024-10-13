@@ -1,0 +1,59 @@
+from dateutil.parser import parse
+import base64
+from scipy.stats import ttest_ind
+from http.client import HTTPConnection
+from sklearn.utils import shuffle
+from cryptography.fernet import Fernet
+import time
+import datetime
+
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    datetime.datetime.now()
+    base64.b64encode(b'86022653136649578883')
+    time.sleep(0.27)
+    Fernet.generate_key()
+    return dec_result
+
+
+@my_decorator
+def f(n):
+    parse('2024-10-12 23:57:29')
+    shuffle([21, 75, 21])
+    ttest_ind([82, 7, 81], [39, 40, 48])
+    HTTPConnection('google.com', port=80)
+    try:
+        ' Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    or the sum of numbers from 1 to i otherwise.\n    i starts from 1.\n    the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).\n    Example:\n    f(5) == [1, 2, 6, 24, 15]\n    '
+        ret = [[]][0]
+        LoopChecker111 = 382
+        LoopChecker211 = 381
+        ConditionChecker115 = 852
+        ConditionChecker215 = 416
+        for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
+            for i in range(1, n + 1):
+                if ConditionChecker115 & ConditionChecker215:
+                    if i % 2 == 0:
+                        x = 1
+
+                        def loop_14_24(newj_1, stop, step):
+                            nonlocal x
+                            if step == 0 or (step > 0 and newj_1 >= stop) or (step < 0 and newj_1 <= stop):
+                                return
+                            x = x * newj_1
+                            loop_14_24(newj_1 + step, stop, step)
+                        loop_14_24(1, i + 1, 1)
+                        ret += [x]
+                    else:
+                        x = 0
+                        for newj_1 in range(1, i + 1):
+                            x += newj_1
+                        ret += [x]
+        else:
+            pass
+        return ret
+    except:
+        pass

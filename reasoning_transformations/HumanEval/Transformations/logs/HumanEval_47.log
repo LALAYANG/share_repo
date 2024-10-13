@@ -1,0 +1,119 @@
+STARTING AT 2024-10-13 00:12:28.326970
+[START] processing file: HumanEval_47
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+tests_pass HumanEval_47 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_47.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_47
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 37, in <module>\n    check(median)\n  File "/home/yang/Benchmark/tmp_test.py", line 30, in check\n    assert candidate([3, 1, 2, 4, 5]) == 3\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_47.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_47.py
+*Running tests for: HumanEval_47
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_47.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_47',
+  'genetic_algorithm': None,
+  'original_code': 'def median(l: list):\n'
+                   '    """Return median of elements in the list l.\n'
+                   '    >>> median([3, 1, 2, 4, 5])\n'
+                   '    3\n'
+                   '    >>> median([-10, 4, 6, 1000, 10, 20])\n'
+                   '    15.0\n'
+                   '    """\n'
+                   '    l = sorted(l)\n'
+                   '    if len(l) % 2 == 1:\n'
+                   '        return l[len(l) // 2]\n'
+                   '    else:\n'
+                   '        return (l[len(l) // 2 - 1] + l[len(l) // 2]) / 2.0',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_47.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_47.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_47.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.320909,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-13 00:12:31')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.29)\n'
+                      "    base64.b64encode(b'05365903547339942180')\n"
+                      '    shuffle([67, 93, 80])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def median(newl_1: list):\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([16, 35, 43], [94, 34, 79])\n'
+                      '    try:\n'
+                      '        ConditionChecker19 = [153][0]\n'
+                      '        ConditionChecker29 = 735\n'
+                      "        'Return median of elements in the list l.\\n    "
+                      '>>> median([3, 1, 2, 4, 5])\\n    3\\n    >>> '
+                      "median([-10, 4, 6, 1000, 10, 20])\\n    15.0\\n    '\n"
+                      '        newl_1 = sorted(newl_1)\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if len(newl_1) % 2 == 1:\n'
+                      '                return newl_1[len(newl_1) // 2]\n'
+                      '            else:\n'
+                      '                return (newl_1[len(newl_1) // 2 - 1] + '
+                      'newl_1[len(newl_1) // 2]) / 2.0\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_47. Total Time: 5.320909
+END AT 2024-10-13 00:12:33.649462

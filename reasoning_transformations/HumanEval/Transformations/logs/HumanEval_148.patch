@@ -1,0 +1,73 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_148.py	2024-10-13 00:03:13.636066764 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_148.py	2024-10-13 00:03:16.929039323 -0500
+@@ -1,25 +1,45 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    ttest_ind([37, 81, 36], [63, 59, 8])
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    base64.b64encode(b'45772515042438287085')
++    shuffle([78, 81, 33])
++    time.sleep(0.15)
++    parse('2024-10-13 00:03:16')
++    return dec_result
++
++
++@my_decorator
+ def bf(planet1, planet2):
+-    """
+-    There are eight planets in our solar system: the closerst to the Sun
+-    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn,
+-    Uranus, Neptune.
+-    Write a function that takes two planet names as strings planet1 and planet2.
+-    The function should return a tuple containing all planets whose orbits are
+-    located between the orbit of planet1 and the orbit of planet2, sorted by
+-    the proximity to the sun.
+-    The function should return an empty tuple if planet1 or planet2
+-    are not correct planet names.
+-    Examples
+-    bf("Jupiter", "Neptune") ==> ("Saturn", "Uranus")
+-    bf("Earth", "Mercury") ==> ("Venus")
+-    bf("Mercury", "Uranus") ==> ("Venus", "Earth", "Mars", "Jupiter", "Saturn")
+-    """
+-    planet_names = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')
+-    if planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2:
+-        return ()
+-    planet1_index = planet_names.index(planet1)
+-    planet2_index = planet_names.index(planet2)
+-    if planet1_index < planet2_index:
+-        return planet_names[planet1_index + 1:planet2_index]
+-    else:
+-        return planet_names[planet2_index + 1:planet1_index]
+\ No newline at end of file
++    HTTPConnection('google.com', port=80)
++    datetime.datetime.now()
++    Fernet.generate_key()
++    try:
++        ConditionChecker118 = [729][0]
++        ConditionChecker218 = 932
++        '\n    There are eight planets in our solar system: the closerst to the Sun\n    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn,\n    Uranus, Neptune.\n    Write a function that takes two planet names as strings planet1 and planet2.\n    The function should return a tuple containing all planets whose orbits are\n    located between the orbit of planet1 and the orbit of planet2, sorted by\n    the proximity to the sun.\n    The function should return an empty tuple if planet1 or planet2\n    are not correct planet names.\n    Examples\n    bf("Jupiter", "Neptune") ==> ("Saturn", "Uranus")\n    bf("Earth", "Mercury") ==> ("Venus")\n    bf("Mercury", "Uranus") ==> ("Venus", "Earth", "Mars", "Jupiter", "Saturn")\n    '
++        planet_names = ('Mercury', 'Venus', 'Earth', 'Mars',
++                        'Jupiter', 'Saturn', 'Uranus', 'Neptune')
++        if ConditionChecker118 & ConditionChecker218:
++            if planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2:
++                return ()
++        planet1_index = planet_names.index(planet1)
++        newplanet2_index_1 = planet_names.index(planet2)
++        if planet1_index < newplanet2_index_1:
++            return planet_names[planet1_index + 1:newplanet2_index_1]
++        else:
++            return planet_names[newplanet2_index_1 + 1:planet1_index]
++    except:
++        pass

@@ -1,0 +1,149 @@
+STARTING AT 2024-10-12 23:59:05.696247
+[START] processing file: HumanEval_12
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+tests_pass HumanEval_12 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_12.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_12
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 38, in <module>\n    check(longest)\n  File "/home/yang/Benchmark/tmp_test.py", line 35, in check\n    assert candidate([\'x\', \'y\', \'z\']) == \'x\'\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_12
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 44, in <module>\n    check(longest)\n  File "/home/yang/Benchmark/tmp_test.py", line 41, in check\n    assert candidate([\'x\', \'y\', \'z\']) == \'x\'\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_12.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_12.py
+*Running tests for: HumanEval_12
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_12.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_12',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List, Optional\n'
+                   '\n'
+                   'def longest(strings: List[str]) -> Optional[str]:\n'
+                   '    """ Out of list of strings, return the longest one. '
+                   'Return the first one in case of multiple\n'
+                   '    strings of the same length. Return None in case the '
+                   'input list is empty.\n'
+                   '    >>> longest([])\n'
+                   '\n'
+                   "    >>> longest(['a', 'b', 'c'])\n"
+                   "    'a'\n"
+                   "    >>> longest(['a', 'bb', 'ccc'])\n"
+                   "    'ccc'\n"
+                   '    """\n'
+                   '    if not strings:\n'
+                   '        return None\n'
+                   '    maxlen = max((len(x) for x in strings))\n'
+                   '    for s in strings:\n'
+                   '        if len(s) == maxlen:\n'
+                   '            return s',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_12.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_12.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_12.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.541186,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([21, 23, 52])\n'
+                      "    base64.b64encode(b'32305516306467814048')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-12 23:59:10')\n"
+                      '    return dec_result\n'
+                      'from typing import List, Optional\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def longest(strings: List[str]) -> Optional[str]:\n'
+                      '    time.sleep(0.17)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([96, 53, 92], [61, 84, 98])\n'
+                      '    try:\n'
+                      '        ConditionChecker113 = [476][0]\n'
+                      '        ConditionChecker213 = 254\n'
+                      '        " Out of list of strings, return the longest '
+                      'one. Return the first one in case of multiple\\n    '
+                      'strings of the same length. Return None in case the '
+                      'input list is empty.\\n    >>> longest([])\\n\\n    >>> '
+                      "longest(['a', 'b', 'c'])\\n    'a'\\n    >>> "
+                      "longest(['a', 'bb', 'ccc'])\\n    'ccc'\\n    "
+                      '"\n'
+                      '        if ConditionChecker113 & ConditionChecker213:\n'
+                      '            if not strings:\n'
+                      '                return None\n'
+                      '        maxlen = max((len(newx_1) for newx_1 in '
+                      'strings))\n'
+                      '        LoopChecker116 = 931\n'
+                      '        LoopChecker216 = 930\n'
+                      '        for LoopIndexOut in range(LoopChecker116 // '
+                      'LoopChecker216):\n'
+                      '            for s in strings:\n'
+                      '                if len(s) == maxlen:\n'
+                      '                    return s\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_12. Total Time: 6.541186
+END AT 2024-10-12 23:59:12.239882

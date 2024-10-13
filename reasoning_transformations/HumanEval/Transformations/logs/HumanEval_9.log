@@ -1,0 +1,152 @@
+STARTING AT 2024-10-13 00:26:22.605846
+[START] processing file: HumanEval_9
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+tests_pass HumanEval_9 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_9.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_9.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_9.py
+*Running tests for: HumanEval_9
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_9.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_9',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List, Tuple\n'
+                   '\n'
+                   'def rolling_max(numbers: List[int]) -> List[int]:\n'
+                   '    """ From a given list of integers, generate a list of '
+                   'rolling maximum element found until given moment\n'
+                   '    in the sequence.\n'
+                   '    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n'
+                   '    [1, 2, 3, 3, 3, 4, 4]\n'
+                   '    """\n'
+                   '    running_max = None\n'
+                   '    result = []\n'
+                   '    for n in numbers:\n'
+                   '        if running_max is None:\n'
+                   '            running_max = n\n'
+                   '        else:\n'
+                   '            running_max = max(running_max, n)\n'
+                   '        result.append(running_max)\n'
+                   '    return result',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_9.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_9.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_9.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 8.896969,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'94240066594211362349')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([46, 62, 2])\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-13 00:26:28')\n"
+                      '    return dec_result\n'
+                      'from typing import List, Tuple\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def rolling_max(numbers: List[int]) -> List[int]:\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([89, 63, 6], [7, 81, 95])\n'
+                      '    time.sleep(0.22)\n'
+                      '    try:\n'
+                      "        ' From a given list of integers, generate a "
+                      'list of rolling maximum element found until given '
+                      'moment\\n    in the sequence.\\n    >>> rolling_max([1, '
+                      "2, 3, 2, 3, 4, 2])\\n    [1, 2, 3, 3, 3, 4, 4]\\n    '\n"
+                      '        newrunning_max_1 = [None][0]\n'
+                      '        result = []\n'
+                      '        LoopChecker111 = 746\n'
+                      '        LoopChecker211 = 745\n'
+                      '        ConditionChecker115 = 45\n'
+                      '        ConditionChecker215 = 891\n'
+                      '\n'
+                      '        def loop_12_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal newrunning_max_1\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for n in numbers:\n'
+                      '                if ConditionChecker115 & '
+                      'ConditionChecker215:\n'
+                      '                    if newrunning_max_1 is None:\n'
+                      '                        newrunning_max_1 = n\n'
+                      '                    else:\n'
+                      '                        newrunning_max_1 = '
+                      'np.max(np.array([newrunning_max_1, n]))\n'
+                      '                result.append(newrunning_max_1)\n'
+                      '            loop_12_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_12_8(0, LoopChecker111 // LoopChecker211, '
+                      '1)\n'
+                      '        return result\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_9. Total Time: 8.896969
+END AT 2024-10-13 00:26:31.504535

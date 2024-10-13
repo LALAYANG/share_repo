@@ -1,0 +1,115 @@
+STARTING AT 2024-10-12 23:59:23.469471
+[START] processing file: HumanEval_122
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+tests_pass HumanEval_122 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_122.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_122
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 29, in <module>\n    check(add_elements)\n  File "/home/yang/Benchmark/tmp_test.py", line 20, in check\n    assert candidate([1,-2,-3,41,57,76,87,88,99], 3) == -4\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_122.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_122.py
+*Running tests for: HumanEval_122
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_122.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_122',
+  'genetic_algorithm': None,
+  'original_code': 'def add_elements(arr, k):\n'
+                   '    """\n'
+                   '    Given a non-empty array of integers arr and an integer '
+                   'k, return\n'
+                   '    the sum of the elements with at most two digits from '
+                   'the first k elements of arr.\n'
+                   '\n'
+                   '    Example:\n'
+                   '\n'
+                   '        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n'
+                   '        Output: 24 # sum of 21 + 3\n'
+                   '\n'
+                   '    Constraints:\n'
+                   '        1. 1 <= len(arr) <= 100\n'
+                   '        2. 1 <= k <= len(arr)\n'
+                   '    """\n'
+                   '    return sum((elem for elem in arr[:k] if len(str(elem)) '
+                   '<= 2))',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_122.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_122.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_122.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 10.519493,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([63, 21, 57])\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-12 23:59:30')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def add_elements(arr, k):\n'
+                      '    time.sleep(0.24)\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([20, 19, 37], [54, 83, 96])\n'
+                      "    base64.b64encode(b'19546129094226109464')\n"
+                      '    try:\n'
+                      "        '\\n    Given a non-empty array of integers arr "
+                      'and an integer k, return\\n    the sum of the elements '
+                      'with at most two digits from the first k elements of '
+                      'arr.\\n\\n    Example:\\n\\n        Input: arr = '
+                      '[111,21,3,4000,5,6,7,8,9], k = 4\\n        Output: 24 # '
+                      'sum of 21 + 3\\n\\n    Constraints:\\n        1. 1 <= '
+                      'len(arr) <= 100\\n        2. 1 <= k <= len(arr)\\n    '
+                      "'\n"
+                      '        return sum((newelem_1 for newelem_1 in arr[:k] '
+                      'if len(str(newelem_1)) <= 2))\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_122. Total Time: 10.519493
+END AT 2024-10-12 23:59:33.991341

@@ -1,0 +1,146 @@
+STARTING AT 2024-10-13 00:13:05.644188
+[START] processing file: HumanEval_5
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+tests_pass HumanEval_5 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_5.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_5.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_5.py
+*Running tests for: HumanEval_5
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_5.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_5',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List\n'
+                   '\n'
+                   'def intersperse(numbers: List[int], delimeter: int) -> '
+                   'List[int]:\n'
+                   '    """ Insert a number \'delimeter\' between every two '
+                   "consecutive elements of input list `numbers'\n"
+                   '    >>> intersperse([], 4)\n'
+                   '    []\n'
+                   '    >>> intersperse([1, 2, 3], 4)\n'
+                   '    [1, 4, 2, 4, 3]\n'
+                   '    """\n'
+                   '    if not numbers:\n'
+                   '        return []\n'
+                   '    result = []\n'
+                   '    for n in numbers[:-1]:\n'
+                   '        result.append(n)\n'
+                   '        result.append(delimeter)\n'
+                   '    result.append(numbers[-1])\n'
+                   '    return result',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_5.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_5.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_5.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.444687,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'from typing import List\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def intersperse(numbers: List[int], delimeter: int) -> '
+                      'List[int]:\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'91690973326349788903')\n"
+                      '    time.sleep(0.23)\n'
+                      '    shuffle([8, 5, 14])\n'
+                      "    parse('2024-10-13 00:13:10')\n"
+                      '    ttest_ind([60, 74, 12], [100, 44, 4])\n'
+                      '    try:\n'
+                      '        ConditionChecker110 = [335][0]\n'
+                      '        ConditionChecker210 = 745\n'
+                      '        " Insert a number \'delimeter\' between every '
+                      "two consecutive elements of input list `numbers'\\n    "
+                      '>>> intersperse([], 4)\\n    []\\n    >>> '
+                      'intersperse([1, 2, 3], 4)\\n    [1, 4, 2, 4, 3]\\n    '
+                      '"\n'
+                      '        if ConditionChecker110 & ConditionChecker210:\n'
+                      '            if not numbers:\n'
+                      '                return []\n'
+                      '        newresult_1 = []\n'
+                      '        LoopChecker113 = 289\n'
+                      '        LoopChecker213 = 288\n'
+                      '\n'
+                      '        def loop_14_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for n in numbers[:-1]:\n'
+                      '                newresult_1.append(n)\n'
+                      '                newresult_1.append(delimeter)\n'
+                      '            loop_14_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_14_8(0, LoopChecker113 // LoopChecker213, '
+                      '1)\n'
+                      '        newresult_1.append(numbers[-1])\n'
+                      '        return newresult_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_5. Total Time: 7.444687
+END AT 2024-10-13 00:13:13.091406

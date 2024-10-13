@@ -1,0 +1,97 @@
+STARTING AT 2024-10-13 00:06:50.392339
+[START] processing file: HumanEval_28
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+tests_pass HumanEval_28 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_28.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_28.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_28.py
+*Running tests for: HumanEval_28
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_28.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_28',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List\n'
+                   '\n'
+                   'def concatenate(strings: List[str]) -> str:\n'
+                   '    """ Concatenate list of strings into a single string\n'
+                   '    >>> concatenate([])\n'
+                   "    ''\n"
+                   "    >>> concatenate(['a', 'b', 'c'])\n"
+                   "    'abc'\n"
+                   '    """\n'
+                   "    return ''.join(strings)",
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_28.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_28.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_28.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.408174,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([89, 81, 4])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from typing import List\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def concatenate(strings: List[str]) -> str:\n'
+                      "    base64.b64encode(b'30548486987301239154')\n"
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.13)\n'
+                      '    ttest_ind([67, 39, 95], [76, 25, 2])\n'
+                      "    parse('2024-10-13 00:06:53')\n"
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        " Concatenate list of strings into a single '
+                      "string\\n    >>> concatenate([])\\n    ''\\n    >>> "
+                      "concatenate(['a', 'b', 'c'])\\n    'abc'\\n    "
+                      '"\n'
+                      "        return ''.join(strings)\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_28. Total Time: 5.408174
+END AT 2024-10-13 00:06:55.802559

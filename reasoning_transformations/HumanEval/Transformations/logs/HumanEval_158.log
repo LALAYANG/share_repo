@@ -1,0 +1,113 @@
+STARTING AT 2024-10-13 00:05:05.808676
+[START] processing file: HumanEval_158
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+tests_pass HumanEval_158 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_158.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_158
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 34, in <module>\n    check(find_max)\n  File "/home/yang/Benchmark/tmp_test.py", line 20, in check\n    assert (candidate(["name", "of", "string"]) == "string"), "t1"\nAssertionError: t1\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_158.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_158.py
+*Running tests for: HumanEval_158
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_158.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_158',
+  'genetic_algorithm': None,
+  'original_code': 'def find_max(words):\n'
+                   '    """Write a function that accepts a list of strings.\n'
+                   '    The list contains different words. Return the word '
+                   'with maximum number\n'
+                   '    of unique characters. If multiple strings have maximum '
+                   'number of unique\n'
+                   '    characters, return the one which comes first in '
+                   'lexicographical order.\n'
+                   '\n'
+                   '    find_max(["name", "of", "string"]) == "string"\n'
+                   '    find_max(["name", "enam", "game"]) == "enam"\n'
+                   '    find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"\n'
+                   '    """\n'
+                   '    return sorted(words, key=lambda x: (-len(set(x)), '
+                   'x))[0]',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_158.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_158.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_158.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.938429,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([73, 31, 72], [29, 83, 52])\n'
+                      '    shuffle([19, 94, 12])\n'
+                      '    time.sleep(0.09)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def find_max(words):\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-13 00:05:08')\n"
+                      "    base64.b64encode(b'91374390487827814857')\n"
+                      '    try:\n'
+                      "        'Write a function that accepts a list of "
+                      'strings.\\n    The list contains different words. '
+                      'Return the word with maximum number\\n    of unique '
+                      'characters. If multiple strings have maximum number of '
+                      'unique\\n    characters, return the one which comes '
+                      'first in lexicographical order.\\n\\n    '
+                      'find_max(["name", "of", "string"]) == "string"\\n    '
+                      'find_max(["name", "enam", "game"]) == "enam"\\n    '
+                      'find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"\\n    '
+                      "'\n"
+                      '        return sorted(words, key=lambda x: '
+                      '(-len(set(x)), x))[0]\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_158. Total Time: 3.938429
+END AT 2024-10-13 00:05:09.749488

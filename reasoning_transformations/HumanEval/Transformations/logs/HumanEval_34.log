@@ -1,0 +1,96 @@
+STARTING AT 2024-10-13 00:09:13.840594
+[START] processing file: HumanEval_34
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+tests_pass HumanEval_34 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_34.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_34
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 26, in <module>\n    check(unique)\n  File "/home/yang/Benchmark/tmp_test.py", line 23, in check\n    assert candidate([5, 3, 5, 2, 3, 3, 9, 0, 123]) == [0, 2, 3, 5, 9, 123]\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_34.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_34.py
+*Running tests for: HumanEval_34
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_34.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_34',
+  'genetic_algorithm': None,
+  'original_code': 'def unique(l: list):\n'
+                   '    """Return sorted unique elements in a list\n'
+                   '    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n'
+                   '    [0, 2, 3, 5, 9, 123]\n'
+                   '    """\n'
+                   '    return sorted(list(set(l)))',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_34.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_34.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_34.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.579393,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'25964418271186168958')\n"
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.23)\n'
+                      "    parse('2024-10-13 00:09:16')\n"
+                      '    shuffle([24, 22, 76])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def unique(l: list):\n'
+                      '    ttest_ind([73, 46, 88], [59, 85, 38])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      "        'Return sorted unique elements in a list\\n    "
+                      '>>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\\n    [0, 2, '
+                      "3, 5, 9, 123]\\n    '\n"
+                      '        return sorted(list(set(l)))\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_34. Total Time: 4.579393
+END AT 2024-10-13 00:09:18.421963

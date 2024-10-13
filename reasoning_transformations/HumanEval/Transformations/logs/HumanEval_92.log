@@ -1,0 +1,132 @@
+STARTING AT 2024-10-13 00:26:48.625958
+[START] processing file: HumanEval_92
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+tests_pass HumanEval_92 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_92.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_92.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_92.py
+*Running tests for: HumanEval_92
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_92.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_92',
+  'genetic_algorithm': None,
+  'original_code': 'def any_int(x, y, z):\n'
+                   '    """\n'
+                   '    Create a function that takes 3 numbers.\n'
+                   '    Returns true if one of the numbers is equal to the sum '
+                   'of the other two, and all numbers are integers.\n'
+                   '    Returns false in any other cases.\n'
+                   '\n'
+                   '    Examples\n'
+                   '    any_int(5, 2, 7) ➞ True\n'
+                   '\n'
+                   '    any_int(3, 2, 2) ➞ False\n'
+                   '\n'
+                   '    any_int(3, -2, 1) ➞ True\n'
+                   '\n'
+                   '    any_int(3.6, -2.2, 2) ➞ False\n'
+                   '\n'
+                   '\n'
+                   '\n'
+                   '    """\n'
+                   '    if isinstance(x, int) and isinstance(y, int) and '
+                   'isinstance(z, int):\n'
+                   '        if x + y == z or x + z == y or y + z == x:\n'
+                   '            return True\n'
+                   '        return False\n'
+                   '    return False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_92.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_92.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_92.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.505093,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([94, 97, 84], [21, 94, 21])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def any_int(x, y, z):\n'
+                      '    shuffle([4, 43, 93])\n'
+                      "    parse('2024-10-13 00:26:53')\n"
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'10374949449285021214')\n"
+                      '    time.sleep(0.07)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    try:\n'
+                      '        ConditionChecker119 = [797][0]\n'
+                      '        ConditionChecker219 = 324\n'
+                      "        '\\n    Create a function that takes 3 "
+                      'numbers.\\n    Returns true if one of the numbers is '
+                      'equal to the sum of the other two, and all numbers are '
+                      'integers.\\n    Returns false in any other '
+                      'cases.\\n\\n    Examples\\n    any_int(5, 2, 7) ➞ '
+                      'True\\n\\n    any_int(3, 2, 2) ➞ False\\n\\n    '
+                      'any_int(3, -2, 1) ➞ True\\n\\n    any_int(3.6, -2.2, 2) '
+                      "➞ False\\n\\n\\n\\n    '\n"
+                      '        if ConditionChecker119 & ConditionChecker219:\n'
+                      '            if isinstance(x, int) and isinstance(y, '
+                      'int) and isinstance(z, int):\n'
+                      '                if x + y == z or x + z == y or y + z == '
+                      'x:\n'
+                      '                    return True\n'
+                      '                return False\n'
+                      '        return False\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_92. Total Time: 7.505093
+END AT 2024-10-13 00:26:56.135002

@@ -1,0 +1,172 @@
+STARTING AT 2024-10-13 00:04:24.424338
+[START] processing file: HumanEval_154
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+tests_pass HumanEval_154 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_154.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_154
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 52, in <module>\n    check(cycpattern_check)\n  File "/home/yang/Benchmark/tmp_test.py", line 45, in check\n    assert  candidate("yello","ell") == True , "test #1"\nAssertionError: test #1\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_154.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_154.py
+*Running tests for: HumanEval_154
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_154.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_154',
+  'genetic_algorithm': None,
+  'original_code': 'def cycpattern_check(a, b):\n'
+                   '    """You are given 2 words. You need to return True if '
+                   'the second word or any of its rotations is a substring in '
+                   'the first word\n'
+                   '    cycpattern_check("abcd","abd") => False\n'
+                   '    cycpattern_check("hello","ell") => True\n'
+                   '    cycpattern_check("whassup","psus") => False\n'
+                   '    cycpattern_check("abab","baa") => True\n'
+                   '    cycpattern_check("efef","eeff") => False\n'
+                   '    cycpattern_check("himenss","simen") => True\n'
+                   '\n'
+                   '    """\n'
+                   '    l = len(b)\n'
+                   '    pat = b + b\n'
+                   '    for i in range(len(a) - l + 1):\n'
+                   '        for j in range(l + 1):\n'
+                   '            if a[i:i + l] == pat[j:j + l]:\n'
+                   '                return True\n'
+                   '    return False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_154.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_154.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_154.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 9.005008,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([28, 93, 11], [43, 45, 15])\n'
+                      "    parse('2024-10-13 00:04:30')\n"
+                      '    shuffle([91, 48, 31])\n'
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_12(b):\n'
+                      '    try:\n'
+                      '        return b + b\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def cycpattern_check(a, b):\n'
+                      '    """You are given 2 words. You need to return True '
+                      'if the second word or any of its rotations is a '
+                      'substring in the first word\n'
+                      '    cycpattern_check("abcd","abd") => False\n'
+                      '    cycpattern_check("hello","ell") => True\n'
+                      '    cycpattern_check("whassup","psus") => False\n'
+                      '    cycpattern_check("abab","baa") => True\n'
+                      '    cycpattern_check("efef","eeff") => False\n'
+                      '    cycpattern_check("himenss","simen") => True\n'
+                      '\n'
+                      '    """\n'
+                      '    l = len(b)\n'
+                      '    queue_newFunc0_120 = queue.Queue()\n'
+                      '\n'
+                      '    def newFunc0_12_thread(queue):\n'
+                      '        result = newFunc0_12(b)\n'
+                      '        queue.put(result)\n'
+                      '    thread_newFunc0_120 = '
+                      'threading.Thread(target=newFunc0_12_thread, '
+                      'args=(queue_newFunc0_120,))\n'
+                      '    thread_newFunc0_120.start()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    thread_newFunc0_120.join()\n'
+                      '    datetime.datetime.now()\n'
+                      '    result_newFunc0_120 = queue_newFunc0_120.get()\n'
+                      '    pat = result_newFunc0_120\n'
+                      '    LoopChecker113 = [692][0]\n'
+                      '    LoopChecker213 = 691\n'
+                      '    ConditionChecker118 = 759\n'
+                      '    ConditionChecker218 = 13\n'
+                      '    time.sleep(0.15)\n'
+                      '    for LoopIndexOut in range(LoopChecker113 // '
+                      'LoopChecker213):\n'
+                      '        for i in range(len(a) - l + 1):\n'
+                      '            for newj_1 in range(l + 1):\n'
+                      '                if ConditionChecker118 & '
+                      'ConditionChecker218:\n'
+                      '                    if a[i:i + l] == pat[newj_1:newj_1 '
+                      '+ l]:\n'
+                      '                        return True\n'
+                      '    else:\n'
+                      '        pass\n'
+                      "    base64.b64encode(b'72318311801018691924')\n"
+                      '    return False'}
+[END] processing file: HumanEval_154. Total Time: 9.005008
+END AT 2024-10-13 00:04:33.431970

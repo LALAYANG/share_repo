@@ -1,0 +1,177 @@
+STARTING AT 2024-10-13 00:04:39.075194
+[START] processing file: HumanEval_156
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+tests_pass HumanEval_156 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_156.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_156.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_156.py
+*Running tests for: HumanEval_156
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_156.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_156',
+  'genetic_algorithm': None,
+  'original_code': 'def int_to_mini_roman(number):\n'
+                   '    """\n'
+                   '    Given a positive integer, obtain its roman numeral '
+                   'equivalent as a string,\n'
+                   '    and return it in lowercase.\n'
+                   '    Restrictions: 1 <= num <= 1000\n'
+                   '\n'
+                   '    Examples:\n'
+                   "    >>> int_to_mini_roman(19) == 'xix'\n"
+                   "    >>> int_to_mini_roman(152) == 'clii'\n"
+                   "    >>> int_to_mini_roman(426) == 'cdxxvi'\n"
+                   '    """\n'
+                   '    num = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, '
+                   '1000]\n'
+                   "    sym = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', "
+                   "'C', 'CD', 'D', 'CM', 'M']\n"
+                   '    i = 12\n'
+                   "    res = ''\n"
+                   '    while number:\n'
+                   '        div = number // num[i]\n'
+                   '        number %= num[i]\n'
+                   '        while div:\n'
+                   '            res += sym[i]\n'
+                   '            div -= 1\n'
+                   '        i -= 1\n'
+                   '    return res.lower()',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_156.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_156.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_156.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.007675,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.26)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'33958154270365761190')\n"
+                      "    parse('2024-10-13 00:04:42')\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_21(number, variable_3_21):\n'
+                      '    ttest_ind([50, 21, 94], [30, 80, 44])\n'
+                      '    shuffle([70, 15, 33])\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return number // variable_3_21\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def int_to_mini_roman(number):\n'
+                      '    """\n'
+                      '    Given a positive integer, obtain its roman numeral '
+                      'equivalent as a string,\n'
+                      '    and return it in lowercase.\n'
+                      '    Restrictions: 1 <= num <= 1000\n'
+                      '\n'
+                      '    Examples:\n'
+                      "    >>> int_to_mini_roman(19) == 'xix'\n"
+                      "    >>> int_to_mini_roman(152) == 'clii'\n"
+                      "    >>> int_to_mini_roman(426) == 'cdxxvi'\n"
+                      '    """\n'
+                      '    num = [[1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, '
+                      '900, 1000]][0]\n'
+                      "    sym = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', "
+                      "'C', 'CD', 'D', 'CM', 'M']\n"
+                      '    i = 12\n'
+                      "    newres_1 = ''\n"
+                      '    whileloopchecker116 = 538\n'
+                      '    whileloopchecker216 = 537\n'
+                      '    while whileloopchecker116 % whileloopchecker216 == '
+                      '1:\n'
+                      '        whileloopchecker116 = whileloopchecker116 + 1\n'
+                      '        while number:\n'
+                      '            variable_3_21 = num[i]\n'
+                      '            queue_newFunc0_210 = queue.Queue()\n'
+                      '\n'
+                      '            def newFunc0_21_thread(queue):\n'
+                      '                result = newFunc0_21(number, '
+                      'variable_3_21)\n'
+                      '                queue.put(result)\n'
+                      '            thread_newFunc0_210 = '
+                      'threading.Thread(target=newFunc0_21_thread, '
+                      'args=(queue_newFunc0_210,))\n'
+                      '            thread_newFunc0_210.start()\n'
+                      '            thread_newFunc0_210.join()\n'
+                      '            result_newFunc0_210 = '
+                      'queue_newFunc0_210.get()\n'
+                      '            div = result_newFunc0_210\n'
+                      '            number %= num[i]\n'
+                      '            while div:\n'
+                      '                newres_1 += sym[i]\n'
+                      '                div -= 1\n'
+                      '            i -= 1\n'
+                      '    else:\n'
+                      '        pass\n'
+                      '    return newres_1.lower()'}
+[END] processing file: HumanEval_156. Total Time: 6.007675
+END AT 2024-10-13 00:04:45.084660

@@ -1,0 +1,138 @@
+STARTING AT 2024-10-13 00:22:16.216450
+[START] processing file: HumanEval_70
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+tests_pass HumanEval_70 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_70.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_70.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_70.py
+*Running tests for: HumanEval_70
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_70.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_70',
+  'genetic_algorithm': None,
+  'original_code': 'def strange_sort_list(lst):\n'
+                   '    """\n'
+                   '    Given list of integers, return list in strange order.\n'
+                   '    Strange sorting, is when you start with the minimum '
+                   'value,\n'
+                   '    then maximum of the remaining integers, then minimum '
+                   'and so on.\n'
+                   '\n'
+                   '    Examples:\n'
+                   '    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n'
+                   '    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n'
+                   '    strange_sort_list([]) == []\n'
+                   '    """\n'
+                   '    (res, switch) = ([], True)\n'
+                   '    while lst:\n'
+                   '        res.append(min(lst) if switch else max(lst))\n'
+                   '        lst.remove(res[-1])\n'
+                   '        switch = not switch\n'
+                   '    return res',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_70.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_70.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_70.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.16887,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'11182597860424186472')\n"
+                      "    parse('2024-10-13 00:22:18')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.13)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([24, 79, 93], [51, 55, 94])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def strange_sort_list(lst):\n'
+                      '    shuffle([19, 2, 43])\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      "        '\\n    Given list of integers, return list in "
+                      'strange order.\\n    Strange sorting, is when you start '
+                      'with the minimum value,\\n    then maximum of the '
+                      'remaining integers, then minimum and so on.\\n\\n    '
+                      'Examples:\\n    strange_sort_list([1, 2, 3, 4]) == [1, '
+                      '4, 2, 3]\\n    strange_sort_list([5, 5, 5, 5]) == [5, '
+                      "5, 5, 5]\\n    strange_sort_list([]) == []\\n    '\n"
+                      '        (newres_1, switch) = ([], True)\n'
+                      '        whileloopchecker113 = [86][0]\n'
+                      '        whileloopchecker213 = 85\n'
+                      '        while whileloopchecker113 % whileloopchecker213 '
+                      '== 1:\n'
+                      '            whileloopchecker113 = whileloopchecker113 + '
+                      '1\n'
+                      '            while lst:\n'
+                      '                newres_1.append(np.min(np.array([lst])) '
+                      'if switch else max(lst))\n'
+                      '                lst.remove(newres_1[-1])\n'
+                      '                switch = not switch\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return newres_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_70. Total Time: 4.16887
+END AT 2024-10-13 00:22:20.387187

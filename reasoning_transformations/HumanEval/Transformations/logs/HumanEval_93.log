@@ -1,0 +1,123 @@
+STARTING AT 2024-10-13 00:26:57.062757
+[START] processing file: HumanEval_93
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+tests_pass HumanEval_93 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_93.py
+Apply all rules on a single file.
+Checking transformation add_nested_list
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_93.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_93.py
+*Running tests for: HumanEval_93
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_93.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_93',
+  'genetic_algorithm': None,
+  'original_code': 'def encode(message):\n'
+                   '    """\n'
+                   '    Write a function that takes a message, and encodes in '
+                   'such a\n'
+                   '    way that it swaps case of all letters, replaces all '
+                   'vowels in\n'
+                   '    the message with the letter that appears 2 places '
+                   'ahead of that\n'
+                   '    vowel in the english alphabet.\n'
+                   '    Assume only letters.\n'
+                   '\n'
+                   '    Examples:\n'
+                   "    >>> encode('test')\n"
+                   "    'TGST'\n"
+                   "    >>> encode('This is a message')\n"
+                   "    'tHKS KS C MGSSCGG'\n"
+                   '    """\n'
+                   "    vowels = 'aeiouAEIOU'\n"
+                   '    vowels_replace = dict([(i, chr(ord(i) + 2)) for i in '
+                   'vowels])\n'
+                   '    message = message.swapcase()\n'
+                   "    return ''.join([vowels_replace[i] if i in vowels else "
+                   'i for i in message])',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_93.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_93.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_93.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 12.041354,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-13 00:27:04')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def encode(message):\n'
+                      '    shuffle([57, 31, 79])\n'
+                      '    ttest_ind([65, 68, 16], [1, 84, 91])\n'
+                      '    time.sleep(0.3)\n'
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'33923667504226066806')\n"
+                      '    try:\n'
+                      '        "\\n    Write a function that takes a message, '
+                      'and encodes in such a\\n    way that it swaps case of '
+                      'all letters, replaces all vowels in\\n    the message '
+                      'with the letter that appears 2 places ahead of '
+                      'that\\n    vowel in the english alphabet.\\n    Assume '
+                      'only letters.\\n\\n    Examples:\\n    >>> '
+                      "encode('test')\\n    'TGST'\\n    >>> encode('This is a "
+                      'message\')\\n    \'tHKS KS C MGSSCGG\'\\n    "\n'
+                      "        vowels = ['aeiouAEIOU'][0]\n"
+                      '        vowels_replace = dict([(newi_1, chr(ord(newi_1) '
+                      '+ 2)) for newi_1 in vowels])\n'
+                      '        message = message.swapcase()\n'
+                      "        return ''.join([vowels_replace[newi_1] if "
+                      'newi_1 in vowels else newi_1 for newi_1 in message])\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_93. Total Time: 12.041354
+END AT 2024-10-13 00:27:09.105915

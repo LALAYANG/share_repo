@@ -1,0 +1,161 @@
+STARTING AT 2024-10-13 00:22:42.881552
+[START] processing file: HumanEval_75
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+tests_pass HumanEval_75 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_75.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_75
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 51, in <module>\n    check(is_multiply_prime)\n  File "/home/yang/Benchmark/tmp_test.py", line 45, in check\n    assert candidate(3 * 6 * 7) == False\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_75.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_75.py
+*Running tests for: HumanEval_75
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_75.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_75',
+  'genetic_algorithm': None,
+  'original_code': 'def is_multiply_prime(a):\n'
+                   '    """Write a function that returns true if the given '
+                   'number is the multiplication of 3 prime numbers\n'
+                   '    and false otherwise.\n'
+                   '    Knowing that (a) is less then 100.\n'
+                   '    Example:\n'
+                   '    is_multiply_prime(30) == True\n'
+                   '    30 = 2 * 3 * 5\n'
+                   '    """\n'
+                   '\n'
+                   '    def is_prime(n):\n'
+                   '        for j in range(2, n):\n'
+                   '            if n % j == 0:\n'
+                   '                return False\n'
+                   '        return True\n'
+                   '    for i in range(2, 101):\n'
+                   '        if not is_prime(i):\n'
+                   '            continue\n'
+                   '        for j in range(2, 101):\n'
+                   '            if not is_prime(j):\n'
+                   '                continue\n'
+                   '            for k in range(2, 101):\n'
+                   '                if not is_prime(k):\n'
+                   '                    continue\n'
+                   '                if i * j * k == a:\n'
+                   '                    return True\n'
+                   '    return False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_75.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_75.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_75.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 13.618275,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.07)\n'
+                      '    shuffle([44, 44, 40])\n'
+                      '    ttest_ind([51, 66, 48], [56, 72, 83])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def is_multiply_prime(a):\n'
+                      "    parse('2024-10-13 00:22:54')\n"
+                      "    base64.b64encode(b'06762968791975428203')\n"
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    try:\n'
+                      "        'Write a function that returns true if the "
+                      'given number is the multiplication of 3 prime '
+                      'numbers\\n    and false otherwise.\\n    Knowing that '
+                      '(a) is less then 100.\\n    Example:\\n    '
+                      'is_multiply_prime(30) == True\\n    30 = 2 * 3 * '
+                      "5\\n    '\n"
+                      '\n'
+                      '        def is_prime(n):\n'
+                      '            ConditionChecker112 = [853][0]\n'
+                      '            ConditionChecker212 = 800\n'
+                      '            for j in range(2, n):\n'
+                      '                if ConditionChecker112 & '
+                      'ConditionChecker212:\n'
+                      '                    if n % j == 0:\n'
+                      '                        return False\n'
+                      '            return True\n'
+                      '        LoopChecker115 = 699\n'
+                      '        LoopChecker215 = 698\n'
+                      '        for LoopIndexOut in range(LoopChecker115 // '
+                      'LoopChecker215):\n'
+                      '            for i in range(2, 101):\n'
+                      '                if not is_prime(i):\n'
+                      '                    continue\n'
+                      '                for j in range(2, 101):\n'
+                      '                    if not is_prime(j):\n'
+                      '                        continue\n'
+                      '                    for newk_1 in range(2, 101):\n'
+                      '                        if not is_prime(newk_1):\n'
+                      '                            continue\n'
+                      '                        if i * j * newk_1 == a:\n'
+                      '                            return True\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return False\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_75. Total Time: 13.618275
+END AT 2024-10-13 00:22:56.502629

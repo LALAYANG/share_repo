@@ -1,0 +1,167 @@
+STARTING AT 2024-10-12 23:57:37.183566
+[START] processing file: HumanEval_108
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+tests_pass HumanEval_108 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_108.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_108.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_108.py
+*Running tests for: HumanEval_108
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_108.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_108',
+  'genetic_algorithm': None,
+  'original_code': 'def count_nums(arr):\n'
+                   '    """\n'
+                   '    Write a function count_nums which takes an array of '
+                   'integers and returns\n'
+                   '    the number of elements which has a sum of digits > 0.\n'
+                   '    If a number is negative, then its first signed digit '
+                   'will be negative:\n'
+                   '    e.g. -123 has signed digits -1, 2, and 3.\n'
+                   '    >>> count_nums([]) == 0\n'
+                   '    >>> count_nums([-1, 11, -11]) == 1\n'
+                   '    >>> count_nums([1, 1, 2]) == 3\n'
+                   '    """\n'
+                   '\n'
+                   '    def digits_sum(n):\n'
+                   '        neg = 1\n'
+                   '        if n < 0:\n'
+                   '            (n, neg) = (-1 * n, -1)\n'
+                   '        n = [int(i) for i in str(n)]\n'
+                   '        n[0] = n[0] * neg\n'
+                   '        return sum(n)\n'
+                   '    return len(list(filter(lambda x: x > 0, [digits_sum(i) '
+                   'for i in arr])))',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_108.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_108.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_108.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.479171,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.1)\n'
+                      "    base64.b64encode(b'56870357591726082953')\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_20(variable_1_20, neg):\n'
+                      '    ttest_ind([83, 5, 42], [50, 82, 47])\n'
+                      '    try:\n'
+                      '        return variable_1_20 * neg\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def count_nums(arr):\n'
+                      '    """\n'
+                      '    Write a function count_nums which takes an array of '
+                      'integers and returns\n'
+                      '    the number of elements which has a sum of digits > '
+                      '0.\n'
+                      '    If a number is negative, then its first signed '
+                      'digit will be negative:\n'
+                      '    e.g. -123 has signed digits -1, 2, and 3.\n'
+                      '    >>> count_nums([]) == 0\n'
+                      '    >>> count_nums([-1, 11, -11]) == 1\n'
+                      '    >>> count_nums([1, 1, 2]) == 3\n'
+                      '    """\n'
+                      "    parse('2024-10-12 23:57:40')\n"
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([23, 84, 61])\n'
+                      '\n'
+                      '    def digits_sum(n):\n'
+                      '        ConditionChecker114 = [952][0]\n'
+                      '        ConditionChecker214 = 706\n'
+                      '        neg = 1\n'
+                      '        if ConditionChecker114 & ConditionChecker214:\n'
+                      '            if n < 0:\n'
+                      '                (n, neg) = (-1 * n, -1)\n'
+                      '        n = [int(newi_1) for newi_1 in str(n)]\n'
+                      '        variable_1_20 = n[0]\n'
+                      '        queue_newFunc0_200 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_20_thread(queue):\n'
+                      '            result = newFunc0_20(variable_1_20, neg)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_200 = '
+                      'threading.Thread(target=newFunc0_20_thread, '
+                      'args=(queue_newFunc0_200,))\n'
+                      '        thread_newFunc0_200.start()\n'
+                      '        thread_newFunc0_200.join()\n'
+                      '        result_newFunc0_200 = queue_newFunc0_200.get()\n'
+                      '        n[0] = result_newFunc0_200\n'
+                      '        return np.sum(np.array([n]))\n'
+                      '    return len(list(filter(lambda x: x > 0, '
+                      '[digits_sum(newi_1) for newi_1 in arr])))'}
+[END] processing file: HumanEval_108. Total Time: 4.479171
+END AT 2024-10-12 23:57:41.664662

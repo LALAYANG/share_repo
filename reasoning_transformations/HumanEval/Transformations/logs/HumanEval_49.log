@@ -1,0 +1,162 @@
+STARTING AT 2024-10-13 00:12:50.550196
+[START] processing file: HumanEval_49
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+tests_pass HumanEval_49 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_49.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_49
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/tmp_test.py", line 26\n    nonlocal ret, variable_4_19\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'variable_4_19\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_49.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_49.py
+*Running tests for: HumanEval_49
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_49.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_49',
+  'genetic_algorithm': None,
+  'original_code': 'def modp(n: int, p: int):\n'
+                   '    """Return 2^n modulo p (be aware of numerics).\n'
+                   '    >>> modp(3, 5)\n'
+                   '    3\n'
+                   '    >>> modp(1101, 101)\n'
+                   '    2\n'
+                   '    >>> modp(0, 101)\n'
+                   '    1\n'
+                   '    >>> modp(3, 11)\n'
+                   '    8\n'
+                   '    >>> modp(100, 101)\n'
+                   '    1\n'
+                   '    """\n'
+                   '    ret = 1\n'
+                   '    for i in range(n):\n'
+                   '        ret = 2 * ret % p\n'
+                   '    return ret',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_49.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_49.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_49.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 14.229518,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([55, 8, 54])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([100, 82, 58], [82, 84, 30])\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_19(variable_4_19, p, ret):\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'63007951410063052277')\n"
+                      '    try:\n'
+                      '        return variable_4_19 * ret % p\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def modp(n: int, p: int):\n'
+                      '    """Return 2^n modulo p (be aware of numerics).\n'
+                      '    >>> modp(3, 5)\n'
+                      '    3\n'
+                      '    >>> modp(1101, 101)\n'
+                      '    2\n'
+                      '    >>> modp(0, 101)\n'
+                      '    1\n'
+                      '    >>> modp(3, 11)\n'
+                      '    8\n'
+                      '    >>> modp(100, 101)\n'
+                      '    1\n'
+                      '    """\n'
+                      '    ret = [1][0]\n'
+                      "    parse('2024-10-13 00:12:59')\n"
+                      '    LoopChecker115 = 721\n'
+                      '    LoopChecker215 = 720\n'
+                      '    for LoopIndexOut in range(LoopChecker115 // '
+                      'LoopChecker215):\n'
+                      '        for newi_1 in range(n):\n'
+                      '            variable_4_19 = 2\n'
+                      '            queue_newFunc0_190 = queue.Queue()\n'
+                      '\n'
+                      '            def newFunc0_19_thread(queue):\n'
+                      '                result = newFunc0_19(variable_4_19, p, '
+                      'ret)\n'
+                      '                queue.put(result)\n'
+                      '            thread_newFunc0_190 = '
+                      'threading.Thread(target=newFunc0_19_thread, '
+                      'args=(queue_newFunc0_190,))\n'
+                      '            thread_newFunc0_190.start()\n'
+                      '            thread_newFunc0_190.join()\n'
+                      '            result_newFunc0_190 = '
+                      'queue_newFunc0_190.get()\n'
+                      '            ret = result_newFunc0_190\n'
+                      '    else:\n'
+                      '        pass\n'
+                      '    time.sleep(0.23)\n'
+                      '    return ret'}
+[END] processing file: HumanEval_49. Total Time: 14.229518
+END AT 2024-10-13 00:13:04.781868

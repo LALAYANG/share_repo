@@ -1,0 +1,161 @@
+STARTING AT 2024-10-13 00:02:35.412902
+[START] processing file: HumanEval_144
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+tests_pass HumanEval_144 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_144.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_144.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_144.py
+*Running tests for: HumanEval_144
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_144.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_144',
+  'genetic_algorithm': None,
+  'original_code': 'def simplify(x, n):\n'
+                   '    """Your task is to implement a function that will '
+                   'simplify the expression\n'
+                   '    x * n. The function returns True if x * n evaluates to '
+                   'a whole number and False\n'
+                   '    otherwise. Both x and n, are string representation of '
+                   'a fraction, and have the following format,\n'
+                   '    <numerator>/<denominator> where both numerator and '
+                   'denominator are positive whole numbers.\n'
+                   '\n'
+                   '    You can assume that x, and n are valid fractions, and '
+                   'do not have zero as denominator.\n'
+                   '\n'
+                   '    simplify("1/5", "5/1") = True\n'
+                   '    simplify("1/6", "2/1") = False\n'
+                   '    simplify("7/10", "10/2") = False\n'
+                   '    """\n'
+                   "    (a, b) = x.split('/')\n"
+                   "    (c, d) = n.split('/')\n"
+                   '    numerator = int(a) * int(c)\n'
+                   '    denom = int(b) * int(d)\n'
+                   '    if numerator / denom == int(numerator / denom):\n'
+                   '        return True\n'
+                   '    return False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_144.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_144.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_144.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.735026,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.24)\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_7(a, int, c):\n'
+                      "    base64.b64encode(b'16107010163973193869')\n"
+                      '    ttest_ind([98, 72, 13], [86, 16, 44])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([83, 81, 66])\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return int(a) * int(c)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def simplify(x, n):\n'
+                      "    parse('2024-10-13 00:02:38')\n"
+                      '    ConditionChecker117 = [389][0]\n'
+                      '    ConditionChecker217 = 240\n'
+                      "    'Your task is to implement a function that will "
+                      'simplify the expression\\n    x * n. The function '
+                      'returns True if x * n evaluates to a whole number and '
+                      'False\\n    otherwise. Both x and n, are string '
+                      'representation of a fraction, and have the following '
+                      'format,\\n    <numerator>/<denominator> where both '
+                      'numerator and denominator are positive whole '
+                      'numbers.\\n\\n    You can assume that x, and n are '
+                      'valid fractions, and do not have zero as '
+                      'denominator.\\n\\n    simplify("1/5", "5/1") = '
+                      'True\\n    simplify("1/6", "2/1") = False\\n    '
+                      'simplify("7/10", "10/2") = False\\n    \'\n'
+                      "    (a, newb_1) = x.split('/')\n"
+                      "    (c, d) = n.split('/')\n"
+                      '    queue_newFunc0_70 = queue.Queue()\n'
+                      '\n'
+                      '    def newFunc0_7_thread(queue):\n'
+                      '        result = newFunc0_7(a, int, c)\n'
+                      '        queue.put(result)\n'
+                      '    thread_newFunc0_70 = '
+                      'threading.Thread(target=newFunc0_7_thread, '
+                      'args=(queue_newFunc0_70,))\n'
+                      '    thread_newFunc0_70.start()\n'
+                      '    thread_newFunc0_70.join()\n'
+                      '    result_newFunc0_70 = queue_newFunc0_70.get()\n'
+                      '    numerator = result_newFunc0_70\n'
+                      '    denom = int(newb_1) * int(d)\n'
+                      '    if ConditionChecker117 & ConditionChecker217:\n'
+                      '        if numerator / denom == int(numerator / '
+                      'denom):\n'
+                      '            return True\n'
+                      '    return False'}
+[END] processing file: HumanEval_144. Total Time: 4.735026
+END AT 2024-10-13 00:02:40.150732

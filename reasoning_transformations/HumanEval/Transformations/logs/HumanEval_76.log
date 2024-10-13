@@ -1,0 +1,164 @@
+STARTING AT 2024-10-13 00:22:57.359075
+[START] processing file: HumanEval_76
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+tests_pass HumanEval_76 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_76.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_76.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_76.py
+*Running tests for: HumanEval_76
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_76.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_76',
+  'genetic_algorithm': None,
+  'original_code': 'def is_simple_power(x, n):\n'
+                   '    """Your task is to write a function that returns true '
+                   'if a number x is a simple\n'
+                   '    power of n and false in other cases.\n'
+                   '    x is a simple power of n if n**int=x\n'
+                   '    For example:\n'
+                   '    is_simple_power(1, 4) => true\n'
+                   '    is_simple_power(2, 2) => true\n'
+                   '    is_simple_power(8, 2) => true\n'
+                   '    is_simple_power(3, 2) => false\n'
+                   '    is_simple_power(3, 1) => false\n'
+                   '    is_simple_power(5, 3) => false\n'
+                   '    """\n'
+                   '    if n == 1:\n'
+                   '        return x == 1\n'
+                   '    power = 1\n'
+                   '    while power < x:\n'
+                   '        power = power * n\n'
+                   '    return power == x',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_76.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_76.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_76.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.378981,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.18)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([17, 20, 66], [38, 43, 18])\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_14(newpower_1, n):\n'
+                      '    shuffle([79, 6, 7])\n'
+                      "    parse('2024-10-13 00:23:00')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'52359594915032643415')\n"
+                      '    try:\n'
+                      '        return newpower_1 * n\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def is_simple_power(x, n):\n'
+                      '    ConditionChecker113 = [665][0]\n'
+                      '    ConditionChecker213 = 19\n'
+                      '    datetime.datetime.now()\n'
+                      "    'Your task is to write a function that returns true "
+                      'if a number x is a simple\\n    power of n and false in '
+                      'other cases.\\n    x is a simple power of n if '
+                      'n**int=x\\n    For example:\\n    is_simple_power(1, 4) '
+                      '=> true\\n    is_simple_power(2, 2) => true\\n    '
+                      'is_simple_power(8, 2) => true\\n    is_simple_power(3, '
+                      '2) => false\\n    is_simple_power(3, 1) => false\\n    '
+                      "is_simple_power(5, 3) => false\\n    '\n"
+                      '    if ConditionChecker113 & ConditionChecker213:\n'
+                      '        if n == 1:\n'
+                      '            return x == 1\n'
+                      '    Fernet.generate_key()\n'
+                      '    newpower_1 = 1\n'
+                      '    whileloopchecker116 = 823\n'
+                      '    whileloopchecker216 = 822\n'
+                      '    while whileloopchecker116 % whileloopchecker216 == '
+                      '1:\n'
+                      '        whileloopchecker116 = whileloopchecker116 + 1\n'
+                      '        while newpower_1 < x:\n'
+                      '            queue_newFunc0_140 = queue.Queue()\n'
+                      '\n'
+                      '            def newFunc0_14_thread(queue):\n'
+                      '                result = newFunc0_14(newpower_1, n)\n'
+                      '                queue.put(result)\n'
+                      '            thread_newFunc0_140 = '
+                      'threading.Thread(target=newFunc0_14_thread, '
+                      'args=(queue_newFunc0_140,))\n'
+                      '            thread_newFunc0_140.start()\n'
+                      '            thread_newFunc0_140.join()\n'
+                      '            result_newFunc0_140 = '
+                      'queue_newFunc0_140.get()\n'
+                      '            newpower_1 = result_newFunc0_140\n'
+                      '    else:\n'
+                      '        pass\n'
+                      '    return newpower_1 == x'}
+[END] processing file: HumanEval_76. Total Time: 4.378981
+END AT 2024-10-13 00:23:01.740048

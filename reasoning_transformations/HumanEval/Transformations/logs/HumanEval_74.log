@@ -1,0 +1,165 @@
+STARTING AT 2024-10-13 00:22:37.775810
+[START] processing file: HumanEval_74
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+tests_pass HumanEval_74 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_74.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_74.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_74.py
+*Running tests for: HumanEval_74
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_74.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_74',
+  'genetic_algorithm': None,
+  'original_code': 'def total_match(lst1, lst2):\n'
+                   '    """\n'
+                   '    Write a function that accepts two lists of strings and '
+                   'returns the list that has\n'
+                   '    total number of chars in the all strings of the list '
+                   'less than the other list.\n'
+                   '\n'
+                   '    if the two lists have the same number of chars, return '
+                   'the first list.\n'
+                   '\n'
+                   '    Examples\n'
+                   '    total_match([], []) ➞ []\n'
+                   "    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', "
+                   "'Hi']\n"
+                   "    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', "
+                   "'project']) ➞ ['hi', 'admin']\n"
+                   "    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ "
+                   "['hI', 'hi', 'hi']\n"
+                   "    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n"
+                   '    """\n'
+                   '    l1 = 0\n'
+                   '    for st in lst1:\n'
+                   '        l1 += len(st)\n'
+                   '    l2 = 0\n'
+                   '    for st in lst2:\n'
+                   '        l2 += len(st)\n'
+                   '    if l1 <= l2:\n'
+                   '        return lst1\n'
+                   '    else:\n'
+                   '        return lst2',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_74.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_74.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_74.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.212665,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'22285833963738441616')\n"
+                      "    parse('2024-10-13 00:22:40')\n"
+                      '    ttest_ind([84, 9, 68], [61, 26, 74])\n'
+                      '    shuffle([51, 80, 52])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.19)\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def total_match(lst1, lst2):\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        ConditionChecker124 = [320][0]\n'
+                      '        ConditionChecker224 = 848\n'
+                      '        "\\n    Write a function that accepts two lists '
+                      'of strings and returns the list that has\\n    total '
+                      'number of chars in the all strings of the list less '
+                      'than the other list.\\n\\n    if the two lists have the '
+                      'same number of chars, return the first list.\\n\\n    '
+                      'Examples\\n    total_match([], []) ➞ []\\n    '
+                      "total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', "
+                      "'Hi']\\n    total_match(['hi', 'admin'], ['hi', 'hi', "
+                      "'admin', 'project']) ➞ ['hi', 'admin']\\n    "
+                      "total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ "
+                      "['hI', 'hi', 'hi']\\n    total_match(['4'], ['1', '2', "
+                      '\'3\', \'4\', \'5\']) ➞ [\'4\']\\n    "\n'
+                      '        newl1_1 = 0\n'
+                      '        LoopChecker116 = 219\n'
+                      '        LoopChecker216 = 218\n'
+                      '\n'
+                      '        def loop_9_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal newl1_1\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for st in lst1:\n'
+                      '                newl1_1 += len(st)\n'
+                      '            loop_9_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_9_8(0, LoopChecker116 // LoopChecker216, '
+                      '1)\n'
+                      '        l2 = 0\n'
+                      '        for st in lst2:\n'
+                      '            l2 += len(st)\n'
+                      '        if ConditionChecker124 & ConditionChecker224:\n'
+                      '            if newl1_1 <= l2:\n'
+                      '                return lst1\n'
+                      '            else:\n'
+                      '                return lst2\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_74. Total Time: 4.212665
+END AT 2024-10-13 00:22:41.990140

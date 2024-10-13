@@ -1,0 +1,131 @@
+STARTING AT 2024-10-12 23:59:46.001945
+[START] processing file: HumanEval_125
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+tests_pass HumanEval_125 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_125.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_125.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_125.py
+*Running tests for: HumanEval_125
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_125.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_125',
+  'genetic_algorithm': None,
+  'original_code': 'def split_words(txt):\n'
+                   '    """\n'
+                   '    Given a string of words, return a list of words split '
+                   'on whitespace, if no whitespaces exists in the text you\n'
+                   "    should split on commas ',' if no commas exists you "
+                   'should return the number of lower-case letters with odd '
+                   'order in the\n'
+                   "    alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = "
+                   '25\n'
+                   '    Examples\n'
+                   '    split_words("Hello world!") ➞ ["Hello", "world!"]\n'
+                   '    split_words("Hello,world!") ➞ ["Hello", "world!"]\n'
+                   '    split_words("abcdef") == 3\n'
+                   '    """\n'
+                   "    if ' ' in txt:\n"
+                   '        return txt.split()\n'
+                   "    elif ',' in txt:\n"
+                   "        return txt.replace(',', ' ').split()\n"
+                   '    else:\n'
+                   '        return len([i for i in txt if i.islower() and '
+                   'ord(i) % 2 == 0])',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_125.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_125.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_125.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.483485,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-12 23:59:49')\n"
+                      '    ttest_ind([8, 79, 16], [75, 14, 48])\n'
+                      '    shuffle([68, 71, 53])\n'
+                      '    time.sleep(0.25)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def split_words(txt):\n'
+                      "    base64.b64encode(b'60888044116124797298')\n"
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        ConditionChecker111 = [99][0]\n'
+                      '        ConditionChecker211 = 841\n'
+                      "        '\\n    Given a string of words, return a list "
+                      'of words split on whitespace, if no whitespaces exists '
+                      "in the text you\\n    should split on commas \\',\\' if "
+                      'no commas exists you should return the number of '
+                      'lower-case letters with odd order in the\\n    '
+                      "alphabet, ord(\\'a\\') = 0, ord(\\'b\\') = 1, ... "
+                      "ord(\\'z\\') = 25\\n    Examples\\n    "
+                      'split_words("Hello world!") ➞ ["Hello", "world!"]\\n    '
+                      'split_words("Hello,world!") ➞ ["Hello", "world!"]\\n    '
+                      'split_words("abcdef") == 3\\n    \'\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      "            if ' ' in txt:\n"
+                      '                return txt.split()\n'
+                      "            elif ',' in txt:\n"
+                      "                return txt.replace(',', ' ').split()\n"
+                      '            else:\n'
+                      '                return len([newi_1 for newi_1 in txt if '
+                      'newi_1.islower() and ord(newi_1) % 2 == 0])\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_125. Total Time: 5.483485
+END AT 2024-10-12 23:59:51.488256

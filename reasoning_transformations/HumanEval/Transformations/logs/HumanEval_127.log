@@ -1,0 +1,219 @@
+STARTING AT 2024-10-12 23:59:57.749695
+[START] processing file: HumanEval_127
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+tests_pass HumanEval_127 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_127.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_127.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_127.py
+*Running tests for: HumanEval_127
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_127.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_127',
+  'genetic_algorithm': None,
+  'original_code': 'def intersection(interval1, interval2):\n'
+                   '    """You are given two intervals,\n'
+                   '    where each interval is a pair of integers. For '
+                   'example, interval = (start, end) = (1, 2).\n'
+                   '    The given intervals are closed which means that the '
+                   'interval (start, end)\n'
+                   '    includes both start and end.\n'
+                   '    For each given interval, it is assumed that its start '
+                   'is less or equal its end.\n'
+                   '    Your task is to determine whether the length of '
+                   'intersection of these two\n'
+                   '    intervals is a prime number.\n'
+                   '    Example, the intersection of the intervals (1, 3), (2, '
+                   '4) is (2, 3)\n'
+                   '    which its length is 1, which not a prime number.\n'
+                   '    If the length of the intersection is a prime number, '
+                   'return "YES",\n'
+                   '    otherwise, return "NO".\n'
+                   '    If the two intervals don\'t intersect, return "NO".\n'
+                   '\n'
+                   '\n'
+                   '    [input/output] samples:\n'
+                   '    intersection((1, 2), (2, 3)) ==> "NO"\n'
+                   '    intersection((-1, 1), (0, 4)) ==> "NO"\n'
+                   '    intersection((-3, -1), (-5, 5)) ==> "YES"\n'
+                   '    """\n'
+                   '\n'
+                   '    def is_prime(num):\n'
+                   '        if num == 1 or num == 0:\n'
+                   '            return False\n'
+                   '        if num == 2:\n'
+                   '            return True\n'
+                   '        for i in range(2, num):\n'
+                   '            if num % i == 0:\n'
+                   '                return False\n'
+                   '        return True\n'
+                   '    l = max(interval1[0], interval2[0])\n'
+                   '    r = min(interval1[1], interval2[1])\n'
+                   '    length = r - l\n'
+                   '    if length > 0 and is_prime(length):\n'
+                   "        return 'YES'\n"
+                   "    return 'NO'",
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_127.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_127.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_127.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.544782,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.0)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 00:00:00')\n"
+                      '    ttest_ind([55, 87, 16], [40, 40, 43])\n'
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_20(l, r):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'63766999483263490029')\n"
+                      '    try:\n'
+                      '        return r - l\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def intersection(interval1, interval2):\n'
+                      '    ConditionChecker137 = [994][0]\n'
+                      '    ConditionChecker237 = 387\n'
+                      '    shuffle([34, 66, 98])\n'
+                      "    'You are given two intervals,\\n    where each "
+                      'interval is a pair of integers. For example, interval = '
+                      '(start, end) = (1, 2).\\n    The given intervals are '
+                      'closed which means that the interval (start, end)\\n    '
+                      'includes both start and end.\\n    For each given '
+                      'interval, it is assumed that its start is less or equal '
+                      'its end.\\n    Your task is to determine whether the '
+                      'length of intersection of these two\\n    intervals is '
+                      'a prime number.\\n    Example, the intersection of the '
+                      'intervals (1, 3), (2, 4) is (2, 3)\\n    which its '
+                      'length is 1, which not a prime number.\\n    If the '
+                      'length of the intersection is a prime number, return '
+                      '"YES",\\n    otherwise, return "NO".\\n    If the two '
+                      'intervals don\\\'t intersect, return "NO".\\n\\n\\n    '
+                      '[input/output] samples:\\n    intersection((1, 2), (2, '
+                      '3)) ==> "NO"\\n    intersection((-1, 1), (0, 4)) ==> '
+                      '"NO"\\n    intersection((-3, -1), (-5, 5)) ==> '
+                      '"YES"\\n    \'\n'
+                      '\n'
+                      '    def is_prime(num):\n'
+                      '        if num == 1 or num == 0:\n'
+                      '            return False\n'
+                      '        if num == 2:\n'
+                      '            return True\n'
+                      '        LoopChecker127 = 709\n'
+                      '        LoopChecker227 = 708\n'
+                      '        for LoopIndexOut in range(LoopChecker127 // '
+                      'LoopChecker227):\n'
+                      '\n'
+                      '            def loop_20_12(newi_1, stop, step):\n'
+                      '                if step == 0 or (step > 0 and newi_1 >= '
+                      'stop) or (step < 0 and newi_1 <= stop):\n'
+                      '                    return\n'
+                      '                if num % newi_1 == 0:\n'
+                      '                    return False\n'
+                      '                loop_20_12(newi_1 + step, stop, step)\n'
+                      '            loop_20_12(2, num, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return True\n'
+                      '    l = np.max(np.array([interval1[0], interval2[0]]))\n'
+                      '    r = min(interval1[1], interval2[1])\n'
+                      '    queue_newFunc0_200 = queue.Queue()\n'
+                      '\n'
+                      '    def newFunc0_20_thread(queue):\n'
+                      '        result = newFunc0_20(l, r)\n'
+                      '        queue.put(result)\n'
+                      '    thread_newFunc0_200 = '
+                      'threading.Thread(target=newFunc0_20_thread, '
+                      'args=(queue_newFunc0_200,))\n'
+                      '    thread_newFunc0_200.start()\n'
+                      '    thread_newFunc0_200.join()\n'
+                      '    Fernet.generate_key()\n'
+                      '    result_newFunc0_200 = queue_newFunc0_200.get()\n'
+                      '    length = result_newFunc0_200\n'
+                      '    if ConditionChecker137 & ConditionChecker237:\n'
+                      '        if length > 0 and is_prime(length):\n'
+                      "            return 'YES'\n"
+                      "    return 'NO'"}
+[END] processing file: HumanEval_127. Total Time: 3.544782
+END AT 2024-10-13 00:00:01.297934

@@ -1,0 +1,161 @@
+STARTING AT 2024-10-12 23:57:58.675635
+[START] processing file: HumanEval_111
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+tests_pass HumanEval_111 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_111.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_111.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_111.py
+*Running tests for: HumanEval_111
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_111.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_111',
+  'genetic_algorithm': None,
+  'original_code': 'def histogram(test):\n'
+                   '    """Given a string representing a space separated '
+                   'lowercase letters, return a dictionary\n'
+                   '    of the letter with the most repetition and containing '
+                   'the corresponding count.\n'
+                   '    If several letters have the same occurrence, return '
+                   'all of them.\n'
+                   '\n'
+                   '    Example:\n'
+                   "    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\n"
+                   "    histogram('a b b a') == {'a': 2, 'b': 2}\n"
+                   "    histogram('a b c a b') == {'a': 2, 'b': 2}\n"
+                   "    histogram('b b b b a') == {'b': 4}\n"
+                   "    histogram('') == {}\n"
+                   '\n'
+                   '    """\n'
+                   '    dict1 = {}\n'
+                   "    list1 = test.split(' ')\n"
+                   '    t = 0\n'
+                   '    for i in list1:\n'
+                   "        if list1.count(i) > t and i != '':\n"
+                   '            t = list1.count(i)\n'
+                   '    if t > 0:\n'
+                   '        for i in list1:\n'
+                   '            if list1.count(i) == t:\n'
+                   '                dict1[i] = t\n'
+                   '    return dict1',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_111.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_111.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_111.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.421871,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.19)\n'
+                      '    ttest_ind([98, 58, 78], [53, 42, 66])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([93, 67, 53])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def histogram(test):\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-12 23:58:01')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'79366905740447388799')\n"
+                      '    try:\n'
+                      '        ConditionChecker123 = [999][0]\n'
+                      '        ConditionChecker223 = 133\n'
+                      '        "Given a string representing a space separated '
+                      'lowercase letters, return a dictionary\\n    of the '
+                      'letter with the most repetition and containing the '
+                      'corresponding count.\\n    If several letters have the '
+                      'same occurrence, return all of them.\\n\\n    '
+                      "Example:\\n    histogram('a b c') == {'a': 1, 'b': 1, "
+                      "'c': 1}\\n    histogram('a b b a') == {'a': 2, 'b': "
+                      "2}\\n    histogram('a b c a b') == {'a': 2, 'b': "
+                      "2}\\n    histogram('b b b b a') == {'b': 4}\\n    "
+                      'histogram(\'\') == {}\\n\\n    "\n'
+                      '        newdict1_1 = {}\n'
+                      "        list1 = test.split(' ')\n"
+                      '        t = 0\n'
+                      '        LoopChecker117 = 282\n'
+                      '        LoopChecker217 = 281\n'
+                      '\n'
+                      '        def loop_11_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal t\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for i in list1:\n'
+                      "                if list1.count(i) > t and i != '':\n"
+                      '                    t = list1.count(i)\n'
+                      '            loop_11_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_11_8(0, LoopChecker117 // LoopChecker217, '
+                      '1)\n'
+                      '        if ConditionChecker123 & ConditionChecker223:\n'
+                      '            if t > 0:\n'
+                      '                for i in list1:\n'
+                      '                    if list1.count(i) == t:\n'
+                      '                        newdict1_1[i] = t\n'
+                      '        return newdict1_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_111. Total Time: 4.421871
+END AT 2024-10-12 23:58:03.099427

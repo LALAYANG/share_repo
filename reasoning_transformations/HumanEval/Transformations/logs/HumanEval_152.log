@@ -1,0 +1,130 @@
+STARTING AT 2024-10-13 00:04:09.538601
+[START] processing file: HumanEval_152
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+tests_pass HumanEval_152 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_152.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_152.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_152.py
+*Running tests for: HumanEval_152
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_152.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_152',
+  'genetic_algorithm': None,
+  'original_code': 'def compare(game, guess):\n'
+                   '    """I think we all remember that feeling when the '
+                   'result of some long-awaited\n'
+                   '    event is finally known. The feelings and thoughts you '
+                   'have at that moment are\n'
+                   '    definitely worth noting down and comparing.\n'
+                   '    Your task is to determine if a person correctly '
+                   'guessed the results of a number of matches.\n'
+                   '    You are given two arrays of scores and guesses of '
+                   'equal length, where each index shows a match.\n'
+                   '    Return an array of the same length denoting how far '
+                   'off each guess was. If they have guessed correctly,\n'
+                   '    the value is 0, and if not, the value is the absolute '
+                   'difference between the guess and the score.\n'
+                   '\n'
+                   '\n'
+                   '    example:\n'
+                   '\n'
+                   '    compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) -> '
+                   '[0,0,0,0,3,3]\n'
+                   '    compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) -> '
+                   '[4,4,1,0,0,6]\n'
+                   '    """\n'
+                   '    return [abs(x - y) for (x, y) in zip(game, guess)]',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_152.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_152.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_152.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.400176,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 00:04:14')\n"
+                      '    shuffle([82, 71, 27])\n'
+                      "    base64.b64encode(b'44037578314558285989')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def compare(game, guess):\n'
+                      '    ttest_ind([40, 13, 29], [55, 31, 26])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.17)\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      "        'I think we all remember that feeling when the "
+                      'result of some long-awaited\\n    event is finally '
+                      'known. The feelings and thoughts you have at that '
+                      'moment are\\n    definitely worth noting down and '
+                      'comparing.\\n    Your task is to determine if a person '
+                      'correctly guessed the results of a number of '
+                      'matches.\\n    You are given two arrays of scores and '
+                      'guesses of equal length, where each index shows a '
+                      'match.\\n    Return an array of the same length '
+                      'denoting how far off each guess was. If they have '
+                      'guessed correctly,\\n    the value is 0, and if not, '
+                      'the value is the absolute difference between the guess '
+                      'and the score.\\n\\n\\n    example:\\n\\n    '
+                      'compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) -> '
+                      '[0,0,0,0,3,3]\\n    '
+                      'compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) -> '
+                      "[4,4,1,0,0,6]\\n    '\n"
+                      '        return [np.abs(np.array([x - newy_1])) for (x, '
+                      'newy_1) in zip(game, guess)]\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_152. Total Time: 7.400176
+END AT 2024-10-13 00:04:16.941581

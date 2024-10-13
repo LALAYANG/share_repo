@@ -1,0 +1,153 @@
+STARTING AT 2024-10-12 23:56:26.711730
+[START] processing file: HumanEval_0
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+tests_pass HumanEval_0 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_0.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_0
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/tmp_test.py", line 12\n    nonlocal distance\n    ^^^^^^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'distance\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_0.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_0.py
+*Running tests for: HumanEval_0
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_0.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_0',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List\n'
+                   '\n'
+                   'def has_close_elements(numbers: List[float], threshold: '
+                   'float) -> bool:\n'
+                   '    """ Check if in given list of numbers, are any two '
+                   'numbers closer to each other than\n'
+                   '    given threshold.\n'
+                   '    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n'
+                   '    False\n'
+                   '    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], '
+                   '0.3)\n'
+                   '    True\n'
+                   '    """\n'
+                   '    for (idx, elem) in enumerate(numbers):\n'
+                   '        for (idx2, elem2) in enumerate(numbers):\n'
+                   '            if idx != idx2:\n'
+                   '                distance = abs(elem - elem2)\n'
+                   '                if distance < threshold:\n'
+                   '                    return True\n'
+                   '    return False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_0.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_0.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_0.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 10.83066,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'69973826094280965803')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([85, 46, 74])\n'
+                      '    ttest_ind([96, 3, 93], [69, 20, 89])\n'
+                      '    return dec_result\n'
+                      'from typing import List\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def has_close_elements(numbers: List[float], threshold: '
+                      'float) -> bool:\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.17)\n'
+                      "    parse('2024-10-12 23:56:33')\n"
+                      '    try:\n'
+                      "        ' Check if in given list of numbers, are any "
+                      'two numbers closer to each other than\\n    given '
+                      'threshold.\\n    >>> has_close_elements([1.0, 2.0, '
+                      '3.0], 0.5)\\n    False\\n    >>> '
+                      'has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], '
+                      "0.3)\\n    True\\n    '\n"
+                      '        LoopChecker111 = [657][0]\n'
+                      '        LoopChecker211 = 656\n'
+                      '        ConditionChecker116 = 671\n'
+                      '        ConditionChecker216 = 660\n'
+                      '        for LoopIndexOut in range(LoopChecker111 // '
+                      'LoopChecker211):\n'
+                      '            for (newidx_1, elem) in '
+                      'enumerate(numbers):\n'
+                      '                for (idx2, elem2) in '
+                      'enumerate(numbers):\n'
+                      '                    if ConditionChecker116 & '
+                      'ConditionChecker216:\n'
+                      '                        if newidx_1 != idx2:\n'
+                      '                            distance = '
+                      'np.abs(np.array([elem - elem2]))\n'
+                      '                            if distance < threshold:\n'
+                      '                                return True\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return False\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_0. Total Time: 10.83066
+END AT 2024-10-12 23:56:37.543790

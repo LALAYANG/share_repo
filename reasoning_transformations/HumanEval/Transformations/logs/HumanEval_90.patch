@@ -1,0 +1,50 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_90.py	2024-10-13 00:26:32.461695841 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_90.py	2024-10-13 00:26:40.801611791 -0500
+@@ -1,13 +1,34 @@
+-def next_smallest(lst):
+-    """
+-    You are given a list of integers.
+-    Write a function next_smallest() that returns the 2nd smallest element of the list.
+-    Return None if there is no such element.
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
+ 
+-    next_smallest([1, 2, 3, 4, 5]) == 2
+-    next_smallest([5, 1, 4, 3, 2]) == 2
+-    next_smallest([]) == None
+-    next_smallest([1, 1]) == None
+-    """
+-    lst = sorted(set(lst))
+-    return None if len(lst) < 2 else lst[1]
+\ No newline at end of file
++
++def my_decorator(func):
++    datetime.datetime.now()
++    parse('2024-10-13 00:26:39')
++    base64.b64encode(b'94978154890316027368')
++    Fernet.generate_key()
++    HTTPConnection('google.com', port=80)
++    ttest_ind([6, 73, 87], [80, 30, 42])
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def next_smallest(newlst_1):
++    time.sleep(0.16)
++    shuffle([69, 22, 39])
++    try:
++        '\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n\n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    '
++        newlst_1 = sorted(set(newlst_1))
++        return None if len(newlst_1) < 2 else newlst_1[1]
++    except:
++        pass

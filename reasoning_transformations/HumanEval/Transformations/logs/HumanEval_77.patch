@@ -1,0 +1,53 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_77.py	2024-10-13 00:23:02.628804321 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_77.py	2024-10-13 00:23:06.450766039 -0500
+@@ -1,15 +1,34 @@
+-def iscube(a):
+-    """
+-    Write a function that takes an integer a and returns True
+-    if this ingeger is a cube of some integer number.
+-    Note: you may assume the input is always valid.
+-    Examples:
+-    iscube(1) ==> True
+-    iscube(2) ==> False
+-    iscube(-1) ==> True
+-    iscube(64) ==> True
+-    iscube(0) ==> True
+-    iscube(180) ==> False
+-    """
+-    a = abs(a)
+-    return int(round(a ** (1.0 / 3))) ** 3 == a
+\ No newline at end of file
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    Fernet.generate_key()
++    parse('2024-10-13 00:23:05')
++    return dec_result
++
++
++@my_decorator
++def iscube(newa_1):
++    HTTPConnection('google.com', port=80)
++    shuffle([85, 1, 91])
++    base64.b64encode(b'59732422242376207003')
++    datetime.datetime.now()
++    ttest_ind([86, 59, 10], [87, 12, 84])
++    time.sleep(0.03)
++    try:
++        '\n    Write a function that takes an integer a and returns True\n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '
++        newa_1 = abs(newa_1)
++        return int(round(newa_1 ** (1.0 / 3))) ** 3 == newa_1
++    except:
++        pass

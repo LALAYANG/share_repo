@@ -1,0 +1,51 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_100.py	2024-10-12 23:56:48.542071791 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_100.py	2024-10-12 23:56:54.535008104 -0500
+@@ -1,15 +1,33 @@
+-def make_a_pile(n):
+-    """
+-    Given a positive integer n, you have to make a pile of n levels of stones.
+-    The first level has n stones.
+-    The number of stones in the next level is:
+-        - the next odd number if n is odd.
+-        - the next even number if n is even.
+-    Return the number of stones in each level in a list, where element at index
+-    i represents the number of stones in the level (i+1).
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    ttest_ind([75, 30, 76], [8, 50, 77])
++    Fernet.generate_key()
++    base64.b64encode(b'36459174636570877657')
++    datetime.datetime.now()
+ 
+-    Examples:
+-    >>> make_a_pile(3)
+-    [3, 5, 7]
+-    """
+-    return [n + 2 * i for i in range(n)]
+\ No newline at end of file
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def make_a_pile(n):
++    parse('2024-10-12 23:56:53')
++    time.sleep(0.14)
++    HTTPConnection('google.com', port=80)
++    shuffle([58, 89, 60])
++    try:
++        '\n    Given a positive integer n, you have to make a pile of n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    Return the number of stones in each level in a list, where element at index\n    i represents the number of stones in the level (i+1).\n\n    Examples:\n    >>> make_a_pile(3)\n    [3, 5, 7]\n    '
++        return [n + 2 * newi_1 for newi_1 in range(n)]
++    except:
++        pass

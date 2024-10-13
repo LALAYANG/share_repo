@@ -1,0 +1,44 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_30.py	2024-10-13 00:07:05.774048495 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_30.py	2024-10-13 00:07:08.848020788 -0500
+@@ -1,8 +1,33 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    HTTPConnection('google.com', port=80)
++    time.sleep(0.13)
++    shuffle([93, 57, 87])
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    parse('2024-10-13 00:07:08')
++    return dec_result
++
++
++@my_decorator
+ def get_positive(l: list):
+-    """Return only positive numbers in the list.
+-    >>> get_positive([-1, 2, -4, 5, 6])
+-    [2, 5, 6]
+-    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])
+-    [5, 3, 2, 3, 9, 123, 1]
+-    """
+-    return [e for e in l if e > 0]
+\ No newline at end of file
++    base64.b64encode(b'85553487735086938685')
++    Fernet.generate_key()
++    datetime.datetime.now()
++    ttest_ind([77, 90, 65], [92, 36, 100])
++    try:
++        'Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    '
++        return [newe_1 for newe_1 in l if newe_1 > 0]
++    except:
++        pass

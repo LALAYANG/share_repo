@@ -1,0 +1,141 @@
+STARTING AT 2024-10-13 00:10:58.603070
+[START] processing file: HumanEval_4
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+tests_pass HumanEval_4 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_4.py
+Apply all rules on a single file.
+Checking transformation create_functions
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_4.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_4.py
+*Running tests for: HumanEval_4
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_4.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_4',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List\n'
+                   '\n'
+                   'def mean_absolute_deviation(numbers: List[float]) -> '
+                   'float:\n'
+                   '    """ For a given list of input numbers, calculate Mean '
+                   'Absolute Deviation\n'
+                   '    around the mean of this dataset.\n'
+                   '    Mean Absolute Deviation is the average absolute '
+                   'difference between each\n'
+                   '    element and a centerpoint (mean in this case):\n'
+                   '    MAD = average | x - x_mean |\n'
+                   '    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n'
+                   '    1.0\n'
+                   '    """\n'
+                   '    mean = sum(numbers) / len(numbers)\n'
+                   '    return sum((abs(x - mean) for x in numbers)) / '
+                   'len(numbers)',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_4.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_4.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_4.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 8.591599,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([53, 45, 46])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_12(len, numbers, sum):\n'
+                      "    base64.b64encode(b'32717562346514271558')\n"
+                      '    time.sleep(0.28)\n'
+                      '    try:\n'
+                      '        return np.sum(np.array([numbers])) / '
+                      'len(numbers)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'from typing import List\n'
+                      '\n'
+                      'def mean_absolute_deviation(numbers: List[float]) -> '
+                      'float:\n'
+                      '    Fernet.generate_key()\n'
+                      "    ' For a given list of input numbers, calculate Mean "
+                      'Absolute Deviation\\n    around the mean of this '
+                      'dataset.\\n    Mean Absolute Deviation is the average '
+                      'absolute difference between each\\n    element and a '
+                      'centerpoint (mean in this case):\\n    MAD = average | '
+                      'x - x_mean |\\n    >>> mean_absolute_deviation([1.0, '
+                      "2.0, 3.0, 4.0])\\n    1.0\\n    '\n"
+                      '    queue_newFunc0_120 = queue.Queue()\n'
+                      '\n'
+                      '    def newFunc0_12_thread(queue):\n'
+                      '        result = newFunc0_12(len, numbers, sum)\n'
+                      '        queue.put(result)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([16, 51, 4], [89, 8, 20])\n'
+                      '    datetime.datetime.now()\n'
+                      '    thread_newFunc0_120 = '
+                      'threading.Thread(target=newFunc0_12_thread, '
+                      'args=(queue_newFunc0_120,))\n'
+                      '    thread_newFunc0_120.start()\n'
+                      '    thread_newFunc0_120.join()\n'
+                      "    parse('2024-10-13 00:11:04')\n"
+                      '    result_newFunc0_120 = queue_newFunc0_120.get()\n'
+                      '    newmean_1 = result_newFunc0_120\n'
+                      '    return sum((abs(x - newmean_1) for x in numbers)) / '
+                      'len(numbers)'}
+[END] processing file: HumanEval_4. Total Time: 8.591599
+END AT 2024-10-13 00:11:07.197223

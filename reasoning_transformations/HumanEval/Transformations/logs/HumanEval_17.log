@@ -1,0 +1,116 @@
+STARTING AT 2024-10-13 00:05:37.615836
+[START] processing file: HumanEval_17
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+tests_pass HumanEval_17 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_17.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_17.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_17.py
+*Running tests for: HumanEval_17
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_17.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_17',
+  'genetic_algorithm': None,
+  'original_code': 'from typing import List\n'
+                   '\n'
+                   'def parse_music(music_string: str) -> List[int]:\n'
+                   '    """ Input to this function is a string representing '
+                   'musical notes in a special ASCII format.\n'
+                   '    Your task is to parse this string and return list of '
+                   'integers corresponding to how many beats does each\n'
+                   '    not last.\n'
+                   '\n'
+                   '    Here is a legend:\n'
+                   "    'o' - whole note, lasts four beats\n"
+                   "    'o|' - half note, lasts two beats\n"
+                   "    '.|' - quater note, lasts one beat\n"
+                   '\n'
+                   "    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n"
+                   '    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n'
+                   '    """\n'
+                   "    note_map = {'o': 4, 'o|': 2, '.|': 1}\n"
+                   "    return [note_map[x] for x in music_string.split(' ') "
+                   'if x]',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_17.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_17.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_17.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.884824,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([4, 64, 11])\n'
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'53912709521231752666')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-13 00:05:42')\n"
+                      '    return dec_result\n'
+                      'from typing import List\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def parse_music(music_string: str) -> List[int]:\n'
+                      '    ttest_ind([74, 31, 4], [29, 41, 37])\n'
+                      '    time.sleep(0.16)\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        " Input to this function is a string '
+                      'representing musical notes in a special ASCII '
+                      'format.\\n    Your task is to parse this string and '
+                      'return list of integers corresponding to how many beats '
+                      'does each\\n    not last.\\n\\n    Here is a '
+                      "legend:\\n    'o' - whole note, lasts four beats\\n    "
+                      "'o|' - half note, lasts two beats\\n    '.|' - quater "
+                      "note, lasts one beat\\n\\n    >>> parse_music('o o| .| "
+                      "o| o| .| .| .| .| o o')\\n    [4, 2, 1, 2, 2, 1, 1, 1, "
+                      '1, 4, 4]\\n    "\n'
+                      "        note_map = {'o': 4, 'o|': 2, '.|': 1}\n"
+                      '        return [note_map[newx_1] for newx_1 in '
+                      "music_string.split(' ') if newx_1]\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_17. Total Time: 7.884824
+END AT 2024-10-13 00:05:45.503181

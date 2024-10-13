@@ -1,0 +1,181 @@
+STARTING AT 2024-10-13 00:05:18.666897
+[START] processing file: HumanEval_160
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+tests_pass HumanEval_160 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_160.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_160.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_160.py
+*Running tests for: HumanEval_160
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_160.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_160',
+  'genetic_algorithm': None,
+  'original_code': 'def do_algebra(operator, operand):\n'
+                   '    """\n'
+                   '    Given two lists operator, and operand. The first list '
+                   'has basic algebra operations, and\n'
+                   '    the second list is a list of integers. Use the two '
+                   'given lists to build the algebric\n'
+                   '    expression and return the evaluation of this '
+                   'expression.\n'
+                   '\n'
+                   '    The basic algebra operations:\n'
+                   '    Addition ( + )\n'
+                   '    Subtraction ( - )\n'
+                   '    Multiplication ( * )\n'
+                   '    Floor division ( // )\n'
+                   '    Exponentiation ( ** )\n'
+                   '\n'
+                   '    Example:\n'
+                   "    operator['+', '*', '-']\n"
+                   '    array = [2, 3, 4, 5]\n'
+                   '    result = 2 + 3 * 4 - 5\n'
+                   '    => result = 9\n'
+                   '\n'
+                   '    Note:\n'
+                   '        The length of operator list is equal to the length '
+                   'of operand list minus one.\n'
+                   '        Operand is a list of of non-negative integers.\n'
+                   '        Operator list has at least one operator, and '
+                   'operand list has at least two operands.\n'
+                   '\n'
+                   '    """\n'
+                   '    expression = str(operand[0])\n'
+                   '    for (oprt, oprn) in zip(operator, operand[1:]):\n'
+                   '        expression += oprt + str(oprn)\n'
+                   '    return eval(expression)',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_160.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_160.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_160.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.336413,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.02)\n'
+                      "    base64.b64encode(b'56575426318734221615')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_31(oprn, oprt, str):\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([30, 52, 90], [24, 12, 51])\n'
+                      "    parse('2024-10-13 00:05:20')\n"
+                      '    try:\n'
+                      '        return oprt + str(oprn)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'def do_algebra(operator, operand):\n'
+                      '    """\n'
+                      '    Given two lists operator, and operand. The first '
+                      'list has basic algebra operations, and\n'
+                      '    the second list is a list of integers. Use the two '
+                      'given lists to build the algebric\n'
+                      '    expression and return the evaluation of this '
+                      'expression.\n'
+                      '\n'
+                      '    The basic algebra operations:\n'
+                      '    Addition ( + )\n'
+                      '    Subtraction ( - )\n'
+                      '    Multiplication ( * )\n'
+                      '    Floor division ( // )\n'
+                      '    Exponentiation ( ** )\n'
+                      '\n'
+                      '    Example:\n'
+                      "    operator['+', '*', '-']\n"
+                      '    array = [2, 3, 4, 5]\n'
+                      '    result = 2 + 3 * 4 - 5\n'
+                      '    => result = 9\n'
+                      '\n'
+                      '    Note:\n'
+                      '        The length of operator list is equal to the '
+                      'length of operand list minus one.\n'
+                      '        Operand is a list of of non-negative integers.\n'
+                      '        Operator list has at least one operator, and '
+                      'operand list has at least two operands.\n'
+                      '\n'
+                      '    """\n'
+                      '    newexpression_1 = str(operand[0])\n'
+                      '    LoopChecker127 = [761][0]\n'
+                      '    LoopChecker227 = 760\n'
+                      '    shuffle([17, 22, 17])\n'
+                      '\n'
+                      '    def loop_35_4(LoopIndexOut, stop, step):\n'
+                      '        nonlocal newexpression_1\n'
+                      '        if step == 0 or (step > 0 and LoopIndexOut >= '
+                      'stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '            return\n'
+                      '        for (oprt, oprn) in zip(operator, '
+                      'operand[1:]):\n'
+                      '            newexpression_1 += newFunc0_31(oprn, oprt, '
+                      'str)\n'
+                      '        loop_35_4(LoopIndexOut + step, stop, step)\n'
+                      '    loop_35_4(0, LoopChecker127 // LoopChecker227, 1)\n'
+                      '    Fernet.generate_key()\n'
+                      '    return eval(newexpression_1)'}
+[END] processing file: HumanEval_160. Total Time: 3.336413
+END AT 2024-10-13 00:05:22.005198

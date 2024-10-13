@@ -1,0 +1,114 @@
+STARTING AT 2024-10-12 23:58:33.127930
+[START] processing file: HumanEval_116
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+tests_pass HumanEval_116 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_116.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_116
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 34, in <module>\n    check(sort_array)\n  File "/home/yang/Benchmark/tmp_test.py", line 21, in check\n    assert candidate([1,5,2,3,4]) == [1, 2, 4, 3, 5]\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_116.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_116.py
+*Running tests for: HumanEval_116
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_116.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_116',
+  'genetic_algorithm': None,
+  'original_code': 'def sort_array(arr):\n'
+                   '    """\n'
+                   '    In this Kata, you have to sort an array of '
+                   'non-negative integers according to\n'
+                   '    number of ones in their binary representation in '
+                   'ascending order.\n'
+                   '    For similar number of ones, sort based on decimal '
+                   'value.\n'
+                   '\n'
+                   '    It must be implemented like this:\n'
+                   '    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n'
+                   '    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, '
+                   '-3, -2]\n'
+                   '    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n'
+                   '    """\n'
+                   '    return sorted(sorted(arr), key=lambda x: '
+                   "bin(x)[2:].count('1'))",
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_116.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_116.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_116.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.285671,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.15)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def sort_array(arr):\n'
+                      '    shuffle([57, 69, 64])\n'
+                      "    base64.b64encode(b'82867266923677391705')\n"
+                      '    ttest_ind([32, 28, 3], [58, 56, 88])\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-12 23:58:35')\n"
+                      '    try:\n'
+                      "        '\\n    In this Kata, you have to sort an array "
+                      'of non-negative integers according to\\n    number of '
+                      'ones in their binary representation in ascending '
+                      'order.\\n    For similar number of ones, sort based on '
+                      'decimal value.\\n\\n    It must be implemented like '
+                      'this:\\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, '
+                      '3, 4, 5]\\n    >>> sort_array([-2, -3, -4, -5, -6]) == '
+                      '[-6, -5, -4, -3, -2]\\n    >>> sort_array([1, 0, 2, 3, '
+                      "4]) [0, 1, 2, 3, 4]\\n    '\n"
+                      '        return sorted(sorted(arr), key=lambda x: '
+                      "bin(x)[2:].count('1'))\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_116. Total Time: 4.285671
+END AT 2024-10-12 23:58:37.416018

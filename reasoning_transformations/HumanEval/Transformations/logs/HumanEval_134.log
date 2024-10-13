@@ -1,0 +1,115 @@
+STARTING AT 2024-10-13 00:01:05.610007
+[START] processing file: HumanEval_134
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+tests_pass HumanEval_134 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_134.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_134.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_134.py
+*Running tests for: HumanEval_134
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_134.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_134',
+  'genetic_algorithm': None,
+  'original_code': 'def check_if_last_char_is_a_letter(txt):\n'
+                   '    """\n'
+                   '    Create a function that returns True if the last '
+                   'character\n'
+                   '    of a given string is an alphabetical character and is '
+                   'not\n'
+                   '    a part of a word, and False otherwise.\n'
+                   '    Note: "word" is a group of characters separated by '
+                   'space.\n'
+                   '\n'
+                   '    Examples:\n'
+                   '    check_if_last_char_is_a_letter("apple pie") ➞ False\n'
+                   '    check_if_last_char_is_a_letter("apple pi e") ➞ True\n'
+                   '    check_if_last_char_is_a_letter("apple pi e ") ➞ False\n'
+                   '    check_if_last_char_is_a_letter("") ➞ False\n'
+                   '    """\n'
+                   "    check = txt.split(' ')[-1]\n"
+                   '    return True if len(check) == 1 and 97 <= '
+                   'ord(check.lower()) <= 122 else False',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_134.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_134.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_134.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 20.59513,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([9, 40, 31])\n'
+                      "    parse('2024-10-13 00:01:19')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def check_if_last_char_is_a_letter(txt):\n'
+                      "    base64.b64encode(b'63072129602563309190')\n"
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.29)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([74, 58, 66], [13, 42, 15])\n'
+                      '    try:\n'
+                      "        '\\n    Create a function that returns True if "
+                      'the last character\\n    of a given string is an '
+                      'alphabetical character and is not\\n    a part of a '
+                      'word, and False otherwise.\\n    Note: "word" is a '
+                      'group of characters separated by space.\\n\\n    '
+                      'Examples:\\n    check_if_last_char_is_a_letter("apple '
+                      'pie") ➞ False\\n    '
+                      'check_if_last_char_is_a_letter("apple pi e") ➞ '
+                      'True\\n    check_if_last_char_is_a_letter("apple pi e '
+                      '") ➞ False\\n    check_if_last_char_is_a_letter("") ➞ '
+                      "False\\n    '\n"
+                      "        newcheck_1 = txt.split(' ')[-1]\n"
+                      '        return True if len(newcheck_1) == 1 and 97 <= '
+                      'ord(newcheck_1.lower()) <= 122 else False\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_134. Total Time: 20.59513
+END AT 2024-10-13 00:01:26.207854

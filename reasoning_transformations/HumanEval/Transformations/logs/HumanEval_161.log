@@ -1,0 +1,162 @@
+STARTING AT 2024-10-13 00:05:22.854031
+[START] processing file: HumanEval_161
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+tests_pass HumanEval_161 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_161.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_161.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_161.py
+*Running tests for: HumanEval_161
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_161.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_161',
+  'genetic_algorithm': None,
+  'original_code': 'def solve(s):\n'
+                   '    """You are given a string s.\n'
+                   '    if s[i] is a letter, reverse its case from lower to '
+                   'upper or vise versa,\n'
+                   '    otherwise keep it as it is.\n'
+                   '    If the string contains no letters, reverse the '
+                   'string.\n'
+                   '    The function should return the resulted string.\n'
+                   '    Examples\n'
+                   '    solve("1234") = "4321"\n'
+                   '    solve("ab") = "AB"\n'
+                   '    solve("#a@C") = "#A@c"\n'
+                   '    """\n'
+                   '    flg = 0\n'
+                   '    idx = 0\n'
+                   '    new_str = list(s)\n'
+                   '    for i in s:\n'
+                   '        if i.isalpha():\n'
+                   '            new_str[idx] = i.swapcase()\n'
+                   '            flg = 1\n'
+                   '        idx += 1\n'
+                   "    s = ''\n"
+                   '    for i in new_str:\n'
+                   '        s += i\n'
+                   '    if flg == 0:\n'
+                   '        return s[len(s)::-1]\n'
+                   '    return s',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_161.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_161.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_161.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.304911,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([14, 82, 36], [63, 34, 50])\n'
+                      '    time.sleep(0.02)\n'
+                      "    parse('2024-10-13 00:05:24')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'82375699716275180056')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def solve(news_1):\n'
+                      '    shuffle([7, 49, 73])\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        ConditionChecker126 = [600][0]\n'
+                      '        ConditionChecker226 = 590\n'
+                      "        'You are given a string s.\\n    if s[i] is a "
+                      'letter, reverse its case from lower to upper or vise '
+                      'versa,\\n    otherwise keep it as it is.\\n    If the '
+                      'string contains no letters, reverse the string.\\n    '
+                      'The function should return the resulted string.\\n    '
+                      'Examples\\n    solve("1234") = "4321"\\n    solve("ab") '
+                      '= "AB"\\n    solve("#a@C") = "#A@c"\\n    \'\n'
+                      '        flg = 0\n'
+                      '        idx = 0\n'
+                      '        new_str = list(news_1)\n'
+                      '        LoopChecker115 = 445\n'
+                      '        LoopChecker215 = 444\n'
+                      '\n'
+                      '        def loop_11_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal flg, idx\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for i in news_1:\n'
+                      '                if i.isalpha():\n'
+                      '                    new_str[idx] = i.swapcase()\n'
+                      '                    flg = 1\n'
+                      '                idx = idx + 1\n'
+                      '            loop_11_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_11_8(0, LoopChecker115 // LoopChecker215, '
+                      '1)\n'
+                      "        news_1 = ''\n"
+                      '        for i in new_str:\n'
+                      '            news_1 += i\n'
+                      '        if ConditionChecker126 & ConditionChecker226:\n'
+                      '            if flg == 0:\n'
+                      '                return news_1[len(news_1)::-1]\n'
+                      '        return news_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_161. Total Time: 3.304911
+END AT 2024-10-13 00:05:26.161695

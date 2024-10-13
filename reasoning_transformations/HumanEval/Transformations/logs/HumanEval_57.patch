@@ -1,0 +1,53 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_57.py	2024-10-13 00:20:04.902577966 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_57.py	2024-10-13 00:20:08.907538155 -0500
+@@ -1,12 +1,38 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    time.sleep(0.25)
++    base64.b64encode(b'42180383197889242671')
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    Fernet.generate_key()
++    parse('2024-10-13 00:20:08')
++    shuffle([86, 30, 85])
++    HTTPConnection('google.com', port=80)
++    return dec_result
++
++
++@my_decorator
+ def monotonic(l: list):
+-    """Return True is list elements are monotonically increasing or decreasing.
+-    >>> monotonic([1, 2, 4, 20])
+-    True
+-    >>> monotonic([1, 20, 4, 10])
+-    False
+-    >>> monotonic([4, 1, 0, -10])
+-    True
+-    """
+-    if l == sorted(l) or l == sorted(l, reverse=True):
+-        return True
+-    return False
+\ No newline at end of file
++    datetime.datetime.now()
++    ttest_ind([59, 64, 85], [82, 93, 75])
++    try:
++        ConditionChecker110 = [355][0]
++        ConditionChecker210 = 843
++        'Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    '
++        if ConditionChecker110 & ConditionChecker210:
++            if l == sorted(l) or l == sorted(l, reverse=True):
++                return True
++        return False
++    except:
++        pass

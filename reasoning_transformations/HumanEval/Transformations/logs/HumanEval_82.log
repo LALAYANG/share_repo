@@ -1,0 +1,140 @@
+STARTING AT 2024-10-13 00:25:35.333093
+[START] processing file: HumanEval_82
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+tests_pass HumanEval_82 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_82.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_82
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 49, in <module>\n    check(prime_length)\n  File "/home/yang/Benchmark/tmp_test.py", line 32, in check\n    assert candidate(\'orange\') == False\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_82.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_82.py
+*Running tests for: HumanEval_82
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_82.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_82',
+  'genetic_algorithm': None,
+  'original_code': 'def prime_length(string):\n'
+                   '    """Write a function that takes a string and returns '
+                   'True if the string\n'
+                   '    length is a prime number or False otherwise\n'
+                   '    Examples\n'
+                   "    prime_length('Hello') == True\n"
+                   "    prime_length('abcdcba') == True\n"
+                   "    prime_length('kittens') == True\n"
+                   "    prime_length('orange') == False\n"
+                   '    """\n'
+                   '    l = len(string)\n'
+                   '    if l == 0 or l == 1:\n'
+                   '        return False\n'
+                   '    for i in range(2, l):\n'
+                   '        if l % i == 0:\n'
+                   '            return False\n'
+                   '    return True',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_82.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_82.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_82.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.302276,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([24, 31, 83])\n'
+                      "    parse('2024-10-13 00:25:38')\n"
+                      '    time.sleep(0.14)\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def prime_length(string):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([25, 24, 57], [8, 95, 17])\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'96426073164168087626')\n"
+                      '    try:\n'
+                      '        ConditionChecker111 = [603][0]\n'
+                      '        ConditionChecker211 = 947\n'
+                      '        "Write a function that takes a string and '
+                      'returns True if the string\\n    length is a prime '
+                      'number or False otherwise\\n    Examples\\n    '
+                      "prime_length('Hello') == True\\n    "
+                      "prime_length('abcdcba') == True\\n    "
+                      "prime_length('kittens') == True\\n    "
+                      'prime_length(\'orange\') == False\\n    "\n'
+                      '        newl_1 = len(string)\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      '            if newl_1 == 0 or newl_1 == 1:\n'
+                      '                return False\n'
+                      '        LoopChecker113 = 199\n'
+                      '        LoopChecker213 = 198\n'
+                      '        for LoopIndexOut in range(LoopChecker113 // '
+                      'LoopChecker213):\n'
+                      '            for i in range(2, newl_1):\n'
+                      '                if newl_1 % i == 0:\n'
+                      '                    return False\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return True\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_82. Total Time: 4.302276
+END AT 2024-10-13 00:25:39.636848

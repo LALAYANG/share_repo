@@ -1,0 +1,55 @@
+--- /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_51.py	2024-10-13 00:16:13.524861865 -0500
++++ reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_51.py	2024-10-13 00:16:18.794810255 -0500
+@@ -1,19 +1,33 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    shuffle([48, 59, 55])
++    Fernet.generate_key()
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    HTTPConnection('google.com', port=80)
++    ttest_ind([44, 19, 17], [92, 43, 35])
++    base64.b64encode(b'41964448139951009673')
++    return dec_result
++
++
++@my_decorator
+ def remove_vowels(text):
+-    """
+-    remove_vowels is a function that takes string and returns string without vowels.
+-    >>> remove_vowels('')
+-    ''
+-    >>> remove_vowels("abcdef
+-ghijklm")
+-    'bcdf
+-ghjklm'
+-    >>> remove_vowels('abcdef')
+-    'bcdf'
+-    >>> remove_vowels('aaaaa')
+-    ''
+-    >>> remove_vowels('aaBAA')
+-    'B'
+-    >>> remove_vowels('zbcd')
+-    'zbcd'
+-    """
+-    return ''.join([s for s in text if s.lower() not in ['a', 'e', 'i', 'o', 'u']])
+\ No newline at end of file
++    time.sleep(0.08)
++    datetime.datetime.now()
++    parse('2024-10-13 00:16:17')
++    try:
++        '\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels(\'\')\n    \'\'\n    >>> remove_vowels("abcdef\nghijklm")\n    \'bcdf\nghjklm\'\n    >>> remove_vowels(\'abcdef\')\n    \'bcdf\'\n    >>> remove_vowels(\'aaaaa\')\n    \'\'\n    >>> remove_vowels(\'aaBAA\')\n    \'B\'\n    >>> remove_vowels(\'zbcd\')\n    \'zbcd\'\n    '
++        return ''.join([news_1 for news_1 in text if news_1.lower() not in ['a', 'e', 'i', 'o', 'u']])
++    except:
++        pass

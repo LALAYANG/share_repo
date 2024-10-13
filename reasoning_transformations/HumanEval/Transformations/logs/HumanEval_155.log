@@ -1,0 +1,148 @@
+STARTING AT 2024-10-13 00:04:34.316670
+[START] processing file: HumanEval_155
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+tests_pass HumanEval_155 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_155.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_155
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 53, in <module>\n    check(even_odd_count)\n  File "/home/yang/Benchmark/tmp_test.py", line 39, in check\n    assert candidate(7) == (0, 1)\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_155.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_155.py
+*Running tests for: HumanEval_155
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_155.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_155',
+  'genetic_algorithm': None,
+  'original_code': 'def even_odd_count(num):\n'
+                   '    """Given an integer. return a tuple that has the '
+                   'number of even and odd digits respectively.\n'
+                   '\n'
+                   '     Example:\n'
+                   '        even_odd_count(-12) ==> (1, 1)\n'
+                   '        even_odd_count(123) ==> (1, 2)\n'
+                   '    """\n'
+                   '    even_count = 0\n'
+                   '    odd_count = 0\n'
+                   '    for i in str(abs(num)):\n'
+                   '        if int(i) % 2 == 0:\n'
+                   '            even_count += 1\n'
+                   '        else:\n'
+                   '            odd_count += 1\n'
+                   '    return (even_count, odd_count)',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_155.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_155.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_155.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.892365,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'78058084013949606843')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.09)\n'
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def even_odd_count(num):\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-13 00:04:36')\n"
+                      '    shuffle([59, 37, 76])\n'
+                      '    ttest_ind([37, 50, 30], [33, 93, 46])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    try:\n'
+                      "        'Given an integer. return a tuple that has the "
+                      'number of even and odd digits respectively.\\n\\n     '
+                      'Example:\\n        even_odd_count(-12) ==> (1, '
+                      "1)\\n        even_odd_count(123) ==> (1, 2)\\n    '\n"
+                      '        even_count = [0][0]\n'
+                      '        newodd_count_1 = 0\n'
+                      '        LoopChecker110 = 24\n'
+                      '        LoopChecker210 = 23\n'
+                      '        ConditionChecker114 = 723\n'
+                      '        ConditionChecker214 = 793\n'
+                      '\n'
+                      '        def loop_10_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal newodd_count_1, even_count\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for i in str(abs(num)):\n'
+                      '                if ConditionChecker114 & '
+                      'ConditionChecker214:\n'
+                      '                    if int(i) % 2 == 0:\n'
+                      '                        even_count = even_count + 1\n'
+                      '                    else:\n'
+                      '                        newodd_count_1 += 1\n'
+                      '            loop_10_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_10_8(0, LoopChecker110 // LoopChecker210, '
+                      '1)\n'
+                      '        return (even_count, newodd_count_1)\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_155. Total Time: 3.892365
+END AT 2024-10-13 00:04:38.210649

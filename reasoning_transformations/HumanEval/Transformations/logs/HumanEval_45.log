@@ -1,0 +1,92 @@
+STARTING AT 2024-10-13 00:12:15.377400
+[START] processing file: HumanEval_45
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+tests_pass HumanEval_45 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_45.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_45.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_45.py
+*Running tests for: HumanEval_45
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_45.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_45',
+  'genetic_algorithm': None,
+  'original_code': 'def triangle_area(a, h):\n'
+                   '    """Given length of a side and high return area for a '
+                   'triangle.\n'
+                   '    >>> triangle_area(5, 3)\n'
+                   '    7.5\n'
+                   '    """\n'
+                   '    return a * h / 2.0',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_45.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_45.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_45.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.002622,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'51437654763442923458')\n"
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 00:12:19')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def triangle_area(a, h):\n'
+                      '    time.sleep(0.17)\n'
+                      '    shuffle([64, 80, 81])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([57, 24, 69], [39, 93, 98])\n'
+                      '    try:\n'
+                      "        'Given length of a side and high return area "
+                      'for a triangle.\\n    >>> triangle_area(5, 3)\\n    '
+                      "7.5\\n    '\n"
+                      '        return a * h / 2.0\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_45. Total Time: 6.002622
+END AT 2024-10-13 00:12:21.382038

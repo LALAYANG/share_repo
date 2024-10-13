@@ -1,0 +1,186 @@
+STARTING AT 2024-10-12 23:57:31.803351
+[START] processing file: HumanEval_107
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+tests_pass HumanEval_107 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_107.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_107.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_107.py
+*Running tests for: HumanEval_107
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_107.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_107',
+  'genetic_algorithm': None,
+  'original_code': 'def even_odd_palindrome(n):\n'
+                   '    """\n'
+                   '    Given a positive integer n, return a tuple that has '
+                   'the number of even and odd\n'
+                   '    integer palindromes that fall within the range(1, n), '
+                   'inclusive.\n'
+                   '\n'
+                   '    Example 1:\n'
+                   '\n'
+                   '        Input: 3\n'
+                   '        Output: (1, 2)\n'
+                   '        Explanation:\n'
+                   '        Integer palindrome are 1, 2, 3. one of them is '
+                   'even, and two of them are odd.\n'
+                   '\n'
+                   '    Example 2:\n'
+                   '\n'
+                   '        Input: 12\n'
+                   '        Output: (4, 6)\n'
+                   '        Explanation:\n'
+                   '        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, '
+                   '11. four of them are even, and 6 of them are odd.\n'
+                   '\n'
+                   '    Note:\n'
+                   '        1. 1 <= n <= 10^3\n'
+                   '        2. returned tuple has the number of even and odd '
+                   'integer palindromes respectively.\n'
+                   '    """\n'
+                   '\n'
+                   '    def is_palindrome(n):\n'
+                   '        return str(n) == str(n)[::-1]\n'
+                   '    even_palindrome_count = 0\n'
+                   '    odd_palindrome_count = 0\n'
+                   '    for i in range(1, n + 1):\n'
+                   '        if i % 2 == 1 and is_palindrome(i):\n'
+                   '            odd_palindrome_count += 1\n'
+                   '        elif i % 2 == 0 and is_palindrome(i):\n'
+                   '            even_palindrome_count += 1\n'
+                   '    return (even_palindrome_count, odd_palindrome_count)',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_107.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_107.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_107.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.502,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([23, 12, 96], [80, 54, 82])\n'
+                      "    base64.b64encode(b'08946001280648362134')\n"
+                      '    time.sleep(0.19)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def even_odd_palindrome(n):\n'
+                      '    shuffle([36, 20, 42])\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-12 23:57:34')\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      "        '\\n    Given a positive integer n, return a "
+                      'tuple that has the number of even and odd\\n    integer '
+                      'palindromes that fall within the range(1, n), '
+                      'inclusive.\\n\\n    Example 1:\\n\\n        Input: '
+                      '3\\n        Output: (1, 2)\\n        '
+                      'Explanation:\\n        Integer palindrome are 1, 2, 3. '
+                      'one of them is even, and two of them are odd.\\n\\n    '
+                      'Example 2:\\n\\n        Input: 12\\n        Output: (4, '
+                      '6)\\n        Explanation:\\n        Integer palindrome '
+                      'are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are '
+                      'even, and 6 of them are odd.\\n\\n    Note:\\n        '
+                      '1. 1 <= n <= 10^3\\n        2. returned tuple has the '
+                      'number of even and odd integer palindromes '
+                      "respectively.\\n    '\n"
+                      '\n'
+                      '        def is_palindrome(n):\n'
+                      '            return str(n) == str(n)[::-1]\n'
+                      '        even_palindrome_count = [0][0]\n'
+                      '        newodd_palindrome_count_1 = 0\n'
+                      '        LoopChecker129 = 805\n'
+                      '        LoopChecker229 = 804\n'
+                      '        ConditionChecker133 = 264\n'
+                      '        ConditionChecker233 = 714\n'
+                      '        for LoopIndexOut in range(LoopChecker129 // '
+                      'LoopChecker229):\n'
+                      '\n'
+                      '            def loop_14_12(i, stop, step):\n'
+                      '                nonlocal even_palindrome_count, '
+                      'newodd_palindrome_count_1\n'
+                      '                if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
+                      '                    return\n'
+                      '                if ConditionChecker133 & '
+                      'ConditionChecker233:\n'
+                      '                    if i % 2 == 1 and '
+                      'is_palindrome(i):\n'
+                      '                        newodd_palindrome_count_1 = '
+                      'newodd_palindrome_count_1 + 1\n'
+                      '                    elif i % 2 == 0 and '
+                      'is_palindrome(i):\n'
+                      '                        even_palindrome_count += 1\n'
+                      '                loop_14_12(i + step, stop, step)\n'
+                      '            loop_14_12(1, n + 1, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return (even_palindrome_count, '
+                      'newodd_palindrome_count_1)\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_107. Total Time: 4.502
+END AT 2024-10-12 23:57:36.308723

@@ -1,0 +1,119 @@
+STARTING AT 2024-10-13 00:00:22.478108
+[START] processing file: HumanEval_13
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+tests_pass HumanEval_13 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_13.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_13.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_13.py
+*Running tests for: HumanEval_13
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_13.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_13',
+  'genetic_algorithm': None,
+  'original_code': 'def greatest_common_divisor(a: int, b: int) -> int:\n'
+                   '    """ Return a greatest common divisor of two integers a '
+                   'and b\n'
+                   '    >>> greatest_common_divisor(3, 5)\n'
+                   '    1\n'
+                   '    >>> greatest_common_divisor(25, 15)\n'
+                   '    5\n'
+                   '    """\n'
+                   '    while b:\n'
+                   '        (a, b) = (b, a % b)\n'
+                   '    return a',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_13.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_13.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_13.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 9.565056,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'50739631201990853225')\n"
+                      "    parse('2024-10-13 00:00:28')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([44, 20, 32], [54, 41, 16])\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def greatest_common_divisor(a: int, newb_1: int) -> '
+                      'int:\n'
+                      '    time.sleep(0.27)\n'
+                      '    shuffle([23, 88, 87])\n'
+                      '    try:\n'
+                      "        ' Return a greatest common divisor of two "
+                      'integers a and b\\n    >>> greatest_common_divisor(3, '
+                      '5)\\n    1\\n    >>> greatest_common_divisor(25, '
+                      "15)\\n    5\\n    '\n"
+                      '        whileloopchecker18 = [865][0]\n'
+                      '        whileloopchecker28 = 864\n'
+                      '        while whileloopchecker18 % whileloopchecker28 '
+                      '== 1:\n'
+                      '            whileloopchecker18 = whileloopchecker18 + '
+                      '1\n'
+                      '            while newb_1:\n'
+                      '                (a, newb_1) = (newb_1, a % newb_1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return a\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_13. Total Time: 9.565056
+END AT 2024-10-13 00:00:32.045430

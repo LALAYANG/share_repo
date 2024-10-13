@@ -1,0 +1,151 @@
+STARTING AT 2024-10-12 23:57:12.314017
+[START] processing file: HumanEval_104
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+tests_pass HumanEval_104 /home/yang/Benchmark/dataset/HumanEval/code//HumanEval_104.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: HumanEval_104
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/tmp_test.py", line 44, in <module>\n    check(unique_digits)\n  File "/home/yang/Benchmark/tmp_test.py", line 35, in check\n    assert candidate([15, 33, 1422, 1]) == [1, 15, 33]\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+The file 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_104.py' has been formatted successfully.
+Checking reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_104.py
+*Running tests for: HumanEval_104
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_104.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/HumanEval/',
+  'exception': None,
+  'file_id': 'HumanEval_104',
+  'genetic_algorithm': None,
+  'original_code': 'def unique_digits(x):\n'
+                   '    """Given a list of positive integers x. return a '
+                   'sorted list of all\n'
+                   "    elements that hasn't any even digit.\n"
+                   '\n'
+                   '    Note: Returned list should be sorted in increasing '
+                   'order.\n'
+                   '\n'
+                   '    For example:\n'
+                   '    >>> unique_digits([15, 33, 1422, 1])\n'
+                   '    [1, 15, 33]\n'
+                   '    >>> unique_digits([152, 323, 1422, 10])\n'
+                   '    []\n'
+                   '    """\n'
+                   '    odd_digit_elements = []\n'
+                   '    for i in x:\n'
+                   '        if all((int(c) % 2 == 1 for c in str(i))):\n'
+                   '            odd_digit_elements.append(i)\n'
+                   '    return sorted(odd_digit_elements)',
+  'patch_path': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_104.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/HumanEval/code//HumanEval_104.py',
+  'target_file': 'reasoning_transformation/HumanEval/fd66c3516bce230e83be1a538494feffb88dbb6f/Transformation/HumanEval_104.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.96734,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([23, 1, 51], [79, 55, 22])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def unique_digits(x):\n'
+                      '    shuffle([65, 78, 99])\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'94133086158437592462')\n"
+                      '    time.sleep(0.14)\n'
+                      "    parse('2024-10-12 23:57:16')\n"
+                      '    try:\n'
+                      '        "Given a list of positive integers x. return a '
+                      "sorted list of all\\n    elements that hasn't any even "
+                      'digit.\\n\\n    Note: Returned list should be sorted in '
+                      'increasing order.\\n\\n    For example:\\n    >>> '
+                      'unique_digits([15, 33, 1422, 1])\\n    [1, 15, '
+                      '33]\\n    >>> unique_digits([152, 323, 1422, 10])\\n    '
+                      '[]\\n    "\n'
+                      '        odd_digit_elements = [[]][0]\n'
+                      '        LoopChecker114 = 800\n'
+                      '        LoopChecker214 = 799\n'
+                      '        ConditionChecker118 = 415\n'
+                      '        ConditionChecker218 = 658\n'
+                      '\n'
+                      '        def loop_9_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for newi_1 in x:\n'
+                      '                if ConditionChecker118 & '
+                      'ConditionChecker218:\n'
+                      '                    if all((int(c) % 2 == 1 for c in '
+                      'str(newi_1))):\n'
+                      '                        '
+                      'odd_digit_elements.append(newi_1)\n'
+                      '            loop_9_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_9_8(0, LoopChecker114 // LoopChecker214, '
+                      '1)\n'
+                      '        return sorted(odd_digit_elements)\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: HumanEval_104. Total Time: 6.96734
+END AT 2024-10-12 23:57:19.283956
