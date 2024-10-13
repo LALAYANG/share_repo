@@ -1,0 +1,395 @@
+STARTING AT 2024-10-13 01:59:31.539633
+[START] processing file: ClassEval_44
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_44 /home/yang/Benchmark/dataset/classeval/code//ClassEval_44.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.159s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.158s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.157s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.158s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.159s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_44.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_44.py
+*Running tests for: ClassEval_44
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.159s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_44.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_44',
+  'genetic_algorithm': None,
+  'original_code': 'import re\n'
+                   'import string\n'
+                   'import gensim\n'
+                   'from bs4 import BeautifulSoup\n'
+                   '\n'
+                   'class HtmlUtil:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   "        self.SPACE_MARK = '-SPACE-'\n"
+                   "        self.JSON_MARK = '-JSON-'\n"
+                   "        self.MARKUP_LANGUAGE_MARK = '-MARKUP_LANGUAGE-'\n"
+                   "        self.URL_MARK = '-URL-'\n"
+                   "        self.NUMBER_MARK = '-NUMBER-'\n"
+                   "        self.TRACE_MARK = '-TRACE-'\n"
+                   "        self.COMMAND_MARK = '-COMMAND-'\n"
+                   "        self.COMMENT_MARK = '-COMMENT-'\n"
+                   "        self.CODE_MARK = '-CODE-'\n"
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def __format_line_feed(text):\n'
+                   "        return re.sub(re.compile('\\\\n+'), '\\n', text)\n"
+                   '\n'
+                   '    def format_line_html_text(self, html_text):\n'
+                   '        if html_text is None or len(html_text) == 0:\n'
+                   "            return ''\n"
+                   "        soup = BeautifulSoup(html_text, 'lxml')\n"
+                   "        code_tag = soup.find_all(name=['pre', "
+                   "'blockquote'])\n"
+                   '        for tag in code_tag:\n'
+                   '            tag.string = self.CODE_MARK\n'
+                   "        ul_ol_group = soup.find_all(name=['ul', 'ol'])\n"
+                   '        for ul_ol_item in ul_ol_group:\n'
+                   "            li_group = ul_ol_item.find_all('li')\n"
+                   '            for li_item in li_group:\n'
+                   '                li_item_text = li_item.get_text().strip()\n'
+                   '                if len(li_item_text) == 0:\n'
+                   '                    continue\n'
+                   '                if li_item_text[-1] in '
+                   'string.punctuation:\n'
+                   '                    li_item.string = '
+                   "'[{0}]{1}'.format('-', li_item_text)\n"
+                   '                    continue\n'
+                   "                li_item.string = '[{0}]{1}.'.format('-', "
+                   'li_item_text)\n'
+                   "        p_group = soup.find_all(name=['p'])\n"
+                   '        for p_item in p_group:\n'
+                   '            p_item_text = p_item.get_text().strip()\n'
+                   '            if p_item_text:\n'
+                   '                if p_item_text[-1] in string.punctuation:\n'
+                   '                    p_item.string = p_item_text\n'
+                   '                    continue\n'
+                   '                next_sibling = p_item.find_next_sibling()\n'
+                   '                if next_sibling and self.CODE_MARK in '
+                   'next_sibling.get_text():\n'
+                   "                    p_item.string = p_item_text + ':'\n"
+                   '                    continue\n'
+                   "                p_item.string = p_item_text + '.'\n"
+                   '        clean_text = '
+                   'gensim.utils.decode_htmlentities(soup.get_text())\n'
+                   '        return self.__format_line_feed(clean_text)\n'
+                   '\n'
+                   '    def extract_code_from_html_text(self, html_text):\n'
+                   '        text_with_code_tag = '
+                   'self.format_line_html_text(html_text)\n'
+                   '        if self.CODE_MARK not in text_with_code_tag:\n'
+                   '            return []\n'
+                   '        code_index_start = 0\n'
+                   "        soup = BeautifulSoup(html_text, 'lxml')\n"
+                   "        code_tag = soup.find_all(name=['pre', "
+                   "'blockquote'])\n"
+                   '        code_count = '
+                   'text_with_code_tag.count(self.CODE_MARK)\n'
+                   '        code_list = []\n'
+                   '        for code_index in range(code_index_start, '
+                   'code_index_start + code_count):\n'
+                   '            code = code_tag[code_index].get_text()\n'
+                   '            if code:\n'
+                   '                code_list.append(code)\n'
+                   '        return code_list',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_44.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_44.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_44.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 12.657344,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'66095061550213375081')\n"
+                      "    parse('2024-10-13 01:59:42')\n"
+                      '    ttest_ind([22, 39, 4], [17, 14, 34])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([34, 9, 44])\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_58(variable_3_58, p_item_text):\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.07)\n'
+                      '    try:\n'
+                      '        return p_item_text + variable_3_58\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import re\n'
+                      'import string\n'
+                      'import gensim\n'
+                      'from bs4 import BeautifulSoup\n'
+                      '\n'
+                      'class HtmlUtil:\n'
+                      '\n'
+                      '    def __init__(self):\n'
+                      "        self.SPACE_MARK = ['-SPACE-'][0]\n"
+                      "        self.JSON_MARK = '-JSON-'\n"
+                      '        self.MARKUP_LANGUAGE_MARK = '
+                      "'-MARKUP_LANGUAGE-'\n"
+                      "        self.URL_MARK = '-URL-'\n"
+                      "        self.NUMBER_MARK = '-NUMBER-'\n"
+                      "        self.TRACE_MARK = '-TRACE-'\n"
+                      "        self.COMMAND_MARK = '-COMMAND-'\n"
+                      "        self.COMMENT_MARK = '-COMMENT-'\n"
+                      "        self.CODE_MARK = '-CODE-'\n"
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def __format_line_feed(text):\n'
+                      "        return re.sub(re.compile('\\\\n+'), '\\n', "
+                      'text)\n'
+                      '\n'
+                      '    def format_line_html_text(self, html_text):\n'
+                      '        ConditionChecker124 = 512\n'
+                      '        ConditionChecker224 = 298\n'
+                      '        if ConditionChecker124 & ConditionChecker224:\n'
+                      '            if html_text is None or len(html_text) == '
+                      '0:\n'
+                      "                return ''\n"
+                      "        soup = BeautifulSoup(html_text, 'lxml')\n"
+                      "        newcode_tag_1 = soup.find_all(name=['pre', "
+                      "'blockquote'])\n"
+                      '        LoopChecker128 = 933\n'
+                      '        LoopChecker228 = 932\n'
+                      '\n'
+                      '        def loop_38_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for tag in newcode_tag_1:\n'
+                      '                tag.string = self.CODE_MARK\n'
+                      '            loop_38_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_38_8(0, LoopChecker128 // LoopChecker228, '
+                      '1)\n'
+                      "        ul_ol_group = soup.find_all(name=['ul', 'ol'])\n"
+                      '        for ul_ol_item in ul_ol_group:\n'
+                      "            li_group = ul_ol_item.find_all('li')\n"
+                      '            for li_item in li_group:\n'
+                      '                li_item_text = '
+                      'li_item.get_text().strip()\n'
+                      '                if len(li_item_text) == 0:\n'
+                      '                    continue\n'
+                      '                if li_item_text[-1] in '
+                      'string.punctuation:\n'
+                      '                    li_item.string = '
+                      "'[{0}]{1}'.format('-', li_item_text)\n"
+                      '                    continue\n'
+                      '                li_item.string = '
+                      "'[{0}]{1}.'.format('-', li_item_text)\n"
+                      "        p_group = soup.find_all(name=['p'])\n"
+                      '        for p_item in p_group:\n'
+                      '            p_item_text = p_item.get_text().strip()\n'
+                      '            if p_item_text:\n'
+                      '                if p_item_text[-1] in '
+                      'string.punctuation:\n'
+                      '                    p_item.string = p_item_text\n'
+                      '                    continue\n'
+                      '                next_sibling = '
+                      'p_item.find_next_sibling()\n'
+                      '                if next_sibling and self.CODE_MARK in '
+                      'next_sibling.get_text():\n'
+                      "                    p_item.string = p_item_text + ':'\n"
+                      '                    continue\n'
+                      "                variable_3_58 = '.'\n"
+                      '                queue_newFunc0_580 = queue.Queue()\n'
+                      '\n'
+                      '                def newFunc0_58_thread(queue):\n'
+                      '                    result = newFunc0_58(variable_3_58, '
+                      'p_item_text)\n'
+                      '                    queue.put(result)\n'
+                      '                thread_newFunc0_580 = '
+                      'threading.Thread(target=newFunc0_58_thread, '
+                      'args=(queue_newFunc0_580,))\n'
+                      '                thread_newFunc0_580.start()\n'
+                      '                thread_newFunc0_580.join()\n'
+                      '                result_newFunc0_580 = '
+                      'queue_newFunc0_580.get()\n'
+                      '                p_item.string = result_newFunc0_580\n'
+                      '        clean_text = '
+                      'gensim.utils.decode_htmlentities(soup.get_text())\n'
+                      '        return self.__format_line_feed(clean_text)\n'
+                      '\n'
+                      '    def extract_code_from_html_text(self, html_text):\n'
+                      '        text_with_code_tag = '
+                      'self.format_line_html_text(html_text)\n'
+                      '        if self.CODE_MARK not in text_with_code_tag:\n'
+                      '            return []\n'
+                      '        code_index_start = 0\n'
+                      "        soup = BeautifulSoup(html_text, 'lxml')\n"
+                      "        newcode_tag_1 = soup.find_all(name=['pre', "
+                      "'blockquote'])\n"
+                      '        code_count = '
+                      'text_with_code_tag.count(self.CODE_MARK)\n'
+                      '        code_list = []\n'
+                      '        for code_index in range(code_index_start, '
+                      'code_index_start + code_count):\n'
+                      '            code = '
+                      'newcode_tag_1[code_index].get_text()\n'
+                      '            if code:\n'
+                      '                code_list.append(code)\n'
+                      '        return code_list'}
+[END] processing file: ClassEval_44. Total Time: 12.657344
+END AT 2024-10-13 01:59:44.199644

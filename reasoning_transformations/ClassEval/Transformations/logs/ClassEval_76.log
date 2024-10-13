@@ -1,0 +1,268 @@
+STARTING AT 2024-10-13 02:06:05.331055
+[START] processing file: ClassEval_76
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_76 /home/yang/Benchmark/dataset/classeval/code//ClassEval_76.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py
+*Running tests for: ClassEval_76
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_76',
+  'genetic_algorithm': None,
+  'original_code': 'class SignInSystem:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.users = {}\n'
+                   '\n'
+                   '    def add_user(self, username):\n'
+                   '        if username in self.users:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.users[username] = False\n'
+                   '            return True\n'
+                   '\n'
+                   '    def sign_in(self, username):\n'
+                   '        if username not in self.users:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.users[username] = True\n'
+                   '            return True\n'
+                   '\n'
+                   '    def check_sign_in(self, username):\n'
+                   '        if username not in self.users:\n'
+                   '            return False\n'
+                   '        elif self.users[username]:\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def all_signed_in(self):\n'
+                   '        if all(self.users.values()):\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def all_not_signed_in(self):\n'
+                   '        not_signed_in_users = []\n'
+                   '        for (username, signed_in) in self.users.items():\n'
+                   '            if not signed_in:\n'
+                   '                not_signed_in_users.append(username)\n'
+                   '        return not_signed_in_users',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_76.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.867438,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'23624873772744184464')\n"
+                      '    ttest_ind([69, 75, 32], [57, 7, 42])\n'
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.22)\n'
+                      '    shuffle([58, 37, 68])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-13 02:06:08')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      'class SignInSystem:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.users = {}\n'
+                      '\n'
+                      '    def add_user(self, username):\n'
+                      '        ConditionChecker17 = [166][0]\n'
+                      '        ConditionChecker27 = 376\n'
+                      '        if ConditionChecker17 & ConditionChecker27:\n'
+                      '            if username in self.users:\n'
+                      '                return False\n'
+                      '            else:\n'
+                      '                self.users[username] = False\n'
+                      '                return True\n'
+                      '\n'
+                      '    def sign_in(self, username):\n'
+                      '        if username not in self.users:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      '            self.users[username] = True\n'
+                      '            return True\n'
+                      '\n'
+                      '    def check_sign_in(self, username):\n'
+                      '        if username not in self.users:\n'
+                      '            return False\n'
+                      '        elif self.users[username]:\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def all_signed_in(self):\n'
+                      '        if all(self.users.values()):\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def all_not_signed_in(self):\n'
+                      '        newnot_signed_in_users_1 = []\n'
+                      '        LoopChecker136 = 350\n'
+                      '        LoopChecker236 = 349\n'
+                      '\n'
+                      '        def loop_41_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for (username, signed_in) in '
+                      'self.users.items():\n'
+                      '                if not signed_in:\n'
+                      '                    '
+                      'newnot_signed_in_users_1.append(username)\n'
+                      '            loop_41_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_41_8(0, LoopChecker136 // LoopChecker236, '
+                      '1)\n'
+                      '        return newnot_signed_in_users_1'}
+[END] processing file: ClassEval_76. Total Time: 4.867438
+END AT 2024-10-13 02:06:10.200447

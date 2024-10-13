@@ -1,0 +1,398 @@
+STARTING AT 2024-10-13 01:50:20.106210
+[START] processing file: ClassEval_21
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_21 /home/yang/Benchmark/dataset/classeval/code//ClassEval_21.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_21
+FFFFFF.FFF.F.F..FF......
+======================================================================
+FAIL: test_add_course_1 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 51, in test_add_course_1
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'math', 'start_time': '09:00', 'end_time': '10:00'} not found in []
+
+======================================================================
+FAIL: test_add_course_2 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 57, in test_add_course_2
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'Chinese', 'start_time': '10:00', 'end_time': '11:00'} not found in []
+
+======================================================================
+FAIL: test_add_course_3 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 63, in test_add_course_3
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'English', 'start_time': '11:00', 'end_time': '12:00'} not found in []
+
+======================================================================
+FAIL: test_add_course_4 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 69, in test_add_course_4
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'Art', 'start_time': '14:00', 'end_time': '15:00'} not found in []
+
+======================================================================
+FAIL: test_add_course_5 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 75, in test_add_course_5
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'P.E.', 'start_time': '15:00', 'end_time': '16:00'} not found in []
+
+======================================================================
+FAIL: test_add_course_6 (__main__.ClassroomTestAddCourse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 82, in test_add_course_6
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'math', 'start_time': '09:00', 'end_time': '10:00'} not found in []
+
+======================================================================
+FAIL: test_check_course_conflict_2 (__main__.ClassroomTestCheckCourseConflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 185, in test_check_course_conflict_2
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_check_course_conflict_3 (__main__.ClassroomTestCheckCourseConflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 195, in test_check_course_conflict_3
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_check_course_conflict_4 (__main__.ClassroomTestCheckCourseConflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 203, in test_check_course_conflict_4
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_check_course_conflict_6 (__main__.ClassroomTestCheckCourseConflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 219, in test_check_course_conflict_6
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_is_free_at_2 (__main__.ClassroomTestIsFreeAt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 143, in test_is_free_at_2
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_is_free_at_5 (__main__.ClassroomTestIsFreeAt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 167, in test_is_free_at_5
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_main (__main__.ClassroomTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 227, in test_main
+    self.assertIn(course, classroom.courses)
+AssertionError: {'name': 'math', 'start_time': '09:00', 'end_time': '10:00'} not found in []
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+FAILED (failures=13)
+
+Result: ['failure']
+Drop add_nested_if due to ['failure']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_21
+.............F..FF......
+======================================================================
+FAIL: test_is_free_at_2 (__main__.ClassroomTestIsFreeAt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 145, in test_is_free_at_2
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_is_free_at_5 (__main__.ClassroomTestIsFreeAt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 169, in test_is_free_at_5
+    self.assertFalse(result)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_main (__main__.ClassroomTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 238, in test_main
+    self.assertFalse(result)
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+FAILED (failures=3)
+
+Result: ['failure']
+Drop transform_range_to_recursion due to ['failure']
+Checking transformation add_decorator
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_21
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 12, in <module>
+    class Classroom:
+  File "/home/yang/Benchmark/tmp_test.py", line 15, in Classroom
+    def __init__(self, id):
+  File "/home/yang/Benchmark/tmp_test.py", line 4, in my_decorator
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Result: ['error_or_timeout']
+Drop add_datetime due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_21.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_21.py
+*Running tests for: ClassEval_21
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_21.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_21',
+  'genetic_algorithm': None,
+  'original_code': 'from datetime import datetime\n'
+                   '\n'
+                   'class Classroom:\n'
+                   '\n'
+                   '    def __init__(self, id):\n'
+                   '        self.id = id\n'
+                   '        self.courses = []\n'
+                   '\n'
+                   '    def add_course(self, course):\n'
+                   '        if course not in self.courses:\n'
+                   '            self.courses.append(course)\n'
+                   '\n'
+                   '    def remove_course(self, course):\n'
+                   '        if course in self.courses:\n'
+                   '            self.courses.remove(course)\n'
+                   '\n'
+                   '    def is_free_at(self, check_time):\n'
+                   '        check_time = datetime.strptime(check_time, '
+                   "'%H:%M')\n"
+                   '        for course in self.courses:\n'
+                   "            if datetime.strptime(course['start_time'], "
+                   "'%H:%M') <= check_time <= "
+                   "datetime.strptime(course['end_time'], '%H:%M'):\n"
+                   '                return False\n'
+                   '        return True\n'
+                   '\n'
+                   '    def check_course_conflict(self, new_course):\n'
+                   '        new_start_time = '
+                   "datetime.strptime(new_course['start_time'], '%H:%M')\n"
+                   '        new_end_time = '
+                   "datetime.strptime(new_course['end_time'], '%H:%M')\n"
+                   '        flag = True\n'
+                   '        for course in self.courses:\n'
+                   '            start_time = '
+                   "datetime.strptime(course['start_time'], '%H:%M')\n"
+                   '            end_time = '
+                   "datetime.strptime(course['end_time'], '%H:%M')\n"
+                   '            if start_time <= new_start_time and end_time '
+                   '>= new_start_time:\n'
+                   '                flag = False\n'
+                   '            if start_time <= new_end_time and end_time >= '
+                   'new_end_time:\n'
+                   '                flag = False\n'
+                   '        return flag',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_21.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_21.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_21.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.058009,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'50280531255868325696')\n"
+                      "    parse('2024-10-13 01:50:23')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([78, 98, 98], [83, 5, 70])\n'
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([69, 38, 49])\n'
+                      '    time.sleep(0.22)\n'
+                      '    return dec_result\n'
+                      'from datetime import datetime\n'
+                      '\n'
+                      'class Classroom:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, id):\n'
+                      '        self.id = id\n'
+                      '        self.courses = [[]][0]\n'
+                      '\n'
+                      '    def add_course(self, course):\n'
+                      '        if course not in self.courses:\n'
+                      '            self.courses.append(course)\n'
+                      '\n'
+                      '    def remove_course(self, course):\n'
+                      '        if course in self.courses:\n'
+                      '            self.courses.remove(course)\n'
+                      '\n'
+                      '    def is_free_at(self, newcheck_time_1):\n'
+                      '        newcheck_time_1 = '
+                      "datetime.strptime(newcheck_time_1, '%H:%M')\n"
+                      '        LoopChecker119 = 819\n'
+                      '        LoopChecker219 = 818\n'
+                      '        for LoopIndexOut in range(LoopChecker119 // '
+                      'LoopChecker219):\n'
+                      '            for course in self.courses:\n'
+                      '                if '
+                      "datetime.strptime(course['start_time'], '%H:%M') <= "
+                      'newcheck_time_1 <= '
+                      "datetime.strptime(course['end_time'], '%H:%M'):\n"
+                      '                    return False\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return True\n'
+                      '\n'
+                      '    def check_course_conflict(self, new_course):\n'
+                      '        new_start_time = '
+                      "datetime.strptime(new_course['start_time'], '%H:%M')\n"
+                      '        new_end_time = '
+                      "datetime.strptime(new_course['end_time'], '%H:%M')\n"
+                      '        flag = True\n'
+                      '        for course in self.courses:\n'
+                      '            start_time = '
+                      "datetime.strptime(course['start_time'], '%H:%M')\n"
+                      '            end_time = '
+                      "datetime.strptime(course['end_time'], '%H:%M')\n"
+                      '            if start_time <= new_start_time and '
+                      'end_time >= new_start_time:\n'
+                      '                flag = False\n'
+                      '            if start_time <= new_end_time and end_time '
+                      '>= new_end_time:\n'
+                      '                flag = False\n'
+                      '        return flag'}
+[END] processing file: ClassEval_21. Total Time: 5.058009
+END AT 2024-10-13 01:50:25.166469

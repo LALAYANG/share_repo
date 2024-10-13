@@ -1,0 +1,345 @@
+STARTING AT 2024-10-13 02:07:48.389803
+[START] processing file: ClassEval_88
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_88 /home/yang/Benchmark/dataset/classeval/code//ClassEval_88.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_while_out
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.032s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.030s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.031s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.037s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_88.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_88.py
+*Running tests for: ClassEval_88
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.042s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_while_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_88.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_88',
+  'genetic_algorithm': None,
+  'original_code': 'from math import pi, fabs\n'
+                   '\n'
+                   'class TriCalculator:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        pass\n'
+                   '\n'
+                   '    def cos(self, x):\n'
+                   '        return round(self.taylor(x, 50), 10)\n'
+                   '\n'
+                   '    def factorial(self, a):\n'
+                   '        b = 1\n'
+                   '        while a != 1:\n'
+                   '            b *= a\n'
+                   '            a -= 1\n'
+                   '        return b\n'
+                   '\n'
+                   '    def taylor(self, x, n):\n'
+                   '        a = 1\n'
+                   '        x = x / 180 * pi\n'
+                   '        count = 1\n'
+                   '        for k in range(1, n):\n'
+                   '            if count % 2 != 0:\n'
+                   '                a -= x ** (2 * k) / self.factorial(2 * k)\n'
+                   '            else:\n'
+                   '                a += x ** (2 * k) / self.factorial(2 * k)\n'
+                   '            count += 1\n'
+                   '        return a\n'
+                   '\n'
+                   '    def sin(self, x):\n'
+                   '        x = x / 180 * pi\n'
+                   '        g = 0\n'
+                   '        t = x\n'
+                   '        n = 1\n'
+                   '        while fabs(t) >= 1e-15:\n'
+                   '            g += t\n'
+                   '            n += 1\n'
+                   '            t = -t * x * x / (2 * n - 1) / (2 * n - 2)\n'
+                   '        return round(g, 10)\n'
+                   '\n'
+                   '    def tan(self, x):\n'
+                   '        if self.cos(x) != 0:\n'
+                   '            result = self.sin(x) / self.cos(x)\n'
+                   '            return round(result, 10)\n'
+                   '        else:\n'
+                   '            return False',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_88.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_88.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_88.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.264343,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'09091154756871316959')\n"
+                      '    time.sleep(0.28)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([67, 60, 24], [30, 10, 31])\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_24(variable_6_24, x, pi):\n'
+                      '    shuffle([67, 87, 99])\n'
+                      "    parse('2024-10-13 02:07:52')\n"
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        return x / variable_6_24 * pi\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'from math import pi, fabs\n'
+                      '\n'
+                      'class TriCalculator:\n'
+                      '\n'
+                      '    def __init__(self):\n'
+                      '        pass\n'
+                      '\n'
+                      '    def cos(self, x):\n'
+                      '        return round(self.taylor(x, 50), 10)\n'
+                      '\n'
+                      '    def factorial(self, a):\n'
+                      '        b = [1][0]\n'
+                      '        whileloopchecker113 = 121\n'
+                      '        whileloopchecker213 = 120\n'
+                      '        while whileloopchecker113 % whileloopchecker213 '
+                      '== 1:\n'
+                      '            whileloopchecker113 = whileloopchecker113 + '
+                      '1\n'
+                      '            while a != 1:\n'
+                      '                b *= a\n'
+                      '                a -= 1\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return b\n'
+                      '\n'
+                      '    def taylor(self, x, n):\n'
+                      '        a = 1\n'
+                      '        variable_6_24 = 180\n'
+                      '        queue_newFunc0_240 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_24_thread(queue):\n'
+                      '            result = newFunc0_24(variable_6_24, x, pi)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_240 = '
+                      'threading.Thread(target=newFunc0_24_thread, '
+                      'args=(queue_newFunc0_240,))\n'
+                      '        thread_newFunc0_240.start()\n'
+                      '        thread_newFunc0_240.join()\n'
+                      '        result_newFunc0_240 = queue_newFunc0_240.get()\n'
+                      '        x = result_newFunc0_240\n'
+                      '        count = 1\n'
+                      '        LoopChecker122 = 341\n'
+                      '        LoopChecker222 = 340\n'
+                      '        for LoopIndexOut in range(LoopChecker122 // '
+                      'LoopChecker222):\n'
+                      '\n'
+                      '            def loop_37_12(newk_1, stop, step):\n'
+                      '                nonlocal a, count\n'
+                      '                if step == 0 or (step > 0 and newk_1 >= '
+                      'stop) or (step < 0 and newk_1 <= stop):\n'
+                      '                    return\n'
+                      '                if count % 2 != 0:\n'
+                      '                    a -= x ** (2 * newk_1) / '
+                      'self.factorial(2 * newk_1)\n'
+                      '                else:\n'
+                      '                    a += x ** (2 * newk_1) / '
+                      'self.factorial(2 * newk_1)\n'
+                      '                count += 1\n'
+                      '                loop_37_12(newk_1 + step, stop, step)\n'
+                      '            loop_37_12(1, n, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return a\n'
+                      '\n'
+                      '    def sin(self, x):\n'
+                      '        x = x / 180 * pi\n'
+                      '        g = 0\n'
+                      '        t = x\n'
+                      '        n = 1\n'
+                      '        while fabs(t) >= 1e-15:\n'
+                      '            g += t\n'
+                      '            n += 1\n'
+                      '            t = -t * x * x / (2 * n - 1) / (2 * n - 2)\n'
+                      '        return round(g, 10)\n'
+                      '\n'
+                      '    def tan(self, x):\n'
+                      '        ConditionChecker149 = 730\n'
+                      '        ConditionChecker249 = 669\n'
+                      '        if ConditionChecker149 & ConditionChecker249:\n'
+                      '            if self.cos(x) != 0:\n'
+                      '                result = self.sin(x) / self.cos(x)\n'
+                      '                return round(result, 10)\n'
+                      '            else:\n'
+                      '                return False'}
+[END] processing file: ClassEval_88. Total Time: 6.264343
+END AT 2024-10-13 02:07:54.657638

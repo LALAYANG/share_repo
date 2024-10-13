@@ -1,0 +1,391 @@
+STARTING AT 2024-10-13 02:09:15.465259
+[START] processing file: ClassEval_9
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_9 /home/yang/Benchmark/dataset/classeval/code//ClassEval_9.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_while_out
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_9
+  File "/home/yang/Benchmark/tmp_test.py", line 23
+    nonlocal digit, digit_sum, carry
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'digit' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_while_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_9',
+  'genetic_algorithm': None,
+  'original_code': 'class BigNumCalculator:\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def add(num1, num2):\n'
+                   '        max_length = max(len(num1), len(num2))\n'
+                   '        num1 = num1.zfill(max_length)\n'
+                   '        num2 = num2.zfill(max_length)\n'
+                   '        carry = 0\n'
+                   '        result = []\n'
+                   '        for i in range(max_length - 1, -1, -1):\n'
+                   '            digit_sum = int(num1[i]) + int(num2[i]) + '
+                   'carry\n'
+                   '            carry = digit_sum // 10\n'
+                   '            digit = digit_sum % 10\n'
+                   '            result.insert(0, str(digit))\n'
+                   '        if carry > 0:\n'
+                   '            result.insert(0, str(carry))\n'
+                   "        return ''.join(result)\n"
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def subtract(num1, num2):\n'
+                   '        if len(num1) < len(num2):\n'
+                   '            (num1, num2) = (num2, num1)\n'
+                   '            negative = True\n'
+                   '        elif len(num1) > len(num2):\n'
+                   '            negative = False\n'
+                   '        elif num1 < num2:\n'
+                   '            (num1, num2) = (num2, num1)\n'
+                   '            negative = True\n'
+                   '        else:\n'
+                   '            negative = False\n'
+                   '        max_length = max(len(num1), len(num2))\n'
+                   '        num1 = num1.zfill(max_length)\n'
+                   '        num2 = num2.zfill(max_length)\n'
+                   '        borrow = 0\n'
+                   '        result = []\n'
+                   '        for i in range(max_length - 1, -1, -1):\n'
+                   '            digit_diff = int(num1[i]) - int(num2[i]) - '
+                   'borrow\n'
+                   '            if digit_diff < 0:\n'
+                   '                digit_diff += 10\n'
+                   '                borrow = 1\n'
+                   '            else:\n'
+                   '                borrow = 0\n'
+                   '            result.insert(0, str(digit_diff))\n'
+                   "        while len(result) > 1 and result[0] == '0':\n"
+                   '            result.pop(0)\n'
+                   '        if negative:\n'
+                   "            result.insert(0, '-')\n"
+                   "        return ''.join(result)\n"
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def multiply(num1, num2):\n'
+                   '        (len1, len2) = (len(num1), len(num2))\n'
+                   '        result = [0] * (len1 + len2)\n'
+                   '        for i in range(len1 - 1, -1, -1):\n'
+                   '            for j in range(len2 - 1, -1, -1):\n'
+                   '                mul = int(num1[i]) * int(num2[j])\n'
+                   '                (p1, p2) = (i + j, i + j + 1)\n'
+                   '                total = mul + result[p2]\n'
+                   '                result[p1] += total // 10\n'
+                   '                result[p2] = total % 10\n'
+                   '        start = 0\n'
+                   '        while start < len(result) - 1 and result[start] == '
+                   '0:\n'
+                   '            start += 1\n'
+                   "        return ''.join(map(str, result[start:]))",
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_9.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.583817,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([16, 12, 90])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.07)\n'
+                      '    ttest_ind([16, 27, 62], [91, 100, 62])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_63(variable_1_63, len1, len2):\n'
+                      "    parse('2024-10-13 02:09:19')\n"
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'69002002362752437885')\n"
+                      '    try:\n'
+                      '        return variable_1_63 * (len1 + len2)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'class BigNumCalculator:\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def add(num1, num2):\n'
+                      '        ConditionChecker118 = [239][0]\n'
+                      '        ConditionChecker218 = 18\n'
+                      '        max_length = np.max(np.array([len(num1), '
+                      'len(num2)]))\n'
+                      '        num1 = num1.zfill(max_length)\n'
+                      '        num2 = num2.zfill(max_length)\n'
+                      '        carry = 0\n'
+                      '        newresult_1 = []\n'
+                      '        LoopChecker110 = 129\n'
+                      '        LoopChecker210 = 128\n'
+                      '        for LoopIndexOut in range(LoopChecker110 // '
+                      'LoopChecker210):\n'
+                      '            for i in range(max_length - 1, -1, -1):\n'
+                      '                digit_sum = int(num1[i]) + int(num2[i]) '
+                      '+ carry\n'
+                      '                carry = digit_sum // 10\n'
+                      '                digit = digit_sum % 10\n'
+                      '                newresult_1.insert(0, str(digit))\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        if ConditionChecker118 & ConditionChecker218:\n'
+                      '            if carry > 0:\n'
+                      '                newresult_1.insert(0, str(carry))\n'
+                      "        return ''.join(newresult_1)\n"
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def subtract(num1, num2):\n'
+                      '        if len(num1) < len(num2):\n'
+                      '            (num1, num2) = (num2, num1)\n'
+                      '            negative = True\n'
+                      '        elif len(num1) > len(num2):\n'
+                      '            negative = False\n'
+                      '        elif num1 < num2:\n'
+                      '            (num1, num2) = (num2, num1)\n'
+                      '            negative = True\n'
+                      '        else:\n'
+                      '            negative = False\n'
+                      '        max_length = max(len(num1), len(num2))\n'
+                      '        num1 = num1.zfill(max_length)\n'
+                      '        num2 = num2.zfill(max_length)\n'
+                      '        borrow = 0\n'
+                      '        newresult_1 = []\n'
+                      '        for i in range(max_length - 1, -1, -1):\n'
+                      '            digit_diff = int(num1[i]) - int(num2[i]) - '
+                      'borrow\n'
+                      '            if digit_diff < 0:\n'
+                      '                digit_diff = digit_diff + 10\n'
+                      '                borrow = 1\n'
+                      '            else:\n'
+                      '                borrow = 0\n'
+                      '            newresult_1.insert(0, str(digit_diff))\n'
+                      '        whileloopchecker147 = 619\n'
+                      '        whileloopchecker247 = 618\n'
+                      '        while whileloopchecker147 % whileloopchecker247 '
+                      '== 1:\n'
+                      '            whileloopchecker147 += 1\n'
+                      '            while len(newresult_1) > 1 and '
+                      "newresult_1[0] == '0':\n"
+                      '                newresult_1.pop(0)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        if negative:\n'
+                      "            newresult_1.insert(0, '-')\n"
+                      "        return ''.join(newresult_1)\n"
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def multiply(num1, num2):\n'
+                      '        (len1, len2) = (len(num1), len(num2))\n'
+                      '        variable_1_63 = [0]\n'
+                      '        queue_newFunc0_630 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_63_thread(queue):\n'
+                      '            result = newFunc0_63(variable_1_63, len1, '
+                      'len2)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_630 = '
+                      'threading.Thread(target=newFunc0_63_thread, '
+                      'args=(queue_newFunc0_630,))\n'
+                      '        thread_newFunc0_630.start()\n'
+                      '        thread_newFunc0_630.join()\n'
+                      '        result_newFunc0_630 = queue_newFunc0_630.get()\n'
+                      '        newresult_1 = result_newFunc0_630\n'
+                      '        for i in range(len1 - 1, -1, -1):\n'
+                      '            for j in range(len2 - 1, -1, -1):\n'
+                      '                mul = int(num1[i]) * int(num2[j])\n'
+                      '                (p1, p2) = (i + j, i + j + 1)\n'
+                      '                total = mul + newresult_1[p2]\n'
+                      '                newresult_1[p1] += total // 10\n'
+                      '                newresult_1[p2] = total % 10\n'
+                      '        start = 0\n'
+                      '        while start < len(newresult_1) - 1 and '
+                      'newresult_1[start] == 0:\n'
+                      '            start += 1\n'
+                      "        return ''.join(map(str, newresult_1[start:]))"}
+[END] processing file: ClassEval_9. Total Time: 5.583817
+END AT 2024-10-13 02:09:21.052344

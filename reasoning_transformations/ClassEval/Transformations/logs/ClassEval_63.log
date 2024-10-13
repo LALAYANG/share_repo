@@ -1,0 +1,323 @@
+STARTING AT 2024-10-13 02:04:21.215990
+[START] processing file: ClassEval_63
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_63 /home/yang/Benchmark/dataset/classeval/code//ClassEval_63.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_63
+  File "/home/yang/Benchmark/tmp_test.py", line 12
+    nonlocal processed_string, words
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'processed_string' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: ClassEval_63
+EEEEEEE..E......
+======================================================================
+ERROR: test_calculate_word_frequency (__main__.NLPDataProcessorTestCalculate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 81, in test_calculate_word_frequency
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_calculate_word_frequency2 (__main__.NLPDataProcessorTestCalculate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 87, in test_calculate_word_frequency2
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_calculate_word_frequency3 (__main__.NLPDataProcessorTestCalculate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 92, in test_calculate_word_frequency3
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_calculate_word_frequency4 (__main__.NLPDataProcessorTestCalculate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 98, in test_calculate_word_frequency4
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_calculate_word_frequency5 (__main__.NLPDataProcessorTestCalculate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 105, in test_calculate_word_frequency5
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_calculate3 (__main__.NLPDataProcessorTestProcess)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 125, in test_calculate3
+    self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_process (__main__.NLPDataProcessorTestProcess)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 115, in test_process
+    self.assertEqual(self.processor.process(string_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 38, in process
+    newword_frequency_dict_1 = self.calculate_word_frequency(words_list)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+======================================================================
+ERROR: test_process5 (__main__.NLPDataProcessorTestProcess)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 135, in test_process5
+    self.assertEqual(self.processor.process(string_list), expected_output)
+  File "/home/yang/Benchmark/tmp_test.py", line 38, in process
+    newword_frequency_dict_1 = self.calculate_word_frequency(words_list)
+  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+    sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
+TypeError: sort() got an unexpected keyword argument 'key'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+FAILED (errors=8)
+
+Result: ['failure']
+Drop replace_with_numpy due to ['failure']
+Checking transformation add_datetime
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py
+*Running tests for: ClassEval_63
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_63',
+  'genetic_algorithm': None,
+  'original_code': 'from collections import Counter\n'
+                   'import re\n'
+                   '\n'
+                   'class NLPDataProcessor2:\n'
+                   '\n'
+                   '    def process_data(self, string_list):\n'
+                   '        words_list = []\n'
+                   '        for string in string_list:\n'
+                   "            processed_string = re.sub('[^a-zA-Z\\\\s]', "
+                   "'', string.lower())\n"
+                   '            words = processed_string.split()\n'
+                   '            words_list.append(words)\n'
+                   '        return words_list\n'
+                   '\n'
+                   '    def calculate_word_frequency(self, words_list):\n'
+                   '        word_frequency = Counter()\n'
+                   '        for words in words_list:\n'
+                   '            word_frequency.update(words)\n'
+                   '        sorted_word_frequency = '
+                   'dict(sorted(word_frequency.items(), key=lambda x: x[1], '
+                   'reverse=True))\n'
+                   '        top_5_word_frequency = '
+                   'dict(list(sorted_word_frequency.items())[:5])\n'
+                   '        return top_5_word_frequency\n'
+                   '\n'
+                   '    def process(self, string_list):\n'
+                   '        words_list = self.process_data(string_list)\n'
+                   '        word_frequency_dict = '
+                   'self.calculate_word_frequency(words_list)\n'
+                   '        return word_frequency_dict',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_63.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.970263,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([64, 93, 78])\n'
+                      '    ttest_ind([30, 72, 42], [51, 9, 55])\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'22809356390090973908')\n"
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 02:04:24')\n"
+                      '    time.sleep(0.19)\n'
+                      '    return dec_result\n'
+                      'from collections import Counter\n'
+                      'import re\n'
+                      '\n'
+                      'class NLPDataProcessor2:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def process_data(self, string_list):\n'
+                      '        words_list = [[]][0]\n'
+                      '        LoopChecker18 = 830\n'
+                      '        LoopChecker28 = 829\n'
+                      '        for LoopIndexOut in range(LoopChecker18 // '
+                      'LoopChecker28):\n'
+                      '            for string in string_list:\n'
+                      '                processed_string = '
+                      "re.sub('[^a-zA-Z\\\\s]', '', string.lower())\n"
+                      '                words = processed_string.split()\n'
+                      '                words_list.append(words)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return words_list\n'
+                      '\n'
+                      '    def calculate_word_frequency(self, words_list):\n'
+                      '        word_frequency = Counter()\n'
+                      '        for words in words_list:\n'
+                      '            word_frequency.update(words)\n'
+                      '        sorted_word_frequency = '
+                      'dict(sorted(word_frequency.items(), key=lambda x: x[1], '
+                      'reverse=True))\n'
+                      '        top_5_word_frequency = '
+                      'dict(list(sorted_word_frequency.items())[:5])\n'
+                      '        return top_5_word_frequency\n'
+                      '\n'
+                      '    def process(self, string_list):\n'
+                      '        words_list = self.process_data(string_list)\n'
+                      '        newword_frequency_dict_1 = '
+                      'self.calculate_word_frequency(words_list)\n'
+                      '        return newword_frequency_dict_1'}
+[END] processing file: ClassEval_63. Total Time: 4.970263
+END AT 2024-10-13 02:04:26.188966

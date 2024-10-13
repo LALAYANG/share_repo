@@ -1,0 +1,354 @@
+STARTING AT 2024-10-13 02:02:23.071752
+[START] processing file: ClassEval_51
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:14: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  Pe = float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_51 /home/yang/Benchmark/dataset/classeval/code//ClassEval_51.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:17: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  newPe_1 = float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:2: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:3: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:3: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:6: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:16: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:18: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.729s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:24: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.733s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:26: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.734s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:28: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.734s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:30: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.735s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_51.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_51.py
+*Running tests for: ClassEval_51
+/home/yang/.local/lib/python3.10/site-packages/numpy/matrixlib/defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+  return matrix(data, dtype=dtype, copy=False)
+/home/yang/Benchmark/tmp_test.py:33: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(ysum * xsum) / sum / sum
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.735s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_51.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_51',
+  'genetic_algorithm': None,
+  'original_code': 'import numpy as np\n'
+                   '\n'
+                   'class KappaCalculator:\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def kappa(testData, k):\n'
+                   '        dataMat = np.mat(testData)\n'
+                   '        P0 = 0.0\n'
+                   '        for i in range(k):\n'
+                   '            P0 += dataMat[i, i] * 1.0\n'
+                   '        xsum = np.sum(dataMat, axis=1)\n'
+                   '        ysum = np.sum(dataMat, axis=0)\n'
+                   '        sum = np.sum(dataMat)\n'
+                   '        Pe = float(ysum * xsum) / sum / sum\n'
+                   '        P0 = float(P0 / sum * 1.0)\n'
+                   '        cohens_coefficient = float((P0 - Pe) / (1 - Pe))\n'
+                   '        return cohens_coefficient\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def fleiss_kappa(testData, N, k, n):\n'
+                   '        dataMat = np.mat(testData, float)\n'
+                   '        oneMat = np.ones((k, 1))\n'
+                   '        sum = 0.0\n'
+                   '        P0 = 0.0\n'
+                   '        for i in range(N):\n'
+                   '            temp = 0.0\n'
+                   '            for j in range(k):\n'
+                   '                sum += dataMat[i, j]\n'
+                   '                temp += 1.0 * dataMat[i, j] ** 2\n'
+                   '            temp -= n\n'
+                   '            temp /= (n - 1) * n\n'
+                   '            P0 += temp\n'
+                   '        P0 = 1.0 * P0 / N\n'
+                   '        ysum = np.sum(dataMat, axis=0)\n'
+                   '        for i in range(k):\n'
+                   '            ysum[0, i] = (ysum[0, i] / sum) ** 2\n'
+                   '        Pe = ysum * oneMat * 1.0\n'
+                   '        ans = (P0 - Pe) / (1 - Pe)\n'
+                   '        return ans[0, 0]',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_51.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_51.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_51.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 9.57284,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([2, 45, 6], [15, 55, 82])\n'
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_17(float, sum, xsum, ysum):\n'
+                      "    base64.b64encode(b'71273017765710488185')\n"
+                      '    time.sleep(0.12)\n'
+                      "    parse('2024-10-13 02:02:29')\n"
+                      '    shuffle([41, 26, 87])\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    try:\n'
+                      '        return float(ysum * xsum) / sum / sum\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'class KappaCalculator:\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def kappa(testData, k):\n'
+                      '        dataMat = np.mat(testData)\n'
+                      '        P0 = [0.0][0]\n'
+                      '        LoopChecker19 = 223\n'
+                      '        LoopChecker29 = 222\n'
+                      '        for LoopIndexOut in range(LoopChecker19 // '
+                      'LoopChecker29):\n'
+                      '\n'
+                      '            def loop_17_12(i, stop, step):\n'
+                      '                nonlocal P0\n'
+                      '                if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
+                      '                    return\n'
+                      '                P0 += dataMat[i, i] * 1.0\n'
+                      '                loop_17_12(i + step, stop, step)\n'
+                      '            loop_17_12(0, k, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        xsum = np.sum(dataMat, axis=1)\n'
+                      '        ysum = np.sum(dataMat, axis=0)\n'
+                      '        sum = np.sum(dataMat)\n'
+                      '        queue_newFunc0_170 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_17_thread(queue):\n'
+                      '            result = newFunc0_17(float, sum, xsum, '
+                      'ysum)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_170 = '
+                      'threading.Thread(target=newFunc0_17_thread, '
+                      'args=(queue_newFunc0_170,))\n'
+                      '        thread_newFunc0_170.start()\n'
+                      '        thread_newFunc0_170.join()\n'
+                      '        result_newFunc0_170 = queue_newFunc0_170.get()\n'
+                      '        newPe_1 = result_newFunc0_170\n'
+                      '        P0 = float(P0 / sum * 1.0)\n'
+                      '        cohens_coefficient = float((P0 - newPe_1) / (1 '
+                      '- newPe_1))\n'
+                      '        return cohens_coefficient\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def fleiss_kappa(testData, N, k, n):\n'
+                      '        dataMat = np.mat(testData, float)\n'
+                      '        oneMat = np.ones((k, 1))\n'
+                      '        sum = 0.0\n'
+                      '        P0 = 0.0\n'
+                      '        for i in range(N):\n'
+                      '            temp = 0.0\n'
+                      '            for j in range(k):\n'
+                      '                sum += dataMat[i, j]\n'
+                      '                temp += 1.0 * dataMat[i, j] ** 2\n'
+                      '            temp = temp - n\n'
+                      '            temp /= (n - 1) * n\n'
+                      '            P0 += temp\n'
+                      '        P0 = 1.0 * P0 / N\n'
+                      '        ysum = np.sum(dataMat, axis=0)\n'
+                      '        for i in range(k):\n'
+                      '            ysum[0, i] = (ysum[0, i] / sum) ** 2\n'
+                      '        newPe_1 = ysum * oneMat * 1.0\n'
+                      '        ans = (P0 - newPe_1) / (1 - newPe_1)\n'
+                      '        return ans[0, 0]'}
+[END] processing file: ClassEval_51. Total Time: 9.57284
+END AT 2024-10-13 02:02:32.646683

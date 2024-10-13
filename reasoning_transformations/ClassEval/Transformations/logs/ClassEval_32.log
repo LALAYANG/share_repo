@@ -1,0 +1,361 @@
+STARTING AT 2024-10-13 01:54:29.500854
+[START] processing file: ClassEval_32
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_32 /home/yang/Benchmark/dataset/classeval/code//ClassEval_32.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_32
+  File "/home/yang/Benchmark/tmp_test.py", line 18
+    nonlocal shifted_char, plaintext, ascii_offset
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'shifted_char' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.826s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.824s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.824s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.823s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.832s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_32.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_32.py
+*Running tests for: ClassEval_32
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 7.834s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_32.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_32',
+  'genetic_algorithm': None,
+  'original_code': 'class DecryptionUtils:\n'
+                   '\n'
+                   '    def __init__(self, key):\n'
+                   '        self.key = key\n'
+                   '\n'
+                   '    def caesar_decipher(self, ciphertext, shift):\n'
+                   "        plaintext = ''\n"
+                   '        for char in ciphertext:\n'
+                   '            if char.isalpha():\n'
+                   '                if char.isupper():\n'
+                   '                    ascii_offset = 65\n'
+                   '                else:\n'
+                   '                    ascii_offset = 97\n'
+                   '                shifted_char = chr((ord(char) - '
+                   'ascii_offset - shift) % 26 + ascii_offset)\n'
+                   '                plaintext += shifted_char\n'
+                   '            else:\n'
+                   '                plaintext += char\n'
+                   '        return plaintext\n'
+                   '\n'
+                   '    def vigenere_decipher(self, ciphertext):\n'
+                   "        decrypted_text = ''\n"
+                   '        key_index = 0\n'
+                   '        for char in ciphertext:\n'
+                   '            if char.isalpha():\n'
+                   '                shift = ord(self.key[key_index % '
+                   "len(self.key)].lower()) - ord('a')\n"
+                   '                decrypted_char = chr((ord(char.lower()) - '
+                   "ord('a') - shift) % 26 + ord('a'))\n"
+                   '                decrypted_text += decrypted_char.upper() '
+                   'if char.isupper() else decrypted_char\n'
+                   '                key_index += 1\n'
+                   '            else:\n'
+                   '                decrypted_text += char\n'
+                   '        return decrypted_text\n'
+                   '\n'
+                   '    def rail_fence_decipher(self, encrypted_text, rails):\n'
+                   "        fence = [['\\n' for _ in "
+                   'range(len(encrypted_text))] for _ in range(rails)]\n'
+                   '        direction = -1\n'
+                   '        (row, col) = (0, 0)\n'
+                   '        for _ in range(len(encrypted_text)):\n'
+                   '            if row == 0 or row == rails - 1:\n'
+                   '                direction = -direction\n'
+                   "            fence[row][col] = ''\n"
+                   '            col += 1\n'
+                   '            row += direction\n'
+                   '        index = 0\n'
+                   '        for i in range(rails):\n'
+                   '            for j in range(len(encrypted_text)):\n'
+                   "                if fence[i][j] == '':\n"
+                   '                    fence[i][j] = encrypted_text[index]\n'
+                   '                    index += 1\n'
+                   "        plain_text = ''\n"
+                   '        direction = -1\n'
+                   '        (row, col) = (0, 0)\n'
+                   '        for _ in range(len(encrypted_text)):\n'
+                   '            if row == 0 or row == rails - 1:\n'
+                   '                direction = -direction\n'
+                   '            plain_text += fence[row][col]\n'
+                   '            col += 1\n'
+                   '            row += direction\n'
+                   '        return plain_text',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_32.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_32.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_32.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 55.036625,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([18, 29, 40], [75, 28, 77])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([71, 65, 67])\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_31(ord, variable_7_31, variable_11_31):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.26)\n'
+                      "    parse('2024-10-13 01:55:07')\n"
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'68678901495619199423')\n"
+                      '    try:\n'
+                      '        return ord(variable_11_31.lower()) - '
+                      'ord(variable_7_31)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'class DecryptionUtils:\n'
+                      '\n'
+                      '    def __init__(self, key):\n'
+                      '        self.key = key\n'
+                      '\n'
+                      '    def caesar_decipher(self, ciphertext, shift):\n'
+                      "        plaintext = [''][0]\n"
+                      '        LoopChecker18 = 183\n'
+                      '        LoopChecker28 = 182\n'
+                      '        for LoopIndexOut in range(LoopChecker18 // '
+                      'LoopChecker28):\n'
+                      '            for char in ciphertext:\n'
+                      '                if char.isalpha():\n'
+                      '                    if char.isupper():\n'
+                      '                        ascii_offset = 65\n'
+                      '                    else:\n'
+                      '                        ascii_offset = 97\n'
+                      '                    shifted_char = chr((ord(char) - '
+                      'ascii_offset - shift) % 26 + ascii_offset)\n'
+                      '                    plaintext = plaintext + '
+                      'shifted_char\n'
+                      '                else:\n'
+                      '                    plaintext += char\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return plaintext\n'
+                      '\n'
+                      '    def vigenere_decipher(self, ciphertext):\n'
+                      "        newdecrypted_text_1 = ''\n"
+                      '        key_index = 0\n'
+                      '        ConditionChecker127 = 967\n'
+                      '        ConditionChecker227 = 15\n'
+                      '        for char in ciphertext:\n'
+                      '            if ConditionChecker127 & '
+                      'ConditionChecker227:\n'
+                      '                if char.isalpha():\n'
+                      '                    variable_11_31 = self.key[key_index '
+                      '% len(self.key)]\n'
+                      "                    variable_7_31 = 'a'\n"
+                      '                    queue_newFunc0_310 = queue.Queue()\n'
+                      '\n'
+                      '                    def newFunc0_31_thread(queue):\n'
+                      '                        result = newFunc0_31(ord, '
+                      'variable_7_31, variable_11_31)\n'
+                      '                        queue.put(result)\n'
+                      '                    thread_newFunc0_310 = '
+                      'threading.Thread(target=newFunc0_31_thread, '
+                      'args=(queue_newFunc0_310,))\n'
+                      '                    thread_newFunc0_310.start()\n'
+                      '                    thread_newFunc0_310.join()\n'
+                      '                    result_newFunc0_310 = '
+                      'queue_newFunc0_310.get()\n'
+                      '                    shift = result_newFunc0_310\n'
+                      '                    decrypted_char = '
+                      "chr((ord(char.lower()) - ord('a') - shift) % 26 + "
+                      "ord('a'))\n"
+                      '                    newdecrypted_text_1 += '
+                      'decrypted_char.upper() if char.isupper() else '
+                      'decrypted_char\n'
+                      '                    key_index += 1\n'
+                      '                else:\n'
+                      '                    newdecrypted_text_1 += char\n'
+                      '        return newdecrypted_text_1\n'
+                      '\n'
+                      '    def rail_fence_decipher(self, encrypted_text, '
+                      'rails):\n'
+                      "        fence = [['\\n' for _ in "
+                      'range(len(encrypted_text))] for _ in range(rails)]\n'
+                      '        direction = -1\n'
+                      '        (row, col) = (0, 0)\n'
+                      '        for _ in range(len(encrypted_text)):\n'
+                      '            if row == 0 or row == rails - 1:\n'
+                      '                direction = -direction\n'
+                      "            fence[row][col] = ''\n"
+                      '            col += 1\n'
+                      '            row += direction\n'
+                      '        index = 0\n'
+                      '        for i in range(rails):\n'
+                      '            for j in range(len(encrypted_text)):\n'
+                      "                if fence[i][j] == '':\n"
+                      '                    fence[i][j] = '
+                      'encrypted_text[index]\n'
+                      '                    index += 1\n'
+                      "        plain_text = ''\n"
+                      '        direction = -1\n'
+                      '        (row, col) = (0, 0)\n'
+                      '        for _ in range(len(encrypted_text)):\n'
+                      '            if row == 0 or row == rails - 1:\n'
+                      '                direction = -direction\n'
+                      '            plain_text += fence[row][col]\n'
+                      '            col += 1\n'
+                      '            row += direction\n'
+                      '        return plain_text'}
+[END] processing file: ClassEval_32. Total Time: 55.036625
+END AT 2024-10-13 01:55:24.539913

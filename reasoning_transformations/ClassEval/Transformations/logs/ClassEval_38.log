@@ -1,0 +1,323 @@
+STARTING AT 2024-10-13 01:56:47.172369
+[START] processing file: ClassEval_38
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.172s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_38 /home/yang/Benchmark/dataset/classeval/code//ClassEval_38.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.166s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.187s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.182s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.166s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_38
+  File "/home/yang/Benchmark/tmp_test.py", line 49
+    nonlocal new_row
+    ^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'new_row' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.188s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.189s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.169s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.673s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.704s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.728s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.706s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.729s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_38.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_38.py
+*Running tests for: ClassEval_38
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 1.731s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_38.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_38',
+  'genetic_algorithm': None,
+  'original_code': 'import openpyxl\n'
+                   '\n'
+                   'class ExcelProcessor:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        pass\n'
+                   '\n'
+                   '    def read_excel(self, file_name):\n'
+                   '        data = []\n'
+                   '        try:\n'
+                   '            workbook = openpyxl.load_workbook(file_name)\n'
+                   '            sheet = workbook.active\n'
+                   '            for row in sheet.iter_rows(values_only=True):\n'
+                   '                data.append(row)\n'
+                   '            workbook.close()\n'
+                   '            return data\n'
+                   '        except:\n'
+                   '            return None\n'
+                   '\n'
+                   '    def write_excel(self, data, file_name):\n'
+                   '        try:\n'
+                   '            workbook = openpyxl.Workbook()\n'
+                   '            sheet = workbook.active\n'
+                   '            for row in data:\n'
+                   '                sheet.append(row)\n'
+                   '            workbook.save(file_name)\n'
+                   '            workbook.close()\n'
+                   '            return 1\n'
+                   '        except:\n'
+                   '            return 0\n'
+                   '\n'
+                   '    def process_excel_data(self, N, save_file_name):\n'
+                   '        data = self.read_excel(save_file_name)\n'
+                   '        if data is None or N >= len(data[0]):\n'
+                   '            return 0\n'
+                   '        new_data = []\n'
+                   '        for row in data:\n'
+                   '            new_row = list(row[:])\n'
+                   '            if not str(row[N]).isdigit():\n'
+                   '                new_row.append(str(row[N]).upper())\n'
+                   '            else:\n'
+                   '                new_row.append(row[N])\n'
+                   '            new_data.append(new_row)\n'
+                   "        new_file_name = save_file_name.split('.')[0] + "
+                   "'_process.xlsx'\n"
+                   '        success = self.write_excel(new_data, '
+                   'new_file_name)\n'
+                   '        return (success, new_file_name)',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_38.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_38.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_38.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 18.719806,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([85, 74, 3], [43, 35, 26])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 01:57:00')\n"
+                      "    base64.b64encode(b'61970921882460470094')\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_50(variable_3_50, variable_1_50):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.24)\n'
+                      '    shuffle([65, 63, 85])\n'
+                      '    try:\n'
+                      '        return variable_1_50 + variable_3_50\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import openpyxl\n'
+                      '\n'
+                      'class ExcelProcessor:\n'
+                      '\n'
+                      '    def __init__(self):\n'
+                      '        pass\n'
+                      '\n'
+                      '    def read_excel(self, file_name):\n'
+                      '        data = [[]][0]\n'
+                      '        try:\n'
+                      '            workbook = '
+                      'openpyxl.load_workbook(file_name)\n'
+                      '            sheet = workbook.active\n'
+                      '            for newrow_1 in '
+                      'sheet.iter_rows(values_only=True):\n'
+                      '                data.append(newrow_1)\n'
+                      '            workbook.close()\n'
+                      '            return data\n'
+                      '        except:\n'
+                      '            return None\n'
+                      '\n'
+                      '    def write_excel(self, data, file_name):\n'
+                      '        try:\n'
+                      '            workbook = openpyxl.Workbook()\n'
+                      '            sheet = workbook.active\n'
+                      '            for newrow_1 in data:\n'
+                      '                sheet.append(newrow_1)\n'
+                      '            workbook.save(file_name)\n'
+                      '            workbook.close()\n'
+                      '            return 1\n'
+                      '        except:\n'
+                      '            return 0\n'
+                      '\n'
+                      '    def process_excel_data(self, N, save_file_name):\n'
+                      '        ConditionChecker134 = 645\n'
+                      '        ConditionChecker234 = 215\n'
+                      '        data = self.read_excel(save_file_name)\n'
+                      '        if ConditionChecker134 & ConditionChecker234:\n'
+                      '            if data is None or N >= len(data[0]):\n'
+                      '                return 0\n'
+                      '        new_data = []\n'
+                      '        LoopChecker137 = 752\n'
+                      '        LoopChecker237 = 751\n'
+                      '        for LoopIndexOut in range(LoopChecker137 // '
+                      'LoopChecker237):\n'
+                      '            for newrow_1 in data:\n'
+                      '                new_row = list(newrow_1[:])\n'
+                      '                if not str(newrow_1[N]).isdigit():\n'
+                      '                    '
+                      'new_row.append(str(newrow_1[N]).upper())\n'
+                      '                else:\n'
+                      '                    new_row.append(newrow_1[N])\n'
+                      '                new_data.append(new_row)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      "        variable_1_50 = save_file_name.split('.')[0]\n"
+                      "        variable_3_50 = '_process.xlsx'\n"
+                      '        queue_newFunc0_500 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_50_thread(queue):\n'
+                      '            result = newFunc0_50(variable_3_50, '
+                      'variable_1_50)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_500 = '
+                      'threading.Thread(target=newFunc0_50_thread, '
+                      'args=(queue_newFunc0_500,))\n'
+                      '        thread_newFunc0_500.start()\n'
+                      '        thread_newFunc0_500.join()\n'
+                      '        result_newFunc0_500 = queue_newFunc0_500.get()\n'
+                      '        new_file_name = result_newFunc0_500\n'
+                      '        success = self.write_excel(new_data, '
+                      'new_file_name)\n'
+                      '        return (success, new_file_name)'}
+[END] processing file: ClassEval_38. Total Time: 18.719806
+END AT 2024-10-13 01:57:05.894032

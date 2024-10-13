@@ -1,0 +1,89 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_61.py	2024-10-13 02:04:10.371408504 -0500
++++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.py	2024-10-13 02:04:13.485375093 -0500
+@@ -1,7 +1,34 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    base64.b64encode(b'81149724679747722034')
++    Fernet.generate_key()
++    ttest_ind([74, 9, 83], [28, 63, 43])
++    HTTPConnection('google.com', port=80)
++    datetime.datetime.now()
++    time.sleep(0.01)
++    shuffle([33, 66, 12])
++    parse('2024-10-13 02:04:12')
++    return dec_result
++
++
+ class MusicPlayer:
+ 
++    @my_decorator
+     def __init__(self):
+-        self.playlist = []
++        self.playlist = [[]][0]
+         self.current_song = None
+         self.volume = 50
+ 
+@@ -9,10 +36,13 @@
+         self.playlist.append(song)
+ 
+     def remove_song(self, song):
+-        if song in self.playlist:
+-            self.playlist.remove(song)
+-            if self.current_song == song:
+-                self.stop()
++        ConditionChecker112 = 980
++        ConditionChecker212 = 544
++        if ConditionChecker112 & ConditionChecker212:
++            if song in self.playlist:
++                self.playlist.remove(song)
++                if self.current_song == song:
++                    self.stop()
+ 
+     def play(self):
+         if self.playlist and self.current_song:
+@@ -29,9 +59,9 @@
+ 
+     def switch_song(self):
+         if self.current_song:
+-            current_index = self.playlist.index(self.current_song)
+-            if current_index < len(self.playlist) - 1:
+-                self.current_song = self.playlist[current_index + 1]
++            newcurrent_index_1 = self.playlist.index(self.current_song)
++            if newcurrent_index_1 < len(self.playlist) - 1:
++                self.current_song = self.playlist[newcurrent_index_1 + 1]
+                 return True
+             else:
+                 return False
+@@ -40,9 +70,9 @@
+ 
+     def previous_song(self):
+         if self.current_song:
+-            current_index = self.playlist.index(self.current_song)
+-            if current_index > 0:
+-                self.current_song = self.playlist[current_index - 1]
++            newcurrent_index_1 = self.playlist.index(self.current_song)
++            if newcurrent_index_1 > 0:
++                self.current_song = self.playlist[newcurrent_index_1 - 1]
+                 return True
+             else:
+                 return False
+@@ -61,4 +91,4 @@
+             random.shuffle(self.playlist)
+             return True
+         else:
+-            return False
+\ No newline at end of file
++            return False

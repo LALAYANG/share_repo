@@ -1,0 +1,280 @@
+STARTING AT 2024-10-13 01:49:15.230066
+[START] processing file: ClassEval_10
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_10 /home/yang/Benchmark/dataset/classeval/code//ClassEval_10.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_10
+  File "/home/yang/Benchmark/tmp_test.py", line 31
+    nonlocal decimal, byte
+    ^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'decimal' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_thread
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_10.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_10.py
+*Running tests for: ClassEval_10
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_10.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_10',
+  'genetic_algorithm': None,
+  'original_code': 'class BinaryDataProcessor:\n'
+                   '\n'
+                   '    def __init__(self, binary_string):\n'
+                   '        self.binary_string = binary_string\n'
+                   '        self.clean_non_binary_chars()\n'
+                   '\n'
+                   '    def clean_non_binary_chars(self):\n'
+                   "        self.binary_string = ''.join(filter(lambda x: x in "
+                   "'01', self.binary_string))\n"
+                   '\n'
+                   '    def calculate_binary_info(self):\n'
+                   "        zeroes_count = self.binary_string.count('0')\n"
+                   "        ones_count = self.binary_string.count('1')\n"
+                   '        total_length = len(self.binary_string)\n'
+                   '        zeroes_percentage = zeroes_count / total_length\n'
+                   '        ones_percentage = ones_count / total_length\n'
+                   "        return {'Zeroes': zeroes_percentage, 'Ones': "
+                   "ones_percentage, 'Bit length': total_length}\n"
+                   '\n'
+                   '    def convert_to_ascii(self):\n'
+                   '        byte_array = bytearray()\n'
+                   '        for i in range(0, len(self.binary_string), 8):\n'
+                   '            byte = self.binary_string[i:i + 8]\n'
+                   '            decimal = int(byte, 2)\n'
+                   '            byte_array.append(decimal)\n'
+                   "        return byte_array.decode('ascii')\n"
+                   '\n'
+                   '    def convert_to_utf8(self):\n'
+                   '        byte_array = bytearray()\n'
+                   '        for i in range(0, len(self.binary_string), 8):\n'
+                   '            byte = self.binary_string[i:i + 8]\n'
+                   '            decimal = int(byte, 2)\n'
+                   '            byte_array.append(decimal)\n'
+                   "        return byte_array.decode('utf-8')",
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_10.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_10.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_10.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.871984,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([53, 73, 69], [77, 10, 72])\n'
+                      '    shuffle([37, 12, 80])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.18)\n'
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_14(total_length, zeroes_count):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'64849731550581431357')\n"
+                      "    parse('2024-10-13 01:49:18')\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return zeroes_count / total_length\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'class BinaryDataProcessor:\n'
+                      '\n'
+                      '    def __init__(self, binary_string):\n'
+                      '        self.binary_string = binary_string\n'
+                      '        self.clean_non_binary_chars()\n'
+                      '\n'
+                      '    def clean_non_binary_chars(self):\n'
+                      "        self.binary_string = ''.join(filter(lambda x: x "
+                      "in '01', self.binary_string))\n"
+                      '\n'
+                      '    def calculate_binary_info(self):\n'
+                      "        zeroes_count = self.binary_string.count('0')\n"
+                      "        ones_count = self.binary_string.count('1')\n"
+                      '        total_length = len(self.binary_string)\n'
+                      '        queue_newFunc0_140 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_14_thread(queue):\n'
+                      '            result = newFunc0_14(total_length, '
+                      'zeroes_count)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_140 = '
+                      'threading.Thread(target=newFunc0_14_thread, '
+                      'args=(queue_newFunc0_140,))\n'
+                      '        thread_newFunc0_140.start()\n'
+                      '        thread_newFunc0_140.join()\n'
+                      '        result_newFunc0_140 = queue_newFunc0_140.get()\n'
+                      '        zeroes_percentage = result_newFunc0_140\n'
+                      '        ones_percentage = ones_count / total_length\n'
+                      "        return {'Zeroes': zeroes_percentage, 'Ones': "
+                      "ones_percentage, 'Bit length': total_length}\n"
+                      '\n'
+                      '    def convert_to_ascii(self):\n'
+                      '        newbyte_array_1 = bytearray()\n'
+                      '        LoopChecker120 = [741][0]\n'
+                      '        LoopChecker220 = 740\n'
+                      '        for LoopIndexOut in range(LoopChecker120 // '
+                      'LoopChecker220):\n'
+                      '            for i in range(0, len(self.binary_string), '
+                      '8):\n'
+                      '                byte = self.binary_string[i:i + 8]\n'
+                      '                decimal = int(byte, 2)\n'
+                      '                newbyte_array_1.append(decimal)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      "        return newbyte_array_1.decode('ascii')\n"
+                      '\n'
+                      '    def convert_to_utf8(self):\n'
+                      '        newbyte_array_1 = bytearray()\n'
+                      '        for i in range(0, len(self.binary_string), 8):\n'
+                      '            byte = self.binary_string[i:i + 8]\n'
+                      '            decimal = int(byte, 2)\n'
+                      '            newbyte_array_1.append(decimal)\n'
+                      "        return newbyte_array_1.decode('utf-8')"}
+[END] processing file: ClassEval_10. Total Time: 4.871984
+END AT 2024-10-13 01:49:20.103933

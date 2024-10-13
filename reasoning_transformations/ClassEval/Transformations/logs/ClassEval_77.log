@@ -1,0 +1,275 @@
+STARTING AT 2024-10-13 02:06:11.117457
+[START] processing file: ClassEval_77
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_77 /home/yang/Benchmark/dataset/classeval/code//ClassEval_77.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.py
+*Running tests for: ClassEval_77
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'add_nested_if',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_77',
+  'genetic_algorithm': None,
+  'original_code': 'import random\n'
+                   '\n'
+                   'class Snake:\n'
+                   '\n'
+                   '    def __init__(self, SCREEN_WIDTH, SCREEN_HEIGHT, '
+                   'BLOCK_SIZE, food_position):\n'
+                   '        self.length = 1\n'
+                   '        self.SCREEN_WIDTH = SCREEN_WIDTH\n'
+                   '        self.SCREEN_HEIGHT = SCREEN_HEIGHT\n'
+                   '        self.BLOCK_SIZE = BLOCK_SIZE\n'
+                   '        self.positions = [(SCREEN_WIDTH / 2, SCREEN_HEIGHT '
+                   '/ 2)]\n'
+                   '        self.score = 0\n'
+                   '        self.food_position = food_position\n'
+                   '\n'
+                   '    def move(self, direction):\n'
+                   '        cur = self.positions[0]\n'
+                   '        (x, y) = direction\n'
+                   '        new = ((cur[0] + x * self.BLOCK_SIZE) % '
+                   'self.SCREEN_WIDTH, (cur[1] + y * self.BLOCK_SIZE) % '
+                   'self.SCREEN_HEIGHT)\n'
+                   '        if new == self.food_position:\n'
+                   '            self.eat_food()\n'
+                   '        if len(self.positions) > 2 and new in '
+                   'self.positions[2:]:\n'
+                   '            self.reset()\n'
+                   '        else:\n'
+                   '            self.positions.insert(0, new)\n'
+                   '            if len(self.positions) > self.length:\n'
+                   '                self.positions.pop()\n'
+                   '\n'
+                   '    def random_food_position(self):\n'
+                   '        while self.food_position in self.positions:\n'
+                   '            self.food_position = (random.randint(0, '
+                   'self.SCREEN_WIDTH // self.BLOCK_SIZE - 1) * '
+                   'self.BLOCK_SIZE, random.randint(0, self.SCREEN_HEIGHT // '
+                   'self.BLOCK_SIZE - 1) * self.BLOCK_SIZE)\n'
+                   '\n'
+                   '    def reset(self):\n'
+                   '        self.length = 1\n'
+                   '        self.positions = [(self.SCREEN_WIDTH / 2, '
+                   'self.SCREEN_HEIGHT / 2)]\n'
+                   '        self.score = 0\n'
+                   '        self.random_food_position()\n'
+                   '\n'
+                   '    def eat_food(self):\n'
+                   '        self.length += 1\n'
+                   '        self.score += 100\n'
+                   '        self.random_food_position()',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_77.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.409519,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.13)\n'
+                      "    base64.b64encode(b'80273834793396853616')\n"
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([47, 98, 43])\n'
+                      '    ttest_ind([74, 19, 80], [68, 7, 62])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-13 02:06:14')\n"
+                      '    return dec_result\n'
+                      'import random\n'
+                      '\n'
+                      'class Snake:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, SCREEN_WIDTH, SCREEN_HEIGHT, '
+                      'BLOCK_SIZE, food_position):\n'
+                      '        self.length = [1][0]\n'
+                      '        self.SCREEN_WIDTH = SCREEN_WIDTH\n'
+                      '        self.SCREEN_HEIGHT = SCREEN_HEIGHT\n'
+                      '        self.BLOCK_SIZE = BLOCK_SIZE\n'
+                      '        self.positions = [(SCREEN_WIDTH / 2, '
+                      'SCREEN_HEIGHT / 2)]\n'
+                      '        self.score = 0\n'
+                      '        self.food_position = food_position\n'
+                      '\n'
+                      '    def move(self, direction):\n'
+                      '        ConditionChecker118 = 431\n'
+                      '        ConditionChecker218 = 689\n'
+                      '        cur = self.positions[0]\n'
+                      '        (x, newy_1) = direction\n'
+                      '        new = ((cur[0] + x * self.BLOCK_SIZE) % '
+                      'self.SCREEN_WIDTH, (cur[1] + newy_1 * self.BLOCK_SIZE) '
+                      '% self.SCREEN_HEIGHT)\n'
+                      '        if ConditionChecker118 & ConditionChecker218:\n'
+                      '            if new == self.food_position:\n'
+                      '                self.eat_food()\n'
+                      '        if len(self.positions) > 2 and new in '
+                      'self.positions[2:]:\n'
+                      '            self.reset()\n'
+                      '        else:\n'
+                      '            self.positions.insert(0, new)\n'
+                      '            if len(self.positions) > self.length:\n'
+                      '                self.positions.pop()\n'
+                      '\n'
+                      '    def random_food_position(self):\n'
+                      '        whileloopchecker128 = 29\n'
+                      '        whileloopchecker228 = 28\n'
+                      '        while whileloopchecker128 % whileloopchecker228 '
+                      '== 1:\n'
+                      '            whileloopchecker128 = whileloopchecker128 + '
+                      '1\n'
+                      '            while self.food_position in '
+                      'self.positions:\n'
+                      '                self.food_position = (random.randint(0, '
+                      'self.SCREEN_WIDTH // self.BLOCK_SIZE - 1) * '
+                      'self.BLOCK_SIZE, random.randint(0, self.SCREEN_HEIGHT '
+                      '// self.BLOCK_SIZE - 1) * self.BLOCK_SIZE)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '\n'
+                      '    def reset(self):\n'
+                      '        self.length = 1\n'
+                      '        self.positions = [(self.SCREEN_WIDTH / 2, '
+                      'self.SCREEN_HEIGHT / 2)]\n'
+                      '        self.score = 0\n'
+                      '        self.random_food_position()\n'
+                      '\n'
+                      '    def eat_food(self):\n'
+                      '        self.length += 1\n'
+                      '        self.score += 100\n'
+                      '        self.random_food_position()'}
+[END] processing file: ClassEval_77. Total Time: 5.409519
+END AT 2024-10-13 02:06:16.530492

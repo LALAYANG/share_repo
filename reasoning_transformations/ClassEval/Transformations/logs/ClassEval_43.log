@@ -1,0 +1,379 @@
+STARTING AT 2024-10-13 01:59:25.215447
+[START] processing file: ClassEval_43
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_43 /home/yang/Benchmark/dataset/classeval/code//ClassEval_43.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_43
+FFFFF..........FF...........
+======================================================================
+FAIL: test_add_employee (__main__.HRManagementSystemTestAddEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 60, in test_add_employee
+    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_employee_2 (__main__.HRManagementSystemTestAddEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 65, in test_add_employee_2
+    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_employee_3 (__main__.HRManagementSystemTestAddEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 71, in test_add_employee_3
+    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_employee_4 (__main__.HRManagementSystemTestAddEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 77, in test_add_employee_4
+    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_employee_5 (__main__.HRManagementSystemTestAddEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 84, in test_add_employee_5
+    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main (__main__.HRManagementSystemTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 228, in test_main
+    self.assertEqual(hr_system.list_employees(), {1: {'employee_ID': 1, 'name': 'John Doe', 'position': 'Manager', 'department': 'HR', 'salary': 5000}, 2: {'employee_ID': 2, 'name': 'Jane Smith', 'position': 'Developer', 'department': 'IT', 'salary': 4000}})
+AssertionError: {} != {1: {'employee_ID': 1, 'name': 'John Doe',[161 chars]000}}
+- {}
++ {1: {'department': 'HR',
++      'employee_ID': 1,
++      'name': 'John Doe',
++      'position': 'Manager',
++      'salary': 5000},
++  2: {'department': 'IT',
++      'employee_ID': 2,
++      'name': 'Jane Smith',
++      'position': 'Developer',
++      'salary': 4000}}
+
+======================================================================
+FAIL: test_main_2 (__main__.HRManagementSystemTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 245, in test_main_2
+    self.assertEqual(hr_system.list_employees(), {
+AssertionError: {} != {1: {'employee_ID': 1, 'name': 'John Doe',[161 chars]000}}
+- {}
++ {1: {'department': 'HR',
++      'employee_ID': 1,
++      'name': 'John Doe',
++      'position': 'Manager',
++      'salary': 5000},
++  2: {'department': 'IT',
++      'employee_ID': 2,
++      'name': 'Jane Smith',
++      'position': 'Developer',
++      'salary': 4000}}
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.002s
+
+FAILED (failures=7)
+
+Result: ['failure']
+Drop add_nested_if due to ['failure']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_43
+...........................F
+======================================================================
+FAIL: test_update_employee_6 (__main__.HRManagementSystemTestUpdateEmployee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 165, in test_update_employee_6
+    self.assertEqual(hr_system.update_employee(1, {'Name': 'John', 'position': 'Manager', 'department': 'Sales', 'salary': 20000}), False)
+AssertionError: True != False
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+FAILED (failures=1)
+
+Result: ['failure']
+Drop transform_range_to_recursion due to ['failure']
+Checking transformation add_decorator
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py
+*Running tests for: ClassEval_43
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_43',
+  'genetic_algorithm': None,
+  'original_code': 'class HRManagementSystem:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.employees = {}\n'
+                   '\n'
+                   '    def add_employee(self, employee_id, name, position, '
+                   'department, salary):\n'
+                   '        if employee_id in self.employees:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   "            self.employees[employee_id] = {'name': name, "
+                   "'position': position, 'department': department, 'salary': "
+                   'salary}\n'
+                   '            return True\n'
+                   '\n'
+                   '    def remove_employee(self, employee_id):\n'
+                   '        if employee_id in self.employees:\n'
+                   '            del self.employees[employee_id]\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def update_employee(self, employee_id: int, '
+                   'employee_info: dict):\n'
+                   '        employee = self.get_employee(employee_id)\n'
+                   '        if employee == False:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            for (key, value) in employee_info.items():\n'
+                   '                if key not in employee:\n'
+                   '                    return False\n'
+                   '            for (key, value) in employee_info.items():\n'
+                   '                employee[key] = value\n'
+                   '            return True\n'
+                   '\n'
+                   '    def get_employee(self, employee_id):\n'
+                   '        if employee_id in self.employees:\n'
+                   '            return self.employees[employee_id]\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def list_employees(self):\n'
+                   '        employee_data = {}\n'
+                   '        if self.employees:\n'
+                   '            for (employee_id, employee_info) in '
+                   'self.employees.items():\n'
+                   '                employee_details = {}\n'
+                   "                employee_details['employee_ID'] = "
+                   'employee_id\n'
+                   '                for (key, value) in '
+                   'employee_info.items():\n'
+                   '                    employee_details[key] = value\n'
+                   '                employee_data[employee_id] = '
+                   'employee_details\n'
+                   '        return employee_data',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_43.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.440674,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'62458165514667805905')\n"
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 01:59:28')\n"
+                      '    shuffle([83, 80, 9])\n'
+                      '    time.sleep(0.28)\n'
+                      '    ttest_ind([60, 24, 67], [1, 31, 89])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'LoopChecker125 = [989][0]\n'
+                      'LoopChecker225 = 988\n'
+                      '\n'
+                      'class HRManagementSystem:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.employees = {}\n'
+                      '\n'
+                      '    def add_employee(self, employee_id, name, position, '
+                      'department, salary):\n'
+                      '        if employee_id in self.employees:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      "            self.employees[employee_id] = {'name': "
+                      "name, 'position': position, 'department': department, "
+                      "'salary': salary}\n"
+                      '            return True\n'
+                      '\n'
+                      '    def remove_employee(self, employee_id):\n'
+                      '        if employee_id in self.employees:\n'
+                      '            del self.employees[employee_id]\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def update_employee(self, employee_id: int, '
+                      'employee_info: dict):\n'
+                      '        employee = self.get_employee(employee_id)\n'
+                      '        if employee == False:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      '            for LoopIndexOut in range(LoopChecker125 // '
+                      'LoopChecker225):\n'
+                      '                for (newkey_1, value) in '
+                      'employee_info.items():\n'
+                      '                    if newkey_1 not in employee:\n'
+                      '                        return False\n'
+                      '            else:\n'
+                      '                pass\n'
+                      '            for (newkey_1, value) in '
+                      'employee_info.items():\n'
+                      '                employee[newkey_1] = value\n'
+                      '            return True\n'
+                      '\n'
+                      '    def get_employee(self, employee_id):\n'
+                      '        if employee_id in self.employees:\n'
+                      '            return self.employees[employee_id]\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def list_employees(self):\n'
+                      '        employee_data = {}\n'
+                      '        if self.employees:\n'
+                      '            for (employee_id, employee_info) in '
+                      'self.employees.items():\n'
+                      '                employee_details = {}\n'
+                      "                employee_details['employee_ID'] = "
+                      'employee_id\n'
+                      '                for (newkey_1, value) in '
+                      'employee_info.items():\n'
+                      '                    employee_details[newkey_1] = value\n'
+                      '                employee_data[employee_id] = '
+                      'employee_details\n'
+                      '        return employee_data'}
+[END] processing file: ClassEval_43. Total Time: 5.440674
+END AT 2024-10-13 01:59:30.658063

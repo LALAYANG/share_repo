@@ -1,0 +1,263 @@
+STARTING AT 2024-10-13 02:09:10.275507
+[START] processing file: ClassEval_99
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_99 /home/yang/Benchmark/dataset/classeval/code//ClassEval_99.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.019s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.018s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.020s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.020s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_99.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_99.py
+*Running tests for: ClassEval_99
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.021s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_99.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_99',
+  'genetic_algorithm': None,
+  'original_code': 'import zipfile\n'
+                   '\n'
+                   'class ZipFileProcessor:\n'
+                   '\n'
+                   '    def __init__(self, file_name):\n'
+                   '        self.file_name = file_name\n'
+                   '\n'
+                   '    def read_zip_file(self):\n'
+                   '        try:\n'
+                   '            zip_file = zipfile.ZipFile(self.file_name, '
+                   "'r')\n"
+                   '            return zip_file\n'
+                   '        except:\n'
+                   '            return None\n'
+                   '\n'
+                   '    def extract_all(self, output_path):\n'
+                   '        try:\n'
+                   "            with zipfile.ZipFile(self.file_name, 'r') as "
+                   'zip_file:\n'
+                   '                zip_file.extractall(output_path)\n'
+                   '            return True\n'
+                   '        except:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def extract_file(self, file_name, output_path):\n'
+                   '        try:\n'
+                   "            with zipfile.ZipFile(self.file_name, 'r') as "
+                   'zip_file:\n'
+                   '                zip_file.extract(file_name, output_path)\n'
+                   '            return True\n'
+                   '        except:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def create_zip_file(self, files, output_file_name):\n'
+                   '        try:\n'
+                   "            with zipfile.ZipFile(output_file_name, 'w') as "
+                   'zip_file:\n'
+                   '                for file in files:\n'
+                   '                    zip_file.write(file)\n'
+                   '            return True\n'
+                   '        except:\n'
+                   '            return False',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_99.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_99.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_99.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.284412,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([86, 9, 67])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([58, 78, 13], [75, 15, 59])\n'
+                      "    parse('2024-10-13 02:09:13')\n"
+                      "    base64.b64encode(b'15916502287304243024')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.07)\n'
+                      '    return dec_result\n'
+                      'import zipfile\n'
+                      '\n'
+                      'class ZipFileProcessor:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, file_name):\n'
+                      '        self.file_name = file_name\n'
+                      '\n'
+                      '    def read_zip_file(self):\n'
+                      '        try:\n'
+                      '            newzip_file_1 = '
+                      "zipfile.ZipFile(self.file_name, 'r')\n"
+                      '            return newzip_file_1\n'
+                      '        except:\n'
+                      '            return None\n'
+                      '\n'
+                      '    def extract_all(self, output_path):\n'
+                      '        try:\n'
+                      "            with zipfile.ZipFile(self.file_name, 'r') "
+                      'as newzip_file_1:\n'
+                      '                newzip_file_1.extractall(output_path)\n'
+                      '            return True\n'
+                      '        except:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def extract_file(self, file_name, output_path):\n'
+                      '        try:\n'
+                      "            with zipfile.ZipFile(self.file_name, 'r') "
+                      'as newzip_file_1:\n'
+                      '                newzip_file_1.extract(file_name, '
+                      'output_path)\n'
+                      '            return True\n'
+                      '        except:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def create_zip_file(self, files, '
+                      'output_file_name):\n'
+                      '        try:\n'
+                      "            with zipfile.ZipFile(output_file_name, 'w') "
+                      'as newzip_file_1:\n'
+                      '                LoopChecker134 = [927][0]\n'
+                      '                LoopChecker234 = 926\n'
+                      '\n'
+                      '                def loop_36_16(LoopIndexOut, stop, '
+                      'step):\n'
+                      '                    if step == 0 or (step > 0 and '
+                      'LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= '
+                      'stop):\n'
+                      '                        return\n'
+                      '                    for file in files:\n'
+                      '                        newzip_file_1.write(file)\n'
+                      '                    loop_36_16(LoopIndexOut + step, '
+                      'stop, step)\n'
+                      '                loop_36_16(0, LoopChecker134 // '
+                      'LoopChecker234, 1)\n'
+                      '            return True\n'
+                      '        except:\n'
+                      '            return False'}
+[END] processing file: ClassEval_99. Total Time: 4.284412
+END AT 2024-10-13 02:09:14.563083

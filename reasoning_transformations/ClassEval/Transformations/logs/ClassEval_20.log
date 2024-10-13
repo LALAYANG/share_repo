@@ -1,0 +1,232 @@
+STARTING AT 2024-10-13 01:50:15.585037
+[START] processing file: ClassEval_20
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_20 /home/yang/Benchmark/dataset/classeval/code//ClassEval_20.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_20
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 12, in <module>
+    class Chat:
+  File "/home/yang/Benchmark/tmp_test.py", line 15, in Chat
+    def __init__(self):
+  File "/home/yang/Benchmark/tmp_test.py", line 8, in my_decorator
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Result: ['error_or_timeout']
+Drop add_datetime due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py
+*Running tests for: ClassEval_20
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_20',
+  'genetic_algorithm': None,
+  'original_code': 'from datetime import datetime\n'
+                   '\n'
+                   'class Chat:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.users = {}\n'
+                   '\n'
+                   '    def add_user(self, username):\n'
+                   '        if username in self.users:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.users[username] = []\n'
+                   '            return True\n'
+                   '\n'
+                   '    def remove_user(self, username):\n'
+                   '        if username in self.users:\n'
+                   '            del self.users[username]\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def send_message(self, sender, receiver, message):\n'
+                   '        if sender not in self.users or receiver not in '
+                   'self.users:\n'
+                   '            return False\n'
+                   "        timestamp = datetime.now().strftime('%Y-%m-%d "
+                   "%H:%M:%S')\n"
+                   "        message_info = {'sender': sender, 'receiver': "
+                   "receiver, 'message': message, 'timestamp': timestamp}\n"
+                   '        self.users[sender].append(message_info)\n'
+                   '        self.users[receiver].append(message_info)\n'
+                   '        return True\n'
+                   '\n'
+                   '    def get_messages(self, username):\n'
+                   '        if username not in self.users:\n'
+                   '            return []\n'
+                   '        return self.users[username]',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_20.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.610579,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([32, 49, 82])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.03)\n'
+                      '    ttest_ind([26, 86, 4], [18, 10, 48])\n'
+                      "    base64.b64encode(b'16973081669422496459')\n"
+                      "    parse('2024-10-13 01:50:17')\n"
+                      '    Fernet.generate_key()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from datetime import datetime\n'
+                      '\n'
+                      'class Chat:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.users = {}\n'
+                      '\n'
+                      '    def add_user(self, username):\n'
+                      '        ConditionChecker19 = [431][0]\n'
+                      '        ConditionChecker29 = 868\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if username in self.users:\n'
+                      '                return False\n'
+                      '            else:\n'
+                      '                self.users[username] = []\n'
+                      '                return True\n'
+                      '\n'
+                      '    def remove_user(self, username):\n'
+                      '        if username in self.users:\n'
+                      '            del self.users[username]\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def send_message(self, sender, receiver, message):\n'
+                      '        if sender not in self.users or receiver not in '
+                      'self.users:\n'
+                      '            return False\n'
+                      "        timestamp = datetime.now().strftime('%Y-%m-%d "
+                      "%H:%M:%S')\n"
+                      "        newmessage_info_1 = {'sender': sender, "
+                      "'receiver': receiver, 'message': message, 'timestamp': "
+                      'timestamp}\n'
+                      '        self.users[sender].append(newmessage_info_1)\n'
+                      '        self.users[receiver].append(newmessage_info_1)\n'
+                      '        return True\n'
+                      '\n'
+                      '    def get_messages(self, username):\n'
+                      '        if username not in self.users:\n'
+                      '            return []\n'
+                      '        return self.users[username]'}
+[END] processing file: ClassEval_20. Total Time: 3.610579
+END AT 2024-10-13 01:50:19.197623

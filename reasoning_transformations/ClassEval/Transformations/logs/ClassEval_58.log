@@ -1,0 +1,341 @@
+STARTING AT 2024-10-13 02:03:40.583213
+[START] processing file: ClassEval_58
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_58 /home/yang/Benchmark/dataset/classeval/code//ClassEval_58.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_58
+  File "/home/yang/Benchmark/tmp_test.py", line 19
+    nonlocal y, x
+    ^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'y' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_58
+.....F................
+======================================================================
+FAIL: test_generate_mine_sweeper_map (__main__.MinesweeperGameTestGenerateMineSweeperMap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 94, in test_generate_mine_sweeper_map
+    self.assertEqual(2, mine_num)
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+FAILED (failures=1)
+
+Result: ['failure']
+Drop add_datetime due to ['failure']
+Checking transformation add_time
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_58.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_58.py
+*Running tests for: ClassEval_58
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_58.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_58',
+  'genetic_algorithm': None,
+  'original_code': 'import random\n'
+                   '\n'
+                   'class MinesweeperGame:\n'
+                   '\n'
+                   '    def __init__(self, n, k) -> None:\n'
+                   '        self.n = n\n'
+                   '        self.k = k\n'
+                   '        self.minesweeper_map = '
+                   'self.generate_mine_sweeper_map()\n'
+                   '        self.player_map = self.generate_playerMap()\n'
+                   '        self.score = 0\n'
+                   '\n'
+                   '    def generate_mine_sweeper_map(self):\n'
+                   '        arr = [[0 for row in range(self.n)] for column in '
+                   'range(self.n)]\n'
+                   '        for num in range(self.k):\n'
+                   '            x = random.randint(0, self.n - 1)\n'
+                   '            y = random.randint(0, self.n - 1)\n'
+                   "            arr[y][x] = 'X'\n"
+                   '            if (x >= 0 and x <= self.n - 2) and (y >= 0 '
+                   'and y <= self.n - 1):\n'
+                   "                if arr[y][x + 1] != 'X':\n"
+                   '                    arr[y][x + 1] += 1\n'
+                   '            if (x >= 1 and x <= self.n - 1) and (y >= 0 '
+                   'and y <= self.n - 1):\n'
+                   "                if arr[y][x - 1] != 'X':\n"
+                   '                    arr[y][x - 1] += 1\n'
+                   '            if (x >= 1 and x <= self.n - 1) and (y >= 1 '
+                   'and y <= self.n - 1):\n'
+                   "                if arr[y - 1][x - 1] != 'X':\n"
+                   '                    arr[y - 1][x - 1] += 1\n'
+                   '            if (x >= 0 and x <= self.n - 2) and (y >= 1 '
+                   'and y <= self.n - 1):\n'
+                   "                if arr[y - 1][x + 1] != 'X':\n"
+                   '                    arr[y - 1][x + 1] += 1\n'
+                   '            if (x >= 0 and x <= self.n - 1) and (y >= 1 '
+                   'and y <= self.n - 1):\n'
+                   "                if arr[y - 1][x] != 'X':\n"
+                   '                    arr[y - 1][x] += 1\n'
+                   '            if (x >= 0 and x <= self.n - 2) and (y >= 0 '
+                   'and y <= self.n - 2):\n'
+                   "                if arr[y + 1][x + 1] != 'X':\n"
+                   '                    arr[y + 1][x + 1] += 1\n'
+                   '            if (x >= 1 and x <= self.n - 1) and (y >= 0 '
+                   'and y <= self.n - 2):\n'
+                   "                if arr[y + 1][x - 1] != 'X':\n"
+                   '                    arr[y + 1][x - 1] += 1\n'
+                   '            if (x >= 0 and x <= self.n - 1) and (y >= 0 '
+                   'and y <= self.n - 2):\n'
+                   "                if arr[y + 1][x] != 'X':\n"
+                   '                    arr[y + 1][x] += 1\n'
+                   '        return arr\n'
+                   '\n'
+                   '    def generate_playerMap(self):\n'
+                   "        arr = [['-' for row in range(self.n)] for column "
+                   'in range(self.n)]\n'
+                   '        return arr\n'
+                   '\n'
+                   '    def check_won(self, map):\n'
+                   '        for i in range(self.n):\n'
+                   '            for j in range(self.n):\n'
+                   "                if map[i][j] == '-' and "
+                   "self.minesweeper_map[i][j] != 'X':\n"
+                   '                    return False\n'
+                   '        return True\n'
+                   '\n'
+                   '    def sweep(self, x, y):\n'
+                   "        if self.minesweeper_map[x][y] == 'X':\n"
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.player_map[x][y] = '
+                   'self.minesweeper_map[x][y]\n'
+                   '            self.score += 1\n'
+                   '            if self.check_won(self.player_map) == True:\n'
+                   '                return True\n'
+                   '            return self.player_map',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_58.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_58.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_58.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 10.383646,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([24, 97, 44])\n'
+                      "    parse('2024-10-13 02:03:49')\n"
+                      '    ttest_ind([27, 44, 48], [10, 69, 24])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'52408775331737847216')\n"
+                      '    time.sleep(0.1)\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import random\n'
+                      '\n'
+                      'class MinesweeperGame:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, n, k) -> None:\n'
+                      '        self.n = n\n'
+                      '        self.k = k\n'
+                      '        self.minesweeper_map = '
+                      'self.generate_mine_sweeper_map()\n'
+                      '        self.player_map = self.generate_playerMap()\n'
+                      '        self.score = [0][0]\n'
+                      '\n'
+                      '    def generate_mine_sweeper_map(self):\n'
+                      '        arr = [[0 for row in range(self.n)] for column '
+                      'in range(self.n)]\n'
+                      '        LoopChecker114 = 307\n'
+                      '        LoopChecker214 = 306\n'
+                      '        for LoopIndexOut in range(LoopChecker114 // '
+                      'LoopChecker214):\n'
+                      '            for num in range(self.k):\n'
+                      '                x = random.randint(0, self.n - 1)\n'
+                      '                y = random.randint(0, self.n - 1)\n'
+                      "                arr[y][x] = 'X'\n"
+                      '                if (x >= 0 and x <= self.n - 2) and (y '
+                      '>= 0 and y <= self.n - 1):\n'
+                      "                    if arr[y][x + 1] != 'X':\n"
+                      '                        arr[y][x + 1] += 1\n'
+                      '                if (x >= 1 and x <= self.n - 1) and (y '
+                      '>= 0 and y <= self.n - 1):\n'
+                      "                    if arr[y][x - 1] != 'X':\n"
+                      '                        arr[y][x - 1] += 1\n'
+                      '                if (x >= 1 and x <= self.n - 1) and (y '
+                      '>= 1 and y <= self.n - 1):\n'
+                      "                    if arr[y - 1][x - 1] != 'X':\n"
+                      '                        arr[y - 1][x - 1] += 1\n'
+                      '                if (x >= 0 and x <= self.n - 2) and (y '
+                      '>= 1 and y <= self.n - 1):\n'
+                      "                    if arr[y - 1][x + 1] != 'X':\n"
+                      '                        arr[y - 1][x + 1] += 1\n'
+                      '                if (x >= 0 and x <= self.n - 1) and (y '
+                      '>= 1 and y <= self.n - 1):\n'
+                      "                    if arr[y - 1][x] != 'X':\n"
+                      '                        arr[y - 1][x] += 1\n'
+                      '                if (x >= 0 and x <= self.n - 2) and (y '
+                      '>= 0 and y <= self.n - 2):\n'
+                      "                    if arr[y + 1][x + 1] != 'X':\n"
+                      '                        arr[y + 1][x + 1] += 1\n'
+                      '                if (x >= 1 and x <= self.n - 1) and (y '
+                      '>= 0 and y <= self.n - 2):\n'
+                      "                    if arr[y + 1][x - 1] != 'X':\n"
+                      '                        arr[y + 1][x - 1] += 1\n'
+                      '                if (x >= 0 and x <= self.n - 1) and (y '
+                      '>= 0 and y <= self.n - 2):\n'
+                      "                    if arr[y + 1][x] != 'X':\n"
+                      '                        arr[y + 1][x] += 1\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return arr\n'
+                      '\n'
+                      '    def generate_playerMap(self):\n'
+                      "        arr = [['-' for row in range(self.n)] for "
+                      'column in range(self.n)]\n'
+                      '        return arr\n'
+                      '\n'
+                      '    def check_won(self, map):\n'
+                      '        for newi_1 in range(self.n):\n'
+                      '            for j in range(self.n):\n'
+                      "                if map[newi_1][j] == '-' and "
+                      "self.minesweeper_map[newi_1][j] != 'X':\n"
+                      '                    return False\n'
+                      '        return True\n'
+                      '\n'
+                      '    def sweep(self, x, y):\n'
+                      '        ConditionChecker159 = 707\n'
+                      '        ConditionChecker259 = 325\n'
+                      '        if ConditionChecker159 & ConditionChecker259:\n'
+                      "            if self.minesweeper_map[x][y] == 'X':\n"
+                      '                return False\n'
+                      '            else:\n'
+                      '                self.player_map[x][y] = '
+                      'self.minesweeper_map[x][y]\n'
+                      '                self.score += 1\n'
+                      '                if self.check_won(self.player_map) == '
+                      'True:\n'
+                      '                    return True\n'
+                      '                return self.player_map'}
+[END] processing file: ClassEval_58. Total Time: 10.383646
+END AT 2024-10-13 02:03:50.972121

@@ -1,0 +1,196 @@
+STARTING AT 2024-10-13 02:04:27.084742
+[START] processing file: ClassEval_64
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_64 /home/yang/Benchmark/dataset/classeval/code//ClassEval_64.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.py
+*Running tests for: ClassEval_64
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_64',
+  'genetic_algorithm': None,
+  'original_code': 'class NumberConverter:\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def decimal_to_binary(decimal_num):\n'
+                   '        binary_num = bin(decimal_num)[2:]\n'
+                   '        return binary_num\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def binary_to_decimal(binary_num):\n'
+                   '        decimal_num = int(binary_num, 2)\n'
+                   '        return decimal_num\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def decimal_to_octal(decimal_num):\n'
+                   '        octal_num = oct(decimal_num)[2:]\n'
+                   '        return octal_num\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def octal_to_decimal(octal_num):\n'
+                   '        decimal_num = int(octal_num, 8)\n'
+                   '        return decimal_num\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def decimal_to_hex(decimal_num):\n'
+                   '        hex_num = hex(decimal_num)[2:]\n'
+                   '        return hex_num\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def hex_to_decimal(hex_num):\n'
+                   '        decimal_num = int(hex_num, 16)\n'
+                   '        return decimal_num',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_64.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.919453,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-13 02:04:29')\n"
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'89991445022074205063')\n"
+                      '    shuffle([30, 32, 21])\n'
+                      '    time.sleep(0.12)\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([35, 21, 97], [53, 56, 38])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      'class NumberConverter:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    @staticmethod\n'
+                      '    def decimal_to_binary(decimal_num):\n'
+                      '        binary_num = bin(decimal_num)[2:]\n'
+                      '        return binary_num\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def binary_to_decimal(binary_num):\n'
+                      '        decimal_num = int(binary_num, 2)\n'
+                      '        return decimal_num\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def decimal_to_octal(decimal_num):\n'
+                      '        octal_num = oct(decimal_num)[2:]\n'
+                      '        return octal_num\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def octal_to_decimal(octal_num):\n'
+                      '        decimal_num = int(octal_num, 8)\n'
+                      '        return decimal_num\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def decimal_to_hex(decimal_num):\n'
+                      '        newhex_num_1 = hex(decimal_num)[2:]\n'
+                      '        return newhex_num_1\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def hex_to_decimal(newhex_num_1):\n'
+                      '        decimal_num = int(newhex_num_1, 16)\n'
+                      '        return decimal_num'}
+[END] processing file: ClassEval_64. Total Time: 3.919453
+END AT 2024-10-13 02:04:31.005807

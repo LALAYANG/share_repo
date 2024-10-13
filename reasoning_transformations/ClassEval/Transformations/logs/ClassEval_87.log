@@ -1,0 +1,242 @@
+STARTING AT 2024-10-13 02:07:44.034024
+[START] processing file: ClassEval_87
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_87 /home/yang/Benchmark/dataset/classeval/code//ClassEval_87.py
+Apply all rules on a single file.
+Checking transformation create_functions
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.014s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.014s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.014s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.015s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_87',
+  'genetic_algorithm': None,
+  'original_code': 'import datetime\n'
+                   'import time\n'
+                   '\n'
+                   'class TimeUtils:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.datetime = datetime.datetime.now()\n'
+                   '\n'
+                   '    def get_current_time(self):\n'
+                   "        format = '%H:%M:%S'\n"
+                   '        return self.datetime.strftime(format)\n'
+                   '\n'
+                   '    def get_current_date(self):\n'
+                   "        format = '%Y-%m-%d'\n"
+                   '        return self.datetime.strftime(format)\n'
+                   '\n'
+                   '    def add_seconds(self, seconds):\n'
+                   '        new_datetime = self.datetime + '
+                   'datetime.timedelta(seconds=seconds)\n'
+                   "        format = '%H:%M:%S'\n"
+                   '        return new_datetime.strftime(format)\n'
+                   '\n'
+                   '    def string_to_datetime(self, string):\n'
+                   '        return datetime.datetime.strptime(string, '
+                   "'%Y-%m-%d %H:%M:%S')\n"
+                   '\n'
+                   '    def datetime_to_string(self, datetime):\n'
+                   "        return datetime.strftime('%Y-%m-%d %H:%M:%S')\n"
+                   '\n'
+                   '    def get_minutes(self, string_time1, string_time2):\n'
+                   '        time1 = self.string_to_datetime(string_time1)\n'
+                   '        time2 = self.string_to_datetime(string_time2)\n'
+                   '        return round((time2 - time1).seconds / 60)\n'
+                   '\n'
+                   '    def get_format_time(self, year, month, day, hour, '
+                   'minute, second):\n'
+                   "        format = '%Y-%m-%d %H:%M:%S'\n"
+                   '        time_item = datetime.datetime(year, month, day, '
+                   'hour, minute, second)\n'
+                   '        return time_item.strftime(format)',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_87.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.483581,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([13, 28, 55])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-13 02:07:46')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_18(datetime, seconds, self):\n'
+                      '    ttest_ind([65, 36, 8], [69, 100, 97])\n'
+                      "    base64.b64encode(b'99160579946564757536')\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return self.datetime + '
+                      'datetime.timedelta(seconds=seconds)\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import datetime\n'
+                      'import time\n'
+                      '\n'
+                      'class TimeUtils:\n'
+                      '\n'
+                      '    def __init__(self):\n'
+                      '        self.datetime = datetime.datetime.now()\n'
+                      '\n'
+                      '    def get_current_time(self):\n'
+                      "        format = ['%H:%M:%S'][0]\n"
+                      '        return self.datetime.strftime(format)\n'
+                      '\n'
+                      '    def get_current_date(self):\n'
+                      "        format = '%Y-%m-%d'\n"
+                      '        return self.datetime.strftime(format)\n'
+                      '\n'
+                      '    def add_seconds(self, seconds):\n'
+                      '        queue_newFunc0_180 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_18_thread(queue):\n'
+                      '            result = newFunc0_18(datetime, seconds, '
+                      'self)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_180 = '
+                      'threading.Thread(target=newFunc0_18_thread, '
+                      'args=(queue_newFunc0_180,))\n'
+                      '        thread_newFunc0_180.start()\n'
+                      '        thread_newFunc0_180.join()\n'
+                      '        result_newFunc0_180 = queue_newFunc0_180.get()\n'
+                      '        new_datetime = result_newFunc0_180\n'
+                      "        format = '%H:%M:%S'\n"
+                      '        return new_datetime.strftime(format)\n'
+                      '\n'
+                      '    def string_to_datetime(self, string):\n'
+                      '        return datetime.datetime.strptime(string, '
+                      "'%Y-%m-%d %H:%M:%S')\n"
+                      '\n'
+                      '    def datetime_to_string(self, datetime):\n'
+                      "        return datetime.strftime('%Y-%m-%d %H:%M:%S')\n"
+                      '\n'
+                      '    def get_minutes(self, string_time1, string_time2):\n'
+                      '        time1 = self.string_to_datetime(string_time1)\n'
+                      '        newtime2_1 = '
+                      'self.string_to_datetime(string_time2)\n'
+                      '        return round((newtime2_1 - time1).seconds / '
+                      '60)\n'
+                      '\n'
+                      '    def get_format_time(self, year, month, day, hour, '
+                      'minute, second):\n'
+                      "        format = '%Y-%m-%d %H:%M:%S'\n"
+                      '        time_item = datetime.datetime(year, month, day, '
+                      'hour, minute, second)\n'
+                      '        return time_item.strftime(format)'}
+[END] processing file: ClassEval_87. Total Time: 3.483581
+END AT 2024-10-13 02:07:47.519567

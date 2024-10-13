@@ -1,0 +1,246 @@
+STARTING AT 2024-10-13 02:06:29.103016
+[START] processing file: ClassEval_7
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_7 /home/yang/Benchmark/dataset/classeval/code//ClassEval_7.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_7
+  File "/home/yang/Benchmark/tmp_test.py", line 20
+    nonlocal Current_Brkt
+    ^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'Current_Brkt' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_7.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_7.py
+*Running tests for: ClassEval_7
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_7.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_7',
+  'genetic_algorithm': None,
+  'original_code': 'class BalancedBrackets:\n'
+                   '\n'
+                   '    def __init__(self, expr):\n'
+                   '        self.stack = []\n'
+                   "        self.left_brackets = ['(', '{', '[']\n"
+                   "        self.right_brackets = [')', '}', ']']\n"
+                   '        self.expr = expr\n'
+                   '\n'
+                   '    def clear_expr(self):\n'
+                   "        self.expr = ''.join((c for c in self.expr if c in "
+                   'self.left_brackets or c in self.right_brackets))\n'
+                   '\n'
+                   '    def check_balanced_brackets(self):\n'
+                   '        self.clear_expr()\n'
+                   '        for Brkt in self.expr:\n'
+                   '            if Brkt in self.left_brackets:\n'
+                   '                self.stack.append(Brkt)\n'
+                   '            else:\n'
+                   '                Current_Brkt = self.stack.pop()\n'
+                   "                if Current_Brkt == '(':\n"
+                   "                    if Brkt != ')':\n"
+                   '                        return False\n'
+                   "                if Current_Brkt == '{':\n"
+                   "                    if Brkt != '}':\n"
+                   '                        return False\n'
+                   "                if Current_Brkt == '[':\n"
+                   "                    if Brkt != ']':\n"
+                   '                        return False\n'
+                   '        if self.stack:\n'
+                   '            return False\n'
+                   '        return True',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_7.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_7.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_7.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.286876,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'64732492612730694476')\n"
+                      '    ttest_ind([59, 84, 99], [57, 62, 100])\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 02:06:32')\n"
+                      '    time.sleep(0.24)\n'
+                      '    shuffle([36, 86, 68])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      'class BalancedBrackets:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, expr):\n'
+                      '        self.stack = [[]][0]\n'
+                      "        self.left_brackets = ['(', '{', '[']\n"
+                      "        self.right_brackets = [')', '}', ']']\n"
+                      '        self.expr = expr\n'
+                      '\n'
+                      '    def clear_expr(self):\n'
+                      "        self.expr = ''.join((newc_1 for newc_1 in "
+                      'self.expr if newc_1 in self.left_brackets or newc_1 in '
+                      'self.right_brackets))\n'
+                      '\n'
+                      '    def check_balanced_brackets(self):\n'
+                      '        ConditionChecker131 = 823\n'
+                      '        ConditionChecker231 = 803\n'
+                      '        self.clear_expr()\n'
+                      '        LoopChecker114 = 708\n'
+                      '        LoopChecker214 = 707\n'
+                      '        for LoopIndexOut in range(LoopChecker114 // '
+                      'LoopChecker214):\n'
+                      '            for Brkt in self.expr:\n'
+                      '                if Brkt in self.left_brackets:\n'
+                      '                    self.stack.append(Brkt)\n'
+                      '                else:\n'
+                      '                    Current_Brkt = self.stack.pop()\n'
+                      "                    if Current_Brkt == '(':\n"
+                      "                        if Brkt != ')':\n"
+                      '                            return False\n'
+                      "                    if Current_Brkt == '{':\n"
+                      "                        if Brkt != '}':\n"
+                      '                            return False\n'
+                      "                    if Current_Brkt == '[':\n"
+                      "                        if Brkt != ']':\n"
+                      '                            return False\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        if ConditionChecker131 & ConditionChecker231:\n'
+                      '            if self.stack:\n'
+                      '                return False\n'
+                      '        return True'}
+[END] processing file: ClassEval_7. Total Time: 5.286876
+END AT 2024-10-13 02:06:34.392660

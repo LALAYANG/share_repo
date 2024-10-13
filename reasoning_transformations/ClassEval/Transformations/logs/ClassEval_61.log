@@ -1,0 +1,294 @@
+STARTING AT 2024-10-13 02:04:10.372095
+[START] processing file: ClassEval_61
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_61 /home/yang/Benchmark/dataset/classeval/code//ClassEval_61.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.py
+*Running tests for: ClassEval_61
+..........................................
+----------------------------------------------------------------------
+Ran 42 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_61',
+  'genetic_algorithm': None,
+  'original_code': 'class MusicPlayer:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.playlist = []\n'
+                   '        self.current_song = None\n'
+                   '        self.volume = 50\n'
+                   '\n'
+                   '    def add_song(self, song):\n'
+                   '        self.playlist.append(song)\n'
+                   '\n'
+                   '    def remove_song(self, song):\n'
+                   '        if song in self.playlist:\n'
+                   '            self.playlist.remove(song)\n'
+                   '            if self.current_song == song:\n'
+                   '                self.stop()\n'
+                   '\n'
+                   '    def play(self):\n'
+                   '        if self.playlist and self.current_song:\n'
+                   '            return self.playlist[0]\n'
+                   '        elif len(self.playlist):\n'
+                   '            return False\n'
+                   '\n'
+                   '    def stop(self):\n'
+                   '        if self.current_song:\n'
+                   '            self.current_song = None\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def switch_song(self):\n'
+                   '        if self.current_song:\n'
+                   '            current_index = '
+                   'self.playlist.index(self.current_song)\n'
+                   '            if current_index < len(self.playlist) - 1:\n'
+                   '                self.current_song = '
+                   'self.playlist[current_index + 1]\n'
+                   '                return True\n'
+                   '            else:\n'
+                   '                return False\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def previous_song(self):\n'
+                   '        if self.current_song:\n'
+                   '            current_index = '
+                   'self.playlist.index(self.current_song)\n'
+                   '            if current_index > 0:\n'
+                   '                self.current_song = '
+                   'self.playlist[current_index - 1]\n'
+                   '                return True\n'
+                   '            else:\n'
+                   '                return False\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def set_volume(self, volume):\n'
+                   '        if 0 <= volume <= 100:\n'
+                   '            self.volume = volume\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def shuffle(self):\n'
+                   '        if self.playlist:\n'
+                   '            import random\n'
+                   '            random.shuffle(self.playlist)\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_61.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_61.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.695612,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'81149724679747722034')\n"
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([74, 9, 83], [28, 63, 43])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.01)\n'
+                      '    shuffle([33, 66, 12])\n'
+                      "    parse('2024-10-13 02:04:12')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      'class MusicPlayer:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.playlist = [[]][0]\n'
+                      '        self.current_song = None\n'
+                      '        self.volume = 50\n'
+                      '\n'
+                      '    def add_song(self, song):\n'
+                      '        self.playlist.append(song)\n'
+                      '\n'
+                      '    def remove_song(self, song):\n'
+                      '        ConditionChecker112 = 980\n'
+                      '        ConditionChecker212 = 544\n'
+                      '        if ConditionChecker112 & ConditionChecker212:\n'
+                      '            if song in self.playlist:\n'
+                      '                self.playlist.remove(song)\n'
+                      '                if self.current_song == song:\n'
+                      '                    self.stop()\n'
+                      '\n'
+                      '    def play(self):\n'
+                      '        if self.playlist and self.current_song:\n'
+                      '            return self.playlist[0]\n'
+                      '        elif len(self.playlist):\n'
+                      '            return False\n'
+                      '\n'
+                      '    def stop(self):\n'
+                      '        if self.current_song:\n'
+                      '            self.current_song = None\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def switch_song(self):\n'
+                      '        if self.current_song:\n'
+                      '            newcurrent_index_1 = '
+                      'self.playlist.index(self.current_song)\n'
+                      '            if newcurrent_index_1 < len(self.playlist) '
+                      '- 1:\n'
+                      '                self.current_song = '
+                      'self.playlist[newcurrent_index_1 + 1]\n'
+                      '                return True\n'
+                      '            else:\n'
+                      '                return False\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def previous_song(self):\n'
+                      '        if self.current_song:\n'
+                      '            newcurrent_index_1 = '
+                      'self.playlist.index(self.current_song)\n'
+                      '            if newcurrent_index_1 > 0:\n'
+                      '                self.current_song = '
+                      'self.playlist[newcurrent_index_1 - 1]\n'
+                      '                return True\n'
+                      '            else:\n'
+                      '                return False\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def set_volume(self, volume):\n'
+                      '        if 0 <= volume <= 100:\n'
+                      '            self.volume = volume\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def shuffle(self):\n'
+                      '        if self.playlist:\n'
+                      '            import random\n'
+                      '            random.shuffle(self.playlist)\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False'}
+[END] processing file: ClassEval_61. Total Time: 3.695612
+END AT 2024-10-13 02:04:14.070087

@@ -1,0 +1,280 @@
+STARTING AT 2024-10-13 01:57:17.975372
+[START] processing file: ClassEval_3
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_3 /home/yang/Benchmark/dataset/classeval/code//ClassEval_3.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py
+*Running tests for: ClassEval_3
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_3',
+  'genetic_algorithm': None,
+  'original_code': 'import itertools\n'
+                   '\n'
+                   'class ArrangementCalculator:\n'
+                   '\n'
+                   '    def __init__(self, datas):\n'
+                   '        self.datas = datas\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def count(n, m=None):\n'
+                   '        if m is None or n == m:\n'
+                   '            return ArrangementCalculator.factorial(n)\n'
+                   '        else:\n'
+                   '            return ArrangementCalculator.factorial(n) // '
+                   'ArrangementCalculator.factorial(n - m)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def count_all(n):\n'
+                   '        total = 0\n'
+                   '        for i in range(1, n + 1):\n'
+                   '            total += ArrangementCalculator.count(n, i)\n'
+                   '        return total\n'
+                   '\n'
+                   '    def select(self, m=None):\n'
+                   '        if m is None:\n'
+                   '            m = len(self.datas)\n'
+                   '        result = []\n'
+                   '        for permutation in '
+                   'itertools.permutations(self.datas, m):\n'
+                   '            result.append(list(permutation))\n'
+                   '        return result\n'
+                   '\n'
+                   '    def select_all(self):\n'
+                   '        result = []\n'
+                   '        for i in range(1, len(self.datas) + 1):\n'
+                   '            result.extend(self.select(i))\n'
+                   '        return result\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def factorial(n):\n'
+                   '        result = 1\n'
+                   '        for i in range(2, n + 1):\n'
+                   '            result *= i\n'
+                   '        return result',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_3.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.165438,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.25)\n'
+                      "    parse('2024-10-13 01:57:21')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([22, 9, 37], [57, 96, 28])\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([64, 8, 62])\n'
+                      "    base64.b64encode(b'61867297066716678547')\n"
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      'import itertools\n'
+                      '\n'
+                      'class ArrangementCalculator:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, datas):\n'
+                      '        self.datas = datas\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def count(n, m=None):\n'
+                      '        ConditionChecker110 = [513][0]\n'
+                      '        ConditionChecker210 = 624\n'
+                      '        if ConditionChecker110 & ConditionChecker210:\n'
+                      '            if m is None or n == m:\n'
+                      '                return '
+                      'ArrangementCalculator.factorial(n)\n'
+                      '            else:\n'
+                      '                return '
+                      'ArrangementCalculator.factorial(n) // '
+                      'ArrangementCalculator.factorial(n - m)\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def count_all(n):\n'
+                      '        total = 0\n'
+                      '        LoopChecker118 = 808\n'
+                      '        LoopChecker218 = 807\n'
+                      '        for LoopIndexOut in range(LoopChecker118 // '
+                      'LoopChecker218):\n'
+                      '\n'
+                      '            def loop_24_12(newi_1, stop, step):\n'
+                      '                nonlocal total\n'
+                      '                if step == 0 or (step > 0 and newi_1 >= '
+                      'stop) or (step < 0 and newi_1 <= stop):\n'
+                      '                    return\n'
+                      '                total += ArrangementCalculator.count(n, '
+                      'newi_1)\n'
+                      '                loop_24_12(newi_1 + step, stop, step)\n'
+                      '            loop_24_12(1, n + 1, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return total\n'
+                      '\n'
+                      '    def select(self, m=None):\n'
+                      '        if m is None:\n'
+                      '            m = len(self.datas)\n'
+                      '        result = []\n'
+                      '        for permutation in '
+                      'itertools.permutations(self.datas, m):\n'
+                      '            result.append(list(permutation))\n'
+                      '        return result\n'
+                      '\n'
+                      '    def select_all(self):\n'
+                      '        result = []\n'
+                      '        for newi_1 in range(1, len(self.datas) + 1):\n'
+                      '            result.extend(self.select(newi_1))\n'
+                      '        return result\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def factorial(n):\n'
+                      '        result = 1\n'
+                      '        for newi_1 in range(2, n + 1):\n'
+                      '            result = result * newi_1\n'
+                      '        return result'}
+[END] processing file: ClassEval_3. Total Time: 5.165438
+END AT 2024-10-13 01:57:23.142729

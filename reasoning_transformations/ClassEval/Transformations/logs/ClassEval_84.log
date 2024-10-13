@@ -1,0 +1,185 @@
+STARTING AT 2024-10-13 02:07:26.792162
+[START] processing file: ClassEval_84
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_84 /home/yang/Benchmark/dataset/classeval/code//ClassEval_84.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.007s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py
+*Running tests for: ClassEval_84
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_84',
+  'genetic_algorithm': None,
+  'original_code': 'import json\n'
+                   '\n'
+                   'class TextFileProcessor:\n'
+                   '\n'
+                   '    def __init__(self, file_path):\n'
+                   '        self.file_path = file_path\n'
+                   '\n'
+                   '    def read_file_as_json(self):\n'
+                   "        with open(self.file_path, 'r') as file:\n"
+                   '            data = json.load(file)\n'
+                   '        return data\n'
+                   '\n'
+                   '    def read_file(self):\n'
+                   "        with open(self.file_path, 'r') as file:\n"
+                   '            return file.read()\n'
+                   '\n'
+                   '    def write_file(self, content):\n'
+                   "        with open(self.file_path, 'w') as file:\n"
+                   '            file.write(content)\n'
+                   '\n'
+                   '    def process_file(self):\n'
+                   '        content = self.read_file()\n'
+                   "        content = ''.join([char for char in content if "
+                   'char.isalpha()])\n'
+                   '        self.write_file(content)\n'
+                   '        return content',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_84.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.235899,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([89, 79, 71], [92, 55, 61])\n'
+                      '    time.sleep(0.28)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 02:07:30')\n"
+                      '    shuffle([7, 83, 68])\n'
+                      "    base64.b64encode(b'32764196810738903127')\n"
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import json\n'
+                      '\n'
+                      'class TextFileProcessor:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, file_path):\n'
+                      '        self.file_path = file_path\n'
+                      '\n'
+                      '    def read_file_as_json(self):\n'
+                      "        with open(self.file_path, 'r') as file:\n"
+                      '            newdata_1 = json.load(file)\n'
+                      '        return newdata_1\n'
+                      '\n'
+                      '    def read_file(self):\n'
+                      "        with open(self.file_path, 'r') as file:\n"
+                      '            return file.read()\n'
+                      '\n'
+                      '    def write_file(self, content):\n'
+                      "        with open(self.file_path, 'w') as file:\n"
+                      '            file.write(content)\n'
+                      '\n'
+                      '    def process_file(self):\n'
+                      '        content = self.read_file()\n'
+                      "        content = ''.join([char for char in content if "
+                      'char.isalpha()])\n'
+                      '        self.write_file(content)\n'
+                      '        return content'}
+[END] processing file: ClassEval_84. Total Time: 5.235899
+END AT 2024-10-13 02:07:32.030641

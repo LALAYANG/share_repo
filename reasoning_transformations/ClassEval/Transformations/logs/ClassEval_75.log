@@ -1,0 +1,220 @@
+STARTING AT 2024-10-13 02:05:58.822218
+[START] processing file: ClassEval_75
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_75 /home/yang/Benchmark/dataset/classeval/code//ClassEval_75.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_75.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_75.py
+*Running tests for: ClassEval_75
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_75.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_75',
+  'genetic_algorithm': None,
+  'original_code': 'class ShoppingCart:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.items = {}\n'
+                   '\n'
+                   '    def add_item(self, item, price, quantity=1):\n'
+                   '        if item in self.items:\n'
+                   "            self.items[item] = {'price': price, "
+                   "'quantity': quantity}\n"
+                   '        else:\n'
+                   "            self.items[item] = {'price': price, "
+                   "'quantity': quantity}\n"
+                   '\n'
+                   '    def remove_item(self, item, quantity=1):\n'
+                   '        if item in self.items:\n'
+                   "            self.items[item]['quantity'] -= quantity\n"
+                   '        else:\n'
+                   '            pass\n'
+                   '\n'
+                   '    def view_items(self) -> dict:\n'
+                   '        return self.items\n'
+                   '\n'
+                   '    def total_price(self) -> float:\n'
+                   "        return sum([item['quantity'] * item['price'] for "
+                   'item in self.items.values()])',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_75.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_75.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_75.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.589835,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([4, 64, 49], [73, 63, 40])\n'
+                      "    parse('2024-10-13 02:06:02')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.29)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([48, 83, 90])\n'
+                      "    base64.b64encode(b'96368542013020739007')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      'class ShoppingCart:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.items = {}\n'
+                      '\n'
+                      '    def add_item(self, newitem_1, price, quantity=1):\n'
+                      '        ConditionChecker17 = [774][0]\n'
+                      '        ConditionChecker27 = 697\n'
+                      '        if ConditionChecker17 & ConditionChecker27:\n'
+                      '            if newitem_1 in self.items:\n'
+                      "                self.items[newitem_1] = {'price': "
+                      "price, 'quantity': quantity}\n"
+                      '            else:\n'
+                      "                self.items[newitem_1] = {'price': "
+                      "price, 'quantity': quantity}\n"
+                      '\n'
+                      '    def remove_item(self, newitem_1, quantity=1):\n'
+                      '        if newitem_1 in self.items:\n'
+                      "            self.items[newitem_1]['quantity'] -= "
+                      'quantity\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '\n'
+                      '    def view_items(self) -> dict:\n'
+                      '        return self.items\n'
+                      '\n'
+                      '    def total_price(self) -> float:\n'
+                      "        return np.sum(np.array([[newitem_1['quantity'] "
+                      "* newitem_1['price'] for newitem_1 in "
+                      'self.items.values()]]))'}
+[END] processing file: ClassEval_75. Total Time: 5.589835
+END AT 2024-10-13 02:06:04.414901

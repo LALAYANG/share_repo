@@ -1,0 +1,320 @@
+STARTING AT 2024-10-13 01:50:31.599961
+[START] processing file: ClassEval_23
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_23 /home/yang/Benchmark/dataset/classeval/code//ClassEval_23.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.429s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.493s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.496s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.498s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.494s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_23.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_23.py
+*Running tests for: ClassEval_23
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 28.502s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_23.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_23',
+  'genetic_algorithm': None,
+  'original_code': 'import math\n'
+                   'from typing import List\n'
+                   '\n'
+                   'class CombinationCalculator:\n'
+                   '\n'
+                   '    def __init__(self, datas: List[str]):\n'
+                   '        self.datas = datas\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def count(n: int, m: int) -> int:\n'
+                   '        if m == 0 or n == m:\n'
+                   '            return 1\n'
+                   '        return math.factorial(n) // (math.factorial(n - m) '
+                   '* math.factorial(m))\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def count_all(n: int) -> int:\n'
+                   '        if n < 0 or n > 63:\n'
+                   '            return False\n'
+                   "        return (1 << n) - 1 if n != 63 else float('inf')\n"
+                   '\n'
+                   '    def select(self, m: int) -> List[List[str]]:\n'
+                   '        result = []\n'
+                   '        self._select(0, [None] * m, 0, result)\n'
+                   '        return result\n'
+                   '\n'
+                   '    def select_all(self) -> List[List[str]]:\n'
+                   '        result = []\n'
+                   '        for i in range(1, len(self.datas) + 1):\n'
+                   '            result.extend(self.select(i))\n'
+                   '        return result\n'
+                   '\n'
+                   '    def _select(self, dataIndex: int, resultList: '
+                   'List[str], resultIndex: int, result: List[List[str]]):\n'
+                   '        resultLen = len(resultList)\n'
+                   '        resultCount = resultIndex + 1\n'
+                   '        if resultCount > resultLen:\n'
+                   '            result.append(resultList.copy())\n'
+                   '            return\n'
+                   '        for i in range(dataIndex, len(self.datas) + '
+                   'resultCount - resultLen):\n'
+                   '            resultList[resultIndex] = self.datas[i]\n'
+                   '            self._select(i + 1, resultList, resultIndex + '
+                   '1, result)',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_23.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_23.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_23.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 174.92178,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([32, 38, 91], [23, 10, 33])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 01:52:28')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_40(resultIndex, variable_3_40):\n'
+                      '    shuffle([28, 55, 10])\n'
+                      "    base64.b64encode(b'07762050578680771800')\n"
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.27)\n'
+                      '    try:\n'
+                      '        return resultIndex + variable_3_40\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import math\n'
+                      'from typing import List\n'
+                      '\n'
+                      'class CombinationCalculator:\n'
+                      '\n'
+                      '    def __init__(self, datas: List[str]):\n'
+                      '        self.datas = datas\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def count(n: int, m: int) -> int:\n'
+                      '        ConditionChecker111 = [710][0]\n'
+                      '        ConditionChecker211 = 39\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      '            if m == 0 or n == m:\n'
+                      '                return 1\n'
+                      '        return math.factorial(n) // (math.factorial(n - '
+                      'm) * math.factorial(m))\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def count_all(n: int) -> int:\n'
+                      '        if n < 0 or n > 63:\n'
+                      '            return False\n'
+                      '        return (1 << n) - 1 if n != 63 else '
+                      "float('inf')\n"
+                      '\n'
+                      '    def select(self, m: int) -> List[List[str]]:\n'
+                      '        result = []\n'
+                      '        self._select(0, [None] * m, 0, result)\n'
+                      '        return result\n'
+                      '\n'
+                      '    def select_all(self) -> List[List[str]]:\n'
+                      '        result = []\n'
+                      '        LoopChecker128 = 693\n'
+                      '        LoopChecker228 = 692\n'
+                      '        for LoopIndexOut in range(LoopChecker128 // '
+                      'LoopChecker228):\n'
+                      '\n'
+                      '            def loop_39_12(i, stop, step):\n'
+                      '                if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
+                      '                    return\n'
+                      '                result.extend(self.select(i))\n'
+                      '                loop_39_12(i + step, stop, step)\n'
+                      '            loop_39_12(1, len(self.datas) + 1, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return result\n'
+                      '\n'
+                      '    def _select(self, dataIndex: int, resultList: '
+                      'List[str], resultIndex: int, result: List[List[str]]):\n'
+                      '        newresultLen_1 = len(resultList)\n'
+                      '        variable_3_40 = 1\n'
+                      '        queue_newFunc0_400 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_40_thread(queue):\n'
+                      '            result = newFunc0_40(resultIndex, '
+                      'variable_3_40)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_400 = '
+                      'threading.Thread(target=newFunc0_40_thread, '
+                      'args=(queue_newFunc0_400,))\n'
+                      '        thread_newFunc0_400.start()\n'
+                      '        thread_newFunc0_400.join()\n'
+                      '        result_newFunc0_400 = queue_newFunc0_400.get()\n'
+                      '        resultCount = result_newFunc0_400\n'
+                      '        if resultCount > newresultLen_1:\n'
+                      '            result.append(resultList.copy())\n'
+                      '            return\n'
+                      '        for i in range(dataIndex, len(self.datas) + '
+                      'resultCount - newresultLen_1):\n'
+                      '            resultList[resultIndex] = self.datas[i]\n'
+                      '            self._select(i + 1, resultList, resultIndex '
+                      '+ 1, result)'}
+[END] processing file: ClassEval_23. Total Time: 174.92178
+END AT 2024-10-13 01:53:26.525496

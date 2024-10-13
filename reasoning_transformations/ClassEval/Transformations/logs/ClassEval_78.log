@@ -1,0 +1,232 @@
+STARTING AT 2024-10-13 02:06:17.430167
+[START] processing file: ClassEval_78
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_78 /home/yang/Benchmark/dataset/classeval/code//ClassEval_78.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_78
+  File "/home/yang/Benchmark/tmp_test.py", line 23
+    nonlocal count, newmax_count_1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'count' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py
+*Running tests for: ClassEval_78
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_78',
+  'genetic_algorithm': None,
+  'original_code': 'import re\n'
+                   '\n'
+                   'class SplitSentence:\n'
+                   '\n'
+                   '    def split_sentences(self, sentences_string):\n'
+                   '        sentences = '
+                   "re.split('(?<!\\\\w\\\\.\\\\w.)(?<![A-Z][a-z]\\\\.)(?<=\\\\.|\\\\?)\\\\s', "
+                   'sentences_string)\n'
+                   '        return sentences\n'
+                   '\n'
+                   '    def count_words(self, sentence):\n'
+                   "        sentence = re.sub('[^a-zA-Z\\\\s]', '', sentence)\n"
+                   '        words = sentence.split()\n'
+                   '        return len(words)\n'
+                   '\n'
+                   '    def process_text_file(self, sentences_string):\n'
+                   '        sentences = '
+                   'self.split_sentences(sentences_string)\n'
+                   '        max_count = 0\n'
+                   '        for sentence in sentences:\n'
+                   '            count = self.count_words(sentence)\n'
+                   '            if count > max_count:\n'
+                   '                max_count = count\n'
+                   '        return max_count',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_78.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.475278,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'35352281374003977868')\n"
+                      "    parse('2024-10-13 02:06:20')\n"
+                      '    shuffle([42, 4, 16])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.16)\n'
+                      '    ttest_ind([87, 62, 100], [82, 53, 8])\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import re\n'
+                      '\n'
+                      'class SplitSentence:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def split_sentences(self, sentences_string):\n'
+                      '        sentences = '
+                      "re.split('(?<!\\\\w\\\\.\\\\w.)(?<![A-Z][a-z]\\\\.)(?<=\\\\.|\\\\?)\\\\s', "
+                      'sentences_string)\n'
+                      '        return sentences\n'
+                      '\n'
+                      '    def count_words(self, sentence):\n'
+                      "        sentence = re.sub('[^a-zA-Z\\\\s]', '', "
+                      'sentence)\n'
+                      '        words = sentence.split()\n'
+                      '        return len(words)\n'
+                      '\n'
+                      '    def process_text_file(self, sentences_string):\n'
+                      '        sentences = '
+                      'self.split_sentences(sentences_string)\n'
+                      '        newmax_count_1 = [0][0]\n'
+                      '        LoopChecker117 = 689\n'
+                      '        LoopChecker217 = 688\n'
+                      '        ConditionChecker122 = 852\n'
+                      '        ConditionChecker222 = 597\n'
+                      '        for LoopIndexOut in range(LoopChecker117 // '
+                      'LoopChecker217):\n'
+                      '            for sentence in sentences:\n'
+                      '                count = self.count_words(sentence)\n'
+                      '                if ConditionChecker122 & '
+                      'ConditionChecker222:\n'
+                      '                    if count > newmax_count_1:\n'
+                      '                        newmax_count_1 = count\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return newmax_count_1'}
+[END] processing file: ClassEval_78. Total Time: 4.475278
+END AT 2024-10-13 02:06:21.908143

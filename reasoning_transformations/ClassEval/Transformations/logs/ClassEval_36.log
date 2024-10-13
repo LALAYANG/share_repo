@@ -1,0 +1,337 @@
+STARTING AT 2024-10-13 01:56:30.684069
+[START] processing file: ClassEval_36
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_36 /home/yang/Benchmark/dataset/classeval/code//ClassEval_36.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_while_out
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_36
+.....F..FF..........F.....
+======================================================================
+FAIL: test_fetch (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 110, in test_fetch
+    self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10, 'time':timestamp, 'state': 'read'})
+AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
+
+======================================================================
+FAIL: test_fetch_4 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 136, in test_fetch_4
+    self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10,
+AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
+
+======================================================================
+FAIL: test_fetch_5 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 148, in test_fetch_5
+    self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10,
+AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
+
+======================================================================
+FAIL: test_main (__main__.EmailClientTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 262, in test_main
+    self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10, 'time': timestamp, 'state': 'read'})
+AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+FAILED (failures=4)
+
+Result: ['failure']
+Drop transform_range_to_recursion due to ['failure']
+Checking transformation add_decorator
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_36
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 12, in <module>
+    class EmailClient:
+  File "/home/yang/Benchmark/tmp_test.py", line 15, in EmailClient
+    def __init__(self, addr, capacity) -> None:
+  File "/home/yang/Benchmark/tmp_test.py", line 4, in my_decorator
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Result: ['error_or_timeout']
+Drop add_datetime due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py
+*Running tests for: ClassEval_36
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_while_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_36',
+  'genetic_algorithm': None,
+  'original_code': 'from datetime import datetime\n'
+                   '\n'
+                   'class EmailClient:\n'
+                   '\n'
+                   '    def __init__(self, addr, capacity) -> None:\n'
+                   '        self.addr = addr\n'
+                   '        self.capacity = capacity\n'
+                   '        self.inbox = []\n'
+                   '\n'
+                   '    def send_to(self, recv, content, size):\n'
+                   '        if not recv.is_full_with_one_more_email(size):\n'
+                   "            timestamp = datetime.now().strftime('%Y-%m-%d "
+                   "%H:%M:%S')\n"
+                   "            email = {'sender': self.addr, 'receiver': "
+                   "recv.addr, 'content': content, 'size': size, 'time': "
+                   "timestamp, 'state': 'unread'}\n"
+                   '            recv.inbox.append(email)\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            self.clear_inbox(size)\n'
+                   '            return False\n'
+                   '\n'
+                   '    def fetch(self):\n'
+                   '        if len(self.inbox) == 0:\n'
+                   '            return None\n'
+                   '        for i in range(len(self.inbox)):\n'
+                   "            if self.inbox[i]['state'] == 'unread':\n"
+                   "                self.inbox[i]['state'] = 'read'\n"
+                   '                return self.inbox[i]\n'
+                   '        return None\n'
+                   '\n'
+                   '    def is_full_with_one_more_email(self, size):\n'
+                   '        occupied_size = self.get_occupied_size()\n'
+                   '        return True if occupied_size + size > '
+                   'self.capacity else False\n'
+                   '\n'
+                   '    def get_occupied_size(self):\n'
+                   '        occupied_size = 0\n'
+                   '        for email in self.inbox:\n'
+                   "            occupied_size += email['size']\n"
+                   '        return occupied_size\n'
+                   '\n'
+                   '    def clear_inbox(self, size):\n'
+                   '        if len(self.addr) == 0:\n'
+                   '            return\n'
+                   '        freed_space = 0\n'
+                   '        while freed_space < size and self.inbox:\n'
+                   '            email = self.inbox[0]\n'
+                   "            freed_space += email['size']\n"
+                   '            del self.inbox[0]',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_36.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.86802,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 01:56:34')\n"
+                      '    time.sleep(0.29)\n'
+                      '    shuffle([60, 64, 21])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([83, 20, 5], [64, 13, 49])\n'
+                      "    base64.b64encode(b'61506715260674082927')\n"
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'from datetime import datetime\n'
+                      '\n'
+                      'class EmailClient:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, addr, capacity) -> None:\n'
+                      '        self.addr = addr\n'
+                      '        self.capacity = capacity\n'
+                      '        self.inbox = [[]][0]\n'
+                      '\n'
+                      '    def send_to(self, recv, content, size):\n'
+                      '        ConditionChecker111 = 401\n'
+                      '        ConditionChecker211 = 364\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      '            if not '
+                      'recv.is_full_with_one_more_email(size):\n'
+                      '                timestamp = '
+                      "datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n"
+                      "                email = {'sender': self.addr, "
+                      "'receiver': recv.addr, 'content': content, 'size': "
+                      "size, 'time': timestamp, 'state': 'unread'}\n"
+                      '                recv.inbox.append(email)\n'
+                      '                return True\n'
+                      '            else:\n'
+                      '                self.clear_inbox(size)\n'
+                      '                return False\n'
+                      '\n'
+                      '    def fetch(self):\n'
+                      '        if len(self.inbox) == 0:\n'
+                      '            return None\n'
+                      '        LoopChecker123 = 482\n'
+                      '        LoopChecker223 = 481\n'
+                      '        for LoopIndexOut in range(LoopChecker123 // '
+                      'LoopChecker223):\n'
+                      '            for i in range(len(self.inbox)):\n'
+                      "                if self.inbox[i]['state'] == 'unread':\n"
+                      "                    self.inbox[i]['state'] = 'read'\n"
+                      '                    return self.inbox[i]\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return None\n'
+                      '\n'
+                      '    def is_full_with_one_more_email(self, size):\n'
+                      '        newoccupied_size_1 = self.get_occupied_size()\n'
+                      '        return True if newoccupied_size_1 + size > '
+                      'self.capacity else False\n'
+                      '\n'
+                      '    def get_occupied_size(self):\n'
+                      '        newoccupied_size_1 = 0\n'
+                      '        for email in self.inbox:\n'
+                      "            newoccupied_size_1 += email['size']\n"
+                      '        return newoccupied_size_1\n'
+                      '\n'
+                      '    def clear_inbox(self, size):\n'
+                      '        if len(self.addr) == 0:\n'
+                      '            return\n'
+                      '        freed_space = 0\n'
+                      '        whileloopchecker146 = 963\n'
+                      '        whileloopchecker246 = 962\n'
+                      '        while whileloopchecker146 % whileloopchecker246 '
+                      '== 1:\n'
+                      '            whileloopchecker146 = whileloopchecker146 + '
+                      '1\n'
+                      '            while freed_space < size and self.inbox:\n'
+                      '                email = self.inbox[0]\n'
+                      "                freed_space += email['size']\n"
+                      '                del self.inbox[0]\n'
+                      '        else:\n'
+                      '            pass'}
+[END] processing file: ClassEval_36. Total Time: 5.86802
+END AT 2024-10-13 01:56:36.554491

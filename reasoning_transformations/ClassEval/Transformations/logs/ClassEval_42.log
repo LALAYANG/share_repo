@@ -1,0 +1,253 @@
+STARTING AT 2024-10-13 01:59:18.742236
+[START] processing file: ClassEval_42
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_42 /home/yang/Benchmark/dataset/classeval/code//ClassEval_42.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py
+*Running tests for: ClassEval_42
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_42',
+  'genetic_algorithm': None,
+  'original_code': 'class Hotel:\n'
+                   '\n'
+                   '    def __init__(self, name, rooms):\n'
+                   '        self.name = name\n'
+                   '        self.available_rooms = rooms\n'
+                   '        self.booked_rooms = {}\n'
+                   '\n'
+                   '    def book_room(self, room_type, room_number, name):\n'
+                   '        if room_type not in self.available_rooms.keys():\n'
+                   '            return False\n'
+                   '        if room_number <= '
+                   'self.available_rooms[room_type]:\n'
+                   '            if room_type not in self.booked_rooms.keys():\n'
+                   '                self.booked_rooms[room_type] = {}\n'
+                   '            self.booked_rooms[room_type][name] = '
+                   'room_number\n'
+                   '            self.available_rooms[room_type] -= '
+                   'room_number\n'
+                   "            return 'Success!'\n"
+                   '        elif self.available_rooms[room_type] != 0:\n'
+                   '            return self.available_rooms[room_type]\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def check_in(self, room_type, room_number, name):\n'
+                   '        if room_type not in self.booked_rooms.keys():\n'
+                   '            return False\n'
+                   '        if name in self.booked_rooms[room_type]:\n'
+                   '            if room_number > '
+                   'self.booked_rooms[room_type][name]:\n'
+                   '                return False\n'
+                   '            elif room_number == '
+                   'self.booked_rooms[room_type][name]:\n'
+                   '                self.booked_rooms[room_type].pop(name)\n'
+                   '            else:\n'
+                   '                self.booked_rooms[room_type][name] -= '
+                   'room_number\n'
+                   '\n'
+                   '    def check_out(self, room_type, room_number):\n'
+                   '        if room_type in self.available_rooms:\n'
+                   '            self.available_rooms[room_type] += '
+                   'room_number\n'
+                   '        else:\n'
+                   '            self.available_rooms[room_type] = room_number\n'
+                   '\n'
+                   '    def get_available_rooms(self, room_type):\n'
+                   '        return self.available_rooms[room_type]',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_42.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.577114,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([91, 15, 46])\n'
+                      '    ttest_ind([54, 68, 74], [37, 26, 94])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.28)\n'
+                      "    base64.b64encode(b'98122810781666283928')\n"
+                      "    parse('2024-10-13 01:59:22')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      '\n'
+                      'class Hotel:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, name, rooms):\n'
+                      '        self.name = name\n'
+                      '        self.available_rooms = rooms\n'
+                      '        self.booked_rooms = {}\n'
+                      '\n'
+                      '    def book_room(self, room_type, room_number, name):\n'
+                      '        ConditionChecker19 = [231][0]\n'
+                      '        ConditionChecker29 = 657\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if room_type not in '
+                      'self.available_rooms.keys():\n'
+                      '                return False\n'
+                      '        if room_number <= '
+                      'self.available_rooms[room_type]:\n'
+                      '            if room_type not in '
+                      'self.booked_rooms.keys():\n'
+                      '                self.booked_rooms[room_type] = {}\n'
+                      '            self.booked_rooms[room_type][name] = '
+                      'room_number\n'
+                      '            self.available_rooms[room_type] -= '
+                      'room_number\n'
+                      "            return 'Success!'\n"
+                      '        elif self.available_rooms[room_type] != 0:\n'
+                      '            return self.available_rooms[room_type]\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def check_in(self, room_type, room_number, name):\n'
+                      '        if room_type not in self.booked_rooms.keys():\n'
+                      '            return False\n'
+                      '        if name in self.booked_rooms[room_type]:\n'
+                      '            if room_number > '
+                      'self.booked_rooms[room_type][name]:\n'
+                      '                return False\n'
+                      '            elif room_number == '
+                      'self.booked_rooms[room_type][name]:\n'
+                      '                self.booked_rooms[room_type].pop(name)\n'
+                      '            else:\n'
+                      '                self.booked_rooms[room_type][name] -= '
+                      'room_number\n'
+                      '\n'
+                      '    def check_out(self, room_type, room_number):\n'
+                      '        if room_type in self.available_rooms:\n'
+                      '            self.available_rooms[room_type] += '
+                      'room_number\n'
+                      '        else:\n'
+                      '            self.available_rooms[room_type] = '
+                      'room_number\n'
+                      '\n'
+                      '    def get_available_rooms(self, room_type):\n'
+                      '        return self.available_rooms[room_type]'}
+[END] processing file: ClassEval_42. Total Time: 5.577114
+END AT 2024-10-13 01:59:24.322627

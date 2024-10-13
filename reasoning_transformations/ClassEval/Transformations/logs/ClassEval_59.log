@@ -1,0 +1,321 @@
+STARTING AT 2024-10-13 02:03:51.868485
+[START] processing file: ClassEval_59
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_59 /home/yang/Benchmark/dataset/classeval/code//ClassEval_59.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_59
+..........FF.FFF
+======================================================================
+FAIL: test_book_ticket_1 (__main__.MovieBookingSystemTestBookTicket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 105, in test_book_ticket_1
+    self.assertEqual(result, 'Booking success.')
+AssertionError: 'Movie not found.' != 'Booking success.'
+- Movie not found.
++ Booking success.
+
+
+======================================================================
+FAIL: test_book_ticket_2 (__main__.MovieBookingSystemTestBookTicket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 114, in test_book_ticket_2
+    self.assertEqual(result, 'Booking failed.')
+AssertionError: 'Movie not found.' != 'Booking failed.'
+- Movie not found.
++ Booking failed.
+
+
+======================================================================
+FAIL: test_book_ticket_4 (__main__.MovieBookingSystemTestBookTicket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 124, in test_book_ticket_4
+    self.assertEqual(result, 'Booking success.')
+AssertionError: 'Movie not found.' != 'Booking success.'
+- Movie not found.
++ Booking success.
+
+
+======================================================================
+FAIL: test_book_ticket_5 (__main__.MovieBookingSystemTestBookTicket)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 130, in test_book_ticket_5
+    self.assertEqual(result, 'Booking success.')
+AssertionError: 'Movie not found.' != 'Booking success.'
+- Movie not found.
++ Booking success.
+
+
+======================================================================
+FAIL: test_main (__main__.MovieBookingSystemTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 173, in test_main
+    self.assertEqual(result, 'Booking success.')
+AssertionError: 'Movie not found.' != 'Booking success.'
+- Movie not found.
++ Booking success.
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.003s
+
+FAILED (failures=5)
+
+Result: ['failure']
+Drop transform_range_to_recursion due to ['failure']
+Checking transformation add_decorator
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_59
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/tmp_test.py", line 13, in <module>
+    class MovieBookingSystem:
+  File "/home/yang/Benchmark/tmp_test.py", line 16, in MovieBookingSystem
+    def __init__(self):
+  File "/home/yang/Benchmark/tmp_test.py", line 4, in my_decorator
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Result: ['error_or_timeout']
+Drop add_datetime due to ['error_or_timeout']
+Checking transformation add_time
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py
+*Running tests for: ClassEval_59
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_59',
+  'genetic_algorithm': None,
+  'original_code': 'from datetime import datetime\n'
+                   'import numpy as np\n'
+                   '\n'
+                   'class MovieBookingSystem:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.movies = []\n'
+                   '\n'
+                   '    def add_movie(self, name, price, start_time, end_time, '
+                   'n):\n'
+                   "        movie = {'name': name, 'price': price, "
+                   "'start_time': datetime.strptime(start_time, '%H:%M'), "
+                   "'end_time': datetime.strptime(end_time, '%H:%M'), 'seats': "
+                   'np.zeros((n, n))}\n'
+                   '        self.movies.append(movie)\n'
+                   '\n'
+                   '    def book_ticket(self, name, seats_to_book):\n'
+                   '        for movie in self.movies:\n'
+                   "            if movie['name'] == name:\n"
+                   '                for seat in seats_to_book:\n'
+                   "                    if movie['seats'][seat[0]][seat[1]] == "
+                   '0:\n'
+                   "                        movie['seats'][seat[0]][seat[1]] = "
+                   '1\n'
+                   '                    else:\n'
+                   "                        return 'Booking failed.'\n"
+                   "                return 'Booking success.'\n"
+                   "        return 'Movie not found.'\n"
+                   '\n'
+                   '    def available_movies(self, start_time, end_time):\n'
+                   '        start_time = datetime.strptime(start_time, '
+                   "'%H:%M')\n"
+                   "        end_time = datetime.strptime(end_time, '%H:%M')\n"
+                   '        available_movies = []\n'
+                   '        for movie in self.movies:\n'
+                   "            if start_time <= movie['start_time'] and "
+                   "movie['end_time'] <= end_time:\n"
+                   "                available_movies.append(movie['name'])\n"
+                   '        return available_movies',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_59.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.642563,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([83, 97, 63])\n'
+                      '    time.sleep(0.11)\n'
+                      "    parse('2024-10-13 02:03:57')\n"
+                      '    ttest_ind([22, 45, 93], [29, 57, 53])\n'
+                      "    base64.b64encode(b'68926021532706964885')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'from datetime import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'class MovieBookingSystem:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.movies = [[]][0]\n'
+                      '\n'
+                      '    def add_movie(self, name, price, newstart_time_1, '
+                      'end_time, n):\n'
+                      "        movie = {'name': name, 'price': price, "
+                      "'start_time': datetime.strptime(newstart_time_1, "
+                      "'%H:%M'), 'end_time': datetime.strptime(end_time, "
+                      "'%H:%M'), 'seats': np.zeros((n, n))}\n"
+                      '        self.movies.append(movie)\n'
+                      '\n'
+                      '    def book_ticket(self, name, seats_to_book):\n'
+                      '        LoopChecker114 = 912\n'
+                      '        LoopChecker214 = 911\n'
+                      '        for LoopIndexOut in range(LoopChecker114 // '
+                      'LoopChecker214):\n'
+                      '            for movie in self.movies:\n'
+                      "                if movie['name'] == name:\n"
+                      '                    for seat in seats_to_book:\n'
+                      '                        if '
+                      "movie['seats'][seat[0]][seat[1]] == 0:\n"
+                      '                            '
+                      "movie['seats'][seat[0]][seat[1]] = 1\n"
+                      '                        else:\n'
+                      "                            return 'Booking failed.'\n"
+                      "                    return 'Booking success.'\n"
+                      '        else:\n'
+                      '            pass\n'
+                      "        return 'Movie not found.'\n"
+                      '\n'
+                      '    def available_movies(self, newstart_time_1, '
+                      'end_time):\n'
+                      '        newstart_time_1 = '
+                      "datetime.strptime(newstart_time_1, '%H:%M')\n"
+                      '        end_time = datetime.strptime(end_time, '
+                      "'%H:%M')\n"
+                      '        available_movies = []\n'
+                      '        ConditionChecker132 = 24\n'
+                      '        ConditionChecker232 = 221\n'
+                      '        for movie in self.movies:\n'
+                      '            if ConditionChecker132 & '
+                      'ConditionChecker232:\n'
+                      '                if newstart_time_1 <= '
+                      "movie['start_time'] and movie['end_time'] <= end_time:\n"
+                      '                    '
+                      "available_movies.append(movie['name'])\n"
+                      '        return available_movies'}
+[END] processing file: ClassEval_59. Total Time: 6.642563
+END AT 2024-10-13 02:03:58.513318

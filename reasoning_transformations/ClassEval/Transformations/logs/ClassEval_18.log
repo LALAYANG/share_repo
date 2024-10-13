@@ -1,0 +1,217 @@
+STARTING AT 2024-10-13 01:49:57.073048
+[START] processing file: ClassEval_18
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_18 /home/yang/Benchmark/dataset/classeval/code//ClassEval_18.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_18.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_18.py
+*Running tests for: ClassEval_18
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_18.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_18',
+  'genetic_algorithm': None,
+  'original_code': 'class CamelCaseMap:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self._data = {}\n'
+                   '\n'
+                   '    def __getitem__(self, key):\n'
+                   '        return self._data[self._convert_key(key)]\n'
+                   '\n'
+                   '    def __setitem__(self, key, value):\n'
+                   '        self._data[self._convert_key(key)] = value\n'
+                   '\n'
+                   '    def __delitem__(self, key):\n'
+                   '        del self._data[self._convert_key(key)]\n'
+                   '\n'
+                   '    def __iter__(self):\n'
+                   '        return iter(self._data)\n'
+                   '\n'
+                   '    def __len__(self):\n'
+                   '        return len(self._data)\n'
+                   '\n'
+                   '    def _convert_key(self, key):\n'
+                   '        if isinstance(key, str):\n'
+                   '            return self._to_camel_case(key)\n'
+                   '        return key\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def _to_camel_case(key):\n'
+                   "        parts = key.split('_')\n"
+                   "        return parts[0] + ''.join((part.title() for part "
+                   'in parts[1:]))',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_18.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_18.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_18.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.855989,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([9, 10, 64])\n'
+                      "    parse('2024-10-13 01:49:59')\n"
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.06)\n'
+                      "    base64.b64encode(b'16119790777651121188')\n"
+                      '    ttest_ind([13, 95, 93], [70, 71, 86])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      'class CamelCaseMap:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self._data = {}\n'
+                      '\n'
+                      '    def __getitem__(self, key):\n'
+                      '        return self._data[self._convert_key(key)]\n'
+                      '\n'
+                      '    def __setitem__(self, key, value):\n'
+                      '        self._data[self._convert_key(key)] = value\n'
+                      '\n'
+                      '    def __delitem__(self, key):\n'
+                      '        del self._data[self._convert_key(key)]\n'
+                      '\n'
+                      '    def __iter__(self):\n'
+                      '        return iter(self._data)\n'
+                      '\n'
+                      '    def __len__(self):\n'
+                      '        return len(self._data)\n'
+                      '\n'
+                      '    def _convert_key(self, key):\n'
+                      '        ConditionChecker122 = [209][0]\n'
+                      '        ConditionChecker222 = 618\n'
+                      '        if ConditionChecker122 & ConditionChecker222:\n'
+                      '            if isinstance(key, str):\n'
+                      '                return self._to_camel_case(key)\n'
+                      '        return key\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def _to_camel_case(key):\n'
+                      "        newparts_1 = key.split('_')\n"
+                      "        return newparts_1[0] + ''.join((part.title() "
+                      'for part in newparts_1[1:]))'}
+[END] processing file: ClassEval_18. Total Time: 3.855989
+END AT 2024-10-13 01:50:00.930917

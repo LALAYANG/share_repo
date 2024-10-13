@@ -1,0 +1,214 @@
+STARTING AT 2024-10-13 02:05:28.805248
+[START] processing file: ClassEval_70
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_70 /home/yang/Benchmark/dataset/classeval/code//ClassEval_70.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_70.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_70.py
+*Running tests for: ClassEval_70
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_70.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_70',
+  'genetic_algorithm': None,
+  'original_code': 'class PersonRequest:\n'
+                   '\n'
+                   '    def __init__(self, name: str, sex: str, phoneNumber: '
+                   'str):\n'
+                   '        self.name = self._validate_name(name)\n'
+                   '        self.sex = self._validate_sex(sex)\n'
+                   '        self.phoneNumber = '
+                   'self._validate_phoneNumber(phoneNumber)\n'
+                   '\n'
+                   '    def _validate_name(self, name: str) -> str:\n'
+                   '        if not name:\n'
+                   '            return None\n'
+                   '        if len(name) > 33:\n'
+                   '            return None\n'
+                   '        return name\n'
+                   '\n'
+                   '    def _validate_sex(self, sex: str) -> str:\n'
+                   "        if sex not in ['Man', 'Woman', 'UGM']:\n"
+                   '            return None\n'
+                   '        return sex\n'
+                   '\n'
+                   '    def _validate_phoneNumber(self, phoneNumber: str) -> '
+                   'str:\n'
+                   '        if not phoneNumber:\n'
+                   '            return None\n'
+                   '        if len(phoneNumber) != 11 or not '
+                   'phoneNumber.isdigit():\n'
+                   '            return None\n'
+                   '        return phoneNumber',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_70.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_70.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_70.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.647835,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-13 02:05:31')\n"
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.21)\n'
+                      "    base64.b64encode(b'93192464248895381170')\n"
+                      '    ttest_ind([93, 59, 42], [82, 14, 36])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([85, 11, 55])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      'class PersonRequest:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, name: str, sex: str, '
+                      'phoneNumber: str):\n'
+                      '        self.name = self._validate_name(name)\n'
+                      '        self.sex = self._validate_sex(sex)\n'
+                      '        self.phoneNumber = '
+                      'self._validate_phoneNumber(phoneNumber)\n'
+                      '\n'
+                      '    def _validate_name(self, name: str) -> str:\n'
+                      '        ConditionChecker19 = [285][0]\n'
+                      '        ConditionChecker29 = 819\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if not name:\n'
+                      '                return None\n'
+                      '        if len(name) > 33:\n'
+                      '            return None\n'
+                      '        return name\n'
+                      '\n'
+                      '    def _validate_sex(self, sex: str) -> str:\n'
+                      "        if sex not in ['Man', 'Woman', 'UGM']:\n"
+                      '            return None\n'
+                      '        return sex\n'
+                      '\n'
+                      '    def _validate_phoneNumber(self, phoneNumber: str) '
+                      '-> str:\n'
+                      '        if not phoneNumber:\n'
+                      '            return None\n'
+                      '        if len(phoneNumber) != 11 or not '
+                      'phoneNumber.isdigit():\n'
+                      '            return None\n'
+                      '        return phoneNumber'}
+[END] processing file: ClassEval_70. Total Time: 4.647835
+END AT 2024-10-13 02:05:33.454959

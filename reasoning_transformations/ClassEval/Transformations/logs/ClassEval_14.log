@@ -1,0 +1,221 @@
+STARTING AT 2024-10-13 01:49:36.805632
+[START] processing file: ClassEval_14
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_14 /home/yang/Benchmark/dataset/classeval/code//ClassEval_14.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.013s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.016s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.013s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.016s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.013s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.014s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py
+*Running tests for: ClassEval_14
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.010s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_14',
+  'genetic_algorithm': None,
+  'original_code': 'import sqlite3\n'
+                   '\n'
+                   'class BookManagementDB:\n'
+                   '\n'
+                   '    def __init__(self, db_name):\n'
+                   '        self.connection = sqlite3.connect(db_name)\n'
+                   '        self.cursor = self.connection.cursor()\n'
+                   '        self.create_table()\n'
+                   '\n'
+                   '    def create_table(self):\n'
+                   "        self.cursor.execute('\\n            CREATE TABLE "
+                   'IF NOT EXISTS books (\\n                id INTEGER PRIMARY '
+                   'KEY,\\n                title TEXT,\\n                '
+                   'author TEXT,\\n                available '
+                   "INTEGER\\n            )\\n        ')\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def add_book(self, title, author):\n'
+                   "        self.cursor.execute('\\n            INSERT INTO "
+                   'books (title, author, available)\\n            VALUES (?, '
+                   "?, 1)\\n        ', (title, author))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def remove_book(self, book_id):\n'
+                   "        self.cursor.execute('\\n            DELETE FROM "
+                   "books WHERE id = ?\\n        ', (book_id,))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def borrow_book(self, book_id):\n'
+                   "        self.cursor.execute('\\n            UPDATE books "
+                   "SET available = 0 WHERE id = ?\\n        ', (book_id,))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def return_book(self, book_id):\n'
+                   "        self.cursor.execute('\\n            UPDATE books "
+                   "SET available = 1 WHERE id = ?\\n        ', (book_id,))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def search_books(self):\n'
+                   "        self.cursor.execute('\\n            SELECT * FROM "
+                   "books\\n        ')\n"
+                   '        books = self.cursor.fetchall()\n'
+                   '        return books',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_14.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.623393,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-13 01:49:39')\n"
+                      '    time.sleep(0.03)\n'
+                      '    ttest_ind([97, 50, 23], [41, 36, 83])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    shuffle([43, 65, 37])\n'
+                      "    base64.b64encode(b'41924317015043669325')\n"
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      'import sqlite3\n'
+                      '\n'
+                      'class BookManagementDB:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, db_name):\n'
+                      '        self.connection = sqlite3.connect(db_name)\n'
+                      '        self.cursor = self.connection.cursor()\n'
+                      '        self.create_table()\n'
+                      '\n'
+                      '    def create_table(self):\n'
+                      "        self.cursor.execute('\\n            CREATE "
+                      'TABLE IF NOT EXISTS books (\\n                id '
+                      'INTEGER PRIMARY KEY,\\n                title '
+                      'TEXT,\\n                author TEXT,\\n                '
+                      "available INTEGER\\n            )\\n        ')\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def add_book(self, title, author):\n'
+                      "        self.cursor.execute('\\n            INSERT INTO "
+                      'books (title, author, available)\\n            VALUES '
+                      "(?, ?, 1)\\n        ', (title, author))\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def remove_book(self, book_id):\n'
+                      "        self.cursor.execute('\\n            DELETE FROM "
+                      "books WHERE id = ?\\n        ', (book_id,))\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def borrow_book(self, book_id):\n'
+                      "        self.cursor.execute('\\n            UPDATE "
+                      "books SET available = 0 WHERE id = ?\\n        ', "
+                      '(book_id,))\n'
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def return_book(self, book_id):\n'
+                      "        self.cursor.execute('\\n            UPDATE "
+                      "books SET available = 1 WHERE id = ?\\n        ', "
+                      '(book_id,))\n'
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def search_books(self):\n'
+                      "        self.cursor.execute('\\n            SELECT * "
+                      "FROM books\\n        ')\n"
+                      '        newbooks_1 = self.cursor.fetchall()\n'
+                      '        return newbooks_1'}
+[END] processing file: ClassEval_14. Total Time: 3.623393
+END AT 2024-10-13 01:49:40.431050

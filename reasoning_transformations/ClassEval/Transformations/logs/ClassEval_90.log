@@ -1,0 +1,291 @@
+STARTING AT 2024-10-13 02:08:09.819602
+[START] processing file: ClassEval_90
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_90 /home/yang/Benchmark/dataset/classeval/code//ClassEval_90.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_90
+  File "/home/yang/Benchmark/tmp_test.py", line 46
+    nonlocal key_value
+    ^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'key_value' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py
+*Running tests for: ClassEval_90
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_90',
+  'genetic_algorithm': None,
+  'original_code': 'class URLHandler:\n'
+                   '\n'
+                   '    def __init__(self, url):\n'
+                   '        self.url = url\n'
+                   '\n'
+                   '    def get_scheme(self):\n'
+                   "        scheme_end = self.url.find('://')\n"
+                   '        if scheme_end != -1:\n'
+                   '            return self.url[:scheme_end]\n'
+                   '        return None\n'
+                   '\n'
+                   '    def get_host(self):\n'
+                   "        scheme_end = self.url.find('://')\n"
+                   '        if scheme_end != -1:\n'
+                   '            url_without_scheme = self.url[scheme_end + '
+                   '3:]\n'
+                   "            host_end = url_without_scheme.find('/')\n"
+                   '            if host_end != -1:\n'
+                   '                return url_without_scheme[:host_end]\n'
+                   '            return url_without_scheme\n'
+                   '        return None\n'
+                   '\n'
+                   '    def get_path(self):\n'
+                   "        scheme_end = self.url.find('://')\n"
+                   '        if scheme_end != -1:\n'
+                   '            url_without_scheme = self.url[scheme_end + '
+                   '3:]\n'
+                   "            host_end = url_without_scheme.find('/')\n"
+                   '            if host_end != -1:\n'
+                   '                return url_without_scheme[host_end:]\n'
+                   '        return None\n'
+                   '\n'
+                   '    def get_query_params(self):\n'
+                   "        query_start = self.url.find('?')\n"
+                   "        fragment_start = self.url.find('#')\n"
+                   '        if query_start != -1:\n'
+                   '            query_string = self.url[query_start + '
+                   '1:fragment_start]\n'
+                   '            params = {}\n'
+                   '            if len(query_string) > 0:\n'
+                   "                param_pairs = query_string.split('&')\n"
+                   '                for pair in param_pairs:\n'
+                   "                    key_value = pair.split('=')\n"
+                   '                    if len(key_value) == 2:\n'
+                   '                        (key, value) = key_value\n'
+                   '                        params[key] = value\n'
+                   '            return params\n'
+                   '        return None\n'
+                   '\n'
+                   '    def get_fragment(self):\n'
+                   "        fragment_start = self.url.find('#')\n"
+                   '        if fragment_start != -1:\n'
+                   '            return self.url[fragment_start + 1:]\n'
+                   '        return None',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_90.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.059306,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    time.sleep(0.0)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-13 02:08:12')\n"
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([98, 25, 26], [50, 34, 74])\n'
+                      '    shuffle([45, 27, 78])\n'
+                      "    base64.b64encode(b'44446021028274201751')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      'class URLHandler:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, url):\n'
+                      '        self.url = url\n'
+                      '\n'
+                      '    def get_scheme(self):\n'
+                      '        ConditionChecker18 = [747][0]\n'
+                      '        ConditionChecker28 = 635\n'
+                      "        scheme_end = self.url.find('://')\n"
+                      '        if ConditionChecker18 & ConditionChecker28:\n'
+                      '            if scheme_end != -1:\n'
+                      '                return self.url[:scheme_end]\n'
+                      '        return None\n'
+                      '\n'
+                      '    def get_host(self):\n'
+                      "        scheme_end = self.url.find('://')\n"
+                      '        if scheme_end != -1:\n'
+                      '            url_without_scheme = self.url[scheme_end + '
+                      '3:]\n'
+                      "            host_end = url_without_scheme.find('/')\n"
+                      '            if host_end != -1:\n'
+                      '                return url_without_scheme[:host_end]\n'
+                      '            return url_without_scheme\n'
+                      '        return None\n'
+                      '\n'
+                      '    def get_path(self):\n'
+                      "        scheme_end = self.url.find('://')\n"
+                      '        if scheme_end != -1:\n'
+                      '            url_without_scheme = self.url[scheme_end + '
+                      '3:]\n'
+                      "            host_end = url_without_scheme.find('/')\n"
+                      '            if host_end != -1:\n'
+                      '                return url_without_scheme[host_end:]\n'
+                      '        return None\n'
+                      '\n'
+                      '    def get_query_params(self):\n'
+                      "        query_start = self.url.find('?')\n"
+                      "        fragment_start = self.url.find('#')\n"
+                      '        if query_start != -1:\n'
+                      '            query_string = self.url[query_start + '
+                      '1:fragment_start]\n'
+                      '            newparams_1 = {}\n'
+                      '            if len(query_string) > 0:\n'
+                      "                param_pairs = query_string.split('&')\n"
+                      '                LoopChecker139 = 478\n'
+                      '                LoopChecker239 = 477\n'
+                      '                for LoopIndexOut in '
+                      'range(LoopChecker139 // LoopChecker239):\n'
+                      '                    for pair in param_pairs:\n'
+                      "                        key_value = pair.split('=')\n"
+                      '                        if len(key_value) == 2:\n'
+                      '                            (key, value) = key_value\n'
+                      '                            newparams_1[key] = value\n'
+                      '                else:\n'
+                      '                    pass\n'
+                      '            return newparams_1\n'
+                      '        return None\n'
+                      '\n'
+                      '    def get_fragment(self):\n'
+                      "        fragment_start = self.url.find('#')\n"
+                      '        if fragment_start != -1:\n'
+                      '            return self.url[fragment_start + 1:]\n'
+                      '        return None'}
+[END] processing file: ClassEval_90. Total Time: 4.059306
+END AT 2024-10-13 02:08:13.882333

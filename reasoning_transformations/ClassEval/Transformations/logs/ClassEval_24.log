@@ -1,0 +1,239 @@
+STARTING AT 2024-10-13 01:53:27.433072
+[START] processing file: ClassEval_24
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_24 /home/yang/Benchmark/dataset/classeval/code//ClassEval_24.py
+Apply all rules on a single file.
+Checking transformation create_functions
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.546s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.550s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.548s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.549s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.551s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_24.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_24.py
+*Running tests for: ClassEval_24
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.553s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_thread',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_24.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_24',
+  'genetic_algorithm': None,
+  'original_code': 'class ComplexCalculator:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        pass\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def add(c1, c2):\n'
+                   '        real = c1.real + c2.real\n'
+                   '        imaginary = c1.imag + c2.imag\n'
+                   '        answer = complex(real, imaginary)\n'
+                   '        return answer\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def subtract(c1, c2):\n'
+                   '        real = c1.real - c2.real\n'
+                   '        imaginary = c1.imag - c2.imag\n'
+                   '        return complex(real, imaginary)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def multiply(c1, c2):\n'
+                   '        real = c1.real * c2.real - c1.imag * c2.imag\n'
+                   '        imaginary = c1.real * c2.imag + c1.imag * c2.real\n'
+                   '        return complex(real, imaginary)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def divide(c1, c2):\n'
+                   '        denominator = c2.real ** 2 + c2.imag ** 2\n'
+                   '        real = (c1.real * c2.real + c1.imag * c2.imag) / '
+                   'denominator\n'
+                   '        imaginary = (c1.imag * c2.real - c1.real * '
+                   'c2.imag) / denominator\n'
+                   '        return complex(real, imaginary)',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_24.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_24.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_24.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.873356,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'48046657809849073816')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([55, 93, 37], [96, 3, 79])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_8(c2, c1):\n'
+                      '    shuffle([69, 25, 95])\n'
+                      '    time.sleep(0.09)\n'
+                      "    parse('2024-10-13 01:53:31')\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return c1.real + c2.real\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'class ComplexCalculator:\n'
+                      '\n'
+                      '    def __init__(self):\n'
+                      '        pass\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def add(c1, c2):\n'
+                      '        queue_newFunc0_80 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_8_thread(queue):\n'
+                      '            result = newFunc0_8(c2, c1)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_80 = '
+                      'threading.Thread(target=newFunc0_8_thread, '
+                      'args=(queue_newFunc0_80,))\n'
+                      '        thread_newFunc0_80.start()\n'
+                      '        thread_newFunc0_80.join()\n'
+                      '        result_newFunc0_80 = queue_newFunc0_80.get()\n'
+                      '        real = result_newFunc0_80\n'
+                      '        newimaginary_1 = c1.imag + c2.imag\n'
+                      '        answer = complex(real, newimaginary_1)\n'
+                      '        return answer\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def subtract(c1, c2):\n'
+                      '        real = c1.real - c2.real\n'
+                      '        newimaginary_1 = c1.imag - c2.imag\n'
+                      '        return complex(real, newimaginary_1)\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def multiply(c1, c2):\n'
+                      '        real = c1.real * c2.real - c1.imag * c2.imag\n'
+                      '        newimaginary_1 = c1.real * c2.imag + c1.imag * '
+                      'c2.real\n'
+                      '        return complex(real, newimaginary_1)\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def divide(c1, c2):\n'
+                      '        denominator = c2.real ** 2 + c2.imag ** 2\n'
+                      '        real = (c1.real * c2.real + c1.imag * c2.imag) '
+                      '/ denominator\n'
+                      '        newimaginary_1 = (c1.imag * c2.real - c1.real * '
+                      'c2.imag) / denominator\n'
+                      '        return complex(real, newimaginary_1)'}
+[END] processing file: ClassEval_24. Total Time: 6.873356
+END AT 2024-10-13 01:53:34.308389

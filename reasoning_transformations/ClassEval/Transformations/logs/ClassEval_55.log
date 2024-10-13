@@ -1,0 +1,268 @@
+STARTING AT 2024-10-13 02:03:16.199456
+[START] processing file: ClassEval_55
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_55 /home/yang/Benchmark/dataset/classeval/code//ClassEval_55.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_55
+  File "/home/yang/Benchmark/tmp_test.py", line 28
+    nonlocal new_input_string, variable_3_22
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'variable_3_22' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_55.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_55.py
+*Running tests for: ClassEval_55
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_55.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_55',
+  'genetic_algorithm': None,
+  'original_code': 'class Manacher:\n'
+                   '\n'
+                   '    def __init__(self, input_string) -> None:\n'
+                   '        self.input_string = input_string\n'
+                   '\n'
+                   '    def palindromic_length(self, center, diff, string):\n'
+                   '        if center - diff == -1 or center + diff == '
+                   'len(string) or string[center - diff] != string[center + '
+                   'diff]:\n'
+                   '            return 0\n'
+                   '        return 1 + self.palindromic_length(center, diff + '
+                   '1, string)\n'
+                   '\n'
+                   '    def palindromic_string(self):\n'
+                   '        max_length = 0\n'
+                   "        new_input_string = ''\n"
+                   "        output_string = ''\n"
+                   '        for i in self.input_string[:len(self.input_string) '
+                   '- 1]:\n'
+                   "            new_input_string += i + '|'\n"
+                   '        new_input_string += self.input_string[-1]\n'
+                   '        for i in range(len(new_input_string)):\n'
+                   '            length = self.palindromic_length(i, 1, '
+                   'new_input_string)\n'
+                   '            if max_length < length:\n'
+                   '                max_length = length\n'
+                   '                start = i\n'
+                   '        for i in new_input_string[start - max_length:start '
+                   '+ max_length + 1]:\n'
+                   "            if i != '|':\n"
+                   '                output_string += i\n'
+                   '        return output_string',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_55.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_55.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_55.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.177228,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([92, 86, 73])\n'
+                      '    ttest_ind([29, 19, 31], [62, 40, 84])\n'
+                      "    base64.b64encode(b'80970377709283773460')\n"
+                      '    time.sleep(0.22)\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_22(i, variable_3_22):\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-13 02:03:19')\n"
+                      '    try:\n'
+                      '        return i + variable_3_22\n'
+                      '    except:\n'
+                      '        pass\n'
+                      '\n'
+                      'class Manacher:\n'
+                      '\n'
+                      '    def __init__(self, input_string) -> None:\n'
+                      '        self.input_string = input_string\n'
+                      '\n'
+                      '    def palindromic_length(self, center, diff, '
+                      'string):\n'
+                      '        ConditionChecker17 = [886][0]\n'
+                      '        ConditionChecker27 = 393\n'
+                      '        if ConditionChecker17 & ConditionChecker27:\n'
+                      '            if center - diff == -1 or center + diff == '
+                      'len(string) or string[center - diff] != string[center + '
+                      'diff]:\n'
+                      '                return 0\n'
+                      '        return 1 + self.palindromic_length(center, diff '
+                      '+ 1, string)\n'
+                      '\n'
+                      '    def palindromic_string(self):\n'
+                      '        max_length = 0\n'
+                      "        new_input_string = ''\n"
+                      "        output_string = ''\n"
+                      '        LoopChecker115 = 209\n'
+                      '        LoopChecker215 = 208\n'
+                      '        for LoopIndexOut in range(LoopChecker115 // '
+                      'LoopChecker215):\n'
+                      '            for i in '
+                      'self.input_string[:len(self.input_string) - 1]:\n'
+                      "                variable_3_22 = '|'\n"
+                      '                new_input_string += newFunc0_22(i, '
+                      'variable_3_22)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        new_input_string += self.input_string[-1]\n'
+                      '        for i in range(len(new_input_string)):\n'
+                      '            length = self.palindromic_length(i, 1, '
+                      'new_input_string)\n'
+                      '            if max_length < length:\n'
+                      '                max_length = length\n'
+                      '                newstart_1 = i\n'
+                      '        for i in new_input_string[newstart_1 - '
+                      'max_length:newstart_1 + max_length + 1]:\n'
+                      "            if i != '|':\n"
+                      '                output_string = output_string + i\n'
+                      '        return output_string'}
+[END] processing file: ClassEval_55. Total Time: 5.177228
+END AT 2024-10-13 02:03:21.378855

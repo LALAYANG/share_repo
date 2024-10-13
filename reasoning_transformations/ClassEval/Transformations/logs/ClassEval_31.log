@@ -1,0 +1,305 @@
+STARTING AT 2024-10-13 01:54:21.775607
+[START] processing file: ClassEval_31
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_31 /home/yang/Benchmark/dataset/classeval/code//ClassEval_31.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.186s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.186s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.185s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.184s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.187s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_31.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_31.py
+*Running tests for: ClassEval_31
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.187s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_31.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_31',
+  'genetic_algorithm': None,
+  'original_code': 'import math\n'
+                   '\n'
+                   'class DataStatistics4:\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def correlation_coefficient(data1, data2):\n'
+                   '        n = len(data1)\n'
+                   '        mean1 = sum(data1) / n\n'
+                   '        mean2 = sum(data2) / n\n'
+                   '        numerator = sum(((data1[i] - mean1) * (data2[i] - '
+                   'mean2) for i in range(n)))\n'
+                   '        denominator = math.sqrt(sum(((data1[i] - mean1) ** '
+                   '2 for i in range(n)))) * math.sqrt(sum(((data2[i] - mean2) '
+                   '** 2 for i in range(n))))\n'
+                   '        return numerator / denominator if denominator != 0 '
+                   'else 0\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def skewness(data):\n'
+                   '        n = len(data)\n'
+                   '        mean = sum(data) / n\n'
+                   '        variance = sum(((x - mean) ** 2 for x in data)) / '
+                   'n\n'
+                   '        std_deviation = math.sqrt(variance)\n'
+                   '        skewness = sum(((x - mean) ** 3 for x in data)) * '
+                   'n / ((n - 1) * (n - 2) * std_deviation ** 3) if '
+                   'std_deviation != 0 else 0\n'
+                   '        return skewness\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def kurtosis(data):\n'
+                   '        n = len(data)\n'
+                   '        mean = sum(data) / n\n'
+                   '        std_dev = math.sqrt(sum(((x - mean) ** 2 for x in '
+                   'data)) / n)\n'
+                   '        if std_dev == 0:\n'
+                   '            return math.nan\n'
+                   '        centered_data = [x - mean for x in data]\n'
+                   '        fourth_moment = sum((x ** 4 for x in '
+                   'centered_data)) / n\n'
+                   '        kurtosis_value = fourth_moment / std_dev ** 4 - 3\n'
+                   '        return kurtosis_value\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def pdf(data, mu, sigma):\n'
+                   '        pdf_values = [1 / (sigma * math.sqrt(2 * math.pi)) '
+                   '* math.exp(-0.5 * ((x - mu) / sigma) ** 2) for x in data]\n'
+                   '        return pdf_values',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_31.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_31.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_31.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.816174,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    shuffle([68, 42, 82])\n'
+                      "    parse('2024-10-13 01:54:26')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([83, 19, 51], [7, 27, 29])\n'
+                      "    base64.b64encode(b'93237467347270580886')\n"
+                      '    datetime.datetime.now()\n'
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_8(sum, n, data1):\n'
+                      '    time.sleep(0.03)\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    try:\n'
+                      '        return np.sum(np.array([data1])) / n\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import math\n'
+                      '\n'
+                      'class DataStatistics4:\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def correlation_coefficient(data1, data2):\n'
+                      '        n = len(data1)\n'
+                      '        queue_newFunc0_80 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_8_thread(queue):\n'
+                      '            result = newFunc0_8(sum, n, data1)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_80 = '
+                      'threading.Thread(target=newFunc0_8_thread, '
+                      'args=(queue_newFunc0_80,))\n'
+                      '        thread_newFunc0_80.start()\n'
+                      '        thread_newFunc0_80.join()\n'
+                      '        result_newFunc0_80 = queue_newFunc0_80.get()\n'
+                      '        mean1 = result_newFunc0_80\n'
+                      '        mean2 = sum(data2) / n\n'
+                      '        numerator = sum(((data1[i] - mean1) * (data2[i] '
+                      '- mean2) for i in range(n)))\n'
+                      '        denominator = math.sqrt(sum(((data1[i] - mean1) '
+                      '** 2 for i in range(n)))) * math.sqrt(sum(((data2[i] - '
+                      'mean2) ** 2 for i in range(n))))\n'
+                      '        return numerator / denominator if denominator '
+                      '!= 0 else 0\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def skewness(data):\n'
+                      '        n = len(data)\n'
+                      '        mean = sum(data) / n\n'
+                      '        newvariance_1 = sum(((x - mean) ** 2 for x in '
+                      'data)) / n\n'
+                      '        std_deviation = math.sqrt(newvariance_1)\n'
+                      '        skewness = sum(((x - mean) ** 3 for x in data)) '
+                      '* n / ((n - 1) * (n - 2) * std_deviation ** 3) if '
+                      'std_deviation != 0 else 0\n'
+                      '        return skewness\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def kurtosis(data):\n'
+                      '        ConditionChecker128 = [686][0]\n'
+                      '        ConditionChecker228 = 955\n'
+                      '        n = len(data)\n'
+                      '        mean = sum(data) / n\n'
+                      '        std_dev = math.sqrt(sum(((x - mean) ** 2 for x '
+                      'in data)) / n)\n'
+                      '        if ConditionChecker128 & ConditionChecker228:\n'
+                      '            if std_dev == 0:\n'
+                      '                return math.nan\n'
+                      '        centered_data = [x - mean for x in data]\n'
+                      '        fourth_moment = sum((x ** 4 for x in '
+                      'centered_data)) / n\n'
+                      '        kurtosis_value = fourth_moment / std_dev ** 4 - '
+                      '3\n'
+                      '        return kurtosis_value\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def pdf(data, mu, sigma):\n'
+                      '        pdf_values = [1 / (sigma * math.sqrt(2 * '
+                      'math.pi)) * math.exp(-0.5 * ((x - mu) / sigma) ** 2) '
+                      'for x in data]\n'
+                      '        return pdf_values'}
+[END] processing file: ClassEval_31. Total Time: 6.816174
+END AT 2024-10-13 01:54:28.594675

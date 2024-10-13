@@ -1,0 +1,283 @@
+STARTING AT 2024-10-13 02:08:39.012504
+[START] processing file: ClassEval_94
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_94 /home/yang/Benchmark/dataset/classeval/code//ClassEval_94.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py
+*Running tests for: ClassEval_94
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_94',
+  'genetic_algorithm': None,
+  'original_code': 'class VendingMachine:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.inventory = {}\n'
+                   '        self.balance = 0\n'
+                   '\n'
+                   '    def add_item(self, item_name, price, quantity):\n'
+                   '        if not self.restock_item(item_name, quantity):\n'
+                   "            self.inventory[item_name] = {'price': price, "
+                   "'quantity': quantity}\n"
+                   '\n'
+                   '    def insert_coin(self, amount):\n'
+                   '        self.balance += amount\n'
+                   '        return self.balance\n'
+                   '\n'
+                   '    def purchase_item(self, item_name):\n'
+                   '        if item_name in self.inventory:\n'
+                   '            item = self.inventory[item_name]\n'
+                   "            if item['quantity'] > 0 and self.balance >= "
+                   "item['price']:\n"
+                   "                self.balance -= item['price']\n"
+                   "                item['quantity'] -= 1\n"
+                   '                return self.balance\n'
+                   '            else:\n'
+                   '                return False\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def restock_item(self, item_name, quantity):\n'
+                   '        if item_name in self.inventory:\n'
+                   "            self.inventory[item_name]['quantity'] += "
+                   'quantity\n'
+                   '            return True\n'
+                   '        else:\n'
+                   '            return False\n'
+                   '\n'
+                   '    def display_items(self):\n'
+                   '        if not self.inventory:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            items = []\n'
+                   '            for (item_name, item_info) in '
+                   'self.inventory.items():\n'
+                   '                items.append(f"{item_name} - '
+                   '${item_info[\'price\']} [{item_info[\'quantity\']}]")\n'
+                   "            return '\\n'.join(items)",
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_94.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.477033,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([12, 95, 23], [96, 55, 79])\n'
+                      '    shuffle([52, 95, 11])\n'
+                      "    parse('2024-10-13 02:08:42')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'52733522566407583031')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    time.sleep(0.08)\n'
+                      '    return dec_result\n'
+                      'LoopChecker139 = [904][0]\n'
+                      'LoopChecker239 = 903\n'
+                      '\n'
+                      'class VendingMachine:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.inventory = {}\n'
+                      '        self.balance = 0\n'
+                      '\n'
+                      '    def add_item(self, item_name, price, quantity):\n'
+                      '        ConditionChecker111 = 577\n'
+                      '        ConditionChecker211 = 661\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      '            if not self.restock_item(item_name, '
+                      'quantity):\n'
+                      "                self.inventory[item_name] = {'price': "
+                      "price, 'quantity': quantity}\n"
+                      '\n'
+                      '    def insert_coin(self, amount):\n'
+                      '        self.balance += amount\n'
+                      '        return self.balance\n'
+                      '\n'
+                      '    def purchase_item(self, item_name):\n'
+                      '        if item_name in self.inventory:\n'
+                      '            item = self.inventory[item_name]\n'
+                      "            if item['quantity'] > 0 and self.balance >= "
+                      "item['price']:\n"
+                      "                self.balance -= item['price']\n"
+                      "                item['quantity'] -= 1\n"
+                      '                return self.balance\n'
+                      '            else:\n'
+                      '                return False\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def restock_item(self, item_name, quantity):\n'
+                      '        if item_name in self.inventory:\n'
+                      "            self.inventory[item_name]['quantity'] += "
+                      'quantity\n'
+                      '            return True\n'
+                      '        else:\n'
+                      '            return False\n'
+                      '\n'
+                      '    def display_items(self):\n'
+                      '        if not self.inventory:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      '            newitems_1 = []\n'
+                      '\n'
+                      '            def loop_45_12(LoopIndexOut, stop, step):\n'
+                      '                if step == 0 or (step > 0 and '
+                      'LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= '
+                      'stop):\n'
+                      '                    return\n'
+                      '                for (item_name, item_info) in '
+                      'self.inventory.items():\n'
+                      '                    newitems_1.append(f"{item_name} - '
+                      '${item_info[\'price\']} [{item_info[\'quantity\']}]")\n'
+                      '                loop_45_12(LoopIndexOut + step, stop, '
+                      'step)\n'
+                      '            loop_45_12(0, LoopChecker139 // '
+                      'LoopChecker239, 1)\n'
+                      "            return '\\n'.join(newitems_1)"}
+[END] processing file: ClassEval_94. Total Time: 4.477033
+END AT 2024-10-13 02:08:43.491978

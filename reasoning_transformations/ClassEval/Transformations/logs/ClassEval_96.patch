@@ -1,0 +1,64 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_96.py	2024-10-13 02:08:49.270431110 -0500
++++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_96.py	2024-10-13 02:08:53.479386371 -0500
+@@ -1,18 +1,48 @@
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++from sklearn.utils import shuffle
++from cryptography.fernet import Fernet
++import time
++import datetime
++
++
++def my_decorator(func):
++    Fernet.generate_key()
++    base64.b64encode(b'89177255955247592315')
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    ttest_ind([97, 70, 63], [50, 90, 29])
++    HTTPConnection('google.com', port=80)
++    time.sleep(0.23)
++    datetime.datetime.now()
++    shuffle([2, 90, 95])
++    parse('2024-10-13 02:08:52')
++    return dec_result
++
++
+ class WeatherSystem:
+ 
++    @my_decorator
+     def __init__(self, city) -> None:
+-        self.temperature = None
++        self.temperature = [None][0]
+         self.weather = None
+         self.city = city
+         self.weather_list = {}
+ 
+     def query(self, weather_list, tmp_units='celsius'):
++        ConditionChecker111 = 519
++        ConditionChecker211 = 494
+         self.weather_list = weather_list
+-        if self.city not in weather_list:
+-            return False
+-        else:
+-            self.temperature = self.weather_list[self.city]['temperature']
+-            self.weather = self.weather_list[self.city]['weather']
++        if ConditionChecker111 & ConditionChecker211:
++            if self.city not in weather_list:
++                return False
++            else:
++                self.temperature = self.weather_list[self.city]['temperature']
++                self.weather = self.weather_list[self.city]['weather']
+         if self.weather_list[self.city]['temperature units'] != tmp_units:
+             if tmp_units == 'celsius':
+                 return (self.fahrenheit_to_celsius(), self.weather)
+@@ -28,4 +58,4 @@
+         return self.temperature * 9 / 5 + 32
+ 
+     def fahrenheit_to_celsius(self):
+-        return (self.temperature - 32) * 5 / 9
+\ No newline at end of file
++        return (self.temperature - 32) * 5 / 9

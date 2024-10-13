@@ -1,0 +1,391 @@
+STARTING AT 2024-10-13 02:06:41.235653
+[START] processing file: ClassEval_81
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_81 /home/yang/Benchmark/dataset/classeval/code//ClassEval_81.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_thread
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.005s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.008s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.006s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.837s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.874s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.871s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.872s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.872s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 4.869s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'create_functions',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_thread',
+                        'add_decorator',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_81',
+  'genetic_algorithm': None,
+  'original_code': 'import math\n'
+                   '\n'
+                   'class Statistics3:\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def median(data):\n'
+                   '        sorted_data = sorted(data)\n'
+                   '        n = len(sorted_data)\n'
+                   '        if n % 2 == 1:\n'
+                   '            return sorted_data[n // 2]\n'
+                   '        else:\n'
+                   '            return (sorted_data[n // 2 - 1] + '
+                   'sorted_data[n // 2]) / 2\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def mode(data):\n'
+                   '        counts = {}\n'
+                   '        for value in data:\n'
+                   '            counts[value] = counts.get(value, 0) + 1\n'
+                   '        max_count = max(counts.values())\n'
+                   '        mode_values = [value for (value, count) in '
+                   'counts.items() if count == max_count]\n'
+                   '        return mode_values\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def correlation(x, y):\n'
+                   '        n = len(x)\n'
+                   '        mean_x = sum(x) / n\n'
+                   '        mean_y = sum(y) / n\n'
+                   '        numerator = sum(((xi - mean_x) * (yi - mean_y) for '
+                   '(xi, yi) in zip(x, y)))\n'
+                   '        denominator = math.sqrt(sum(((xi - mean_x) ** 2 '
+                   'for xi in x)) * sum(((yi - mean_y) ** 2 for yi in y)))\n'
+                   '        if denominator == 0:\n'
+                   '            return None\n'
+                   '        return numerator / denominator\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def mean(data):\n'
+                   '        if len(data) == 0:\n'
+                   '            return None\n'
+                   '        return sum(data) / len(data)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def correlation_matrix(data):\n'
+                   '        matrix = []\n'
+                   '        for i in range(len(data[0])):\n'
+                   '            row = []\n'
+                   '            for j in range(len(data[0])):\n'
+                   '                column1 = [row[i] for row in data]\n'
+                   '                column2 = [row[j] for row in data]\n'
+                   '                correlation = '
+                   'Statistics3.correlation(column1, column2)\n'
+                   '                row.append(correlation)\n'
+                   '            matrix.append(row)\n'
+                   '        return matrix\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def standard_deviation(data):\n'
+                   '        n = len(data)\n'
+                   '        if n < 2:\n'
+                   '            return None\n'
+                   '        mean_value = Statistics3.mean(data)\n'
+                   '        variance = sum(((x - mean_value) ** 2 for x in '
+                   'data)) / (n - 1)\n'
+                   '        return math.sqrt(variance)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def z_score(data):\n'
+                   '        mean = Statistics3.mean(data)\n'
+                   '        std_deviation = '
+                   'Statistics3.standard_deviation(data)\n'
+                   '        if std_deviation is None or std_deviation == 0:\n'
+                   '            return None\n'
+                   '        return [(x - mean) / std_deviation for x in data]',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_81.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 34.232519,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([54, 58, 70], [33, 3, 43])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'21228740166550659030')\n"
+                      "    parse('2024-10-13 02:07:04')\n"
+                      '    return dec_result\n'
+                      'import threading\n'
+                      'import queue\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_32(sum, n, x):\n'
+                      '    shuffle([30, 36, 14])\n'
+                      '    time.sleep(0.08)\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return np.sum(np.array([x])) / n\n'
+                      '    except:\n'
+                      '        pass\n'
+                      'import math\n'
+                      '\n'
+                      'class Statistics3:\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def median(data):\n'
+                      '        ConditionChecker19 = [757][0]\n'
+                      '        ConditionChecker29 = 469\n'
+                      '        sorted_data = sorted(data)\n'
+                      '        n = len(sorted_data)\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if n % 2 == 1:\n'
+                      '                return sorted_data[n // 2]\n'
+                      '            else:\n'
+                      '                return (sorted_data[n // 2 - 1] + '
+                      'sorted_data[n // 2]) / 2\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def mode(data):\n'
+                      '        counts = {}\n'
+                      '        LoopChecker117 = 13\n'
+                      '        LoopChecker217 = 12\n'
+                      '\n'
+                      '        def loop_27_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for value in data:\n'
+                      '                counts[value] = counts.get(value, 0) + '
+                      '1\n'
+                      '            loop_27_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_27_8(0, LoopChecker117 // LoopChecker217, '
+                      '1)\n'
+                      '        newmax_count_1 = max(counts.values())\n'
+                      '        mode_values = [value for (value, count) in '
+                      'counts.items() if count == newmax_count_1]\n'
+                      '        return mode_values\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def correlation(x, y):\n'
+                      '        n = len(x)\n'
+                      '        queue_newFunc0_320 = queue.Queue()\n'
+                      '\n'
+                      '        def newFunc0_32_thread(queue):\n'
+                      '            result = newFunc0_32(sum, n, x)\n'
+                      '            queue.put(result)\n'
+                      '        thread_newFunc0_320 = '
+                      'threading.Thread(target=newFunc0_32_thread, '
+                      'args=(queue_newFunc0_320,))\n'
+                      '        thread_newFunc0_320.start()\n'
+                      '        thread_newFunc0_320.join()\n'
+                      '        result_newFunc0_320 = queue_newFunc0_320.get()\n'
+                      '        mean_x = result_newFunc0_320\n'
+                      '        mean_y = sum(y) / n\n'
+                      '        numerator = sum(((xi - mean_x) * (yi - mean_y) '
+                      'for (xi, yi) in zip(x, y)))\n'
+                      '        denominator = math.sqrt(sum(((xi - mean_x) ** 2 '
+                      'for xi in x)) * sum(((yi - mean_y) ** 2 for yi in y)))\n'
+                      '        if denominator == 0:\n'
+                      '            return None\n'
+                      '        return numerator / denominator\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def mean(data):\n'
+                      '        if len(data) == 0:\n'
+                      '            return None\n'
+                      '        return sum(data) / len(data)\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def correlation_matrix(data):\n'
+                      '        matrix = []\n'
+                      '        for i in range(len(data[0])):\n'
+                      '            row = []\n'
+                      '            for j in range(len(data[0])):\n'
+                      '                column1 = [row[i] for row in data]\n'
+                      '                column2 = [row[j] for row in data]\n'
+                      '                correlation = '
+                      'Statistics3.correlation(column1, column2)\n'
+                      '                row.append(correlation)\n'
+                      '            matrix.append(row)\n'
+                      '        return matrix\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def standard_deviation(data):\n'
+                      '        n = len(data)\n'
+                      '        if n < 2:\n'
+                      '            return None\n'
+                      '        mean_value = Statistics3.mean(data)\n'
+                      '        variance = sum(((x - mean_value) ** 2 for x in '
+                      'data)) / (n - 1)\n'
+                      '        return math.sqrt(variance)\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def z_score(data):\n'
+                      '        mean = Statistics3.mean(data)\n'
+                      '        std_deviation = '
+                      'Statistics3.standard_deviation(data)\n'
+                      '        if std_deviation is None or std_deviation == '
+                      '0:\n'
+                      '            return None\n'
+                      '        return [(x - mean) / std_deviation for x in '
+                      'data]'}
+[END] processing file: ClassEval_81. Total Time: 34.232519
+END AT 2024-10-13 02:07:15.472773

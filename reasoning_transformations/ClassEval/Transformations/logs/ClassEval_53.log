@@ -1,0 +1,233 @@
+STARTING AT 2024-10-13 02:03:02.659843
+[START] processing file: ClassEval_53
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_53 /home/yang/Benchmark/dataset/classeval/code//ClassEval_53.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py
+*Running tests for: ClassEval_53
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_53',
+  'genetic_algorithm': None,
+  'original_code': 'import re\n'
+                   'import string\n'
+                   '\n'
+                   'class LongestWord:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.word_list = []\n'
+                   '\n'
+                   '    def add_word(self, word):\n'
+                   '        self.word_list.append(word)\n'
+                   '\n'
+                   '    def find_longest_word(self, sentence):\n'
+                   "        longest_word = ''\n"
+                   '        sentence = sentence.lower()\n'
+                   "        sentence = re.sub('[%s]' % "
+                   "re.escape(string.punctuation), '', sentence)\n"
+                   "        sentence = re.split(' ', sentence)\n"
+                   '        for word in sentence:\n'
+                   '            if word in self.word_list and len(word) > '
+                   'len(longest_word):\n'
+                   '                longest_word = word\n'
+                   '        return longest_word',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_53.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.334077,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'12952008255539372875')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([6, 1, 75])\n'
+                      '    time.sleep(0.13)\n'
+                      "    parse('2024-10-13 02:03:05')\n"
+                      '    ttest_ind([24, 11, 4], [83, 83, 29])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import re\n'
+                      'import string\n'
+                      '\n'
+                      'class LongestWord:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.word_list = [[]][0]\n'
+                      '\n'
+                      '    def add_word(self, newword_1):\n'
+                      '        self.word_list.append(newword_1)\n'
+                      '\n'
+                      '    def find_longest_word(self, sentence):\n'
+                      "        longest_word = ''\n"
+                      '        sentence = sentence.lower()\n'
+                      "        sentence = re.sub('[%s]' % "
+                      "re.escape(string.punctuation), '', sentence)\n"
+                      "        sentence = re.split(' ', sentence)\n"
+                      '        LoopChecker117 = 39\n'
+                      '        LoopChecker217 = 38\n'
+                      '        ConditionChecker121 = 231\n'
+                      '        ConditionChecker221 = 399\n'
+                      '\n'
+                      '        def loop_21_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal longest_word\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for newword_1 in sentence:\n'
+                      '                if ConditionChecker121 & '
+                      'ConditionChecker221:\n'
+                      '                    if newword_1 in self.word_list and '
+                      'len(newword_1) > len(longest_word):\n'
+                      '                        longest_word = newword_1\n'
+                      '            loop_21_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_21_8(0, LoopChecker117 // LoopChecker217, '
+                      '1)\n'
+                      '        return longest_word'}
+[END] processing file: ClassEval_53. Total Time: 4.334077
+END AT 2024-10-13 02:03:06.995454

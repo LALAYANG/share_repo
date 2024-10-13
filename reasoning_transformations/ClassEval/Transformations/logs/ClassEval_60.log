@@ -1,0 +1,212 @@
+STARTING AT 2024-10-13 02:04:05.634338
+[START] processing file: ClassEval_60
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.016s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_60 /home/yang/Benchmark/dataset/classeval/code//ClassEval_60.py
+Apply all rules on a single file.
+Checking transformation add_decorator
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.027s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.027s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.018s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.030s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.019s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.020s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.017s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py
+*Running tests for: ClassEval_60
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.027s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_60',
+  'genetic_algorithm': None,
+  'original_code': 'import sqlite3\n'
+                   '\n'
+                   'class MovieTicketDB:\n'
+                   '\n'
+                   '    def __init__(self, db_name):\n'
+                   '        self.connection = sqlite3.connect(db_name)\n'
+                   '        self.cursor = self.connection.cursor()\n'
+                   '        self.create_table()\n'
+                   '\n'
+                   '    def create_table(self):\n'
+                   "        self.cursor.execute('\\n            CREATE TABLE "
+                   'IF NOT EXISTS tickets (\\n                id INTEGER '
+                   'PRIMARY KEY,\\n                movie_name '
+                   'TEXT,\\n                theater_name '
+                   'TEXT,\\n                seat_number '
+                   'TEXT,\\n                customer_name TEXT\\n            '
+                   ")\\n        ')\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def insert_ticket(self, movie_name, theater_name, '
+                   'seat_number, customer_name):\n'
+                   "        self.cursor.execute('\\n            INSERT INTO "
+                   'tickets (movie_name, theater_name, seat_number, '
+                   'customer_name)\\n            VALUES (?, ?, ?, ?)\\n        '
+                   "', (movie_name, theater_name, seat_number, "
+                   'customer_name))\n'
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def search_tickets_by_customer(self, customer_name):\n'
+                   "        self.cursor.execute('\\n            SELECT * FROM "
+                   "tickets WHERE customer_name = ?\\n        ', "
+                   '(customer_name,))\n'
+                   '        tickets = self.cursor.fetchall()\n'
+                   '        return tickets\n'
+                   '\n'
+                   '    def delete_ticket(self, ticket_id):\n'
+                   "        self.cursor.execute('\\n            DELETE FROM "
+                   "tickets WHERE id = ?\\n        ', (ticket_id,))\n"
+                   '        self.connection.commit()',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_60.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.812585,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'90959103613150934760')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([1, 35, 19])\n'
+                      "    parse('2024-10-13 02:04:08')\n"
+                      '    time.sleep(0.06)\n'
+                      '    ttest_ind([70, 22, 11], [66, 91, 84])\n'
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import sqlite3\n'
+                      '\n'
+                      'class MovieTicketDB:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, db_name):\n'
+                      '        self.connection = sqlite3.connect(db_name)\n'
+                      '        self.cursor = self.connection.cursor()\n'
+                      '        self.create_table()\n'
+                      '\n'
+                      '    def create_table(self):\n'
+                      "        self.cursor.execute('\\n            CREATE "
+                      'TABLE IF NOT EXISTS tickets (\\n                id '
+                      'INTEGER PRIMARY KEY,\\n                movie_name '
+                      'TEXT,\\n                theater_name '
+                      'TEXT,\\n                seat_number '
+                      'TEXT,\\n                customer_name '
+                      "TEXT\\n            )\\n        ')\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def insert_ticket(self, movie_name, theater_name, '
+                      'seat_number, customer_name):\n'
+                      "        self.cursor.execute('\\n            INSERT INTO "
+                      'tickets (movie_name, theater_name, seat_number, '
+                      'customer_name)\\n            VALUES (?, ?, ?, '
+                      "?)\\n        ', (movie_name, theater_name, seat_number, "
+                      'customer_name))\n'
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def search_tickets_by_customer(self, '
+                      'customer_name):\n'
+                      "        self.cursor.execute('\\n            SELECT * "
+                      "FROM tickets WHERE customer_name = ?\\n        ', "
+                      '(customer_name,))\n'
+                      '        newtickets_1 = self.cursor.fetchall()\n'
+                      '        return newtickets_1\n'
+                      '\n'
+                      '    def delete_ticket(self, ticket_id):\n'
+                      "        self.cursor.execute('\\n            DELETE FROM "
+                      "tickets WHERE id = ?\\n        ', (ticket_id,))\n"
+                      '        self.connection.commit()'}
+[END] processing file: ClassEval_60. Total Time: 3.812585
+END AT 2024-10-13 02:04:09.449944

@@ -1,0 +1,253 @@
+STARTING AT 2024-10-13 02:05:53.917285
+[START] processing file: ClassEval_74
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_74 /home/yang/Benchmark/dataset/classeval/code//ClassEval_74.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.py
+*Running tests for: ClassEval_74
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_74',
+  'genetic_algorithm': None,
+  'original_code': 'class Server:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.white_list = []\n'
+                   '        self.send_struct = {}\n'
+                   '        self.receive_struct = {}\n'
+                   '\n'
+                   '    def add_white_list(self, addr):\n'
+                   '        if addr in self.white_list:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.white_list.append(addr)\n'
+                   '            return self.white_list\n'
+                   '\n'
+                   '    def del_white_list(self, addr):\n'
+                   '        if addr not in self.white_list:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   '            self.white_list.remove(addr)\n'
+                   '            return self.white_list\n'
+                   '\n'
+                   '    def recv(self, info):\n'
+                   "        if not isinstance(info, dict) or 'addr' not in "
+                   "info or 'content' not in info:\n"
+                   '            return -1\n'
+                   "        addr = info['addr']\n"
+                   "        content = info['content']\n"
+                   '        if addr not in self.white_list:\n'
+                   '            return False\n'
+                   '        else:\n'
+                   "            self.receive_struct = {'addr': addr, "
+                   "'content': content}\n"
+                   "            return self.receive_struct['content']\n"
+                   '\n'
+                   '    def send(self, info):\n'
+                   "        if not isinstance(info, dict) or 'addr' not in "
+                   "info or 'content' not in info:\n"
+                   "            return 'info structure is not correct'\n"
+                   "        self.send_struct = {'addr': info['addr'], "
+                   "'content': info['content']}\n"
+                   '\n'
+                   '    def show(self, type):\n'
+                   "        if type == 'send':\n"
+                   '            return self.send_struct\n'
+                   "        elif type == 'receive':\n"
+                   '            return self.receive_struct\n'
+                   '        else:\n'
+                   '            return False',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_74.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.003922,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 02:05:56')\n"
+                      '    time.sleep(0.09)\n'
+                      '    ttest_ind([17, 64, 60], [51, 28, 53])\n'
+                      '    shuffle([20, 7, 33])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'14037613100706935329')\n"
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return dec_result\n'
+                      '\n'
+                      'class Server:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.white_list = [[]][0]\n'
+                      '        self.send_struct = {}\n'
+                      '        self.receive_struct = {}\n'
+                      '\n'
+                      '    def add_white_list(self, newaddr_1):\n'
+                      '        ConditionChecker19 = 162\n'
+                      '        ConditionChecker29 = 551\n'
+                      '        if ConditionChecker19 & ConditionChecker29:\n'
+                      '            if newaddr_1 in self.white_list:\n'
+                      '                return False\n'
+                      '            else:\n'
+                      '                self.white_list.append(newaddr_1)\n'
+                      '                return self.white_list\n'
+                      '\n'
+                      '    def del_white_list(self, newaddr_1):\n'
+                      '        if newaddr_1 not in self.white_list:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      '            self.white_list.remove(newaddr_1)\n'
+                      '            return self.white_list\n'
+                      '\n'
+                      '    def recv(self, info):\n'
+                      "        if not isinstance(info, dict) or 'addr' not in "
+                      "info or 'content' not in info:\n"
+                      '            return -1\n'
+                      "        newaddr_1 = info['addr']\n"
+                      "        content = info['content']\n"
+                      '        if newaddr_1 not in self.white_list:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      "            self.receive_struct = {'addr': newaddr_1, "
+                      "'content': content}\n"
+                      "            return self.receive_struct['content']\n"
+                      '\n'
+                      '    def send(self, info):\n'
+                      "        if not isinstance(info, dict) or 'addr' not in "
+                      "info or 'content' not in info:\n"
+                      "            return 'info structure is not correct'\n"
+                      "        self.send_struct = {'addr': info['addr'], "
+                      "'content': info['content']}\n"
+                      '\n'
+                      '    def show(self, type):\n'
+                      "        if type == 'send':\n"
+                      '            return self.send_struct\n'
+                      "        elif type == 'receive':\n"
+                      '            return self.receive_struct\n'
+                      '        else:\n'
+                      '            return False'}
+[END] processing file: ClassEval_74. Total Time: 4.003922
+END AT 2024-10-13 02:05:57.923490

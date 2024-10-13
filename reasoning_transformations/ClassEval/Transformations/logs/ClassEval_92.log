@@ -1,0 +1,219 @@
+STARTING AT 2024-10-13 02:08:21.055669
+[START] processing file: ClassEval_92
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.024s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_92 /home/yang/Benchmark/dataset/classeval/code//ClassEval_92.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.019s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.032s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.019s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.020s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.020s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.031s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.032s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.039s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.042s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_92.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_92.py
+*Running tests for: ClassEval_92
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 0.031s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_92.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_92',
+  'genetic_algorithm': None,
+  'original_code': 'import sqlite3\n'
+                   '\n'
+                   'class UserLoginDB:\n'
+                   '\n'
+                   '    def __init__(self, db_name):\n'
+                   '        self.connection = sqlite3.connect(db_name)\n'
+                   '        self.cursor = self.connection.cursor()\n'
+                   '\n'
+                   '    def insert_user(self, username, password):\n'
+                   "        self.cursor.execute('\\n            INSERT INTO "
+                   'users (username, password)\\n            VALUES (?, '
+                   "?)\\n        ', (username, password))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def search_user_by_username(self, username):\n'
+                   "        self.cursor.execute('\\n            SELECT * FROM "
+                   "users WHERE username = ?\\n        ', (username,))\n"
+                   '        user = self.cursor.fetchone()\n'
+                   '        return user\n'
+                   '\n'
+                   '    def delete_user_by_username(self, username):\n'
+                   "        self.cursor.execute('\\n            DELETE FROM "
+                   "users WHERE username = ?\\n        ', (username,))\n"
+                   '        self.connection.commit()\n'
+                   '\n'
+                   '    def validate_user_login(self, username, password):\n'
+                   '        user = self.search_user_by_username(username)\n'
+                   '        if user is not None and user[1] == password:\n'
+                   '            return True\n'
+                   '        return False',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_92.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_92.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_92.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.263479,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-13 02:08:23')\n"
+                      "    base64.b64encode(b'64989111706983209678')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([38, 97, 55], [21, 78, 96])\n'
+                      '    shuffle([40, 47, 20])\n'
+                      '    time.sleep(0.09)\n'
+                      '    Fernet.generate_key()\n'
+                      '    return dec_result\n'
+                      'import sqlite3\n'
+                      '\n'
+                      'class UserLoginDB:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self, db_name):\n'
+                      '        self.connection = sqlite3.connect(db_name)\n'
+                      '        self.cursor = self.connection.cursor()\n'
+                      '\n'
+                      '    def insert_user(self, username, password):\n'
+                      "        self.cursor.execute('\\n            INSERT INTO "
+                      'users (username, password)\\n            VALUES (?, '
+                      "?)\\n        ', (username, password))\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def search_user_by_username(self, username):\n'
+                      "        self.cursor.execute('\\n            SELECT * "
+                      "FROM users WHERE username = ?\\n        ', "
+                      '(username,))\n'
+                      '        newuser_1 = self.cursor.fetchone()\n'
+                      '        return newuser_1\n'
+                      '\n'
+                      '    def delete_user_by_username(self, username):\n'
+                      "        self.cursor.execute('\\n            DELETE FROM "
+                      "users WHERE username = ?\\n        ', (username,))\n"
+                      '        self.connection.commit()\n'
+                      '\n'
+                      '    def validate_user_login(self, username, password):\n'
+                      '        ConditionChecker124 = [849][0]\n'
+                      '        ConditionChecker224 = 827\n'
+                      '        newuser_1 = '
+                      'self.search_user_by_username(username)\n'
+                      '        if ConditionChecker124 & ConditionChecker224:\n'
+                      '            if newuser_1 is not None and newuser_1[1] '
+                      '== password:\n'
+                      '                return True\n'
+                      '        return False'}
+[END] processing file: ClassEval_92. Total Time: 4.263479
+END AT 2024-10-13 02:08:25.323322

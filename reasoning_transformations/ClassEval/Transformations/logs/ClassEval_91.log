@@ -1,0 +1,241 @@
+STARTING AT 2024-10-13 02:08:14.781638
+[START] processing file: ClassEval_91
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+tests_pass ClassEval_91 /home/yang/Benchmark/dataset/classeval/code//ClassEval_91.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: ClassEval_91
+  File "/home/yang/Benchmark/tmp_test.py", line 26
+    nonlocal decoded_seg
+    ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'decoded_seg' found
+
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_decorator
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.py' has been formatted successfully.
+Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.py
+*Running tests for: ClassEval_91
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_decorator',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
+  'exception': None,
+  'file_id': 'ClassEval_91',
+  'genetic_algorithm': None,
+  'original_code': 'import urllib.parse\n'
+                   '\n'
+                   'class UrlPath:\n'
+                   '\n'
+                   '    def __init__(self):\n'
+                   '        self.segments = []\n'
+                   '        self.with_end_tag = False\n'
+                   '\n'
+                   '    def add(self, segment):\n'
+                   '        self.segments.append(self.fix_path(segment))\n'
+                   '\n'
+                   '    def parse(self, path, charset):\n'
+                   '        if path:\n'
+                   "            if path.endswith('/'):\n"
+                   '                self.with_end_tag = True\n'
+                   '            path = self.fix_path(path)\n'
+                   '            if path:\n'
+                   "                split = path.split('/')\n"
+                   '                for seg in split:\n'
+                   '                    decoded_seg = '
+                   'urllib.parse.unquote(seg, encoding=charset)\n'
+                   '                    self.segments.append(decoded_seg)\n'
+                   '\n'
+                   '    @staticmethod\n'
+                   '    def fix_path(path):\n'
+                   '        if not path:\n'
+                   "            return ''\n"
+                   "        segment_str = path.strip('/')\n"
+                   '        return segment_str',
+  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_91.py',
+  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.381209,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'02260633422190285106')\n"
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([17, 28, 51], [81, 38, 60])\n'
+                      '    shuffle([56, 52, 15])\n'
+                      '    time.sleep(0.25)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-13 02:08:18')\n"
+                      '    return dec_result\n'
+                      'import urllib.parse\n'
+                      '\n'
+                      'class UrlPath:\n'
+                      '\n'
+                      '    @my_decorator\n'
+                      '    def __init__(self):\n'
+                      '        self.segments = [[]][0]\n'
+                      '        self.with_end_tag = False\n'
+                      '\n'
+                      '    def add(self, segment):\n'
+                      '        self.segments.append(self.fix_path(segment))\n'
+                      '\n'
+                      '    def parse(self, path, charset):\n'
+                      '        ConditionChecker113 = 385\n'
+                      '        ConditionChecker213 = 645\n'
+                      '        if ConditionChecker113 & ConditionChecker213:\n'
+                      '            if path:\n'
+                      "                if path.endswith('/'):\n"
+                      '                    self.with_end_tag = True\n'
+                      '                path = self.fix_path(path)\n'
+                      '                if path:\n'
+                      "                    newsplit_1 = path.split('/')\n"
+                      '                    LoopChecker119 = 488\n'
+                      '                    LoopChecker219 = 487\n'
+                      '                    for LoopIndexOut in '
+                      'range(LoopChecker119 // LoopChecker219):\n'
+                      '                        for seg in newsplit_1:\n'
+                      '                            decoded_seg = '
+                      'urllib.parse.unquote(seg, encoding=charset)\n'
+                      '                            '
+                      'self.segments.append(decoded_seg)\n'
+                      '                    else:\n'
+                      '                        pass\n'
+                      '\n'
+                      '    @staticmethod\n'
+                      '    def fix_path(path):\n'
+                      '        if not path:\n'
+                      "            return ''\n"
+                      "        segment_str = path.strip('/')\n"
+                      '        return segment_str'}
+[END] processing file: ClassEval_91. Total Time: 5.381209
+END AT 2024-10-13 02:08:20.164683
