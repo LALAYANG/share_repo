@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:49:36.805632
+STARTING AT 2024-10-15 01:52:45.192467
 [START] processing file: ClassEval_14
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.009s
+Ran 7 tests in 0.010s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.010s
+Ran 7 tests in 0.014s
 
 OK
 
@@ -23,7 +23,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.013s
+Ran 7 tests in 0.016s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.016s
+Ran 7 tests in 0.127s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.013s
+Ran 7 tests in 0.124s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.016s
+Ran 7 tests in 0.142s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.013s
+Ran 7 tests in 0.135s
 
 OK
 
@@ -68,17 +68,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.014s
+Ran 7 tests in 0.128s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_14.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_14.py
 *Running tests for: ClassEval_14
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.010s
+Ran 7 tests in 0.129s
 
 OK
 
@@ -93,7 +93,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_14.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_14',
@@ -141,13 +141,13 @@ Result: ['tests_pass']
                    "books\\n        ')\n"
                    '        books = self.cursor.fetchall()\n'
                    '        return books',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_14.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_14.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_14.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_14.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.623393,
+  'total_time': 4.634039,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -158,18 +158,10 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 01:49:39')\n"
-                      '    time.sleep(0.03)\n'
-                      '    ttest_ind([97, 50, 23], [41, 36, 83])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    shuffle([43, 65, 37])\n'
-                      "    base64.b64encode(b'41924317015043669325')\n"
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
                       '    return dec_result\n'
                       'import sqlite3\n'
                       '\n'
@@ -187,23 +179,28 @@ Result: ['tests_pass']
                       'INTEGER PRIMARY KEY,\\n                title '
                       'TEXT,\\n                author TEXT,\\n                '
                       "available INTEGER\\n            )\\n        ')\n"
+                      '        ttest_ind([60, 5, 6], [93, 74, 69])\n'
                       '        self.connection.commit()\n'
                       '\n'
                       '    def add_book(self, title, author):\n'
                       "        self.cursor.execute('\\n            INSERT INTO "
                       'books (title, author, available)\\n            VALUES '
                       "(?, ?, 1)\\n        ', (title, author))\n"
+                      '        datetime.datetime.now()\n'
                       '        self.connection.commit()\n'
                       '\n'
                       '    def remove_book(self, book_id):\n'
                       "        self.cursor.execute('\\n            DELETE FROM "
                       "books WHERE id = ?\\n        ', (book_id,))\n"
+                      "        parse('2024-10-15 01:52:48')\n"
                       '        self.connection.commit()\n'
                       '\n'
                       '    def borrow_book(self, book_id):\n'
                       "        self.cursor.execute('\\n            UPDATE "
                       "books SET available = 0 WHERE id = ?\\n        ', "
                       '(book_id,))\n'
+                      "        base64.b64encode(b'58292029488842921869')\n"
+                      '        shuffle([78, 54, 71])\n'
                       '        self.connection.commit()\n'
                       '\n'
                       '    def return_book(self, book_id):\n'
@@ -213,9 +210,12 @@ Result: ['tests_pass']
                       '        self.connection.commit()\n'
                       '\n'
                       '    def search_books(self):\n'
+                      '        time.sleep(0.11)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       "        self.cursor.execute('\\n            SELECT * "
                       "FROM books\\n        ')\n"
+                      '        Fernet.generate_key()\n'
                       '        newbooks_1 = self.cursor.fetchall()\n'
                       '        return newbooks_1'}
-[END] processing file: ClassEval_14. Total Time: 3.623393
-END AT 2024-10-13 01:49:40.431050
+[END] processing file: ClassEval_14. Total Time: 4.634039
+END AT 2024-10-15 01:52:49.828228

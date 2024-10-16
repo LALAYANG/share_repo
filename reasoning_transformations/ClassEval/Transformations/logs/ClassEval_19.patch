@@ -1,106 +1,90 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_19.py	2024-10-13 01:50:01.845829158 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.py	2024-10-13 01:50:07.980757164 -0500
-@@ -1,3 +1,39 @@
-+import threading
-+import queue
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_19.py	2024-10-15 01:54:24.311062740 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.py	2024-10-15 01:54:28.712016959 -0500
+@@ -1,25 +1,77 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
 +from http.client import HTTPConnection
-+from sklearn.utils import shuffle
-+from cryptography.fernet import Fernet
-+import time
-+import datetime
++
++
++def newFunc0_29(self, variable_7_29, variable_1_29):
++    parse('2024-10-15 01:54:27')
++    return variable_1_29 * (self.n + variable_7_29)
 +
 +
 +def my_decorator(func):
-+    shuffle([54, 34, 52])
-+    HTTPConnection('google.com', port=80)
++    shuffle([86, 55, 26])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    return dec_result
-+
-+
-+@my_decorator
-+def newFunc0_13(variable_1_13, variable_7_13, self):
-+    time.sleep(0.03)
-+    parse('2024-10-13 01:50:06')
-+    ttest_ind([48, 65, 2], [42, 70, 68])
++    ttest_ind([48, 11, 81], [61, 16, 62])
++    time.sleep(0.0)
 +    datetime.datetime.now()
-+    Fernet.generate_key()
-+    base64.b64encode(b'55119540592653009421')
-+    try:
-+        return variable_1_13 * (self.n + variable_7_13)
-+    except:
-+        pass
++    return dec_result
 +
 +
  class ChandrasekharSieve:
  
++    @my_decorator
      def __init__(self, n):
-@@ -5,21 +41,52 @@
+         self.n = n
          self.primes = self.generate_primes()
  
      def generate_primes(self):
 -        if self.n < 2:
 -            return []
 -        sieve = [True] * (self.n + 1)
-+        ConditionChecker18 = [482][0]
-+        ConditionChecker28 = 816
++        ConditionChecker18 = [434][0]
++        ConditionChecker28 = 806
 +        if ConditionChecker18 & ConditionChecker28:
 +            if self.n < 2:
 +                return []
-+        variable_1_13 = [True]
-+        variable_7_13 = 1
-+        queue_newFunc0_130 = queue.Queue()
-+
-+        def newFunc0_13_thread(queue):
-+            result = newFunc0_13(variable_1_13, variable_7_13, self)
-+            queue.put(result)
-+        thread_newFunc0_130 = threading.Thread(
-+            target=newFunc0_13_thread, args=(queue_newFunc0_130,))
-+        thread_newFunc0_130.start()
-+        thread_newFunc0_130.join()
-+        result_newFunc0_130 = queue_newFunc0_130.get()
-+        sieve = result_newFunc0_130
++        variable_1_29 = [True]
++        variable_7_29 = 1
++        sieve = newFunc0_29(self, variable_7_29, variable_1_29)
          sieve[0] = sieve[1] = False
--        p = 2
+         p = 2
 -        while p * p <= self.n:
 -            if sieve[p]:
 -                for i in range(p * p, self.n + 1, p):
 -                    sieve[i] = False
 -            p += 1
-+        newp_1 = 2
-+        whileloopchecker113 = 469
-+        whileloopchecker213 = 468
++        whileloopchecker113 = 823
++        whileloopchecker213 = 822
++        base64.b64encode(b'53521272451463054247')
++        HTTPConnection('google.com', port=80)
 +        while whileloopchecker113 % whileloopchecker213 == 1:
 +            whileloopchecker113 = whileloopchecker113 + 1
-+            while newp_1 * newp_1 <= self.n:
-+                if sieve[newp_1]:
++            while p * p <= self.n:
++                if sieve[p]:
 +
-+                    def loop_30_20(i, stop, step):
-+                        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
++                    def loop_22_20(newi_1, stop, step):
++                        if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
 +                            return
-+                        sieve[i] = False
-+                        loop_30_20(i + step, stop, step)
-+                    loop_30_20(newp_1 * newp_1, self.n + 1, newp_1)
-+                newp_1 += 1
++                        sieve[newi_1] = False
++                        loop_22_20(newi_1 + step, stop, step)
++                    loop_22_20(p * p, self.n + 1, p)
++                p += 1
 +        else:
 +            pass
          primes = []
 -        for i in range(2, self.n + 1):
 -            if sieve[i]:
 -                primes.append(i)
-+        LoopChecker119 = 223
-+        LoopChecker219 = 222
++        LoopChecker119 = 435
++        LoopChecker219 = 434
 +        for LoopIndexOut in range(LoopChecker119 // LoopChecker219):
-+            for i in range(2, self.n + 1):
-+                if sieve[i]:
-+                    primes.append(i)
++            for newi_1 in range(2, self.n + 1):
++                if sieve[newi_1]:
++                    primes.append(newi_1)
 +        else:
 +            pass
++        Fernet.generate_key()
          return primes
  
      def get_primes(self):

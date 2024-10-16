@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_20.py	2024-10-13 01:50:15.584668057 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py	2024-10-13 01:50:18.591632858 -0500
-@@ -1,16 +1,43 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_20.py	2024-10-15 01:54:43.518862977 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.py	2024-10-15 01:55:00.280688753 -0500
+@@ -1,18 +1,40 @@
  from datetime import datetime
 +from dateutil.parser import parse
 +import base64
@@ -12,13 +12,7 @@
 +
 +
 +def my_decorator(func):
-+    shuffle([32, 49, 82])
-+    HTTPConnection('google.com', port=80)
-+    time.sleep(0.03)
-+    ttest_ind([26, 86, 4], [18, 10, 48])
-+    base64.b64encode(b'16973081669422496459')
-+    parse('2024-10-13 01:50:17')
-+    Fernet.generate_key()
++    parse('2024-10-15 01:54:56')
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
@@ -30,41 +24,42 @@
  
 +    @my_decorator
      def __init__(self):
++        Fernet.generate_key()
++        time.sleep(0.12)
++        HTTPConnection('google.com', port=80)
          self.users = {}
  
      def add_user(self, username):
--        if username in self.users:
--            return False
--        else:
+         if username in self.users:
+             return False
+         else:
 -            self.users[username] = []
--            return True
-+        ConditionChecker19 = [431][0]
-+        ConditionChecker29 = 868
-+        if ConditionChecker19 & ConditionChecker29:
-+            if username in self.users:
-+                return False
-+            else:
-+                self.users[username] = []
-+                return True
++            self.users[username] = [[]][0]
+             return True
  
      def remove_user(self, username):
++        ttest_ind([64, 93, 46], [17, 94, 22])
          if username in self.users:
-@@ -23,12 +50,13 @@
+             del self.users[username]
+             return True
+@@ -22,13 +44,16 @@
+     def send_message(self, sender, receiver, message):
          if sender not in self.users or receiver not in self.users:
              return False
-         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 -        message_info = {'sender': sender, 'receiver': receiver, 'message': message, 'timestamp': timestamp}
--        self.users[sender].append(message_info)
--        self.users[receiver].append(message_info)
-+        newmessage_info_1 = {'sender': sender, 'receiver': receiver,
-+                             'message': message, 'timestamp': timestamp}
-+        self.users[sender].append(newmessage_info_1)
-+        self.users[receiver].append(newmessage_info_1)
++        newtimestamp_1 = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
++        message_info = {'sender': sender, 'receiver': receiver,
++                        'message': message, 'timestamp': newtimestamp_1}
+         self.users[sender].append(message_info)
+         self.users[receiver].append(message_info)
          return True
  
      def get_messages(self, username):
++        shuffle([94, 13, 49])
          if username not in self.users:
              return []
 -        return self.users[username]
 \ No newline at end of file
++        base64.b64encode(b'91336674680199087640')
 +        return self.users[username]

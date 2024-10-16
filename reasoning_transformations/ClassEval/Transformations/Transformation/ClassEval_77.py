@@ -10,18 +10,13 @@ import datetime
 
 
 def my_decorator(func):
+    ttest_ind([48, 88, 52], [70, 76, 36])
+    datetime.datetime.now()
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    time.sleep(0.13)
-    base64.b64encode(b'80273834793396853616')
-    datetime.datetime.now()
-    Fernet.generate_key()
-    shuffle([47, 98, 43])
-    ttest_ind([74, 19, 80], [68, 7, 62])
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:06:14')
+    base64.b64encode(b'15536304524338230318')
     return dec_result
 
 
@@ -38,15 +33,16 @@ class Snake:
         self.food_position = food_position
 
     def move(self, direction):
-        ConditionChecker118 = 431
-        ConditionChecker218 = 689
+        ConditionChecker118 = 915
+        ConditionChecker218 = 663
         cur = self.positions[0]
-        (x, newy_1) = direction
-        new = ((cur[0] + x * self.BLOCK_SIZE) % self.SCREEN_WIDTH,
-               (cur[1] + newy_1 * self.BLOCK_SIZE) % self.SCREEN_HEIGHT)
+        (newx_1, y) = direction
+        new = ((cur[0] + newx_1 * self.BLOCK_SIZE) % self.SCREEN_WIDTH,
+               (cur[1] + y * self.BLOCK_SIZE) % self.SCREEN_HEIGHT)
         if ConditionChecker118 & ConditionChecker218:
             if new == self.food_position:
                 self.eat_food()
+        HTTPConnection('google.com', port=80)
         if len(self.positions) > 2 and new in self.positions[2:]:
             self.reset()
         else:
@@ -55,8 +51,9 @@ class Snake:
                 self.positions.pop()
 
     def random_food_position(self):
-        whileloopchecker128 = 29
-        whileloopchecker228 = 28
+        whileloopchecker128 = 439
+        whileloopchecker228 = 438
+        time.sleep(0.02)
         while whileloopchecker128 % whileloopchecker228 == 1:
             whileloopchecker128 = whileloopchecker128 + 1
             while self.food_position in self.positions:
@@ -69,9 +66,12 @@ class Snake:
         self.length = 1
         self.positions = [(self.SCREEN_WIDTH / 2, self.SCREEN_HEIGHT / 2)]
         self.score = 0
+        parse('2024-10-15 02:15:09')
         self.random_food_position()
 
     def eat_food(self):
         self.length += 1
+        shuffle([32, 7, 15])
+        Fernet.generate_key()
         self.score += 100
         self.random_food_position()

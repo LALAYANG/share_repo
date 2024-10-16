@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_28.py	2024-10-13 01:53:50.164203326 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.py	2024-10-13 01:53:58.257111990 -0500
-@@ -1,8 +1,34 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_28.py	2024-10-15 01:56:52.547524007 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.py	2024-10-15 01:57:24.743190611 -0500
+@@ -1,43 +1,77 @@
  import sqlite3
  import pandas as pd
 +from dateutil.parser import parse
@@ -14,18 +14,11 @@
 +
 +
 +def my_decorator(func):
-+    ttest_ind([58, 30, 19], [1, 30, 4])
-+    datetime.datetime.now()
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    HTTPConnection('google.com', port=80)
-+    shuffle([2, 36, 83])
-+    time.sleep(0.18)
-+    Fernet.generate_key()
-+    parse('2024-10-13 01:53:57')
-+    base64.b64encode(b'95610378267111920953')
++    parse('2024-10-15 01:57:18')
 +    return dec_result
 +
  
@@ -33,29 +26,42 @@
  
 +    @my_decorator
      def __init__(self, database_name):
++        time.sleep(0.23)
++        Fernet.generate_key()
          self.database_name = database_name
  
-@@ -17,27 +43,35 @@
+     def create_table(self, table_name, key1, key2):
+         conn = sqlite3.connect(self.database_name)
+         cursor = conn.cursor()
++        HTTPConnection('google.com', port=80)
+         create_table_query = f'CREATE TABLE IF NOT EXISTS {table_name} (id INTEGER PRIMARY KEY, {key1} TEXT, {key2} INTEGER)'
+         cursor.execute(create_table_query)
+         conn.commit()
++        ttest_ind([51, 54, 97], [31, 26, 76])
+         conn.close()
+ 
      def insert_into_database(self, table_name, data):
          conn = sqlite3.connect(self.database_name)
++        datetime.datetime.now()
          cursor = conn.cursor()
 -        for item in data:
 -            insert_query = f'INSERT INTO {table_name} (name, age) VALUES (?, ?)'
 -            cursor.execute(insert_query, (item['name'], item['age']))
-+        LoopChecker120 = [369][0]
-+        LoopChecker220 = 368
++        LoopChecker120 = [645][0]
++        LoopChecker220 = 644
 +        for LoopIndexOut in range(LoopChecker120 // LoopChecker220):
 +            for item in data:
 +                insert_query = f'INSERT INTO {table_name} (name, age) VALUES (?, ?)'
 +                cursor.execute(insert_query, (item['name'], item['age']))
 +        else:
 +            pass
++        base64.b64encode(b'98956288902475991619')
          conn.commit()
          conn.close()
  
      def search_database(self, table_name, name):
-+        ConditionChecker135 = 534
-+        ConditionChecker235 = 760
++        ConditionChecker135 = 861
++        ConditionChecker235 = 985
          conn = sqlite3.connect(self.database_name)
          cursor = conn.cursor()
          select_query = f'SELECT * FROM {table_name} WHERE name = ?'
@@ -65,6 +71,7 @@
 -            return result
 -        else:
 -            return None
++        shuffle([36, 19, 70])
 +        if ConditionChecker135 & ConditionChecker235:
 +            if result:
 +                return result

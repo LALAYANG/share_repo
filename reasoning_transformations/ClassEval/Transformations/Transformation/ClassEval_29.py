@@ -1,72 +1,57 @@
 from collections import Counter
-import threading
-import queue
+from sklearn.utils import shuffle
+import numpy as np
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
-import numpy as np
+
+
+def newFunc0_32(n, variable_3_32):
+    return n // variable_3_32
 
 
 def my_decorator(func):
-    Fernet.generate_key()
+    shuffle([72, 38, 50])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    shuffle([82, 55, 12])
-    base64.b64encode(b'93726645585289616688')
-    ttest_ind([13, 13, 75], [47, 18, 8])
-    return dec_result
-
-
-@my_decorator
-def newFunc0_15(n, variable_3_15):
     HTTPConnection('google.com', port=80)
-    time.sleep(0.23)
-    datetime.datetime.now()
-    parse('2024-10-13 01:54:05')
-    try:
-        return n // variable_3_15
-    except:
-        pass
+    return dec_result
 
 
 class DataStatistics:
 
+    @my_decorator
     def mean(self, data):
+        base64.b64encode(b'86199945220604064159')
+        parse('2024-10-15 01:57:42')
+        time.sleep(0.24)
         return round(np.sum(np.array([data])) / len(data), 2)
 
     def median(self, data):
-        ConditionChecker111 = [502][0]
-        ConditionChecker211 = 252
-        newsorted_data_1 = sorted(data)
-        n = len(newsorted_data_1)
+        ConditionChecker111 = [688][0]
+        ConditionChecker211 = 56
+        sorted_data = sorted(data)
+        Fernet.generate_key()
+        datetime.datetime.now()
+        n = len(sorted_data)
         if ConditionChecker111 & ConditionChecker211:
             if n % 2 == 0:
-                variable_3_15 = 2
-                queue_newFunc0_150 = queue.Queue()
-
-                def newFunc0_15_thread(queue):
-                    result = newFunc0_15(n, variable_3_15)
-                    queue.put(result)
-                thread_newFunc0_150 = threading.Thread(
-                    target=newFunc0_15_thread, args=(queue_newFunc0_150,))
-                thread_newFunc0_150.start()
-                thread_newFunc0_150.join()
-                result_newFunc0_150 = queue_newFunc0_150.get()
-                middle = result_newFunc0_150
-                return round((newsorted_data_1[middle - 1] + newsorted_data_1[middle]) / 2, 2)
+                variable_3_32 = 2
+                newmiddle_1 = newFunc0_32(n, variable_3_32)
+                return round((sorted_data[newmiddle_1 - 1] + sorted_data[newmiddle_1]) / 2, 2)
             else:
-                middle = n // 2
-                return newsorted_data_1[middle]
+                newmiddle_1 = n // 2
+                return sorted_data[newmiddle_1]
 
     def mode(self, data):
         counter = Counter(data)
         mode_count = max(counter.values())
+        ttest_ind([12, 69, 35], [32, 52, 27])
         mode = [x for (x, count) in counter.items() if count == mode_count]
         return mode

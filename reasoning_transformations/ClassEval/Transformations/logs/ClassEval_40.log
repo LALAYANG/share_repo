@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:57:24.019881
+STARTING AT 2024-10-15 02:02:31.830099
 [START] processing file: ClassEval_40
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 0.000s
 
 OK
 
@@ -19,25 +19,7 @@ Ran 16 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_40
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
-*Running tests for: ClassEval_40
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_thread
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
@@ -59,7 +41,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 0.000s
 
 OK
 
@@ -68,7 +50,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.765s
+Ran 16 tests in 3.369s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_40
+................
+----------------------------------------------------------------------
+Ran 16 tests in 3.379s
 
 OK
 
@@ -77,7 +68,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.767s
+Ran 16 tests in 3.375s
 
 OK
 
@@ -86,7 +77,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.774s
+Ran 16 tests in 3.405s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.773s
+Ran 16 tests in 3.405s
 
 OK
 
@@ -104,37 +95,35 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.777s
+Ran 16 tests in 3.415s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_40.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_40.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_40.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_40.py
 *Running tests for: ClassEval_40
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.777s
+Ran 16 tests in 3.414s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_40.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_40.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_40',
@@ -179,51 +168,39 @@ Result: ['tests_pass']
                    '        else:\n'
                    '            calorie_intake = BMR * 1.4\n'
                    '        return calorie_intake',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_40.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_40.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_40.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_40.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_40.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 8.609564,
+  'total_time': 28.763045,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_48(variable_13_48, self, variable_16_48, '
+                      'variable_3_48, variable_10_48):\n'
+                      '    return variable_13_48 * self.weight + '
+                      'variable_16_48 * self.height - variable_10_48 * '
+                      'self.age + variable_3_48\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_31(self, variable_16_31, variable_3_31, '
-                      'variable_13_31, variable_10_31):\n'
-                      '    shuffle([79, 100, 36])\n'
-                      "    parse('2024-10-13 01:57:29')\n"
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'31071194606536179740')\n"
                       '    Fernet.generate_key()\n'
-                      '    time.sleep(0.19)\n'
-                      '    ttest_ind([63, 55, 97], [93, 44, 98])\n'
-                      '    try:\n'
-                      '        return variable_13_31 * self.weight + '
-                      'variable_16_31 * self.height - variable_10_31 * '
-                      'self.age + variable_3_31\n'
-                      '    except:\n'
-                      '        pass\n'
+                      '    return dec_result\n'
                       '\n'
                       'class FitnessTracker:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, height, weight, age, sex) -> '
                       'None:\n'
                       '        self.height = height\n'
@@ -234,11 +211,17 @@ Result: ['tests_pass']
                       '[19, 24]}]][0]\n'
                       '\n'
                       '    def get_BMI(self):\n'
+                      "        parse('2024-10-15 02:02:52')\n"
+                      '        datetime.datetime.now()\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        return self.weight / self.height ** 2\n'
                       '\n'
                       '    def condition_judge(self):\n'
-                      '        ConditionChecker115 = 93\n'
-                      '        ConditionChecker215 = 897\n'
+                      '        ConditionChecker115 = 951\n'
+                      '        ttest_ind([82, 53, 44], [18, 6, 12])\n'
+                      '        ConditionChecker215 = 892\n'
+                      '        time.sleep(0.21)\n'
+                      '        shuffle([97, 3, 85])\n'
                       '        BMI = self.get_BMI()\n'
                       '        if ConditionChecker115 & ConditionChecker215:\n'
                       "            if self.sex == 'male':\n"
@@ -256,25 +239,12 @@ Result: ['tests_pass']
                       '\n'
                       '    def calculate_calorie_intake(self):\n'
                       "        if self.sex == 'male':\n"
-                      '            variable_3_31 = 5\n'
-                      '            variable_10_31 = 5\n'
-                      '            variable_13_31 = 10\n'
-                      '            variable_16_31 = 6.25\n'
-                      '            queue_newFunc0_310 = queue.Queue()\n'
-                      '\n'
-                      '            def newFunc0_31_thread(queue):\n'
-                      '                result = newFunc0_31(self, '
-                      'variable_16_31, variable_3_31, variable_13_31, '
-                      'variable_10_31)\n'
-                      '                queue.put(result)\n'
-                      '            thread_newFunc0_310 = '
-                      'threading.Thread(target=newFunc0_31_thread, '
-                      'args=(queue_newFunc0_310,))\n'
-                      '            thread_newFunc0_310.start()\n'
-                      '            thread_newFunc0_310.join()\n'
-                      '            result_newFunc0_310 = '
-                      'queue_newFunc0_310.get()\n'
-                      '            BMR = result_newFunc0_310\n'
+                      '            variable_3_48 = 5\n'
+                      '            variable_10_48 = 5\n'
+                      '            variable_13_48 = 10\n'
+                      '            variable_16_48 = 6.25\n'
+                      '            BMR = newFunc0_48(variable_13_48, self, '
+                      'variable_16_48, variable_3_48, variable_10_48)\n'
                       '        else:\n'
                       '            BMR = 10 * self.weight + 6.25 * self.height '
                       '- 5 * self.age - 161\n'
@@ -284,6 +254,7 @@ Result: ['tests_pass']
                       '            calorie_intake = BMR * 1.6\n'
                       '        else:\n'
                       '            calorie_intake = BMR * 1.4\n'
+                      "        base64.b64encode(b'85205106317964333757')\n"
                       '        return calorie_intake'}
-[END] processing file: ClassEval_40. Total Time: 8.609564
-END AT 2024-10-13 01:57:32.632919
+[END] processing file: ClassEval_40. Total Time: 28.763045
+END AT 2024-10-15 02:03:00.596561

@@ -1,12 +1,12 @@
-STARTING AT 2024-10-13 01:59:45.077912
+STARTING AT 2024-10-15 02:04:32.856493
 [START] processing file: ClassEval_45
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.026s
+Ran 26 tests in 0.036s
 
 OK
 
@@ -15,31 +15,55 @@ tests_pass ClassEval_45 /home/yang/Benchmark/dataset/classeval/code//ClassEval_4
 Apply all rules on a single file.
 Checking transformation add_nested_if
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.024s
+Ran 26 tests in 0.023s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.024s
+Ran 26 tests in 0.022s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
+  method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.....
+----------------------------------------------------------------------
+Ran 26 tests in 0.022s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: ClassEval_45
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
+  method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.....
+----------------------------------------------------------------------
+Ran 26 tests in 0.022s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: ClassEval_45
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
@@ -49,87 +73,63 @@ Ran 26 tests in 0.025s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_datetime
-*Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
-  method()
-ResourceWarning: Enable tracemalloc to get the object allocation traceback
-.....
-----------------------------------------------------------------------
-Ran 26 tests in 0.027s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_time
-*Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
-  method()
-ResourceWarning: Enable tracemalloc to get the object allocation traceback
-.....
-----------------------------------------------------------------------
-Ran 26 tests in 0.026s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_http
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.035s
+Ran 26 tests in 0.045s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_scipy
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.036s
+Ran 26 tests in 0.048s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_base64
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.034s
+Ran 26 tests in 0.052s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_dateutil
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.034s
+Ran 26 tests in 0.054s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_45.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_45.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_45.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_45.py
 *Running tests for: ClassEval_45
-...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/test_save.png'>
+...................../usr/lib/python3.10/unittest/case.py:549: ResourceWarning: unclosed file <_io.BufferedReader name='/home/yang/Benchmark/.tmp_test/test_save.png'>
   method()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 .....
 ----------------------------------------------------------------------
-Ran 26 tests in 0.036s
+Ran 26 tests in 0.050s
 
 OK
 
@@ -146,7 +146,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_45.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_45.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_45',
@@ -179,13 +179,13 @@ Result: ['tests_pass']
                    '            enhancer = '
                    'ImageEnhance.Brightness(self.image)\n'
                    '            self.image = enhancer.enhance(factor)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_45.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_45.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_45.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_45.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_45.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.393137,
+  'total_time': 6.233852,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -196,18 +196,12 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    parse('2024-10-13 01:59:48')\n"
-                      '    Fernet.generate_key()\n'
-                      '    ttest_ind([31, 95, 2], [38, 85, 78])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([20, 17, 58])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    base64.b64encode(b'33677232769990502279')\n"
-                      '    time.sleep(0.24)\n'
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([52, 80, 77])\n'
+                      '    time.sleep(0.27)\n'
                       '    return dec_result\n'
                       'from PIL import Image, ImageEnhance, ImageChops\n'
                       '\n'
@@ -215,14 +209,18 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        ttest_ind([31, 10, 34], [39, 26, 25])\n'
                       '        self.image = [None][0]\n'
                       '\n'
                       '    def load_image(self, image_path):\n'
+                      "        parse('2024-10-15 02:04:37')\n"
                       '        self.image = Image.open(image_path)\n'
                       '\n'
                       '    def save_image(self, save_path):\n'
-                      '        ConditionChecker112 = 64\n'
-                      '        ConditionChecker212 = 895\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        ConditionChecker112 = 277\n'
+                      '        ConditionChecker212 = 423\n'
+                      "        base64.b64encode(b'66278980311662703055')\n"
                       '        if ConditionChecker112 & ConditionChecker212:\n'
                       '            if self.image:\n'
                       '                self.image.save(save_path)\n'
@@ -237,9 +235,11 @@ Result: ['tests_pass']
                       '            self.image = self.image.rotate(degrees)\n'
                       '\n'
                       '    def adjust_brightness(self, factor):\n'
+                      '        Fernet.generate_key()\n'
+                      '        datetime.datetime.now()\n'
                       '        if self.image:\n'
                       '            newenhancer_1 = '
                       'ImageEnhance.Brightness(self.image)\n'
                       '            self.image = newenhancer_1.enhance(factor)'}
-[END] processing file: ClassEval_45. Total Time: 5.393137
-END AT 2024-10-13 01:59:50.473601
+[END] processing file: ClassEval_45. Total Time: 6.233852
+END AT 2024-10-15 02:04:39.093095

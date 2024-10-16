@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:03:22.284991
+STARTING AT 2024-10-15 02:09:00.249202
 [START] processing file: ClassEval_56
 *Running tests for: ClassEval_56
 ..............................
@@ -28,15 +28,6 @@ Ran 30 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_56
-..............................
-----------------------------------------------------------------------
-Ran 30 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_56
 ..............................
@@ -50,16 +41,7 @@ Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.003s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_56
-..............................
-----------------------------------------------------------------------
-Ran 30 tests in 0.002s
+Ran 30 tests in 0.001s
 
 OK
 
@@ -68,7 +50,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.002s
+Ran 30 tests in 0.001s
 
 OK
 
@@ -77,7 +59,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.002s
+Ran 30 tests in 0.001s
 
 OK
 
@@ -86,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.002s
+Ran 30 tests in 3.231s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_56
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 3.234s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.006s
+Ran 30 tests in 3.233s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.018s
+Ran 30 tests in 3.245s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.017s
+Ran 30 tests in 3.245s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.021s
+Ran 30 tests in 3.244s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_56.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_56.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_56.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_56.py
 *Running tests for: ClassEval_56
 ..............................
 ----------------------------------------------------------------------
-Ran 30 tests in 0.022s
+Ran 30 tests in 3.252s
 
 OK
 
@@ -140,22 +131,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_56.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_56.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_56',
@@ -215,61 +204,49 @@ Result: ['tests_pass']
                    '            return 0.0\n'
                    '        return (self.true_positives + self.true_negatives) '
                    '/ total',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_56.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_56.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_56.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_56.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_56.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.623883,
+  'total_time': 28.301563,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_70(self):\n'
+                      '    ttest_ind([68, 14, 57], [9, 97, 85])\n'
+                      '    return self.true_positives + self.true_negatives + '
+                      'self.false_positives + self.false_negatives\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.01)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_48(self):\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 02:03:25')\n"
-                      '    shuffle([56, 49, 76])\n'
-                      "    base64.b64encode(b'49888767286536169983')\n"
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([23, 66, 78], [11, 69, 51])\n'
-                      '    try:\n'
-                      '        return self.true_positives + '
-                      'self.true_negatives + self.false_positives + '
-                      'self.false_negatives\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class MetricsCalculator:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.true_positives = [0][0]\n'
                       '        self.false_positives = 0\n'
+                      "        parse('2024-10-15 02:09:20')\n"
                       '        self.false_negatives = 0\n'
                       '        self.true_negatives = 0\n'
                       '\n'
                       '    def update(self, predicted_labels, true_labels):\n'
-                      '        LoopChecker110 = 30\n'
-                      '        LoopChecker210 = 29\n'
+                      '        LoopChecker110 = 506\n'
+                      '        LoopChecker210 = 505\n'
                       '\n'
-                      '        def loop_18_8(LoopIndexOut, stop, step):\n'
+                      '        def loop_12_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
@@ -283,24 +260,27 @@ Result: ['tests_pass']
                       '                    self.false_negatives += 1\n'
                       '                elif predicted == 0 and true == 0:\n'
                       '                    self.true_negatives += 1\n'
-                      '            loop_18_8(LoopIndexOut + step, stop, step)\n'
-                      '        loop_18_8(0, LoopChecker110 // LoopChecker210, '
+                      '            loop_12_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_12_8(0, LoopChecker110 // LoopChecker210, '
                       '1)\n'
                       '\n'
                       '    def precision(self, predicted_labels, '
                       'true_labels):\n'
-                      '        ConditionChecker125 = 970\n'
-                      '        ConditionChecker225 = 237\n'
+                      '        ConditionChecker125 = 536\n'
+                      '        ConditionChecker225 = 462\n'
                       '        self.update(predicted_labels, true_labels)\n'
                       '        if ConditionChecker125 & ConditionChecker225:\n'
                       '            if self.true_positives + '
                       'self.false_positives == 0:\n'
                       '                return 0.0\n'
+                      '        Fernet.generate_key()\n'
                       '        return self.true_positives / '
                       '(self.true_positives + self.false_positives)\n'
                       '\n'
                       '    def recall(self, predicted_labels, true_labels):\n'
                       '        self.update(predicted_labels, true_labels)\n'
+                      '        datetime.datetime.now()\n'
+                      '        time.sleep(0.23)\n'
                       '        if self.true_positives + self.false_negatives '
                       '== 0:\n'
                       '            return 0.0\n'
@@ -315,26 +295,18 @@ Result: ['tests_pass']
                       'true_labels)\n'
                       '        if precision + recall == 0.0:\n'
                       '            return 0.0\n'
+                      '        shuffle([92, 86, 89])\n'
                       '        return 2 * precision * recall / (precision + '
                       'recall)\n'
                       '\n'
                       '    def accuracy(self, predicted_labels, true_labels):\n'
                       '        self.update(predicted_labels, true_labels)\n'
-                      '        queue_newFunc0_480 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_48_thread(queue):\n'
-                      '            result = newFunc0_48(self)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_480 = '
-                      'threading.Thread(target=newFunc0_48_thread, '
-                      'args=(queue_newFunc0_480,))\n'
-                      '        thread_newFunc0_480.start()\n'
-                      '        thread_newFunc0_480.join()\n'
-                      '        result_newFunc0_480 = queue_newFunc0_480.get()\n'
-                      '        newtotal_1 = result_newFunc0_480\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      "        base64.b64encode(b'06799382697669165698')\n"
+                      '        newtotal_1 = newFunc0_70(self)\n'
                       '        if newtotal_1 == 0:\n'
                       '            return 0.0\n'
                       '        return (self.true_positives + '
                       'self.true_negatives) / newtotal_1'}
-[END] processing file: ClassEval_56. Total Time: 4.623883
-END AT 2024-10-13 02:03:26.911492
+[END] processing file: ClassEval_56. Total Time: 28.301563
+END AT 2024-10-15 02:09:28.554636

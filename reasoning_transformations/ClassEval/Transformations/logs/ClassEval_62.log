@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:04:14.991510
+STARTING AT 2024-10-15 02:10:34.014887
 [START] processing file: ClassEval_62
 *Running tests for: ClassEval_62
 ...........
@@ -39,7 +39,7 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_62
-  File "/home/yang/Benchmark/tmp_test.py", line 15
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15
     nonlocal string_split
     ^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'string_split' found
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.000s
+Ran 11 tests in 2.406s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.001s
+Ran 11 tests in 2.406s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.001s
+Ran 11 tests in 2.415s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.001s
+Ran 11 tests in 2.413s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.001s
+Ran 11 tests in 2.417s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_62.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_62.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_62.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_62.py
 *Running tests for: ClassEval_62
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.001s
+Ran 11 tests in 2.418s
 
 OK
 
@@ -133,7 +133,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_62.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_62.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_62',
@@ -160,13 +160,13 @@ Result: ['tests_pass']
                    '        words_list = self.remove_stop_words(string_list, '
                    'stop_word_list)\n'
                    '        return words_list',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_62.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_62.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_62.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_62.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_62.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.300003,
+  'total_time': 18.758997,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -177,45 +177,42 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    parse('2024-10-13 02:04:18')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    base64.b64encode(b'48073059619410497462')\n"
-                      '    time.sleep(0.29)\n'
-                      '    shuffle([63, 73, 59])\n'
-                      '    Fernet.generate_key()\n'
+                      '    shuffle([7, 21, 88])\n'
+                      "    base64.b64encode(b'78673740229236664476')\n"
+                      '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([53, 97, 68], [69, 99, 57])\n'
                       '    return dec_result\n'
                       '\n'
                       'class NLPDataProcessor:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def construct_stop_word_list(self):\n'
+                      '        Fernet.generate_key()\n'
                       "        stop_word_list = [['a', 'an', 'the']][0]\n"
                       '        return stop_word_list\n'
                       '\n'
                       '    def remove_stop_words(self, string_list, '
                       'stop_word_list):\n'
                       '        answer = []\n'
-                      '        LoopChecker19 = 323\n'
-                      '        LoopChecker29 = 322\n'
-                      '        ConditionChecker115 = 648\n'
-                      '        ConditionChecker215 = 601\n'
+                      "        parse('2024-10-15 02:10:46')\n"
+                      '        LoopChecker19 = 598\n'
+                      '        time.sleep(0.24)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        LoopChecker29 = 597\n'
+                      '        ConditionChecker115 = 782\n'
+                      '        ConditionChecker215 = 253\n'
                       '        for LoopIndexOut in range(LoopChecker19 // '
                       'LoopChecker29):\n'
                       '            for string in string_list:\n'
                       '                string_split = string.split()\n'
-                      '                for newword_1 in string_split:\n'
+                      '                for word in string_split:\n'
                       '                    if ConditionChecker115 & '
                       'ConditionChecker215:\n'
-                      '                        if newword_1 in '
-                      'stop_word_list:\n'
-                      '                            '
-                      'string_split.remove(newword_1)\n'
+                      '                        if word in stop_word_list:\n'
+                      '                            string_split.remove(word)\n'
                       '                answer.append(string_split)\n'
                       '        else:\n'
                       '            pass\n'
@@ -224,8 +221,9 @@ Result: ['tests_pass']
                       '    def process(self, string_list):\n'
                       '        stop_word_list = '
                       'self.construct_stop_word_list()\n'
-                      '        words_list = '
+                      '        ttest_ind([43, 65, 96], [52, 69, 80])\n'
+                      '        newwords_list_1 = '
                       'self.remove_stop_words(string_list, stop_word_list)\n'
-                      '        return words_list'}
-[END] processing file: ClassEval_62. Total Time: 5.300003
-END AT 2024-10-13 02:04:20.293242
+                      '        return newwords_list_1'}
+[END] processing file: ClassEval_62. Total Time: 18.758997
+END AT 2024-10-15 02:10:52.776781

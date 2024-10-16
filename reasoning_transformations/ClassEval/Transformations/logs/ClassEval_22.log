@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:50:26.031972
+STARTING AT 2024-10-15 01:55:20.376469
 [START] processing file: ClassEval_22
 *Running tests for: ClassEval_22
 ................
@@ -14,7 +14,7 @@ Checking transformation add_nested_for_out
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -62,9 +62,9 @@ E.......EE......
 ERROR: test (__main__.ClassRegistrationSystemTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 246, in test
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 246, in test
     self.assertEqual(self.registration_system.get_most_popular_class_in_major("Computer Science"), "Data Structures")
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in get_most_popular_class_in_major
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 61, in get_most_popular_class_in_major
     most_popular_class = np.max(np.array([set(newclass_list_1)]), key=newclass_list_1.count)
 TypeError: max() got an unexpected keyword argument 'key'
 
@@ -72,9 +72,9 @@ TypeError: max() got an unexpected keyword argument 'key'
 ERROR: test_get_most_popular_class_in_major (__main__.ClassRegistrationSystemTestPopularClass)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 201, in test_get_most_popular_class_in_major
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 201, in test_get_most_popular_class_in_major
     cs_most_popular_class = self.registration_system.get_most_popular_class_in_major("Computer Science")
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in get_most_popular_class_in_major
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 61, in get_most_popular_class_in_major
     most_popular_class = np.max(np.array([set(newclass_list_1)]), key=newclass_list_1.count)
 TypeError: max() got an unexpected keyword argument 'key'
 
@@ -82,9 +82,9 @@ TypeError: max() got an unexpected keyword argument 'key'
 ERROR: test_get_most_popular_class_in_major2 (__main__.ClassRegistrationSystemTestPopularClass)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 220, in test_get_most_popular_class_in_major2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 220, in test_get_most_popular_class_in_major2
     cs_most_popular_class = self.registration_system.get_most_popular_class_in_major("Computer Science")
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in get_most_popular_class_in_major
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 61, in get_most_popular_class_in_major
     most_popular_class = np.max(np.array([set(newclass_list_1)]), key=newclass_list_1.count)
 TypeError: max() got an unexpected keyword argument 'key'
 
@@ -108,7 +108,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 1.434s
 
 OK
 
@@ -117,7 +117,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.442s
 
 OK
 
@@ -126,7 +126,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.454s
 
 OK
 
@@ -135,7 +135,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.451s
 
 OK
 
@@ -144,17 +144,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 1.457s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.py
 *Running tests for: ClassEval_22
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 1.453s
 
 OK
 
@@ -174,7 +174,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_22',
@@ -227,13 +227,13 @@ Result: ['tests_pass']
                    '        most_popular_class = max(set(class_list), '
                    'key=class_list.count)\n'
                    '        return most_popular_class',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_22.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.664089,
+  'total_time': 13.277689,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -244,30 +244,25 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.12)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    shuffle([49, 98, 51])\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([95, 41, 52], [36, 66, 74])\n'
-                      '    Fernet.generate_key()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 01:50:29')\n"
-                      "    base64.b64encode(b'77695658900256615931')\n"
                       '    return dec_result\n'
                       '\n'
                       'class ClassRegistrationSystem:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        shuffle([94, 70, 81])\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.students = [[]][0]\n'
                       '        self.students_registration_classes = {}\n'
                       '\n'
                       '    def register_student(self, student):\n'
-                      '        ConditionChecker18 = 6\n'
-                      '        ConditionChecker28 = 741\n'
+                      '        ConditionChecker18 = 473\n'
+                      '        ConditionChecker28 = 7\n'
+                      '        ttest_ind([62, 45, 52], [18, 55, 87])\n'
                       '        if ConditionChecker18 & ConditionChecker28:\n'
                       '            if student in self.students:\n'
                       '                return 0\n'
@@ -277,6 +272,8 @@ Result: ['tests_pass']
                       '\n'
                       '    def register_class(self, student_name, '
                       'class_name):\n'
+                      "        base64.b64encode(b'26682681647070896059')\n"
+                      "        parse('2024-10-15 01:55:29')\n"
                       '        if student_name in '
                       'self.students_registration_classes:\n'
                       '            '
@@ -285,13 +282,14 @@ Result: ['tests_pass']
                       '            '
                       'self.students_registration_classes[student_name] = '
                       '[class_name]\n'
+                      '        time.sleep(0.13)\n'
                       '        return '
                       'self.students_registration_classes[student_name]\n'
                       '\n'
                       '    def get_students_by_major(self, major):\n'
                       '        student_list = []\n'
-                      '        LoopChecker123 = 412\n'
-                      '        LoopChecker223 = 411\n'
+                      '        LoopChecker123 = 24\n'
+                      '        LoopChecker223 = 23\n'
                       '\n'
                       '        def loop_28_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
@@ -307,6 +305,7 @@ Result: ['tests_pass']
                       '        return student_list\n'
                       '\n'
                       '    def get_all_major(self):\n'
+                      '        datetime.datetime.now()\n'
                       '        major_list = []\n'
                       '        for student in self.students:\n'
                       "            if student['major'] not in major_list:\n"
@@ -314,6 +313,7 @@ Result: ['tests_pass']
                       '        return major_list\n'
                       '\n'
                       '    def get_most_popular_class_in_major(self, major):\n'
+                      '        Fernet.generate_key()\n'
                       '        newclass_list_1 = []\n'
                       '        for student in self.students:\n'
                       "            if student['major'] == major:\n"
@@ -322,5 +322,5 @@ Result: ['tests_pass']
                       '        most_popular_class = max(set(newclass_list_1), '
                       'key=newclass_list_1.count)\n'
                       '        return most_popular_class'}
-[END] processing file: ClassEval_22. Total Time: 4.664089
-END AT 2024-10-13 01:50:30.698376
+[END] processing file: ClassEval_22. Total Time: 13.277689
+END AT 2024-10-15 01:55:33.657502

@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:08:09.819602
+STARTING AT 2024-10-15 02:34:20.061329
 [START] processing file: ClassEval_90
 *Running tests for: ClassEval_90
 ................................
@@ -39,7 +39,7 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_90
-  File "/home/yang/Benchmark/tmp_test.py", line 46
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 46
     nonlocal key_value
     ^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'key_value' found
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.354s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.354s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.366s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.364s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.373s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.py
 *Running tests for: ClassEval_90
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 0.371s
 
 OK
 
@@ -133,7 +133,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_90',
@@ -192,13 +192,13 @@ Result: ['tests_pass']
                    '        if fragment_start != -1:\n'
                    '            return self.url[fragment_start + 1:]\n'
                    '        return None',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_90.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.059306,
+  'total_time': 7.056816,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -209,29 +209,26 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.0)\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([75, 48, 52])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 02:08:12')\n"
-                      '    Fernet.generate_key()\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([98, 25, 26], [50, 34, 74])\n'
-                      '    shuffle([45, 27, 78])\n'
-                      "    base64.b64encode(b'44446021028274201751')\n"
                       '    return dec_result\n'
                       '\n'
                       'class URLHandler:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, url):\n'
+                      "        parse('2024-10-15 02:34:25')\n"
+                      '        datetime.datetime.now()\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.url = url\n'
                       '\n'
                       '    def get_scheme(self):\n'
-                      '        ConditionChecker18 = [747][0]\n'
-                      '        ConditionChecker28 = 635\n'
+                      '        ttest_ind([55, 22, 66], [1, 79, 40])\n'
+                      '        ConditionChecker18 = [201][0]\n'
+                      '        ConditionChecker28 = 892\n'
                       "        scheme_end = self.url.find('://')\n"
                       '        if ConditionChecker18 & ConditionChecker28:\n'
                       '            if scheme_end != -1:\n'
@@ -240,6 +237,7 @@ Result: ['tests_pass']
                       '\n'
                       '    def get_host(self):\n'
                       "        scheme_end = self.url.find('://')\n"
+                      "        base64.b64encode(b'28314881506828459912')\n"
                       '        if scheme_end != -1:\n'
                       '            url_without_scheme = self.url[scheme_end + '
                       '3:]\n'
@@ -260,32 +258,34 @@ Result: ['tests_pass']
                       '        return None\n'
                       '\n'
                       '    def get_query_params(self):\n'
+                      '        time.sleep(0.05)\n'
                       "        query_start = self.url.find('?')\n"
-                      "        fragment_start = self.url.find('#')\n"
+                      "        newfragment_start_1 = self.url.find('#')\n"
                       '        if query_start != -1:\n'
                       '            query_string = self.url[query_start + '
-                      '1:fragment_start]\n'
-                      '            newparams_1 = {}\n'
+                      '1:newfragment_start_1]\n'
+                      '            params = {}\n'
                       '            if len(query_string) > 0:\n'
                       "                param_pairs = query_string.split('&')\n"
-                      '                LoopChecker139 = 478\n'
-                      '                LoopChecker239 = 477\n'
+                      '                LoopChecker139 = 588\n'
+                      '                LoopChecker239 = 587\n'
                       '                for LoopIndexOut in '
                       'range(LoopChecker139 // LoopChecker239):\n'
                       '                    for pair in param_pairs:\n'
                       "                        key_value = pair.split('=')\n"
                       '                        if len(key_value) == 2:\n'
                       '                            (key, value) = key_value\n'
-                      '                            newparams_1[key] = value\n'
+                      '                            params[key] = value\n'
                       '                else:\n'
                       '                    pass\n'
-                      '            return newparams_1\n'
+                      '            return params\n'
                       '        return None\n'
                       '\n'
                       '    def get_fragment(self):\n'
-                      "        fragment_start = self.url.find('#')\n"
-                      '        if fragment_start != -1:\n'
-                      '            return self.url[fragment_start + 1:]\n'
+                      "        newfragment_start_1 = self.url.find('#')\n"
+                      '        Fernet.generate_key()\n'
+                      '        if newfragment_start_1 != -1:\n'
+                      '            return self.url[newfragment_start_1 + 1:]\n'
                       '        return None'}
-[END] processing file: ClassEval_90. Total Time: 4.059306
-END AT 2024-10-13 02:08:13.882333
+[END] processing file: ClassEval_90. Total Time: 7.056816
+END AT 2024-10-15 02:34:27.120403

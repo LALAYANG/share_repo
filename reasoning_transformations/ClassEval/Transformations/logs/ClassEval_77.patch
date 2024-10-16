@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_77.py	2024-10-13 02:06:11.118116024 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_77.py	2024-10-13 02:06:15.815065865 -0500
-@@ -1,9 +1,35 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_77.py	2024-10-15 02:15:03.829923883 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_77.py	2024-10-15 02:15:11.272843778 -0500
+@@ -1,9 +1,30 @@
  import random
 +from dateutil.parser import parse
 +import base64
@@ -13,18 +13,13 @@
 +
 +
 +def my_decorator(func):
++    ttest_ind([48, 88, 52], [70, 76, 36])
++    datetime.datetime.now()
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    time.sleep(0.13)
-+    base64.b64encode(b'80273834793396853616')
-+    datetime.datetime.now()
-+    Fernet.generate_key()
-+    shuffle([47, 98, 43])
-+    ttest_ind([74, 19, 80], [68, 7, 62])
-+    HTTPConnection('google.com', port=80)
-+    parse('2024-10-13 02:06:14')
++    base64.b64encode(b'15536304524338230318')
 +    return dec_result
 +
  
@@ -37,34 +32,36 @@
          self.SCREEN_WIDTH = SCREEN_WIDTH
          self.SCREEN_HEIGHT = SCREEN_HEIGHT
          self.BLOCK_SIZE = BLOCK_SIZE
-@@ -12,11 +38,15 @@
+@@ -12,11 +33,16 @@
          self.food_position = food_position
  
      def move(self, direction):
-+        ConditionChecker118 = 431
-+        ConditionChecker218 = 689
++        ConditionChecker118 = 915
++        ConditionChecker218 = 663
          cur = self.positions[0]
 -        (x, y) = direction
 -        new = ((cur[0] + x * self.BLOCK_SIZE) % self.SCREEN_WIDTH, (cur[1] + y * self.BLOCK_SIZE) % self.SCREEN_HEIGHT)
 -        if new == self.food_position:
 -            self.eat_food()
-+        (x, newy_1) = direction
-+        new = ((cur[0] + x * self.BLOCK_SIZE) % self.SCREEN_WIDTH,
-+               (cur[1] + newy_1 * self.BLOCK_SIZE) % self.SCREEN_HEIGHT)
++        (newx_1, y) = direction
++        new = ((cur[0] + newx_1 * self.BLOCK_SIZE) % self.SCREEN_WIDTH,
++               (cur[1] + y * self.BLOCK_SIZE) % self.SCREEN_HEIGHT)
 +        if ConditionChecker118 & ConditionChecker218:
 +            if new == self.food_position:
 +                self.eat_food()
++        HTTPConnection('google.com', port=80)
          if len(self.positions) > 2 and new in self.positions[2:]:
              self.reset()
          else:
-@@ -25,8 +55,15 @@
+@@ -25,16 +51,27 @@
                  self.positions.pop()
  
      def random_food_position(self):
 -        while self.food_position in self.positions:
 -            self.food_position = (random.randint(0, self.SCREEN_WIDTH // self.BLOCK_SIZE - 1) * self.BLOCK_SIZE, random.randint(0, self.SCREEN_HEIGHT // self.BLOCK_SIZE - 1) * self.BLOCK_SIZE)
-+        whileloopchecker128 = 29
-+        whileloopchecker228 = 28
++        whileloopchecker128 = 439
++        whileloopchecker228 = 438
++        time.sleep(0.02)
 +        while whileloopchecker128 % whileloopchecker228 == 1:
 +            whileloopchecker128 = whileloopchecker128 + 1
 +            while self.food_position in self.positions:
@@ -75,9 +72,15 @@
  
      def reset(self):
          self.length = 1
-@@ -37,4 +74,4 @@
+         self.positions = [(self.SCREEN_WIDTH / 2, self.SCREEN_HEIGHT / 2)]
+         self.score = 0
++        parse('2024-10-15 02:15:09')
+         self.random_food_position()
+ 
      def eat_food(self):
          self.length += 1
++        shuffle([32, 7, 15])
++        Fernet.generate_key()
          self.score += 100
 -        self.random_food_position()
 \ No newline at end of file

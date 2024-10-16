@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:06:05.331055
+STARTING AT 2024-10-15 02:14:31.810625
 [START] processing file: ClassEval_76
 *Running tests for: ClassEval_76
 ..........................
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 4.433s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 4.443s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 4.488s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 4.497s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 4.495s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_76.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_76.py
 *Running tests for: ClassEval_76
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 4.495s
 
 OK
 
@@ -134,7 +134,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_76.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_76',
@@ -178,13 +178,13 @@ Result: ['tests_pass']
                    '            if not signed_in:\n'
                    '                not_signed_in_users.append(username)\n'
                    '        return not_signed_in_users',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_76.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_76.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_76.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_76.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.867438,
+  'total_time': 31.1319,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -195,47 +195,46 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'23624873772744184464')\n"
-                      '    ttest_ind([69, 75, 32], [57, 7, 42])\n'
-                      '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.22)\n'
-                      '    shuffle([58, 37, 68])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 02:06:08')\n"
                       '    return dec_result\n'
                       '\n'
                       'class SignInSystem:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        shuffle([67, 77, 37])\n'
+                      '        ttest_ind([72, 84, 59], [50, 91, 91])\n'
+                      '        datetime.datetime.now()\n'
+                      '        time.sleep(0.17)\n'
                       '        self.users = {}\n'
                       '\n'
-                      '    def add_user(self, username):\n'
-                      '        ConditionChecker17 = [166][0]\n'
-                      '        ConditionChecker27 = 376\n'
+                      '    def add_user(self, newusername_1):\n'
+                      '        ConditionChecker17 = [785][0]\n'
+                      '        Fernet.generate_key()\n'
+                      '        ConditionChecker27 = 763\n'
                       '        if ConditionChecker17 & ConditionChecker27:\n'
-                      '            if username in self.users:\n'
+                      '            if newusername_1 in self.users:\n'
                       '                return False\n'
                       '            else:\n'
-                      '                self.users[username] = False\n'
+                      '                self.users[newusername_1] = False\n'
                       '                return True\n'
                       '\n'
-                      '    def sign_in(self, username):\n'
-                      '        if username not in self.users:\n'
+                      '    def sign_in(self, newusername_1):\n'
+                      '        if newusername_1 not in self.users:\n'
                       '            return False\n'
                       '        else:\n'
-                      '            self.users[username] = True\n'
+                      '            self.users[newusername_1] = True\n'
                       '            return True\n'
                       '\n'
-                      '    def check_sign_in(self, username):\n'
-                      '        if username not in self.users:\n'
+                      '    def check_sign_in(self, newusername_1):\n'
+                      "        base64.b64encode(b'62100601390859020678')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        if newusername_1 not in self.users:\n'
                       '            return False\n'
-                      '        elif self.users[username]:\n'
+                      '        elif self.users[newusername_1]:\n'
                       '            return True\n'
                       '        else:\n'
                       '            return False\n'
@@ -247,22 +246,23 @@ Result: ['tests_pass']
                       '            return False\n'
                       '\n'
                       '    def all_not_signed_in(self):\n'
-                      '        newnot_signed_in_users_1 = []\n'
-                      '        LoopChecker136 = 350\n'
-                      '        LoopChecker236 = 349\n'
+                      '        not_signed_in_users = []\n'
+                      '        LoopChecker136 = 271\n'
+                      '        LoopChecker236 = 270\n'
+                      "        parse('2024-10-15 02:14:52')\n"
                       '\n'
                       '        def loop_41_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
-                      '            for (username, signed_in) in '
+                      '            for (newusername_1, signed_in) in '
                       'self.users.items():\n'
                       '                if not signed_in:\n'
                       '                    '
-                      'newnot_signed_in_users_1.append(username)\n'
+                      'not_signed_in_users.append(newusername_1)\n'
                       '            loop_41_8(LoopIndexOut + step, stop, step)\n'
                       '        loop_41_8(0, LoopChecker136 // LoopChecker236, '
                       '1)\n'
-                      '        return newnot_signed_in_users_1'}
-[END] processing file: ClassEval_76. Total Time: 4.867438
-END AT 2024-10-13 02:06:10.200447
+                      '        return not_signed_in_users'}
+[END] processing file: ClassEval_76. Total Time: 31.1319
+END AT 2024-10-15 02:15:02.944731

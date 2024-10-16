@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:54:17.115852
+STARTING AT 2024-10-15 01:58:54.332024
 [START] processing file: ClassEval_30
 *Running tests for: ClassEval_30
 ...............................
@@ -23,7 +23,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 0.004s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.808s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.813s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.822s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.814s
 
 OK
 
@@ -68,17 +68,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.821s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_30.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_30.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_30.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_30.py
 *Running tests for: ClassEval_30
 ...............................
 ----------------------------------------------------------------------
-Ran 31 tests in 0.002s
+Ran 31 tests in 1.818s
 
 OK
 
@@ -92,7 +92,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_30.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_30.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_30',
@@ -121,13 +121,13 @@ Result: ['tests_pass']
                    '\n'
                    '    def get_correlation(self):\n'
                    '        return np.corrcoef(self.data, rowvar=False)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_30.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_30.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_30.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_30.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_30.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.767146,
+  'total_time': 15.183971,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -138,14 +138,6 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    parse('2024-10-13 01:54:19')\n"
-                      "    base64.b64encode(b'55497990147296657126')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.01)\n'
-                      '    Fernet.generate_key()\n'
-                      '    ttest_ind([30, 18, 96], [53, 98, 6])\n'
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([25, 27, 83])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
@@ -160,9 +152,14 @@ Result: ['tests_pass']
                       '        self.data = np.array(data)\n'
                       '\n'
                       '    def get_sum(self):\n'
+                      '        datetime.datetime.now()\n'
                       '        return np.sum(self.data)\n'
                       '\n'
                       '    def get_min(self):\n'
+                      '        shuffle([57, 21, 96])\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      "        base64.b64encode(b'47197258567076293113')\n"
+                      '        Fernet.generate_key()\n'
                       '        return np.min(self.data)\n'
                       '\n'
                       '    def get_max(self):\n'
@@ -172,9 +169,12 @@ Result: ['tests_pass']
                       '        return round(np.var(self.data), 2)\n'
                       '\n'
                       '    def get_std_deviation(self):\n'
+                      '        ttest_ind([40, 53, 62], [33, 57, 34])\n'
+                      '        time.sleep(0.3)\n'
                       '        return round(np.std(self.data), 2)\n'
                       '\n'
                       '    def get_correlation(self):\n'
+                      "        parse('2024-10-15 01:59:04')\n"
                       '        return np.corrcoef(self.data, rowvar=False)'}
-[END] processing file: ClassEval_30. Total Time: 3.767146
-END AT 2024-10-13 01:54:20.886097
+[END] processing file: ClassEval_30. Total Time: 15.183971
+END AT 2024-10-15 01:59:09.518334

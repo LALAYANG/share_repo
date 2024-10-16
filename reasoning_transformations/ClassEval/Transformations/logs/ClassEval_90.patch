@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_90.py	2024-10-13 02:08:09.819850686 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_90.py	2024-10-13 02:08:13.332813307 -0500
-@@ -1,12 +1,42 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_90.py	2024-10-15 02:34:20.061727073 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_90.py	2024-10-15 02:34:26.128663711 -0500
+@@ -1,16 +1,44 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,18 +12,11 @@
 +
 +
 +def my_decorator(func):
-+    time.sleep(0.0)
-+    HTTPConnection('google.com', port=80)
++    shuffle([75, 48, 52])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    parse('2024-10-13 02:08:12')
-+    Fernet.generate_key()
-+    datetime.datetime.now()
-+    ttest_ind([98, 25, 26], [50, 34, 74])
-+    shuffle([45, 27, 78])
-+    base64.b64encode(b'44446021028274201751')
 +    return dec_result
 +
 +
@@ -31,11 +24,15 @@
  
 +    @my_decorator
      def __init__(self, url):
++        parse('2024-10-15 02:34:25')
++        datetime.datetime.now()
++        HTTPConnection('google.com', port=80)
          self.url = url
  
      def get_scheme(self):
-+        ConditionChecker18 = [747][0]
-+        ConditionChecker28 = 635
++        ttest_ind([55, 22, 66], [1, 79, 40])
++        ConditionChecker18 = [201][0]
++        ConditionChecker28 = 892
          scheme_end = self.url.find('://')
 -        if scheme_end != -1:
 -            return self.url[:scheme_end]
@@ -45,12 +42,23 @@
          return None
  
      def get_host(self):
-@@ -33,19 +63,24 @@
-         fragment_start = self.url.find('#')
+         scheme_end = self.url.find('://')
++        base64.b64encode(b'28314881506828459912')
+         if scheme_end != -1:
+             url_without_scheme = self.url[scheme_end + 3:]
+             host_end = url_without_scheme.find('/')
+@@ -29,23 +57,30 @@
+         return None
+ 
+     def get_query_params(self):
++        time.sleep(0.05)
+         query_start = self.url.find('?')
+-        fragment_start = self.url.find('#')
++        newfragment_start_1 = self.url.find('#')
          if query_start != -1:
-             query_string = self.url[query_start + 1:fragment_start]
--            params = {}
-+            newparams_1 = {}
+-            query_string = self.url[query_start + 1:fragment_start]
++            query_string = self.url[query_start + 1:newfragment_start_1]
+             params = {}
              if len(query_string) > 0:
                  param_pairs = query_string.split('&')
 -                for pair in param_pairs:
@@ -58,24 +66,27 @@
 -                    if len(key_value) == 2:
 -                        (key, value) = key_value
 -                        params[key] = value
--            return params
-+                LoopChecker139 = 478
-+                LoopChecker239 = 477
++                LoopChecker139 = 588
++                LoopChecker239 = 587
 +                for LoopIndexOut in range(LoopChecker139 // LoopChecker239):
 +                    for pair in param_pairs:
 +                        key_value = pair.split('=')
 +                        if len(key_value) == 2:
 +                            (key, value) = key_value
-+                            newparams_1[key] = value
++                            params[key] = value
 +                else:
 +                    pass
-+            return newparams_1
+             return params
          return None
  
      def get_fragment(self):
-         fragment_start = self.url.find('#')
-         if fragment_start != -1:
-             return self.url[fragment_start + 1:]
+-        fragment_start = self.url.find('#')
+-        if fragment_start != -1:
+-            return self.url[fragment_start + 1:]
 -        return None
 \ No newline at end of file
++        newfragment_start_1 = self.url.find('#')
++        Fernet.generate_key()
++        if newfragment_start_1 != -1:
++            return self.url[newfragment_start_1 + 1:]
 +        return None

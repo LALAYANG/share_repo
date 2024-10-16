@@ -1,41 +1,33 @@
-import threading
-import queue
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_77(new_player_row, self):
+    HTTPConnection('google.com', port=80)
+    ttest_ind([12, 17, 17], [16, 62, 18])
+    return new_player_row + (new_player_row - self.player_row)
 
 
 def my_decorator(func):
+    Fernet.generate_key()
+    time.sleep(0.25)
+    parse('2024-10-15 02:13:26')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    HTTPConnection('google.com', port=80)
-    base64.b64encode(b'45648066829909220544')
-    Fernet.generate_key()
-    datetime.datetime.now()
-    ttest_ind([7, 47, 54], [1, 53, 43])
-    time.sleep(0.22)
     return dec_result
-
-
-@my_decorator
-def newFunc0_53(new_player_row, self):
-    parse('2024-10-13 02:05:40')
-    shuffle([100, 86, 43])
-    try:
-        return new_player_row + (new_player_row - self.player_row)
-    except:
-        pass
 
 
 class PushBoxGame:
 
+    @my_decorator
     def __init__(self, map):
         self.map = map
         self.player_row = [0][0]
@@ -47,41 +39,44 @@ class PushBoxGame:
         self.init_game()
 
     def init_game(self):
-        LoopChecker114 = 369
-        LoopChecker214 = 368
+        LoopChecker114 = 260
+        LoopChecker214 = 259
         for LoopIndexOut in range(LoopChecker114 // LoopChecker214):
             for row in range(len(self.map)):
 
-                def loop_24_16(col, stop, step):
-                    if step == 0 or (step > 0 and col >= stop) or (step < 0 and col <= stop):
+                def loop_18_16(newcol_1, stop, step):
+                    if step == 0 or (step > 0 and newcol_1 >= stop) or (step < 0 and newcol_1 <= stop):
                         return
-                    if self.map[row][col] == 'O':
+                    if self.map[row][newcol_1] == 'O':
                         self.player_row = row
-                        self.player_col = col
-                    elif self.map[row][col] == 'G':
-                        self.targets.append((row, col))
+                        self.player_col = newcol_1
+                    elif self.map[row][newcol_1] == 'G':
+                        self.targets.append((row, newcol_1))
                         self.target_count += 1
-                    elif self.map[row][col] == 'X':
-                        self.boxes.append((row, col))
-                    loop_24_16(col + step, stop, step)
-                loop_24_16(0, len(self.map[row]), 1)
+                    elif self.map[row][newcol_1] == 'X':
+                        self.boxes.append((row, newcol_1))
+                    loop_18_16(newcol_1 + step, stop, step)
+                loop_18_16(0, len(self.map[row]), 1)
         else:
             pass
 
     def check_win(self):
-        ConditionChecker133 = 168
-        ConditionChecker233 = 807
-        newbox_on_target_count_1 = 0
+        ConditionChecker133 = 233
+        shuffle([65, 14, 7])
+        ConditionChecker233 = 77
+        box_on_target_count = 0
         for box in self.boxes:
             if box in self.targets:
-                newbox_on_target_count_1 += 1
+                box_on_target_count += 1
         if ConditionChecker133 & ConditionChecker233:
-            if newbox_on_target_count_1 == self.target_count:
+            if box_on_target_count == self.target_count:
                 self.is_game_over = True
         return self.is_game_over
 
     def move(self, direction):
+        datetime.datetime.now()
         new_player_row = self.player_row
+        base64.b64encode(b'98542687556957358645')
         new_player_col = self.player_col
         if direction == 'w':
             new_player_row -= 1
@@ -93,17 +88,7 @@ class PushBoxGame:
             new_player_col += 1
         if self.map[new_player_row][new_player_col] != '#':
             if (new_player_row, new_player_col) in self.boxes:
-                queue_newFunc0_530 = queue.Queue()
-
-                def newFunc0_53_thread(queue):
-                    result = newFunc0_53(new_player_row, self)
-                    queue.put(result)
-                thread_newFunc0_530 = threading.Thread(
-                    target=newFunc0_53_thread, args=(queue_newFunc0_530,))
-                thread_newFunc0_530.start()
-                thread_newFunc0_530.join()
-                result_newFunc0_530 = queue_newFunc0_530.get()
-                new_box_row = result_newFunc0_530
+                new_box_row = newFunc0_77(new_player_row, self)
                 new_box_col = new_player_col + \
                     (new_player_col - self.player_col)
                 if self.map[new_box_row][new_box_col] != '#':

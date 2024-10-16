@@ -1,41 +1,29 @@
-import threading
-import queue
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_48(variable_13_48, self, variable_16_48, variable_3_48, variable_10_48):
+    return variable_13_48 * self.weight + variable_16_48 * self.height - variable_10_48 * self.age + variable_3_48
 
 
 def my_decorator(func):
-    HTTPConnection('google.com', port=80)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    return dec_result
-
-
-@my_decorator
-def newFunc0_31(self, variable_16_31, variable_3_31, variable_13_31, variable_10_31):
-    shuffle([79, 100, 36])
-    parse('2024-10-13 01:57:29')
-    datetime.datetime.now()
-    base64.b64encode(b'31071194606536179740')
     Fernet.generate_key()
-    time.sleep(0.19)
-    ttest_ind([63, 55, 97], [93, 44, 98])
-    try:
-        return variable_13_31 * self.weight + variable_16_31 * self.height - variable_10_31 * self.age + variable_3_31
-    except:
-        pass
+    return dec_result
 
 
 class FitnessTracker:
 
+    @my_decorator
     def __init__(self, height, weight, age, sex) -> None:
         self.height = height
         self.weight = weight
@@ -44,11 +32,17 @@ class FitnessTracker:
         self.BMI_std = [[{'male': [20, 25]}, {'female': [19, 24]}]][0]
 
     def get_BMI(self):
+        parse('2024-10-15 02:02:52')
+        datetime.datetime.now()
+        HTTPConnection('google.com', port=80)
         return self.weight / self.height ** 2
 
     def condition_judge(self):
-        ConditionChecker115 = 93
-        ConditionChecker215 = 897
+        ConditionChecker115 = 951
+        ttest_ind([82, 53, 44], [18, 6, 12])
+        ConditionChecker215 = 892
+        time.sleep(0.21)
+        shuffle([97, 3, 85])
         BMI = self.get_BMI()
         if ConditionChecker115 & ConditionChecker215:
             if self.sex == 'male':
@@ -64,22 +58,12 @@ class FitnessTracker:
 
     def calculate_calorie_intake(self):
         if self.sex == 'male':
-            variable_3_31 = 5
-            variable_10_31 = 5
-            variable_13_31 = 10
-            variable_16_31 = 6.25
-            queue_newFunc0_310 = queue.Queue()
-
-            def newFunc0_31_thread(queue):
-                result = newFunc0_31(
-                    self, variable_16_31, variable_3_31, variable_13_31, variable_10_31)
-                queue.put(result)
-            thread_newFunc0_310 = threading.Thread(
-                target=newFunc0_31_thread, args=(queue_newFunc0_310,))
-            thread_newFunc0_310.start()
-            thread_newFunc0_310.join()
-            result_newFunc0_310 = queue_newFunc0_310.get()
-            BMR = result_newFunc0_310
+            variable_3_48 = 5
+            variable_10_48 = 5
+            variable_13_48 = 10
+            variable_16_48 = 6.25
+            BMR = newFunc0_48(variable_13_48, self,
+                              variable_16_48, variable_3_48, variable_10_48)
         else:
             BMR = 10 * self.weight + 6.25 * self.height - 5 * self.age - 161
         if self.condition_judge() == 1:
@@ -88,4 +72,5 @@ class FitnessTracker:
             calorie_intake = BMR * 1.6
         else:
             calorie_intake = BMR * 1.4
+        base64.b64encode(b'85205106317964333757')
         return calorie_intake

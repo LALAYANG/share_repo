@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_22.py	2024-10-13 01:50:26.031545859 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_22.py	2024-10-13 01:50:29.984499688 -0500
-@@ -1,15 +1,45 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_22.py	2024-10-15 01:55:20.376479992 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_22.py	2024-10-15 01:55:31.575363709 -0500
+@@ -1,31 +1,68 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,18 +12,10 @@
 +
 +
 +def my_decorator(func):
-+    time.sleep(0.12)
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    shuffle([49, 98, 51])
-+    datetime.datetime.now()
-+    ttest_ind([95, 41, 52], [36, 66, 74])
-+    Fernet.generate_key()
-+    HTTPConnection('google.com', port=80)
-+    parse('2024-10-13 01:50:29')
-+    base64.b64encode(b'77695658900256615931')
 +    return dec_result
 +
 +
@@ -32,6 +24,8 @@
 +    @my_decorator
      def __init__(self):
 -        self.students = []
++        shuffle([94, 70, 81])
++        HTTPConnection('google.com', port=80)
 +        self.students = [[]][0]
          self.students_registration_classes = {}
  
@@ -41,8 +35,9 @@
 -        else:
 -            self.students.append(student)
 -            return 1
-+        ConditionChecker18 = 6
-+        ConditionChecker28 = 741
++        ConditionChecker18 = 473
++        ConditionChecker28 = 7
++        ttest_ind([62, 45, 52], [18, 55, 87])
 +        if ConditionChecker18 & ConditionChecker28:
 +            if student in self.students:
 +                return 0
@@ -51,16 +46,22 @@
 +                return 1
  
      def register_class(self, student_name, class_name):
++        base64.b64encode(b'26682681647070896059')
++        parse('2024-10-15 01:55:29')
          if student_name in self.students_registration_classes:
-@@ -20,9 +50,17 @@
+             self.students_registration_classes[student_name].append(class_name)
+         else:
+             self.students_registration_classes[student_name] = [class_name]
++        time.sleep(0.13)
+         return self.students_registration_classes[student_name]
  
      def get_students_by_major(self, major):
          student_list = []
 -        for student in self.students:
 -            if student['major'] == major:
 -                student_list.append(student['name'])
-+        LoopChecker123 = 412
-+        LoopChecker223 = 411
++        LoopChecker123 = 24
++        LoopChecker223 = 23
 +
 +        def loop_28_8(LoopIndexOut, stop, step):
 +            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
@@ -73,11 +74,16 @@
          return student_list
  
      def get_all_major(self):
-@@ -33,9 +71,10 @@
++        datetime.datetime.now()
+         major_list = []
+         for student in self.students:
+             if student['major'] not in major_list:
+@@ -33,9 +70,11 @@
          return major_list
  
      def get_most_popular_class_in_major(self, major):
 -        class_list = []
++        Fernet.generate_key()
 +        newclass_list_1 = []
          for student in self.students:
              if student['major'] == major:

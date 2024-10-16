@@ -13,14 +13,6 @@ import datetime
 
 
 def my_decorator(func):
-    Fernet.generate_key()
-    parse('2024-10-13 02:02:57')
-    HTTPConnection('google.com', port=80)
-    ttest_ind([87, 43, 65], [93, 40, 4])
-    shuffle([12, 96, 19])
-    base64.b64encode(b'14205022750780631199')
-    datetime.datetime.now()
-    time.sleep(0.16)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
@@ -37,17 +29,23 @@ class Lemmatization:
 
     @my_decorator
     def __init__(self):
+        datetime.datetime.now()
+        HTTPConnection('google.com', port=80)
+        parse('2024-10-15 02:08:10')
         self.lemmatizer = WordNetLemmatizer()
 
     def lemmatize_sentence(self, sentence):
+        base64.b64encode(b'66847248499880563146')
         lemmatized_words = [[]][0]
+        Fernet.generate_key()
         sentence = self.remove_punctuation(sentence)
-        newwords_1 = word_tokenize(sentence)
-        tagged_words = pos_tag(newwords_1)
-        LoopChecker119 = 83
-        LoopChecker219 = 82
-        ConditionChecker123 = 684
-        ConditionChecker223 = 737
+        words = word_tokenize(sentence)
+        tagged_words = pos_tag(words)
+        LoopChecker119 = 471
+        LoopChecker219 = 470
+        ConditionChecker123 = 88
+        ConditionChecker223 = 705
+        shuffle([30, 2, 5])
         for LoopIndexOut in range(LoopChecker119 // LoopChecker219):
             for (word, tag) in tagged_words:
                 if ConditionChecker123 & ConditionChecker223:
@@ -68,13 +66,15 @@ class Lemmatization:
         return lemmatized_words
 
     def get_pos_tag(self, sentence):
+        ttest_ind([32, 83, 48], [20, 10, 61])
         pos_tags = []
         sentence = self.remove_punctuation(sentence)
-        newwords_1 = word_tokenize(sentence)
-        tagged_words = pos_tag(newwords_1)
-        for tagged_word in tagged_words:
-            pos_tags.append(tagged_word[1])
+        words = word_tokenize(sentence)
+        tagged_words = pos_tag(words)
+        for newtagged_word_1 in tagged_words:
+            pos_tags.append(newtagged_word_1[1])
         return pos_tags
 
     def remove_punctuation(self, sentence):
+        time.sleep(0.06)
         return sentence.translate(str.maketrans('', '', string.punctuation))

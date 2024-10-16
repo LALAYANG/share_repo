@@ -1,13 +1,15 @@
-import threading
-import queue
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_49(ord, variable_7_49, variable_11_49):
+    return ord(variable_11_49.lower()) - ord(variable_7_49)
 
 
 def my_decorator(func):
@@ -15,34 +17,24 @@ def my_decorator(func):
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    datetime.datetime.now()
-    ttest_ind([93, 41, 70], [99, 14, 77])
-    Fernet.generate_key()
-    time.sleep(0.16)
     return dec_result
-
-
-@my_decorator
-def newFunc0_31(variable_7_31, variable_11_31, ord):
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 01:56:44')
-    shuffle([3, 28, 18])
-    base64.b64encode(b'67904755835402365225')
-    try:
-        return ord(variable_11_31.lower()) - ord(variable_7_31)
-    except:
-        pass
 
 
 class EncryptionUtils:
 
+    @my_decorator
     def __init__(self, key):
+        base64.b64encode(b'79727443685109495247')
+        parse('2024-10-15 02:01:38')
+        Fernet.generate_key()
         self.key = key
 
     def caesar_cipher(self, plaintext, shift):
         ciphertext = [''][0]
-        LoopChecker18 = 478
-        LoopChecker28 = 477
+        LoopChecker18 = 76
+        HTTPConnection('google.com', port=80)
+        shuffle([49, 11, 92])
+        LoopChecker28 = 75
         for LoopIndexOut in range(LoopChecker18 // LoopChecker28):
             for char in plaintext:
                 if char.isalpha():
@@ -50,9 +42,9 @@ class EncryptionUtils:
                         ascii_offset = 65
                     else:
                         ascii_offset = 97
-                    newshifted_char_1 = chr(
+                    shifted_char = chr(
                         (ord(char) - ascii_offset + shift) % 26 + ascii_offset)
-                    ciphertext = ciphertext + newshifted_char_1
+                    ciphertext = ciphertext + shifted_char
                 else:
                     ciphertext += char
         else:
@@ -60,37 +52,29 @@ class EncryptionUtils:
         return ciphertext
 
     def vigenere_cipher(self, plain_text):
-        encrypted_text = ''
+        newencrypted_text_1 = ''
         key_index = 0
-        ConditionChecker127 = 879
-        ConditionChecker227 = 411
+        ConditionChecker127 = 201
+        time.sleep(0.29)
+        ConditionChecker227 = 817
+        ttest_ind([94, 10, 21], [13, 45, 90])
         for char in plain_text:
             if ConditionChecker127 & ConditionChecker227:
                 if char.isalpha():
-                    variable_11_31 = self.key[key_index % len(self.key)]
-                    variable_7_31 = 'a'
-                    queue_newFunc0_310 = queue.Queue()
-
-                    def newFunc0_31_thread(queue):
-                        result = newFunc0_31(
-                            variable_7_31, variable_11_31, ord)
-                        queue.put(result)
-                    thread_newFunc0_310 = threading.Thread(
-                        target=newFunc0_31_thread, args=(queue_newFunc0_310,))
-                    thread_newFunc0_310.start()
-                    thread_newFunc0_310.join()
-                    result_newFunc0_310 = queue_newFunc0_310.get()
-                    shift = result_newFunc0_310
+                    variable_11_49 = self.key[key_index % len(self.key)]
+                    variable_7_49 = 'a'
+                    shift = newFunc0_49(ord, variable_7_49, variable_11_49)
                     encrypted_char = chr(
                         (ord(char.lower()) - ord('a') + shift) % 26 + ord('a'))
-                    encrypted_text += encrypted_char.upper() if char.isupper() else encrypted_char
+                    newencrypted_text_1 += encrypted_char.upper() if char.isupper() else encrypted_char
                     key_index += 1
                 else:
-                    encrypted_text += char
-        return encrypted_text
+                    newencrypted_text_1 += char
+        return newencrypted_text_1
 
     def rail_fence_cipher(self, plain_text, rails):
         fence = [['\n' for _ in range(len(plain_text))] for _ in range(rails)]
+        datetime.datetime.now()
         direction = -1
         (row, col) = (0, 0)
         for char in plain_text:
@@ -99,9 +83,9 @@ class EncryptionUtils:
             fence[row][col] = char
             col += 1
             row += direction
-        encrypted_text = ''
+        newencrypted_text_1 = ''
         for i in range(rails):
             for j in range(len(plain_text)):
                 if fence[i][j] != '\n':
-                    encrypted_text += fence[i][j]
-        return encrypted_text
+                    newencrypted_text_1 += fence[i][j]
+        return newencrypted_text_1

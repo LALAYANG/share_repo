@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:49:31.770993
+STARTING AT 2024-10-15 01:52:39.430384
 [START] processing file: ClassEval_13
 *Running tests for: ClassEval_13
 .....................
@@ -50,7 +50,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 0.123s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 0.123s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 0.128s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 0.126s
 
 OK
 
@@ -86,17 +86,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 0.133s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.py
 *Running tests for: ClassEval_13
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 0.135s
 
 OK
 
@@ -112,7 +112,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_13',
@@ -143,13 +143,13 @@ Result: ['tests_pass']
                    '        if title not in self.inventory:\n'
                    '            return 0\n'
                    '        return self.inventory[title]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_13.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.137445,
+  'total_time': 4.885837,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -160,18 +160,11 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    datetime.datetime.now()\n'
-                      "    parse('2024-10-13 01:49:34')\n"
-                      '    shuffle([9, 96, 92])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    base64.b64encode(b'61821904901134220454')\n"
-                      '    Fernet.generate_key()\n'
-                      '    ttest_ind([79, 80, 62], [57, 34, 14])\n'
-                      '    time.sleep(0.13)\n'
+                      '    shuffle([54, 69, 96])\n'
                       '    return dec_result\n'
                       '\n'
                       'class BookManagement:\n'
@@ -181,8 +174,11 @@ Result: ['tests_pass']
                       '        self.inventory = {}\n'
                       '\n'
                       '    def add_book(self, title, quantity=1):\n'
-                      '        ConditionChecker17 = [781][0]\n'
-                      '        ConditionChecker27 = 382\n'
+                      "        parse('2024-10-15 01:52:42')\n"
+                      '        ConditionChecker17 = [141][0]\n'
+                      '        ConditionChecker27 = 246\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        datetime.datetime.now()\n'
                       '        if ConditionChecker17 & ConditionChecker27:\n'
                       '            if title in self.inventory:\n'
                       '                self.inventory[title] += quantity\n'
@@ -201,8 +197,12 @@ Result: ['tests_pass']
                       '        return self.inventory\n'
                       '\n'
                       '    def view_book_quantity(self, title):\n'
+                      "        base64.b64encode(b'64971297727001485673')\n"
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.02)\n'
                       '        if title not in self.inventory:\n'
                       '            return 0\n'
+                      '        ttest_ind([50, 99, 84], [63, 16, 29])\n'
                       '        return self.inventory[title]'}
-[END] processing file: ClassEval_13. Total Time: 4.137445
-END AT 2024-10-13 01:49:35.909938
+[END] processing file: ClassEval_13. Total Time: 4.885837
+END AT 2024-10-15 01:52:44.319007

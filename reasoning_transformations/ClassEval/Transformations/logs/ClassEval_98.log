@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:09:04.863780
+STARTING AT 2024-10-15 02:36:25.249432
 [START] processing file: ClassEval_98
 *Running tests for: ClassEval_98
 .......................
@@ -23,14 +23,14 @@ Checking transformation add_nested_list
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.003s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_98
-  File "/home/yang/Benchmark/tmp_test.py", line 30
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 30
     nonlocal text
     ^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'text' found
@@ -41,7 +41,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.003s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.003s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.132s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.135s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.012s
+Ran 23 tests in 0.142s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 0.143s
 
 OK
 
@@ -95,17 +95,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.005s
+Ran 23 tests in 0.143s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_98.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_98.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_98.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_98.py
 *Running tests for: ClassEval_98
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.011s
+Ran 23 tests in 0.145s
 
 OK
 
@@ -123,7 +123,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_98.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_98.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_98',
@@ -161,13 +161,13 @@ Result: ['tests_pass']
                    '    def find_element(self, element_name):\n'
                    '        elements = self.root.findall(element_name)\n'
                    '        return elements',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_98.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_98.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_98.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_98.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_98.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.483953,
+  'total_time': 4.947042,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -178,18 +178,11 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    ttest_ind([51, 65, 53], [74, 98, 44])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 02:09:07')\n"
-                      '    shuffle([23, 4, 67])\n'
-                      '    Fernet.generate_key()\n'
                       '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'42468573749802079501')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    time.sleep(0.16)\n'
                       '    return dec_result\n'
                       'import xml.etree.ElementTree as ET\n'
                       '\n'
@@ -197,10 +190,12 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, file_name):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.file_name = file_name\n'
                       '        self.root = [None][0]\n'
                       '\n'
                       '    def read_xml(self):\n'
+                      '        Fernet.generate_key()\n'
                       '        try:\n'
                       '            newtree_1 = ET.parse(self.file_name)\n'
                       '            self.root = newtree_1.getroot()\n'
@@ -209,6 +204,7 @@ Result: ['tests_pass']
                       '            return None\n'
                       '\n'
                       '    def write_xml(self, file_name):\n'
+                      "        base64.b64encode(b'57292534262115939230')\n"
                       '        try:\n'
                       '            newtree_1 = ET.ElementTree(self.root)\n'
                       '            newtree_1.write(file_name)\n'
@@ -217,8 +213,10 @@ Result: ['tests_pass']
                       '            return False\n'
                       '\n'
                       '    def process_xml_data(self, file_name):\n'
-                      '        LoopChecker126 = 325\n'
-                      '        LoopChecker226 = 324\n'
+                      '        ttest_ind([68, 99, 48], [47, 26, 56])\n'
+                      '        LoopChecker126 = 461\n'
+                      '        LoopChecker226 = 460\n'
+                      '        shuffle([31, 76, 64])\n'
                       '        for LoopIndexOut in range(LoopChecker126 // '
                       'LoopChecker226):\n'
                       "            for element in self.root.iter('item'):\n"
@@ -229,7 +227,9 @@ Result: ['tests_pass']
                       '        return self.write_xml(file_name)\n'
                       '\n'
                       '    def find_element(self, element_name):\n'
+                      "        parse('2024-10-15 02:36:28')\n"
                       '        elements = self.root.findall(element_name)\n'
+                      '        time.sleep(0.02)\n'
                       '        return elements'}
-[END] processing file: ClassEval_98. Total Time: 4.483953
-END AT 2024-10-13 02:09:09.349238
+[END] processing file: ClassEval_98. Total Time: 4.947042
+END AT 2024-10-15 02:36:30.198084

@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_80.py	2024-10-13 02:06:35.293857932 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_80.py	2024-10-13 02:06:39.651811431 -0500
-@@ -1,31 +1,68 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_80.py	2024-10-15 02:15:48.921439153 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_80.py	2024-10-15 02:15:58.234339207 -0500
+@@ -1,16 +1,46 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,18 +12,11 @@
 +
 +
 +def my_decorator(func):
-+    shuffle([26, 89, 97])
-+    Fernet.generate_key()
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    time.sleep(0.1)
-+    datetime.datetime.now()
-+    base64.b64encode(b'62390517038296709822')
 +    HTTPConnection('google.com', port=80)
-+    parse('2024-10-13 02:06:38')
-+    ttest_ind([34, 30, 25], [90, 80, 30])
 +    return dec_result
 +
 +
@@ -31,50 +24,53 @@
  
 +    @my_decorator
      @staticmethod
-     def select(table, columns='*', where=None):
+-    def select(table, columns='*', where=None):
 -        if columns != '*':
 -            columns = ', '.join(columns)
-+        ConditionChecker15 = [678][0]
-+        ConditionChecker25 = 268
+-        query = f'SELECT {columns} FROM {table}'
++    def select(table, newcolumns_1='*', where=None):
++        Fernet.generate_key()
++        ConditionChecker15 = [268][0]
++        ConditionChecker25 = 378
++        base64.b64encode(b'94373804748091447683')
++        time.sleep(0.09)
 +        if ConditionChecker15 & ConditionChecker25:
-+            if columns != '*':
-+                columns = ', '.join(columns)
-         query = f'SELECT {columns} FROM {table}'
++            if newcolumns_1 != '*':
++                newcolumns_1 = ', '.join(newcolumns_1)
++        query = f'SELECT {newcolumns_1} FROM {table}'
          if where:
 -            query += ' WHERE ' + ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
 +            query += ' WHERE ' + \
-+                ' AND '.join(
-+                    (f"{k}='{newv_1}'" for (k, newv_1) in where.items()))
++                ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
          return query
  
      @staticmethod
      def insert(table, data):
++        shuffle([39, 93, 88])
++        datetime.datetime.now()
++        parse('2024-10-15 02:15:56')
          keys = ', '.join(data.keys())
--        values = ', '.join((f"'{v}'" for v in data.values()))
-+        values = ', '.join((f"'{newv_1}'" for newv_1 in data.values()))
+         values = ', '.join((f"'{v}'" for v in data.values()))
          return f'INSERT INTO {table} ({keys}) VALUES ({values})'
- 
+@@ -18,8 +48,10 @@
      @staticmethod
      def delete(table, where=None):
          query = f'DELETE FROM {table}'
++        ttest_ind([4, 39, 21], [17, 4, 46])
          if where:
 -            query += ' WHERE ' + ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
 +            query += ' WHERE ' + \
-+                ' AND '.join(
-+                    (f"{k}='{newv_1}'" for (k, newv_1) in where.items()))
++                ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
          return query
  
      @staticmethod
-     def update(table, data, where=None):
--        update_str = ', '.join((f"{k}='{v}'" for (k, v) in data.items()))
-+        update_str = ', '.join(
-+            (f"{k}='{newv_1}'" for (k, newv_1) in data.items()))
+@@ -27,5 +59,6 @@
+         update_str = ', '.join((f"{k}='{v}'" for (k, v) in data.items()))
          query = f'UPDATE {table} SET {update_str}'
          if where:
 -            query += ' WHERE ' + ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
 -        return query
 \ No newline at end of file
 +            query += ' WHERE ' + \
-+                ' AND '.join(
-+                    (f"{k}='{newv_1}'" for (k, newv_1) in where.items()))
++                ' AND '.join((f"{k}='{v}'" for (k, v) in where.items()))
 +        return query

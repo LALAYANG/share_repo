@@ -9,23 +9,15 @@ import datetime
 
 
 def my_decorator(func):
-    datetime.datetime.now()
-    ttest_ind([12, 95, 23], [96, 55, 79])
-    shuffle([52, 95, 11])
-    parse('2024-10-13 02:08:42')
-    HTTPConnection('google.com', port=80)
-    Fernet.generate_key()
-    base64.b64encode(b'52733522566407583031')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    time.sleep(0.08)
     return dec_result
 
 
-LoopChecker139 = [904][0]
-LoopChecker239 = 903
+LoopChecker139 = [993][0]
+LoopChecker239 = 992
 
 
 class VendingMachine:
@@ -33,23 +25,31 @@ class VendingMachine:
     @my_decorator
     def __init__(self):
         self.inventory = {}
+        shuffle([72, 17, 25])
+        Fernet.generate_key()
+        parse('2024-10-15 02:35:13')
         self.balance = 0
 
-    def add_item(self, item_name, price, quantity):
-        ConditionChecker111 = 577
-        ConditionChecker211 = 661
+    def add_item(self, newitem_name_1, price, quantity):
+        base64.b64encode(b'40317948066992693534')
+        ConditionChecker111 = 579
+        ConditionChecker211 = 627
+        ttest_ind([87, 58, 51], [89, 96, 27])
         if ConditionChecker111 & ConditionChecker211:
-            if not self.restock_item(item_name, quantity):
-                self.inventory[item_name] = {
+            if not self.restock_item(newitem_name_1, quantity):
+                self.inventory[newitem_name_1] = {
                     'price': price, 'quantity': quantity}
 
     def insert_coin(self, amount):
+        datetime.datetime.now()
         self.balance += amount
         return self.balance
 
-    def purchase_item(self, item_name):
-        if item_name in self.inventory:
-            item = self.inventory[item_name]
+    def purchase_item(self, newitem_name_1):
+        time.sleep(0.29)
+        HTTPConnection('google.com', port=80)
+        if newitem_name_1 in self.inventory:
+            item = self.inventory[newitem_name_1]
             if item['quantity'] > 0 and self.balance >= item['price']:
                 self.balance -= item['price']
                 item['quantity'] -= 1
@@ -59,9 +59,9 @@ class VendingMachine:
         else:
             return False
 
-    def restock_item(self, item_name, quantity):
-        if item_name in self.inventory:
-            self.inventory[item_name]['quantity'] += quantity
+    def restock_item(self, newitem_name_1, quantity):
+        if newitem_name_1 in self.inventory:
+            self.inventory[newitem_name_1]['quantity'] += quantity
             return True
         else:
             return False
@@ -70,14 +70,14 @@ class VendingMachine:
         if not self.inventory:
             return False
         else:
-            newitems_1 = []
+            items = []
 
             def loop_45_12(LoopIndexOut, stop, step):
                 if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
                     return
-                for (item_name, item_info) in self.inventory.items():
-                    newitems_1.append(
-                        f"{item_name} - ${item_info['price']} [{item_info['quantity']}]")
+                for (newitem_name_1, item_info) in self.inventory.items():
+                    items.append(
+                        f"{newitem_name_1} - ${item_info['price']} [{item_info['quantity']}]")
                 loop_45_12(LoopIndexOut + step, stop, step)
             loop_45_12(0, LoopChecker139 // LoopChecker239, 1)
-            return '\n'.join(newitems_1)
+            return '\n'.join(items)

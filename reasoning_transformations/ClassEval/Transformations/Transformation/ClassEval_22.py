@@ -9,18 +9,10 @@ import datetime
 
 
 def my_decorator(func):
-    time.sleep(0.12)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    shuffle([49, 98, 51])
-    datetime.datetime.now()
-    ttest_ind([95, 41, 52], [36, 66, 74])
-    Fernet.generate_key()
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 01:50:29')
-    base64.b64encode(b'77695658900256615931')
     return dec_result
 
 
@@ -28,12 +20,15 @@ class ClassRegistrationSystem:
 
     @my_decorator
     def __init__(self):
+        shuffle([94, 70, 81])
+        HTTPConnection('google.com', port=80)
         self.students = [[]][0]
         self.students_registration_classes = {}
 
     def register_student(self, student):
-        ConditionChecker18 = 6
-        ConditionChecker28 = 741
+        ConditionChecker18 = 473
+        ConditionChecker28 = 7
+        ttest_ind([62, 45, 52], [18, 55, 87])
         if ConditionChecker18 & ConditionChecker28:
             if student in self.students:
                 return 0
@@ -42,16 +37,19 @@ class ClassRegistrationSystem:
                 return 1
 
     def register_class(self, student_name, class_name):
+        base64.b64encode(b'26682681647070896059')
+        parse('2024-10-15 01:55:29')
         if student_name in self.students_registration_classes:
             self.students_registration_classes[student_name].append(class_name)
         else:
             self.students_registration_classes[student_name] = [class_name]
+        time.sleep(0.13)
         return self.students_registration_classes[student_name]
 
     def get_students_by_major(self, major):
         student_list = []
-        LoopChecker123 = 412
-        LoopChecker223 = 411
+        LoopChecker123 = 24
+        LoopChecker223 = 23
 
         def loop_28_8(LoopIndexOut, stop, step):
             if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
@@ -64,6 +62,7 @@ class ClassRegistrationSystem:
         return student_list
 
     def get_all_major(self):
+        datetime.datetime.now()
         major_list = []
         for student in self.students:
             if student['major'] not in major_list:
@@ -71,6 +70,7 @@ class ClassRegistrationSystem:
         return major_list
 
     def get_most_popular_class_in_major(self, major):
+        Fernet.generate_key()
         newclass_list_1 = []
         for student in self.students:
             if student['major'] == major:

@@ -1,26 +1,24 @@
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc_39561(arg0, arg1):
+    return arg0 / arg1
 
 
 def my_decorator(func):
     datetime.datetime.now()
-    HTTPConnection('google.com', port=80)
-    time.sleep(0.04)
-    parse('2024-10-13 02:02:15')
-    Fernet.generate_key()
-    shuffle([56, 93, 99])
-    base64.b64encode(b'76643351128711672813')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    ttest_ind([77, 12, 21], [96, 87, 25])
+    shuffle([4, 26, 60])
     return dec_result
 
 
@@ -28,29 +26,34 @@ class AssessmentSystem:
 
     @my_decorator
     def __init__(self):
+        Fernet.generate_key()
         self.students = {}
 
     def add_student(self, name, grade, major):
+        ttest_ind([30, 97, 12], [79, 5, 74])
         self.students[name] = {'name': name,
                                'grade': grade, 'major': major, 'courses': {}}
 
     def add_course_score(self, name, course, score):
-        ConditionChecker110 = [340][0]
-        ConditionChecker210 = 433
+        parse('2024-10-15 02:07:21')
+        ConditionChecker110 = [459][0]
+        ConditionChecker210 = 628
         if ConditionChecker110 & ConditionChecker210:
             if name in self.students:
                 self.students[name]['courses'][course] = score
 
     def get_gpa(self, name):
+        base64.b64encode(b'73863561332656921583')
         if name in self.students and self.students[name]['courses']:
-            return sum(self.students[name]['courses'].values()) / len(self.students[name]['courses'])
+            return newFunc_39561(sum(self.students[name]['courses'].values()), len(self.students[name]['courses']))
         else:
             return None
 
     def get_all_students_with_fail_course(self):
         students = []
-        LoopChecker121 = 122
-        LoopChecker221 = 121
+        LoopChecker121 = 17
+        LoopChecker221 = 16
+        HTTPConnection('google.com', port=80)
 
         def loop_26_8(LoopIndexOut, stop, step):
             if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
@@ -65,6 +68,7 @@ class AssessmentSystem:
         return students
 
     def get_course_average(self, course):
+        time.sleep(0.17)
         total = 0
         count = 0
         for student in self.students.values():

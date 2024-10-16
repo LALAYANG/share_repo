@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:50:15.585037
+STARTING AT 2024-10-15 01:54:43.518648
 [START] processing file: ClassEval_20
 *Running tests for: ClassEval_20
 ......................
@@ -12,13 +12,70 @@ tests_pass ClassEval_20 /home/yang/Benchmark/dataset/classeval/code//ClassEval_2
 Apply all rules on a single file.
 Checking transformation add_nested_if
 *Running tests for: ClassEval_20
-......................
+FFFFF.....FF..........
+======================================================================
+FAIL: test_add_user (__main__.ChatTestAddUser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 43, in test_add_user
+    self.assertEqual(chat.add_user('John'), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_user_2 (__main__.ChatTestAddUser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 48, in test_add_user_2
+    self.assertEqual(chat.add_user('John'), False)
+AssertionError: None != False
+
+======================================================================
+FAIL: test_add_user_3 (__main__.ChatTestAddUser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 54, in test_add_user_3
+    self.assertEqual(chat.add_user('Mary'), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_user_4 (__main__.ChatTestAddUser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 60, in test_add_user_4
+    self.assertEqual(chat.add_user('Mary'), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_add_user_5 (__main__.ChatTestAddUser)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 65, in test_add_user_5
+    self.assertEqual(chat.add_user('John'), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main (__main__.ChatTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 165, in test_main
+    self.assertEqual(chat.add_user('John'), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main_2 (__main__.ChatTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 181, in test_main_2
+    self.assertEqual(chat.add_user('John'), True)
+AssertionError: None != True
+
 ----------------------------------------------------------------------
 Ran 22 tests in 0.001s
 
-OK
+FAILED (failures=7)
 
-Result: ['tests_pass']
+Result: ['failure']
+Drop add_nested_if due to ['failure']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_20
 ......................
@@ -40,11 +97,11 @@ Result: ['tests_pass']
 Checking transformation add_datetime
 *Running tests for: ClassEval_20
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 12, in <module>
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 12, in <module>
     class Chat:
-  File "/home/yang/Benchmark/tmp_test.py", line 15, in Chat
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in Chat
     def __init__(self):
-  File "/home/yang/Benchmark/tmp_test.py", line 8, in my_decorator
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 8, in my_decorator
     datetime.datetime.now()
 AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 
@@ -54,7 +111,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.650s
 
 OK
 
@@ -63,7 +120,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.656s
 
 OK
 
@@ -72,7 +129,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.673s
 
 OK
 
@@ -81,7 +138,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.664s
 
 OK
 
@@ -90,23 +147,22 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.672s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.py
 *Running tests for: ClassEval_20
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.001s
+Ran 22 tests in 2.672s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
-                        'add_nested_if',
                         'add_nested_list',
                         'add_decorator',
                         'add_time',
@@ -116,7 +172,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_20',
@@ -158,13 +214,13 @@ Result: ['tests_pass']
                    '        if username not in self.users:\n'
                    '            return []\n'
                    '        return self.users[username]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_20.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_20.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_20.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.610579,
+  'total_time': 20.083576,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -174,13 +230,7 @@ Result: ['tests_pass']
                       'import time\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([32, 49, 82])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.03)\n'
-                      '    ttest_ind([26, 86, 4], [18, 10, 48])\n'
-                      "    base64.b64encode(b'16973081669422496459')\n"
-                      "    parse('2024-10-13 01:50:17')\n"
-                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-15 01:54:56')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
@@ -192,19 +242,20 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.12)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.users = {}\n'
                       '\n'
                       '    def add_user(self, username):\n'
-                      '        ConditionChecker19 = [431][0]\n'
-                      '        ConditionChecker29 = 868\n'
-                      '        if ConditionChecker19 & ConditionChecker29:\n'
-                      '            if username in self.users:\n'
-                      '                return False\n'
-                      '            else:\n'
-                      '                self.users[username] = []\n'
-                      '                return True\n'
+                      '        if username in self.users:\n'
+                      '            return False\n'
+                      '        else:\n'
+                      '            self.users[username] = [[]][0]\n'
+                      '            return True\n'
                       '\n'
                       '    def remove_user(self, username):\n'
+                      '        ttest_ind([64, 93, 46], [17, 94, 22])\n'
                       '        if username in self.users:\n'
                       '            del self.users[username]\n'
                       '            return True\n'
@@ -215,18 +266,20 @@ Result: ['tests_pass']
                       '        if sender not in self.users or receiver not in '
                       'self.users:\n'
                       '            return False\n'
-                      "        timestamp = datetime.now().strftime('%Y-%m-%d "
-                      "%H:%M:%S')\n"
-                      "        newmessage_info_1 = {'sender': sender, "
-                      "'receiver': receiver, 'message': message, 'timestamp': "
-                      'timestamp}\n'
-                      '        self.users[sender].append(newmessage_info_1)\n'
-                      '        self.users[receiver].append(newmessage_info_1)\n'
+                      '        newtimestamp_1 = '
+                      "datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n"
+                      "        message_info = {'sender': sender, 'receiver': "
+                      "receiver, 'message': message, 'timestamp': "
+                      'newtimestamp_1}\n'
+                      '        self.users[sender].append(message_info)\n'
+                      '        self.users[receiver].append(message_info)\n'
                       '        return True\n'
                       '\n'
                       '    def get_messages(self, username):\n'
+                      '        shuffle([94, 13, 49])\n'
                       '        if username not in self.users:\n'
                       '            return []\n'
+                      "        base64.b64encode(b'91336674680199087640')\n"
                       '        return self.users[username]'}
-[END] processing file: ClassEval_20. Total Time: 3.610579
-END AT 2024-10-13 01:50:19.197623
+[END] processing file: ClassEval_20. Total Time: 20.083576
+END AT 2024-10-15 01:55:03.605408

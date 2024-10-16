@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:08:44.361320
+STARTING AT 2024-10-15 02:35:21.185112
 [START] processing file: ClassEval_95
 *Running tests for: ClassEval_95
 ................................
@@ -12,259 +12,22 @@ tests_pass ClassEval_95 /home/yang/Benchmark/dataset/classeval/code//ClassEval_9
 Apply all rules on a single file.
 Checking transformation add_nested_if
 *Running tests for: ClassEval_95
-FFFFFFF.FF.F.FFFF.FFFFF.FFFFF.FF
-======================================================================
-FAIL: test_add_product_1 (__main__.WarehouseTestAddProduct)
+................................
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 51, in test_add_product_1
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 1', 'quantity': 10}})
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 10}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 10}}
+Ran 32 tests in 0.001s
 
-======================================================================
-FAIL: test_add_product_2 (__main__.WarehouseTestAddProduct)
+OK
+
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: ClassEval_95
+................................
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 57, in test_add_product_2
-    self.assertEqual(warehouse.inventory,
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 10},[36 chars]: 5}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 10},
-+  2: {'name': 'product 2', 'quantity': 5}}
+Ran 32 tests in 0.001s
 
-======================================================================
-FAIL: test_add_product_3 (__main__.WarehouseTestAddProduct)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 63, in test_add_product_3
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 3', 'quantity': 10}})
-AssertionError: {} != {1: {'name': 'product 3', 'quantity': 10}}
-- {}
-+ {1: {'name': 'product 3', 'quantity': 10}}
+OK
 
-======================================================================
-FAIL: test_add_product_4 (__main__.WarehouseTestAddProduct)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 68, in test_add_product_4
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 4', 'quantity': 10}})
-AssertionError: {} != {1: {'name': 'product 4', 'quantity': 10}}
-- {}
-+ {1: {'name': 'product 4', 'quantity': 10}}
-
-======================================================================
-FAIL: test_add_product_5 (__main__.WarehouseTestAddProduct)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 73, in test_add_product_5
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 5', 'quantity': 10}})
-AssertionError: {} != {1: {'name': 'product 5', 'quantity': 10}}
-- {}
-+ {1: {'name': 'product 5', 'quantity': 10}}
-
-======================================================================
-FAIL: test_add_product_6 (__main__.WarehouseTestAddProduct)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 79, in test_add_product_6
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 5', 'quantity': 20}})
-AssertionError: {} != {1: {'name': 'product 5', 'quantity': 20}}
-- {}
-+ {1: {'name': 'product 5', 'quantity': 20}}
-
-======================================================================
-FAIL: test_change_order_status_1 (__main__.WarehouseTestChangeOrderStatus)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 178, in test_change_order_status_1
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}}
-
-======================================================================
-FAIL: test_change_order_status_3 (__main__.WarehouseTestChangeOrderStatus)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 190, in test_change_order_status_3
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 5, 'status': 'Delivered'}}
-
-======================================================================
-FAIL: test_change_order_status_4 (__main__.WarehouseTestChangeOrderStatus)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 197, in test_change_order_status_4
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 50, 'status': 'Delivered'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 50, 'status': 'Delivered'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 50, 'status': 'Delivered'}}
-
-======================================================================
-FAIL: test_create_order_1 (__main__.WarehouseTestCreateOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 145, in test_create_order_1
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}}
-
-======================================================================
-FAIL: test_create_order_3 (__main__.WarehouseTestCreateOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 157, in test_create_order_3
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 1, 'status': 'Shipped'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 1, 'status': 'Shipped'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 1, 'status': 'Shipped'}}
-
-======================================================================
-FAIL: test_create_order_4 (__main__.WarehouseTestCreateOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 163, in test_create_order_4
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 5, 'status': 'Shipped'}}
-
-======================================================================
-FAIL: test_create_order_5 (__main__.WarehouseTestCreateOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 169, in test_create_order_5
-    self.assertEqual(warehouse.orders, {1: {'product_id': 1, 'quantity': 50, 'status': 'Shipped'}})
-AssertionError: {} != {1: {'product_id': 1, 'quantity': 50, 'status': 'Shipped'}}
-- {}
-+ {1: {'product_id': 1, 'quantity': 50, 'status': 'Shipped'}}
-
-======================================================================
-FAIL: test_get_product_quantity_1 (__main__.WarehouseTestGetProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 118, in test_get_product_quantity_1
-    self.assertEqual(warehouse.get_product_quantity(1), 10)
-AssertionError: False != 10
-
-======================================================================
-FAIL: test_get_product_quantity_3 (__main__.WarehouseTestGetProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 127, in test_get_product_quantity_3
-    self.assertEqual(warehouse.get_product_quantity(1), 5)
-AssertionError: False != 5
-
-======================================================================
-FAIL: test_get_product_quantity_4 (__main__.WarehouseTestGetProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 132, in test_get_product_quantity_4
-    self.assertEqual(warehouse.get_product_quantity(1), 100)
-AssertionError: False != 100
-
-======================================================================
-FAIL: test_get_product_quantity_5 (__main__.WarehouseTestGetProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 137, in test_get_product_quantity_5
-    self.assertEqual(warehouse.get_product_quantity(5), 10)
-AssertionError: False != 10
-
-======================================================================
-FAIL: test_main (__main__.WarehouseTestMain)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 240, in test_main
-    self.assertEqual({1: {'name': 'product 1', 'quantity': 10}}, warehouse.inventory)
-AssertionError: {1: {'name': 'product 1', 'quantity': 10}} != {}
-- {1: {'name': 'product 1', 'quantity': 10}}
-+ {}
-
-======================================================================
-FAIL: test_track_order_1 (__main__.WarehouseTestTrackOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 210, in test_track_order_1
-    self.assertEqual(warehouse.track_order(1), 'Shipped')
-AssertionError: False != 'Shipped'
-
-======================================================================
-FAIL: test_track_order_3 (__main__.WarehouseTestTrackOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 221, in test_track_order_3
-    self.assertEqual(warehouse.track_order(1), 'Shipped')
-AssertionError: False != 'Shipped'
-
-======================================================================
-FAIL: test_track_order_4 (__main__.WarehouseTestTrackOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 227, in test_track_order_4
-    self.assertEqual(warehouse.track_order(1), 'Shipped')
-AssertionError: False != 'Shipped'
-
-======================================================================
-FAIL: test_track_order_5 (__main__.WarehouseTestTrackOrder)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 233, in test_track_order_5
-    self.assertEqual(warehouse.track_order(1), 'Shipped')
-AssertionError: False != 'Shipped'
-
-======================================================================
-FAIL: test_update_product_quantity_1 (__main__.WarehouseTestUpdateProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 87, in test_update_product_quantity_1
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 1', 'quantity': 15}})
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 15}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 15}}
-
-======================================================================
-FAIL: test_update_product_quantity_2 (__main__.WarehouseTestUpdateProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 94, in test_update_product_quantity_2
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 1', 'quantity': 5}})
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 5}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 5}}
-
-======================================================================
-FAIL: test_update_product_quantity_4 (__main__.WarehouseTestUpdateProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 105, in test_update_product_quantity_4
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 1', 'quantity': 11}})
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 11}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 11}}
-
-======================================================================
-FAIL: test_update_product_quantity_5 (__main__.WarehouseTestUpdateProductQuantity)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 111, in test_update_product_quantity_5
-    self.assertEqual(warehouse.inventory, {1: {'name': 'product 1', 'quantity': 1}})
-AssertionError: {} != {1: {'name': 'product 1', 'quantity': 1}}
-- {}
-+ {1: {'name': 'product 1', 'quantity': 1}}
-
-----------------------------------------------------------------------
-Ran 32 tests in 0.003s
-
-FAILED (failures=26)
-
-Result: ['failure']
-Drop add_nested_if due to ['failure']
+Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_95
 ................................
@@ -287,7 +50,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.001s
+Ran 32 tests in 4.816s
 
 OK
 
@@ -296,7 +59,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.002s
+Ran 32 tests in 4.826s
 
 OK
 
@@ -305,7 +68,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.002s
+Ran 32 tests in 4.884s
 
 OK
 
@@ -314,7 +77,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.002s
+Ran 32 tests in 4.885s
 
 OK
 
@@ -323,22 +86,24 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.002s
+Ran 32 tests in 4.899s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_95.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_95.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_95.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_95.py
 *Running tests for: ClassEval_95
 ................................
 ----------------------------------------------------------------------
-Ran 32 tests in 0.002s
+Ran 32 tests in 4.890s
 
 OK
 
 Result: ['tests_pass']
-{ 'applicable_rules': [ 'add_decorator',
+{ 'applicable_rules': [ 'add_nested_if',
+                        'add_nested_list',
+                        'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
@@ -347,7 +112,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_95.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_95.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_95',
@@ -400,13 +165,13 @@ Result: ['tests_pass']
                    "            return self.orders[order_id]['status']\n"
                    '        else:\n'
                    '            return False',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_95.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_95.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_95.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_95.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_95.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.96924,
+  'total_time': 33.346204,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -421,38 +186,41 @@ Result: ['tests_pass']
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 02:08:46')\n"
-                      '    datetime.datetime.now()\n'
-                      '    time.sleep(0.08)\n'
-                      "    base64.b64encode(b'59225619888878671233')\n"
                       '    Fernet.generate_key()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([57, 51, 85], [65, 81, 92])\n'
-                      '    shuffle([70, 13, 58])\n'
                       '    return dec_result\n'
                       '\n'
                       'class Warehouse:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        ttest_ind([75, 25, 86], [34, 70, 47])\n'
                       '        self.inventory = {}\n'
+                      '        time.sleep(0.15)\n'
                       '        self.orders = {}\n'
                       '\n'
                       '    def add_product(self, product_id, name, quantity):\n'
-                      '        if product_id not in self.inventory:\n'
-                      "            self.inventory[product_id] = {'name': name, "
-                      "'quantity': quantity}\n"
-                      '        else:\n'
-                      "            self.inventory[product_id]['quantity'] += "
-                      'quantity\n'
+                      "        parse('2024-10-15 02:35:43')\n"
+                      "        base64.b64encode(b'64453712075444185037')\n"
+                      '        ConditionChecker18 = [418][0]\n'
+                      '        ConditionChecker28 = 94\n'
+                      '        if ConditionChecker18 & ConditionChecker28:\n'
+                      '            if product_id not in self.inventory:\n'
+                      "                self.inventory[product_id] = {'name': "
+                      "name, 'quantity': quantity}\n"
+                      '            else:\n'
+                      "                self.inventory[product_id]['quantity'] "
+                      '+= quantity\n'
                       '\n'
                       '    def update_product_quantity(self, product_id, '
                       'quantity):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        if product_id in self.inventory:\n'
                       "            self.inventory[product_id]['quantity'] += "
                       'quantity\n'
                       '\n'
                       '    def get_product_quantity(self, product_id):\n'
+                      '        shuffle([74, 44, 51])\n'
+                      '        datetime.datetime.now()\n'
                       '        if product_id in self.inventory:\n'
                       '            return '
                       "self.inventory[product_id]['quantity']\n"
@@ -481,5 +249,5 @@ Result: ['tests_pass']
                       "            return self.orders[order_id]['status']\n"
                       '        else:\n'
                       '            return False'}
-[END] processing file: ClassEval_95. Total Time: 3.96924
-END AT 2024-10-13 02:08:48.333737
+[END] processing file: ClassEval_95. Total Time: 33.346204
+END AT 2024-10-15 02:35:54.534053

@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:05:34.338665
+STARTING AT 2024-10-15 02:13:18.873141
 [START] processing file: ClassEval_71
 *Running tests for: ClassEval_71
 ................
@@ -14,21 +14,12 @@ Checking transformation add_nested_for_out
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 0.000s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation add_nested_if
-*Running tests for: ClassEval_71
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation create_functions
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
@@ -47,15 +38,6 @@ OK
 
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
-*Running tests for: ClassEval_71
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_thread
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
@@ -91,11 +73,20 @@ Ran 16 tests in 0.001s
 OK
 
 Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_71
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.003s
+
+OK
+
+Result: ['tests_pass']
 Checking transformation add_http
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 0.003s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 0.018s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 0.012s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 0.007s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_71.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_71.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_71.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_71.py
 *Running tests for: ClassEval_71
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.010s
+Ran 16 tests in 0.013s
 
 OK
 
@@ -140,22 +131,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_71.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_71.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_71',
@@ -224,49 +213,41 @@ Result: ['tests_pass']
                    '                self.player_row = new_player_row\n'
                    '                self.player_col = new_player_col\n'
                    '        return self.check_win()',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_71.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_71.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_71.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_71.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_71.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 7.777489,
+  'total_time': 9.085799,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_77(new_player_row, self):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([12, 17, 17], [16, 62, 18])\n'
+                      '    return new_player_row + (new_player_row - '
+                      'self.player_row)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.25)\n'
+                      "    parse('2024-10-15 02:13:26')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    base64.b64encode(b'45648066829909220544')\n"
-                      '    Fernet.generate_key()\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([7, 47, 54], [1, 53, 43])\n'
-                      '    time.sleep(0.22)\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_53(new_player_row, self):\n'
-                      "    parse('2024-10-13 02:05:40')\n"
-                      '    shuffle([100, 86, 43])\n'
-                      '    try:\n'
-                      '        return new_player_row + (new_player_row - '
-                      'self.player_row)\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class PushBoxGame:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, map):\n'
                       '        self.map = map\n'
                       '        self.player_row = [0][0]\n'
@@ -278,45 +259,52 @@ Result: ['tests_pass']
                       '        self.init_game()\n'
                       '\n'
                       '    def init_game(self):\n'
-                      '        LoopChecker114 = 369\n'
-                      '        LoopChecker214 = 368\n'
+                      '        LoopChecker114 = 260\n'
+                      '        LoopChecker214 = 259\n'
                       '        for LoopIndexOut in range(LoopChecker114 // '
                       'LoopChecker214):\n'
                       '            for row in range(len(self.map)):\n'
                       '\n'
-                      '                def loop_24_16(col, stop, step):\n'
-                      '                    if step == 0 or (step > 0 and col '
-                      '>= stop) or (step < 0 and col <= stop):\n'
+                      '                def loop_18_16(newcol_1, stop, step):\n'
+                      '                    if step == 0 or (step > 0 and '
+                      'newcol_1 >= stop) or (step < 0 and newcol_1 <= stop):\n'
                       '                        return\n'
-                      "                    if self.map[row][col] == 'O':\n"
+                      "                    if self.map[row][newcol_1] == 'O':\n"
                       '                        self.player_row = row\n'
-                      '                        self.player_col = col\n'
-                      "                    elif self.map[row][col] == 'G':\n"
+                      '                        self.player_col = newcol_1\n'
+                      '                    elif self.map[row][newcol_1] == '
+                      "'G':\n"
                       '                        self.targets.append((row, '
-                      'col))\n'
+                      'newcol_1))\n'
                       '                        self.target_count += 1\n'
-                      "                    elif self.map[row][col] == 'X':\n"
-                      '                        self.boxes.append((row, col))\n'
-                      '                    loop_24_16(col + step, stop, step)\n'
-                      '                loop_24_16(0, len(self.map[row]), 1)\n'
+                      '                    elif self.map[row][newcol_1] == '
+                      "'X':\n"
+                      '                        self.boxes.append((row, '
+                      'newcol_1))\n'
+                      '                    loop_18_16(newcol_1 + step, stop, '
+                      'step)\n'
+                      '                loop_18_16(0, len(self.map[row]), 1)\n'
                       '        else:\n'
                       '            pass\n'
                       '\n'
                       '    def check_win(self):\n'
-                      '        ConditionChecker133 = 168\n'
-                      '        ConditionChecker233 = 807\n'
-                      '        newbox_on_target_count_1 = 0\n'
+                      '        ConditionChecker133 = 233\n'
+                      '        shuffle([65, 14, 7])\n'
+                      '        ConditionChecker233 = 77\n'
+                      '        box_on_target_count = 0\n'
                       '        for box in self.boxes:\n'
                       '            if box in self.targets:\n'
-                      '                newbox_on_target_count_1 += 1\n'
+                      '                box_on_target_count += 1\n'
                       '        if ConditionChecker133 & ConditionChecker233:\n'
-                      '            if newbox_on_target_count_1 == '
+                      '            if box_on_target_count == '
                       'self.target_count:\n'
                       '                self.is_game_over = True\n'
                       '        return self.is_game_over\n'
                       '\n'
                       '    def move(self, direction):\n'
+                      '        datetime.datetime.now()\n'
                       '        new_player_row = self.player_row\n'
+                      "        base64.b64encode(b'98542687556957358645')\n"
                       '        new_player_col = self.player_col\n'
                       "        if direction == 'w':\n"
                       '            new_player_row -= 1\n'
@@ -330,20 +318,8 @@ Result: ['tests_pass']
                       "'#':\n"
                       '            if (new_player_row, new_player_col) in '
                       'self.boxes:\n'
-                      '                queue_newFunc0_530 = queue.Queue()\n'
-                      '\n'
-                      '                def newFunc0_53_thread(queue):\n'
-                      '                    result = '
-                      'newFunc0_53(new_player_row, self)\n'
-                      '                    queue.put(result)\n'
-                      '                thread_newFunc0_530 = '
-                      'threading.Thread(target=newFunc0_53_thread, '
-                      'args=(queue_newFunc0_530,))\n'
-                      '                thread_newFunc0_530.start()\n'
-                      '                thread_newFunc0_530.join()\n'
-                      '                result_newFunc0_530 = '
-                      'queue_newFunc0_530.get()\n'
-                      '                new_box_row = result_newFunc0_530\n'
+                      '                new_box_row = '
+                      'newFunc0_77(new_player_row, self)\n'
                       '                new_box_col = new_player_col + '
                       '(new_player_col - self.player_col)\n'
                       '                if self.map[new_box_row][new_box_col] '
@@ -358,5 +334,5 @@ Result: ['tests_pass']
                       '                self.player_row = new_player_row\n'
                       '                self.player_col = new_player_col\n'
                       '        return self.check_win()'}
-[END] processing file: ClassEval_71. Total Time: 7.777489
-END AT 2024-10-13 02:05:42.118488
+[END] processing file: ClassEval_71. Total Time: 9.085799
+END AT 2024-10-15 02:13:27.962974

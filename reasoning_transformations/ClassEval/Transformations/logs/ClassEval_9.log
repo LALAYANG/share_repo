@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:09:15.465259
+STARTING AT 2024-10-15 02:36:32.052227
 [START] processing file: ClassEval_9
 *Running tests for: ClassEval_9
 .................
@@ -37,15 +37,6 @@ Ran 17 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_9
-.................
-----------------------------------------------------------------------
-Ran 17 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_9
 .................
@@ -57,36 +48,88 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_9
-  File "/home/yang/Benchmark/tmp_test.py", line 23
-    nonlocal digit, digit_sum, carry
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 17
+    nonlocal digit, carry, digit_sum
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'digit' found
 
 Result: ['error_or_timeout']
 Drop transform_range_to_recursion due to ['error_or_timeout']
-Checking transformation add_thread
-*Running tests for: ClassEval_9
-.................
-----------------------------------------------------------------------
-Ran 17 tests in 0.002s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_9
-.................
+EEEEEE...........
+======================================================================
+ERROR: test_add (__main__.BigNumCalculatorTestAdd)
 ----------------------------------------------------------------------
-Ran 17 tests in 0.002s
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 92, in test_add
+    self.assertEqual(bigNum.add("12345678901234567890", "98765432109876543210"), "111111111011111111100")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
 
-OK
+======================================================================
+ERROR: test_add_2 (__main__.BigNumCalculatorTestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 96, in test_add_2
+    self.assertEqual(bigNum.add("123456789012345678922", "98765432109876543210"), "222222221122222222132")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
 
-Result: ['tests_pass']
+======================================================================
+ERROR: test_add_3 (__main__.BigNumCalculatorTestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 100, in test_add_3
+    self.assertEqual(bigNum.add("123456789012345678934", "98765432109876543210"), "222222221122222222144")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
+
+======================================================================
+ERROR: test_add_4 (__main__.BigNumCalculatorTestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 104, in test_add_4
+    self.assertEqual(bigNum.add("123456789012345678946", "98765432109876543210"), "222222221122222222156")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
+
+======================================================================
+ERROR: test_add_5 (__main__.BigNumCalculatorTestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 108, in test_add_5
+    self.assertEqual(bigNum.add("123456789012345678958", "98765432109876543210"), "222222221122222222168")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
+
+======================================================================
+ERROR: test_main (__main__.BigNumCalculatorTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 159, in test_main
+    self.assertEqual(bigNum.add("12345678901234567890", "98765432109876543210"), "111111111011111111100")
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: BigNumCalculator.add() takes 2 positional arguments but 3 were given
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.001s
+
+FAILED (errors=6)
+
+Result: ['failure']
+Drop add_decorator due to ['failure']
 Checking transformation replace_with_numpy
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 0.002s
 
 OK
 
@@ -95,7 +138,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 0.002s
 
 OK
 
@@ -104,7 +147,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.004s
+Ran 17 tests in 0.777s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_9
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.782s
 
 OK
 
@@ -113,7 +165,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.004s
+Ran 17 tests in 0.781s
 
 OK
 
@@ -122,7 +174,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.008s
+Ran 17 tests in 0.782s
 
 OK
 
@@ -131,7 +183,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.004s
+Ran 17 tests in 0.788s
 
 OK
 
@@ -140,17 +192,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.004s
+Ran 17 tests in 0.783s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_9.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_9.py
 *Running tests for: ClassEval_9
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.010s
+Ran 17 tests in 0.792s
 
 OK
 
@@ -159,24 +211,21 @@ Result: ['tests_pass']
                         'add_nested_for_out',
                         'add_nested_while_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_else_to_while',
                         'add_nested_list',
-                        'add_thread',
-                        'add_decorator',
                         'replace_with_numpy',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_9.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_9',
@@ -248,61 +297,44 @@ Result: ['tests_pass']
                    '0:\n'
                    '            start += 1\n'
                    "        return ''.join(map(str, result[start:]))",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_9.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_9.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_9.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_9.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.583817,
+  'total_time': 11.697327,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_76(len2, variable_1_76, len1):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'90304291030873802494')\n"
+                      "    parse('2024-10-15 02:36:40')\n"
+                      '    return variable_1_76 * (len1 + len2)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       'import numpy as np\n'
                       '\n'
-                      'def my_decorator(func):\n'
-                      '    shuffle([16, 12, 90])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.07)\n'
-                      '    ttest_ind([16, 27, 62], [91, 100, 62])\n'
-                      '\n'
-                      '    def dec_result(*args, **kwargs):\n'
-                      '        res = func(*args, **kwargs)\n'
-                      '        return res\n'
-                      '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_63(variable_1_63, len1, len2):\n'
-                      "    parse('2024-10-13 02:09:19')\n"
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'69002002362752437885')\n"
-                      '    try:\n'
-                      '        return variable_1_63 * (len1 + len2)\n'
-                      '    except:\n'
-                      '        pass\n'
-                      '\n'
                       'class BigNumCalculator:\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def add(num1, num2):\n'
-                      '        ConditionChecker118 = [239][0]\n'
-                      '        ConditionChecker218 = 18\n'
+                      '        ConditionChecker118 = [200][0]\n'
+                      '        ConditionChecker218 = 267\n'
                       '        max_length = np.max(np.array([len(num1), '
                       'len(num2)]))\n'
                       '        num1 = num1.zfill(max_length)\n'
                       '        num2 = num2.zfill(max_length)\n'
+                      '        datetime.datetime.now()\n'
                       '        carry = 0\n'
-                      '        newresult_1 = []\n'
-                      '        LoopChecker110 = 129\n'
-                      '        LoopChecker210 = 128\n'
+                      '        result = []\n'
+                      '        LoopChecker110 = 106\n'
+                      '        LoopChecker210 = 105\n'
                       '        for LoopIndexOut in range(LoopChecker110 // '
                       'LoopChecker210):\n'
                       '            for i in range(max_length - 1, -1, -1):\n'
@@ -310,13 +342,13 @@ Result: ['tests_pass']
                       '+ carry\n'
                       '                carry = digit_sum // 10\n'
                       '                digit = digit_sum % 10\n'
-                      '                newresult_1.insert(0, str(digit))\n'
+                      '                result.insert(0, str(digit))\n'
                       '        else:\n'
                       '            pass\n'
                       '        if ConditionChecker118 & ConditionChecker218:\n'
                       '            if carry > 0:\n'
-                      '                newresult_1.insert(0, str(carry))\n'
-                      "        return ''.join(newresult_1)\n"
+                      '                result.insert(0, str(carry))\n'
+                      "        return ''.join(result)\n"
                       '\n'
                       '    @staticmethod\n'
                       '    def subtract(num1, num2):\n'
@@ -334,7 +366,7 @@ Result: ['tests_pass']
                       '        num1 = num1.zfill(max_length)\n'
                       '        num2 = num2.zfill(max_length)\n'
                       '        borrow = 0\n'
-                      '        newresult_1 = []\n'
+                      '        result = []\n'
                       '        for i in range(max_length - 1, -1, -1):\n'
                       '            digit_diff = int(num1[i]) - int(num2[i]) - '
                       'borrow\n'
@@ -343,49 +375,42 @@ Result: ['tests_pass']
                       '                borrow = 1\n'
                       '            else:\n'
                       '                borrow = 0\n'
-                      '            newresult_1.insert(0, str(digit_diff))\n'
-                      '        whileloopchecker147 = 619\n'
-                      '        whileloopchecker247 = 618\n'
+                      '            result.insert(0, str(digit_diff))\n'
+                      '        whileloopchecker147 = 351\n'
+                      '        whileloopchecker247 = 350\n'
                       '        while whileloopchecker147 % whileloopchecker247 '
                       '== 1:\n'
                       '            whileloopchecker147 += 1\n'
-                      '            while len(newresult_1) > 1 and '
-                      "newresult_1[0] == '0':\n"
-                      '                newresult_1.pop(0)\n'
+                      '            while len(result) > 1 and result[0] == '
+                      "'0':\n"
+                      '                result.pop(0)\n'
                       '        else:\n'
                       '            pass\n'
+                      '        ttest_ind([62, 74, 65], [61, 66, 28])\n'
                       '        if negative:\n'
-                      "            newresult_1.insert(0, '-')\n"
-                      "        return ''.join(newresult_1)\n"
+                      "            result.insert(0, '-')\n"
+                      "        return ''.join(result)\n"
                       '\n'
                       '    @staticmethod\n'
                       '    def multiply(num1, num2):\n'
                       '        (len1, len2) = (len(num1), len(num2))\n'
-                      '        variable_1_63 = [0]\n'
-                      '        queue_newFunc0_630 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_63_thread(queue):\n'
-                      '            result = newFunc0_63(variable_1_63, len1, '
-                      'len2)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_630 = '
-                      'threading.Thread(target=newFunc0_63_thread, '
-                      'args=(queue_newFunc0_630,))\n'
-                      '        thread_newFunc0_630.start()\n'
-                      '        thread_newFunc0_630.join()\n'
-                      '        result_newFunc0_630 = queue_newFunc0_630.get()\n'
-                      '        newresult_1 = result_newFunc0_630\n'
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.11)\n'
+                      '        variable_1_76 = [0]\n'
+                      '        result = newFunc0_76(len2, variable_1_76, '
+                      'len1)\n'
                       '        for i in range(len1 - 1, -1, -1):\n'
                       '            for j in range(len2 - 1, -1, -1):\n'
                       '                mul = int(num1[i]) * int(num2[j])\n'
-                      '                (p1, p2) = (i + j, i + j + 1)\n'
-                      '                total = mul + newresult_1[p2]\n'
-                      '                newresult_1[p1] += total // 10\n'
-                      '                newresult_1[p2] = total % 10\n'
+                      '                (newp1_1, p2) = (i + j, i + j + 1)\n'
+                      '                total = mul + result[p2]\n'
+                      '                result[newp1_1] += total // 10\n'
+                      '                result[p2] = total % 10\n'
                       '        start = 0\n'
-                      '        while start < len(newresult_1) - 1 and '
-                      'newresult_1[start] == 0:\n'
+                      '        shuffle([95, 22, 92])\n'
+                      '        while start < len(result) - 1 and result[start] '
+                      '== 0:\n'
                       '            start += 1\n'
-                      "        return ''.join(map(str, newresult_1[start:]))"}
-[END] processing file: ClassEval_9. Total Time: 5.583817
-END AT 2024-10-13 02:09:21.052344
+                      "        return ''.join(map(str, result[start:]))"}
+[END] processing file: ClassEval_9. Total Time: 11.697327
+END AT 2024-10-15 02:36:43.752514

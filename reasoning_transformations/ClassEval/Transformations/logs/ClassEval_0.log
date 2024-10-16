@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:49:09.904502
+STARTING AT 2024-10-15 01:51:33.341808
 [START] processing file: ClassEval_0
 *Running tests for: ClassEval_0
 ...................
@@ -44,7 +44,7 @@ FFFFF.........F.F..
 FAIL: test_AccessGatewayFilter (__main__.AccessGatewayFilterTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 192, in test_AccessGatewayFilter
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 192, in test_AccessGatewayFilter
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -52,7 +52,7 @@ AssertionError: False is not true
 FAIL: test_filter_1 (__main__.AccessGatewayFilterTestFilter)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in test_filter_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 61, in test_filter_1
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -60,7 +60,7 @@ AssertionError: False is not true
 FAIL: test_filter_2 (__main__.AccessGatewayFilterTestFilter)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 67, in test_filter_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 67, in test_filter_2
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -68,7 +68,7 @@ AssertionError: False is not true
 FAIL: test_filter_3 (__main__.AccessGatewayFilterTestFilter)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 73, in test_filter_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 73, in test_filter_3
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -76,7 +76,7 @@ AssertionError: False is not true
 FAIL: test_filter_4 (__main__.AccessGatewayFilterTestFilter)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 79, in test_filter_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 79, in test_filter_4
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -84,7 +84,7 @@ AssertionError: False is not true
 FAIL: test_is_start_with_1 (__main__.AccessGatewayFilterTestIsStartWith)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 123, in test_is_start_with_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 123, in test_is_start_with_1
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -92,7 +92,7 @@ AssertionError: False is not true
 FAIL: test_is_start_with_3 (__main__.AccessGatewayFilterTestIsStartWith)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 135, in test_is_start_with_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 135, in test_is_start_with_3
     self.assertTrue(res)
 AssertionError: False is not true
 
@@ -116,7 +116,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.003s
+Ran 19 tests in 0.002s
 
 OK
 
@@ -125,7 +125,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.004s
+Ran 19 tests in 0.009s
 
 OK
 
@@ -134,7 +134,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.005s
+Ran 19 tests in 0.009s
 
 OK
 
@@ -143,7 +143,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.005s
+Ran 19 tests in 0.009s
 
 OK
 
@@ -152,17 +152,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.002s
+Ran 19 tests in 0.012s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_0.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_0.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_0.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_0.py
 *Running tests for: ClassEval_0
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.006s
+Ran 19 tests in 0.014s
 
 OK
 
@@ -180,7 +180,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_0.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_0.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_0',
@@ -231,13 +231,13 @@ Result: ['tests_pass']
                    "        host = user['address']\n"
                    "        logging.log(msg=user['name'] + host + "
                    'str(datetime.datetime.now()), level=1)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_0.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_0.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_0.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_0.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_0.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.401428,
+  'total_time': 6.032839,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -247,13 +247,9 @@ Result: ['tests_pass']
                       'import time\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
                       '    Fernet.generate_key()\n'
-                      '    shuffle([73, 53, 47])\n'
-                      "    base64.b64encode(b'55381756870289760672')\n"
-                      '    time.sleep(0.09)\n'
-                      "    parse('2024-10-13 01:49:12')\n"
-                      '    ttest_ind([32, 73, 48], [24, 18, 28])\n'
+                      '    ttest_ind([22, 67, 38], [57, 96, 52])\n'
+                      '    time.sleep(0.27)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
@@ -266,19 +262,20 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        pass\n'
                       '\n'
                       '    def filter(self, request):\n'
-                      '        ConditionChecker112 = [920][0]\n'
-                      '        ConditionChecker212 = 221\n'
+                      '        ConditionChecker112 = [141][0]\n'
+                      '        ConditionChecker212 = 982\n'
                       "        request_uri = request['path']\n"
                       "        method = request['method']\n"
                       '        if ConditionChecker112 & ConditionChecker212:\n'
                       '            if self.is_start_with(request_uri):\n'
                       '                return True\n'
                       '        try:\n'
-                      '            newtoken_1 = self.get_jwt_user(request)\n'
-                      "            user = newtoken_1['user']\n"
+                      '            token = self.get_jwt_user(request)\n'
+                      "            user = token['user']\n"
                       "            if user['level'] > 2:\n"
                       '                '
                       'self.set_current_user_info_and_log(user)\n'
@@ -288,8 +285,10 @@ Result: ['tests_pass']
                       '\n'
                       '    def is_start_with(self, request_uri):\n'
                       "        start_with = ['/api', '/login']\n"
-                      '        LoopChecker125 = 76\n'
-                      '        LoopChecker225 = 75\n'
+                      "        parse('2024-10-15 01:51:37')\n"
+                      '        LoopChecker125 = 837\n'
+                      '        LoopChecker225 = 836\n'
+                      "        base64.b64encode(b'08604435118305292886')\n"
                       '        for LoopIndexOut in range(LoopChecker125 // '
                       'LoopChecker225):\n'
                       '            for s in start_with:\n'
@@ -300,22 +299,22 @@ Result: ['tests_pass']
                       '        return False\n'
                       '\n'
                       '    def get_jwt_user(self, request):\n'
-                      '        newtoken_1 = '
-                      "request['headers']['Authorization']\n"
-                      "        user = newtoken_1['user']\n"
-                      "        if newtoken_1['jwt'].startswith(user['name']):\n"
+                      '        shuffle([43, 97, 68])\n'
+                      "        token = request['headers']['Authorization']\n"
+                      "        user = token['user']\n"
+                      "        if token['jwt'].startswith(user['name']):\n"
                       '            jwt_str_date = '
-                      "newtoken_1['jwt'].split(user['name'])[1]\n"
+                      "token['jwt'].split(user['name'])[1]\n"
                       '            jwt_date = '
                       "datetime.datetime.strptime(jwt_str_date, '%Y-%m-%d')\n"
                       '            if datetime.datetime.today() - jwt_date >= '
                       'datetime.timedelta(days=3):\n'
                       '                return None\n'
-                      '        return newtoken_1\n'
+                      '        return token\n'
                       '\n'
                       '    def set_current_user_info_and_log(self, user):\n'
-                      "        host = user['address']\n"
-                      "        logging.log(msg=user['name'] + host + "
+                      "        newhost_1 = user['address']\n"
+                      "        logging.log(msg=user['name'] + newhost_1 + "
                       'str(datetime.datetime.now()), level=1)'}
-[END] processing file: ClassEval_0. Total Time: 4.401428
-END AT 2024-10-13 01:49:14.309461
+[END] processing file: ClassEval_0. Total Time: 6.032839
+END AT 2024-10-15 01:51:39.376832

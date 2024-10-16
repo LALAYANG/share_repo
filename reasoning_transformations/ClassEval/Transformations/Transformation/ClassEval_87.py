@@ -1,19 +1,20 @@
 import datetime
-import threading
+from sklearn.utils import shuffle
 import time
-import queue
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
+
+
+def newFunc0_28(datetime, seconds, self):
+    HTTPConnection('google.com', port=80)
+    ttest_ind([52, 44, 82], [38, 90, 60])
+    return self.datetime + datetime.timedelta(seconds=seconds)
 
 
 def my_decorator(func):
-    shuffle([13, 28, 55])
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:07:46')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
@@ -21,19 +22,9 @@ def my_decorator(func):
     return dec_result
 
 
-@my_decorator
-def newFunc0_18(datetime, seconds, self):
-    ttest_ind([65, 36, 8], [69, 100, 97])
-    base64.b64encode(b'99160579946564757536')
-    Fernet.generate_key()
-    try:
-        return self.datetime + datetime.timedelta(seconds=seconds)
-    except:
-        pass
-
-
 class TimeUtils:
 
+    @my_decorator
     def __init__(self):
         self.datetime = datetime.datetime.now()
 
@@ -46,30 +37,24 @@ class TimeUtils:
         return self.datetime.strftime(format)
 
     def add_seconds(self, seconds):
-        queue_newFunc0_180 = queue.Queue()
-
-        def newFunc0_18_thread(queue):
-            result = newFunc0_18(datetime, seconds, self)
-            queue.put(result)
-        thread_newFunc0_180 = threading.Thread(
-            target=newFunc0_18_thread, args=(queue_newFunc0_180,))
-        thread_newFunc0_180.start()
-        thread_newFunc0_180.join()
-        result_newFunc0_180 = queue_newFunc0_180.get()
-        new_datetime = result_newFunc0_180
+        base64.b64encode(b'32555373814902532950')
+        new_datetime = newFunc0_28(datetime, seconds, self)
         format = '%H:%M:%S'
         return new_datetime.strftime(format)
 
     def string_to_datetime(self, string):
+        shuffle([96, 18, 17])
+        Fernet.generate_key()
+        parse('2024-10-15 02:17:07')
         return datetime.datetime.strptime(string, '%Y-%m-%d %H:%M:%S')
 
     def datetime_to_string(self, datetime):
         return datetime.strftime('%Y-%m-%d %H:%M:%S')
 
     def get_minutes(self, string_time1, string_time2):
-        time1 = self.string_to_datetime(string_time1)
-        newtime2_1 = self.string_to_datetime(string_time2)
-        return round((newtime2_1 - time1).seconds / 60)
+        newtime1_1 = self.string_to_datetime(string_time1)
+        time2 = self.string_to_datetime(string_time2)
+        return round((time2 - newtime1_1).seconds / 60)
 
     def get_format_time(self, year, month, day, hour, minute, second):
         format = '%Y-%m-%d %H:%M:%S'

@@ -10,18 +10,10 @@ import datetime
 
 
 def my_decorator(func):
-    base64.b64encode(b'37299901814541978354')
-    ttest_ind([13, 76, 48], [96, 48, 41])
-    Fernet.generate_key()
-    time.sleep(0.13)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    datetime.datetime.now()
-    parse('2024-10-13 02:07:24')
-    shuffle([17, 41, 46])
-    HTTPConnection('google.com', port=80)
     return dec_result
 
 
@@ -29,14 +21,18 @@ class StudentDatabaseProcessor:
 
     @my_decorator
     def __init__(self, database_name):
+        shuffle([64, 76, 100])
+        Fernet.generate_key()
         self.database_name = database_name
 
     def create_student_table(self):
+        ttest_ind([39, 1, 79], [15, 37, 38])
         conn = sqlite3.connect(self.database_name)
         cursor = conn.cursor()
-        newcreate_table_query_1 = [
+        create_table_query = [
             '\n        CREATE TABLE IF NOT EXISTS students (\n            id INTEGER PRIMARY KEY,\n            name TEXT,\n            age INTEGER,\n            gender TEXT,\n            grade INTEGER\n        )\n        '][0]
-        cursor.execute(newcreate_table_query_1)
+        parse('2024-10-15 02:16:29')
+        cursor.execute(create_table_query)
         conn.commit()
         conn.close()
 
@@ -47,13 +43,15 @@ class StudentDatabaseProcessor:
         cursor.execute(
             insert_query, (student_data['name'], student_data['age'], student_data['gender'], student_data['grade']))
         conn.commit()
+        HTTPConnection('google.com', port=80)
         conn.close()
 
     def search_student_by_name(self, name):
         conn = sqlite3.connect(self.database_name)
         cursor = conn.cursor()
-        select_query = 'SELECT * FROM students WHERE name = ?'
-        cursor.execute(select_query, (name,))
+        newselect_query_1 = 'SELECT * FROM students WHERE name = ?'
+        cursor.execute(newselect_query_1, (name,))
+        time.sleep(0.15)
         result = cursor.fetchall()
         conn.close()
         return result
@@ -63,5 +61,7 @@ class StudentDatabaseProcessor:
         cursor = conn.cursor()
         delete_query = 'DELETE FROM students WHERE name = ?'
         cursor.execute(delete_query, (name,))
+        datetime.datetime.now()
+        base64.b64encode(b'17419575102954812036')
         conn.commit()
         conn.close()

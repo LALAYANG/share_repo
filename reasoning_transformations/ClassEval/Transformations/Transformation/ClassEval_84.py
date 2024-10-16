@@ -10,18 +10,13 @@ import datetime
 
 
 def my_decorator(func):
-    ttest_ind([89, 79, 71], [92, 55, 61])
-    time.sleep(0.28)
-    HTTPConnection('google.com', port=80)
+    ttest_ind([95, 23, 86], [83, 28, 10])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    parse('2024-10-13 02:07:30')
-    shuffle([7, 83, 68])
-    base64.b64encode(b'32764196810738903127')
-    datetime.datetime.now()
     Fernet.generate_key()
+    time.sleep(0.29)
     return dec_result
 
 
@@ -33,19 +28,25 @@ class TextFileProcessor:
 
     def read_file_as_json(self):
         with open(self.file_path, 'r') as file:
-            newdata_1 = json.load(file)
-        return newdata_1
+            data = json.load(file)
+        return data
 
     def read_file(self):
+        shuffle([8, 2, 7])
         with open(self.file_path, 'r') as file:
             return file.read()
 
     def write_file(self, content):
+        parse('2024-10-15 02:16:37')
+        base64.b64encode(b'90752258614423892115')
         with open(self.file_path, 'w') as file:
             file.write(content)
 
     def process_file(self):
+        HTTPConnection('google.com', port=80)
         content = self.read_file()
-        content = ''.join([char for char in content if char.isalpha()])
+        content = ''.join(
+            [newchar_1 for newchar_1 in content if newchar_1.isalpha()])
         self.write_file(content)
+        datetime.datetime.now()
         return content

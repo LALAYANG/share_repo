@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:49:41.345630
+STARTING AT 2024-10-15 01:52:50.690729
 [START] processing file: ClassEval_15
 *Running tests for: ClassEval_15
 ................
@@ -28,15 +28,6 @@ Ran 16 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_15
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_15
 ................
@@ -53,7 +44,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_main (__main__.BoyerMooreSearchTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 118, in test_main
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 112, in test_main
     self.assertEqual(boyerMooreSearch.match_in_pattern("A"), 0)
 AssertionError: -1 != 0
 
@@ -61,7 +52,7 @@ AssertionError: -1 != 0
 FAIL: test_match_in_pattern (__main__.BoyerMooreSearchTestMatchInPattern)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 53, in test_match_in_pattern
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 47, in test_match_in_pattern
     self.assertEqual(boyerMooreSearch.match_in_pattern("A"), 0)
 AssertionError: -1 != 0
 
@@ -69,7 +60,7 @@ AssertionError: -1 != 0
 FAIL: test_match_in_pattern_2 (__main__.BoyerMooreSearchTestMatchInPattern)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 57, in test_match_in_pattern_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 51, in test_match_in_pattern_2
     self.assertEqual(boyerMooreSearch.match_in_pattern("B"), 3)
 AssertionError: -1 != 3
 
@@ -77,7 +68,7 @@ AssertionError: -1 != 3
 FAIL: test_match_in_pattern_3 (__main__.BoyerMooreSearchTestMatchInPattern)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in test_match_in_pattern_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 55, in test_match_in_pattern_3
     self.assertEqual(boyerMooreSearch.match_in_pattern("C"), 5)
 AssertionError: -1 != 5
 
@@ -88,20 +79,11 @@ FAILED (failures=4)
 
 Result: ['failure']
 Drop transform_range_to_recursion due to ['failure']
-Checking transformation add_thread
-*Running tests for: ClassEval_15
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.002s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 0.000s
 
 OK
 
@@ -110,7 +92,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 0.000s
 
 OK
 
@@ -119,7 +101,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_15
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.007s
 
 OK
 
@@ -137,7 +128,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.026s
+Ran 16 tests in 0.036s
 
 OK
 
@@ -146,7 +137,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.033s
+Ran 16 tests in 0.027s
 
 OK
 
@@ -160,12 +151,12 @@ Ran 16 tests in 0.029s
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_15.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_15.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_15.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_15.py
 *Running tests for: ClassEval_15
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.039s
+Ran 16 tests in 0.031s
 
 OK
 
@@ -173,21 +164,19 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_15.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_15.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_15',
@@ -223,102 +212,84 @@ Result: ['tests_pass']
                    'self.match_in_pattern(self.text[mismatch_index])\n'
                    '                i = mismatch_index - match_index\n'
                    '        return positions',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_15.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_15.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_15.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_15.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_15.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.605205,
+  'total_time': 7.175796,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_51(match_index, newmismatch_index_1):\n'
+                      '    return newmismatch_index_1 - match_index\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.25)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    base64.b64encode(b'77102412689085524752')\n"
-                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.3)\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_33(match_index, mismatch_index):\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([60, 13, 59], [54, 73, 90])\n'
-                      '    shuffle([13, 92, 10])\n'
-                      "    parse('2024-10-13 01:49:45')\n"
-                      '    try:\n'
-                      '        return mismatch_index - match_index\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class BoyerMooreSearch:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, text, pattern):\n'
+                      '        shuffle([72, 100, 76])\n'
                       '        (self.text, self.pattern) = (text, pattern)\n'
                       '        (self.textLen, self.patLen) = (len(text), '
                       'len(pattern))\n'
                       '\n'
                       '    def match_in_pattern(self, char):\n'
-                      '        LoopChecker18 = [930][0]\n'
-                      '        LoopChecker28 = 929\n'
+                      '        Fernet.generate_key()\n'
+                      '        LoopChecker18 = [358][0]\n'
+                      '        ttest_ind([79, 12, 15], [32, 82, 48])\n'
+                      '        LoopChecker28 = 357\n'
                       '        for LoopIndexOut in range(LoopChecker18 // '
                       'LoopChecker28):\n'
-                      '            for newi_1 in range(self.patLen - 1, -1, '
-                      '-1):\n'
-                      '                if char == self.pattern[newi_1]:\n'
-                      '                    return newi_1\n'
+                      '            for i in range(self.patLen - 1, -1, -1):\n'
+                      '                if char == self.pattern[i]:\n'
+                      '                    return i\n'
                       '        else:\n'
                       '            pass\n'
                       '        return -1\n'
                       '\n'
                       '    def mismatch_in_text(self, currentPos):\n'
-                      '        ConditionChecker118 = 523\n'
-                      '        ConditionChecker218 = 466\n'
-                      '        for newi_1 in range(self.patLen - 1, -1, -1):\n'
+                      '        ConditionChecker118 = 769\n'
+                      "        parse('2024-10-15 01:52:55')\n"
+                      '        ConditionChecker218 = 892\n'
+                      '        for i in range(self.patLen - 1, -1, -1):\n'
                       '            if ConditionChecker118 & '
                       'ConditionChecker218:\n'
-                      '                if self.pattern[newi_1] != '
-                      'self.text[currentPos + newi_1]:\n'
-                      '                    return currentPos + newi_1\n'
+                      '                if self.pattern[i] != '
+                      'self.text[currentPos + i]:\n'
+                      '                    return currentPos + i\n'
                       '        return -1\n'
                       '\n'
                       '    def bad_character_heuristic(self):\n'
                       '        positions = []\n'
-                      '        for newi_1 in range(self.textLen - self.patLen '
-                      '+ 1):\n'
-                      '            mismatch_index = '
-                      'self.mismatch_in_text(newi_1)\n'
-                      '            if mismatch_index == -1:\n'
-                      '                positions.append(newi_1)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      "        base64.b64encode(b'17440136813018335593')\n"
+                      '        for i in range(self.textLen - self.patLen + '
+                      '1):\n'
+                      '            newmismatch_index_1 = '
+                      'self.mismatch_in_text(i)\n'
+                      '            if newmismatch_index_1 == -1:\n'
+                      '                positions.append(i)\n'
                       '            else:\n'
                       '                match_index = '
-                      'self.match_in_pattern(self.text[mismatch_index])\n'
-                      '                queue_newFunc0_330 = queue.Queue()\n'
-                      '\n'
-                      '                def newFunc0_33_thread(queue):\n'
-                      '                    result = newFunc0_33(match_index, '
-                      'mismatch_index)\n'
-                      '                    queue.put(result)\n'
-                      '                thread_newFunc0_330 = '
-                      'threading.Thread(target=newFunc0_33_thread, '
-                      'args=(queue_newFunc0_330,))\n'
-                      '                thread_newFunc0_330.start()\n'
-                      '                thread_newFunc0_330.join()\n'
-                      '                result_newFunc0_330 = '
-                      'queue_newFunc0_330.get()\n'
-                      '                newi_1 = result_newFunc0_330\n'
+                      'self.match_in_pattern(self.text[newmismatch_index_1])\n'
+                      '                i = newFunc0_51(match_index, '
+                      'newmismatch_index_1)\n'
+                      '        datetime.datetime.now()\n'
                       '        return positions'}
-[END] processing file: ClassEval_15. Total Time: 5.605205
-END AT 2024-10-13 01:49:46.952780
+[END] processing file: ClassEval_15. Total Time: 7.175796
+END AT 2024-10-15 01:52:57.869479

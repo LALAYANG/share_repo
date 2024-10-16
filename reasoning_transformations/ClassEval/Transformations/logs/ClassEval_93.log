@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 02:08:26.228416
+STARTING AT 2024-10-15 02:34:38.825043
 [START] processing file: ClassEval_93
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.002s
+Ran 22 tests in 0.001s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_nested_for_out
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.002s
+Ran 22 tests in 0.001s
 
 OK
 
@@ -28,20 +28,11 @@ Ran 22 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_93
-......................
-----------------------------------------------------------------------
-Ran 22 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.002s
+Ran 22 tests in 0.001s
 
 OK
 
@@ -55,20 +46,11 @@ Ran 22 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_93
-......................
-----------------------------------------------------------------------
-Ran 22 tests in 0.003s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.003s
+Ran 22 tests in 0.001s
 
 OK
 
@@ -77,7 +59,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.003s
+Ran 22 tests in 0.002s
 
 OK
 
@@ -86,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.003s
+Ran 22 tests in 1.387s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_93
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 1.390s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.003s
+Ran 22 tests in 1.390s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.013s
+Ran 22 tests in 1.399s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.013s
+Ran 22 tests in 1.390s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.014s
+Ran 22 tests in 1.399s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_93.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_93.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_93.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_93.py
 *Running tests for: ClassEval_93
 ......................
 ----------------------------------------------------------------------
-Ran 22 tests in 0.018s
+Ran 22 tests in 1.401s
 
 OK
 
@@ -140,22 +131,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_93.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_93.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_93',
@@ -205,86 +194,67 @@ Result: ['tests_pass']
                    '            key = index_2_key_map[index]\n'
                    '            result[key] = w\n'
                    '        return result',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_93.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_93.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_93.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_93.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_93.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 11.881223,
+  'total_time': 20.335233,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_30(newdot_products_1, norm, all_norms):\n'
+                      '    return newdot_products_1 / (norm * all_norms)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([40, 85, 4])\n'
-                      '    time.sleep(0.21)\n'
-                      "    parse('2024-10-13 02:08:36')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_16(newall_norms_1, norm, dot_products):\n'
-                      "    base64.b64encode(b'09053512821185206023')\n"
-                      '    ttest_ind([35, 41, 97], [78, 82, 41])\n'
-                      '    Fernet.generate_key()\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    try:\n'
-                      '        return dot_products / (norm * newall_norms_1)\n'
-                      '    except:\n'
-                      '        pass\n'
                       'import numpy as np\n'
                       'from gensim import matutils\n'
                       'from numpy import dot, array\n'
                       '\n'
                       'class VectorUtil:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    @staticmethod\n'
                       '    def similarity(vector_1, vector_2):\n'
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.23)\n'
                       '        return dot(matutils.unitvec(vector_1), '
                       'matutils.unitvec(vector_2))\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def cosine_similarities(vector_1, vectors_all):\n'
                       '        norm = np.linalg.norm(vector_1)\n'
-                      '        newall_norms_1 = np.linalg.norm(vectors_all, '
+                      '        all_norms = np.linalg.norm(vectors_all, '
                       'axis=1)\n'
-                      '        dot_products = dot(vectors_all, vector_1)\n'
-                      '        queue_newFunc0_160 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_16_thread(queue):\n'
-                      '            result = newFunc0_16(newall_norms_1, norm, '
-                      'dot_products)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_160 = '
-                      'threading.Thread(target=newFunc0_16_thread, '
-                      'args=(queue_newFunc0_160,))\n'
-                      '        thread_newFunc0_160.start()\n'
-                      '        thread_newFunc0_160.join()\n'
-                      '        result_newFunc0_160 = queue_newFunc0_160.get()\n'
-                      '        similarities = result_newFunc0_160\n'
+                      "        parse('2024-10-15 02:34:54')\n"
+                      '        newdot_products_1 = dot(vectors_all, vector_1)\n'
+                      '        similarities = newFunc0_30(newdot_products_1, '
+                      'norm, all_norms)\n'
                       '        return similarities\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def n_similarity(vector_list_1, vector_list_2):\n'
-                      '        ConditionChecker121 = [996][0]\n'
-                      '        ConditionChecker221 = 779\n'
+                      '        ConditionChecker121 = [360][0]\n'
+                      '        ConditionChecker221 = 164\n'
+                      "        base64.b64encode(b'23383885263119014942')\n"
                       '        if ConditionChecker121 & ConditionChecker221:\n'
                       '            if not (len(vector_list_1) and '
                       'len(vector_list_2)):\n'
                       "                raise ZeroDivisionError('At least one "
                       "of the passed list is empty.')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        return '
                       'dot(matutils.unitvec(array(vector_list_1).mean(axis=0)), '
                       'matutils.unitvec(array(vector_list_2).mean(axis=0)))\n'
@@ -292,13 +262,15 @@ Result: ['tests_pass']
                       '    @staticmethod\n'
                       '    def compute_idf_weight_dict(total_num, '
                       'number_dict):\n'
+                      '        datetime.datetime.now()\n'
                       '        index_2_key_map = {}\n'
                       '        index = 0\n'
                       '        count_list = []\n'
-                      '        LoopChecker130 = 56\n'
-                      '        LoopChecker230 = 55\n'
+                      '        ttest_ind([34, 68, 72], [63, 79, 65])\n'
+                      '        LoopChecker130 = 386\n'
+                      '        LoopChecker230 = 385\n'
                       '\n'
-                      '        def loop_40_8(LoopIndexOut, stop, step):\n'
+                      '        def loop_35_8(LoopIndexOut, stop, step):\n'
                       '            nonlocal index\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
@@ -307,15 +279,16 @@ Result: ['tests_pass']
                       '                index_2_key_map[index] = key\n'
                       '                count_list.append(count)\n'
                       '                index = index + 1\n'
-                      '            loop_40_8(LoopIndexOut + step, stop, step)\n'
-                      '        loop_40_8(0, LoopChecker130 // LoopChecker230, '
+                      '            loop_35_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_35_8(0, LoopChecker130 // LoopChecker230, '
                       '1)\n'
                       '        a = np.array(count_list)\n'
                       '        a = np.log((total_num + 1) / (a + 1))\n'
                       '        result = {}\n'
+                      '        shuffle([12, 9, 30])\n'
                       '        for (index, w) in enumerate(a):\n'
                       '            key = index_2_key_map[index]\n'
                       '            result[key] = w\n'
                       '        return result'}
-[END] processing file: ClassEval_93. Total Time: 11.881223
-END AT 2024-10-13 02:08:38.113374
+[END] processing file: ClassEval_93. Total Time: 20.335233
+END AT 2024-10-15 02:34:59.162534

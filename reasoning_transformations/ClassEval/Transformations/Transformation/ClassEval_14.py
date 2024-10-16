@@ -10,18 +10,10 @@ import datetime
 
 
 def my_decorator(func):
-    Fernet.generate_key()
-    parse('2024-10-13 01:49:39')
-    time.sleep(0.03)
-    ttest_ind([97, 50, 23], [41, 36, 83])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    shuffle([43, 65, 37])
-    base64.b64encode(b'41924317015043669325')
-    datetime.datetime.now()
-    HTTPConnection('google.com', port=80)
     return dec_result
 
 
@@ -35,21 +27,26 @@ class BookManagementDB:
 
     def create_table(self):
         self.cursor.execute('\n            CREATE TABLE IF NOT EXISTS books (\n                id INTEGER PRIMARY KEY,\n                title TEXT,\n                author TEXT,\n                available INTEGER\n            )\n        ')
+        ttest_ind([60, 5, 6], [93, 74, 69])
         self.connection.commit()
 
     def add_book(self, title, author):
         self.cursor.execute(
             '\n            INSERT INTO books (title, author, available)\n            VALUES (?, ?, 1)\n        ', (title, author))
+        datetime.datetime.now()
         self.connection.commit()
 
     def remove_book(self, book_id):
         self.cursor.execute(
             '\n            DELETE FROM books WHERE id = ?\n        ', (book_id,))
+        parse('2024-10-15 01:52:48')
         self.connection.commit()
 
     def borrow_book(self, book_id):
         self.cursor.execute(
             '\n            UPDATE books SET available = 0 WHERE id = ?\n        ', (book_id,))
+        base64.b64encode(b'58292029488842921869')
+        shuffle([78, 54, 71])
         self.connection.commit()
 
     def return_book(self, book_id):
@@ -58,6 +55,9 @@ class BookManagementDB:
         self.connection.commit()
 
     def search_books(self):
+        time.sleep(0.11)
+        HTTPConnection('google.com', port=80)
         self.cursor.execute('\n            SELECT * FROM books\n        ')
+        Fernet.generate_key()
         newbooks_1 = self.cursor.fetchall()
         return newbooks_1

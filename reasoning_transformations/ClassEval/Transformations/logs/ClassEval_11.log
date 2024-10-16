@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:49:20.959693
+STARTING AT 2024-10-15 01:51:55.355800
 [START] processing file: ClassEval_11
 *Running tests for: ClassEval_11
 .....................
@@ -53,9 +53,9 @@ EEEEE..........E.....
 ERROR: test_add (__main__.BitStatusUtilTestAdd)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 52, in test_add
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 52, in test_add
     self.assertEqual(bit_status_util.add(2, 4), 6)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -63,9 +63,9 @@ TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 ERROR: test_add_2 (__main__.BitStatusUtilTestAdd)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 56, in test_add_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 56, in test_add_2
     self.assertEqual(bit_status_util.add(2, 0), 2)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -73,9 +73,9 @@ TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 ERROR: test_add_3 (__main__.BitStatusUtilTestAdd)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 60, in test_add_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 60, in test_add_3
     self.assertEqual(bit_status_util.add(0, 0), 0)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -83,9 +83,9 @@ TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 ERROR: test_add_4 (__main__.BitStatusUtilTestAdd)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in test_add_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in test_add_4
     self.assertEqual(bit_status_util.add(0, 2), 2)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -93,9 +93,9 @@ TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 ERROR: test_add_5 (__main__.BitStatusUtilTestAdd)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 68, in test_add_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 68, in test_add_5
     self.assertEqual(bit_status_util.add(2, 2), 2)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -103,9 +103,9 @@ TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 ERROR: test_main (__main__.BitStatusUtilTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 144, in test_main
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 144, in test_main
     self.assertEqual(bit_status_util.add(2, 4), 6)
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in dec_result
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
     res = func(*args, **kwargs)
 TypeError: BitStatusUtil.add() takes 2 positional arguments but 3 were given
 
@@ -129,7 +129,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.487s
 
 OK
 
@@ -138,7 +138,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.489s
 
 OK
 
@@ -147,7 +147,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.493s
 
 OK
 
@@ -156,7 +156,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.494s
 
 OK
 
@@ -165,17 +165,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.495s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_11.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_11.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_11.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_11.py
 *Running tests for: ClassEval_11
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 3.498s
 
 OK
 
@@ -194,7 +194,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_11.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_11.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_11',
@@ -226,56 +226,56 @@ Result: ['tests_pass']
                    "than or equal to 0')\n"
                    '            if arg % 2 != 0:\n'
                    "                raise ValueError(f'{arg} not even')",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_11.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_11.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_11.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_11.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_11.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.71498,
+  'total_time': 25.312505,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
-                      "base64.b64encode(b'82818917556908473933')\n"
                       'from sklearn.utils import shuffle\n'
-                      'ttest_ind([9, 24, 48], [56, 4, 21])\n'
-                      "HTTPConnection('google.com', port=80)\n"
-                      'shuffle([75, 43, 100])\n'
                       'from cryptography.fernet import Fernet\n'
-                      "parse('2024-10-13 01:49:23')\n"
                       'import time\n'
-                      'time.sleep(0.03)\n'
-                      'Fernet.generate_key()\n'
                       'import datetime\n'
-                      'datetime.datetime.now()\n'
                       '\n'
                       'class BitStatusUtil:\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def add(states, stat):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        BitStatusUtil.check([states, stat])\n'
+                      '        Fernet.generate_key()\n'
+                      '        ttest_ind([38, 54, 31], [19, 23, 94])\n'
                       '        return states | stat\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def has(states, stat):\n'
                       '        BitStatusUtil.check([states, stat])\n'
+                      '        time.sleep(0.29)\n'
+                      "        parse('2024-10-15 01:52:12')\n"
                       '        return states & stat == stat\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def remove(states, stat):\n'
-                      '        ConditionChecker116 = [357][0]\n'
-                      '        ConditionChecker216 = 505\n'
+                      '        ConditionChecker116 = [28][0]\n'
+                      '        ConditionChecker216 = 11\n'
                       '        BitStatusUtil.check([states, stat])\n'
                       '        if ConditionChecker116 & ConditionChecker216:\n'
                       '            if BitStatusUtil.has(states, stat):\n'
                       '                return states ^ stat\n'
+                      '        datetime.datetime.now()\n'
+                      '        shuffle([84, 42, 27])\n'
                       '        return states\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def check(args):\n'
-                      '        LoopChecker122 = 769\n'
-                      '        LoopChecker222 = 768\n'
+                      '        LoopChecker122 = 343\n'
+                      '        LoopChecker222 = 342\n'
+                      "        base64.b64encode(b'39122378193675524868')\n"
                       '\n'
                       '        def loop_27_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
@@ -291,5 +291,5 @@ Result: ['tests_pass']
                       '            loop_27_8(LoopIndexOut + step, stop, step)\n'
                       '        loop_27_8(0, LoopChecker122 // LoopChecker222, '
                       '1)'}
-[END] processing file: ClassEval_11. Total Time: 3.71498
-END AT 2024-10-13 01:49:24.676551
+[END] processing file: ClassEval_11. Total Time: 25.312505
+END AT 2024-10-15 01:52:20.671038

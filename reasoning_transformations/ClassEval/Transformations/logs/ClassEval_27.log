@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:53:44.988463
+STARTING AT 2024-10-15 01:56:39.973030
 [START] processing file: ClassEval_27
 *Running tests for: ClassEval_27
 ........................
@@ -19,25 +19,7 @@ Ran 24 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_27
-........................
-----------------------------------------------------------------------
-Ran 24 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
-*Running tests for: ClassEval_27
-........................
-----------------------------------------------------------------------
-Ran 24 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_thread
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
@@ -68,7 +50,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.001s
+Ran 24 tests in 0.983s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_27
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.985s
 
 OK
 
@@ -77,7 +68,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.005s
+Ran 24 tests in 0.988s
 
 OK
 
@@ -86,7 +77,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.006s
+Ran 24 tests in 1.018s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.006s
+Ran 24 tests in 1.019s
 
 OK
 
@@ -104,37 +95,35 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.005s
+Ran 24 tests in 1.024s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_27.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_27.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_27.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_27.py
 *Running tests for: ClassEval_27
 ........................
 ----------------------------------------------------------------------
-Ran 24 tests in 0.009s
+Ran 24 tests in 1.007s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_27.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_27.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_27',
@@ -170,57 +159,47 @@ Result: ['tests_pass']
                    '        if currency not in self.rates:\n'
                    '            return False\n'
                    '        self.rates[currency] = new_rate',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_27.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_27.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_27.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_27.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_27.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.247844,
+  'total_time': 11.692941,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_29(amount, from_rate, newto_rate_1):\n'
+                      '    return amount / from_rate * newto_rate_1\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.11)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    ttest_ind([16, 98, 2], [32, 57, 22])\n'
+                      "    base64.b64encode(b'67940905972273182373')\n"
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_16(from_rate, amount, to_rate):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([91, 78, 12])\n'
-                      "    parse('2024-10-13 01:53:47')\n"
-                      "    base64.b64encode(b'25191700069563594577')\n"
-                      '    try:\n'
-                      '        return amount / from_rate * to_rate\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class CurrencyConverter:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        ttest_ind([28, 5, 90], [82, 65, 53])\n'
+                      "        parse('2024-10-15 01:56:48')\n"
                       "        self.rates = {'USD': 1.0, 'EUR': 0.85, 'GBP': "
                       "0.72, 'JPY': 110.15, 'CAD': 1.23, 'AUD': 1.34, 'CNY': "
                       '6.4}\n'
                       '\n'
                       '    def convert(self, amount, from_currency, '
                       'to_currency):\n'
-                      '        ConditionChecker17 = [578][0]\n'
-                      '        ConditionChecker27 = 200\n'
+                      '        ConditionChecker17 = [131][0]\n'
+                      '        ConditionChecker27 = 629\n'
                       '        if ConditionChecker17 & ConditionChecker27:\n'
                       '            if from_currency == to_currency:\n'
                       '                return amount\n'
@@ -228,34 +207,28 @@ Result: ['tests_pass']
                       'to_currency not in self.rates:\n'
                       '            return False\n'
                       '        from_rate = self.rates[from_currency]\n'
-                      '        to_rate = self.rates[to_currency]\n'
-                      '        queue_newFunc0_160 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_16_thread(queue):\n'
-                      '            result = newFunc0_16(from_rate, amount, '
-                      'to_rate)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_160 = '
-                      'threading.Thread(target=newFunc0_16_thread, '
-                      'args=(queue_newFunc0_160,))\n'
-                      '        thread_newFunc0_160.start()\n'
-                      '        thread_newFunc0_160.join()\n'
-                      '        result_newFunc0_160 = queue_newFunc0_160.get()\n'
-                      '        newconverted_amount_1 = result_newFunc0_160\n'
-                      '        return newconverted_amount_1\n'
+                      '        newto_rate_1 = self.rates[to_currency]\n'
+                      '        converted_amount = newFunc0_29(amount, '
+                      'from_rate, newto_rate_1)\n'
+                      '        return converted_amount\n'
                       '\n'
                       '    def get_supported_currencies(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        Fernet.generate_key()\n'
+                      '        shuffle([58, 40, 69])\n'
                       '        return list(self.rates.keys())\n'
                       '\n'
                       '    def add_currency_rate(self, currency, rate):\n'
+                      '        datetime.datetime.now()\n'
                       '        if currency in self.rates:\n'
                       '            return False\n'
                       '        self.rates[currency] = rate\n'
                       '\n'
                       '    def update_currency_rate(self, currency, '
                       'new_rate):\n'
+                      '        time.sleep(0.14)\n'
                       '        if currency not in self.rates:\n'
                       '            return False\n'
                       '        self.rates[currency] = new_rate'}
-[END] processing file: ClassEval_27. Total Time: 4.247844
-END AT 2024-10-13 01:53:49.239329
+[END] processing file: ClassEval_27. Total Time: 11.692941
+END AT 2024-10-15 01:56:51.667672

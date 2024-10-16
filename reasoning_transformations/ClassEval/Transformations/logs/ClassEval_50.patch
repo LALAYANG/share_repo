@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_50.py	2024-10-13 02:02:17.923618248 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_50.py	2024-10-13 02:02:21.484579834 -0500
-@@ -1,33 +1,62 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_50.py	2024-10-15 02:07:25.783956307 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_50.py	2024-10-15 02:07:29.791911092 -0500
+@@ -1,27 +1,56 @@
  import json
  import os
 +from dateutil.parser import parse
@@ -14,18 +14,11 @@
 +
 +
 +def my_decorator(func):
-+    datetime.datetime.now()
-+    ttest_ind([6, 98, 47], [68, 24, 60])
-+    base64.b64encode(b'38405930330324851205')
-+    time.sleep(0.12)
-+    parse('2024-10-13 02:02:20')
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    HTTPConnection('google.com', port=80)
-+    Fernet.generate_key()
-+    shuffle([12, 24, 63])
++    time.sleep(0.11)
 +    return dec_result
 +
  
@@ -35,42 +28,43 @@
      def read_json(self, file_path):
 -        if not os.path.exists(file_path):
 -            return 0
-+        ConditionChecker17 = [8][0]
-+        ConditionChecker27 = 589
++        ConditionChecker17 = [975][0]
++        ConditionChecker27 = 494
++        base64.b64encode(b'97401818935864011785')
 +        if ConditionChecker17 & ConditionChecker27:
 +            if not os.path.exists(file_path):
 +                return 0
++        parse('2024-10-15 02:07:28')
          try:
-             with open(file_path, 'r') as file:
+-            with open(file_path, 'r') as file:
 -                data = json.load(file)
--            return data
-+                newdata_1 = json.load(file)
-+            return newdata_1
++            with open(file_path, 'r') as newfile_1:
++                data = json.load(newfile_1)
+             return data
          except:
              return -1
  
--    def write_json(self, data, file_path):
-+    def write_json(self, newdata_1, file_path):
+     def write_json(self, data, file_path):
++        HTTPConnection('google.com', port=80)
++        ttest_ind([39, 75, 11], [19, 46, 55])
++        Fernet.generate_key()
++        shuffle([71, 40, 7])
          try:
-             with open(file_path, 'w') as file:
+-            with open(file_path, 'w') as file:
 -                json.dump(data, file)
-+                json.dump(newdata_1, file)
++            with open(file_path, 'w') as newfile_1:
++                json.dump(data, newfile_1)
              return 1
          except:
              return -1
  
      def process_json(self, file_path, remove_key):
--        data = self.read_json(file_path)
--        if data == 0 or data == -1:
-+        newdata_1 = self.read_json(file_path)
-+        if newdata_1 == 0 or newdata_1 == -1:
++        datetime.datetime.now()
+         data = self.read_json(file_path)
+         if data == 0 or data == -1:
              return 0
--        if remove_key in data:
--            del data[remove_key]
--            self.write_json(data, file_path)
-+        if remove_key in newdata_1:
-+            del newdata_1[remove_key]
-+            self.write_json(newdata_1, file_path)
+@@ -30,4 +59,4 @@
+             self.write_json(data, file_path)
              return 1
          else:
 -            return 0

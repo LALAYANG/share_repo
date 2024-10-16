@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_72.py	2024-10-13 02:05:43.026416191 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_72.py	2024-10-13 02:05:46.131382999 -0500
-@@ -1,43 +1,72 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_72.py	2024-10-15 02:13:28.861949605 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_72.py	2024-10-15 02:13:35.853873844 -0500
+@@ -1,18 +1,43 @@
  import re
 +from dateutil.parser import parse
 +import base64
@@ -13,88 +13,58 @@
 +
 +
 +def my_decorator(func):
-+    HTTPConnection('google.com', port=80)
-+    parse('2024-10-13 02:05:45')
-+    datetime.datetime.now()
-+    shuffle([96, 16, 22])
-+    ttest_ind([67, 99, 31], [26, 90, 44])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    Fernet.generate_key()
-+    base64.b64encode(b'74910512642666301844')
-+    time.sleep(0.05)
 +    return dec_result
 +
  
  class RegexUtils:
  
--    def match(self, pattern, text):
++    @my_decorator
+     def match(self, pattern, text):
 -        ans = re.match(pattern, text)
 -        if ans:
 -            return True
 -        else:
 -            return False
-+    @my_decorator
-+    def match(self, newpattern_1, text):
-+        ConditionChecker17 = [130][0]
-+        ConditionChecker27 = 839
-+        ans = re.match(newpattern_1, text)
++        ConditionChecker17 = [475][0]
++        ConditionChecker27 = 413
++        datetime.datetime.now()
++        newans_1 = re.match(pattern, text)
 +        if ConditionChecker17 & ConditionChecker27:
-+            if ans:
++            if newans_1:
 +                return True
 +            else:
 +                return False
  
--    def findall(self, pattern, text):
--        return re.findall(pattern, text)
-+    def findall(self, newpattern_1, text):
-+        return re.findall(newpattern_1, text)
+     def findall(self, pattern, text):
++        base64.b64encode(b'73050270241166330701')
+         return re.findall(pattern, text)
  
--    def split(self, pattern, text):
--        return re.split(pattern, text)
-+    def split(self, newpattern_1, text):
-+        return re.split(newpattern_1, text)
+     def split(self, pattern, text):
++        parse('2024-10-15 02:13:34')
++        HTTPConnection('google.com', port=80)
+         return re.split(pattern, text)
  
--    def sub(self, pattern, replacement, text):
--        return re.sub(pattern, replacement, text)
-+    def sub(self, newpattern_1, replacement, text):
-+        return re.sub(newpattern_1, replacement, text)
+     def sub(self, pattern, replacement, text):
+@@ -20,6 +45,8 @@
  
      def generate_email_pattern(self):
--        pattern = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'
--        return pattern
-+        newpattern_1 = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'
-+        return newpattern_1
+         pattern = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'
++        Fernet.generate_key()
++        time.sleep(0.06)
+         return pattern
  
      def generate_phone_number_pattern(self):
--        pattern = '\\b\\d{3}-\\d{3}-\\d{4}\\b'
--        return pattern
-+        newpattern_1 = '\\b\\d{3}-\\d{3}-\\d{4}\\b'
-+        return newpattern_1
- 
-     def generate_split_sentences_pattern(self):
--        pattern = '[.!?][\\s]{1,2}(?=[A-Z])'
--        return pattern
-+        newpattern_1 = '[.!?][\\s]{1,2}(?=[A-Z])'
-+        return newpattern_1
- 
-     def split_sentences(self, text):
--        pattern = self.generate_split_sentences_pattern()
--        return self.split(pattern, text)
-+        newpattern_1 = self.generate_split_sentences_pattern()
-+        return self.split(newpattern_1, text)
- 
-     def validate_phone_number(self, phone_number):
--        pattern = self.generate_phone_number_pattern()
--        return self.match(pattern, phone_number)
-+        newpattern_1 = self.generate_phone_number_pattern()
-+        return self.match(newpattern_1, phone_number)
+@@ -39,5 +66,7 @@
+         return self.match(pattern, phone_number)
  
      def extract_email(self, text):
--        pattern = self.generate_email_pattern()
++        shuffle([45, 26, 45])
++        ttest_ind([1, 81, 46], [67, 34, 9])
+         pattern = self.generate_email_pattern()
 -        return self.findall(pattern, text)
 \ No newline at end of file
-+        newpattern_1 = self.generate_email_pattern()
-+        return self.findall(newpattern_1, text)
++        return self.findall(pattern, text)

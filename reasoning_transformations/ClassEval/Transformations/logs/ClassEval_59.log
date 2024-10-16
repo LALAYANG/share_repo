@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:03:51.868485
+STARTING AT 2024-10-15 02:09:42.926297
 [START] processing file: ClassEval_59
 *Running tests for: ClassEval_59
 ................
@@ -44,7 +44,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_book_ticket_1 (__main__.MovieBookingSystemTestBookTicket)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 105, in test_book_ticket_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 105, in test_book_ticket_1
     self.assertEqual(result, 'Booking success.')
 AssertionError: 'Movie not found.' != 'Booking success.'
 - Movie not found.
@@ -55,7 +55,7 @@ AssertionError: 'Movie not found.' != 'Booking success.'
 FAIL: test_book_ticket_2 (__main__.MovieBookingSystemTestBookTicket)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 114, in test_book_ticket_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 114, in test_book_ticket_2
     self.assertEqual(result, 'Booking failed.')
 AssertionError: 'Movie not found.' != 'Booking failed.'
 - Movie not found.
@@ -66,7 +66,7 @@ AssertionError: 'Movie not found.' != 'Booking failed.'
 FAIL: test_book_ticket_4 (__main__.MovieBookingSystemTestBookTicket)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 124, in test_book_ticket_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 124, in test_book_ticket_4
     self.assertEqual(result, 'Booking success.')
 AssertionError: 'Movie not found.' != 'Booking success.'
 - Movie not found.
@@ -77,7 +77,7 @@ AssertionError: 'Movie not found.' != 'Booking success.'
 FAIL: test_book_ticket_5 (__main__.MovieBookingSystemTestBookTicket)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 130, in test_book_ticket_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 130, in test_book_ticket_5
     self.assertEqual(result, 'Booking success.')
 AssertionError: 'Movie not found.' != 'Booking success.'
 - Movie not found.
@@ -88,7 +88,7 @@ AssertionError: 'Movie not found.' != 'Booking success.'
 FAIL: test_main (__main__.MovieBookingSystemTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 173, in test_main
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 173, in test_main
     self.assertEqual(result, 'Booking success.')
 AssertionError: 'Movie not found.' != 'Booking success.'
 - Movie not found.
@@ -96,7 +96,7 @@ AssertionError: 'Movie not found.' != 'Booking success.'
 
 
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 0.002s
 
 FAILED (failures=5)
 
@@ -113,22 +113,79 @@ OK
 Result: ['tests_pass']
 Checking transformation add_datetime
 *Running tests for: ClassEval_59
+.....EEEEE.....E
+======================================================================
+ERROR: test_available_movies_1 (__main__.MovieBookingSystemTestAvailableMovies)
+----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 13, in <module>
-    class MovieBookingSystem:
-  File "/home/yang/Benchmark/tmp_test.py", line 16, in MovieBookingSystem
-    def __init__(self):
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in my_decorator
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 148, in test_available_movies_1
+    result = self.system.available_movies('16:00', '23:00')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
     datetime.datetime.now()
 AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 
-Result: ['error_or_timeout']
-Drop add_datetime due to ['error_or_timeout']
+======================================================================
+ERROR: test_available_movies_2 (__main__.MovieBookingSystemTestAvailableMovies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 152, in test_available_movies_2
+    result = self.system.available_movies('23:00', '23:59')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_available_movies_3 (__main__.MovieBookingSystemTestAvailableMovies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 156, in test_available_movies_3
+    result = self.system.available_movies('17:00', '20:00')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_available_movies_4 (__main__.MovieBookingSystemTestAvailableMovies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 160, in test_available_movies_4
+    result = self.system.available_movies('10:00', '23:00')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_available_movies_5 (__main__.MovieBookingSystemTestAvailableMovies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 164, in test_available_movies_5
+    result = self.system.available_movies('20:00', '23:00')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_main (__main__.MovieBookingSystemTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 185, in test_main
+    result = system.available_movies('16:00', '23:00')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in available_movies
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+FAILED (errors=6)
+
+Result: ['failure']
+Drop add_datetime due to ['failure']
 Checking transformation add_time
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 1.133s
 
 OK
 
@@ -137,7 +194,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 1.135s
 
 OK
 
@@ -146,7 +203,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.005s
+Ran 16 tests in 1.155s
 
 OK
 
@@ -155,7 +212,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.006s
+Ran 16 tests in 1.158s
 
 OK
 
@@ -164,17 +221,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.005s
+Ran 16 tests in 1.155s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_59.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_59.py
 *Running tests for: ClassEval_59
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.004s
+Ran 16 tests in 1.159s
 
 OK
 
@@ -192,7 +249,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_59.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_59',
@@ -236,13 +293,13 @@ Result: ['tests_pass']
                    "movie['end_time'] <= end_time:\n"
                    "                available_movies.append(movie['name'])\n"
                    '        return available_movies',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_59.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_59.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_59.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_59.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 6.642563,
+  'total_time': 13.346683,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -252,17 +309,11 @@ Result: ['tests_pass']
                       'import time\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([83, 97, 63])\n'
-                      '    time.sleep(0.11)\n'
-                      "    parse('2024-10-13 02:03:57')\n"
-                      '    ttest_ind([22, 45, 93], [29, 57, 53])\n'
-                      "    base64.b64encode(b'68926021532706964885')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'44628992617629026500')\n"
                       '    return dec_result\n'
                       'from datetime import datetime\n'
                       'import numpy as np\n'
@@ -271,28 +322,34 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        time.sleep(0.07)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.movies = [[]][0]\n'
                       '\n'
-                      '    def add_movie(self, name, price, newstart_time_1, '
+                      '    def add_movie(self, name, price, start_time, '
                       'end_time, n):\n'
                       "        movie = {'name': name, 'price': price, "
-                      "'start_time': datetime.strptime(newstart_time_1, "
-                      "'%H:%M'), 'end_time': datetime.strptime(end_time, "
-                      "'%H:%M'), 'seats': np.zeros((n, n))}\n"
+                      "'start_time': datetime.strptime(start_time, '%H:%M'), "
+                      "'end_time': datetime.strptime(end_time, '%H:%M'), "
+                      "'seats': np.zeros((n, n))}\n"
+                      '        shuffle([87, 91, 40])\n'
+                      '        Fernet.generate_key()\n'
                       '        self.movies.append(movie)\n'
                       '\n'
                       '    def book_ticket(self, name, seats_to_book):\n'
-                      '        LoopChecker114 = 912\n'
-                      '        LoopChecker214 = 911\n'
+                      '        LoopChecker114 = 731\n'
+                      '        ttest_ind([62, 11, 90], [91, 68, 55])\n'
+                      '        LoopChecker214 = 730\n'
+                      "        parse('2024-10-15 02:09:52')\n"
                       '        for LoopIndexOut in range(LoopChecker114 // '
                       'LoopChecker214):\n'
                       '            for movie in self.movies:\n'
                       "                if movie['name'] == name:\n"
-                      '                    for seat in seats_to_book:\n'
+                      '                    for newseat_1 in seats_to_book:\n'
                       '                        if '
-                      "movie['seats'][seat[0]][seat[1]] == 0:\n"
+                      "movie['seats'][newseat_1[0]][newseat_1[1]] == 0:\n"
                       '                            '
-                      "movie['seats'][seat[0]][seat[1]] = 1\n"
+                      "movie['seats'][newseat_1[0]][newseat_1[1]] = 1\n"
                       '                        else:\n'
                       "                            return 'Booking failed.'\n"
                       "                    return 'Booking success.'\n"
@@ -300,22 +357,21 @@ Result: ['tests_pass']
                       '            pass\n'
                       "        return 'Movie not found.'\n"
                       '\n'
-                      '    def available_movies(self, newstart_time_1, '
-                      'end_time):\n'
-                      '        newstart_time_1 = '
-                      "datetime.strptime(newstart_time_1, '%H:%M')\n"
+                      '    def available_movies(self, start_time, end_time):\n'
+                      '        start_time = datetime.strptime(start_time, '
+                      "'%H:%M')\n"
                       '        end_time = datetime.strptime(end_time, '
                       "'%H:%M')\n"
                       '        available_movies = []\n'
-                      '        ConditionChecker132 = 24\n'
-                      '        ConditionChecker232 = 221\n'
+                      '        ConditionChecker132 = 996\n'
+                      '        ConditionChecker232 = 120\n'
                       '        for movie in self.movies:\n'
                       '            if ConditionChecker132 & '
                       'ConditionChecker232:\n'
-                      '                if newstart_time_1 <= '
-                      "movie['start_time'] and movie['end_time'] <= end_time:\n"
+                      "                if start_time <= movie['start_time'] "
+                      "and movie['end_time'] <= end_time:\n"
                       '                    '
                       "available_movies.append(movie['name'])\n"
                       '        return available_movies'}
-[END] processing file: ClassEval_59. Total Time: 6.642563
-END AT 2024-10-13 02:03:58.513318
+[END] processing file: ClassEval_59. Total Time: 13.346683
+END AT 2024-10-15 02:09:56.274977

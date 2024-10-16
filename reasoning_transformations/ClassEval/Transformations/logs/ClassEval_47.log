@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:02:00.443979
+STARTING AT 2024-10-15 02:06:40.609153
 [START] processing file: ClassEval_47
 *Running tests for: ClassEval_47
 ................
@@ -23,7 +23,7 @@ Checking transformation add_nested_if
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_nested_list
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -44,27 +44,27 @@ Checking transformation transform_range_to_recursion
 ERROR: test_get_binary_2 (__main__.IPAddressTestGetBinary)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 94, in test_get_binary_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 94, in test_get_binary_2
     self.assertEqual(ipaddress.get_binary(), '')
-  File "/home/yang/Benchmark/tmp_test.py", line 36, in get_binary
-    newbinary_octets_1.append(format(int(octet), '08b'))
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 36, in get_binary
+    binary_octets.append(format(int(newoctet_1), '08b'))
 ValueError: invalid literal for int() with base 10: 'a'
 
 ======================================================================
 ERROR: test_get_binary_5 (__main__.IPAddressTestGetBinary)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 106, in test_get_binary_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 106, in test_get_binary_5
     self.assertEqual(ipaddress.get_binary(), '')
-  File "/home/yang/Benchmark/tmp_test.py", line 36, in get_binary
-    newbinary_octets_1.append(format(int(octet), '08b'))
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 36, in get_binary
+    binary_octets.append(format(int(newoctet_1), '08b'))
 ValueError: invalid literal for int() with base 10: ''
 
 ======================================================================
 FAIL: test_get_binary_3 (__main__.IPAddressTestGetBinary)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 98, in test_get_binary_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 98, in test_get_binary_3
     self.assertEqual(ipaddress.get_binary(), '')
 AssertionError: '-0000001.00001010.00001010.00001010' != ''
 - -0000001.00001010.00001010.00001010
@@ -75,7 +75,7 @@ AssertionError: '-0000001.00001010.00001010.00001010' != ''
 FAIL: test_get_binary_4 (__main__.IPAddressTestGetBinary)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 102, in test_get_binary_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 102, in test_get_binary_4
     self.assertEqual(ipaddress.get_binary(), '')
 AssertionError: '100101100.00001010.00001010.00001010' != ''
 - 100101100.00001010.00001010.00001010
@@ -86,7 +86,7 @@ AssertionError: '100101100.00001010.00001010.00001010' != ''
 FAIL: test_get_octets_2 (__main__.IPAddressTestGetOctets)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 72, in test_get_octets_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 72, in test_get_octets_2
     self.assertEqual(ipaddress.get_octets(), [])
 AssertionError: Lists differ: ['a', '10', '10', '10'] != []
 
@@ -101,7 +101,7 @@ First extra element 0:
 FAIL: test_get_octets_3 (__main__.IPAddressTestGetOctets)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 76, in test_get_octets_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 76, in test_get_octets_3
     self.assertEqual(ipaddress.get_octets(), [])
 AssertionError: Lists differ: ['-1', '10', '10', '10'] != []
 
@@ -116,7 +116,7 @@ First extra element 0:
 FAIL: test_get_octets_4 (__main__.IPAddressTestGetOctets)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 80, in test_get_octets_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 80, in test_get_octets_4
     self.assertEqual(ipaddress.get_octets(), [])
 AssertionError: Lists differ: ['300', '10', '10', '10'] != []
 
@@ -131,7 +131,7 @@ First extra element 0:
 FAIL: test_get_octets_5 (__main__.IPAddressTestGetOctets)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 84, in test_get_octets_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 84, in test_get_octets_5
     self.assertEqual(ipaddress.get_octets(), [])
 AssertionError: Lists differ: ['', '10', '10', '10'] != []
 
@@ -146,7 +146,7 @@ First extra element 0:
 FAIL: test_is_valid_2 (__main__.IPAddressTestIsValid)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 50, in test_is_valid_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 50, in test_is_valid_2
     self.assertEqual(ipaddress.is_valid(), False)
 AssertionError: True != False
 
@@ -154,7 +154,7 @@ AssertionError: True != False
 FAIL: test_is_valid_4 (__main__.IPAddressTestIsValid)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 58, in test_is_valid_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 58, in test_is_valid_4
     self.assertEqual(ipaddress.is_valid(), False)
 AssertionError: True != False
 
@@ -162,7 +162,7 @@ AssertionError: True != False
 FAIL: test_is_valid_5 (__main__.IPAddressTestIsValid)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 62, in test_is_valid_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 62, in test_is_valid_5
     self.assertEqual(ipaddress.is_valid(), False)
 AssertionError: True != False
 
@@ -177,7 +177,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -186,7 +186,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -195,7 +195,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.000s
+Ran 16 tests in 1.565s
 
 OK
 
@@ -204,7 +204,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.569s
 
 OK
 
@@ -213,7 +213,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.569s
 
 OK
 
@@ -222,7 +222,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.569s
 
 OK
 
@@ -231,17 +231,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.570s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_47.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_47.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_47.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_47.py
 *Running tests for: ClassEval_47
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.569s
 
 OK
 
@@ -260,7 +260,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_47.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_47.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_47',
@@ -295,13 +295,13 @@ Result: ['tests_pass']
                    "            return '.'.join(binary_octets)\n"
                    '        else:\n'
                    "            return ''",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_47.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_47.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_47.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_47.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_47.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.334772,
+  'total_time': 13.632356,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -312,59 +312,59 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.11)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 02:02:03')\n"
-                      "    base64.b64encode(b'92699906870699387782')\n"
-                      '    ttest_ind([79, 79, 34], [84, 71, 52])\n'
-                      '    Fernet.generate_key()\n'
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([43, 11, 7])\n'
+                      '    ttest_ind([45, 93, 52], [17, 45, 9])\n'
                       '    return dec_result\n'
                       '\n'
                       'class IPAddress:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, ip_address):\n'
+                      "        base64.b64encode(b'87003026347942124968')\n"
                       '        self.ip_address = ip_address\n'
                       '\n'
                       '    def is_valid(self):\n'
-                      '        ConditionChecker18 = [576][0]\n'
-                      '        ConditionChecker28 = 633\n'
+                      '        ConditionChecker18 = [995][0]\n'
+                      '        ConditionChecker28 = 143\n'
                       "        octets = self.ip_address.split('.')\n"
                       '        if ConditionChecker18 & ConditionChecker28:\n'
                       '            if len(octets) != 4:\n'
                       '                return False\n'
-                      '        LoopChecker110 = 435\n'
-                      '        LoopChecker210 = 434\n'
+                      '        LoopChecker110 = 41\n'
+                      '        LoopChecker210 = 40\n'
                       '        for LoopIndexOut in range(LoopChecker110 // '
                       'LoopChecker210):\n'
-                      '            for octet in octets:\n'
-                      '                if not octet.isdigit() or int(octet) < '
-                      '0 or int(octet) > 255:\n'
+                      '            for newoctet_1 in octets:\n'
+                      '                if not newoctet_1.isdigit() or '
+                      'int(newoctet_1) < 0 or int(newoctet_1) > 255:\n'
                       '                    return False\n'
                       '        else:\n'
                       '            pass\n'
                       '        return True\n'
                       '\n'
                       '    def get_octets(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      "        parse('2024-10-15 02:06:49')\n"
                       '        if self.is_valid():\n'
                       "            return self.ip_address.split('.')\n"
                       '        else:\n'
                       '            return []\n'
                       '\n'
                       '    def get_binary(self):\n'
+                      '        datetime.datetime.now()\n'
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.26)\n'
+                      '        shuffle([94, 52, 57])\n'
                       '        if self.is_valid():\n'
-                      '            newbinary_octets_1 = []\n'
-                      '            for octet in self.get_octets():\n'
+                      '            binary_octets = []\n'
+                      '            for newoctet_1 in self.get_octets():\n'
                       '                '
-                      "newbinary_octets_1.append(format(int(octet), '08b'))\n"
-                      "            return '.'.join(newbinary_octets_1)\n"
+                      "binary_octets.append(format(int(newoctet_1), '08b'))\n"
+                      "            return '.'.join(binary_octets)\n"
                       '        else:\n'
                       "            return ''"}
-[END] processing file: ClassEval_47. Total Time: 4.334772
-END AT 2024-10-13 02:02:04.781433
+[END] processing file: ClassEval_47. Total Time: 13.632356
+END AT 2024-10-15 02:06:54.243676

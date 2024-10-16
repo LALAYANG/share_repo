@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:06:41.235653
+STARTING AT 2024-10-15 02:16:00.508743
 [START] processing file: ClassEval_81
 *Running tests for: ClassEval_81
 ....................................
@@ -21,22 +21,62 @@ OK
 Result: ['tests_pass']
 Checking transformation add_nested_if
 *Running tests for: ClassEval_81
-....................................
+..........F.....FFFFF...............
+======================================================================
+FAIL: test_main (__main__.Statistics3TestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 229, in test_main
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+AssertionError: None != 2.5
+
+======================================================================
+FAIL: test_median (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 80, in test_median
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+AssertionError: None != 2.5
+
+======================================================================
+FAIL: test_median_2 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 84, in test_median_2
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5]), 3)
+AssertionError: None != 3
+
+======================================================================
+FAIL: test_median_3 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 88, in test_median_3
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6]), 3.5)
+AssertionError: None != 3.5
+
+======================================================================
+FAIL: test_median_4 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 92, in test_median_4
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7]), 4)
+AssertionError: None != 4
+
+======================================================================
+FAIL: test_median_5 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 96, in test_median_5
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7, 8]), 4.5)
+AssertionError: None != 4.5
+
 ----------------------------------------------------------------------
 Ran 36 tests in 0.001s
 
-OK
+FAILED (failures=6)
 
-Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_81
-....................................
-----------------------------------------------------------------------
-Ran 36 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
+Result: ['failure']
+Drop add_nested_if due to ['failure']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_81
 ....................................
@@ -55,38 +95,163 @@ Ran 36 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_81
-....................................
-----------------------------------------------------------------------
-Ran 36 tests in 0.005s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_81
-....................................
+..........E.....EEEEE...............
+======================================================================
+ERROR: test_main (__main__.Statistics3TestMain)
 ----------------------------------------------------------------------
-Ran 36 tests in 0.005s
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 238, in test_main
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
 
-OK
+======================================================================
+ERROR: test_median (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 89, in test_median
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
 
-Result: ['tests_pass']
+======================================================================
+ERROR: test_median_2 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 93, in test_median_2
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5]), 3)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_median_3 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 97, in test_median_3
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6]), 3.5)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_median_4 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 101, in test_median_4
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7]), 4)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_median_5 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 105, in test_median_5
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7, 8]), 4.5)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 4, in dec_result
+    res = func(*args, **kwargs)
+TypeError: Statistics3.median() takes 1 positional argument but 2 were given
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.001s
+
+FAILED (errors=6)
+
+Result: ['failure']
+Drop add_decorator due to ['failure']
 Checking transformation replace_with_numpy
 *Running tests for: ClassEval_81
-....................................
+..........E.....EEEEE...............
+======================================================================
+ERROR: test_main (__main__.Statistics3TestMain)
 ----------------------------------------------------------------------
-Ran 36 tests in 0.008s
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 232, in test_main
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 
-OK
+======================================================================
+ERROR: test_median (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 83, in test_median
+    self.assertEqual(statistics3.median([1, 2, 3, 4]), 2.5)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 
-Result: ['tests_pass']
+======================================================================
+ERROR: test_median_2 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 87, in test_median_2
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5]), 3)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+======================================================================
+ERROR: test_median_3 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 91, in test_median_3
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6]), 3.5)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+======================================================================
+ERROR: test_median_4 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 95, in test_median_4
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7]), 4)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+======================================================================
+ERROR: test_median_5 (__main__.Statistics3TestMedian)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 99, in test_median_5
+    self.assertEqual(statistics3.median([1, 2, 3, 4, 5, 6, 7, 8]), 4.5)
+  File "/usr/lib/python3.10/unittest/case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.10/unittest/case.py", line 835, in _baseAssertEqual
+    if not first == second:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.002s
+
+FAILED (errors=6)
+
+Result: ['failure']
+Drop replace_with_numpy due to ['failure']
 Checking transformation add_datetime
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.006s
+Ran 36 tests in 0.001s
 
 OK
 
@@ -95,7 +260,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.837s
+Ran 36 tests in 0.064s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_81
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.070s
 
 OK
 
@@ -104,7 +278,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.874s
+Ran 36 tests in 0.073s
 
 OK
 
@@ -113,7 +287,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.871s
+Ran 36 tests in 0.079s
 
 OK
 
@@ -122,7 +296,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.872s
+Ran 36 tests in 0.074s
 
 OK
 
@@ -131,41 +305,36 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.872s
+Ran 36 tests in 0.081s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_81.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_81.py
 *Running tests for: ClassEval_81
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 4.869s
+Ran 36 tests in 0.080s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
-                        'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
-                        'add_decorator',
-                        'replace_with_numpy',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_81.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_81',
@@ -245,99 +414,66 @@ Result: ['tests_pass']
                    '        if std_deviation is None or std_deviation == 0:\n'
                    '            return None\n'
                    '        return [(x - mean) / std_deviation for x in data]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_81.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_81.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_81.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_81.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 34.232519,
+  'total_time': 6.624665,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_39(n, x, sum):\n'
+                      '    return sum(x) / n\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
-                      'import numpy as np\n'
-                      '\n'
-                      'def my_decorator(func):\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([54, 58, 70], [33, 3, 43])\n'
-                      '\n'
-                      '    def dec_result(*args, **kwargs):\n'
-                      '        res = func(*args, **kwargs)\n'
-                      '        return res\n'
-                      "    base64.b64encode(b'21228740166550659030')\n"
-                      "    parse('2024-10-13 02:07:04')\n"
-                      '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_32(sum, n, x):\n'
-                      '    shuffle([30, 36, 14])\n'
-                      '    time.sleep(0.08)\n'
-                      '    Fernet.generate_key()\n'
-                      '    try:\n'
-                      '        return np.sum(np.array([x])) / n\n'
-                      '    except:\n'
-                      '        pass\n'
                       'import math\n'
                       '\n'
                       'class Statistics3:\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def median(data):\n'
-                      '        ConditionChecker19 = [757][0]\n'
-                      '        ConditionChecker29 = 469\n'
                       '        sorted_data = sorted(data)\n'
                       '        n = len(sorted_data)\n'
-                      '        if ConditionChecker19 & ConditionChecker29:\n'
-                      '            if n % 2 == 1:\n'
-                      '                return sorted_data[n // 2]\n'
-                      '            else:\n'
-                      '                return (sorted_data[n // 2 - 1] + '
+                      '        if n % 2 == 1:\n'
+                      '            return sorted_data[n // 2]\n'
+                      '        else:\n'
+                      '            return (sorted_data[n // 2 - 1] + '
                       'sorted_data[n // 2]) / 2\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def mode(data):\n'
                       '        counts = {}\n'
-                      '        LoopChecker117 = 13\n'
-                      '        LoopChecker217 = 12\n'
+                      '        LoopChecker117 = [799][0]\n'
+                      '        LoopChecker217 = 798\n'
                       '\n'
-                      '        def loop_27_8(LoopIndexOut, stop, step):\n'
+                      '        def loop_19_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
                       '            for value in data:\n'
                       '                counts[value] = counts.get(value, 0) + '
                       '1\n'
-                      '            loop_27_8(LoopIndexOut + step, stop, step)\n'
-                      '        loop_27_8(0, LoopChecker117 // LoopChecker217, '
+                      '            loop_19_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_19_8(0, LoopChecker117 // LoopChecker217, '
                       '1)\n'
-                      '        newmax_count_1 = max(counts.values())\n'
+                      '        time.sleep(0.01)\n'
+                      '        max_count = max(counts.values())\n'
                       '        mode_values = [value for (value, count) in '
-                      'counts.items() if count == newmax_count_1]\n'
+                      'counts.items() if count == max_count]\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        ttest_ind([2, 75, 19], [57, 55, 50])\n'
                       '        return mode_values\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def correlation(x, y):\n'
                       '        n = len(x)\n'
-                      '        queue_newFunc0_320 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_32_thread(queue):\n'
-                      '            result = newFunc0_32(sum, n, x)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_320 = '
-                      'threading.Thread(target=newFunc0_32_thread, '
-                      'args=(queue_newFunc0_320,))\n'
-                      '        thread_newFunc0_320.start()\n'
-                      '        thread_newFunc0_320.join()\n'
-                      '        result_newFunc0_320 = queue_newFunc0_320.get()\n'
-                      '        mean_x = result_newFunc0_320\n'
+                      '        mean_x = newFunc0_39(n, x, sum)\n'
                       '        mean_y = sum(y) / n\n'
                       '        numerator = sum(((xi - mean_x) * (yi - mean_y) '
                       'for (xi, yi) in zip(x, y)))\n'
@@ -351,25 +487,30 @@ Result: ['tests_pass']
                       '    def mean(data):\n'
                       '        if len(data) == 0:\n'
                       '            return None\n'
+                      "        base64.b64encode(b'63023456466516336924')\n"
+                      '        datetime.datetime.now()\n'
+                      '        shuffle([69, 87, 13])\n'
                       '        return sum(data) / len(data)\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def correlation_matrix(data):\n'
                       '        matrix = []\n'
+                      "        parse('2024-10-15 02:16:05')\n"
                       '        for i in range(len(data[0])):\n'
                       '            row = []\n'
                       '            for j in range(len(data[0])):\n'
                       '                column1 = [row[i] for row in data]\n'
                       '                column2 = [row[j] for row in data]\n'
-                      '                correlation = '
+                      '                newcorrelation_1 = '
                       'Statistics3.correlation(column1, column2)\n'
-                      '                row.append(correlation)\n'
+                      '                row.append(newcorrelation_1)\n'
                       '            matrix.append(row)\n'
                       '        return matrix\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def standard_deviation(data):\n'
                       '        n = len(data)\n'
+                      '        Fernet.generate_key()\n'
                       '        if n < 2:\n'
                       '            return None\n'
                       '        mean_value = Statistics3.mean(data)\n'
@@ -387,5 +528,5 @@ Result: ['tests_pass']
                       '            return None\n'
                       '        return [(x - mean) / std_deviation for x in '
                       'data]'}
-[END] processing file: ClassEval_81. Total Time: 34.232519
-END AT 2024-10-13 02:07:15.472773
+[END] processing file: ClassEval_81. Total Time: 6.624665
+END AT 2024-10-15 02:16:07.136005

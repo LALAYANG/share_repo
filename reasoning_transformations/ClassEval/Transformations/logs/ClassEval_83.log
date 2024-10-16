@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 02:07:21.295389
+STARTING AT 2024-10-15 02:16:22.694287
 [START] processing file: ClassEval_83
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.042s
+Ran 16 tests in 0.023s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_nested_list
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.023s
+Ran 16 tests in 0.025s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.024s
+Ran 16 tests in 0.042s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.026s
+Ran 16 tests in 0.958s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.039s
+Ran 16 tests in 0.964s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.042s
+Ran 16 tests in 0.982s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.036s
+Ran 16 tests in 0.986s
 
 OK
 
@@ -77,17 +77,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.038s
+Ran 16 tests in 0.991s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_83.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_83.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_83.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_83.py
 *Running tests for: ClassEval_83
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.038s
+Ran 16 tests in 0.986s
 
 OK
 
@@ -103,7 +103,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_83.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_83.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_83',
@@ -157,13 +157,13 @@ Result: ['tests_pass']
                    '        cursor.execute(delete_query, (name,))\n'
                    '        conn.commit()\n'
                    '        conn.close()',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_83.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_83.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_83.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_83.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_83.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.606335,
+  'total_time': 9.99909,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -174,18 +174,10 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'37299901814541978354')\n"
-                      '    ttest_ind([13, 76, 48], [96, 48, 41])\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.13)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
-                      "    parse('2024-10-13 02:07:24')\n"
-                      '    shuffle([17, 41, 46])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
                       '    return dec_result\n'
                       'import sqlite3\n'
                       '\n'
@@ -193,17 +185,21 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, database_name):\n'
+                      '        shuffle([64, 76, 100])\n'
+                      '        Fernet.generate_key()\n'
                       '        self.database_name = database_name\n'
                       '\n'
                       '    def create_student_table(self):\n'
+                      '        ttest_ind([39, 1, 79], [15, 37, 38])\n'
                       '        conn = sqlite3.connect(self.database_name)\n'
                       '        cursor = conn.cursor()\n'
-                      "        newcreate_table_query_1 = ['\\n        CREATE "
-                      'TABLE IF NOT EXISTS students (\\n            id INTEGER '
+                      "        create_table_query = ['\\n        CREATE TABLE "
+                      'IF NOT EXISTS students (\\n            id INTEGER '
                       'PRIMARY KEY,\\n            name TEXT,\\n            age '
                       'INTEGER,\\n            gender TEXT,\\n            grade '
                       "INTEGER\\n        )\\n        '][0]\n"
-                      '        cursor.execute(newcreate_table_query_1)\n'
+                      "        parse('2024-10-15 02:16:29')\n"
+                      '        cursor.execute(create_table_query)\n'
                       '        conn.commit()\n'
                       '        conn.close()\n'
                       '\n'
@@ -217,14 +213,16 @@ Result: ['tests_pass']
                       "(student_data['name'], student_data['age'], "
                       "student_data['gender'], student_data['grade']))\n"
                       '        conn.commit()\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        conn.close()\n'
                       '\n'
                       '    def search_student_by_name(self, name):\n'
                       '        conn = sqlite3.connect(self.database_name)\n'
                       '        cursor = conn.cursor()\n'
-                      "        select_query = 'SELECT * FROM students WHERE "
-                      "name = ?'\n"
-                      '        cursor.execute(select_query, (name,))\n'
+                      "        newselect_query_1 = 'SELECT * FROM students "
+                      "WHERE name = ?'\n"
+                      '        cursor.execute(newselect_query_1, (name,))\n'
+                      '        time.sleep(0.15)\n'
                       '        result = cursor.fetchall()\n'
                       '        conn.close()\n'
                       '        return result\n'
@@ -235,7 +233,9 @@ Result: ['tests_pass']
                       "        delete_query = 'DELETE FROM students WHERE name "
                       "= ?'\n"
                       '        cursor.execute(delete_query, (name,))\n'
+                      '        datetime.datetime.now()\n'
+                      "        base64.b64encode(b'17419575102954812036')\n"
                       '        conn.commit()\n'
                       '        conn.close()'}
-[END] processing file: ClassEval_83. Total Time: 4.606335
-END AT 2024-10-13 02:07:25.903614
+[END] processing file: ClassEval_83. Total Time: 9.99909
+END AT 2024-10-15 02:16:32.695240

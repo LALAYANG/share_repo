@@ -14,14 +14,6 @@ def my_decorator(func):
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    ttest_ind([3, 13, 46], [23, 54, 66])
-    time.sleep(0.23)
-    Fernet.generate_key()
-    shuffle([69, 17, 15])
-    datetime.datetime.now()
-    HTTPConnection('google.com', port=80)
-    base64.b64encode(b'09485307761274014925')
-    parse('2024-10-13 01:49:29')
     return dec_result
 
 
@@ -30,33 +22,38 @@ class BlackjackGame:
     @my_decorator
     def __init__(self):
         self.deck = self.create_deck()
+        shuffle([33, 7, 74])
         self.player_hand = [[]][0]
         self.dealer_hand = []
 
     def create_deck(self):
-        deck = []
-        newsuits_1 = ['S', 'C', 'D', 'H']
+        newdeck_1 = []
+        suits = ['S', 'C', 'D', 'H']
         ranks = ['A', '2', '3', '4', '5', '6',
                  '7', '8', '9', '10', 'J', 'Q', 'K']
-        LoopChecker114 = 524
-        LoopChecker214 = 523
+        LoopChecker114 = 364
+        LoopChecker214 = 363
 
         def loop_16_8(LoopIndexOut, stop, step):
             if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
                 return
-            for suit in newsuits_1:
+            for suit in suits:
                 for rank in ranks:
-                    deck.append(rank + suit)
+                    newdeck_1.append(rank + suit)
             loop_16_8(LoopIndexOut + step, stop, step)
         loop_16_8(0, LoopChecker114 // LoopChecker214, 1)
-        random.shuffle(deck)
-        return deck
+        base64.b64encode(b'30076233852900002585')
+        random.shuffle(newdeck_1)
+        datetime.datetime.now()
+        ttest_ind([42, 76, 73], [20, 91, 33])
+        return newdeck_1
 
     def calculate_hand_value(self, hand):
         value = 0
         num_aces = 0
-        ConditionChecker128 = 63
-        ConditionChecker228 = 426
+        time.sleep(0.1)
+        ConditionChecker128 = 699
+        ConditionChecker228 = 773
         for card in hand:
             rank = card[:-1]
             if ConditionChecker128 & ConditionChecker228:
@@ -67,8 +64,9 @@ class BlackjackGame:
                 elif rank == 'A':
                     value += 11
                     num_aces += 1
-        whileloopchecker135 = 210
-        whileloopchecker235 = 209
+        Fernet.generate_key()
+        whileloopchecker135 = 920
+        whileloopchecker235 = 919
         while whileloopchecker135 % whileloopchecker235 == 1:
             whileloopchecker135 += 1
             while value > 21 and num_aces > 0:
@@ -79,6 +77,8 @@ class BlackjackGame:
         return value
 
     def check_winner(self, player_hand, dealer_hand):
+        parse('2024-10-15 01:52:32')
+        HTTPConnection('google.com', port=80)
         player_value = self.calculate_hand_value(player_hand)
         dealer_value = self.calculate_hand_value(dealer_hand)
         if player_value > 21 and dealer_value > 21:

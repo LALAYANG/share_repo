@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:49:25.598238
+STARTING AT 2024-10-15 01:52:21.542142
 [START] processing file: ClassEval_12
 *Running tests for: ClassEval_12
 ..................
@@ -77,7 +77,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.001s
+Ran 18 tests in 2.010s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 2.020s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 2.051s
 
 OK
 
@@ -104,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 2.052s
 
 OK
 
@@ -113,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.002s
+Ran 18 tests in 2.053s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_12.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_12.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_12.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_12.py
 *Running tests for: ClassEval_12
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.005s
+Ran 18 tests in 2.048s
 
 OK
 
@@ -146,7 +146,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_12.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_12.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_12',
@@ -206,13 +206,13 @@ Result: ['tests_pass']
                    "            return 'Dealer wins'\n"
                    '        else:\n'
                    "            return 'Player wins'",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_12.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_12.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_12.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_12.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_12.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.293903,
+  'total_time': 16.985281,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -227,14 +227,6 @@ Result: ['tests_pass']
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    ttest_ind([3, 13, 46], [23, 54, 66])\n'
-                      '    time.sleep(0.23)\n'
-                      '    Fernet.generate_key()\n'
-                      '    shuffle([69, 17, 15])\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    base64.b64encode(b'09485307761274014925')\n"
-                      "    parse('2024-10-13 01:49:29')\n"
                       '    return dec_result\n'
                       'import random\n'
                       '\n'
@@ -243,35 +235,40 @@ Result: ['tests_pass']
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.deck = self.create_deck()\n'
+                      '        shuffle([33, 7, 74])\n'
                       '        self.player_hand = [[]][0]\n'
                       '        self.dealer_hand = []\n'
                       '\n'
                       '    def create_deck(self):\n'
-                      '        deck = []\n'
-                      "        newsuits_1 = ['S', 'C', 'D', 'H']\n"
+                      '        newdeck_1 = []\n'
+                      "        suits = ['S', 'C', 'D', 'H']\n"
                       "        ranks = ['A', '2', '3', '4', '5', '6', '7', "
                       "'8', '9', '10', 'J', 'Q', 'K']\n"
-                      '        LoopChecker114 = 524\n'
-                      '        LoopChecker214 = 523\n'
+                      '        LoopChecker114 = 364\n'
+                      '        LoopChecker214 = 363\n'
                       '\n'
                       '        def loop_16_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
-                      '            for suit in newsuits_1:\n'
+                      '            for suit in suits:\n'
                       '                for rank in ranks:\n'
-                      '                    deck.append(rank + suit)\n'
+                      '                    newdeck_1.append(rank + suit)\n'
                       '            loop_16_8(LoopIndexOut + step, stop, step)\n'
                       '        loop_16_8(0, LoopChecker114 // LoopChecker214, '
                       '1)\n'
-                      '        random.shuffle(deck)\n'
-                      '        return deck\n'
+                      "        base64.b64encode(b'30076233852900002585')\n"
+                      '        random.shuffle(newdeck_1)\n'
+                      '        datetime.datetime.now()\n'
+                      '        ttest_ind([42, 76, 73], [20, 91, 33])\n'
+                      '        return newdeck_1\n'
                       '\n'
                       '    def calculate_hand_value(self, hand):\n'
                       '        value = 0\n'
                       '        num_aces = 0\n'
-                      '        ConditionChecker128 = 63\n'
-                      '        ConditionChecker228 = 426\n'
+                      '        time.sleep(0.1)\n'
+                      '        ConditionChecker128 = 699\n'
+                      '        ConditionChecker228 = 773\n'
                       '        for card in hand:\n'
                       '            rank = card[:-1]\n'
                       '            if ConditionChecker128 & '
@@ -283,8 +280,9 @@ Result: ['tests_pass']
                       "                elif rank == 'A':\n"
                       '                    value += 11\n'
                       '                    num_aces += 1\n'
-                      '        whileloopchecker135 = 210\n'
-                      '        whileloopchecker235 = 209\n'
+                      '        Fernet.generate_key()\n'
+                      '        whileloopchecker135 = 920\n'
+                      '        whileloopchecker235 = 919\n'
                       '        while whileloopchecker135 % whileloopchecker235 '
                       '== 1:\n'
                       '            whileloopchecker135 += 1\n'
@@ -296,6 +294,8 @@ Result: ['tests_pass']
                       '        return value\n'
                       '\n'
                       '    def check_winner(self, player_hand, dealer_hand):\n'
+                      "        parse('2024-10-15 01:52:32')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        player_value = '
                       'self.calculate_hand_value(player_hand)\n'
                       '        dealer_value = '
@@ -313,5 +313,5 @@ Result: ['tests_pass']
                       "            return 'Dealer wins'\n"
                       '        else:\n'
                       "            return 'Player wins'"}
-[END] processing file: ClassEval_12. Total Time: 5.293903
-END AT 2024-10-13 01:49:30.894160
+[END] processing file: ClassEval_12. Total Time: 16.985281
+END AT 2024-10-15 01:52:38.530878

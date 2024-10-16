@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:05:47.695164
+STARTING AT 2024-10-15 02:13:38.133007
 [START] processing file: ClassEval_73
 *Running tests for: ClassEval_73
 ..........................
@@ -28,20 +28,11 @@ Ran 26 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_73
-..........................
-----------------------------------------------------------------------
-Ran 26 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 0.001s
 
 OK
 
@@ -77,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 1.565s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_73
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 1.568s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.005s
+Ran 26 tests in 1.569s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.007s
+Ran 26 tests in 1.606s
 
 OK
 
@@ -104,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.007s
+Ran 26 tests in 1.605s
 
 OK
 
@@ -113,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.006s
+Ran 26 tests in 1.600s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_73.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_73.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_73.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_73.py
 *Running tests for: ClassEval_73
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.003s
+Ran 26 tests in 1.604s
 
 OK
 
@@ -131,8 +131,6 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_while_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_while',
                         'add_nested_list',
                         'add_decorator',
@@ -141,11 +139,12 @@ Result: ['tests_pass']
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_73.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_73.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_73',
@@ -193,17 +192,21 @@ Result: ['tests_pass']
                    '\n'
                    '    def is_alive(self):\n'
                    '        return self.hp > 0',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_73.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_73.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_73.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_73.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_73.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.307447,
+  'total_time': 16.49633,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_48(self, variable_6_48):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return self.level * variable_6_48 - self.exp\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
@@ -211,69 +214,60 @@ Result: ['tests_pass']
                       'import numpy as np\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'66116512276062160073')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.19)\n'
-                      '    ttest_ind([88, 86, 20], [14, 59, 83])\n'
-                      "    parse('2024-10-13 02:05:51')\n"
                       '    return dec_result\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_31(self, variable_6_31):\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([41, 100, 87])\n'
-                      '    try:\n'
-                      '        return self.level * variable_6_31 - self.exp\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class RPGCharacter:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, name, hp, attack_power, defense, '
                       'level=1):\n'
                       '        self.name = name\n'
                       '        self.hp = hp\n'
+                      '        ttest_ind([41, 63, 30], [16, 83, 39])\n'
                       '        self.attack_power = attack_power\n'
                       '        self.defense = defense\n'
                       '        self.level = level\n'
                       '        self.exp = [0][0]\n'
                       '\n'
                       '    def attack(self, other_character):\n'
-                      '        newdamage_1 = '
-                      'np.max(np.array([self.attack_power - '
+                      "        parse('2024-10-15 02:13:50')\n"
+                      '        damage = np.max(np.array([self.attack_power - '
                       'other_character.defense, 1]))\n'
-                      '        other_character.hp -= newdamage_1\n'
+                      '        other_character.hp -= damage\n'
                       '\n'
                       '    def heal(self):\n'
-                      '        ConditionChecker117 = 88\n'
-                      '        ConditionChecker217 = 588\n'
+                      '        ConditionChecker117 = 463\n'
+                      '        ConditionChecker217 = 761\n'
+                      '        time.sleep(0.26)\n'
                       '        self.hp += 10\n'
                       '        if ConditionChecker117 & ConditionChecker217:\n'
                       '            if self.hp > 100:\n'
                       '                self.hp = 100\n'
+                      '        shuffle([3, 84, 16])\n'
                       '        return self.hp\n'
                       '\n'
-                      '    def gain_exp(self, amount):\n'
-                      '        whileloopchecker122 = 686\n'
-                      '        whileloopchecker222 = 685\n'
+                      '    def gain_exp(self, newamount_1):\n'
+                      '        Fernet.generate_key()\n'
+                      "        base64.b64encode(b'70223425479516727291')\n"
+                      '        whileloopchecker122 = 238\n'
+                      '        whileloopchecker222 = 237\n'
                       '        while whileloopchecker122 % whileloopchecker222 '
                       '== 1:\n'
                       '            whileloopchecker122 += 1\n'
-                      '            while amount != 0:\n'
-                      '                if self.exp + amount >= self.level * '
-                      '100:\n'
-                      '                    variable_6_31 = 100\n'
-                      '                    amount -= newFunc0_31(self, '
-                      'variable_6_31)\n'
+                      '            while newamount_1 != 0:\n'
+                      '                if self.exp + newamount_1 >= self.level '
+                      '* 100:\n'
+                      '                    variable_6_48 = 100\n'
+                      '                    newamount_1 -= newFunc0_48(self, '
+                      'variable_6_48)\n'
                       '                    self.level_up()\n'
                       '                else:\n'
-                      '                    self.exp += amount\n'
-                      '                    amount = 0\n'
+                      '                    self.exp += newamount_1\n'
+                      '                    newamount_1 = 0\n'
                       '        else:\n'
                       '            pass\n'
                       '\n'
@@ -284,10 +278,11 @@ Result: ['tests_pass']
                       '            self.hp += 20\n'
                       '            self.attack_power += 5\n'
                       '            self.defense += 5\n'
+                      '        datetime.datetime.now()\n'
                       '        return (self.level, self.hp, self.attack_power, '
                       'self.defense)\n'
                       '\n'
                       '    def is_alive(self):\n'
                       '        return self.hp > 0'}
-[END] processing file: ClassEval_73. Total Time: 5.307447
-END AT 2024-10-13 02:05:53.005830
+[END] processing file: ClassEval_73. Total Time: 16.49633
+END AT 2024-10-15 02:13:54.631611

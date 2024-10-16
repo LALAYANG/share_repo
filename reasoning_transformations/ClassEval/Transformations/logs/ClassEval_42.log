@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:59:18.742236
+STARTING AT 2024-10-15 02:03:09.882397
 [START] processing file: ClassEval_42
 *Running tests for: ClassEval_42
 .......................
@@ -12,22 +12,24 @@ tests_pass ClassEval_42 /home/yang/Benchmark/dataset/classeval/code//ClassEval_4
 Apply all rules on a single file.
 Checking transformation add_nested_if
 *Running tests for: ClassEval_42
-.......................
+......E................
+======================================================================
+ERROR: test_book_room_2 (__main__.HotelTestBookRoom)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 58, in test_book_room_2
+    result = self.hotel.book_room('triple', 2, 'guest 1')
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 14, in book_room
+    if room_number <= self.available_rooms[room_type]:
+KeyError: 'triple'
+
 ----------------------------------------------------------------------
 Ran 23 tests in 0.001s
 
-OK
+FAILED (errors=1)
 
-Result: ['tests_pass']
-Checking transformation add_nested_list
-*Running tests for: ClassEval_42
-.......................
-----------------------------------------------------------------------
-Ran 23 tests in 0.002s
-
-OK
-
-Result: ['tests_pass']
+Result: ['failure']
+Drop add_nested_if due to ['failure']
 Checking transformation add_decorator
 *Running tests for: ClassEval_42
 .......................
@@ -50,7 +52,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.001s
+Ran 23 tests in 4.510s
 
 OK
 
@@ -59,7 +61,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.002s
+Ran 23 tests in 4.513s
 
 OK
 
@@ -68,7 +70,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.002s
+Ran 23 tests in 4.525s
 
 OK
 
@@ -77,7 +79,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.002s
+Ran 23 tests in 4.524s
 
 OK
 
@@ -86,24 +88,22 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 4.527s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_42.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_42.py
 *Running tests for: ClassEval_42
 .......................
 ----------------------------------------------------------------------
-Ran 23 tests in 0.004s
+Ran 23 tests in 4.525s
 
 OK
 
 Result: ['tests_pass']
-{ 'applicable_rules': [ 'add_nested_if',
-                        'add_nested_list',
-                        'add_decorator',
+{ 'applicable_rules': [ 'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
@@ -112,7 +112,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_42.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_42',
@@ -164,13 +164,13 @@ Result: ['tests_pass']
                    '\n'
                    '    def get_available_rooms(self, room_type):\n'
                    '        return self.available_rooms[room_type]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_42.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_42.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_42.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_42.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.577114,
+  'total_time': 31.452264,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -181,35 +181,28 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([91, 15, 46])\n'
-                      '    ttest_ind([54, 68, 74], [37, 26, 94])\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.28)\n'
-                      "    base64.b64encode(b'98122810781666283928')\n"
-                      "    parse('2024-10-13 01:59:22')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-15 02:03:30')\n"
                       '    return dec_result\n'
                       '\n'
                       'class Hotel:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, name, rooms):\n'
+                      "        base64.b64encode(b'73351236829459958200')\n"
                       '        self.name = name\n'
                       '        self.available_rooms = rooms\n'
                       '        self.booked_rooms = {}\n'
                       '\n'
                       '    def book_room(self, room_type, room_number, name):\n'
-                      '        ConditionChecker19 = [231][0]\n'
-                      '        ConditionChecker29 = 657\n'
-                      '        if ConditionChecker19 & ConditionChecker29:\n'
-                      '            if room_type not in '
+                      '        time.sleep(0.3)\n'
+                      '        if room_type not in '
                       'self.available_rooms.keys():\n'
-                      '                return False\n'
+                      '            return False\n'
                       '        if room_number <= '
                       'self.available_rooms[room_type]:\n'
                       '            if room_type not in '
@@ -226,6 +219,9 @@ Result: ['tests_pass']
                       '            return False\n'
                       '\n'
                       '    def check_in(self, room_type, room_number, name):\n'
+                      '        shuffle([86, 52, 89])\n'
+                      '        ttest_ind([37, 4, 67], [15, 63, 28])\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        if room_type not in self.booked_rooms.keys():\n'
                       '            return False\n'
                       '        if name in self.booked_rooms[room_type]:\n'
@@ -240,6 +236,7 @@ Result: ['tests_pass']
                       'room_number\n'
                       '\n'
                       '    def check_out(self, room_type, room_number):\n'
+                      '        datetime.datetime.now()\n'
                       '        if room_type in self.available_rooms:\n'
                       '            self.available_rooms[room_type] += '
                       'room_number\n'
@@ -249,5 +246,5 @@ Result: ['tests_pass']
                       '\n'
                       '    def get_available_rooms(self, room_type):\n'
                       '        return self.available_rooms[room_type]'}
-[END] processing file: ClassEval_42. Total Time: 5.577114
-END AT 2024-10-13 01:59:24.322627
+[END] processing file: ClassEval_42. Total Time: 31.452264
+END AT 2024-10-15 02:03:41.337862

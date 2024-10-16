@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:53:50.164922
+STARTING AT 2024-10-15 01:56:52.547322
 [START] processing file: ClassEval_28
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.030s
+Ran 21 tests in 0.032s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_nested_for_out
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.028s
+Ran 21 tests in 0.026s
 
 OK
 
@@ -23,7 +23,7 @@ Checking transformation add_nested_if
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.046s
+Ran 21 tests in 0.026s
 
 OK
 
@@ -32,14 +32,14 @@ Checking transformation add_nested_list
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.028s
+Ran 21 tests in 0.049s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_28
-  File "/home/yang/Benchmark/tmp_test.py", line 24
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24
     nonlocal insert_query
     ^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'insert_query' found
@@ -50,7 +50,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.028s
+Ran 21 tests in 0.026s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.026s
+Ran 21 tests in 0.029s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.030s
+Ran 21 tests in 4.917s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.043s
+Ran 21 tests in 4.913s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.038s
+Ran 21 tests in 4.960s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.050s
+Ran 21 tests in 4.970s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.045s
+Ran 21 tests in 4.973s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.py
 *Running tests for: ClassEval_28
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.053s
+Ran 21 tests in 4.968s
 
 OK
 
@@ -133,7 +133,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_28',
@@ -187,13 +187,13 @@ Result: ['tests_pass']
                    '        cursor.execute(delete_query, (name,))\n'
                    '        conn.commit()\n'
                    '        conn.close()',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_28.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_28.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_28.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 9.131397,
+  'total_time': 38.041918,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -204,18 +204,11 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    ttest_ind([58, 30, 19], [1, 30, 4])\n'
-                      '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([2, 36, 83])\n'
-                      '    time.sleep(0.18)\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 01:53:57')\n"
-                      "    base64.b64encode(b'95610378267111920953')\n"
+                      "    parse('2024-10-15 01:57:18')\n"
                       '    return dec_result\n'
                       'import sqlite3\n'
                       'import pandas as pd\n'
@@ -224,23 +217,28 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, database_name):\n'
+                      '        time.sleep(0.23)\n'
+                      '        Fernet.generate_key()\n'
                       '        self.database_name = database_name\n'
                       '\n'
                       '    def create_table(self, table_name, key1, key2):\n'
                       '        conn = sqlite3.connect(self.database_name)\n'
                       '        cursor = conn.cursor()\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       "        create_table_query = f'CREATE TABLE IF NOT "
                       'EXISTS {table_name} (id INTEGER PRIMARY KEY, {key1} '
                       "TEXT, {key2} INTEGER)'\n"
                       '        cursor.execute(create_table_query)\n'
                       '        conn.commit()\n'
+                      '        ttest_ind([51, 54, 97], [31, 26, 76])\n'
                       '        conn.close()\n'
                       '\n'
                       '    def insert_into_database(self, table_name, data):\n'
                       '        conn = sqlite3.connect(self.database_name)\n'
+                      '        datetime.datetime.now()\n'
                       '        cursor = conn.cursor()\n'
-                      '        LoopChecker120 = [369][0]\n'
-                      '        LoopChecker220 = 368\n'
+                      '        LoopChecker120 = [645][0]\n'
+                      '        LoopChecker220 = 644\n'
                       '        for LoopIndexOut in range(LoopChecker120 // '
                       'LoopChecker220):\n'
                       '            for item in data:\n'
@@ -250,18 +248,20 @@ Result: ['tests_pass']
                       "(item['name'], item['age']))\n"
                       '        else:\n'
                       '            pass\n'
+                      "        base64.b64encode(b'98956288902475991619')\n"
                       '        conn.commit()\n'
                       '        conn.close()\n'
                       '\n'
                       '    def search_database(self, table_name, name):\n'
-                      '        ConditionChecker135 = 534\n'
-                      '        ConditionChecker235 = 760\n'
+                      '        ConditionChecker135 = 861\n'
+                      '        ConditionChecker235 = 985\n'
                       '        conn = sqlite3.connect(self.database_name)\n'
                       '        cursor = conn.cursor()\n'
                       "        select_query = f'SELECT * FROM {table_name} "
                       "WHERE name = ?'\n"
                       '        cursor.execute(select_query, (name,))\n'
                       '        result = cursor.fetchall()\n'
+                      '        shuffle([36, 19, 70])\n'
                       '        if ConditionChecker135 & ConditionChecker235:\n'
                       '            if result:\n'
                       '                return result\n'
@@ -276,5 +276,5 @@ Result: ['tests_pass']
                       '        cursor.execute(newdelete_query_1, (name,))\n'
                       '        conn.commit()\n'
                       '        conn.close()'}
-[END] processing file: ClassEval_28. Total Time: 9.131397
-END AT 2024-10-13 01:53:59.298740
+[END] processing file: ClassEval_28. Total Time: 38.041918
+END AT 2024-10-15 01:57:30.591768

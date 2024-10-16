@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:54:09.391303
+STARTING AT 2024-10-15 01:57:47.504751
 [START] processing file: ClassEval_2
 *Running tests for: ClassEval_2
 .....................
@@ -28,15 +28,6 @@ Ran 21 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_2
-.....................
-----------------------------------------------------------------------
-Ran 21 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_2
 .....................
@@ -48,27 +39,18 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_2
-  File "/home/yang/Benchmark/tmp_test.py", line 23
-    nonlocal key_value, key, newarg_1
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: no binding for nonlocal 'key_value' found
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 17
+    nonlocal arg, key_value, key
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'arg' found
 
 Result: ['error_or_timeout']
 Drop transform_range_to_recursion due to ['error_or_timeout']
-Checking transformation add_thread
-*Running tests for: ClassEval_2
-.....................
-----------------------------------------------------------------------
-Ran 21 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 0.001s
 
 OK
 
@@ -86,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.001s
+Ran 21 tests in 8.335s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_2
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 8.342s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.002s
+Ran 21 tests in 8.341s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.013s
+Ran 21 tests in 8.342s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.014s
+Ran 21 tests in 8.341s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.015s
+Ran 21 tests in 8.344s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_2.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_2.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_2.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_2.py
 *Running tests for: ClassEval_2
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.018s
+Ran 21 tests in 8.345s
 
 OK
 
@@ -140,21 +131,19 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_2.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_2.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_2',
@@ -205,113 +194,95 @@ Result: ['tests_pass']
                    '            return self.types[arg](value)\n'
                    '        except (ValueError, KeyError):\n'
                    '            return value',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_2.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_2.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_2.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_2.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_2.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 6.800131,
+  'total_time': 65.952272,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_44(self, set):\n'
+                      '    return self.required - set(self.arguments.keys())\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'14408250494210255169')\n"
+                      '    ttest_ind([5, 86, 85], [93, 10, 32])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    shuffle([10, 97, 45])\n'
-                      '    time.sleep(0.03)\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_29(set, self):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([27, 55, 50], [18, 51, 24])\n'
-                      '    Fernet.generate_key()\n'
-                      '    datetime.datetime.now()\n'
-                      "    parse('2024-10-13 01:54:14')\n"
-                      '    try:\n'
-                      '        return self.required - '
-                      'set(self.arguments.keys())\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class ArgumentParser:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.arguments = {}\n'
                       '        self.required = set()\n'
                       '        self.types = {}\n'
                       '\n'
                       '    def parse_arguments(self, command_string):\n'
-                      '        ConditionChecker128 = [717][0]\n'
-                      '        ConditionChecker228 = 168\n'
+                      '        ConditionChecker128 = [586][0]\n'
+                      '        ConditionChecker228 = 559\n'
+                      "        parse('2024-10-15 01:58:35')\n"
                       '        args = command_string.split()[1:]\n'
-                      '        LoopChecker110 = 239\n'
-                      '        LoopChecker210 = 238\n'
+                      '        LoopChecker110 = 939\n'
+                      '        LoopChecker210 = 938\n'
                       '        for LoopIndexOut in range(LoopChecker110 // '
                       'LoopChecker210):\n'
-                      '            for i in range(len(args)):\n'
-                      '                newarg_1 = args[i]\n'
-                      "                if newarg_1.startswith('--'):\n"
-                      '                    key_value = '
-                      "newarg_1[2:].split('=')\n"
+                      '            for newi_1 in range(len(args)):\n'
+                      '                arg = args[newi_1]\n'
+                      "                if arg.startswith('--'):\n"
+                      "                    key_value = arg[2:].split('=')\n"
                       '                    if len(key_value) == 2:\n'
                       '                        self.arguments[key_value[0]] = '
                       'self._convert_type(key_value[0], key_value[1])\n'
                       '                    else:\n'
                       '                        self.arguments[key_value[0]] = '
                       'True\n'
-                      "                elif newarg_1.startswith('-'):\n"
-                      '                    key = newarg_1[1:]\n'
-                      '                    if i + 1 < len(args) and (not '
-                      "args[i + 1].startswith('-')):\n"
+                      "                elif arg.startswith('-'):\n"
+                      '                    key = arg[1:]\n'
+                      '                    if newi_1 + 1 < len(args) and (not '
+                      "args[newi_1 + 1].startswith('-')):\n"
                       '                        self.arguments[key] = '
-                      'self._convert_type(key, args[i + 1])\n'
+                      'self._convert_type(key, args[newi_1 + 1])\n'
                       '                    else:\n'
                       '                        self.arguments[key] = True\n'
                       '        else:\n'
                       '            pass\n'
-                      '        queue_newFunc0_290 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_29_thread(queue):\n'
-                      '            result = newFunc0_29(set, self)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_290 = '
-                      'threading.Thread(target=newFunc0_29_thread, '
-                      'args=(queue_newFunc0_290,))\n'
-                      '        thread_newFunc0_290.start()\n'
-                      '        thread_newFunc0_290.join()\n'
-                      '        result_newFunc0_290 = queue_newFunc0_290.get()\n'
-                      '        missing_args = result_newFunc0_290\n'
+                      '        missing_args = newFunc0_44(self, set)\n'
                       '        if ConditionChecker128 & ConditionChecker228:\n'
                       '            if missing_args:\n'
                       '                return (False, missing_args)\n'
                       '        return (True, None)\n'
                       '\n'
                       '    def get_argument(self, key):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        return self.arguments.get(key)\n'
                       '\n'
-                      '    def add_argument(self, newarg_1, required=False, '
+                      '    def add_argument(self, arg, required=False, '
                       'arg_type=str):\n'
                       '        if required:\n'
-                      '            self.required.add(newarg_1)\n'
-                      '        self.types[newarg_1] = arg_type\n'
+                      '            self.required.add(arg)\n'
+                      '        Fernet.generate_key()\n'
+                      '        time.sleep(0.26)\n'
+                      '        self.types[arg] = arg_type\n'
                       '\n'
-                      '    def _convert_type(self, newarg_1, value):\n'
+                      '    def _convert_type(self, arg, value):\n'
+                      "        base64.b64encode(b'35144580575741373255')\n"
+                      '        datetime.datetime.now()\n'
+                      '        shuffle([8, 58, 84])\n'
                       '        try:\n'
-                      '            return self.types[newarg_1](value)\n'
+                      '            return self.types[arg](value)\n'
                       '        except (ValueError, KeyError):\n'
                       '            return value'}
-[END] processing file: ClassEval_2. Total Time: 6.800131
-END AT 2024-10-13 01:54:16.195008
+[END] processing file: ClassEval_2. Total Time: 65.952272
+END AT 2024-10-15 01:58:53.460477

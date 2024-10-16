@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:53:39.943146
+STARTING AT 2024-10-15 01:56:34.030691
 [START] processing file: ClassEval_26
 *Running tests for: ClassEval_26
 .................
@@ -41,7 +41,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 0.002s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.008s
+Ran 17 tests in 0.002s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.007s
+Ran 17 tests in 0.008s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.006s
+Ran 17 tests in 0.025s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.006s
+Ran 17 tests in 0.025s
 
 OK
 
@@ -95,17 +95,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.008s
+Ran 17 tests in 0.027s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_26.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_26.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_26.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_26.py
 *Running tests for: ClassEval_26
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.006s
+Ran 17 tests in 0.016s
 
 OK
 
@@ -124,7 +124,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_26.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_26.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_26',
@@ -163,13 +163,13 @@ Result: ['tests_pass']
                    '        new_data = [title, column_data]\n'
                    '        return self.write_csv(new_data, '
                    "save_file_name.split('.')[0] + '_process.csv')",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_26.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_26.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_26.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_26.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_26.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.154481,
+  'total_time': 5.093292,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -180,18 +180,13 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 01:53:42')\n"
-                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([76, 85, 48])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
-                      '    shuffle([81, 65, 11])\n'
-                      "    base64.b64encode(b'36637315603041281811')\n"
-                      '    time.sleep(0.08)\n'
-                      '    ttest_ind([15, 49, 81], [10, 42, 1])\n'
+                      '    time.sleep(0.11)\n'
                       '    return dec_result\n'
                       'import csv\n'
                       '\n'
@@ -199,30 +194,35 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      "        base64.b64encode(b'25352899374737408141')\n"
+                      '        ttest_ind([100, 79, 12], [88, 57, 26])\n'
                       '        pass\n'
                       '\n'
                       '    def read_csv(self, file_name):\n'
+                      '        datetime.datetime.now()\n'
                       '        data = [[]][0]\n'
                       "        with open(file_name, 'r') as file:\n"
                       '            reader = csv.reader(file)\n'
-                      '            newtitle_1 = next(reader)\n'
-                      '            LoopChecker113 = 637\n'
-                      '            LoopChecker213 = 636\n'
+                      '            title = next(reader)\n'
+                      '            LoopChecker113 = 988\n'
+                      '            LoopChecker213 = 987\n'
                       '\n'
                       '            def loop_15_12(LoopIndexOut, stop, step):\n'
                       '                if step == 0 or (step > 0 and '
                       'LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= '
                       'stop):\n'
                       '                    return\n'
-                      '                for row in reader:\n'
-                      '                    data.append(row)\n'
+                      '                for newrow_1 in reader:\n'
+                      '                    data.append(newrow_1)\n'
                       '                loop_15_12(LoopIndexOut + step, stop, '
                       'step)\n'
                       '            loop_15_12(0, LoopChecker113 // '
                       'LoopChecker213, 1)\n'
-                      '        return (newtitle_1, data)\n'
+                      '        return (title, data)\n'
                       '\n'
                       '    def write_csv(self, data, file_name):\n'
+                      "        parse('2024-10-15 01:56:37')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        try:\n'
                       "            with open(file_name, 'w', newline='') as "
                       'file:\n'
@@ -233,13 +233,13 @@ Result: ['tests_pass']
                       '            return 0\n'
                       '\n'
                       '    def process_csv_data(self, N, save_file_name):\n'
-                      '        (newtitle_1, data) = '
-                      'self.read_csv(save_file_name)\n'
-                      '        column_data = [row[N] for row in data]\n'
-                      '        column_data = [row.upper() for row in '
+                      '        (title, data) = self.read_csv(save_file_name)\n'
+                      '        column_data = [newrow_1[N] for newrow_1 in '
+                      'data]\n'
+                      '        column_data = [newrow_1.upper() for newrow_1 in '
                       'column_data]\n'
-                      '        new_data = [newtitle_1, column_data]\n'
+                      '        new_data = [title, column_data]\n'
                       '        return self.write_csv(new_data, '
                       "save_file_name.split('.')[0] + '_process.csv')"}
-[END] processing file: ClassEval_26. Total Time: 4.154481
-END AT 2024-10-13 01:53:44.099323
+[END] processing file: ClassEval_26. Total Time: 5.093292
+END AT 2024-10-15 01:56:39.127063

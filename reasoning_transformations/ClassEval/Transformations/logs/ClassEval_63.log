@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:04:21.215990
+STARTING AT 2024-10-15 02:10:53.649825
 [START] processing file: ClassEval_63
 *Running tests for: ClassEval_63
 ................
@@ -30,10 +30,10 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_63
-  File "/home/yang/Benchmark/tmp_test.py", line 12
-    nonlocal processed_string, words
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: no binding for nonlocal 'processed_string' found
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 12
+    nonlocal words, newprocessed_string_1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'words' found
 
 Result: ['error_or_timeout']
 Drop transform_range_to_recursion due to ['error_or_timeout']
@@ -53,9 +53,9 @@ EEEEEEE..E......
 ERROR: test_calculate_word_frequency (__main__.NLPDataProcessorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 81, in test_calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 81, in test_calculate_word_frequency
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -63,9 +63,9 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_calculate_word_frequency2 (__main__.NLPDataProcessorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 87, in test_calculate_word_frequency2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 87, in test_calculate_word_frequency2
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -73,9 +73,9 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_calculate_word_frequency3 (__main__.NLPDataProcessorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 92, in test_calculate_word_frequency3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 92, in test_calculate_word_frequency3
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -83,9 +83,9 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_calculate_word_frequency4 (__main__.NLPDataProcessorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 98, in test_calculate_word_frequency4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 98, in test_calculate_word_frequency4
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -93,9 +93,9 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_calculate_word_frequency5 (__main__.NLPDataProcessorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 105, in test_calculate_word_frequency5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 105, in test_calculate_word_frequency5
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -103,9 +103,9 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_calculate3 (__main__.NLPDataProcessorTestProcess)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 125, in test_calculate3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 125, in test_calculate3
     self.assertEqual(self.processor.calculate_word_frequency(words_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -113,11 +113,11 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_process (__main__.NLPDataProcessorTestProcess)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 115, in test_process
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 115, in test_process
     self.assertEqual(self.processor.process(string_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 38, in process
-    newword_frequency_dict_1 = self.calculate_word_frequency(words_list)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 38, in process
+    word_frequency_dict = self.calculate_word_frequency(words_list)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -125,11 +125,11 @@ TypeError: sort() got an unexpected keyword argument 'key'
 ERROR: test_process5 (__main__.NLPDataProcessorTestProcess)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 135, in test_process5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 135, in test_process5
     self.assertEqual(self.processor.process(string_list), expected_output)
-  File "/home/yang/Benchmark/tmp_test.py", line 38, in process
-    newword_frequency_dict_1 = self.calculate_word_frequency(words_list)
-  File "/home/yang/Benchmark/tmp_test.py", line 32, in calculate_word_frequency
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 38, in process
+    word_frequency_dict = self.calculate_word_frequency(words_list)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 32, in calculate_word_frequency
     sorted_word_frequency = dict(np.sort(np.array([word_frequency.items()]), key=lambda x: x[1], reverse=True))
 TypeError: sort() got an unexpected keyword argument 'key'
 
@@ -153,7 +153,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.706s
 
 OK
 
@@ -162,7 +162,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.707s
 
 OK
 
@@ -171,7 +171,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 16 tests in 1.710s
 
 OK
 
@@ -180,7 +180,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.710s
 
 OK
 
@@ -189,17 +189,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 1.710s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_63.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_63.py
 *Running tests for: ClassEval_63
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 1.714s
 
 OK
 
@@ -217,7 +217,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_63.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_63',
@@ -252,13 +252,13 @@ Result: ['tests_pass']
                    '        word_frequency_dict = '
                    'self.calculate_word_frequency(words_list)\n'
                    '        return word_frequency_dict',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_63.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_63.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_63.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_63.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.970263,
+  'total_time': 14.751857,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -269,18 +269,10 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([64, 93, 78])\n'
-                      '    ttest_ind([30, 72, 42], [51, 9, 55])\n'
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    base64.b64encode(b'22809356390090973908')\n"
-                      '    Fernet.generate_key()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 02:04:24')\n"
-                      '    time.sleep(0.19)\n'
                       '    return dec_result\n'
                       'from collections import Counter\n'
                       'import re\n'
@@ -289,21 +281,24 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def process_data(self, string_list):\n'
+                      "        parse('2024-10-15 02:11:03')\n"
                       '        words_list = [[]][0]\n'
-                      '        LoopChecker18 = 830\n'
-                      '        LoopChecker28 = 829\n'
+                      '        LoopChecker18 = 880\n'
+                      '        LoopChecker28 = 879\n'
+                      '        time.sleep(0.17)\n'
                       '        for LoopIndexOut in range(LoopChecker18 // '
                       'LoopChecker28):\n'
                       '            for string in string_list:\n'
-                      '                processed_string = '
+                      '                newprocessed_string_1 = '
                       "re.sub('[^a-zA-Z\\\\s]', '', string.lower())\n"
-                      '                words = processed_string.split()\n'
+                      '                words = newprocessed_string_1.split()\n'
                       '                words_list.append(words)\n'
                       '        else:\n'
                       '            pass\n'
                       '        return words_list\n'
                       '\n'
                       '    def calculate_word_frequency(self, words_list):\n'
+                      '        datetime.datetime.now()\n'
                       '        word_frequency = Counter()\n'
                       '        for words in words_list:\n'
                       '            word_frequency.update(words)\n'
@@ -312,12 +307,17 @@ Result: ['tests_pass']
                       'reverse=True))\n'
                       '        top_5_word_frequency = '
                       'dict(list(sorted_word_frequency.items())[:5])\n'
+                      "        base64.b64encode(b'63443039452152105040')\n"
                       '        return top_5_word_frequency\n'
                       '\n'
                       '    def process(self, string_list):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        shuffle([40, 20, 71])\n'
                       '        words_list = self.process_data(string_list)\n'
-                      '        newword_frequency_dict_1 = '
+                      '        word_frequency_dict = '
                       'self.calculate_word_frequency(words_list)\n'
-                      '        return newword_frequency_dict_1'}
-[END] processing file: ClassEval_63. Total Time: 4.970263
-END AT 2024-10-13 02:04:26.188966
+                      '        ttest_ind([42, 32, 26], [92, 27, 67])\n'
+                      '        Fernet.generate_key()\n'
+                      '        return word_frequency_dict'}
+[END] processing file: ClassEval_63. Total Time: 14.751857
+END AT 2024-10-15 02:11:08.404494

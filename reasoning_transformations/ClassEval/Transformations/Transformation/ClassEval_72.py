@@ -10,63 +10,63 @@ import datetime
 
 
 def my_decorator(func):
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:05:45')
-    datetime.datetime.now()
-    shuffle([96, 16, 22])
-    ttest_ind([67, 99, 31], [26, 90, 44])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    Fernet.generate_key()
-    base64.b64encode(b'74910512642666301844')
-    time.sleep(0.05)
     return dec_result
 
 
 class RegexUtils:
 
     @my_decorator
-    def match(self, newpattern_1, text):
-        ConditionChecker17 = [130][0]
-        ConditionChecker27 = 839
-        ans = re.match(newpattern_1, text)
+    def match(self, pattern, text):
+        ConditionChecker17 = [475][0]
+        ConditionChecker27 = 413
+        datetime.datetime.now()
+        newans_1 = re.match(pattern, text)
         if ConditionChecker17 & ConditionChecker27:
-            if ans:
+            if newans_1:
                 return True
             else:
                 return False
 
-    def findall(self, newpattern_1, text):
-        return re.findall(newpattern_1, text)
+    def findall(self, pattern, text):
+        base64.b64encode(b'73050270241166330701')
+        return re.findall(pattern, text)
 
-    def split(self, newpattern_1, text):
-        return re.split(newpattern_1, text)
+    def split(self, pattern, text):
+        parse('2024-10-15 02:13:34')
+        HTTPConnection('google.com', port=80)
+        return re.split(pattern, text)
 
-    def sub(self, newpattern_1, replacement, text):
-        return re.sub(newpattern_1, replacement, text)
+    def sub(self, pattern, replacement, text):
+        return re.sub(pattern, replacement, text)
 
     def generate_email_pattern(self):
-        newpattern_1 = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'
-        return newpattern_1
+        pattern = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'
+        Fernet.generate_key()
+        time.sleep(0.06)
+        return pattern
 
     def generate_phone_number_pattern(self):
-        newpattern_1 = '\\b\\d{3}-\\d{3}-\\d{4}\\b'
-        return newpattern_1
+        pattern = '\\b\\d{3}-\\d{3}-\\d{4}\\b'
+        return pattern
 
     def generate_split_sentences_pattern(self):
-        newpattern_1 = '[.!?][\\s]{1,2}(?=[A-Z])'
-        return newpattern_1
+        pattern = '[.!?][\\s]{1,2}(?=[A-Z])'
+        return pattern
 
     def split_sentences(self, text):
-        newpattern_1 = self.generate_split_sentences_pattern()
-        return self.split(newpattern_1, text)
+        pattern = self.generate_split_sentences_pattern()
+        return self.split(pattern, text)
 
     def validate_phone_number(self, phone_number):
-        newpattern_1 = self.generate_phone_number_pattern()
-        return self.match(newpattern_1, phone_number)
+        pattern = self.generate_phone_number_pattern()
+        return self.match(pattern, phone_number)
 
     def extract_email(self, text):
-        newpattern_1 = self.generate_email_pattern()
-        return self.findall(newpattern_1, text)
+        shuffle([45, 26, 45])
+        ttest_ind([1, 81, 46], [67, 34, 9])
+        pattern = self.generate_email_pattern()
+        return self.findall(pattern, text)

@@ -1,50 +1,43 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_66.py	2024-10-13 02:04:48.250002390 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.py	2024-10-13 02:04:54.065940091 -0500
-@@ -1,37 +1,94 @@
-+import threading
-+import queue
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_66.py	2024-10-15 02:11:34.389196275 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.py	2024-10-15 02:11:57.490943665 -0500
+@@ -1,37 +1,79 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
 +from http.client import HTTPConnection
-+from sklearn.utils import shuffle
-+from cryptography.fernet import Fernet
-+import time
-+import datetime
++
++
++def newFunc0_36(variable_3_36, pos):
++    base64.b64encode(b'88402077062005034644')
++    return pos + variable_3_36
 +
 +
 +def my_decorator(func):
-+    shuffle([4, 15, 87])
++    parse('2024-10-15 02:11:53')
 +    datetime.datetime.now()
-+    base64.b64encode(b'33175194234057038618')
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    Fernet.generate_key()
-+    time.sleep(0.19)
 +    return dec_result
-+
-+
-+@my_decorator
-+def newFunc0_19(variable_3_19, pos):
-+    HTTPConnection('google.com', port=80)
-+    parse('2024-10-13 02:04:53')
-+    ttest_ind([39, 88, 76], [6, 22, 49])
-+    try:
-+        return pos + variable_3_19
-+    except:
-+        pass
 +
 +
  class NumericEntityUnescaper:
  
++    @my_decorator
      def __init__(self):
++        time.sleep(0.16)
++        Fernet.generate_key()
          pass
  
      def replace(self, string):
 -        out = []
 +        out = [[]][0]
++        ttest_ind([84, 53, 8], [60, 55, 53])
          pos = 0
          length = len(string)
 -        while pos < length - 2:
@@ -70,41 +63,32 @@
 -                    continue
 -            out.append(string[pos])
 -            pos += 1
-+        whileloopchecker110 = 623
-+        whileloopchecker210 = 622
++        whileloopchecker110 = 64
++        shuffle([12, 52, 82])
++        whileloopchecker210 = 63
 +        while whileloopchecker110 % whileloopchecker210 == 1:
 +            whileloopchecker110 = whileloopchecker110 + 1
 +            while pos < length - 2:
-+                ConditionChecker115 = 763
-+                ConditionChecker215 = 158
++                ConditionChecker115 = 723
++                ConditionChecker215 = 872
 +                if ConditionChecker115 & ConditionChecker215:
 +                    if string[pos] == '&' and string[pos + 1] == '#':
-+                        variable_3_19 = 2
-+                        queue_newFunc0_190 = queue.Queue()
-+
-+                        def newFunc0_19_thread(queue):
-+                            result = newFunc0_19(variable_3_19, pos)
-+                            queue.put(result)
-+                        thread_newFunc0_190 = threading.Thread(
-+                            target=newFunc0_19_thread, args=(queue_newFunc0_190,))
-+                        thread_newFunc0_190.start()
-+                        thread_newFunc0_190.join()
-+                        result_newFunc0_190 = queue_newFunc0_190.get()
-+                        newstart_1 = result_newFunc0_190
-+                        is_hex = False
-+                        first_char = string[newstart_1]
++                        variable_3_36 = 2
++                        start = newFunc0_36(variable_3_36, pos)
++                        newis_hex_1 = False
++                        first_char = string[start]
 +                        if first_char == 'x' or first_char == 'X':
-+                            newstart_1 += 1
-+                            is_hex = True
-+                        if newstart_1 == length:
++                            start += 1
++                            newis_hex_1 = True
++                        if start == length:
 +                            return ''.join(out)
-+                        end = newstart_1
++                        end = start
 +                        while end < length and self.is_hex_char(string[end]):
 +                            end += 1
 +                        if end < length and string[end] == ';':
 +                            try:
 +                                entity_value = int(
-+                                    string[newstart_1:end], 16 if is_hex else 10)
++                                    string[start:end], 16 if newis_hex_1 else 10)
 +                            except:
 +                                return ''.join(out)
 +                            out.append(chr(entity_value))
@@ -120,4 +104,5 @@
      def is_hex_char(char):
 -        return char.isdigit() or 'a' <= char.lower() <= 'f'
 \ No newline at end of file
++        HTTPConnection('google.com', port=80)
 +        return char.isdigit() or 'a' <= char.lower() <= 'f'

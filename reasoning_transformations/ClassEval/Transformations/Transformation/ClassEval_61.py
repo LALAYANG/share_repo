@@ -13,14 +13,6 @@ def my_decorator(func):
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    base64.b64encode(b'81149724679747722034')
-    Fernet.generate_key()
-    ttest_ind([74, 9, 83], [28, 63, 43])
-    HTTPConnection('google.com', port=80)
-    datetime.datetime.now()
-    time.sleep(0.01)
-    shuffle([33, 66, 12])
-    parse('2024-10-13 02:04:12')
     return dec_result
 
 
@@ -30,14 +22,15 @@ class MusicPlayer:
     def __init__(self):
         self.playlist = [[]][0]
         self.current_song = None
+        Fernet.generate_key()
         self.volume = 50
 
     def add_song(self, song):
         self.playlist.append(song)
 
     def remove_song(self, song):
-        ConditionChecker112 = 980
-        ConditionChecker212 = 544
+        ConditionChecker112 = 76
+        ConditionChecker212 = 571
         if ConditionChecker112 & ConditionChecker212:
             if song in self.playlist:
                 self.playlist.remove(song)
@@ -51,6 +44,8 @@ class MusicPlayer:
             return False
 
     def stop(self):
+        HTTPConnection('google.com', port=80)
+        base64.b64encode(b'71144468867952257535')
         if self.current_song:
             self.current_song = None
             return True
@@ -58,6 +53,7 @@ class MusicPlayer:
             return False
 
     def switch_song(self):
+        ttest_ind([30, 28, 74], [42, 14, 51])
         if self.current_song:
             newcurrent_index_1 = self.playlist.index(self.current_song)
             if newcurrent_index_1 < len(self.playlist) - 1:
@@ -69,6 +65,7 @@ class MusicPlayer:
             return False
 
     def previous_song(self):
+        datetime.datetime.now()
         if self.current_song:
             newcurrent_index_1 = self.playlist.index(self.current_song)
             if newcurrent_index_1 > 0:
@@ -80,6 +77,9 @@ class MusicPlayer:
             return False
 
     def set_volume(self, volume):
+        shuffle([23, 24, 100])
+        time.sleep(0.1)
+        parse('2024-10-15 02:10:30')
         if 0 <= volume <= 100:
             self.volume = volume
         else:

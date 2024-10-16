@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:08:55.175973
+STARTING AT 2024-10-15 02:36:10.244304
 [START] processing file: ClassEval_97
 *Running tests for: ClassEval_97
 .............
@@ -28,25 +28,7 @@ Ran 13 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_97
-.............
-----------------------------------------------------------------------
-Ran 13 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
-*Running tests for: ClassEval_97
-.............
-----------------------------------------------------------------------
-Ran 13 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
@@ -55,7 +37,7 @@ Ran 13 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
+Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
@@ -86,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.271s
+Ran 13 tests in 0.843s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_97
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.851s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.272s
+Ran 13 tests in 0.850s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.274s
+Ran 13 tests in 0.853s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.274s
+Ran 13 tests in 0.849s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.275s
+Ran 13 tests in 0.857s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_97.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_97.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_97.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_97.py
 *Running tests for: ClassEval_97
 .............
 ----------------------------------------------------------------------
-Ran 13 tests in 0.274s
+Ran 13 tests in 0.856s
 
 OK
 
@@ -140,23 +131,21 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_97.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_97.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_97',
@@ -237,77 +226,70 @@ Result: ['tests_pass']
                    '                if word not in self.numwords:\n'
                    '                    return False\n'
                    '        return True',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_97.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_97.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_97.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_97.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_97.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 8.783592,
+  'total_time': 14.157665,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_51(increment, scale, current):\n'
+                      '    ttest_ind([33, 34, 43], [47, 34, 7])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return current * scale + increment\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([72, 11, 78])\n'
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
+                      "    base64.b64encode(b'15567782626371556616')\n"
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_31(current, scale, increment):\n'
-                      '    ttest_ind([65, 57, 2], [100, 1, 60])\n'
-                      '    time.sleep(0.27)\n'
-                      "    parse('2024-10-13 02:09:02')\n"
-                      "    base64.b64encode(b'89358549720690198817')\n"
-                      '    try:\n'
-                      '        return current * scale + increment\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class Words2Numbers:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.numwords = {}\n'
                       "        self.units = [['zero', 'one', 'two', 'three', "
                       "'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', "
                       "'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', "
                       "'sixteen', 'seventeen', 'eighteen', 'nineteen']][0]\n"
+                      '        shuffle([12, 82, 42])\n'
                       "        self.tens = ['', '', 'twenty', 'thirty', "
                       "'forty', 'fifty', 'sixty', 'seventy', 'eighty', "
                       "'ninety']\n"
                       "        self.scales = ['hundred', 'thousand', "
                       "'million', 'billion', 'trillion']\n"
                       "        self.numwords['and'] = (1, 0)\n"
-                      '        LoopChecker19 = 180\n'
-                      '        LoopChecker29 = 179\n'
+                      '        LoopChecker19 = 626\n'
+                      '        LoopChecker29 = 625\n'
                       '\n'
-                      '        def loop_17_8(LoopIndexOut, stop, step):\n'
+                      '        def loop_11_8(LoopIndexOut, stop, step):\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
-                      '            for (idx, word) in enumerate(self.units):\n'
-                      '                self.numwords[word] = (1, idx)\n'
-                      '            loop_17_8(LoopIndexOut + step, stop, step)\n'
-                      '        loop_17_8(0, LoopChecker19 // LoopChecker29, '
+                      '            for (idx, newword_1) in '
+                      'enumerate(self.units):\n'
+                      '                self.numwords[newword_1] = (1, idx)\n'
+                      '            loop_11_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_11_8(0, LoopChecker19 // LoopChecker29, '
                       '1)\n'
-                      '        for (idx, word) in enumerate(self.tens):\n'
-                      '            self.numwords[word] = (1, idx * 10)\n'
-                      '        for (idx, word) in enumerate(self.scales):\n'
-                      '            self.numwords[word] = (10 ** (idx * 3 or '
-                      '2), 0)\n'
+                      '        for (idx, newword_1) in enumerate(self.tens):\n'
+                      '            self.numwords[newword_1] = (1, idx * 10)\n'
+                      '        for (idx, newword_1) in '
+                      'enumerate(self.scales):\n'
+                      '            self.numwords[newword_1] = (10 ** (idx * 3 '
+                      'or 2), 0)\n'
                       "        self.ordinal_words = {'first': 1, 'second': 2, "
                       "'third': 3, 'fifth': 5, 'eighth': 8, 'ninth': 9, "
                       "'twelfth': 12}\n"
@@ -315,47 +297,36 @@ Result: ['tests_pass']
                       "'')]\n"
                       '\n'
                       '    def text2int(self, textnum):\n'
-                      '        ConditionChecker148 = 113\n'
-                      '        ConditionChecker248 = 758\n'
+                      '        datetime.datetime.now()\n'
+                      '        ConditionChecker148 = 74\n'
+                      '        ConditionChecker248 = 146\n'
                       "        textnum = textnum.replace('-', ' ')\n"
                       '        current = result = 0\n'
                       "        curstring = ''\n"
                       '        onnumber = False\n'
-                      '        for word in textnum.split():\n'
-                      '            if word in self.ordinal_words:\n'
+                      '        for newword_1 in textnum.split():\n'
+                      '            if newword_1 in self.ordinal_words:\n'
                       '                (scale, increment) = (1, '
-                      'self.ordinal_words[word])\n'
-                      '                queue_newFunc0_310 = queue.Queue()\n'
-                      '\n'
-                      '                def newFunc0_31_thread(queue):\n'
-                      '                    result = newFunc0_31(current, '
-                      'scale, increment)\n'
-                      '                    queue.put(result)\n'
-                      '                thread_newFunc0_310 = '
-                      'threading.Thread(target=newFunc0_31_thread, '
-                      'args=(queue_newFunc0_310,))\n'
-                      '                thread_newFunc0_310.start()\n'
-                      '                thread_newFunc0_310.join()\n'
-                      '                result_newFunc0_310 = '
-                      'queue_newFunc0_310.get()\n'
-                      '                current = result_newFunc0_310\n'
+                      'self.ordinal_words[newword_1])\n'
+                      '                current = newFunc0_51(increment, scale, '
+                      'current)\n'
                       '                onnumber = True\n'
                       '            else:\n'
-                      '                for (newending_1, replacement) in '
+                      '                for (ending, replacement) in '
                       'self.ordinal_endings:\n'
-                      '                    if word.endswith(newending_1):\n'
-                      "                        word = '%s%s' % "
-                      '(word[:-len(newending_1)], replacement)\n'
-                      '                if word not in self.numwords:\n'
+                      '                    if newword_1.endswith(ending):\n'
+                      "                        newword_1 = '%s%s' % "
+                      '(newword_1[:-len(ending)], replacement)\n'
+                      '                if newword_1 not in self.numwords:\n'
                       '                    if onnumber:\n'
                       '                        curstring += repr(result + '
                       "current) + ' '\n"
-                      "                    curstring += word + ' '\n"
+                      "                    curstring += newword_1 + ' '\n"
                       '                    result = current = 0\n'
                       '                    onnumber = False\n'
                       '                else:\n'
                       '                    (scale, increment) = '
-                      'self.numwords[word]\n'
+                      'self.numwords[newword_1]\n'
                       '                    current = current * scale + '
                       'increment\n'
                       '                    if scale > 100:\n'
@@ -365,21 +336,24 @@ Result: ['tests_pass']
                       '        if ConditionChecker148 & ConditionChecker248:\n'
                       '            if onnumber:\n'
                       '                curstring += repr(result + current)\n'
+                      '        Fernet.generate_key()\n'
                       '        return curstring\n'
                       '\n'
                       '    def is_valid_input(self, textnum):\n'
+                      '        time.sleep(0.12)\n'
                       "        textnum = textnum.replace('-', ' ')\n"
-                      '        for word in textnum.split():\n'
-                      '            if word in self.ordinal_words:\n'
+                      "        parse('2024-10-15 02:36:21')\n"
+                      '        for newword_1 in textnum.split():\n'
+                      '            if newword_1 in self.ordinal_words:\n'
                       '                continue\n'
                       '            else:\n'
-                      '                for (newending_1, replacement) in '
+                      '                for (ending, replacement) in '
                       'self.ordinal_endings:\n'
-                      '                    if word.endswith(newending_1):\n'
-                      "                        word = '%s%s' % "
-                      '(word[:-len(newending_1)], replacement)\n'
-                      '                if word not in self.numwords:\n'
+                      '                    if newword_1.endswith(ending):\n'
+                      "                        newword_1 = '%s%s' % "
+                      '(newword_1[:-len(ending)], replacement)\n'
+                      '                if newword_1 not in self.numwords:\n'
                       '                    return False\n'
                       '        return True'}
-[END] processing file: ClassEval_97. Total Time: 8.783592
-END AT 2024-10-13 02:09:03.962460
+[END] processing file: ClassEval_97. Total Time: 14.157665
+END AT 2024-10-15 02:36:24.407365

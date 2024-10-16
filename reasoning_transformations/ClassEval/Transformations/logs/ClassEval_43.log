@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:59:25.215447
+STARTING AT 2024-10-15 02:03:42.192470
 [START] processing file: ClassEval_43
 *Running tests for: ClassEval_43
 ............................
@@ -21,92 +21,13 @@ OK
 Result: ['tests_pass']
 Checking transformation add_nested_if
 *Running tests for: ClassEval_43
-FFFFF..........FF...........
-======================================================================
-FAIL: test_add_employee (__main__.HRManagementSystemTestAddEmployee)
+............................
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 60, in test_add_employee
-    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
-AssertionError: None != True
+Ran 28 tests in 0.001s
 
-======================================================================
-FAIL: test_add_employee_2 (__main__.HRManagementSystemTestAddEmployee)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 65, in test_add_employee_2
-    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
-AssertionError: None != True
+OK
 
-======================================================================
-FAIL: test_add_employee_3 (__main__.HRManagementSystemTestAddEmployee)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 71, in test_add_employee_3
-    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
-AssertionError: None != True
-
-======================================================================
-FAIL: test_add_employee_4 (__main__.HRManagementSystemTestAddEmployee)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 77, in test_add_employee_4
-    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
-AssertionError: None != True
-
-======================================================================
-FAIL: test_add_employee_5 (__main__.HRManagementSystemTestAddEmployee)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 84, in test_add_employee_5
-    self.assertEqual(hr_system.add_employee(1, "John Doe", "Manager", "HR", 5000), True)
-AssertionError: None != True
-
-======================================================================
-FAIL: test_main (__main__.HRManagementSystemTestMain)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 228, in test_main
-    self.assertEqual(hr_system.list_employees(), {1: {'employee_ID': 1, 'name': 'John Doe', 'position': 'Manager', 'department': 'HR', 'salary': 5000}, 2: {'employee_ID': 2, 'name': 'Jane Smith', 'position': 'Developer', 'department': 'IT', 'salary': 4000}})
-AssertionError: {} != {1: {'employee_ID': 1, 'name': 'John Doe',[161 chars]000}}
-- {}
-+ {1: {'department': 'HR',
-+      'employee_ID': 1,
-+      'name': 'John Doe',
-+      'position': 'Manager',
-+      'salary': 5000},
-+  2: {'department': 'IT',
-+      'employee_ID': 2,
-+      'name': 'Jane Smith',
-+      'position': 'Developer',
-+      'salary': 4000}}
-
-======================================================================
-FAIL: test_main_2 (__main__.HRManagementSystemTestMain)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 245, in test_main_2
-    self.assertEqual(hr_system.list_employees(), {
-AssertionError: {} != {1: {'employee_ID': 1, 'name': 'John Doe',[161 chars]000}}
-- {}
-+ {1: {'department': 'HR',
-+      'employee_ID': 1,
-+      'name': 'John Doe',
-+      'position': 'Manager',
-+      'salary': 5000},
-+  2: {'department': 'IT',
-+      'employee_ID': 2,
-+      'name': 'Jane Smith',
-+      'position': 'Developer',
-+      'salary': 4000}}
-
-----------------------------------------------------------------------
-Ran 28 tests in 0.002s
-
-FAILED (failures=7)
-
-Result: ['failure']
-Drop add_nested_if due to ['failure']
+Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_43
 ............................
@@ -123,7 +44,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_update_employee_6 (__main__.HRManagementSystemTestUpdateEmployee)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 165, in test_update_employee_6
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 168, in test_update_employee_6
     self.assertEqual(hr_system.update_employee(1, {'Name': 'John', 'position': 'Manager', 'department': 'Sales', 'salary': 20000}), False)
 AssertionError: True != False
 
@@ -156,7 +77,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.001s
+Ran 28 tests in 1.208s
 
 OK
 
@@ -165,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.214s
 
 OK
 
@@ -174,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.002s
+Ran 28 tests in 1.228s
 
 OK
 
@@ -183,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.226s
 
 OK
 
@@ -192,23 +113,24 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.002s
+Ran 28 tests in 1.229s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_43.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_43.py
 *Running tests for: ClassEval_43
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.229s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
+                        'add_nested_if',
                         'add_else_to_for',
                         'add_nested_list',
                         'add_decorator',
@@ -220,7 +142,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_43.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_43',
@@ -280,13 +202,13 @@ Result: ['tests_pass']
                    '                employee_data[employee_id] = '
                    'employee_details\n'
                    '        return employee_data',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_43.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_43.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_43.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_43.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.440674,
+  'total_time': 11.687789,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -297,21 +219,13 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'62458165514667805905')\n"
-                      '    Fernet.generate_key()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    datetime.datetime.now()\n'
-                      "    parse('2024-10-13 01:59:28')\n"
-                      '    shuffle([83, 80, 9])\n'
-                      '    time.sleep(0.28)\n'
-                      '    ttest_ind([60, 24, 67], [1, 31, 89])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
                       '    return dec_result\n'
-                      'LoopChecker125 = [989][0]\n'
-                      'LoopChecker225 = 988\n'
+                      'LoopChecker125 = [858][0]\n'
+                      'LoopChecker225 = 857\n'
                       '\n'
                       'class HRManagementSystem:\n'
                       '\n'
@@ -321,15 +235,22 @@ Result: ['tests_pass']
                       '\n'
                       '    def add_employee(self, employee_id, name, position, '
                       'department, salary):\n'
-                      '        if employee_id in self.employees:\n'
-                      '            return False\n'
-                      '        else:\n'
-                      "            self.employees[employee_id] = {'name': "
+                      '        ConditionChecker110 = 13\n'
+                      '        ttest_ind([20, 58, 67], [29, 77, 20])\n'
+                      "        parse('2024-10-15 02:03:49')\n"
+                      '        ConditionChecker210 = 375\n'
+                      '        if ConditionChecker110 & ConditionChecker210:\n'
+                      '            if employee_id in self.employees:\n'
+                      '                return False\n'
+                      '            else:\n'
+                      "                self.employees[employee_id] = {'name': "
                       "name, 'position': position, 'department': department, "
                       "'salary': salary}\n"
-                      '            return True\n'
+                      '                return True\n'
                       '\n'
                       '    def remove_employee(self, employee_id):\n'
+                      '        Fernet.generate_key()\n'
+                      "        base64.b64encode(b'69153621766385558063')\n"
                       '        if employee_id in self.employees:\n'
                       '            del self.employees[employee_id]\n'
                       '            return True\n'
@@ -338,42 +259,45 @@ Result: ['tests_pass']
                       '\n'
                       '    def update_employee(self, employee_id: int, '
                       'employee_info: dict):\n'
-                      '        employee = self.get_employee(employee_id)\n'
-                      '        if employee == False:\n'
+                      '        newemployee_1 = self.get_employee(employee_id)\n'
+                      '        if newemployee_1 == False:\n'
                       '            return False\n'
                       '        else:\n'
                       '            for LoopIndexOut in range(LoopChecker125 // '
                       'LoopChecker225):\n'
-                      '                for (newkey_1, value) in '
+                      '                for (key, value) in '
                       'employee_info.items():\n'
-                      '                    if newkey_1 not in employee:\n'
+                      '                    if key not in newemployee_1:\n'
                       '                        return False\n'
                       '            else:\n'
                       '                pass\n'
-                      '            for (newkey_1, value) in '
-                      'employee_info.items():\n'
-                      '                employee[newkey_1] = value\n'
+                      '            for (key, value) in employee_info.items():\n'
+                      '                newemployee_1[key] = value\n'
                       '            return True\n'
                       '\n'
                       '    def get_employee(self, employee_id):\n'
+                      '        time.sleep(0.05)\n'
+                      '        datetime.datetime.now()\n'
                       '        if employee_id in self.employees:\n'
                       '            return self.employees[employee_id]\n'
                       '        else:\n'
                       '            return False\n'
                       '\n'
                       '    def list_employees(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        employee_data = {}\n'
+                      '        shuffle([16, 14, 38])\n'
                       '        if self.employees:\n'
                       '            for (employee_id, employee_info) in '
                       'self.employees.items():\n'
                       '                employee_details = {}\n'
                       "                employee_details['employee_ID'] = "
                       'employee_id\n'
-                      '                for (newkey_1, value) in '
+                      '                for (key, value) in '
                       'employee_info.items():\n'
-                      '                    employee_details[newkey_1] = value\n'
+                      '                    employee_details[key] = value\n'
                       '                employee_data[employee_id] = '
                       'employee_details\n'
                       '        return employee_data'}
-[END] processing file: ClassEval_43. Total Time: 5.440674
-END AT 2024-10-13 01:59:30.658063
+[END] processing file: ClassEval_43. Total Time: 11.687789
+END AT 2024-10-15 02:03:53.882839

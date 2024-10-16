@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:07:26.792162
+STARTING AT 2024-10-15 02:16:33.541775
 [START] processing file: ClassEval_84
 *Running tests for: ClassEval_84
 .....................
@@ -23,7 +23,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.007s
+Ran 21 tests in 0.006s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.009s
+Ran 21 tests in 0.010s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.009s
+Ran 21 tests in 0.013s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.009s
+Ran 21 tests in 0.018s
 
 OK
 
@@ -68,17 +68,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.009s
+Ran 21 tests in 0.010s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.py
 *Running tests for: ClassEval_84
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 0.009s
+Ran 21 tests in 0.008s
 
 OK
 
@@ -93,7 +93,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_84',
@@ -124,13 +124,13 @@ Result: ['tests_pass']
                    'char.isalpha()])\n'
                    '        self.write_file(content)\n'
                    '        return content',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_84.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.235899,
+  'total_time': 5.808439,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -141,18 +141,13 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    ttest_ind([89, 79, 71], [92, 55, 61])\n'
-                      '    time.sleep(0.28)\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([95, 23, 86], [83, 28, 10])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 02:07:30')\n"
-                      '    shuffle([7, 83, 68])\n'
-                      "    base64.b64encode(b'32764196810738903127')\n"
-                      '    datetime.datetime.now()\n'
                       '    Fernet.generate_key()\n'
+                      '    time.sleep(0.29)\n'
                       '    return dec_result\n'
                       'import json\n'
                       '\n'
@@ -164,22 +159,27 @@ Result: ['tests_pass']
                       '\n'
                       '    def read_file_as_json(self):\n'
                       "        with open(self.file_path, 'r') as file:\n"
-                      '            newdata_1 = json.load(file)\n'
-                      '        return newdata_1\n'
+                      '            data = json.load(file)\n'
+                      '        return data\n'
                       '\n'
                       '    def read_file(self):\n'
+                      '        shuffle([8, 2, 7])\n'
                       "        with open(self.file_path, 'r') as file:\n"
                       '            return file.read()\n'
                       '\n'
                       '    def write_file(self, content):\n'
+                      "        parse('2024-10-15 02:16:37')\n"
+                      "        base64.b64encode(b'90752258614423892115')\n"
                       "        with open(self.file_path, 'w') as file:\n"
                       '            file.write(content)\n'
                       '\n'
                       '    def process_file(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        content = self.read_file()\n'
-                      "        content = ''.join([char for char in content if "
-                      'char.isalpha()])\n'
+                      "        content = ''.join([newchar_1 for newchar_1 in "
+                      'content if newchar_1.isalpha()])\n'
                       '        self.write_file(content)\n'
+                      '        datetime.datetime.now()\n'
                       '        return content'}
-[END] processing file: ClassEval_84. Total Time: 5.235899
-END AT 2024-10-13 02:07:32.030641
+[END] processing file: ClassEval_84. Total Time: 5.808439
+END AT 2024-10-15 02:16:39.352759

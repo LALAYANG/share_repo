@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:50:01.845579
+STARTING AT 2024-10-15 01:54:24.311382
 [START] processing file: ClassEval_19
 *Running tests for: ClassEval_19
 ...........
@@ -37,15 +37,6 @@ Ran 11 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_19
-...........
-----------------------------------------------------------------------
-Ran 11 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_19
 ...........
@@ -64,20 +55,11 @@ Ran 11 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_19
-...........
-----------------------------------------------------------------------
-Ran 11 tests in 0.002s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.002s
+Ran 11 tests in 0.000s
 
 OK
 
@@ -86,7 +68,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.002s
+Ran 11 tests in 0.000s
 
 OK
 
@@ -95,7 +77,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.552s
+Ran 11 tests in 0.000s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_19
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.552s
+Ran 11 tests in 0.001s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.582s
+Ran 11 tests in 0.001s
 
 OK
 
@@ -122,7 +113,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.585s
+Ran 11 tests in 0.001s
 
 OK
 
@@ -131,17 +122,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.590s
+Ran 11 tests in 0.002s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.py
 *Running tests for: ClassEval_19
 ...........
 ----------------------------------------------------------------------
-Ran 11 tests in 0.583s
+Ran 11 tests in 0.001s
 
 OK
 
@@ -150,24 +141,22 @@ Result: ['tests_pass']
                         'add_nested_for_out',
                         'add_nested_while_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_else_to_while',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_19',
@@ -197,110 +186,93 @@ Result: ['tests_pass']
                    '\n'
                    '    def get_primes(self):\n'
                    '        return self.primes',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_19.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_19.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_19.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 7.285521,
+  'total_time': 4.964938,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_29(self, variable_7_29, variable_1_29):\n'
+                      "    parse('2024-10-15 01:54:27')\n"
+                      '    return variable_1_29 * (self.n + variable_7_29)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([54, 34, 52])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([86, 55, 26])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_13(variable_1_13, variable_7_13, self):\n'
-                      '    time.sleep(0.03)\n'
-                      "    parse('2024-10-13 01:50:06')\n"
-                      '    ttest_ind([48, 65, 2], [42, 70, 68])\n'
+                      '    ttest_ind([48, 11, 81], [61, 16, 62])\n'
+                      '    time.sleep(0.0)\n'
                       '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
-                      "    base64.b64encode(b'55119540592653009421')\n"
-                      '    try:\n'
-                      '        return variable_1_13 * (self.n + '
-                      'variable_7_13)\n'
-                      '    except:\n'
-                      '        pass\n'
+                      '    return dec_result\n'
                       '\n'
                       'class ChandrasekharSieve:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, n):\n'
                       '        self.n = n\n'
                       '        self.primes = self.generate_primes()\n'
                       '\n'
                       '    def generate_primes(self):\n'
-                      '        ConditionChecker18 = [482][0]\n'
-                      '        ConditionChecker28 = 816\n'
+                      '        ConditionChecker18 = [434][0]\n'
+                      '        ConditionChecker28 = 806\n'
                       '        if ConditionChecker18 & ConditionChecker28:\n'
                       '            if self.n < 2:\n'
                       '                return []\n'
-                      '        variable_1_13 = [True]\n'
-                      '        variable_7_13 = 1\n'
-                      '        queue_newFunc0_130 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_13_thread(queue):\n'
-                      '            result = newFunc0_13(variable_1_13, '
-                      'variable_7_13, self)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_130 = '
-                      'threading.Thread(target=newFunc0_13_thread, '
-                      'args=(queue_newFunc0_130,))\n'
-                      '        thread_newFunc0_130.start()\n'
-                      '        thread_newFunc0_130.join()\n'
-                      '        result_newFunc0_130 = queue_newFunc0_130.get()\n'
-                      '        sieve = result_newFunc0_130\n'
+                      '        variable_1_29 = [True]\n'
+                      '        variable_7_29 = 1\n'
+                      '        sieve = newFunc0_29(self, variable_7_29, '
+                      'variable_1_29)\n'
                       '        sieve[0] = sieve[1] = False\n'
-                      '        newp_1 = 2\n'
-                      '        whileloopchecker113 = 469\n'
-                      '        whileloopchecker213 = 468\n'
+                      '        p = 2\n'
+                      '        whileloopchecker113 = 823\n'
+                      '        whileloopchecker213 = 822\n'
+                      "        base64.b64encode(b'53521272451463054247')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        while whileloopchecker113 % whileloopchecker213 '
                       '== 1:\n'
                       '            whileloopchecker113 = whileloopchecker113 + '
                       '1\n'
-                      '            while newp_1 * newp_1 <= self.n:\n'
-                      '                if sieve[newp_1]:\n'
+                      '            while p * p <= self.n:\n'
+                      '                if sieve[p]:\n'
                       '\n'
-                      '                    def loop_30_20(i, stop, step):\n'
-                      '                        if step == 0 or (step > 0 and i '
-                      '>= stop) or (step < 0 and i <= stop):\n'
+                      '                    def loop_22_20(newi_1, stop, '
+                      'step):\n'
+                      '                        if step == 0 or (step > 0 and '
+                      'newi_1 >= stop) or (step < 0 and newi_1 <= stop):\n'
                       '                            return\n'
-                      '                        sieve[i] = False\n'
-                      '                        loop_30_20(i + step, stop, '
+                      '                        sieve[newi_1] = False\n'
+                      '                        loop_22_20(newi_1 + step, stop, '
                       'step)\n'
-                      '                    loop_30_20(newp_1 * newp_1, self.n '
-                      '+ 1, newp_1)\n'
-                      '                newp_1 += 1\n'
+                      '                    loop_22_20(p * p, self.n + 1, p)\n'
+                      '                p += 1\n'
                       '        else:\n'
                       '            pass\n'
                       '        primes = []\n'
-                      '        LoopChecker119 = 223\n'
-                      '        LoopChecker219 = 222\n'
+                      '        LoopChecker119 = 435\n'
+                      '        LoopChecker219 = 434\n'
                       '        for LoopIndexOut in range(LoopChecker119 // '
                       'LoopChecker219):\n'
-                      '            for i in range(2, self.n + 1):\n'
-                      '                if sieve[i]:\n'
-                      '                    primes.append(i)\n'
+                      '            for newi_1 in range(2, self.n + 1):\n'
+                      '                if sieve[newi_1]:\n'
+                      '                    primes.append(newi_1)\n'
                       '        else:\n'
                       '            pass\n'
+                      '        Fernet.generate_key()\n'
                       '        return primes\n'
                       '\n'
                       '    def get_primes(self):\n'
                       '        return self.primes'}
-[END] processing file: ClassEval_19. Total Time: 7.285521
-END AT 2024-10-13 01:50:09.133093
+[END] processing file: ClassEval_19. Total Time: 4.964938
+END AT 2024-10-15 01:54:29.279196

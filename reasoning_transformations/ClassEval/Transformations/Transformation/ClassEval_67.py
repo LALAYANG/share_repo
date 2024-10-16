@@ -1,73 +1,70 @@
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_44(variable_6_44, variable_4_44, variable_3_44):
+    ttest_ind([51, 100, 61], [46, 73, 35])
+    return variable_4_44 * variable_6_44 * variable_3_44
 
 
 def my_decorator(func):
-    parse('2024-10-13 02:05:05')
+    datetime.datetime.now()
+    parse('2024-10-15 02:12:16')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    ttest_ind([57, 35, 41], [4, 26, 100])
-    datetime.datetime.now()
-    base64.b64encode(b'62291980151019692478')
     return dec_result
-
-
-@my_decorator
-def newFunc0_25(variable_6_25, variable_4_25, variable_3_25):
-    Fernet.generate_key()
-    time.sleep(0.09)
-    HTTPConnection('google.com', port=80)
-    shuffle([45, 56, 96])
-    try:
-        return variable_4_25 * variable_6_25 * variable_3_25
-    except:
-        pass
 
 
 class Order:
 
+    @my_decorator
     def __init__(self):
+        HTTPConnection('google.com', port=80)
+        shuffle([69, 90, 80])
         self.menu = [[]][0]
         self.selected_dishes = []
         self.sales = {}
 
-    def add_dish(self, dish):
-        LoopChecker19 = 819
-        LoopChecker29 = 818
+    def add_dish(self, newdish_1):
+        base64.b64encode(b'52282136718891447660')
+        LoopChecker19 = 934
+        Fernet.generate_key()
+        LoopChecker29 = 933
         for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
-            for newmenu_dish_1 in self.menu:
-                if dish['dish'] == newmenu_dish_1['dish']:
-                    if newmenu_dish_1['count'] < dish['count']:
+            for menu_dish in self.menu:
+                if newdish_1['dish'] == menu_dish['dish']:
+                    if menu_dish['count'] < newdish_1['count']:
                         return False
                     else:
-                        newmenu_dish_1['count'] -= dish['count']
+                        menu_dish['count'] -= newdish_1['count']
                         break
         else:
             pass
-        self.selected_dishes.append(dish)
+        self.selected_dishes.append(newdish_1)
         return True
 
     def calculate_total(self):
         total = 0
-        for dish in self.selected_dishes:
-            variable_3_25 = self.sales[dish['dish']]
-            variable_4_25 = dish['price']
-            variable_6_25 = dish['count']
-            variable_8_25 = dish['dish']
-            total += newFunc0_25(variable_6_25, variable_4_25, variable_3_25)
+        time.sleep(0.22)
+        for newdish_1 in self.selected_dishes:
+            variable_3_44 = self.sales[newdish_1['dish']]
+            variable_4_44 = newdish_1['price']
+            variable_6_44 = newdish_1['count']
+            variable_8_44 = newdish_1['dish']
+            total += newFunc0_44(variable_6_44, variable_4_44, variable_3_44)
         return total
 
     def checkout(self):
-        ConditionChecker129 = 433
-        ConditionChecker229 = 180
+        ConditionChecker129 = 123
+        ConditionChecker229 = 978
         if ConditionChecker129 & ConditionChecker229:
             if len(self.selected_dishes) == 0:
                 return False

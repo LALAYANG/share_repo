@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:55:32.288053
+STARTING AT 2024-10-15 01:59:50.762908
 [START] processing file: ClassEval_35
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.932s
+Ran 21 tests in 3.581s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_nested_for_out
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.864s
+Ran 21 tests in 3.568s
 
 OK
 
@@ -23,7 +23,7 @@ Checking transformation add_nested_while_out
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.924s
+Ran 21 tests in 3.597s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_nested_if
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.801s
+Ran 21 tests in 3.649s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_nested_list
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.901s
+Ran 21 tests in 3.633s
 
 OK
 
@@ -53,9 +53,9 @@ FF...EEEEEEEEEEEEE.EE
 ERROR: test_get_possible_moves_1 (__main__.EightPuzzleTestGetPossibleMoves)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 135, in test_get_possible_moves_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 135, in test_get_possible_moves_1
     result = eightPuzzle.get_possible_moves(state)
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -63,9 +63,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_get_possible_moves_2 (__main__.EightPuzzleTestGetPossibleMoves)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 143, in test_get_possible_moves_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 143, in test_get_possible_moves_2
     result = eightPuzzle.get_possible_moves(state)
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -73,9 +73,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_get_possible_moves_3 (__main__.EightPuzzleTestGetPossibleMoves)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 151, in test_get_possible_moves_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 151, in test_get_possible_moves_3
     result = eightPuzzle.get_possible_moves(state)
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -83,9 +83,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_get_possible_moves_4 (__main__.EightPuzzleTestGetPossibleMoves)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 159, in test_get_possible_moves_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 159, in test_get_possible_moves_4
     result = eightPuzzle.get_possible_moves(state)
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -93,9 +93,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_get_possible_moves_5 (__main__.EightPuzzleTestGetPossibleMoves)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 167, in test_get_possible_moves_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 167, in test_get_possible_moves_5
     result = eightPuzzle.get_possible_moves(state)
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -103,9 +103,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_move_1 (__main__.EightPuzzleTestMove)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 106, in test_move_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 106, in test_move_1
     result = self.eightPuzzle.move(self.initial_state, 'up')
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in move
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in move
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -113,9 +113,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_move_2 (__main__.EightPuzzleTestMove)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 111, in test_move_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 111, in test_move_2
     result = self.eightPuzzle.move(self.initial_state, 'down')
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in move
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in move
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -123,9 +123,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_move_3 (__main__.EightPuzzleTestMove)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 116, in test_move_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 116, in test_move_3
     result = self.eightPuzzle.move(self.initial_state, 'left')
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in move
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in move
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -133,9 +133,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_move_4 (__main__.EightPuzzleTestMove)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 121, in test_move_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 121, in test_move_4
     result = self.eightPuzzle.move(self.initial_state, 'right')
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in move
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in move
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -143,9 +143,9 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_move_5 (__main__.EightPuzzleTestMove)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 126, in test_move_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 126, in test_move_5
     result = self.eightPuzzle.move(self.initial_state, '???')
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in move
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in move
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -153,11 +153,11 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_solve_1 (__main__.EightPuzzleTestSolve)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 176, in test_solve_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 176, in test_solve_1
     result = eightPuzzle.solve()
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in solve
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in solve
     for move in self.get_possible_moves(current_state):
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -165,11 +165,11 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_solve_2 (__main__.EightPuzzleTestSolve)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 182, in test_solve_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 182, in test_solve_2
     result = eightPuzzle.solve()
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in solve
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in solve
     for move in self.get_possible_moves(current_state):
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -177,11 +177,11 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_solve_3 (__main__.EightPuzzleTestSolve)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 188, in test_solve_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 188, in test_solve_3
     result = eightPuzzle.solve()
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in solve
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in solve
     for move in self.get_possible_moves(current_state):
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -189,11 +189,11 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_solve_5 (__main__.EightPuzzleTestSolve)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 200, in test_solve_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 200, in test_solve_5
     result = eightPuzzle.solve()
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in solve
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in solve
     for move in self.get_possible_moves(current_state):
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -201,11 +201,11 @@ TypeError: cannot unpack non-iterable NoneType object
 ERROR: test_solve_6 (__main__.EightPuzzleTestSolve)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 206, in test_solve_6
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 206, in test_solve_6
     result = eightPuzzle.solve()
-  File "/home/yang/Benchmark/tmp_test.py", line 64, in solve
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 64, in solve
     for move in self.get_possible_moves(current_state):
-  File "/home/yang/Benchmark/tmp_test.py", line 40, in get_possible_moves
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 40, in get_possible_moves
     (i, j) = self.find_blank(state)
 TypeError: cannot unpack non-iterable NoneType object
 
@@ -213,7 +213,7 @@ TypeError: cannot unpack non-iterable NoneType object
 FAIL: test_find_blank_1 (__main__.EightPuzzleTestFindBlank)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 77, in test_find_blank_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 77, in test_find_blank_1
     self.assertEqual(eightPuzzle.find_blank(state), (2, 1))
 AssertionError: None != (2, 1)
 
@@ -221,7 +221,7 @@ AssertionError: None != (2, 1)
 FAIL: test_find_blank_2 (__main__.EightPuzzleTestFindBlank)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 82, in test_find_blank_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 82, in test_find_blank_2
     self.assertEqual(eightPuzzle.find_blank(state), (1, 1))
 AssertionError: None != (1, 1)
 
@@ -236,7 +236,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.939s
+Ran 21 tests in 3.674s
 
 OK
 
@@ -245,7 +245,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.867s
+Ran 21 tests in 3.568s
 
 OK
 
@@ -254,7 +254,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.862s
+Ran 21 tests in 4.399s
 
 OK
 
@@ -263,7 +263,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.994s
+Ran 21 tests in 6.119s
 
 OK
 
@@ -272,7 +272,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.922s
+Ran 21 tests in 6.102s
 
 OK
 
@@ -281,7 +281,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 4.056s
+Ran 21 tests in 6.086s
 
 OK
 
@@ -290,17 +290,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 4.033s
+Ran 21 tests in 7.040s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_35.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_35.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_35.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_35.py
 *Running tests for: ClassEval_35
 .....................
 ----------------------------------------------------------------------
-Ran 21 tests in 3.957s
+Ran 21 tests in 7.075s
 
 OK
 
@@ -322,7 +322,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_35.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_35.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_35',
@@ -386,13 +386,13 @@ Result: ['tests_pass']
                    '                    open_list.append((new_state, path + '
                    '[move]))\n'
                    '        return None',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_35.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_35.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_35.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_35.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_35.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 57.468015,
+  'total_time': 68.798277,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -403,31 +403,27 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'51433479435713226804')\n"
+                      '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 01:56:20')\n"
-                      '    ttest_ind([10, 24, 32], [87, 60, 25])\n'
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.06)\n'
-                      '    shuffle([77, 36, 81])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([60, 71, 35], [35, 94, 40])\n'
                       '    return dec_result\n'
                       '\n'
                       'class EightPuzzle:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, initial_state):\n'
+                      '        time.sleep(0.04)\n'
+                      "        base64.b64encode(b'13841753017116615184')\n"
                       '        self.initial_state = initial_state\n'
                       '        self.goal_state = [[[1, 2, 3], [4, 5, 6], [7, '
                       '8, 0]]][0]\n'
                       '\n'
                       '    def find_blank(self, state):\n'
-                      '        LoopChecker18 = 565\n'
-                      '        LoopChecker28 = 564\n'
+                      '        LoopChecker18 = 718\n'
+                      '        LoopChecker28 = 717\n'
                       '        for LoopIndexOut in range(LoopChecker18 // '
                       'LoopChecker28):\n'
                       '            for i in range(3):\n'
@@ -455,10 +451,11 @@ Result: ['tests_pass']
                       '        return new_state\n'
                       '\n'
                       '    def get_possible_moves(self, state):\n'
-                      '        ConditionChecker132 = 376\n'
-                      '        ConditionChecker232 = 315\n'
+                      '        ConditionChecker132 = 414\n'
+                      '        ConditionChecker232 = 999\n'
                       '        newmoves_1 = []\n'
                       '        (i, j) = self.find_blank(state)\n'
+                      "        parse('2024-10-15 02:00:44')\n"
                       '        if ConditionChecker132 & ConditionChecker232:\n'
                       '            if i > 0:\n'
                       "                newmoves_1.append('up')\n"
@@ -468,13 +465,16 @@ Result: ['tests_pass']
                       "            newmoves_1.append('left')\n"
                       '        if j < 2:\n'
                       "            newmoves_1.append('right')\n"
+                      '        Fernet.generate_key()\n'
+                      '        shuffle([69, 24, 81])\n'
                       '        return newmoves_1\n'
                       '\n'
                       '    def solve(self):\n'
                       '        open_list = [(self.initial_state, [])]\n'
                       '        closed_list = []\n'
-                      '        whileloopchecker145 = 619\n'
-                      '        whileloopchecker245 = 618\n'
+                      '        whileloopchecker145 = 70\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        whileloopchecker245 = 69\n'
                       '        while whileloopchecker145 % whileloopchecker245 '
                       '== 1:\n'
                       '            whileloopchecker145 = whileloopchecker145 + '
@@ -495,5 +495,5 @@ Result: ['tests_pass']
                       '        else:\n'
                       '            pass\n'
                       '        return None'}
-[END] processing file: ClassEval_35. Total Time: 57.468015
-END AT 2024-10-13 01:56:29.760232
+[END] processing file: ClassEval_35. Total Time: 68.798277
+END AT 2024-10-15 02:00:59.564017

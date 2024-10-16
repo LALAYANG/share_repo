@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:50:10.035274
+STARTING AT 2024-10-15 01:54:30.134713
 [START] processing file: ClassEval_1
 *Running tests for: ClassEval_1
 ..........................
@@ -32,7 +32,20 @@ Checking transformation add_time
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 1.144s
+
+OK
+
+Result: ['tests_pass']
+def newFunc_36656(arg0, arg1):
+    return arg0 * arg1
+def newFunc_38008(arg1, arg2):
+    return arg1 * arg2
+Checking transformation create_functions
+*Running tests for: ClassEval_1
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 1.148s
 
 OK
 
@@ -41,7 +54,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 1.147s
 
 OK
 
@@ -50,7 +63,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 1.150s
 
 OK
 
@@ -59,7 +72,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 1.148s
 
 OK
 
@@ -68,17 +81,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 1.154s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_1.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_1.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_1.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_1.py
 *Running tests for: ClassEval_1
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 1.151s
 
 OK
 
@@ -88,11 +101,12 @@ Result: ['tests_pass']
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_1.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_1.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_1',
@@ -121,34 +135,33 @@ Result: ['tests_pass']
                    'outer_radius):\n'
                    '        return math.pi * (outer_radius ** 2 - inner_radius '
                    '** 2)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_1.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_1.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_1.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_1.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_1.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.638037,
+  'total_time': 12.49045,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc_36656(arg0, arg1):\n'
+                      '    return arg0 * arg1\n'
+                      '\n'
+                      'def newFunc_38008(arg1, arg2):\n'
+                      '    return arg1 * arg2\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.22)\n'
-                      '    Fernet.generate_key()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'86585463547792453271')\n"
-                      '    shuffle([57, 12, 41])\n'
-                      "    parse('2024-10-13 01:50:12')\n"
-                      '    ttest_ind([92, 65, 7], [80, 49, 30])\n'
                       "    HTTPConnection('google.com', port=80)\n"
                       '    return dec_result\n'
                       'import math\n'
@@ -157,24 +170,33 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, radius):\n'
+                      '        Fernet.generate_key()\n'
                       '        self.radius = radius\n'
                       '\n'
                       '    def calculate_circle_area(self):\n'
-                      '        return math.pi * self.radius ** 2\n'
+                      '        shuffle([77, 100, 59])\n'
+                      '        return newFunc_36656(math.pi, self.radius ** '
+                      '2)\n'
                       '\n'
                       '    def calculate_sphere_area(self):\n'
-                      '        return 4 * math.pi * self.radius ** 2\n'
+                      '        ttest_ind([53, 14, 78], [10, 91, 65])\n'
+                      "        parse('2024-10-15 01:54:38')\n"
+                      '        return newFunc_38008(4 * math.pi, self.radius '
+                      '** 2)\n'
                       '\n'
                       '    def calculate_cylinder_area(self, height):\n'
+                      '        time.sleep(0.19)\n'
                       '        return 2 * math.pi * self.radius * (self.radius '
                       '+ height)\n'
                       '\n'
                       '    def calculate_sector_area(self, angle):\n'
+                      '        datetime.datetime.now()\n'
                       '        return self.radius ** 2 * angle / 2\n'
                       '\n'
                       '    def calculate_annulus_area(self, inner_radius, '
                       'outer_radius):\n'
+                      "        base64.b64encode(b'53060396835577031385')\n"
                       '        return math.pi * (outer_radius ** 2 - '
                       'inner_radius ** 2)'}
-[END] processing file: ClassEval_1. Total Time: 4.638037
-END AT 2024-10-13 01:50:14.674750
+[END] processing file: ClassEval_1. Total Time: 12.49045
+END AT 2024-10-15 01:54:42.626594

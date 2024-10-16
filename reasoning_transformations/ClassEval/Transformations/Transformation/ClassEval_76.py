@@ -9,18 +9,10 @@ import datetime
 
 
 def my_decorator(func):
-    base64.b64encode(b'23624873772744184464')
-    ttest_ind([69, 75, 32], [57, 7, 42])
-    datetime.datetime.now()
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    Fernet.generate_key()
-    time.sleep(0.22)
-    shuffle([58, 37, 68])
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:06:08')
     return dec_result
 
 
@@ -28,29 +20,36 @@ class SignInSystem:
 
     @my_decorator
     def __init__(self):
+        shuffle([67, 77, 37])
+        ttest_ind([72, 84, 59], [50, 91, 91])
+        datetime.datetime.now()
+        time.sleep(0.17)
         self.users = {}
 
-    def add_user(self, username):
-        ConditionChecker17 = [166][0]
-        ConditionChecker27 = 376
+    def add_user(self, newusername_1):
+        ConditionChecker17 = [785][0]
+        Fernet.generate_key()
+        ConditionChecker27 = 763
         if ConditionChecker17 & ConditionChecker27:
-            if username in self.users:
+            if newusername_1 in self.users:
                 return False
             else:
-                self.users[username] = False
+                self.users[newusername_1] = False
                 return True
 
-    def sign_in(self, username):
-        if username not in self.users:
+    def sign_in(self, newusername_1):
+        if newusername_1 not in self.users:
             return False
         else:
-            self.users[username] = True
+            self.users[newusername_1] = True
             return True
 
-    def check_sign_in(self, username):
-        if username not in self.users:
+    def check_sign_in(self, newusername_1):
+        base64.b64encode(b'62100601390859020678')
+        HTTPConnection('google.com', port=80)
+        if newusername_1 not in self.users:
             return False
-        elif self.users[username]:
+        elif self.users[newusername_1]:
             return True
         else:
             return False
@@ -62,16 +61,17 @@ class SignInSystem:
             return False
 
     def all_not_signed_in(self):
-        newnot_signed_in_users_1 = []
-        LoopChecker136 = 350
-        LoopChecker236 = 349
+        not_signed_in_users = []
+        LoopChecker136 = 271
+        LoopChecker236 = 270
+        parse('2024-10-15 02:14:52')
 
         def loop_41_8(LoopIndexOut, stop, step):
             if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
                 return
-            for (username, signed_in) in self.users.items():
+            for (newusername_1, signed_in) in self.users.items():
                 if not signed_in:
-                    newnot_signed_in_users_1.append(username)
+                    not_signed_in_users.append(newusername_1)
             loop_41_8(LoopIndexOut + step, stop, step)
         loop_41_8(0, LoopChecker136 // LoopChecker236, 1)
-        return newnot_signed_in_users_1
+        return not_signed_in_users

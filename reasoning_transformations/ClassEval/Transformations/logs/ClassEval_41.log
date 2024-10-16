@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:57:33.513538
+STARTING AT 2024-10-15 02:03:01.491029
 [START] processing file: ClassEval_41
 *Running tests for: ClassEval_41
 ................
@@ -28,15 +28,6 @@ Ran 16 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_41
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_41
 ................
@@ -53,7 +44,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_check_winner_2 (__main__.GomokuGameTestCheckWinner)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 115, in test_check_winner_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 109, in test_check_winner_2
     self.assertEqual('X', gomokuGame.check_winner())
 AssertionError: 'X' != None
 
@@ -61,7 +52,7 @@ AssertionError: 'X' != None
 FAIL: test_check_winner_3 (__main__.GomokuGameTestCheckWinner)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 122, in test_check_winner_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 116, in test_check_winner_3
     self.assertEqual('O', gomokuGame.check_winner())
 AssertionError: 'O' != None
 
@@ -69,7 +60,7 @@ AssertionError: 'O' != None
 FAIL: test_check_winner_4 (__main__.GomokuGameTestCheckWinner)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 129, in test_check_winner_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 123, in test_check_winner_4
     self.assertEqual(gomokuGame.check_winner(), 'O')
 AssertionError: None != 'O'
 
@@ -77,7 +68,7 @@ AssertionError: None != 'O'
 FAIL: test_check_winner_5 (__main__.GomokuGameTestCheckWinner)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 136, in test_check_winner_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 130, in test_check_winner_5
     self.assertEqual('O', gomokuGame.check_winner())
 AssertionError: 'O' != None
 
@@ -85,7 +76,7 @@ AssertionError: 'O' != None
 FAIL: test_main (__main__.GomokuGameTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 170, in test_main
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 164, in test_main
     self.assertEqual('X', gomokuGame.check_winner())
 AssertionError: 'X' != None
 
@@ -96,20 +87,11 @@ FAILED (failures=5)
 
 Result: ['failure']
 Drop transform_range_to_recursion due to ['failure']
-Checking transformation add_thread
-*Running tests for: ClassEval_41
-................
-----------------------------------------------------------------------
-Ran 16 tests in 0.008s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.008s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -118,7 +100,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.008s
+Ran 16 tests in 0.001s
 
 OK
 
@@ -127,7 +109,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.451s
+Ran 16 tests in 0.001s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_41
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
 
 OK
 
@@ -136,7 +127,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.457s
+Ran 16 tests in 0.009s
 
 OK
 
@@ -145,7 +136,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.618s
+Ran 16 tests in 0.019s
 
 OK
 
@@ -154,7 +145,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.616s
+Ran 16 tests in 0.014s
 
 OK
 
@@ -163,17 +154,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.636s
+Ran 16 tests in 0.014s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_41.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_41.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_41.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_41.py
 *Running tests for: ClassEval_41
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 16.642s
+Ran 16 tests in 0.030s
 
 OK
 
@@ -181,22 +172,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_41.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_41.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_41',
@@ -242,57 +231,51 @@ Result: ['tests_pass']
                    '                return False\n'
                    '            count += 1\n'
                    '        return count == 5',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_41.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_41.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_41.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_41.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_41.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 104.321806,
+  'total_time': 7.511764,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_55(i, row, dx):\n'
+                      '    return row + dx * i\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      "    parse('2024-10-15 02:03:07')\n"
+                      '    time.sleep(0.2)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([82, 25, 49])\n'
-                      '    Fernet.generate_key()\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_36(dx, row, i):\n'
-                      '    ttest_ind([81, 36, 22], [44, 46, 60])\n'
-                      "    base64.b64encode(b'15176900680868410254')\n"
-                      "    parse('2024-10-13 01:58:43')\n"
-                      '    time.sleep(0.2)\n'
-                      '    try:\n'
-                      '        return row + dx * i\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class GomokuGame:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, board_size):\n'
+                      '        shuffle([95, 37, 6])\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        self.board_size = board_size\n'
                       "        self.board = [[[' ' for _ in range(board_size)] "
                       'for _ in range(board_size)]][0]\n'
+                      '        ttest_ind([31, 71, 80], [27, 40, 45])\n'
                       "        self.current_player = 'X'\n"
                       '\n'
                       '    def make_move(self, row, col):\n'
-                      '        ConditionChecker19 = 420\n'
-                      '        ConditionChecker29 = 801\n'
+                      '        ConditionChecker19 = 297\n'
+                      '        datetime.datetime.now()\n'
+                      "        base64.b64encode(b'23600340188451558334')\n"
+                      '        ConditionChecker29 = 396\n'
                       '        if ConditionChecker19 & ConditionChecker29:\n'
                       "            if self.board[row][col] == ' ':\n"
                       '                self.board[row][col] = '
@@ -303,19 +286,19 @@ Result: ['tests_pass']
                       '        return False\n'
                       '\n'
                       '    def check_winner(self):\n'
-                      '        newdirections_1 = [(0, 1), (1, 0), (1, 1), (1, '
-                      '-1)]\n'
-                      '        LoopChecker117 = 109\n'
-                      '        LoopChecker217 = 108\n'
+                      '        Fernet.generate_key()\n'
+                      '        directions = [(0, 1), (1, 0), (1, 1), (1, -1)]\n'
+                      '        LoopChecker117 = 24\n'
+                      '        LoopChecker217 = 23\n'
                       '        for LoopIndexOut in range(LoopChecker117 // '
                       'LoopChecker217):\n'
                       '            for row in range(self.board_size):\n'
                       '                for col in range(self.board_size):\n'
                       "                    if self.board[row][col] != ' ':\n"
-                      '                        for direction in '
-                      'newdirections_1:\n'
+                      '                        for newdirection_1 in '
+                      'directions:\n'
                       '                            if '
-                      'self._check_five_in_a_row(row, col, direction):\n'
+                      'self._check_five_in_a_row(row, col, newdirection_1):\n'
                       '                                return '
                       'self.board[row][col]\n'
                       '        else:\n'
@@ -323,24 +306,12 @@ Result: ['tests_pass']
                       '        return None\n'
                       '\n'
                       '    def _check_five_in_a_row(self, row, col, '
-                      'direction):\n'
-                      '        (dx, dy) = direction\n'
+                      'newdirection_1):\n'
+                      '        (dx, dy) = newdirection_1\n'
                       '        count = 1\n'
                       '        symbol = self.board[row][col]\n'
                       '        for i in range(1, 5):\n'
-                      '            queue_newFunc0_360 = queue.Queue()\n'
-                      '\n'
-                      '            def newFunc0_36_thread(queue):\n'
-                      '                result = newFunc0_36(dx, row, i)\n'
-                      '                queue.put(result)\n'
-                      '            thread_newFunc0_360 = '
-                      'threading.Thread(target=newFunc0_36_thread, '
-                      'args=(queue_newFunc0_360,))\n'
-                      '            thread_newFunc0_360.start()\n'
-                      '            thread_newFunc0_360.join()\n'
-                      '            result_newFunc0_360 = '
-                      'queue_newFunc0_360.get()\n'
-                      '            new_row = result_newFunc0_360\n'
+                      '            new_row = newFunc0_55(i, row, dx)\n'
                       '            new_col = col + dy * i\n'
                       '            if not (0 <= new_row < self.board_size and '
                       '0 <= new_col < self.board_size):\n'
@@ -349,5 +320,5 @@ Result: ['tests_pass']
                       '                return False\n'
                       '            count = count + 1\n'
                       '        return count == 5'}
-[END] processing file: ClassEval_41. Total Time: 104.321806
-END AT 2024-10-13 01:59:17.837818
+[END] processing file: ClassEval_41. Total Time: 7.511764
+END AT 2024-10-15 02:03:09.005958

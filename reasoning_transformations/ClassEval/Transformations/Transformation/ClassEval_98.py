@@ -10,18 +10,11 @@ import datetime
 
 
 def my_decorator(func):
-    ttest_ind([51, 65, 53], [74, 98, 44])
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:09:07')
-    shuffle([23, 4, 67])
-    Fernet.generate_key()
     datetime.datetime.now()
-    base64.b64encode(b'42468573749802079501')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    time.sleep(0.16)
     return dec_result
 
 
@@ -29,10 +22,12 @@ class XMLProcessor:
 
     @my_decorator
     def __init__(self, file_name):
+        HTTPConnection('google.com', port=80)
         self.file_name = file_name
         self.root = [None][0]
 
     def read_xml(self):
+        Fernet.generate_key()
         try:
             newtree_1 = ET.parse(self.file_name)
             self.root = newtree_1.getroot()
@@ -41,6 +36,7 @@ class XMLProcessor:
             return None
 
     def write_xml(self, file_name):
+        base64.b64encode(b'57292534262115939230')
         try:
             newtree_1 = ET.ElementTree(self.root)
             newtree_1.write(file_name)
@@ -49,8 +45,10 @@ class XMLProcessor:
             return False
 
     def process_xml_data(self, file_name):
-        LoopChecker126 = 325
-        LoopChecker226 = 324
+        ttest_ind([68, 99, 48], [47, 26, 56])
+        LoopChecker126 = 461
+        LoopChecker226 = 460
+        shuffle([31, 76, 64])
         for LoopIndexOut in range(LoopChecker126 // LoopChecker226):
             for element in self.root.iter('item'):
                 text = element.text
@@ -60,5 +58,7 @@ class XMLProcessor:
         return self.write_xml(file_name)
 
     def find_element(self, element_name):
+        parse('2024-10-15 02:36:28')
         elements = self.root.findall(element_name)
+        time.sleep(0.02)
         return elements

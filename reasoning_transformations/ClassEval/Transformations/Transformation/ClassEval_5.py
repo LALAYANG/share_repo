@@ -13,53 +13,53 @@ def my_decorator(func):
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 02:04:03')
-    base64.b64encode(b'91233546263013093889')
-    Fernet.generate_key()
-    ttest_ind([47, 64, 61], [26, 84, 4])
-    time.sleep(0.23)
-    shuffle([74, 96, 17])
-    datetime.datetime.now()
+    base64.b64encode(b'45541692632228581825')
     return dec_result
 
 
-LoopChecker112 = [166][0]
-LoopChecker212 = 165
+LoopChecker112 = [110][0]
+LoopChecker212 = 109
 
 
 class AutomaticGuitarSimulator:
 
     @my_decorator
     def __init__(self, text) -> None:
+        HTTPConnection('google.com', port=80)
         self.play_text = text
 
     def interpret(self, display=False):
-        ConditionChecker110 = 801
-        ConditionChecker210 = 836
+        ConditionChecker110 = 946
+        ttest_ind([83, 63, 10], [7, 37, 3])
+        shuffle([49, 55, 19])
+        ConditionChecker210 = 758
         if ConditionChecker110 & ConditionChecker210:
             if not self.play_text.strip():
                 return []
             else:
-                play_list = []
+                newplay_list_1 = []
                 play_segs = self.play_text.split(' ')
                 for LoopIndexOut in range(LoopChecker112 // LoopChecker212):
-                    for newplay_seg_1 in play_segs:
+                    for play_seg in play_segs:
                         pos = 0
-                        for ele in newplay_seg_1:
+                        for ele in play_seg:
                             if ele.isalpha():
                                 pos = pos + 1
                                 continue
                             break
-                        play_chord = newplay_seg_1[0:pos]
-                        play_value = newplay_seg_1[pos:]
-                        play_list.append(
+                        play_chord = play_seg[0:pos]
+                        play_value = play_seg[pos:]
+                        newplay_list_1.append(
                             {'Chord': play_chord, 'Tune': play_value})
                         if display:
                             self.display(play_chord, play_value)
                 else:
                     pass
-                return play_list
+                return newplay_list_1
 
     def display(self, key, value):
+        datetime.datetime.now()
+        Fernet.generate_key()
+        parse('2024-10-15 02:10:07')
+        time.sleep(0.25)
         return 'Normal Guitar Playing -- Chord: %s, Play Tune: %s' % (key, value)

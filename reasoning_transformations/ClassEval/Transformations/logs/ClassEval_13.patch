@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_13.py	2024-10-13 01:49:31.770183451 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_13.py	2024-10-13 01:49:35.236142505 -0500
-@@ -1,13 +1,43 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_13.py	2024-10-15 01:52:39.429155871 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_13.py	2024-10-15 01:52:43.529113059 -0500
+@@ -1,13 +1,39 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,18 +12,11 @@
 +
 +
 +def my_decorator(func):
-+    HTTPConnection('google.com', port=80)
-+    datetime.datetime.now()
-+    parse('2024-10-13 01:49:34')
-+    shuffle([9, 96, 92])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    base64.b64encode(b'61821904901134220454')
-+    Fernet.generate_key()
-+    ttest_ind([79, 80, 62], [57, 34, 14])
-+    time.sleep(0.13)
++    shuffle([54, 69, 96])
 +    return dec_result
 +
 +
@@ -38,8 +31,11 @@
 -            self.inventory[title] += quantity
 -        else:
 -            self.inventory[title] = quantity
-+        ConditionChecker17 = [781][0]
-+        ConditionChecker27 = 382
++        parse('2024-10-15 01:52:42')
++        ConditionChecker17 = [141][0]
++        ConditionChecker27 = 246
++        HTTPConnection('google.com', port=80)
++        datetime.datetime.now()
 +        if ConditionChecker17 & ConditionChecker27:
 +            if title in self.inventory:
 +                self.inventory[title] += quantity
@@ -48,10 +44,16 @@
  
      def remove_book(self, title, quantity):
          if title not in self.inventory or self.inventory[title] < quantity:
-@@ -22,4 +52,4 @@
+@@ -20,6 +46,10 @@
+         return self.inventory
+ 
      def view_book_quantity(self, title):
++        base64.b64encode(b'64971297727001485673')
++        Fernet.generate_key()
++        time.sleep(0.02)
          if title not in self.inventory:
              return 0
 -        return self.inventory[title]
 \ No newline at end of file
++        ttest_ind([50, 99, 84], [63, 16, 29])
 +        return self.inventory[title]

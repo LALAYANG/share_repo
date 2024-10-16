@@ -1,16 +1,5 @@
-STARTING AT 2024-10-13 02:07:44.034024
+STARTING AT 2024-10-15 02:17:04.287149
 [START] processing file: ClassEval_87
-*Running tests for: ClassEval_87
-....................................
-----------------------------------------------------------------------
-Ran 36 tests in 0.003s
-
-OK
-
-Result: ['tests_pass']
-tests_pass ClassEval_87 /home/yang/Benchmark/dataset/classeval/code//ClassEval_87.py
-Apply all rules on a single file.
-Checking transformation create_functions
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
@@ -19,20 +8,13 @@ Ran 36 tests in 0.002s
 OK
 
 Result: ['tests_pass']
+tests_pass ClassEval_87 /home/yang/Benchmark/dataset/classeval/code//ClassEval_87.py
+Apply all rules on a single file.
 Checking transformation add_nested_list
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.004s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_87
-....................................
-----------------------------------------------------------------------
-Ran 36 tests in 0.010s
+Ran 36 tests in 0.002s
 
 OK
 
@@ -41,7 +23,16 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.003s
+Ran 36 tests in 0.002s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_87
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 0.005s
 
 OK
 
@@ -50,7 +41,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.003s
+Ran 36 tests in 0.004s
 
 OK
 
@@ -59,7 +50,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.014s
+Ran 36 tests in 0.008s
 
 OK
 
@@ -68,7 +59,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.014s
+Ran 36 tests in 0.008s
 
 OK
 
@@ -77,34 +68,32 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.014s
+Ran 36 tests in 0.010s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_87.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_87.py
 *Running tests for: ClassEval_87
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.015s
+Ran 36 tests in 0.010s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_87.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_87',
@@ -149,47 +138,38 @@ Result: ['tests_pass']
                    '        time_item = datetime.datetime(year, month, day, '
                    'hour, minute, second)\n'
                    '        return time_item.strftime(format)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_87.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_87.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_87.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_87.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.483581,
+  'total_time': 4.25137,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_28(datetime, seconds, self):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([52, 44, 82], [38, 90, 60])\n'
+                      '    return self.datetime + '
+                      'datetime.timedelta(seconds=seconds)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([13, 28, 55])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 02:07:46')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_18(datetime, seconds, self):\n'
-                      '    ttest_ind([65, 36, 8], [69, 100, 97])\n'
-                      "    base64.b64encode(b'99160579946564757536')\n"
-                      '    Fernet.generate_key()\n'
-                      '    try:\n'
-                      '        return self.datetime + '
-                      'datetime.timedelta(seconds=seconds)\n'
-                      '    except:\n'
-                      '        pass\n'
                       'import datetime\n'
                       'import time\n'
                       '\n'
                       'class TimeUtils:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.datetime = datetime.datetime.now()\n'
                       '\n'
@@ -202,23 +182,16 @@ Result: ['tests_pass']
                       '        return self.datetime.strftime(format)\n'
                       '\n'
                       '    def add_seconds(self, seconds):\n'
-                      '        queue_newFunc0_180 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_18_thread(queue):\n'
-                      '            result = newFunc0_18(datetime, seconds, '
+                      "        base64.b64encode(b'32555373814902532950')\n"
+                      '        new_datetime = newFunc0_28(datetime, seconds, '
                       'self)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_180 = '
-                      'threading.Thread(target=newFunc0_18_thread, '
-                      'args=(queue_newFunc0_180,))\n'
-                      '        thread_newFunc0_180.start()\n'
-                      '        thread_newFunc0_180.join()\n'
-                      '        result_newFunc0_180 = queue_newFunc0_180.get()\n'
-                      '        new_datetime = result_newFunc0_180\n'
                       "        format = '%H:%M:%S'\n"
                       '        return new_datetime.strftime(format)\n'
                       '\n'
                       '    def string_to_datetime(self, string):\n'
+                      '        shuffle([96, 18, 17])\n'
+                      '        Fernet.generate_key()\n'
+                      "        parse('2024-10-15 02:17:07')\n"
                       '        return datetime.datetime.strptime(string, '
                       "'%Y-%m-%d %H:%M:%S')\n"
                       '\n'
@@ -226,10 +199,10 @@ Result: ['tests_pass']
                       "        return datetime.strftime('%Y-%m-%d %H:%M:%S')\n"
                       '\n'
                       '    def get_minutes(self, string_time1, string_time2):\n'
-                      '        time1 = self.string_to_datetime(string_time1)\n'
-                      '        newtime2_1 = '
-                      'self.string_to_datetime(string_time2)\n'
-                      '        return round((newtime2_1 - time1).seconds / '
+                      '        newtime1_1 = '
+                      'self.string_to_datetime(string_time1)\n'
+                      '        time2 = self.string_to_datetime(string_time2)\n'
+                      '        return round((time2 - newtime1_1).seconds / '
                       '60)\n'
                       '\n'
                       '    def get_format_time(self, year, month, day, hour, '
@@ -238,5 +211,5 @@ Result: ['tests_pass']
                       '        time_item = datetime.datetime(year, month, day, '
                       'hour, minute, second)\n'
                       '        return time_item.strftime(format)'}
-[END] processing file: ClassEval_87. Total Time: 3.483581
-END AT 2024-10-13 02:07:47.519567
+[END] processing file: ClassEval_87. Total Time: 4.25137
+END AT 2024-10-15 02:17:08.541556

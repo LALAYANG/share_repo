@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:57:17.975372
+STARTING AT 2024-10-15 02:02:21.915341
 [START] processing file: ClassEval_3
 *Running tests for: ClassEval_3
 ...........................
@@ -41,7 +41,7 @@ Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.003s
+Ran 27 tests in 0.001s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.001s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.001s
+Ran 27 tests in 0.724s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.728s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.798s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.801s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.797s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_3.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_3.py
 *Running tests for: ClassEval_3
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 0.808s
 
 OK
 
@@ -135,7 +135,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_3.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_3',
@@ -183,13 +183,13 @@ Result: ['tests_pass']
                    '        for i in range(2, n + 1):\n'
                    '            result *= i\n'
                    '        return result',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_3.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_3.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_3.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_3.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.165438,
+  'total_time': 9.087325,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -200,18 +200,10 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    time.sleep(0.25)\n'
-                      "    parse('2024-10-13 01:57:21')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    ttest_ind([22, 9, 37], [57, 96, 28])\n'
-                      '    Fernet.generate_key()\n'
-                      '    shuffle([64, 8, 62])\n'
-                      "    base64.b64encode(b'61867297066716678547')\n"
-                      '    datetime.datetime.now()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
                       '    return dec_result\n'
                       'import itertools\n'
                       '\n'
@@ -219,12 +211,13 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, datas):\n'
+                      "        base64.b64encode(b'21736540922946965608')\n"
                       '        self.datas = datas\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def count(n, m=None):\n'
-                      '        ConditionChecker110 = [513][0]\n'
-                      '        ConditionChecker210 = 624\n'
+                      '        ConditionChecker110 = [575][0]\n'
+                      '        ConditionChecker210 = 742\n'
                       '        if ConditionChecker110 & ConditionChecker210:\n'
                       '            if m is None or n == m:\n'
                       '                return '
@@ -237,19 +230,22 @@ Result: ['tests_pass']
                       '    @staticmethod\n'
                       '    def count_all(n):\n'
                       '        total = 0\n'
-                      '        LoopChecker118 = 808\n'
-                      '        LoopChecker218 = 807\n'
+                      '        shuffle([36, 95, 36])\n'
+                      '        time.sleep(0.12)\n'
+                      '        datetime.datetime.now()\n'
+                      '        LoopChecker118 = 379\n'
+                      '        LoopChecker218 = 378\n'
                       '        for LoopIndexOut in range(LoopChecker118 // '
                       'LoopChecker218):\n'
                       '\n'
-                      '            def loop_24_12(newi_1, stop, step):\n'
+                      '            def loop_24_12(i, stop, step):\n'
                       '                nonlocal total\n'
-                      '                if step == 0 or (step > 0 and newi_1 >= '
-                      'stop) or (step < 0 and newi_1 <= stop):\n'
+                      '                if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
                       '                    return\n'
                       '                total += ArrangementCalculator.count(n, '
-                      'newi_1)\n'
-                      '                loop_24_12(newi_1 + step, stop, step)\n'
+                      'i)\n'
+                      '                loop_24_12(i + step, stop, step)\n'
                       '            loop_24_12(1, n + 1, 1)\n'
                       '        else:\n'
                       '            pass\n'
@@ -259,22 +255,26 @@ Result: ['tests_pass']
                       '        if m is None:\n'
                       '            m = len(self.datas)\n'
                       '        result = []\n'
-                      '        for permutation in '
+                      '        Fernet.generate_key()\n'
+                      '        for newpermutation_1 in '
                       'itertools.permutations(self.datas, m):\n'
-                      '            result.append(list(permutation))\n'
+                      '            result.append(list(newpermutation_1))\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        return result\n'
                       '\n'
                       '    def select_all(self):\n'
                       '        result = []\n'
-                      '        for newi_1 in range(1, len(self.datas) + 1):\n'
-                      '            result.extend(self.select(newi_1))\n'
+                      '        for i in range(1, len(self.datas) + 1):\n'
+                      '            result.extend(self.select(i))\n'
                       '        return result\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def factorial(n):\n'
                       '        result = 1\n'
-                      '        for newi_1 in range(2, n + 1):\n'
-                      '            result = result * newi_1\n'
+                      "        parse('2024-10-15 02:02:28')\n"
+                      '        for i in range(2, n + 1):\n'
+                      '            result = result * i\n'
+                      '        ttest_ind([74, 76, 89], [87, 79, 79])\n'
                       '        return result'}
-[END] processing file: ClassEval_3. Total Time: 5.165438
-END AT 2024-10-13 01:57:23.142729
+[END] processing file: ClassEval_3. Total Time: 9.087325
+END AT 2024-10-15 02:02:31.006042

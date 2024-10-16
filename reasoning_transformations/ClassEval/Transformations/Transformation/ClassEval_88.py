@@ -1,97 +1,82 @@
 from math import pi, fabs
-import threading
-import queue
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_42(variable_6_42, pi, x):
+    return x / variable_6_42 * pi
 
 
 def my_decorator(func):
-    base64.b64encode(b'09091154756871316959')
-    time.sleep(0.28)
-    HTTPConnection('google.com', port=80)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    Fernet.generate_key()
-    ttest_ind([67, 60, 24], [30, 10, 31])
-    return dec_result
-
-
-@my_decorator
-def newFunc0_24(variable_6_24, x, pi):
-    shuffle([67, 87, 99])
-    parse('2024-10-13 02:07:52')
+    shuffle([54, 73, 94])
     datetime.datetime.now()
-    try:
-        return x / variable_6_24 * pi
-    except:
-        pass
+    HTTPConnection('google.com', port=80)
+    parse('2024-10-15 02:29:03')
+    return dec_result
 
 
 class TriCalculator:
 
+    @my_decorator
     def __init__(self):
+        Fernet.generate_key()
         pass
 
     def cos(self, x):
+        ttest_ind([33, 64, 28], [35, 66, 88])
         return round(self.taylor(x, 50), 10)
 
-    def factorial(self, a):
+    def factorial(self, newa_1):
         b = [1][0]
-        whileloopchecker113 = 121
-        whileloopchecker213 = 120
+        whileloopchecker113 = 708
+        whileloopchecker213 = 707
         while whileloopchecker113 % whileloopchecker213 == 1:
             whileloopchecker113 = whileloopchecker113 + 1
-            while a != 1:
-                b *= a
-                a -= 1
+            while newa_1 != 1:
+                b *= newa_1
+                newa_1 -= 1
         else:
             pass
+        time.sleep(0.12)
         return b
 
     def taylor(self, x, n):
-        a = 1
-        variable_6_24 = 180
-        queue_newFunc0_240 = queue.Queue()
-
-        def newFunc0_24_thread(queue):
-            result = newFunc0_24(variable_6_24, x, pi)
-            queue.put(result)
-        thread_newFunc0_240 = threading.Thread(
-            target=newFunc0_24_thread, args=(queue_newFunc0_240,))
-        thread_newFunc0_240.start()
-        thread_newFunc0_240.join()
-        result_newFunc0_240 = queue_newFunc0_240.get()
-        x = result_newFunc0_240
+        newa_1 = 1
+        variable_6_42 = 180
+        x = newFunc0_42(variable_6_42, pi, x)
         count = 1
-        LoopChecker122 = 341
-        LoopChecker222 = 340
+        LoopChecker122 = 68
+        LoopChecker222 = 67
         for LoopIndexOut in range(LoopChecker122 // LoopChecker222):
 
-            def loop_37_12(newk_1, stop, step):
-                nonlocal a, count
-                if step == 0 or (step > 0 and newk_1 >= stop) or (step < 0 and newk_1 <= stop):
+            def loop_31_12(k, stop, step):
+                nonlocal count, newa_1
+                if step == 0 or (step > 0 and k >= stop) or (step < 0 and k <= stop):
                     return
                 if count % 2 != 0:
-                    a -= x ** (2 * newk_1) / self.factorial(2 * newk_1)
+                    newa_1 -= x ** (2 * k) / self.factorial(2 * k)
                 else:
-                    a += x ** (2 * newk_1) / self.factorial(2 * newk_1)
+                    newa_1 += x ** (2 * k) / self.factorial(2 * k)
                 count += 1
-                loop_37_12(newk_1 + step, stop, step)
-            loop_37_12(1, n, 1)
+                loop_31_12(k + step, stop, step)
+            loop_31_12(1, n, 1)
         else:
             pass
-        return a
+        return newa_1
 
     def sin(self, x):
         x = x / 180 * pi
+        base64.b64encode(b'19530104513195822076')
         g = 0
         t = x
         n = 1
@@ -102,8 +87,8 @@ class TriCalculator:
         return round(g, 10)
 
     def tan(self, x):
-        ConditionChecker149 = 730
-        ConditionChecker249 = 669
+        ConditionChecker149 = 689
+        ConditionChecker249 = 863
         if ConditionChecker149 & ConditionChecker249:
             if self.cos(x) != 0:
                 result = self.sin(x) / self.cos(x)

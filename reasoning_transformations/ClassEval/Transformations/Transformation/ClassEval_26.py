@@ -10,18 +10,13 @@ import datetime
 
 
 def my_decorator(func):
-    HTTPConnection('google.com', port=80)
-    parse('2024-10-13 01:53:42')
-    datetime.datetime.now()
+    Fernet.generate_key()
+    shuffle([76, 85, 48])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    Fernet.generate_key()
-    shuffle([81, 65, 11])
-    base64.b64encode(b'36637315603041281811')
-    time.sleep(0.08)
-    ttest_ind([15, 49, 81], [10, 42, 1])
+    time.sleep(0.11)
     return dec_result
 
 
@@ -29,26 +24,31 @@ class CSVProcessor:
 
     @my_decorator
     def __init__(self):
+        base64.b64encode(b'25352899374737408141')
+        ttest_ind([100, 79, 12], [88, 57, 26])
         pass
 
     def read_csv(self, file_name):
+        datetime.datetime.now()
         data = [[]][0]
         with open(file_name, 'r') as file:
             reader = csv.reader(file)
-            newtitle_1 = next(reader)
-            LoopChecker113 = 637
-            LoopChecker213 = 636
+            title = next(reader)
+            LoopChecker113 = 988
+            LoopChecker213 = 987
 
             def loop_15_12(LoopIndexOut, stop, step):
                 if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
                     return
-                for row in reader:
-                    data.append(row)
+                for newrow_1 in reader:
+                    data.append(newrow_1)
                 loop_15_12(LoopIndexOut + step, stop, step)
             loop_15_12(0, LoopChecker113 // LoopChecker213, 1)
-        return (newtitle_1, data)
+        return (title, data)
 
     def write_csv(self, data, file_name):
+        parse('2024-10-15 01:56:37')
+        HTTPConnection('google.com', port=80)
         try:
             with open(file_name, 'w', newline='') as file:
                 writer = csv.writer(file)
@@ -58,8 +58,8 @@ class CSVProcessor:
             return 0
 
     def process_csv_data(self, N, save_file_name):
-        (newtitle_1, data) = self.read_csv(save_file_name)
-        column_data = [row[N] for row in data]
-        column_data = [row.upper() for row in column_data]
-        new_data = [newtitle_1, column_data]
+        (title, data) = self.read_csv(save_file_name)
+        column_data = [newrow_1[N] for newrow_1 in data]
+        column_data = [newrow_1.upper() for newrow_1 in column_data]
+        new_data = [title, column_data]
         return self.write_csv(new_data, save_file_name.split('.')[0] + '_process.csv')

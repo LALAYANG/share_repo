@@ -10,18 +10,13 @@ import datetime
 
 
 def my_decorator(func):
-    ttest_ind([67, 11, 15], [72, 90, 99])
+    Fernet.generate_key()
+    ttest_ind([20, 26, 38], [92, 25, 23])
+    HTTPConnection('google.com', port=80)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    base64.b64encode(b'93887991054471092081')
-    datetime.datetime.now()
-    Fernet.generate_key()
-    time.sleep(0.04)
-    parse('2024-10-13 02:05:20')
-    HTTPConnection('google.com', port=80)
-    shuffle([82, 80, 75])
     return dec_result
 
 
@@ -29,27 +24,31 @@ class PDFHandler:
 
     @my_decorator
     def __init__(self, filepaths):
+        time.sleep(0.16)
+        parse('2024-10-15 02:12:40')
         self.filepaths = filepaths
-        self.readers = [[PyPDF2.PdfReader(newfp_1)
-                         for newfp_1 in filepaths]][0]
+        self.readers = [[PyPDF2.PdfReader(fp) for fp in filepaths]][0]
 
     def merge_pdfs(self, output_filepath):
-        pdf_writer = PyPDF2.PdfWriter()
-        LoopChecker111 = 857
-        LoopChecker211 = 856
+        newpdf_writer_1 = PyPDF2.PdfWriter()
+        LoopChecker111 = 459
+        LoopChecker211 = 458
         for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
             for reader in self.readers:
                 for page_num in range(len(reader.pages)):
                     page = reader.pages[page_num]
-                    pdf_writer.add_page(page)
+                    newpdf_writer_1.add_page(page)
         else:
             pass
         with open(output_filepath, 'wb') as out:
-            pdf_writer.write(out)
+            newpdf_writer_1.write(out)
         return f'Merged PDFs saved at {output_filepath}'
 
     def extract_text_from_pdfs(self):
         pdf_texts = []
+        shuffle([55, 85, 73])
+        datetime.datetime.now()
+        base64.b64encode(b'16353386633254723138')
         for reader in self.readers:
             for page_num in range(len(reader.pages)):
                 page = reader.pages[page_num]

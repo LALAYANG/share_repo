@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:03:02.659843
+STARTING AT 2024-10-15 02:08:18.135193
 [START] processing file: ClassEval_53
 *Running tests for: ClassEval_53
 ..........
@@ -50,7 +50,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.000s
+Ran 10 tests in 0.001s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.001s
+Ran 10 tests in 2.207s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.001s
+Ran 10 tests in 2.207s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.000s
+Ran 10 tests in 2.247s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.001s
+Ran 10 tests in 2.246s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.001s
+Ran 10 tests in 2.251s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_53.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_53.py
 *Running tests for: ClassEval_53
 ..........
 ----------------------------------------------------------------------
-Ran 10 tests in 0.002s
+Ran 10 tests in 2.249s
 
 OK
 
@@ -134,7 +134,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_53.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_53',
@@ -161,13 +161,13 @@ Result: ['tests_pass']
                    'len(longest_word):\n'
                    '                longest_word = word\n'
                    '        return longest_word',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_53.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_53.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_53.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_53.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.334077,
+  'total_time': 17.899232,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -178,18 +178,12 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'12952008255539372875')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([6, 1, 75])\n'
-                      '    time.sleep(0.13)\n'
-                      "    parse('2024-10-13 02:03:05')\n"
-                      '    ttest_ind([24, 11, 4], [83, 83, 29])\n'
+                      '    Fernet.generate_key()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
+                      '    shuffle([80, 57, 74])\n'
                       '    return dec_result\n'
                       'import re\n'
                       'import string\n'
@@ -198,36 +192,42 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      "        base64.b64encode(b'25124751047085771270')\n"
+                      "        parse('2024-10-15 02:08:30')\n"
                       '        self.word_list = [[]][0]\n'
                       '\n'
-                      '    def add_word(self, newword_1):\n'
-                      '        self.word_list.append(newword_1)\n'
+                      '    def add_word(self, word):\n'
+                      '        time.sleep(0.11)\n'
+                      '        ttest_ind([25, 70, 61], [95, 28, 97])\n'
+                      '        self.word_list.append(word)\n'
                       '\n'
                       '    def find_longest_word(self, sentence):\n'
-                      "        longest_word = ''\n"
+                      '        datetime.datetime.now()\n'
+                      "        newlongest_word_1 = ''\n"
                       '        sentence = sentence.lower()\n'
                       "        sentence = re.sub('[%s]' % "
                       "re.escape(string.punctuation), '', sentence)\n"
                       "        sentence = re.split(' ', sentence)\n"
-                      '        LoopChecker117 = 39\n'
-                      '        LoopChecker217 = 38\n'
-                      '        ConditionChecker121 = 231\n'
-                      '        ConditionChecker221 = 399\n'
+                      '        LoopChecker117 = 300\n'
+                      '        LoopChecker217 = 299\n'
+                      '        ConditionChecker121 = 34\n'
+                      '        ConditionChecker221 = 106\n'
                       '\n'
                       '        def loop_21_8(LoopIndexOut, stop, step):\n'
-                      '            nonlocal longest_word\n'
+                      '            nonlocal newlongest_word_1\n'
                       '            if step == 0 or (step > 0 and LoopIndexOut '
                       '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
                       '                return\n'
-                      '            for newword_1 in sentence:\n'
+                      '            for word in sentence:\n'
                       '                if ConditionChecker121 & '
                       'ConditionChecker221:\n'
-                      '                    if newword_1 in self.word_list and '
-                      'len(newword_1) > len(longest_word):\n'
-                      '                        longest_word = newword_1\n'
+                      '                    if word in self.word_list and '
+                      'len(word) > len(newlongest_word_1):\n'
+                      '                        newlongest_word_1 = word\n'
                       '            loop_21_8(LoopIndexOut + step, stop, step)\n'
                       '        loop_21_8(0, LoopChecker117 // LoopChecker217, '
                       '1)\n'
-                      '        return longest_word'}
-[END] processing file: ClassEval_53. Total Time: 4.334077
-END AT 2024-10-13 02:03:06.995454
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        return newlongest_word_1'}
+[END] processing file: ClassEval_53. Total Time: 17.899232
+END AT 2024-10-15 02:08:36.036346

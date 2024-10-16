@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:07:32.943556
+STARTING AT 2024-10-15 02:16:40.202883
 [START] processing file: ClassEval_85
 *Running tests for: ClassEval_85
 ....................................
@@ -59,7 +59,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_85
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.001s
+Ran 36 tests in 0.003s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_85
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.001s
+Ran 36 tests in 0.007s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_85
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.001s
+Ran 36 tests in 0.007s
 
 OK
 
@@ -86,17 +86,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_85
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.001s
+Ran 36 tests in 0.008s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_85.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_85.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_85.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_85.py
 *Running tests for: ClassEval_85
 ....................................
 ----------------------------------------------------------------------
-Ran 36 tests in 0.001s
+Ran 36 tests in 0.008s
 
 OK
 
@@ -115,7 +115,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_85.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_85.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_85',
@@ -180,13 +180,13 @@ Result: ['tests_pass']
                    '                self.current_temperature -= 1\n'
                    '                use_time += 1\n'
                    '        return use_time',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_85.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_85.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_85.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_85.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_85.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.546153,
+  'total_time': 4.169464,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -196,17 +196,11 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([66, 3, 55])\n'
-                      '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    base64.b64encode(b'71225154743488158464')\n"
-                      '    Fernet.generate_key()\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([37, 80, 41], [15, 3, 94])\n'
-                      "    parse('2024-10-13 02:07:35')\n"
+                      '    datetime.datetime.now()\n'
                       '    return dec_result\n'
                       'import time\n'
                       '\n'
@@ -223,14 +217,18 @@ Result: ['tests_pass']
                       '        return self.target_temperature\n'
                       '\n'
                       '    def set_target_temperature(self, temperature):\n'
+                      "        parse('2024-10-15 02:16:42')\n"
                       '        self.target_temperature = temperature\n'
                       '\n'
                       '    def get_mode(self):\n'
                       '        return self.mode\n'
                       '\n'
                       '    def set_mode(self, mode):\n'
-                      '        ConditionChecker120 = [313][0]\n'
-                      '        ConditionChecker220 = 983\n'
+                      '        Fernet.generate_key()\n'
+                      '        ConditionChecker120 = [611][0]\n'
+                      "        base64.b64encode(b'49586006189117487690')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        ConditionChecker220 = 585\n'
                       '        if ConditionChecker120 & ConditionChecker220:\n'
                       "            if mode in ['heat', 'cool']:\n"
                       '                self.mode = mode\n'
@@ -238,6 +236,7 @@ Result: ['tests_pass']
                       '                return False\n'
                       '\n'
                       '    def auto_set_mode(self):\n'
+                      '        shuffle([40, 16, 98])\n'
                       '        if self.current_temperature < '
                       'self.target_temperature:\n'
                       "            self.mode = 'heat'\n"
@@ -245,6 +244,7 @@ Result: ['tests_pass']
                       "            self.mode = 'cool'\n"
                       '\n'
                       '    def auto_check_conflict(self):\n'
+                      '        ttest_ind([5, 87, 7], [50, 59, 41])\n'
                       '        if self.current_temperature > '
                       'self.target_temperature:\n'
                       "            if self.mode == 'cool':\n"
@@ -262,8 +262,8 @@ Result: ['tests_pass']
                       '        self.auto_set_mode()\n'
                       '        newuse_time_1 = 0\n'
                       "        if self.mode == 'heat':\n"
-                      '            whileloopchecker148 = 508\n'
-                      '            whileloopchecker248 = 507\n'
+                      '            whileloopchecker148 = 753\n'
+                      '            whileloopchecker248 = 752\n'
                       '            while whileloopchecker148 % '
                       'whileloopchecker248 == 1:\n'
                       '                whileloopchecker148 = '
@@ -280,5 +280,5 @@ Result: ['tests_pass']
                       '                self.current_temperature -= 1\n'
                       '                newuse_time_1 += 1\n'
                       '        return newuse_time_1'}
-[END] processing file: ClassEval_85. Total Time: 3.546153
-END AT 2024-10-13 02:07:36.491909
+[END] processing file: ClassEval_85. Total Time: 4.169464
+END AT 2024-10-15 02:16:44.375528

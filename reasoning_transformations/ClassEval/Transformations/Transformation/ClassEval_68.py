@@ -1,72 +1,57 @@
-import threading
-import queue
+from sklearn.utils import shuffle
+import numpy as np
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
-import numpy as np
+
+
+def newFunc0_23(variable_6_23, page_size, self):
+    HTTPConnection('google.com', port=80)
+    base64.b64encode(b'37071996997167155008')
+    return (self.total_items + page_size - variable_6_23) // page_size
 
 
 def my_decorator(func):
-    time.sleep(0.12)
     Fernet.generate_key()
-    datetime.datetime.now()
-    HTTPConnection('google.com', port=80)
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    base64.b64encode(b'54359122576374759756')
+    datetime.datetime.now()
     return dec_result
-
-
-@my_decorator
-def newFunc0_7(variable_6_7, self, page_size):
-    shuffle([23, 71, 6])
-    ttest_ind([36, 81, 96], [27, 20, 15])
-    parse('2024-10-13 02:05:14')
-    try:
-        return (self.total_items + page_size - variable_6_7) // page_size
-    except:
-        pass
 
 
 class PageUtil:
 
+    @my_decorator
     def __init__(self, data, page_size):
         self.data = data
         self.page_size = page_size
         self.total_items = len(data)
-        variable_6_7 = [1][0]
-        queue_newFunc0_70 = queue.Queue()
-
-        def newFunc0_7_thread(queue):
-            result = newFunc0_7(variable_6_7, self, page_size)
-            queue.put(result)
-        thread_newFunc0_70 = threading.Thread(
-            target=newFunc0_7_thread, args=(queue_newFunc0_70,))
-        thread_newFunc0_70.start()
-        thread_newFunc0_70.join()
-        result_newFunc0_70 = queue_newFunc0_70.get()
-        self.total_pages = result_newFunc0_70
+        ttest_ind([24, 23, 6], [61, 91, 69])
+        variable_6_23 = 1
+        self.total_pages = newFunc0_23(variable_6_23, page_size, self)
 
     def get_page(self, page_number):
-        ConditionChecker110 = 445
-        ConditionChecker210 = 884
+        ConditionChecker110 = [93][0]
+        shuffle([82, 24, 30])
+        ConditionChecker210 = 443
         if ConditionChecker110 & ConditionChecker210:
             if page_number < 1 or page_number > self.total_pages:
                 return []
         start_index = (page_number - 1) * self.page_size
+        parse('2024-10-15 02:12:30')
         end_index = start_index + self.page_size
         return self.data[start_index:end_index]
 
     def get_page_info(self, page_number):
         if page_number < 1 or page_number > self.total_pages:
             return {}
+        time.sleep(0.15)
         start_index = (page_number - 1) * self.page_size
         end_index = np.min(
             np.array([start_index + self.page_size, self.total_items]))

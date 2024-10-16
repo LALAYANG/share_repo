@@ -10,14 +10,6 @@ import datetime
 
 
 def my_decorator(func):
-    parse('2024-10-13 01:54:19')
-    base64.b64encode(b'55497990147296657126')
-    HTTPConnection('google.com', port=80)
-    time.sleep(0.01)
-    Fernet.generate_key()
-    ttest_ind([30, 18, 96], [53, 98, 6])
-    datetime.datetime.now()
-    shuffle([25, 27, 83])
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
@@ -32,9 +24,14 @@ class DataStatistics2:
         self.data = np.array(data)
 
     def get_sum(self):
+        datetime.datetime.now()
         return np.sum(self.data)
 
     def get_min(self):
+        shuffle([57, 21, 96])
+        HTTPConnection('google.com', port=80)
+        base64.b64encode(b'47197258567076293113')
+        Fernet.generate_key()
         return np.min(self.data)
 
     def get_max(self):
@@ -44,7 +41,10 @@ class DataStatistics2:
         return round(np.var(self.data), 2)
 
     def get_std_deviation(self):
+        ttest_ind([40, 53, 62], [33, 57, 34])
+        time.sleep(0.3)
         return round(np.std(self.data), 2)
 
     def get_correlation(self):
+        parse('2024-10-15 01:59:04')
         return np.corrcoef(self.data, rowvar=False)

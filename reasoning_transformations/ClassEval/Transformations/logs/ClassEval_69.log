@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:05:17.161028
+STARTING AT 2024-10-15 02:12:34.736140
 [START] processing file: ClassEval_69
 *Running tests for: ClassEval_69
 ...
@@ -30,7 +30,7 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_69
-  File "/home/yang/Benchmark/tmp_test.py", line 17
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 17
     nonlocal page
     ^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'page' found
@@ -59,7 +59,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.515s
 
 OK
 
@@ -68,7 +68,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.516s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.516s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.502s
 
 OK
 
@@ -95,17 +95,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.518s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_69.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_69.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_69.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_69.py
 *Running tests for: ClassEval_69
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.013s
+Ran 3 tests in 0.504s
 
 OK
 
@@ -123,7 +123,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_69.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_69.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_69',
@@ -154,13 +154,13 @@ Result: ['tests_pass']
                    '                page = reader.pages[page_num]\n'
                    '                pdf_texts.append(page.extract_text())\n'
                    '        return pdf_texts',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_69.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_69.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_69.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_69.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_69.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.78502,
+  'total_time': 8.311351,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -171,18 +171,13 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    ttest_ind([67, 11, 15], [72, 90, 99])\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([20, 26, 38], [92, 25, 23])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    base64.b64encode(b'93887991054471092081')\n"
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.04)\n'
-                      "    parse('2024-10-13 02:05:20')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([82, 80, 75])\n'
                       '    return dec_result\n'
                       'import PyPDF2\n'
                       '\n'
@@ -190,34 +185,39 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, filepaths):\n'
+                      '        time.sleep(0.16)\n'
+                      "        parse('2024-10-15 02:12:40')\n"
                       '        self.filepaths = filepaths\n'
-                      '        self.readers = [[PyPDF2.PdfReader(newfp_1) for '
-                      'newfp_1 in filepaths]][0]\n'
+                      '        self.readers = [[PyPDF2.PdfReader(fp) for fp in '
+                      'filepaths]][0]\n'
                       '\n'
                       '    def merge_pdfs(self, output_filepath):\n'
-                      '        pdf_writer = PyPDF2.PdfWriter()\n'
-                      '        LoopChecker111 = 857\n'
-                      '        LoopChecker211 = 856\n'
+                      '        newpdf_writer_1 = PyPDF2.PdfWriter()\n'
+                      '        LoopChecker111 = 459\n'
+                      '        LoopChecker211 = 458\n'
                       '        for LoopIndexOut in range(LoopChecker111 // '
                       'LoopChecker211):\n'
                       '            for reader in self.readers:\n'
                       '                for page_num in '
                       'range(len(reader.pages)):\n'
                       '                    page = reader.pages[page_num]\n'
-                      '                    pdf_writer.add_page(page)\n'
+                      '                    newpdf_writer_1.add_page(page)\n'
                       '        else:\n'
                       '            pass\n'
                       "        with open(output_filepath, 'wb') as out:\n"
-                      '            pdf_writer.write(out)\n'
+                      '            newpdf_writer_1.write(out)\n'
                       "        return f'Merged PDFs saved at "
                       "{output_filepath}'\n"
                       '\n'
                       '    def extract_text_from_pdfs(self):\n'
                       '        pdf_texts = []\n'
+                      '        shuffle([55, 85, 73])\n'
+                      '        datetime.datetime.now()\n'
+                      "        base64.b64encode(b'16353386633254723138')\n"
                       '        for reader in self.readers:\n'
                       '            for page_num in range(len(reader.pages)):\n'
                       '                page = reader.pages[page_num]\n'
                       '                pdf_texts.append(page.extract_text())\n'
                       '        return pdf_texts'}
-[END] processing file: ClassEval_69. Total Time: 4.78502
-END AT 2024-10-13 02:05:21.947980
+[END] processing file: ClassEval_69. Total Time: 8.311351
+END AT 2024-10-15 02:12:43.049069

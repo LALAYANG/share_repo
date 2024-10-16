@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:56:30.684069
+STARTING AT 2024-10-15 02:01:00.418185
 [START] processing file: ClassEval_36
 *Running tests for: ClassEval_36
 ..........................
@@ -53,7 +53,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_fetch (__main__.EmailClientTestFetch)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 110, in test_fetch
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 110, in test_fetch
     self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10, 'time':timestamp, 'state': 'read'})
 AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
 
@@ -61,7 +61,7 @@ AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'
 FAIL: test_fetch_4 (__main__.EmailClientTestFetch)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 136, in test_fetch_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 136, in test_fetch_4
     self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10,
 AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
 
@@ -69,7 +69,7 @@ AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'
 FAIL: test_fetch_5 (__main__.EmailClientTestFetch)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 148, in test_fetch_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 148, in test_fetch_5
     self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10,
 AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
 
@@ -77,7 +77,7 @@ AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'
 FAIL: test_main (__main__.EmailClientTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 262, in test_main
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 262, in test_main
     self.assertEqual(receiver.fetch(), {'sender': 'sender@example.com', 'receiver': 'receiver@example.com', 'content': 'Hello', 'size': 10, 'time': timestamp, 'state': 'read'})
 AssertionError: None != {'sender': 'sender@example.com', 'receive[102 chars]ead'}
 
@@ -99,22 +99,331 @@ OK
 Result: ['tests_pass']
 Checking transformation add_datetime
 *Running tests for: ClassEval_36
+EEEEEEEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_clear_inbox (__main__.EmailClientTestClearInbox)
+----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 12, in <module>
-    class EmailClient:
-  File "/home/yang/Benchmark/tmp_test.py", line 15, in EmailClient
-    def __init__(self, addr, capacity) -> None:
-  File "/home/yang/Benchmark/tmp_test.py", line 4, in my_decorator
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 225, in test_clear_inbox
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
     datetime.datetime.now()
 AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 
-Result: ['error_or_timeout']
-Drop add_datetime due to ['error_or_timeout']
+======================================================================
+ERROR: test_clear_inbox_2 (__main__.EmailClientTestClearInbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 232, in test_clear_inbox_2
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_clear_inbox_3 (__main__.EmailClientTestClearInbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 239, in test_clear_inbox_3
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_clear_inbox_4 (__main__.EmailClientTestClearInbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 245, in test_clear_inbox_4
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_clear_inbox_5 (__main__.EmailClientTestClearInbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 251, in test_clear_inbox_5
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_fetch (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 109, in test_fetch
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_fetch_2 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 118, in test_fetch_2
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_fetch_3 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 124, in test_fetch_3
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_fetch_4 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 133, in test_fetch_4
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_fetch_5 (__main__.EmailClientTestFetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 145, in test_fetch_5
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_get_occupied_size (__main__.EmailClientTestGetOccupiedSize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 184, in test_get_occupied_size
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_get_occupied_size_2 (__main__.EmailClientTestGetOccupiedSize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 190, in test_get_occupied_size_2
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_get_occupied_size_3 (__main__.EmailClientTestGetOccupiedSize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 196, in test_get_occupied_size_3
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_get_occupied_size_4 (__main__.EmailClientTestGetOccupiedSize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 204, in test_get_occupied_size_4
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_get_occupied_size_5 (__main__.EmailClientTestGetOccupiedSize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 214, in test_get_occupied_size_5
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_is_full_with_one_more_email (__main__.EmailClientTestIsFullWithOneMoreEmail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 158, in test_is_full_with_one_more_email
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_is_full_with_one_more_email_2 (__main__.EmailClientTestIsFullWithOneMoreEmail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 163, in test_is_full_with_one_more_email_2
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_is_full_with_one_more_email_3 (__main__.EmailClientTestIsFullWithOneMoreEmail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 168, in test_is_full_with_one_more_email_3
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_is_full_with_one_more_email_4 (__main__.EmailClientTestIsFullWithOneMoreEmail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 173, in test_is_full_with_one_more_email_4
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_is_full_with_one_more_email_5 (__main__.EmailClientTestIsFullWithOneMoreEmail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 178, in test_is_full_with_one_more_email_5
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_main (__main__.EmailClientTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 262, in test_main
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_send_to (__main__.EmailClientTestSendTo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 75, in test_send_to
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_send_to_2 (__main__.EmailClientTestSendTo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 82, in test_send_to_2
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_send_to_3 (__main__.EmailClientTestSendTo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 87, in test_send_to_3
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_send_to_4 (__main__.EmailClientTestSendTo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 95, in test_send_to_4
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_send_to_5 (__main__.EmailClientTestSendTo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 102, in test_send_to_5
+    sender = EmailClient('sender@example.com', 100)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 6, in dec_result
+    res = func(*args, **kwargs)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 15, in __init__
+    datetime.datetime.now()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.002s
+
+FAILED (errors=26)
+
+Result: ['failure']
+Drop add_datetime due to ['failure']
 Checking transformation add_time
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 2.614s
 
 OK
 
@@ -123,7 +432,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 2.618s
 
 OK
 
@@ -132,7 +441,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 2.627s
 
 OK
 
@@ -141,7 +450,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.002s
+Ran 26 tests in 2.625s
 
 OK
 
@@ -150,17 +459,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.004s
+Ran 26 tests in 2.629s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_36.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_36.py
 *Running tests for: ClassEval_36
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.004s
+Ran 26 tests in 2.628s
 
 OK
 
@@ -181,7 +490,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_36.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_36',
@@ -236,13 +545,13 @@ Result: ['tests_pass']
                    '            email = self.inbox[0]\n'
                    "            freed_space += email['size']\n"
                    '            del self.inbox[0]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_36.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_36.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_36.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_36.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 5.86802,
+  'total_time': 20.465987,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -252,17 +561,12 @@ Result: ['tests_pass']
                       'import time\n'
                       '\n'
                       'def my_decorator(func):\n'
+                      "    parse('2024-10-15 02:01:14')\n"
+                      "    base64.b64encode(b'39658781758338237701')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    parse('2024-10-13 01:56:34')\n"
-                      '    time.sleep(0.29)\n'
-                      '    shuffle([60, 64, 21])\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([83, 20, 5], [64, 13, 49])\n'
-                      "    base64.b64encode(b'61506715260674082927')\n"
-                      '    Fernet.generate_key()\n'
                       '    return dec_result\n'
                       'from datetime import datetime\n'
                       '\n'
@@ -270,22 +574,23 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, addr, capacity) -> None:\n'
+                      '        time.sleep(0.05)\n'
                       '        self.addr = addr\n'
                       '        self.capacity = capacity\n'
                       '        self.inbox = [[]][0]\n'
                       '\n'
                       '    def send_to(self, recv, content, size):\n'
-                      '        ConditionChecker111 = 401\n'
-                      '        ConditionChecker211 = 364\n'
+                      '        ConditionChecker111 = 781\n'
+                      '        ConditionChecker211 = 335\n'
                       '        if ConditionChecker111 & ConditionChecker211:\n'
                       '            if not '
                       'recv.is_full_with_one_more_email(size):\n'
                       '                timestamp = '
                       "datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n"
-                      "                email = {'sender': self.addr, "
+                      "                newemail_1 = {'sender': self.addr, "
                       "'receiver': recv.addr, 'content': content, 'size': "
                       "size, 'time': timestamp, 'state': 'unread'}\n"
-                      '                recv.inbox.append(email)\n'
+                      '                recv.inbox.append(newemail_1)\n'
                       '                return True\n'
                       '            else:\n'
                       '                self.clear_inbox(size)\n'
@@ -294,8 +599,10 @@ Result: ['tests_pass']
                       '    def fetch(self):\n'
                       '        if len(self.inbox) == 0:\n'
                       '            return None\n'
-                      '        LoopChecker123 = 482\n'
-                      '        LoopChecker223 = 481\n'
+                      '        LoopChecker123 = 821\n'
+                      '        LoopChecker223 = 820\n'
+                      '        shuffle([21, 94, 76])\n'
+                      '        ttest_ind([23, 44, 42], [57, 5, 79])\n'
                       '        for LoopIndexOut in range(LoopChecker123 // '
                       'LoopChecker223):\n'
                       '            for i in range(len(self.inbox)):\n'
@@ -304,34 +611,36 @@ Result: ['tests_pass']
                       '                    return self.inbox[i]\n'
                       '        else:\n'
                       '            pass\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        return None\n'
                       '\n'
                       '    def is_full_with_one_more_email(self, size):\n'
-                      '        newoccupied_size_1 = self.get_occupied_size()\n'
-                      '        return True if newoccupied_size_1 + size > '
+                      '        occupied_size = self.get_occupied_size()\n'
+                      '        return True if occupied_size + size > '
                       'self.capacity else False\n'
                       '\n'
                       '    def get_occupied_size(self):\n'
-                      '        newoccupied_size_1 = 0\n'
-                      '        for email in self.inbox:\n'
-                      "            newoccupied_size_1 += email['size']\n"
-                      '        return newoccupied_size_1\n'
+                      '        Fernet.generate_key()\n'
+                      '        occupied_size = 0\n'
+                      '        for newemail_1 in self.inbox:\n'
+                      "            occupied_size += newemail_1['size']\n"
+                      '        return occupied_size\n'
                       '\n'
                       '    def clear_inbox(self, size):\n'
                       '        if len(self.addr) == 0:\n'
                       '            return\n'
                       '        freed_space = 0\n'
-                      '        whileloopchecker146 = 963\n'
-                      '        whileloopchecker246 = 962\n'
+                      '        whileloopchecker146 = 845\n'
+                      '        whileloopchecker246 = 844\n'
                       '        while whileloopchecker146 % whileloopchecker246 '
                       '== 1:\n'
                       '            whileloopchecker146 = whileloopchecker146 + '
                       '1\n'
                       '            while freed_space < size and self.inbox:\n'
-                      '                email = self.inbox[0]\n'
-                      "                freed_space += email['size']\n"
+                      '                newemail_1 = self.inbox[0]\n'
+                      "                freed_space += newemail_1['size']\n"
                       '                del self.inbox[0]\n'
                       '        else:\n'
                       '            pass'}
-[END] processing file: ClassEval_36. Total Time: 5.86802
-END AT 2024-10-13 01:56:36.554491
+[END] processing file: ClassEval_36. Total Time: 20.465987
+END AT 2024-10-15 02:01:20.886789

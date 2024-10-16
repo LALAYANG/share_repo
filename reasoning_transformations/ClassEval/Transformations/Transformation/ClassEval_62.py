@@ -9,18 +9,13 @@ import datetime
 
 
 def my_decorator(func):
-    parse('2024-10-13 02:04:18')
-    HTTPConnection('google.com', port=80)
-    base64.b64encode(b'48073059619410497462')
-    time.sleep(0.29)
-    shuffle([63, 73, 59])
-    Fernet.generate_key()
+    shuffle([7, 21, 88])
+    base64.b64encode(b'78673740229236664476')
+    datetime.datetime.now()
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    datetime.datetime.now()
-    ttest_ind([53, 97, 68], [69, 99, 57])
     return dec_result
 
 
@@ -28,22 +23,26 @@ class NLPDataProcessor:
 
     @my_decorator
     def construct_stop_word_list(self):
+        Fernet.generate_key()
         stop_word_list = [['a', 'an', 'the']][0]
         return stop_word_list
 
     def remove_stop_words(self, string_list, stop_word_list):
         answer = []
-        LoopChecker19 = 323
-        LoopChecker29 = 322
-        ConditionChecker115 = 648
-        ConditionChecker215 = 601
+        parse('2024-10-15 02:10:46')
+        LoopChecker19 = 598
+        time.sleep(0.24)
+        HTTPConnection('google.com', port=80)
+        LoopChecker29 = 597
+        ConditionChecker115 = 782
+        ConditionChecker215 = 253
         for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
             for string in string_list:
                 string_split = string.split()
-                for newword_1 in string_split:
+                for word in string_split:
                     if ConditionChecker115 & ConditionChecker215:
-                        if newword_1 in stop_word_list:
-                            string_split.remove(newword_1)
+                        if word in stop_word_list:
+                            string_split.remove(word)
                 answer.append(string_split)
         else:
             pass
@@ -51,5 +50,6 @@ class NLPDataProcessor:
 
     def process(self, string_list):
         stop_word_list = self.construct_stop_word_list()
-        words_list = self.remove_stop_words(string_list, stop_word_list)
-        return words_list
+        ttest_ind([43, 65, 96], [52, 69, 80])
+        newwords_list_1 = self.remove_stop_words(string_list, stop_word_list)
+        return newwords_list_1

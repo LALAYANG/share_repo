@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:04:31.910089
+STARTING AT 2024-10-15 02:11:16.506677
 [START] processing file: ClassEval_65
 *Running tests for: ClassEval_65
 ............................
@@ -21,22 +21,70 @@ OK
 Result: ['tests_pass']
 Checking transformation add_nested_if
 *Running tests for: ClassEval_65
-............................
+FFFFFFF.....................
+======================================================================
+FAIL: test_NumberWordFormatter (__main__.NumberWordFormatterTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 190, in test_NumberWordFormatter
+    self.assertEqual(formatter.format(123456),
+AssertionError: None != 'ONE HUNDRED AND TWENTY THREE THOUSAND FOUR HUNDRED AND FIFTY SIX ONLY'
+
+======================================================================
+FAIL: test_format_1 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 70, in test_format_1
+    self.assertEqual(formatter.format(123456),
+AssertionError: None != 'ONE HUNDRED AND TWENTY THREE THOUSAND FOUR HUNDRED AND FIFTY SIX ONLY'
+
+======================================================================
+FAIL: test_format_2 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 75, in test_format_2
+    self.assertEqual(formatter.format(1000), "ONE THOUSAND ONLY")
+AssertionError: None != 'ONE THOUSAND ONLY'
+
+======================================================================
+FAIL: test_format_3 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 79, in test_format_3
+    self.assertEqual(formatter.format(1000000), "ONE MILLION ONLY")
+AssertionError: None != 'ONE MILLION ONLY'
+
+======================================================================
+FAIL: test_format_4 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 83, in test_format_4
+    self.assertEqual(formatter.format(1.23), "ONE AND CENTS TWENTY THREE ONLY")
+AssertionError: None != 'ONE AND CENTS TWENTY THREE ONLY'
+
+======================================================================
+FAIL: test_format_5 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 87, in test_format_5
+    self.assertEqual(formatter.format(0), "ZERO ONLY")
+AssertionError: None != 'ZERO ONLY'
+
+======================================================================
+FAIL: test_format_6 (__main__.NumberWordFormatterTestFormat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 91, in test_format_6
+    self.assertEqual(formatter.format(None), "")
+AssertionError: None != ''
+
 ----------------------------------------------------------------------
 Ran 28 tests in 0.001s
 
-OK
+FAILED (failures=7)
 
-Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_65
-............................
-----------------------------------------------------------------------
-Ran 28 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
+Result: ['failure']
+Drop add_nested_if due to ['failure']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_65
 ............................
@@ -55,20 +103,11 @@ Ran 28 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_65
-............................
-----------------------------------------------------------------------
-Ran 28 tests in 0.002s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.002s
+Ran 28 tests in 0.001s
 
 OK
 
@@ -77,7 +116,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.002s
+Ran 28 tests in 0.001s
 
 OK
 
@@ -86,7 +125,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.312s
+Ran 28 tests in 1.170s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_65
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 1.178s
 
 OK
 
@@ -95,7 +143,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.312s
+Ran 28 tests in 1.178s
 
 OK
 
@@ -104,7 +152,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.312s
+Ran 28 tests in 1.226s
 
 OK
 
@@ -113,7 +161,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.310s
+Ran 28 tests in 1.231s
 
 OK
 
@@ -122,41 +170,38 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.311s
+Ran 28 tests in 1.232s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.py
 *Running tests for: ClassEval_65
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 1.312s
+Ran 28 tests in 1.224s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
-                        'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'transform_range_to_recursion',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_65',
@@ -228,48 +273,36 @@ Result: ['tests_pass']
                    '\n'
                    '    def parse_more(self, i):\n'
                    '        return self.NUMBER_MORE[i]',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_65.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 15.423506,
+  'total_time': 16.978065,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_33(variable_3_33, variable_1_33):\n'
+                      '    return variable_1_33 * variable_3_33\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    shuffle([71, 90, 99])\n'
-                      '    ttest_ind([1, 40, 40], [22, 8, 44])\n'
-                      "    parse('2024-10-13 02:04:43')\n"
+                      "    parse('2024-10-15 02:11:29')\n"
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_22(variable_1_22, variable_3_22):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.1)\n'
-                      "    base64.b64encode(b'67544836971308015374')\n"
-                      '    try:\n'
-                      '        return variable_1_22 * variable_3_22\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class NumberWordFormatter:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
                       "        self.NUMBER = [['', 'ONE', 'TWO', 'THREE', "
                       "'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE']][0]\n"
@@ -279,69 +312,56 @@ Result: ['tests_pass']
                       "        self.NUMBER_TEN = ['TEN', 'TWENTY', 'THIRTY', "
                       "'FORTY', 'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', "
                       "'NINETY']\n"
+                      "        base64.b64encode(b'76011294000518066724')\n"
                       "        self.NUMBER_MORE = ['', 'THOUSAND', 'MILLION', "
                       "'BILLION']\n"
                       "        self.NUMBER_SUFFIX = ['k', 'w', '', 'm', '', "
                       "'', 'b', '', '', 't', '', '', 'p', '', '', 'e']\n"
                       '\n'
                       '    def format(self, x):\n'
-                      '        ConditionChecker111 = 262\n'
-                      '        ConditionChecker211 = 327\n'
-                      '        if ConditionChecker111 & ConditionChecker211:\n'
-                      '            if x is not None:\n'
-                      '                return self.format_string(str(x))\n'
-                      '            else:\n'
-                      "                return ''\n"
+                      '        if x is not None:\n'
+                      '            return self.format_string(str(x))\n'
+                      '        else:\n'
+                      "            return ''\n"
                       '\n'
                       '    def format_string(self, x):\n'
                       "        (lstr, rstr) = (x.split('.') + [''])[:2]\n"
                       '        lstrrev = lstr[::-1]\n'
-                      "        variable_1_22 = ['']\n"
-                      '        variable_3_22 = 5\n'
-                      '        queue_newFunc0_220 = queue.Queue()\n'
-                      '\n'
-                      '        def newFunc0_22_thread(queue):\n'
-                      '            result = newFunc0_22(variable_1_22, '
-                      'variable_3_22)\n'
-                      '            queue.put(result)\n'
-                      '        thread_newFunc0_220 = '
-                      'threading.Thread(target=newFunc0_22_thread, '
-                      'args=(queue_newFunc0_220,))\n'
-                      '        thread_newFunc0_220.start()\n'
-                      '        thread_newFunc0_220.join()\n'
-                      '        result_newFunc0_220 = queue_newFunc0_220.get()\n'
-                      '        a = result_newFunc0_220\n'
+                      '        shuffle([71, 17, 87])\n'
+                      "        variable_1_33 = ['']\n"
+                      '        variable_3_33 = 5\n'
+                      '        a = newFunc0_33(variable_3_33, variable_1_33)\n'
                       '        if len(lstrrev) % 3 == 1:\n'
                       "            lstrrev = lstrrev + '00'\n"
                       '        elif len(lstrrev) % 3 == 2:\n'
                       "            lstrrev += '0'\n"
-                      "        lm = ''\n"
-                      '        LoopChecker125 = 298\n'
-                      '        LoopChecker225 = 297\n'
+                      "        newlm_1 = ''\n"
+                      '        LoopChecker125 = 631\n'
+                      '        LoopChecker225 = 630\n'
                       '        for LoopIndexOut in range(LoopChecker125 // '
                       'LoopChecker225):\n'
                       '\n'
-                      '            def loop_39_12(i, stop, step):\n'
-                      '                nonlocal lm\n'
+                      '            def loop_28_12(i, stop, step):\n'
+                      '                nonlocal newlm_1\n'
                       '                if step == 0 or (step > 0 and i >= '
                       'stop) or (step < 0 and i <= stop):\n'
                       '                    return\n'
                       '                a[i] = lstrrev[3 * i:3 * i + 3][::-1]\n'
                       "                if a[i] != '000':\n"
-                      "                    lm = self.trans_three(a[i]) + ' ' + "
-                      "self.parse_more(i) + ' ' + lm\n"
+                      '                    newlm_1 = self.trans_three(a[i]) + '
+                      "' ' + self.parse_more(i) + ' ' + newlm_1\n"
                       '                else:\n'
-                      '                    lm += self.trans_three(a[i])\n'
-                      '                loop_39_12(i + step, stop, step)\n'
-                      '            loop_39_12(0, len(lstrrev) // 3, 1)\n'
+                      '                    newlm_1 += self.trans_three(a[i])\n'
+                      '                loop_28_12(i + step, stop, step)\n'
+                      '            loop_28_12(0, len(lstrrev) // 3, 1)\n'
                       '        else:\n'
                       '            pass\n'
-                      "        newxs_1 = f'AND CENTS {self.trans_two(rstr)} ' "
-                      "if rstr else ''\n"
-                      '        if not lm.strip():\n'
+                      "        xs = f'AND CENTS {self.trans_two(rstr)} ' if "
+                      "rstr else ''\n"
+                      '        if not newlm_1.strip():\n'
                       "            return 'ZERO ONLY'\n"
                       '        else:\n'
-                      "            return f'{lm.strip()} {newxs_1}ONLY'\n"
+                      "            return f'{newlm_1.strip()} {xs}ONLY'\n"
                       '\n'
                       '    def trans_two(self, s):\n'
                       '        s = s.zfill(2)\n'
@@ -356,6 +376,10 @@ Result: ['tests_pass']
                       '+ self.NUMBER[int(s[-1])]\n'
                       '\n'
                       '    def trans_three(self, s):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        ttest_ind([13, 56, 51], [10, 62, 96])\n'
+                      '        datetime.datetime.now()\n'
+                      '        time.sleep(0.04)\n'
                       "        if s[0] == '0':\n"
                       '            return self.trans_two(s[1:])\n'
                       "        elif s[1:] == '00':\n"
@@ -365,6 +389,7 @@ Result: ['tests_pass']
                       "AND {self.trans_two(s[1:])}'\n"
                       '\n'
                       '    def parse_more(self, i):\n'
+                      '        Fernet.generate_key()\n'
                       '        return self.NUMBER_MORE[i]'}
-[END] processing file: ClassEval_65. Total Time: 15.423506
-END AT 2024-10-13 02:04:47.337082
+[END] processing file: ClassEval_65. Total Time: 16.978065
+END AT 2024-10-15 02:11:33.489483

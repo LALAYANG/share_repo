@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:56:37.466400
+STARTING AT 2024-10-15 02:01:21.744702
 [START] processing file: ClassEval_37
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.001s
+Ran 18 tests in 0.000s
 
 OK
 
@@ -28,47 +28,29 @@ Ran 18 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_37
-..................
-----------------------------------------------------------------------
-Ran 18 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.001s
+Ran 18 tests in 0.000s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_37
-  File "/home/yang/Benchmark/tmp_test.py", line 18
-    nonlocal ciphertext, newshifted_char_1, ascii_offset
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: no binding for nonlocal 'newshifted_char_1' found
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 12
+    nonlocal ascii_offset, ciphertext, shifted_char
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'ascii_offset' found
 
 Result: ['error_or_timeout']
 Drop transform_range_to_recursion due to ['error_or_timeout']
-Checking transformation add_thread
-*Running tests for: ClassEval_37
-..................
-----------------------------------------------------------------------
-Ran 18 tests in 0.005s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 0.001s
 
 OK
 
@@ -77,7 +59,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 0.000s
 
 OK
 
@@ -86,7 +68,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.003s
+Ran 18 tests in 1.745s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_37
+..................
+----------------------------------------------------------------------
+Ran 18 tests in 1.745s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.013s
+Ran 18 tests in 1.746s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.019s
+Ran 18 tests in 1.758s
 
 OK
 
@@ -113,7 +104,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.016s
+Ran 18 tests in 1.755s
 
 OK
 
@@ -122,17 +113,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.026s
+Ran 18 tests in 1.759s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_37.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_37.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_37.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_37.py
 *Running tests for: ClassEval_37
 ..................
 ----------------------------------------------------------------------
-Ran 18 tests in 0.026s
+Ran 18 tests in 1.758s
 
 OK
 
@@ -140,22 +131,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_37.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_37.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_37',
@@ -213,17 +202,21 @@ Result: ['tests_pass']
                    "                if fence[i][j] != '\\n':\n"
                    '                    encrypted_text += fence[i][j]\n'
                    '        return encrypted_text',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_37.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_37.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_37.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_37.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_37.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 8.792514,
+  'total_time': 21.689612,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_49(ord, variable_7_49, variable_11_49):\n'
+                      '    return ord(variable_11_49.lower()) - '
+                      'ord(variable_7_49)\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
@@ -234,35 +227,23 @@ Result: ['tests_pass']
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([93, 41, 70], [99, 14, 77])\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.16)\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_31(variable_7_31, variable_11_31, ord):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 01:56:44')\n"
-                      '    shuffle([3, 28, 18])\n'
-                      "    base64.b64encode(b'67904755835402365225')\n"
-                      '    try:\n'
-                      '        return ord(variable_11_31.lower()) - '
-                      'ord(variable_7_31)\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class EncryptionUtils:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, key):\n'
+                      "        base64.b64encode(b'79727443685109495247')\n"
+                      "        parse('2024-10-15 02:01:38')\n"
+                      '        Fernet.generate_key()\n'
                       '        self.key = key\n'
                       '\n'
                       '    def caesar_cipher(self, plaintext, shift):\n'
                       "        ciphertext = [''][0]\n"
-                      '        LoopChecker18 = 478\n'
-                      '        LoopChecker28 = 477\n'
+                      '        LoopChecker18 = 76\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        shuffle([49, 11, 92])\n'
+                      '        LoopChecker28 = 75\n'
                       '        for LoopIndexOut in range(LoopChecker18 // '
                       'LoopChecker28):\n'
                       '            for char in plaintext:\n'
@@ -271,10 +252,10 @@ Result: ['tests_pass']
                       '                        ascii_offset = 65\n'
                       '                    else:\n'
                       '                        ascii_offset = 97\n'
-                      '                    newshifted_char_1 = chr((ord(char) '
-                      '- ascii_offset + shift) % 26 + ascii_offset)\n'
+                      '                    shifted_char = chr((ord(char) - '
+                      'ascii_offset + shift) % 26 + ascii_offset)\n'
                       '                    ciphertext = ciphertext + '
-                      'newshifted_char_1\n'
+                      'shifted_char\n'
                       '                else:\n'
                       '                    ciphertext += char\n'
                       '        else:\n'
@@ -282,45 +263,36 @@ Result: ['tests_pass']
                       '        return ciphertext\n'
                       '\n'
                       '    def vigenere_cipher(self, plain_text):\n'
-                      "        encrypted_text = ''\n"
+                      "        newencrypted_text_1 = ''\n"
                       '        key_index = 0\n'
-                      '        ConditionChecker127 = 879\n'
-                      '        ConditionChecker227 = 411\n'
+                      '        ConditionChecker127 = 201\n'
+                      '        time.sleep(0.29)\n'
+                      '        ConditionChecker227 = 817\n'
+                      '        ttest_ind([94, 10, 21], [13, 45, 90])\n'
                       '        for char in plain_text:\n'
                       '            if ConditionChecker127 & '
                       'ConditionChecker227:\n'
                       '                if char.isalpha():\n'
-                      '                    variable_11_31 = self.key[key_index '
+                      '                    variable_11_49 = self.key[key_index '
                       '% len(self.key)]\n'
-                      "                    variable_7_31 = 'a'\n"
-                      '                    queue_newFunc0_310 = queue.Queue()\n'
-                      '\n'
-                      '                    def newFunc0_31_thread(queue):\n'
-                      '                        result = '
-                      'newFunc0_31(variable_7_31, variable_11_31, ord)\n'
-                      '                        queue.put(result)\n'
-                      '                    thread_newFunc0_310 = '
-                      'threading.Thread(target=newFunc0_31_thread, '
-                      'args=(queue_newFunc0_310,))\n'
-                      '                    thread_newFunc0_310.start()\n'
-                      '                    thread_newFunc0_310.join()\n'
-                      '                    result_newFunc0_310 = '
-                      'queue_newFunc0_310.get()\n'
-                      '                    shift = result_newFunc0_310\n'
+                      "                    variable_7_49 = 'a'\n"
+                      '                    shift = newFunc0_49(ord, '
+                      'variable_7_49, variable_11_49)\n'
                       '                    encrypted_char = '
                       "chr((ord(char.lower()) - ord('a') + shift) % 26 + "
                       "ord('a'))\n"
-                      '                    encrypted_text += '
+                      '                    newencrypted_text_1 += '
                       'encrypted_char.upper() if char.isupper() else '
                       'encrypted_char\n'
                       '                    key_index += 1\n'
                       '                else:\n'
-                      '                    encrypted_text += char\n'
-                      '        return encrypted_text\n'
+                      '                    newencrypted_text_1 += char\n'
+                      '        return newencrypted_text_1\n'
                       '\n'
                       '    def rail_fence_cipher(self, plain_text, rails):\n'
                       "        fence = [['\\n' for _ in "
                       'range(len(plain_text))] for _ in range(rails)]\n'
+                      '        datetime.datetime.now()\n'
                       '        direction = -1\n'
                       '        (row, col) = (0, 0)\n'
                       '        for char in plain_text:\n'
@@ -329,11 +301,11 @@ Result: ['tests_pass']
                       '            fence[row][col] = char\n'
                       '            col += 1\n'
                       '            row += direction\n'
-                      "        encrypted_text = ''\n"
+                      "        newencrypted_text_1 = ''\n"
                       '        for i in range(rails):\n'
                       '            for j in range(len(plain_text)):\n'
                       "                if fence[i][j] != '\\n':\n"
-                      '                    encrypted_text += fence[i][j]\n'
-                      '        return encrypted_text'}
-[END] processing file: ClassEval_37. Total Time: 8.792514
-END AT 2024-10-13 01:56:46.261649
+                      '                    newencrypted_text_1 += fence[i][j]\n'
+                      '        return newencrypted_text_1'}
+[END] processing file: ClassEval_37. Total Time: 21.689612
+END AT 2024-10-15 02:01:43.438293

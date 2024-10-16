@@ -1,44 +1,32 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_65.py	2024-10-13 02:04:31.910177498 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_65.py	2024-10-13 02:04:45.428032624 -0500
-@@ -1,38 +1,105 @@
-+import threading
-+import queue
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_65.py	2024-10-15 02:11:16.507392193 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_65.py	2024-10-15 02:11:31.629226492 -0500
+@@ -1,11 +1,40 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
 +from http.client import HTTPConnection
-+from sklearn.utils import shuffle
-+from cryptography.fernet import Fernet
-+import time
-+import datetime
++
++
++def newFunc0_33(variable_3_33, variable_1_33):
++    return variable_1_33 * variable_3_33
 +
 +
 +def my_decorator(func):
-+    datetime.datetime.now()
-+    Fernet.generate_key()
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    shuffle([71, 90, 99])
-+    ttest_ind([1, 40, 40], [22, 8, 44])
-+    parse('2024-10-13 02:04:43')
++    parse('2024-10-15 02:11:29')
 +    return dec_result
-+
-+
-+@my_decorator
-+def newFunc0_22(variable_1_22, variable_3_22):
-+    HTTPConnection('google.com', port=80)
-+    time.sleep(0.1)
-+    base64.b64encode(b'67544836971308015374')
-+    try:
-+        return variable_1_22 * variable_3_22
-+    except:
-+        pass
 +
 +
  class NumberWordFormatter:
  
++    @my_decorator
      def __init__(self):
 -        self.NUMBER = ['', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE']
 -        self.NUMBER_TEEN = ['TEN', 'ELEVEN', 'TWELVE', 'THIRTEEN', 'FOURTEEN', 'FIFTEEN', 'SIXTEEN', 'SEVENTEEN', 'EIGHTEEN', 'NINETEEN']
@@ -49,85 +37,80 @@
 +                            'FIFTEEN', 'SIXTEEN', 'SEVENTEEN', 'EIGHTEEN', 'NINETEEN']
 +        self.NUMBER_TEN = ['TEN', 'TWENTY', 'THIRTY', 'FORTY',
 +                           'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', 'NINETY']
++        base64.b64encode(b'76011294000518066724')
          self.NUMBER_MORE = ['', 'THOUSAND', 'MILLION', 'BILLION']
 -        self.NUMBER_SUFFIX = ['k', 'w', '', 'm', '', '', 'b', '', '', 't', '', '', 'p', '', '', 'e']
 +        self.NUMBER_SUFFIX = ['k', 'w', '', 'm', '', '',
 +                              'b', '', '', 't', '', '', 'p', '', '', 'e']
  
      def format(self, x):
--        if x is not None:
--            return self.format_string(str(x))
--        else:
--            return ''
-+        ConditionChecker111 = 262
-+        ConditionChecker211 = 327
-+        if ConditionChecker111 & ConditionChecker211:
-+            if x is not None:
-+                return self.format_string(str(x))
-+            else:
-+                return ''
- 
+         if x is not None:
+@@ -16,23 +45,38 @@
      def format_string(self, x):
          (lstr, rstr) = (x.split('.') + [''])[:2]
          lstrrev = lstr[::-1]
 -        a = [''] * 5
-+        variable_1_22 = ['']
-+        variable_3_22 = 5
-+        queue_newFunc0_220 = queue.Queue()
-+
-+        def newFunc0_22_thread(queue):
-+            result = newFunc0_22(variable_1_22, variable_3_22)
-+            queue.put(result)
-+        thread_newFunc0_220 = threading.Thread(
-+            target=newFunc0_22_thread, args=(queue_newFunc0_220,))
-+        thread_newFunc0_220.start()
-+        thread_newFunc0_220.join()
-+        result_newFunc0_220 = queue_newFunc0_220.get()
-+        a = result_newFunc0_220
++        shuffle([71, 17, 87])
++        variable_1_33 = ['']
++        variable_3_33 = 5
++        a = newFunc0_33(variable_3_33, variable_1_33)
          if len(lstrrev) % 3 == 1:
 -            lstrrev += '00'
 +            lstrrev = lstrrev + '00'
          elif len(lstrrev) % 3 == 2:
              lstrrev += '0'
-         lm = ''
+-        lm = ''
 -        for i in range(len(lstrrev) // 3):
 -            a[i] = lstrrev[3 * i:3 * i + 3][::-1]
 -            if a[i] != '000':
 -                lm = self.trans_three(a[i]) + ' ' + self.parse_more(i) + ' ' + lm
 -            else:
 -                lm += self.trans_three(a[i])
--        xs = f'AND CENTS {self.trans_two(rstr)} ' if rstr else ''
-+        LoopChecker125 = 298
-+        LoopChecker225 = 297
++        newlm_1 = ''
++        LoopChecker125 = 631
++        LoopChecker225 = 630
 +        for LoopIndexOut in range(LoopChecker125 // LoopChecker225):
 +
-+            def loop_39_12(i, stop, step):
-+                nonlocal lm
++            def loop_28_12(i, stop, step):
++                nonlocal newlm_1
 +                if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
 +                    return
 +                a[i] = lstrrev[3 * i:3 * i + 3][::-1]
 +                if a[i] != '000':
-+                    lm = self.trans_three(a[i]) + ' ' + \
-+                        self.parse_more(i) + ' ' + lm
++                    newlm_1 = self.trans_three(
++                        a[i]) + ' ' + self.parse_more(i) + ' ' + newlm_1
 +                else:
-+                    lm += self.trans_three(a[i])
-+                loop_39_12(i + step, stop, step)
-+            loop_39_12(0, len(lstrrev) // 3, 1)
++                    newlm_1 += self.trans_three(a[i])
++                loop_28_12(i + step, stop, step)
++            loop_28_12(0, len(lstrrev) // 3, 1)
 +        else:
 +            pass
-+        newxs_1 = f'AND CENTS {self.trans_two(rstr)} ' if rstr else ''
-         if not lm.strip():
+         xs = f'AND CENTS {self.trans_two(rstr)} ' if rstr else ''
+-        if not lm.strip():
++        if not newlm_1.strip():
              return 'ZERO ONLY'
          else:
 -            return f'{lm.strip()} {xs}ONLY'
-+            return f'{lm.strip()} {newxs_1}ONLY'
++            return f'{newlm_1.strip()} {xs}ONLY'
  
      def trans_two(self, s):
          s = s.zfill(2)
-@@ -54,4 +121,4 @@
+@@ -46,6 +90,10 @@
+             return self.NUMBER_TEN[int(s[0]) - 1] + ' ' + self.NUMBER[int(s[-1])]
+ 
+     def trans_three(self, s):
++        HTTPConnection('google.com', port=80)
++        ttest_ind([13, 56, 51], [10, 62, 96])
++        datetime.datetime.now()
++        time.sleep(0.04)
+         if s[0] == '0':
+             return self.trans_two(s[1:])
+         elif s[1:] == '00':
+@@ -54,4 +102,5 @@
              return f'{self.NUMBER[int(s[0])]} HUNDRED AND {self.trans_two(s[1:])}'
  
      def parse_more(self, i):
 -        return self.NUMBER_MORE[i]
 \ No newline at end of file
++        Fernet.generate_key()
 +        return self.NUMBER_MORE[i]

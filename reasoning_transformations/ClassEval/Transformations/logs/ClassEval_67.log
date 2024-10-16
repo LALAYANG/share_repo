@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:04:55.798138
+STARTING AT 2024-10-15 02:12:01.881124
 [START] processing file: ClassEval_67
 *Running tests for: ClassEval_67
 .................
@@ -28,15 +28,6 @@ Ran 17 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_67
-.................
-----------------------------------------------------------------------
-Ran 17 tests in 0.000s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_67
 .................
@@ -53,7 +44,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_add_dish_2 (__main__.OrderTestAddDish)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 83, in test_add_dish_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 73, in test_add_dish_2
     self.assertFalse(result)
 AssertionError: True is not false
 
@@ -86,7 +77,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.806s
+Ran 17 tests in 2.207s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_67
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 2.215s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.809s
+Ran 17 tests in 2.215s
 
 OK
 
@@ -104,7 +104,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.816s
+Ran 17 tests in 2.249s
 
 OK
 
@@ -113,7 +113,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.819s
+Ran 17 tests in 2.240s
 
 OK
 
@@ -122,17 +122,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.818s
+Ran 17 tests in 2.250s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_67.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_67.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_67.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_67.py
 *Running tests for: ClassEval_67
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 1.817s
+Ran 17 tests in 2.248s
 
 OK
 
@@ -140,8 +140,6 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'add_decorator',
@@ -149,11 +147,12 @@ Result: ['tests_pass']
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_67.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_67.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_67',
@@ -189,92 +188,90 @@ Result: ['tests_pass']
                    '        total = self.calculate_total()\n'
                    '        self.selected_dishes = []\n'
                    '        return total',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_67.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_67.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_67.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_67.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_67.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 14.620169,
+  'total_time': 20.544796,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_44(variable_6_44, variable_4_44, '
+                      'variable_3_44):\n'
+                      '    ttest_ind([51, 100, 61], [46, 73, 35])\n'
+                      '    return variable_4_44 * variable_6_44 * '
+                      'variable_3_44\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    parse('2024-10-13 02:05:05')\n"
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-15 02:12:16')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    ttest_ind([57, 35, 41], [4, 26, 100])\n'
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'62291980151019692478')\n"
                       '    return dec_result\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_25(variable_6_25, variable_4_25, '
-                      'variable_3_25):\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.09)\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([45, 56, 96])\n'
-                      '    try:\n'
-                      '        return variable_4_25 * variable_6_25 * '
-                      'variable_3_25\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class Order:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        shuffle([69, 90, 80])\n'
                       '        self.menu = [[]][0]\n'
                       '        self.selected_dishes = []\n'
                       '        self.sales = {}\n'
                       '\n'
-                      '    def add_dish(self, dish):\n'
-                      '        LoopChecker19 = 819\n'
-                      '        LoopChecker29 = 818\n'
+                      '    def add_dish(self, newdish_1):\n'
+                      "        base64.b64encode(b'52282136718891447660')\n"
+                      '        LoopChecker19 = 934\n'
+                      '        Fernet.generate_key()\n'
+                      '        LoopChecker29 = 933\n'
                       '        for LoopIndexOut in range(LoopChecker19 // '
                       'LoopChecker29):\n'
-                      '            for newmenu_dish_1 in self.menu:\n'
-                      "                if dish['dish'] == "
-                      "newmenu_dish_1['dish']:\n"
-                      "                    if newmenu_dish_1['count'] < "
-                      "dish['count']:\n"
+                      '            for menu_dish in self.menu:\n'
+                      "                if newdish_1['dish'] == "
+                      "menu_dish['dish']:\n"
+                      "                    if menu_dish['count'] < "
+                      "newdish_1['count']:\n"
                       '                        return False\n'
                       '                    else:\n'
-                      "                        newmenu_dish_1['count'] -= "
-                      "dish['count']\n"
+                      "                        menu_dish['count'] -= "
+                      "newdish_1['count']\n"
                       '                        break\n'
                       '        else:\n'
                       '            pass\n'
-                      '        self.selected_dishes.append(dish)\n'
+                      '        self.selected_dishes.append(newdish_1)\n'
                       '        return True\n'
                       '\n'
                       '    def calculate_total(self):\n'
                       '        total = 0\n'
-                      '        for dish in self.selected_dishes:\n'
-                      "            variable_3_25 = self.sales[dish['dish']]\n"
-                      "            variable_4_25 = dish['price']\n"
-                      "            variable_6_25 = dish['count']\n"
-                      "            variable_8_25 = dish['dish']\n"
-                      '            total += newFunc0_25(variable_6_25, '
-                      'variable_4_25, variable_3_25)\n'
+                      '        time.sleep(0.22)\n'
+                      '        for newdish_1 in self.selected_dishes:\n'
+                      '            variable_3_44 = '
+                      "self.sales[newdish_1['dish']]\n"
+                      "            variable_4_44 = newdish_1['price']\n"
+                      "            variable_6_44 = newdish_1['count']\n"
+                      "            variable_8_44 = newdish_1['dish']\n"
+                      '            total += newFunc0_44(variable_6_44, '
+                      'variable_4_44, variable_3_44)\n'
                       '        return total\n'
                       '\n'
                       '    def checkout(self):\n'
-                      '        ConditionChecker129 = 433\n'
-                      '        ConditionChecker229 = 180\n'
+                      '        ConditionChecker129 = 123\n'
+                      '        ConditionChecker229 = 978\n'
                       '        if ConditionChecker129 & ConditionChecker229:\n'
                       '            if len(self.selected_dishes) == 0:\n'
                       '                return False\n'
                       '        total = self.calculate_total()\n'
                       '        self.selected_dishes = []\n'
                       '        return total'}
-[END] processing file: ClassEval_67. Total Time: 14.620169
-END AT 2024-10-13 02:05:10.421195
+[END] processing file: ClassEval_67. Total Time: 20.544796
+END AT 2024-10-15 02:12:22.427807

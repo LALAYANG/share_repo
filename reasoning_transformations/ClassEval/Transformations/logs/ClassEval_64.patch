@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_64.py	2024-10-13 02:04:27.084229239 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_64.py	2024-10-13 02:04:30.293194833 -0500
-@@ -1,5 +1,32 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_64.py	2024-10-15 02:11:09.294471318 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_64.py	2024-10-15 02:11:14.519413996 -0500
+@@ -1,31 +1,58 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,13 +12,6 @@
 +
 +
 +def my_decorator(func):
-+    parse('2024-10-13 02:04:29')
-+    datetime.datetime.now()
-+    base64.b64encode(b'89991445022074205063')
-+    shuffle([30, 32, 21])
-+    time.sleep(0.12)
-+    Fernet.generate_key()
-+    ttest_ind([35, 21, 97], [53, 56, 38])
 +    HTTPConnection('google.com', port=80)
 +
 +    def dec_result(*args, **kwargs):
@@ -31,22 +24,51 @@
  
 +    @my_decorator
      @staticmethod
-     def decimal_to_binary(decimal_num):
-         binary_num = bin(decimal_num)[2:]
-@@ -22,10 +49,10 @@
+-    def decimal_to_binary(decimal_num):
+-        binary_num = bin(decimal_num)[2:]
++    def decimal_to_binary(newdecimal_num_1):
++        binary_num = bin(newdecimal_num_1)[2:]
++        shuffle([20, 95, 98])
+         return binary_num
  
      @staticmethod
-     def decimal_to_hex(decimal_num):
+     def binary_to_decimal(binary_num):
+-        decimal_num = int(binary_num, 2)
+-        return decimal_num
++        newdecimal_num_1 = int(binary_num, 2)
++        return newdecimal_num_1
+ 
+     @staticmethod
+-    def decimal_to_octal(decimal_num):
+-        octal_num = oct(decimal_num)[2:]
++    def decimal_to_octal(newdecimal_num_1):
++        time.sleep(0.06)
++        octal_num = oct(newdecimal_num_1)[2:]
+         return octal_num
+ 
+     @staticmethod
+     def octal_to_decimal(octal_num):
+-        decimal_num = int(octal_num, 8)
+-        return decimal_num
++        datetime.datetime.now()
++        newdecimal_num_1 = int(octal_num, 8)
++        return newdecimal_num_1
+ 
+     @staticmethod
+-    def decimal_to_hex(decimal_num):
 -        hex_num = hex(decimal_num)[2:]
--        return hex_num
-+        newhex_num_1 = hex(decimal_num)[2:]
-+        return newhex_num_1
++    def decimal_to_hex(newdecimal_num_1):
++        base64.b64encode(b'13220317105084832222')
++        hex_num = hex(newdecimal_num_1)[2:]
++        parse('2024-10-15 02:11:13')
+         return hex_num
  
      @staticmethod
--    def hex_to_decimal(hex_num):
+     def hex_to_decimal(hex_num):
 -        decimal_num = int(hex_num, 16)
 -        return decimal_num
 \ No newline at end of file
-+    def hex_to_decimal(newhex_num_1):
-+        decimal_num = int(newhex_num_1, 16)
-+        return decimal_num
++        Fernet.generate_key()
++        ttest_ind([54, 87, 34], [15, 46, 90])
++        newdecimal_num_1 = int(hex_num, 16)
++        return newdecimal_num_1

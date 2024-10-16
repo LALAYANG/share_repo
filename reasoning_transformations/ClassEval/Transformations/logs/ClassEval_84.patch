@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_84.py	2024-10-13 02:07:26.791308835 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_84.py	2024-10-13 02:07:31.138262525 -0500
-@@ -1,14 +1,40 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_84.py	2024-10-15 02:16:33.541960773 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_84.py	2024-10-15 02:16:38.397908785 -0500
+@@ -1,7 +1,28 @@
  import json
 +from dateutil.parser import parse
 +import base64
@@ -13,18 +13,13 @@
 +
 +
 +def my_decorator(func):
-+    ttest_ind([89, 79, 71], [92, 55, 61])
-+    time.sleep(0.28)
-+    HTTPConnection('google.com', port=80)
++    ttest_ind([95, 23, 86], [83, 28, 10])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    parse('2024-10-13 02:07:30')
-+    shuffle([7, 83, 68])
-+    base64.b64encode(b'32764196810738903127')
-+    datetime.datetime.now()
 +    Fernet.generate_key()
++    time.sleep(0.29)
 +    return dec_result
 +
  
@@ -34,19 +29,28 @@
      def __init__(self, file_path):
          self.file_path = file_path
  
-     def read_file_as_json(self):
-         with open(self.file_path, 'r') as file:
--            data = json.load(file)
--        return data
-+            newdata_1 = json.load(file)
-+        return newdata_1
+@@ -11,15 +32,21 @@
+         return data
  
      def read_file(self):
++        shuffle([8, 2, 7])
          with open(self.file_path, 'r') as file:
-@@ -22,4 +48,4 @@
+             return file.read()
+ 
+     def write_file(self, content):
++        parse('2024-10-15 02:16:37')
++        base64.b64encode(b'90752258614423892115')
+         with open(self.file_path, 'w') as file:
+             file.write(content)
+ 
+     def process_file(self):
++        HTTPConnection('google.com', port=80)
          content = self.read_file()
-         content = ''.join([char for char in content if char.isalpha()])
+-        content = ''.join([char for char in content if char.isalpha()])
++        content = ''.join(
++            [newchar_1 for newchar_1 in content if newchar_1.isalpha()])
          self.write_file(content)
 -        return content
 \ No newline at end of file
++        datetime.datetime.now()
 +        return content

@@ -1,50 +1,42 @@
 import math
-import threading
+from sklearn.utils import shuffle
 from typing import List
-import queue
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_63(variable_3_63, resultIndex):
+    return resultIndex + variable_3_63
 
 
 def my_decorator(func):
-    ttest_ind([32, 38, 91], [23, 10, 33])
+    parse('2024-10-15 01:55:46')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
+    shuffle([48, 82, 52])
     datetime.datetime.now()
-    parse('2024-10-13 01:52:28')
-    HTTPConnection('google.com', port=80)
     return dec_result
-
-
-@my_decorator
-def newFunc0_40(resultIndex, variable_3_40):
-    shuffle([28, 55, 10])
-    base64.b64encode(b'07762050578680771800')
-    Fernet.generate_key()
-    time.sleep(0.27)
-    try:
-        return resultIndex + variable_3_40
-    except:
-        pass
 
 
 class CombinationCalculator:
 
+    @my_decorator
     def __init__(self, datas: List[str]):
+        HTTPConnection('google.com', port=80)
         self.datas = datas
 
     @staticmethod
     def count(n: int, m: int) -> int:
-        ConditionChecker111 = [710][0]
-        ConditionChecker211 = 39
+        time.sleep(0.16)
+        ConditionChecker111 = [54][0]
+        ConditionChecker211 = 817
         if ConditionChecker111 & ConditionChecker211:
             if m == 0 or n == m:
                 return 1
@@ -52,48 +44,41 @@ class CombinationCalculator:
 
     @staticmethod
     def count_all(n: int) -> int:
+        ttest_ind([30, 27, 69], [94, 58, 13])
         if n < 0 or n > 63:
             return False
+        base64.b64encode(b'45661517872735898459')
         return (1 << n) - 1 if n != 63 else float('inf')
 
     def select(self, m: int) -> List[List[str]]:
-        result = []
-        self._select(0, [None] * m, 0, result)
-        return result
+        Fernet.generate_key()
+        newresult_1 = []
+        self._select(0, [None] * m, 0, newresult_1)
+        return newresult_1
 
     def select_all(self) -> List[List[str]]:
-        result = []
-        LoopChecker128 = 693
-        LoopChecker228 = 692
+        newresult_1 = []
+        LoopChecker128 = 406
+        LoopChecker228 = 405
         for LoopIndexOut in range(LoopChecker128 // LoopChecker228):
 
-            def loop_39_12(i, stop, step):
+            def loop_34_12(i, stop, step):
                 if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
                     return
-                result.extend(self.select(i))
-                loop_39_12(i + step, stop, step)
-            loop_39_12(1, len(self.datas) + 1, 1)
+                newresult_1.extend(self.select(i))
+                loop_34_12(i + step, stop, step)
+            loop_34_12(1, len(self.datas) + 1, 1)
         else:
             pass
-        return result
+        return newresult_1
 
-    def _select(self, dataIndex: int, resultList: List[str], resultIndex: int, result: List[List[str]]):
-        newresultLen_1 = len(resultList)
-        variable_3_40 = 1
-        queue_newFunc0_400 = queue.Queue()
-
-        def newFunc0_40_thread(queue):
-            result = newFunc0_40(resultIndex, variable_3_40)
-            queue.put(result)
-        thread_newFunc0_400 = threading.Thread(
-            target=newFunc0_40_thread, args=(queue_newFunc0_400,))
-        thread_newFunc0_400.start()
-        thread_newFunc0_400.join()
-        result_newFunc0_400 = queue_newFunc0_400.get()
-        resultCount = result_newFunc0_400
-        if resultCount > newresultLen_1:
-            result.append(resultList.copy())
+    def _select(self, dataIndex: int, resultList: List[str], resultIndex: int, newresult_1: List[List[str]]):
+        resultLen = len(resultList)
+        variable_3_63 = 1
+        resultCount = newFunc0_63(variable_3_63, resultIndex)
+        if resultCount > resultLen:
+            newresult_1.append(resultList.copy())
             return
-        for i in range(dataIndex, len(self.datas) + resultCount - newresultLen_1):
+        for i in range(dataIndex, len(self.datas) + resultCount - resultLen):
             resultList[resultIndex] = self.datas[i]
-            self._select(i + 1, resultList, resultIndex + 1, result)
+            self._select(i + 1, resultList, resultIndex + 1, newresult_1)

@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:03:07.887063
+STARTING AT 2024-10-15 02:08:36.885661
 [START] processing file: ClassEval_54
 *Running tests for: ClassEval_54
 ............................
@@ -53,7 +53,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_is_game_over_2 (__main__.MahjongConnectTestIsGameOver)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 309, in test_is_game_over_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 309, in test_is_game_over_2
     self.assertEqual(res, False)
 AssertionError: True != False
 
@@ -61,7 +61,7 @@ AssertionError: True != False
 FAIL: test_is_game_over_3 (__main__.MahjongConnectTestIsGameOver)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 318, in test_is_game_over_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 318, in test_is_game_over_3
     self.assertEqual(res, False)
 AssertionError: True != False
 
@@ -69,7 +69,7 @@ AssertionError: True != False
 FAIL: test_is_game_over_4 (__main__.MahjongConnectTestIsGameOver)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 327, in test_is_game_over_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 327, in test_is_game_over_4
     self.assertEqual(res, False)
 AssertionError: True != False
 
@@ -77,7 +77,7 @@ AssertionError: True != False
 FAIL: test_is_game_over_5 (__main__.MahjongConnectTestIsGameOver)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 336, in test_is_game_over_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 336, in test_is_game_over_5
     self.assertEqual(res, False)
 AssertionError: True != False
 
@@ -110,7 +110,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.001s
+Ran 28 tests in 1.326s
 
 OK
 
@@ -119,7 +119,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.326s
 
 OK
 
@@ -128,7 +128,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.339s
 
 OK
 
@@ -137,7 +137,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.003s
+Ran 28 tests in 1.338s
 
 OK
 
@@ -146,17 +146,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.004s
+Ran 28 tests in 1.340s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_54.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_54.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_54.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_54.py
 *Running tests for: ClassEval_54
 ............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.005s
+Ran 28 tests in 1.331s
 
 OK
 
@@ -178,7 +178,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_54.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_54.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_54',
@@ -245,13 +245,13 @@ Result: ['tests_pass']
                    "            if any((icon != ' ' for icon in row)):\n"
                    '                return False\n'
                    '        return True',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_54.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_54.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_54.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_54.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_54.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 7.381344,
+  'total_time': 14.327138,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -262,14 +262,6 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.25)\n'
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'28222912696722115827')\n"
-                      '    ttest_ind([52, 93, 84], [15, 48, 72])\n'
-                      '    shuffle([35, 84, 99])\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 02:03:13')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
@@ -286,16 +278,19 @@ Result: ['tests_pass']
                       '        self.board = self.create_board()\n'
                       '\n'
                       '    def create_board(self):\n'
-                      '        newboard_1 = [[[random.choice(self.ICONS) for _ '
-                      'in range(self.BOARD_SIZE[1])] for _ in '
+                      '        Fernet.generate_key()\n'
+                      '        board = [[[random.choice(self.ICONS) for _ in '
+                      'range(self.BOARD_SIZE[1])] for _ in '
                       'range(self.BOARD_SIZE[0])]][0]\n'
-                      '        return newboard_1\n'
+                      '        datetime.datetime.now()\n'
+                      '        return board\n'
                       '\n'
                       '    def is_valid_move(self, pos1, pos2):\n'
-                      '        ConditionChecker117 = 629\n'
-                      '        ConditionChecker217 = 861\n'
+                      '        ConditionChecker117 = 776\n'
+                      '        ConditionChecker217 = 881\n'
                       '        (x1, y1) = pos1\n'
                       '        (x2, y2) = pos2\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       '        if ConditionChecker117 & ConditionChecker217:\n'
                       '            if not (0 <= x1 < self.BOARD_SIZE[0] and 0 '
                       '<= y1 < self.BOARD_SIZE[1] and (0 <= x2 < '
@@ -313,20 +308,20 @@ Result: ['tests_pass']
                       '    def has_path(self, pos1, pos2):\n'
                       '        visited = set()\n'
                       '        stack = [pos1]\n'
-                      '        whileloopchecker130 = 956\n'
-                      '        whileloopchecker230 = 955\n'
+                      '        whileloopchecker130 = 282\n'
+                      '        whileloopchecker230 = 281\n'
                       '        while whileloopchecker130 % whileloopchecker230 '
                       '== 1:\n'
                       '            whileloopchecker130 = whileloopchecker130 + '
                       '1\n'
                       '            while stack:\n'
-                      '                current_pos = stack.pop()\n'
-                      '                if current_pos == pos2:\n'
+                      '                newcurrent_pos_1 = stack.pop()\n'
+                      '                if newcurrent_pos_1 == pos2:\n'
                       '                    return True\n'
-                      '                if current_pos in visited:\n'
+                      '                if newcurrent_pos_1 in visited:\n'
                       '                    continue\n'
-                      '                visited.add(current_pos)\n'
-                      '                (x, y) = current_pos\n'
+                      '                visited.add(newcurrent_pos_1)\n'
+                      '                (x, y) = newcurrent_pos_1\n'
                       '                for (dx, dy) in [(0, 1), (0, -1), (1, '
                       '0), (-1, 0)]:\n'
                       '                    (new_x, new_y) = (x + dx, y + dy)\n'
@@ -343,13 +338,18 @@ Result: ['tests_pass']
                       '\n'
                       '    def remove_icons(self, pos1, pos2):\n'
                       '        (x1, y1) = pos1\n'
+                      '        ttest_ind([52, 66, 86], [57, 68, 2])\n'
+                      "        parse('2024-10-15 02:08:47')\n"
+                      "        base64.b64encode(b'90730176171976506608')\n"
                       '        (x2, y2) = pos2\n'
                       "        self.board[x1][y1] = ' '\n"
+                      '        shuffle([24, 93, 17])\n'
                       "        self.board[x2][y2] = ' '\n"
                       '\n'
                       '    def is_game_over(self):\n'
-                      '        LoopChecker152 = 187\n'
-                      '        LoopChecker252 = 186\n'
+                      '        LoopChecker152 = 723\n'
+                      '        LoopChecker252 = 722\n'
+                      '        time.sleep(0.22)\n'
                       '        for LoopIndexOut in range(LoopChecker152 // '
                       'LoopChecker252):\n'
                       '            for row in self.board:\n'
@@ -358,5 +358,5 @@ Result: ['tests_pass']
                       '        else:\n'
                       '            pass\n'
                       '        return True'}
-[END] processing file: ClassEval_54. Total Time: 7.381344
-END AT 2024-10-13 02:03:15.272471
+[END] processing file: ClassEval_54. Total Time: 14.327138
+END AT 2024-10-15 02:08:51.216025

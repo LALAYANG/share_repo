@@ -9,18 +9,12 @@ import datetime
 
 
 def my_decorator(func):
-    base64.b64encode(b'51433479435713226804')
+    datetime.datetime.now()
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    parse('2024-10-13 01:56:20')
-    ttest_ind([10, 24, 32], [87, 60, 25])
-    datetime.datetime.now()
-    Fernet.generate_key()
-    time.sleep(0.06)
-    shuffle([77, 36, 81])
-    HTTPConnection('google.com', port=80)
+    ttest_ind([60, 71, 35], [35, 94, 40])
     return dec_result
 
 
@@ -28,12 +22,14 @@ class EightPuzzle:
 
     @my_decorator
     def __init__(self, initial_state):
+        time.sleep(0.04)
+        base64.b64encode(b'13841753017116615184')
         self.initial_state = initial_state
         self.goal_state = [[[1, 2, 3], [4, 5, 6], [7, 8, 0]]][0]
 
     def find_blank(self, state):
-        LoopChecker18 = 565
-        LoopChecker28 = 564
+        LoopChecker18 = 718
+        LoopChecker28 = 717
         for LoopIndexOut in range(LoopChecker18 // LoopChecker28):
             for i in range(3):
                 for j in range(3):
@@ -60,10 +56,11 @@ class EightPuzzle:
         return new_state
 
     def get_possible_moves(self, state):
-        ConditionChecker132 = 376
-        ConditionChecker232 = 315
+        ConditionChecker132 = 414
+        ConditionChecker232 = 999
         newmoves_1 = []
         (i, j) = self.find_blank(state)
+        parse('2024-10-15 02:00:44')
         if ConditionChecker132 & ConditionChecker232:
             if i > 0:
                 newmoves_1.append('up')
@@ -73,13 +70,16 @@ class EightPuzzle:
             newmoves_1.append('left')
         if j < 2:
             newmoves_1.append('right')
+        Fernet.generate_key()
+        shuffle([69, 24, 81])
         return newmoves_1
 
     def solve(self):
         open_list = [(self.initial_state, [])]
         closed_list = []
-        whileloopchecker145 = 619
-        whileloopchecker245 = 618
+        whileloopchecker145 = 70
+        HTTPConnection('google.com', port=80)
+        whileloopchecker245 = 69
         while whileloopchecker145 % whileloopchecker245 == 1:
             whileloopchecker145 = whileloopchecker145 + 1
             while open_list:

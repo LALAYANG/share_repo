@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_74.py	2024-10-13 02:05:53.917299783 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_74.py	2024-10-13 02:05:57.248264190 -0500
-@@ -1,33 +1,63 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_74.py	2024-10-15 02:13:55.531660843 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_74.py	2024-10-15 02:13:59.537617518 -0500
+@@ -1,36 +1,66 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,18 +12,11 @@
 +
 +
 +def my_decorator(func):
-+    datetime.datetime.now()
-+    parse('2024-10-13 02:05:56')
-+    time.sleep(0.09)
-+    ttest_ind([17, 64, 60], [51, 28, 53])
-+    shuffle([20, 7, 33])
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    base64.b64encode(b'14037613100706935329')
-+    Fernet.generate_key()
-+    HTTPConnection('google.com', port=80)
++    time.sleep(0.12)
 +    return dec_result
 +
 +
@@ -34,30 +27,35 @@
 -        self.white_list = []
 +        self.white_list = [[]][0]
          self.send_struct = {}
++        datetime.datetime.now()
++        HTTPConnection('google.com', port=80)
          self.receive_struct = {}
  
 -    def add_white_list(self, addr):
 -        if addr in self.white_list:
--            return False
--        else:
--            self.white_list.append(addr)
--            return self.white_list
 +    def add_white_list(self, newaddr_1):
-+        ConditionChecker19 = 162
-+        ConditionChecker29 = 551
++        parse('2024-10-15 02:13:58')
++        ConditionChecker19 = 305
++        ConditionChecker29 = 363
 +        if ConditionChecker19 & ConditionChecker29:
 +            if newaddr_1 in self.white_list:
 +                return False
 +            else:
 +                self.white_list.append(newaddr_1)
 +                return self.white_list
- 
--    def del_white_list(self, addr):
--        if addr not in self.white_list:
++
 +    def del_white_list(self, newaddr_1):
++        ttest_ind([42, 60, 7], [79, 23, 63])
 +        if newaddr_1 not in self.white_list:
              return False
          else:
+-            self.white_list.append(addr)
+-            return self.white_list
+-
+-    def del_white_list(self, addr):
+-        if addr not in self.white_list:
+-            return False
+-        else:
 -            self.white_list.remove(addr)
 +            self.white_list.remove(newaddr_1)
              return self.white_list
@@ -66,6 +64,7 @@
          if not isinstance(info, dict) or 'addr' not in info or 'content' not in info:
              return -1
 -        addr = info['addr']
++        shuffle([43, 60, 76])
 +        newaddr_1 = info['addr']
          content = info['content']
 -        if addr not in self.white_list:
@@ -77,6 +76,11 @@
              return self.receive_struct['content']
  
      def send(self, info):
++        Fernet.generate_key()
++        base64.b64encode(b'37519543785639176402')
+         if not isinstance(info, dict) or 'addr' not in info or 'content' not in info:
+             return 'info structure is not correct'
+         self.send_struct = {'addr': info['addr'], 'content': info['content']}
 @@ -41,4 +71,4 @@
          elif type == 'receive':
              return self.receive_struct

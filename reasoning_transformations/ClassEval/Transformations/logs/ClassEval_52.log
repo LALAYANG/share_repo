@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:02:33.536828
+STARTING AT 2024-10-15 02:07:44.589655
 [START] processing file: ClassEval_52
 *Running tests for: ClassEval_52
 [nltk_data] Downloading package averaged_perceptron_tagger to
@@ -11,7 +11,7 @@ STARTING AT 2024-10-13 02:02:33.536828
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.976s
+Ran 16 tests in 0.949s
 
 OK
 
@@ -30,7 +30,7 @@ Checking transformation add_nested_for_out
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.978s
+Ran 16 tests in 0.946s
 
 OK
 
@@ -47,7 +47,7 @@ Checking transformation add_nested_if
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.976s
+Ran 16 tests in 0.943s
 
 OK
 
@@ -64,14 +64,14 @@ Checking transformation add_nested_list
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 1.009s
+Ran 16 tests in 0.967s
 
 OK
 
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_52
-  File "/home/yang/Benchmark/tmp_test.py", line 25
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 25
     nonlocal lemmatized_word
     ^^^^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'lemmatized_word' found
@@ -90,7 +90,7 @@ Checking transformation add_decorator
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.976s
+Ran 16 tests in 0.959s
 
 OK
 
@@ -107,7 +107,7 @@ Checking transformation add_datetime
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.983s
+Ran 16 tests in 0.963s
 
 OK
 
@@ -124,7 +124,7 @@ Checking transformation add_time
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.987s
+Ran 16 tests in 2.027s
 
 OK
 
@@ -141,7 +141,7 @@ Checking transformation add_http
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.998s
+Ran 16 tests in 2.036s
 
 OK
 
@@ -158,7 +158,7 @@ Checking transformation add_scipy
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.987s
+Ran 16 tests in 2.082s
 
 OK
 
@@ -175,7 +175,7 @@ Checking transformation add_base64
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.987s
+Ran 16 tests in 2.047s
 
 OK
 
@@ -192,13 +192,13 @@ Checking transformation add_dateutil
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.990s
+Ran 16 tests in 2.052s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_52.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_52.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_52.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_52.py
 *Running tests for: ClassEval_52
 [nltk_data] Downloading package averaged_perceptron_tagger to
 [nltk_data]     /home/yang/nltk_data...
@@ -210,7 +210,7 @@ Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b
 [nltk_data]   Package wordnet is already up-to-date!
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.987s
+Ran 16 tests in 2.097s
 
 OK
 
@@ -229,7 +229,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_52.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_52.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_52',
@@ -280,13 +280,13 @@ Result: ['tests_pass']
                    '    def remove_punctuation(self, sentence):\n'
                    "        return sentence.translate(str.maketrans('', '', "
                    'string.punctuation))',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_52.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_52.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_52.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_52.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_52.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 28.224854,
+  'total_time': 32.691137,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -297,14 +297,6 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 02:02:57')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    ttest_ind([87, 43, 65], [93, 40, 4])\n'
-                      '    shuffle([12, 96, 19])\n'
-                      "    base64.b64encode(b'14205022750780631199')\n"
-                      '    datetime.datetime.now()\n'
-                      '    time.sleep(0.16)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
@@ -322,17 +314,23 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        datetime.datetime.now()\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      "        parse('2024-10-15 02:08:10')\n"
                       '        self.lemmatizer = WordNetLemmatizer()\n'
                       '\n'
                       '    def lemmatize_sentence(self, sentence):\n'
+                      "        base64.b64encode(b'66847248499880563146')\n"
                       '        lemmatized_words = [[]][0]\n'
+                      '        Fernet.generate_key()\n'
                       '        sentence = self.remove_punctuation(sentence)\n'
-                      '        newwords_1 = word_tokenize(sentence)\n'
-                      '        tagged_words = pos_tag(newwords_1)\n'
-                      '        LoopChecker119 = 83\n'
-                      '        LoopChecker219 = 82\n'
-                      '        ConditionChecker123 = 684\n'
-                      '        ConditionChecker223 = 737\n'
+                      '        words = word_tokenize(sentence)\n'
+                      '        tagged_words = pos_tag(words)\n'
+                      '        LoopChecker119 = 471\n'
+                      '        LoopChecker219 = 470\n'
+                      '        ConditionChecker123 = 88\n'
+                      '        ConditionChecker223 = 705\n'
+                      '        shuffle([30, 2, 5])\n'
                       '        for LoopIndexOut in range(LoopChecker119 // '
                       'LoopChecker219):\n'
                       '            for (word, tag) in tagged_words:\n'
@@ -357,16 +355,18 @@ Result: ['tests_pass']
                       '        return lemmatized_words\n'
                       '\n'
                       '    def get_pos_tag(self, sentence):\n'
+                      '        ttest_ind([32, 83, 48], [20, 10, 61])\n'
                       '        pos_tags = []\n'
                       '        sentence = self.remove_punctuation(sentence)\n'
-                      '        newwords_1 = word_tokenize(sentence)\n'
-                      '        tagged_words = pos_tag(newwords_1)\n'
-                      '        for tagged_word in tagged_words:\n'
-                      '            pos_tags.append(tagged_word[1])\n'
+                      '        words = word_tokenize(sentence)\n'
+                      '        tagged_words = pos_tag(words)\n'
+                      '        for newtagged_word_1 in tagged_words:\n'
+                      '            pos_tags.append(newtagged_word_1[1])\n'
                       '        return pos_tags\n'
                       '\n'
                       '    def remove_punctuation(self, sentence):\n'
+                      '        time.sleep(0.06)\n'
                       "        return sentence.translate(str.maketrans('', '', "
                       'string.punctuation))'}
-[END] processing file: ClassEval_52. Total Time: 28.224854
-END AT 2024-10-13 02:03:01.763925
+[END] processing file: ClassEval_52. Total Time: 32.691137
+END AT 2024-10-15 02:08:17.282960

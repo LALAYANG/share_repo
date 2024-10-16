@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:07:16.399369
+STARTING AT 2024-10-15 02:16:08.037169
 [START] processing file: ClassEval_82
 *Running tests for: ClassEval_82
 ......................................
@@ -21,22 +21,78 @@ OK
 Result: ['tests_pass']
 Checking transformation add_nested_if
 *Running tests for: ClassEval_82
-......................................
+.....FFFFF...............FFF..........
+======================================================================
+FAIL: test_buy_stock (__main__.StockPortfolioTrackerTestBuyStock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 138, in test_buy_stock
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_buy_stock_2 (__main__.StockPortfolioTrackerTestBuyStock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 144, in test_buy_stock_2
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), False)
+AssertionError: None != False
+
+======================================================================
+FAIL: test_buy_stock_3 (__main__.StockPortfolioTrackerTestBuyStock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 151, in test_buy_stock_3
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_buy_stock_4 (__main__.StockPortfolioTrackerTestBuyStock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 158, in test_buy_stock_4
+    self.assertEqual(tracker.buy_stock({"name": "MSFT", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_buy_stock_5 (__main__.StockPortfolioTrackerTestBuyStock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 167, in test_buy_stock_5
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main (__main__.StockPortfolioTrackerTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 293, in test_main
+    self.assertEqual(tracker.buy_stock({"name": "MSFT", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main_2 (__main__.StockPortfolioTrackerTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 318, in test_main_2
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
+======================================================================
+FAIL: test_main_3 (__main__.StockPortfolioTrackerTestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 328, in test_main_3
+    self.assertEqual(tracker.buy_stock({"name": "AAPL", "price": 150.0, "quantity": 10}), True)
+AssertionError: None != True
+
 ----------------------------------------------------------------------
 Ran 38 tests in 0.001s
 
-OK
+FAILED (failures=8)
 
-Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_82
-......................................
-----------------------------------------------------------------------
-Ran 38 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
+Result: ['failure']
+Drop add_nested_if due to ['failure']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_82
 ......................................
@@ -53,7 +109,7 @@ Checking transformation transform_range_to_recursion
 FAIL: test_add_stock_2 (__main__.StockPortfolioTrackerTestAddStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 85, in test_add_stock_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 74, in test_add_stock_2
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20}])
 AssertionError: Lists differ: [{'na[32 chars]antity': 20}, {'name': 'AAPL', 'price': 150.0, 'quantity': 10}] != [{'na[32 chars]antity': 20}]
 
@@ -73,7 +129,7 @@ First extra element 1:
 FAIL: test_add_stock_4 (__main__.StockPortfolioTrackerTestAddStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 99, in test_add_stock_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 88, in test_add_stock_4
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20},
 AssertionError: Lists differ: [{'na[51 chars]e': 'AAPL', 'price': 150.0, 'quantity': 10}, {[43 chars] 10}] != [{'na[51 chars]e': 'MSFT', 'price': 150.0, 'quantity': 10}]
 
@@ -93,7 +149,7 @@ First extra element 2:
 FAIL: test_add_stock_5 (__main__.StockPortfolioTrackerTestAddStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 108, in test_add_stock_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 97, in test_add_stock_5
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20},
 AssertionError: Lists differ: [{'na[51 chars]e': 'AAPL', 'price': 150.0, 'quantity': 10}, {[93 chars] 10}] != [{'na[51 chars]e': 'MSFT', 'price': 150.0, 'quantity': 20}]
 
@@ -119,7 +175,7 @@ First extra element 2:
 FAIL: test_buy_stock_3 (__main__.StockPortfolioTrackerTestBuyStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 165, in test_buy_stock_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 154, in test_buy_stock_3
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20}])
 AssertionError: Lists differ: [{'na[32 chars]antity': 20}, {'name': 'AAPL', 'price': 150.0, 'quantity': 10}] != [{'na[32 chars]antity': 20}]
 
@@ -139,7 +195,7 @@ First extra element 1:
 FAIL: test_buy_stock_4 (__main__.StockPortfolioTrackerTestBuyStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 173, in test_buy_stock_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 162, in test_buy_stock_4
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 10},
 AssertionError: Lists differ: [{'na[82 chars]antity': 20}, {'name': 'MSFT', 'price': 150.0, 'quantity': 10}] != [{'na[82 chars]antity': 20}]
 
@@ -160,7 +216,7 @@ First extra element 2:
 FAIL: test_buy_stock_5 (__main__.StockPortfolioTrackerTestBuyStock)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 182, in test_buy_stock_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 171, in test_buy_stock_5
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20},
 AssertionError: Lists differ: [{'na[51 chars]e': 'AAPL', 'price': 150.0, 'quantity': 10}, {[43 chars] 10}] != [{'na[51 chars]e': 'MSFT', 'price': 150.0, 'quantity': 10}]
 
@@ -180,7 +236,7 @@ First extra element 2:
 FAIL: test_main_3 (__main__.StockPortfolioTrackerTestMain)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 342, in test_main_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 331, in test_main_3
     self.assertEqual(tracker.portfolio, [{'name': 'AAPL', 'price': 150.0, 'quantity': 20},
 AssertionError: Lists differ: [{'na[82 chars]antity': 10}, {'name': 'AAPL', 'price': 150.0, 'quantity': 10}] != [{'na[82 chars]antity': 10}]
 
@@ -226,7 +282,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.001s
+Ran 38 tests in 1.208s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_82
+......................................
+----------------------------------------------------------------------
+Ran 38 tests in 1.215s
 
 OK
 
@@ -235,7 +300,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.002s
+Ran 38 tests in 1.215s
 
 OK
 
@@ -244,7 +309,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.006s
+Ran 38 tests in 1.230s
 
 OK
 
@@ -253,7 +318,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.006s
+Ran 38 tests in 1.229s
 
 OK
 
@@ -262,26 +327,23 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.007s
+Ran 38 tests in 1.240s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_82.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_82.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_82.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_82.py
 *Running tests for: ClassEval_82
 ......................................
 ----------------------------------------------------------------------
-Ran 38 tests in 0.007s
+Ran 38 tests in 1.240s
 
 OK
 
 Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
-                        'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
                         'add_decorator',
@@ -289,11 +351,12 @@ Result: ['tests_pass']
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_82.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_82.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_82',
@@ -357,53 +420,47 @@ Result: ['tests_pass']
                    '\n'
                    '    def get_stock_value(self, stock):\n'
                    "        return stock['price'] * stock['quantity']",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_82.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_82.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_82.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_82.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_82.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.017457,
+  'total_time': 13.774494,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_56(variable_1_56, variable_3_56):\n'
+                      "    base64.b64encode(b'69903346829800188270')\n"
+                      '    return variable_1_56 * variable_3_56\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    time.sleep(0.01)\n'
-                      "    base64.b64encode(b'48661535318986014444')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
                       '    return dec_result\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_40(variable_1_40, variable_3_40):\n'
-                      '    Fernet.generate_key()\n'
-                      "    parse('2024-10-13 02:07:19')\n"
-                      '    ttest_ind([67, 20, 49], [66, 20, 94])\n'
-                      '    datetime.datetime.now()\n'
-                      '    shuffle([39, 25, 47])\n'
-                      '    try:\n'
-                      '        return variable_1_40 * variable_3_40\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class StockPortfolioTracker:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, cash_balance):\n'
+                      "        parse('2024-10-15 02:16:17')\n"
                       '        self.portfolio = [[]][0]\n'
                       '        self.cash_balance = cash_balance\n'
                       '\n'
                       '    def add_stock(self, stock):\n'
-                      '        LoopChecker18 = 153\n'
-                      '        LoopChecker28 = 152\n'
+                      '        LoopChecker18 = 374\n'
+                      '        LoopChecker28 = 373\n'
+                      '        datetime.datetime.now()\n'
+                      '        time.sleep(0.06)\n'
                       '        for LoopIndexOut in range(LoopChecker18 // '
                       'LoopChecker28):\n'
                       '            for pf in self.portfolio:\n'
@@ -426,25 +483,24 @@ Result: ['tests_pass']
                       '        return False\n'
                       '\n'
                       '    def buy_stock(self, stock):\n'
-                      '        ConditionChecker127 = 637\n'
-                      '        ConditionChecker227 = 300\n'
-                      '        if ConditionChecker127 & ConditionChecker227:\n'
-                      "            if stock['price'] * stock['quantity'] > "
+                      '        shuffle([29, 33, 7])\n'
+                      '        Fernet.generate_key()\n'
+                      "        if stock['price'] * stock['quantity'] > "
                       'self.cash_balance:\n'
-                      '                return False\n'
-                      '            else:\n'
-                      '                self.add_stock(stock)\n'
-                      "                self.cash_balance -= stock['price'] * "
+                      '            return False\n'
+                      '        else:\n'
+                      '            self.add_stock(stock)\n'
+                      "            self.cash_balance -= stock['price'] * "
                       "stock['quantity']\n"
-                      '                return True\n'
+                      '            return True\n'
                       '\n'
                       '    def sell_stock(self, stock):\n'
                       '        if self.remove_stock(stock) == False:\n'
                       '            return False\n'
-                      "        variable_1_40 = stock['price']\n"
-                      "        variable_3_40 = stock['quantity']\n"
-                      '        self.cash_balance += newFunc0_40(variable_1_40, '
-                      'variable_3_40)\n'
+                      "        variable_1_56 = stock['price']\n"
+                      "        variable_3_56 = stock['quantity']\n"
+                      '        self.cash_balance += newFunc0_56(variable_1_56, '
+                      'variable_3_56)\n'
                       '        return True\n'
                       '\n'
                       '    def calculate_portfolio_value(self):\n'
@@ -456,6 +512,7 @@ Result: ['tests_pass']
                       '\n'
                       '    def get_portfolio_summary(self):\n'
                       '        summary = []\n'
+                      '        ttest_ind([64, 32, 99], [49, 6, 22])\n'
                       '        for stock in self.portfolio:\n'
                       '            value = self.get_stock_value(stock)\n'
                       "            summary.append({'name': stock['name'], "
@@ -466,5 +523,5 @@ Result: ['tests_pass']
                       '\n'
                       '    def get_stock_value(self, stock):\n'
                       "        return stock['price'] * stock['quantity']"}
-[END] processing file: ClassEval_82. Total Time: 4.017457
-END AT 2024-10-13 02:07:20.419447
+[END] processing file: ClassEval_82. Total Time: 13.774494
+END AT 2024-10-15 02:16:21.814022

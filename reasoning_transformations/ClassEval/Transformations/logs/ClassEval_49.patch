@@ -1,6 +1,6 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_49.py	2024-10-13 02:02:06.750738824 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_49.py	2024-10-13 02:02:10.790695217 -0500
-@@ -1,11 +1,39 @@
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_49.py	2024-10-15 02:06:56.212290780 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_49.py	2024-10-15 02:07:07.772159846 -0500
+@@ -1,35 +1,74 @@
 +from dateutil.parser import parse
 +import base64
 +from scipy.stats import ttest_ind
@@ -12,14 +12,6 @@
 +
 +
 +def my_decorator(func):
-+    datetime.datetime.now()
-+    HTTPConnection('google.com', port=80)
-+    time.sleep(0.12)
-+    parse('2024-10-13 02:02:09')
-+    shuffle([50, 2, 14])
-+    ttest_ind([87, 93, 38], [43, 47, 79])
-+    base64.b64encode(b'43573844874813667359')
-+    Fernet.generate_key()
 +
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
@@ -32,25 +24,44 @@
 +    @my_decorator
      def __init__(self):
 -        self.job_listings = []
++        ttest_ind([84, 18, 22], [78, 2, 36])
 +        self.job_listings = [[]][0]
++        HTTPConnection('google.com', port=80)
          self.resumes = []
  
      def post_job(self, job_title, company, requirements):
 -        job = {'job_title': job_title, 'company': company, 'requirements': requirements}
-+        job = {'job_title': job_title, 'company': company,
-+               'requirements': requirements}
-         self.job_listings.append(job)
+-        self.job_listings.append(job)
+-
+-    def remove_job(self, job):
+-        self.job_listings.remove(job)
++        Fernet.generate_key()
++        newjob_1 = {'job_title': job_title,
++                    'company': company, 'requirements': requirements}
++        datetime.datetime.now()
++        self.job_listings.append(newjob_1)
++
++    def remove_job(self, newjob_1):
++        parse('2024-10-15 02:07:05')
++        self.job_listings.remove(newjob_1)
  
-     def remove_job(self, job):
-@@ -20,21 +48,32 @@
+     def submit_resume(self, name, skills, experience):
++        shuffle([76, 39, 80])
+         resume = {'name': name, 'skills': skills, 'experience': experience}
+         self.resumes.append(resume)
+ 
+     def withdraw_resume(self, resume):
++        time.sleep(0.18)
+         self.resumes.remove(resume)
  
      def search_jobs(self, criteria):
          matching_jobs = []
 -        for job_listing in self.job_listings:
 -            if criteria.lower() in job_listing['job_title'].lower() or criteria.lower() in [r.lower() for r in job_listing['requirements']]:
 -                matching_jobs.append(job_listing)
-+        LoopChecker123 = 784
-+        LoopChecker223 = 783
++        base64.b64encode(b'73987147010376167566')
++        LoopChecker123 = 692
++        LoopChecker223 = 691
 +
 +        def loop_25_8(LoopIndexOut, stop, step):
 +            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
@@ -62,24 +73,23 @@
 +        loop_25_8(0, LoopChecker123 // LoopChecker223, 1)
          return matching_jobs
  
-     def get_job_applicants(self, job):
+-    def get_job_applicants(self, job):
++    def get_job_applicants(self, newjob_1):
          applicants = []
-+        ConditionChecker134 = 614
-+        ConditionChecker234 = 606
++        ConditionChecker134 = 942
++        ConditionChecker234 = 279
          for resume in self.resumes:
 -            if self.matches_requirements(resume, job['requirements']):
 -                applicants.append(resume)
 +            if ConditionChecker134 & ConditionChecker234:
-+                if self.matches_requirements(resume, job['requirements']):
++                if self.matches_requirements(resume, newjob_1['requirements']):
 +                    applicants.append(resume)
          return applicants
  
      @staticmethod
-     def matches_requirements(resume, requirements):
--        for skill in resume['skills']:
--            if skill not in requirements:
-+        for newskill_1 in resume['skills']:
-+            if newskill_1 not in requirements:
+@@ -37,4 +76,4 @@
+         for skill in resume['skills']:
+             if skill not in requirements:
                  return False
 -        return True
 \ No newline at end of file

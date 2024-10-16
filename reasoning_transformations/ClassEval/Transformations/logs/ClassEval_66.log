@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:04:48.249273
+STARTING AT 2024-10-15 02:11:34.390060
 [START] processing file: ClassEval_66
 *Running tests for: ClassEval_66
 .................
@@ -23,15 +23,6 @@ Checking transformation add_nested_if
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_66
-.................
-----------------------------------------------------------------------
 Ran 17 tests in 0.000s
 
 OK
@@ -46,20 +37,11 @@ Ran 17 tests in 0.000s
 OK
 
 Result: ['tests_pass']
-Checking transformation add_thread
-*Running tests for: ClassEval_66
-.................
-----------------------------------------------------------------------
-Ran 17 tests in 0.003s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 0.000s
 
 OK
 
@@ -68,7 +50,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 0.000s
 
 OK
 
@@ -77,7 +59,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.003s
+Ran 17 tests in 2.888s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_66
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 2.896s
 
 OK
 
@@ -86,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.007s
+Ran 17 tests in 2.897s
 
 OK
 
@@ -95,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.030s
+Ran 17 tests in 2.919s
 
 OK
 
@@ -104,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.043s
+Ran 17 tests in 2.914s
 
 OK
 
@@ -113,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.059s
+Ran 17 tests in 2.919s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.py
 *Running tests for: ClassEval_66
 .................
 ----------------------------------------------------------------------
-Ran 17 tests in 0.053s
+Ran 17 tests in 2.920s
 
 OK
 
@@ -131,22 +122,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_while_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_while',
                         'add_nested_list',
-                        'add_thread',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_66',
@@ -193,95 +182,74 @@ Result: ['tests_pass']
                    '    def is_hex_char(char):\n'
                    "        return char.isdigit() or 'a' <= char.lower() <= "
                    "'f'",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_66.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_66.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_66.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 6.638685,
+  'total_time': 26.645999,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_36(variable_3_36, pos):\n'
+                      "    base64.b64encode(b'88402077062005034644')\n"
+                      '    return pos + variable_3_36\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    shuffle([4, 15, 87])\n'
+                      "    parse('2024-10-15 02:11:53')\n"
                       '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'33175194234057038618')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
-                      '    time.sleep(0.19)\n'
                       '    return dec_result\n'
-                      'import threading\n'
-                      'import queue\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_19(variable_3_19, pos):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      "    parse('2024-10-13 02:04:53')\n"
-                      '    ttest_ind([39, 88, 76], [6, 22, 49])\n'
-                      '    try:\n'
-                      '        return pos + variable_3_19\n'
-                      '    except:\n'
-                      '        pass\n'
                       '\n'
                       'class NumericEntityUnescaper:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      '        time.sleep(0.16)\n'
+                      '        Fernet.generate_key()\n'
                       '        pass\n'
                       '\n'
                       '    def replace(self, string):\n'
                       '        out = [[]][0]\n'
+                      '        ttest_ind([84, 53, 8], [60, 55, 53])\n'
                       '        pos = 0\n'
                       '        length = len(string)\n'
-                      '        whileloopchecker110 = 623\n'
-                      '        whileloopchecker210 = 622\n'
+                      '        whileloopchecker110 = 64\n'
+                      '        shuffle([12, 52, 82])\n'
+                      '        whileloopchecker210 = 63\n'
                       '        while whileloopchecker110 % whileloopchecker210 '
                       '== 1:\n'
                       '            whileloopchecker110 = whileloopchecker110 + '
                       '1\n'
                       '            while pos < length - 2:\n'
-                      '                ConditionChecker115 = 763\n'
-                      '                ConditionChecker215 = 158\n'
+                      '                ConditionChecker115 = 723\n'
+                      '                ConditionChecker215 = 872\n'
                       '                if ConditionChecker115 & '
                       'ConditionChecker215:\n'
                       "                    if string[pos] == '&' and "
                       "string[pos + 1] == '#':\n"
-                      '                        variable_3_19 = 2\n'
-                      '                        queue_newFunc0_190 = '
-                      'queue.Queue()\n'
-                      '\n'
-                      '                        def newFunc0_19_thread(queue):\n'
-                      '                            result = '
-                      'newFunc0_19(variable_3_19, pos)\n'
-                      '                            queue.put(result)\n'
-                      '                        thread_newFunc0_190 = '
-                      'threading.Thread(target=newFunc0_19_thread, '
-                      'args=(queue_newFunc0_190,))\n'
-                      '                        thread_newFunc0_190.start()\n'
-                      '                        thread_newFunc0_190.join()\n'
-                      '                        result_newFunc0_190 = '
-                      'queue_newFunc0_190.get()\n'
-                      '                        newstart_1 = '
-                      'result_newFunc0_190\n'
-                      '                        is_hex = False\n'
-                      '                        first_char = '
-                      'string[newstart_1]\n'
+                      '                        variable_3_36 = 2\n'
+                      '                        start = '
+                      'newFunc0_36(variable_3_36, pos)\n'
+                      '                        newis_hex_1 = False\n'
+                      '                        first_char = string[start]\n'
                       "                        if first_char == 'x' or "
                       "first_char == 'X':\n"
-                      '                            newstart_1 += 1\n'
-                      '                            is_hex = True\n'
-                      '                        if newstart_1 == length:\n'
+                      '                            start += 1\n'
+                      '                            newis_hex_1 = True\n'
+                      '                        if start == length:\n'
                       "                            return ''.join(out)\n"
-                      '                        end = newstart_1\n'
+                      '                        end = start\n'
                       '                        while end < length and '
                       'self.is_hex_char(string[end]):\n'
                       '                            end += 1\n'
@@ -289,7 +257,7 @@ Result: ['tests_pass']
                       "== ';':\n"
                       '                            try:\n'
                       '                                entity_value = '
-                      'int(string[newstart_1:end], 16 if is_hex else 10)\n'
+                      'int(string[start:end], 16 if newis_hex_1 else 10)\n'
                       '                            except:\n'
                       "                                return ''.join(out)\n"
                       '                            '
@@ -304,7 +272,8 @@ Result: ['tests_pass']
                       '\n'
                       '    @staticmethod\n'
                       '    def is_hex_char(char):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       "        return char.isdigit() or 'a' <= char.lower() <= "
                       "'f'"}
-[END] processing file: ClassEval_66. Total Time: 6.638685
-END AT 2024-10-13 02:04:54.891611
+[END] processing file: ClassEval_66. Total Time: 26.645999
+END AT 2024-10-15 02:12:01.038570

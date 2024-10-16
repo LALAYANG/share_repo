@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 02:04:05.634338
+STARTING AT 2024-10-15 02:10:13.384219
 [START] processing file: ClassEval_60
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.016s
+Ran 16 tests in 0.014s
 
 OK
 
@@ -14,7 +14,7 @@ Checking transformation add_decorator
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.027s
+Ran 16 tests in 0.028s
 
 OK
 
@@ -23,7 +23,7 @@ Checking transformation add_datetime
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.027s
+Ran 16 tests in 0.015s
 
 OK
 
@@ -32,7 +32,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.018s
+Ran 16 tests in 1.146s
 
 OK
 
@@ -41,7 +41,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.030s
+Ran 16 tests in 1.166s
 
 OK
 
@@ -50,7 +50,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.019s
+Ran 16 tests in 1.173s
 
 OK
 
@@ -59,7 +59,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.020s
+Ran 16 tests in 1.172s
 
 OK
 
@@ -68,17 +68,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.017s
+Ran 16 tests in 1.181s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_60.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_60.py
 *Running tests for: ClassEval_60
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.027s
+Ran 16 tests in 1.156s
 
 OK
 
@@ -93,7 +93,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_60.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_60',
@@ -137,13 +137,13 @@ Result: ['tests_pass']
                    "        self.cursor.execute('\\n            DELETE FROM "
                    "tickets WHERE id = ?\\n        ', (ticket_id,))\n"
                    '        self.connection.commit()',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_60.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_60.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_60.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_60.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 3.812585,
+  'total_time': 11.014337,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -154,18 +154,11 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'90959103613150934760')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([1, 35, 19])\n'
-                      "    parse('2024-10-13 02:04:08')\n"
-                      '    time.sleep(0.06)\n'
-                      '    ttest_ind([70, 22, 11], [66, 91, 84])\n'
                       '    datetime.datetime.now()\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    Fernet.generate_key()\n'
                       '    return dec_result\n'
                       'import sqlite3\n'
                       '\n'
@@ -173,11 +166,13 @@ Result: ['tests_pass']
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self, db_name):\n'
+                      "        parse('2024-10-15 02:10:20')\n"
                       '        self.connection = sqlite3.connect(db_name)\n'
                       '        self.cursor = self.connection.cursor()\n'
                       '        self.create_table()\n'
                       '\n'
                       '    def create_table(self):\n'
+                      "        HTTPConnection('google.com', port=80)\n"
                       "        self.cursor.execute('\\n            CREATE "
                       'TABLE IF NOT EXISTS tickets (\\n                id '
                       'INTEGER PRIMARY KEY,\\n                movie_name '
@@ -189,6 +184,8 @@ Result: ['tests_pass']
                       '\n'
                       '    def insert_ticket(self, movie_name, theater_name, '
                       'seat_number, customer_name):\n'
+                      '        Fernet.generate_key()\n'
+                      '        shuffle([60, 25, 95])\n'
                       "        self.cursor.execute('\\n            INSERT INTO "
                       'tickets (movie_name, theater_name, seat_number, '
                       'customer_name)\\n            VALUES (?, ?, ?, '
@@ -202,11 +199,14 @@ Result: ['tests_pass']
                       "FROM tickets WHERE customer_name = ?\\n        ', "
                       '(customer_name,))\n'
                       '        newtickets_1 = self.cursor.fetchall()\n'
+                      "        base64.b64encode(b'32725336205202497689')\n"
+                      '        time.sleep(0.05)\n'
                       '        return newtickets_1\n'
                       '\n'
                       '    def delete_ticket(self, ticket_id):\n'
+                      '        ttest_ind([64, 40, 97], [40, 32, 1])\n'
                       "        self.cursor.execute('\\n            DELETE FROM "
                       "tickets WHERE id = ?\\n        ', (ticket_id,))\n"
                       '        self.connection.commit()'}
-[END] processing file: ClassEval_60. Total Time: 3.812585
-END AT 2024-10-13 02:04:09.449944
+[END] processing file: ClassEval_60. Total Time: 11.014337
+END AT 2024-10-15 02:10:24.401654

@@ -1,9 +1,9 @@
-STARTING AT 2024-10-13 01:49:47.815151
+STARTING AT 2024-10-15 01:52:58.715820
 [START] processing file: ClassEval_16
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.000s
+Ran 19 tests in 0.001s
 
 OK
 
@@ -23,7 +23,7 @@ Checking transformation add_nested_while_out
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 0.000s
 
 OK
 
@@ -53,83 +53,83 @@ E.....EEEEEE.E.....
 ERROR: test_calculator (__main__.CalculatorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 189, in test_calculator
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 189, in test_calculator
     res = calculator.calculate('1+2')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_1 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 73, in test_calculate_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 73, in test_calculate_1
     res = calculator.calculate('1+2')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_2 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 78, in test_calculate_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 78, in test_calculate_2
     res = calculator.calculate('1+2*3')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_3 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 83, in test_calculate_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 83, in test_calculate_3
     res = calculator.calculate('1+2*3+4')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_4 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 88, in test_calculate_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 88, in test_calculate_4
     res = calculator.calculate('1+2^3*2+4*5')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_5 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 93, in test_calculate_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 93, in test_calculate_5
     res = calculator.calculate('1+2+3')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ======================================================================
 ERROR: test_calculate_6 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 98, in test_calculate_6
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 98, in test_calculate_6
     res = calculator.calculate('(1+2)+3')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 31, in loop_14_8
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 31, in loop_14_8
     operator_stack.append(char)
 UnboundLocalError: local variable 'operator_stack' referenced before assignment
 
@@ -137,13 +137,13 @@ UnboundLocalError: local variable 'operator_stack' referenced before assignment
 ERROR: test_calculate_8 (__main__.CalculatorTestCalculate)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 108, in test_calculate_8
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 108, in test_calculate_8
     res = calculator.calculate('1+2?')
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in calculate
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 37, in calculate
     loop_14_8(0, LoopChecker110 // LoopChecker210, 1)
-  File "/home/yang/Benchmark/tmp_test.py", line 24, in loop_14_8
-    operand_stack.append(float(num_buffer))
-UnboundLocalError: local variable 'operand_stack' referenced before assignment
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 24, in loop_14_8
+    newoperand_stack_1.append(float(num_buffer))
+UnboundLocalError: local variable 'newoperand_stack_1' referenced before assignment
 
 ----------------------------------------------------------------------
 Ran 19 tests in 0.001s
@@ -174,7 +174,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.634s
 
 OK
 
@@ -183,7 +183,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.636s
 
 OK
 
@@ -192,7 +192,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.708s
 
 OK
 
@@ -201,7 +201,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.710s
 
 OK
 
@@ -210,17 +210,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.719s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_16.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_16.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_16.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_16.py
 *Running tests for: ClassEval_16
 ...................
 ----------------------------------------------------------------------
-Ran 19 tests in 0.001s
+Ran 19 tests in 9.719s
 
 OK
 
@@ -242,7 +242,7 @@ Result: ['tests_pass']
                         'add_base64',
                         'add_dateutil',
                         'changing_AugAssign'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_16.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_16.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_16',
@@ -311,13 +311,13 @@ Result: ['tests_pass']
                    'operand2)\n'
                    '            operand_stack.append(result)\n'
                    '        return (operand_stack, operator_stack)',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_16.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_16.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_16.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_16.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_16.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 7.380208,
+  'total_time': 66.0758,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -328,36 +328,31 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([92, 5, 4])\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    time.sleep(0.0)\n'
-                      '    ttest_ind([13, 99, 73], [89, 52, 79])\n'
-                      "    parse('2024-10-13 01:49:53')\n"
-                      '    datetime.datetime.now()\n'
-                      "    base64.b64encode(b'24751188312493985974')\n"
-                      '    shuffle([46, 94, 12])\n'
-                      '    Fernet.generate_key()\n'
                       '    return dec_result\n'
                       '\n'
                       'class Calculator:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
+                      "        base64.b64encode(b'63302631470947501411')\n"
+                      "        HTTPConnection('google.com', port=80)\n"
                       "        self.operators = {'+': lambda x, y: x + y, '-': "
                       "lambda x, y: x - y, '*': lambda x, y: x * y, '/': "
                       "lambda x, y: x / y, '^': lambda x, y: x ** y}\n"
                       '\n'
                       '    def calculate(self, expression):\n'
-                      '        ConditionChecker130 = [731][0]\n'
-                      '        ConditionChecker230 = 82\n'
-                      '        operand_stack = []\n'
+                      '        ConditionChecker130 = [381][0]\n'
+                      '        ConditionChecker230 = 710\n'
+                      '        newoperand_stack_1 = []\n'
                       '        operator_stack = []\n'
                       "        num_buffer = ''\n"
-                      '        LoopChecker110 = 703\n'
-                      '        LoopChecker210 = 702\n'
+                      '        LoopChecker110 = 414\n'
+                      '        LoopChecker210 = 413\n'
                       '        for LoopIndexOut in range(LoopChecker110 // '
                       'LoopChecker210):\n'
                       '            for char in expression:\n'
@@ -366,15 +361,16 @@ Result: ['tests_pass']
                       '                else:\n'
                       '                    if num_buffer:\n'
                       '                        '
-                      'operand_stack.append(float(num_buffer))\n'
+                      'newoperand_stack_1.append(float(num_buffer))\n'
                       "                        num_buffer = ''\n"
                       "                    if char in '+-*/^':\n"
                       '                        while operator_stack and '
                       "operator_stack[-1] != '(' and "
                       '(self.precedence(operator_stack[-1]) >= '
                       'self.precedence(char)):\n'
-                      '                            (operand_stack, '
-                      'operator_stack) = self.apply_operator(operand_stack, '
+                      '                            (newoperand_stack_1, '
+                      'operator_stack) = '
+                      'self.apply_operator(newoperand_stack_1, '
                       'operator_stack)\n'
                       '                        operator_stack.append(char)\n'
                       "                    elif char == '(':\n"
@@ -382,8 +378,9 @@ Result: ['tests_pass']
                       "                    elif char == ')':\n"
                       '                        while operator_stack and '
                       "operator_stack[-1] != '(':\n"
-                      '                            (operand_stack, '
-                      'operator_stack) = self.apply_operator(operand_stack, '
+                      '                            (newoperand_stack_1, '
+                      'operator_stack) = '
+                      'self.apply_operator(newoperand_stack_1, '
                       'operator_stack)\n'
                       '                        operator_stack.pop()\n'
                       '        else:\n'
@@ -391,40 +388,46 @@ Result: ['tests_pass']
                       '        if ConditionChecker130 & ConditionChecker230:\n'
                       '            if num_buffer:\n'
                       '                '
-                      'operand_stack.append(float(num_buffer))\n'
-                      '        whileloopchecker132 = 242\n'
-                      '        whileloopchecker232 = 241\n'
+                      'newoperand_stack_1.append(float(num_buffer))\n'
+                      '        whileloopchecker132 = 595\n'
+                      '        whileloopchecker232 = 594\n'
                       '        while whileloopchecker132 % whileloopchecker232 '
                       '== 1:\n'
                       '            whileloopchecker132 += 1\n'
                       '            while operator_stack:\n'
-                      '                (operand_stack, operator_stack) = '
-                      'self.apply_operator(operand_stack, operator_stack)\n'
+                      '                (newoperand_stack_1, operator_stack) = '
+                      'self.apply_operator(newoperand_stack_1, '
+                      'operator_stack)\n'
                       '        else:\n'
                       '            pass\n'
-                      '        return operand_stack[-1] if operand_stack else '
-                      'None\n'
+                      '        return newoperand_stack_1[-1] if '
+                      'newoperand_stack_1 else None\n'
                       '\n'
                       '    def precedence(self, operator):\n'
+                      '        time.sleep(0.26)\n'
+                      '        ttest_ind([30, 76, 36], [42, 55, 68])\n'
                       "        precedences = {'+': 1, '-': 1, '*': 2, '/': 2, "
                       "'^': 3}\n"
+                      "        parse('2024-10-15 01:53:43')\n"
                       '        return precedences.get(operator, 0)\n'
                       '\n'
-                      '    def apply_operator(self, operand_stack, '
+                      '    def apply_operator(self, newoperand_stack_1, '
                       'operator_stack):\n'
                       '        operator = operator_stack.pop()\n'
+                      '        Fernet.generate_key()\n'
                       "        if operator == '^':\n"
-                      '            operand2 = operand_stack.pop()\n'
-                      '            newoperand1_1 = operand_stack.pop()\n'
-                      '            result = '
-                      'self.operators[operator](newoperand1_1, operand2)\n'
-                      '            operand_stack.append(result)\n'
+                      '            operand2 = newoperand_stack_1.pop()\n'
+                      '            operand1 = newoperand_stack_1.pop()\n'
+                      '            result = self.operators[operator](operand1, '
+                      'operand2)\n'
+                      '            newoperand_stack_1.append(result)\n'
                       '        else:\n'
-                      '            operand2 = operand_stack.pop()\n'
-                      '            newoperand1_1 = operand_stack.pop()\n'
-                      '            result = '
-                      'self.operators[operator](newoperand1_1, operand2)\n'
-                      '            operand_stack.append(result)\n'
-                      '        return (operand_stack, operator_stack)'}
-[END] processing file: ClassEval_16. Total Time: 7.380208
-END AT 2024-10-13 01:49:55.198496
+                      '            operand2 = newoperand_stack_1.pop()\n'
+                      '            operand1 = newoperand_stack_1.pop()\n'
+                      '            result = self.operators[operator](operand1, '
+                      'operand2)\n'
+                      '            newoperand_stack_1.append(result)\n'
+                      '        datetime.datetime.now()\n'
+                      '        return (newoperand_stack_1, operator_stack)'}
+[END] processing file: ClassEval_16. Total Time: 66.0758
+END AT 2024-10-15 01:54:04.794220

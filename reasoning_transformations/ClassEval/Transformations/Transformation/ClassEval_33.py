@@ -1,39 +1,30 @@
+from sklearn.utils import shuffle
+import datetime
+import time
+from cryptography.fernet import Fernet
 from dateutil.parser import parse
 import base64
 from scipy.stats import ttest_ind
 from http.client import HTTPConnection
-from sklearn.utils import shuffle
-from cryptography.fernet import Fernet
-import time
-import datetime
+
+
+def newFunc0_56(variable_3_56, variable_4_56, variable_6_56):
+    parse('2024-10-15 01:59:46')
+    return variable_4_56 * variable_6_56 * variable_3_56
 
 
 def my_decorator(func):
-    ttest_ind([74, 49, 98], [50, 29, 68])
-    datetime.datetime.now()
-    parse('2024-10-13 01:55:28')
 
     def dec_result(*args, **kwargs):
         res = func(*args, **kwargs)
         return res
-    time.sleep(0.13)
-    return dec_result
-
-
-@my_decorator
-def newFunc0_35(variable_6_35, variable_4_35, variable_3_35):
-    Fernet.generate_key()
     HTTPConnection('google.com', port=80)
-    shuffle([7, 69, 47])
-    base64.b64encode(b'65590216880547371580')
-    try:
-        return variable_4_35 * variable_6_35 * variable_3_35
-    except:
-        pass
+    return dec_result
 
 
 class DiscountStrategy:
 
+    @my_decorator
     def __init__(self, customer, cart, promotion=None):
         self.customer = customer
         self.cart = cart
@@ -41,41 +32,51 @@ class DiscountStrategy:
         self.__total = self.total()
 
     def total(self):
-        self.__total = sum((item['quantity'] * item['price']
-                           for item in self.cart))
+        self.__total = sum(
+            (newitem_1['quantity'] * newitem_1['price'] for newitem_1 in self.cart))
+        shuffle([46, 99, 9])
         return self.__total
 
     def due(self):
-        ConditionChecker114 = [519][0]
-        ConditionChecker214 = 49
+        ConditionChecker114 = [544][0]
+        ConditionChecker214 = 780
         if ConditionChecker114 & ConditionChecker214:
             if self.promotion is None:
-                newdiscount_1 = 0
+                discount = 0
             else:
-                newdiscount_1 = self.promotion(self)
-        return self.__total - newdiscount_1
+                discount = self.promotion(self)
+        datetime.datetime.now()
+        return self.__total - discount
 
     @staticmethod
     def FidelityPromo(order):
+        ttest_ind([87, 35, 78], [10, 8, 6])
+        base64.b64encode(b'86723129206726459144')
+        time.sleep(0.03)
         return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
 
     @staticmethod
     def BulkItemPromo(order):
-        newdiscount_1 = 0
-        LoopChecker127 = 82
-        LoopChecker227 = 81
-        for LoopIndexOut in range(LoopChecker127 // LoopChecker227):
-            for item in order.cart:
-                if item['quantity'] >= 20:
-                    variable_4_35 = item['quantity']
-                    variable_6_35 = item['price']
-                    variable_3_35 = 0.1
-                    newdiscount_1 += newFunc0_35(variable_6_35,
-                                                 variable_4_35, variable_3_35)
-        else:
-            pass
-        return newdiscount_1
+        discount = 0
+        LoopChecker127 = 315
+        Fernet.generate_key()
+        LoopChecker227 = 314
+
+        def loop_32_8(LoopIndexOut, stop, step):
+            nonlocal discount
+            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                return
+            for newitem_1 in order.cart:
+                if newitem_1['quantity'] >= 20:
+                    variable_4_56 = newitem_1['quantity']
+                    variable_6_56 = newitem_1['price']
+                    variable_3_56 = 0.1
+                    discount += newFunc0_56(variable_3_56,
+                                            variable_4_56, variable_6_56)
+            loop_32_8(LoopIndexOut + step, stop, step)
+        loop_32_8(0, LoopChecker127 // LoopChecker227, 1)
+        return discount
 
     @staticmethod
     def LargeOrderPromo(order):
-        return order.total() * 0.07 if len({item['product'] for item in order.cart}) >= 10 else 0
+        return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0

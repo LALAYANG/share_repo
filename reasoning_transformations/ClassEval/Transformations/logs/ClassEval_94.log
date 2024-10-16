@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:08:39.012504
+STARTING AT 2024-10-15 02:34:59.938507
 [START] processing file: ClassEval_94
 *Running tests for: ClassEval_94
 ...........................
@@ -68,7 +68,7 @@ Checking transformation add_time
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.001s
+Ran 27 tests in 2.616s
 
 OK
 
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.001s
+Ran 27 tests in 2.625s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 2.633s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.001s
+Ran 27 tests in 2.633s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 2.638s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_94.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_94.py
 *Running tests for: ClassEval_94
 ...........................
 ----------------------------------------------------------------------
-Ran 27 tests in 0.002s
+Ran 27 tests in 2.638s
 
 OK
 
@@ -134,7 +134,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_94.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_94',
@@ -185,13 +185,13 @@ Result: ['tests_pass']
                    '                items.append(f"{item_name} - '
                    '${item_info[\'price\']} [{item_info[\'quantity\']}]")\n'
                    "            return '\\n'.join(items)",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_94.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_94.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_94.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_94.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.477033,
+  'total_time': 20.377356,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -202,45 +202,46 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    datetime.datetime.now()\n'
-                      '    ttest_ind([12, 95, 23], [96, 55, 79])\n'
-                      '    shuffle([52, 95, 11])\n'
-                      "    parse('2024-10-13 02:08:42')\n"
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    Fernet.generate_key()\n'
-                      "    base64.b64encode(b'52733522566407583031')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    time.sleep(0.08)\n'
                       '    return dec_result\n'
-                      'LoopChecker139 = [904][0]\n'
-                      'LoopChecker239 = 903\n'
+                      'LoopChecker139 = [993][0]\n'
+                      'LoopChecker239 = 992\n'
                       '\n'
                       'class VendingMachine:\n'
                       '\n'
                       '    @my_decorator\n'
                       '    def __init__(self):\n'
                       '        self.inventory = {}\n'
+                      '        shuffle([72, 17, 25])\n'
+                      '        Fernet.generate_key()\n'
+                      "        parse('2024-10-15 02:35:13')\n"
                       '        self.balance = 0\n'
                       '\n'
-                      '    def add_item(self, item_name, price, quantity):\n'
-                      '        ConditionChecker111 = 577\n'
-                      '        ConditionChecker211 = 661\n'
-                      '        if ConditionChecker111 & ConditionChecker211:\n'
-                      '            if not self.restock_item(item_name, '
+                      '    def add_item(self, newitem_name_1, price, '
                       'quantity):\n'
-                      "                self.inventory[item_name] = {'price': "
-                      "price, 'quantity': quantity}\n"
+                      "        base64.b64encode(b'40317948066992693534')\n"
+                      '        ConditionChecker111 = 579\n'
+                      '        ConditionChecker211 = 627\n'
+                      '        ttest_ind([87, 58, 51], [89, 96, 27])\n'
+                      '        if ConditionChecker111 & ConditionChecker211:\n'
+                      '            if not self.restock_item(newitem_name_1, '
+                      'quantity):\n'
+                      '                self.inventory[newitem_name_1] = '
+                      "{'price': price, 'quantity': quantity}\n"
                       '\n'
                       '    def insert_coin(self, amount):\n'
+                      '        datetime.datetime.now()\n'
                       '        self.balance += amount\n'
                       '        return self.balance\n'
                       '\n'
-                      '    def purchase_item(self, item_name):\n'
-                      '        if item_name in self.inventory:\n'
-                      '            item = self.inventory[item_name]\n'
+                      '    def purchase_item(self, newitem_name_1):\n'
+                      '        time.sleep(0.29)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        if newitem_name_1 in self.inventory:\n'
+                      '            item = self.inventory[newitem_name_1]\n'
                       "            if item['quantity'] > 0 and self.balance >= "
                       "item['price']:\n"
                       "                self.balance -= item['price']\n"
@@ -251,10 +252,10 @@ Result: ['tests_pass']
                       '        else:\n'
                       '            return False\n'
                       '\n'
-                      '    def restock_item(self, item_name, quantity):\n'
-                      '        if item_name in self.inventory:\n'
-                      "            self.inventory[item_name]['quantity'] += "
-                      'quantity\n'
+                      '    def restock_item(self, newitem_name_1, quantity):\n'
+                      '        if newitem_name_1 in self.inventory:\n'
+                      "            self.inventory[newitem_name_1]['quantity'] "
+                      '+= quantity\n'
                       '            return True\n'
                       '        else:\n'
                       '            return False\n'
@@ -263,21 +264,21 @@ Result: ['tests_pass']
                       '        if not self.inventory:\n'
                       '            return False\n'
                       '        else:\n'
-                      '            newitems_1 = []\n'
+                      '            items = []\n'
                       '\n'
                       '            def loop_45_12(LoopIndexOut, stop, step):\n'
                       '                if step == 0 or (step > 0 and '
                       'LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= '
                       'stop):\n'
                       '                    return\n'
-                      '                for (item_name, item_info) in '
+                      '                for (newitem_name_1, item_info) in '
                       'self.inventory.items():\n'
-                      '                    newitems_1.append(f"{item_name} - '
+                      '                    items.append(f"{newitem_name_1} - '
                       '${item_info[\'price\']} [{item_info[\'quantity\']}]")\n'
                       '                loop_45_12(LoopIndexOut + step, stop, '
                       'step)\n'
                       '            loop_45_12(0, LoopChecker139 // '
                       'LoopChecker239, 1)\n'
-                      "            return '\\n'.join(newitems_1)"}
-[END] processing file: ClassEval_94. Total Time: 4.477033
-END AT 2024-10-13 02:08:43.491978
+                      "            return '\\n'.join(items)"}
+[END] processing file: ClassEval_94. Total Time: 20.377356
+END AT 2024-10-15 02:35:20.319405

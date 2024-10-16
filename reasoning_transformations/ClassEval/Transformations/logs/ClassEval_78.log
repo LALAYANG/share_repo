@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 02:06:17.430167
+STARTING AT 2024-10-15 02:15:13.460382
 [START] processing file: ClassEval_78
 *Running tests for: ClassEval_78
 ................
@@ -39,7 +39,7 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_78
-  File "/home/yang/Benchmark/tmp_test.py", line 23
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 23
     nonlocal count, newmax_count_1
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: no binding for nonlocal 'count' found
@@ -77,7 +77,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_78
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 0.003s
 
 OK
 
@@ -86,7 +86,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_78
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 16 tests in 0.016s
 
 OK
 
@@ -95,7 +95,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_78
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 0.017s
 
 OK
 
@@ -104,17 +104,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_78
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 0.015s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_78.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_78.py
 *Running tests for: ClassEval_78
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.002s
+Ran 16 tests in 0.017s
 
 OK
 
@@ -133,7 +133,7 @@ Result: ['tests_pass']
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_78.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_78',
@@ -162,13 +162,13 @@ Result: ['tests_pass']
                    '            if count > max_count:\n'
                    '                max_count = count\n'
                    '        return max_count',
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_78.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_78.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_78.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_78.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.475278,
+  'total_time': 6.066865,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
@@ -179,18 +179,12 @@ Result: ['tests_pass']
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      "    base64.b64encode(b'35352281374003977868')\n"
-                      "    parse('2024-10-13 02:06:20')\n"
-                      '    shuffle([42, 4, 16])\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.28)\n'
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      "    HTTPConnection('google.com', port=80)\n"
-                      '    time.sleep(0.16)\n'
-                      '    ttest_ind([87, 62, 100], [82, 53, 8])\n'
-                      '    datetime.datetime.now()\n'
-                      '    Fernet.generate_key()\n'
                       '    return dec_result\n'
                       'import re\n'
                       '\n'
@@ -201,11 +195,14 @@ Result: ['tests_pass']
                       '        sentences = '
                       "re.split('(?<!\\\\w\\\\.\\\\w.)(?<![A-Z][a-z]\\\\.)(?<=\\\\.|\\\\?)\\\\s', "
                       'sentences_string)\n'
+                      "        HTTPConnection('google.com', port=80)\n"
+                      '        shuffle([98, 5, 14])\n'
                       '        return sentences\n'
                       '\n'
                       '    def count_words(self, sentence):\n'
                       "        sentence = re.sub('[^a-zA-Z\\\\s]', '', "
                       'sentence)\n'
+                      "        base64.b64encode(b'14610593935627885269')\n"
                       '        words = sentence.split()\n'
                       '        return len(words)\n'
                       '\n'
@@ -213,10 +210,12 @@ Result: ['tests_pass']
                       '        sentences = '
                       'self.split_sentences(sentences_string)\n'
                       '        newmax_count_1 = [0][0]\n'
-                      '        LoopChecker117 = 689\n'
-                      '        LoopChecker217 = 688\n'
-                      '        ConditionChecker122 = 852\n'
-                      '        ConditionChecker222 = 597\n'
+                      "        parse('2024-10-15 02:15:17')\n"
+                      '        LoopChecker117 = 512\n'
+                      '        ttest_ind([63, 56, 41], [77, 72, 28])\n'
+                      '        LoopChecker217 = 511\n'
+                      '        ConditionChecker122 = 986\n'
+                      '        ConditionChecker222 = 93\n'
                       '        for LoopIndexOut in range(LoopChecker117 // '
                       'LoopChecker217):\n'
                       '            for sentence in sentences:\n'
@@ -227,6 +226,7 @@ Result: ['tests_pass']
                       '                        newmax_count_1 = count\n'
                       '        else:\n'
                       '            pass\n'
+                      '        Fernet.generate_key()\n'
                       '        return newmax_count_1'}
-[END] processing file: ClassEval_78. Total Time: 4.475278
-END AT 2024-10-13 02:06:21.908143
+[END] processing file: ClassEval_78. Total Time: 6.066865
+END AT 2024-10-15 02:15:19.528869

@@ -1,5 +1,5 @@
---- /home/yang/Benchmark/dataset/classeval/code//ClassEval_91.py	2024-10-13 02:08:14.781797890 -0500
-+++ reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_91.py	2024-10-13 02:08:19.324749557 -0500
+--- /home/yang/Benchmark/dataset/classeval/code//ClassEval_91.py	2024-10-15 02:34:28.009644067 -0500
++++ reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_91.py	2024-10-15 02:34:35.587564929 -0500
 @@ -1,28 +1,63 @@
  import urllib.parse
 +from dateutil.parser import parse
@@ -17,14 +17,8 @@
 +    def dec_result(*args, **kwargs):
 +        res = func(*args, **kwargs)
 +        return res
-+    base64.b64encode(b'02260633422190285106')
-+    Fernet.generate_key()
-+    ttest_ind([17, 28, 51], [81, 38, 60])
-+    shuffle([56, 52, 15])
-+    time.sleep(0.25)
-+    HTTPConnection('google.com', port=80)
 +    datetime.datetime.now()
-+    parse('2024-10-13 02:08:18')
++    base64.b64encode(b'79611783301858090681')
 +    return dec_result
 +
  
@@ -33,34 +27,38 @@
 +    @my_decorator
      def __init__(self):
 -        self.segments = []
++        shuffle([67, 87, 76])
 +        self.segments = [[]][0]
          self.with_end_tag = False
  
      def add(self, segment):
          self.segments.append(self.fix_path(segment))
  
-     def parse(self, path, charset):
+-    def parse(self, path, charset):
 -        if path:
 -            if path.endswith('/'):
 -                self.with_end_tag = True
 -            path = self.fix_path(path)
-+        ConditionChecker113 = 385
-+        ConditionChecker213 = 645
-+        if ConditionChecker113 & ConditionChecker213:
-             if path:
+-            if path:
 -                split = path.split('/')
 -                for seg in split:
 -                    decoded_seg = urllib.parse.unquote(seg, encoding=charset)
 -                    self.segments.append(decoded_seg)
-+                if path.endswith('/'):
++    def parse(self, newpath_1, charset):
++        ConditionChecker113 = 474
++        HTTPConnection('google.com', port=80)
++        ConditionChecker213 = 461
++        if ConditionChecker113 & ConditionChecker213:
++            if newpath_1:
++                if newpath_1.endswith('/'):
 +                    self.with_end_tag = True
-+                path = self.fix_path(path)
-+                if path:
-+                    newsplit_1 = path.split('/')
-+                    LoopChecker119 = 488
-+                    LoopChecker219 = 487
++                newpath_1 = self.fix_path(newpath_1)
++                if newpath_1:
++                    split = newpath_1.split('/')
++                    LoopChecker119 = 531
++                    LoopChecker219 = 530
 +                    for LoopIndexOut in range(LoopChecker119 // LoopChecker219):
-+                        for seg in newsplit_1:
++                        for seg in split:
 +                            decoded_seg = urllib.parse.unquote(
 +                                seg, encoding=charset)
 +                            self.segments.append(decoded_seg)
@@ -68,10 +66,17 @@
 +                        pass
  
      @staticmethod
-     def fix_path(path):
-         if not path:
+-    def fix_path(path):
+-        if not path:
++    def fix_path(newpath_1):
++        Fernet.generate_key()
++        if not newpath_1:
              return ''
-         segment_str = path.strip('/')
+-        segment_str = path.strip('/')
 -        return segment_str
 \ No newline at end of file
++        segment_str = newpath_1.strip('/')
++        parse('2024-10-15 02:34:34')
++        ttest_ind([96, 39, 91], [71, 42, 27])
++        time.sleep(0.03)
 +        return segment_str

@@ -1,4 +1,4 @@
-STARTING AT 2024-10-13 01:55:25.443775
+STARTING AT 2024-10-15 01:59:41.460792
 [START] processing file: ClassEval_33
 *Running tests for: ClassEval_33
 ..........................
@@ -28,15 +28,6 @@ Ran 26 tests in 0.001s
 OK
 
 Result: ['tests_pass']
-Checking transformation create_functions
-*Running tests for: ClassEval_33
-..........................
-----------------------------------------------------------------------
-Ran 26 tests in 0.001s
-
-OK
-
-Result: ['tests_pass']
 Checking transformation add_nested_list
 *Running tests for: ClassEval_33
 ..........................
@@ -48,13 +39,13 @@ OK
 Result: ['tests_pass']
 Checking transformation transform_range_to_recursion
 *Running tests for: ClassEval_33
-  File "/home/yang/Benchmark/tmp_test.py", line 40
-    nonlocal variable_4_35, variable_3_35, newdiscount_1, variable_6_35
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: no binding for nonlocal 'variable_4_35' found
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
 
-Result: ['error_or_timeout']
-Drop transform_range_to_recursion due to ['error_or_timeout']
+OK
+
+Result: ['tests_pass']
 Checking transformation add_decorator
 *Running tests for: ClassEval_33
 ..........................
@@ -71,21 +62,21 @@ F.....EEEEEE..EEE.EE.FFFFF
 ERROR: test_due_1 (__main__.DiscountStrategyTestDue)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 118, in test_due_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 113, in test_due_1
     actual_due = order.due()
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in due
-    return self.__total - newdiscount_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 31, in due
+    return self.__total - discount
 TypeError: unsupported operand type(s) for -: 'generator' and 'int'
 
 ======================================================================
 ERROR: test_due_2 (__main__.DiscountStrategyTestDue)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 127, in test_due_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 122, in test_due_2
     actual_due = order.due()
-  File "/home/yang/Benchmark/tmp_test.py", line 36, in due
-    newdiscount_1 = self.promotion(self)
-  File "/home/yang/Benchmark/tmp_test.py", line 41, in FidelityPromo
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 30, in due
+    discount = self.promotion(self)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 35, in FidelityPromo
     return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
@@ -93,41 +84,41 @@ TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 ERROR: test_due_3 (__main__.DiscountStrategyTestDue)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 136, in test_due_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 131, in test_due_3
     actual_due = order.due()
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in due
-    return self.__total - newdiscount_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 31, in due
+    return self.__total - discount
 TypeError: unsupported operand type(s) for -: 'generator' and 'float'
 
 ======================================================================
 ERROR: test_due_4 (__main__.DiscountStrategyTestDue)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 144, in test_due_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 139, in test_due_4
     actual_due = order.due()
-  File "/home/yang/Benchmark/tmp_test.py", line 36, in due
-    newdiscount_1 = self.promotion(self)
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in LargeOrderPromo
-    return order.total() * 0.07 if len({item['product'] for item in order.cart}) >= 10 else 0
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 30, in due
+    discount = self.promotion(self)
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 56, in LargeOrderPromo
+    return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
 ======================================================================
 ERROR: test_due_5 (__main__.DiscountStrategyTestDue)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 153, in test_due_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 148, in test_due_5
     actual_due = order.due()
-  File "/home/yang/Benchmark/tmp_test.py", line 37, in due
-    return self.__total - newdiscount_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 31, in due
+    return self.__total - discount
 TypeError: unsupported operand type(s) for -: 'generator' and 'int'
 
 ======================================================================
 ERROR: test_fidelity_promo_1 (__main__.DiscountStrategyTestFidelityPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 164, in test_fidelity_promo_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 159, in test_fidelity_promo_1
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 41, in FidelityPromo
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 35, in FidelityPromo
     return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
@@ -135,9 +126,9 @@ TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 ERROR: test_fidelity_promo_4 (__main__.DiscountStrategyTestFidelityPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 191, in test_fidelity_promo_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 186, in test_fidelity_promo_4
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 41, in FidelityPromo
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 35, in FidelityPromo
     return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
@@ -145,9 +136,9 @@ TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 ERROR: test_fidelity_promo_5 (__main__.DiscountStrategyTestFidelityPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 200, in test_fidelity_promo_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 195, in test_fidelity_promo_5
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 41, in FidelityPromo
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 35, in FidelityPromo
     return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
@@ -155,79 +146,79 @@ TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 ERROR: test_large_order_promo_1 (__main__.DiscountStrategyTestLargeOrderPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 257, in test_large_order_promo_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 252, in test_large_order_promo_1
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in LargeOrderPromo
-    return order.total() * 0.07 if len({item['product'] for item in order.cart}) >= 10 else 0
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 56, in LargeOrderPromo
+    return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
 ======================================================================
 ERROR: test_large_order_promo_3 (__main__.DiscountStrategyTestLargeOrderPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 273, in test_large_order_promo_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 268, in test_large_order_promo_3
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in LargeOrderPromo
-    return order.total() * 0.07 if len({item['product'] for item in order.cart}) >= 10 else 0
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 56, in LargeOrderPromo
+    return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
 ======================================================================
 ERROR: test_large_order_promo_4 (__main__.DiscountStrategyTestLargeOrderPromo)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 281, in test_large_order_promo_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 276, in test_large_order_promo_4
     actual_discount = order.promotion(order)
-  File "/home/yang/Benchmark/tmp_test.py", line 61, in LargeOrderPromo
-    return order.total() * 0.07 if len({item['product'] for item in order.cart}) >= 10 else 0
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 56, in LargeOrderPromo
+    return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0
 TypeError: unsupported operand type(s) for *: 'generator' and 'float'
 
 ======================================================================
 FAIL: test_DiscountStrategy (__main__.DiscountStrategyTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 301, in test_DiscountStrategy
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 296, in test_DiscountStrategy
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x71444633aff0> != 250.0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cba72f80> != 250.0
 
 ======================================================================
 FAIL: test_total_1 (__main__.DiscountStrategyTestTotal)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 73, in test_total_1
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 68, in test_total_1
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x714445f7d930> != 250.0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cbaf9af0> != 250.0
 
 ======================================================================
 FAIL: test_total_2 (__main__.DiscountStrategyTestTotal)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 82, in test_total_2
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 77, in test_total_2
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x714445f7d930> != 150.0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cbaf9af0> != 150.0
 
 ======================================================================
 FAIL: test_total_3 (__main__.DiscountStrategyTestTotal)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 91, in test_total_3
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 86, in test_total_3
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x714445f7d930> != 2050.0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cbaf9af0> != 2050.0
 
 ======================================================================
 FAIL: test_total_4 (__main__.DiscountStrategyTestTotal)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 100, in test_total_4
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 95, in test_total_4
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x714445f7d930> != 70.0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cbaf9af0> != 70.0
 
 ======================================================================
 FAIL: test_total_5 (__main__.DiscountStrategyTestTotal)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/yang/Benchmark/tmp_test.py", line 108, in test_total_5
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.py", line 103, in test_total_5
     self.assertEqual(actual_total, expected_total)
-AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x714445f7d930> != 0
+AssertionError: <generator object DiscountStrategy.total.<locals>.<genexpr> at 0x7ff2cbaf9af0> != 0
 
 ----------------------------------------------------------------------
 Ran 26 tests in 0.002s
@@ -249,7 +240,16 @@ Checking transformation add_time
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.001s
+Ran 26 tests in 0.246s
+
+OK
+
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: ClassEval_33
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.264s
 
 OK
 
@@ -258,7 +258,7 @@ Checking transformation add_http
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.006s
+Ran 26 tests in 0.259s
 
 OK
 
@@ -267,7 +267,7 @@ Checking transformation add_scipy
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.007s
+Ran 26 tests in 0.276s
 
 OK
 
@@ -276,7 +276,7 @@ Checking transformation add_base64
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.007s
+Ran 26 tests in 0.271s
 
 OK
 
@@ -285,17 +285,17 @@ Checking transformation add_dateutil
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.009s
+Ran 26 tests in 0.275s
 
 OK
 
 Result: ['tests_pass']
-The file 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_33.py' has been formatted successfully.
-Checking reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_33.py
+The file 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_33.py' has been formatted successfully.
+Checking reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_33.py
 *Running tests for: ClassEval_33
 ..........................
 ----------------------------------------------------------------------
-Ran 26 tests in 0.008s
+Ran 26 tests in 0.265s
 
 OK
 
@@ -303,20 +303,20 @@ Result: ['tests_pass']
 { 'applicable_rules': [ 'change_var_names',
                         'add_nested_for_out',
                         'add_nested_if',
-                        'create_functions',
-                        'add_try_except_inside_functions',
                         'add_else_to_for',
                         'add_nested_list',
+                        'transform_range_to_recursion',
                         'add_decorator',
                         'add_datetime',
                         'add_time',
                         'add_crypto',
                         'add_sklearn',
+                        'create_functions',
                         'add_http',
                         'add_scipy',
                         'add_base64',
                         'add_dateutil'],
-  'diff_output': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_33.patch',
+  'diff_output': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_33.patch',
   'evaluation_tests_dir': '/home/yang/Benchmark/dataset/classeval/',
   'exception': None,
   'file_id': 'ClassEval_33',
@@ -359,48 +359,39 @@ Result: ['tests_pass']
                    '    def LargeOrderPromo(order):\n'
                    '        return order.total() * 0.07 if '
                    "len({item['product'] for item in order.cart}) >= 10 else 0",
-  'patch_path': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_33.patch',
+  'patch_path': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_33.patch',
   'single_rule': None,
   'source_file': '/home/yang/Benchmark/dataset/classeval/code//ClassEval_33.py',
-  'target_file': 'reasoning_transformation/ClassEval/16f2cf44d2a3ae4989e322b7529f0a8dce9b4d54/Transformation/ClassEval_33.py',
+  'target_file': 'reasoning_transformation_classeval/ClassEval/3ad1e93cfed65451f71dd1d0768a262e7e4afa36/Transformation/ClassEval_33.py',
   'test_results_after': ['tests_pass'],
   'test_results_before': ['tests_pass'],
-  'total_time': 4.924892,
+  'total_time': 7.353007,
   'transformed_code': 'from dateutil.parser import parse\n'
                       'import base64\n'
                       'from scipy.stats import ttest_ind\n'
                       'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def newFunc0_56(variable_3_56, variable_4_56, '
+                      'variable_6_56):\n'
+                      "    parse('2024-10-15 01:59:46')\n"
+                      '    return variable_4_56 * variable_6_56 * '
+                      'variable_3_56\n'
                       'from sklearn.utils import shuffle\n'
                       'from cryptography.fernet import Fernet\n'
                       'import time\n'
                       'import datetime\n'
                       '\n'
                       'def my_decorator(func):\n'
-                      '    ttest_ind([74, 49, 98], [50, 29, 68])\n'
-                      '    datetime.datetime.now()\n'
-                      "    parse('2024-10-13 01:55:28')\n"
                       '\n'
                       '    def dec_result(*args, **kwargs):\n'
                       '        res = func(*args, **kwargs)\n'
                       '        return res\n'
-                      '    time.sleep(0.13)\n'
-                      '    return dec_result\n'
-                      '\n'
-                      '@my_decorator\n'
-                      'def newFunc0_35(variable_6_35, variable_4_35, '
-                      'variable_3_35):\n'
-                      '    Fernet.generate_key()\n'
                       "    HTTPConnection('google.com', port=80)\n"
-                      '    shuffle([7, 69, 47])\n'
-                      "    base64.b64encode(b'65590216880547371580')\n"
-                      '    try:\n'
-                      '        return variable_4_35 * variable_6_35 * '
-                      'variable_3_35\n'
-                      '    except:\n'
-                      '        pass\n'
+                      '    return dec_result\n'
                       '\n'
                       'class DiscountStrategy:\n'
                       '\n'
+                      '    @my_decorator\n'
                       '    def __init__(self, customer, cart, '
                       'promotion=None):\n'
                       '        self.customer = customer\n'
@@ -409,48 +400,60 @@ Result: ['tests_pass']
                       '        self.__total = self.total()\n'
                       '\n'
                       '    def total(self):\n'
-                      "        self.__total = sum((item['quantity'] * "
-                      "item['price'] for item in self.cart))\n"
+                      "        self.__total = sum((newitem_1['quantity'] * "
+                      "newitem_1['price'] for newitem_1 in self.cart))\n"
+                      '        shuffle([46, 99, 9])\n'
                       '        return self.__total\n'
                       '\n'
                       '    def due(self):\n'
-                      '        ConditionChecker114 = [519][0]\n'
-                      '        ConditionChecker214 = 49\n'
+                      '        ConditionChecker114 = [544][0]\n'
+                      '        ConditionChecker214 = 780\n'
                       '        if ConditionChecker114 & ConditionChecker214:\n'
                       '            if self.promotion is None:\n'
-                      '                newdiscount_1 = 0\n'
+                      '                discount = 0\n'
                       '            else:\n'
-                      '                newdiscount_1 = self.promotion(self)\n'
-                      '        return self.__total - newdiscount_1\n'
+                      '                discount = self.promotion(self)\n'
+                      '        datetime.datetime.now()\n'
+                      '        return self.__total - discount\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def FidelityPromo(order):\n'
+                      '        ttest_ind([87, 35, 78], [10, 8, 6])\n'
+                      "        base64.b64encode(b'86723129206726459144')\n"
+                      '        time.sleep(0.03)\n'
                       '        return order.total() * 0.05 if '
                       "order.customer['fidelity'] >= 1000 else 0\n"
                       '\n'
                       '    @staticmethod\n'
                       '    def BulkItemPromo(order):\n'
-                      '        newdiscount_1 = 0\n'
-                      '        LoopChecker127 = 82\n'
-                      '        LoopChecker227 = 81\n'
-                      '        for LoopIndexOut in range(LoopChecker127 // '
-                      'LoopChecker227):\n'
-                      '            for item in order.cart:\n'
-                      "                if item['quantity'] >= 20:\n"
-                      "                    variable_4_35 = item['quantity']\n"
-                      "                    variable_6_35 = item['price']\n"
-                      '                    variable_3_35 = 0.1\n'
-                      '                    newdiscount_1 += '
-                      'newFunc0_35(variable_6_35, variable_4_35, '
-                      'variable_3_35)\n'
-                      '        else:\n'
-                      '            pass\n'
-                      '        return newdiscount_1\n'
+                      '        discount = 0\n'
+                      '        LoopChecker127 = 315\n'
+                      '        Fernet.generate_key()\n'
+                      '        LoopChecker227 = 314\n'
+                      '\n'
+                      '        def loop_32_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal discount\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for newitem_1 in order.cart:\n'
+                      "                if newitem_1['quantity'] >= 20:\n"
+                      '                    variable_4_56 = '
+                      "newitem_1['quantity']\n"
+                      "                    variable_6_56 = newitem_1['price']\n"
+                      '                    variable_3_56 = 0.1\n'
+                      '                    discount += '
+                      'newFunc0_56(variable_3_56, variable_4_56, '
+                      'variable_6_56)\n'
+                      '            loop_32_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_32_8(0, LoopChecker127 // LoopChecker227, '
+                      '1)\n'
+                      '        return discount\n'
                       '\n'
                       '    @staticmethod\n'
                       '    def LargeOrderPromo(order):\n'
                       '        return order.total() * 0.07 if '
-                      "len({item['product'] for item in order.cart}) >= 10 "
-                      'else 0'}
-[END] processing file: ClassEval_33. Total Time: 4.924892
-END AT 2024-10-13 01:55:30.372001
+                      "len({newitem_1['product'] for newitem_1 in order.cart}) "
+                      '>= 10 else 0'}
+[END] processing file: ClassEval_33. Total Time: 7.353007
+END AT 2024-10-15 01:59:48.815868
