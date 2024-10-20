@@ -1,0 +1,54 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_739.py	2024-10-19 23:45:09.134523857 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/464e9e956c111b2d9fa4116e6d9f690ffe444235/Transformation/sample_739.py	2024-10-19 23:45:14.989465288 -0500
+@@ -1,6 +1,45 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++    base64.b64encode(b'73795415400957104190')
++    ttest_ind([71, 83, 83], [100, 9, 98])
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def newFunc_BinOp0(a, b):
++    parse('2024-10-19 23:45:14')
++    return a // b
++
++
+ def f(st, pattern):
+-    for p in pattern:
+-        if not st.startswith(p):
+-            return False
+-        st = st[len(p):]
+-    return True
+\ No newline at end of file
++    Fernet.generate_key()
++    HTTPConnection('google.com', port=80)
++    datetime.datetime.now()
++    shuffle([81, 35, 91])
++    time.sleep(0.24)
++    try:
++        LoopChecker12 = [423][0]
++        LoopChecker22 = 422
++        for LoopIndexOut in range(newFunc_BinOp0(LoopChecker12, LoopChecker22)):
++            for newp_1 in pattern:
++                if not st.startswith(newp_1):
++                    return False
++                st = st[len(newp_1):]
++        else:
++            pass
++        return True
++    except:
++        pass
