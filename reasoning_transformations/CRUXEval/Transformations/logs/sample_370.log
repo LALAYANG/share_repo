@@ -1,0 +1,147 @@
+STARTING AT 2024-10-19 22:24:31.022609
+[START] processing file: sample_370
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+tests_pass sample_370 /home/yang/Benchmark/dataset/cruxeval/code//sample_370.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_370
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_370", line 20, in <module>
+    assert f('     i') == False
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_370", line 20, in <module>\n    assert f(\'     i\') == False\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_370.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_370.py
+*Running tests for: sample_370
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_370.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_370',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text):\n'
+                   '    for char in text:\n'
+                   '        if not char.isspace():\n'
+                   '            return False\n'
+                   '    return True',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_370.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_370.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_370.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.853906,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    base64.b64encode(b'30667545633843776004')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([10, 86, 30], [15, 10, 72])\n'
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(text):\n'
+                      "    parse('2024-10-19 22:24:35')\n"
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([77, 71, 33])\n'
+                      '    time.sleep(0.15)\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        LoopChecker12 = [846][0]\n'
+                      '        LoopChecker22 = 845\n'
+                      '        ConditionChecker16 = 944\n'
+                      '        ConditionChecker26 = 968\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker12, LoopChecker22)):\n'
+                      '            for newchar_1 in text:\n'
+                      '                if ConditionChecker16 & '
+                      'ConditionChecker26:\n'
+                      '                    if not newchar_1.isspace():\n'
+                      '                        return False\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return True\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_370. Total Time: 5.853906
+END AT 2024-10-19 22:24:36.877608

@@ -1,0 +1,101 @@
+STARTING AT 2024-10-19 22:08:57.838613
+[START] processing file: sample_239
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+tests_pass sample_239 /home/yang/Benchmark/dataset/cruxeval/code//sample_239.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_239.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_239.py
+*Running tests for: sample_239
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_239.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_239',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text, froms):\n'
+                   '    text = text.lstrip(froms)\n'
+                   '    text = text.rstrip(froms)\n'
+                   '    return text',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_239.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_239.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_239.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 3.904762,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(newtext_1, froms):\n'
+                      '    time.sleep(0.01)\n'
+                      "    parse('2024-10-19 22:09:00')\n"
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'68349038745554833036')\n"
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([60, 11, 13], [24, 2, 37])\n'
+                      '    shuffle([92, 27, 84])\n'
+                      '    try:\n'
+                      '        newtext_1 = newtext_1.lstrip(froms)\n'
+                      '        newtext_1 = newtext_1.rstrip(froms)\n'
+                      '        return newtext_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_239. Total Time: 3.904762
+END AT 2024-10-19 22:09:01.745248

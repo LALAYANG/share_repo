@@ -1,0 +1,59 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_167.py	2024-10-19 22:00:18.336631790 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_167.py	2024-10-19 22:00:24.069572527 -0500
+@@ -1,8 +1,48 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++    parse('2024-10-19 22:00:23')
++    base64.b64encode(b'83548450630333359541')
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def newFunc0_23(s, count):
++    ttest_ind([76, 94, 56], [36, 27, 18])
++    return count * s.title()
++
++
+ def f(XAAXX, s):
+-    count = 0
+-    idx = -1
+-    while XAAXX.find('XXXX', idx + 1) != -1:
+-        idx = XAAXX.find('XXXX', idx + 1)
+-        count += 1
+-    compound = count * s.title()
+-    return XAAXX.replace('XXXX', compound)
+\ No newline at end of file
++    Fernet.generate_key()
++    HTTPConnection('google.com', port=80)
++    time.sleep(0.25)
++    datetime.datetime.now()
++    shuffle([15, 76, 31])
++    try:
++        count = [0][0]
++        newidx_1 = -1
++        whileloopchecker14 = 697
++        whileloopchecker24 = 696
++        while whileloopchecker14 % whileloopchecker24 == 1:
++            whileloopchecker14 = whileloopchecker14 + 1
++            while XAAXX.find('XXXX', newidx_1 + 1) != -1:
++                newidx_1 = XAAXX.find('XXXX', newidx_1 + 1)
++                count += 1
++        else:
++            pass
++        compound = newFunc0_23(s, count)
++        return XAAXX.replace('XXXX', compound)
++    except:
++        pass

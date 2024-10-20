@@ -1,0 +1,107 @@
+STARTING AT 2024-10-19 22:18:06.894603
+[START] processing file: sample_316
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+tests_pass sample_316 /home/yang/Benchmark/dataset/cruxeval/code//sample_316.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+def newFunc_8071(arg0, arg1):
+    return arg0 + arg1
+Checking transformation create_functions
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_316.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_316.py
+*Running tests for: sample_316
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_316.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_316',
+  'genetic_algorithm': None,
+  'original_code': 'def f(name):\n'
+                   "    return '| ' + ' '.join(name.split(' ')) + ' |'",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_316.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_316.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_316.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.429289,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'84119637368006742533')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_8071(arg0, arg1):\n'
+                      "    parse('2024-10-19 22:18:10')\n"
+                      '    return arg0 + arg1\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(name):\n'
+                      '    time.sleep(0.15)\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([94, 9, 81], [82, 37, 38])\n'
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([39, 79, 96])\n'
+                      '    try:\n'
+                      "        return newFunc_8071('| ' + ' "
+                      "'.join(name.split(' ')), ' |')\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_316. Total Time: 5.429289
+END AT 2024-10-19 22:18:12.325720

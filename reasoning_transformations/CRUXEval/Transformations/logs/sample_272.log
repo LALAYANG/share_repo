@@ -1,0 +1,141 @@
+STARTING AT 2024-10-19 22:12:57.927702
+[START] processing file: sample_272
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+tests_pass sample_272 /home/yang/Benchmark/dataset/cruxeval/code//sample_272.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_272.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_272.py
+*Running tests for: sample_272
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_272.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_272',
+  'genetic_algorithm': None,
+  'original_code': 'def f(base_list, nums):\n'
+                   '    base_list.extend(nums)\n'
+                   '    res = base_list.copy()\n'
+                   '    for i in range(-len(nums), 0):\n'
+                   '        res.append(res[i])\n'
+                   '    return res',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_272.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_272.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_272.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.76358,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([11, 58, 62], [81, 80, 13])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(base_list, nums):\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'95356171441910798595')\n"
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([15, 14, 56])\n'
+                      "    parse('2024-10-19 22:13:02')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.25)\n'
+                      '    try:\n'
+                      '        base_list.extend(nums)\n'
+                      '        newres_1 = base_list.copy()\n'
+                      '        LoopChecker14 = [367][0]\n'
+                      '        LoopChecker24 = 366\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker14, LoopChecker24)):\n'
+                      '\n'
+                      '            def loop_8_12(i, stop, step):\n'
+                      '                if step == 0 or (step > 0 and i >= '
+                      'stop) or (step < 0 and i <= stop):\n'
+                      '                    return\n'
+                      '                newres_1.append(newres_1[i])\n'
+                      '                loop_8_12(i + step, stop, step)\n'
+                      '            loop_8_12(-len(nums), 0, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return newres_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_272. Total Time: 6.76358
+END AT 2024-10-19 22:13:04.693607

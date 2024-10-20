@@ -1,0 +1,45 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_197.py	2024-10-19 22:03:50.133447639 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_197.py	2024-10-19 22:03:54.342404330 -0500
+@@ -1,4 +1,38 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def newFunc0_12(temp, timeLimit):
++    HTTPConnection('google.com', port=80)
++    parse('2024-10-19 22:03:53')
++    return timeLimit // temp
++
++
+ def f(temp, timeLimit):
+-    s = timeLimit // temp
+-    e = timeLimit % temp
+-    return [f'{e} oC', f'{s} {e}'][s > 1]
+\ No newline at end of file
++    time.sleep(0.09)
++    datetime.datetime.now()
++    Fernet.generate_key()
++    shuffle([83, 72, 59])
++    ttest_ind([53, 52, 66], [30, 5, 11])
++    base64.b64encode(b'42812665682148742288')
++    try:
++        s = newFunc0_12(temp, timeLimit)
++        newe_1 = timeLimit % temp
++        return [f'{newe_1} oC', f'{s} {newe_1}'][s > 1]
++    except:
++        pass

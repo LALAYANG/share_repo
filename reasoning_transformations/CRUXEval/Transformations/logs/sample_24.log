@@ -1,0 +1,96 @@
+STARTING AT 2024-10-19 22:10:14.881250
+[START] processing file: sample_24
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+tests_pass sample_24 /home/yang/Benchmark/dataset/cruxeval/code//sample_24.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_24.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_24.py
+*Running tests for: sample_24
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_24.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_24',
+  'genetic_algorithm': None,
+  'original_code': 'def f(nums, i):\n    nums.pop(i)\n    return nums',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_24.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_24.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_24.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.480282,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([91, 64, 10], [68, 22, 84])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(nums, i):\n'
+                      '    shuffle([98, 92, 53])\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-19 22:10:17')\n"
+                      '    datetime.datetime.now()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'43858130980097284040')\n"
+                      '    time.sleep(0.06)\n'
+                      '    try:\n'
+                      '        nums.pop(i)\n'
+                      '        return nums\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_24. Total Time: 4.480282
+END AT 2024-10-19 22:10:19.362693

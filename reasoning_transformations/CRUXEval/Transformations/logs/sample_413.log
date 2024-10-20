@@ -1,0 +1,95 @@
+STARTING AT 2024-10-19 22:29:37.135070
+[START] processing file: sample_413
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+tests_pass sample_413 /home/yang/Benchmark/dataset/cruxeval/code//sample_413.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_413.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_413.py
+*Running tests for: sample_413
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_413.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_413',
+  'genetic_algorithm': None,
+  'original_code': "def f(s):\n    return '{}{}{}'.format(s[3:], s[2], s[5:8])",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_413.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_413.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_413.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.151941,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-19 22:29:40')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(s):\n'
+                      '    ttest_ind([23, 32, 13], [86, 43, 71])\n'
+                      '    shuffle([20, 7, 39])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.18)\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'49162865461481172107')\n"
+                      '    try:\n'
+                      "        return '{}{}{}'.format(s[3:], s[2], s[5:8])\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_413. Total Time: 5.151941
+END AT 2024-10-19 22:29:42.289052

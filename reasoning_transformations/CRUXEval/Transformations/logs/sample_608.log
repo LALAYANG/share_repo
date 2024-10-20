@@ -1,0 +1,97 @@
+STARTING AT 2024-10-19 22:50:21.392062
+[START] processing file: sample_608
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+tests_pass sample_608 /home/yang/Benchmark/dataset/cruxeval/code//sample_608.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_608.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_608.py
+*Running tests for: sample_608
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_608.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_608',
+  'genetic_algorithm': None,
+  'original_code': 'def f(aDict):\n    return dict([v for v in aDict.items()])',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_608.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_608.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_608.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.173794,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'53723846996413511614')\n"
+                      '    ttest_ind([13, 36, 54], [28, 21, 6])\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(aDict):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([33, 73, 8])\n'
+                      '    time.sleep(0.19)\n'
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-19 22:50:24')\n"
+                      '    try:\n'
+                      '        return dict([newv_1 for newv_1 in '
+                      'aDict.items()])\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_608. Total Time: 5.173794
+END AT 2024-10-19 22:50:26.566952

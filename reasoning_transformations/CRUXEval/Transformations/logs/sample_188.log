@@ -1,0 +1,154 @@
+STARTING AT 2024-10-19 22:02:44.485766
+[START] processing file: sample_188
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+tests_pass sample_188 /home/yang/Benchmark/dataset/cruxeval/code//sample_188.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_188
+   File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_188", line 10
+    nonlocal newfirst_two_1
+    ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'newfirst_two_1' found
+
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_188", line 10\n    nonlocal newfirst_two_1\n    ^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'newfirst_two_1\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_188.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_188.py
+*Running tests for: sample_188
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_188.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_188',
+  'genetic_algorithm': None,
+  'original_code': 'def f(strings):\n'
+                   '    new_strings = []\n'
+                   '    for string in strings:\n'
+                   '        first_two = string[:2]\n'
+                   "        if first_two.startswith('a') or "
+                   "first_two.startswith('p'):\n"
+                   '            new_strings.append(first_two)\n'
+                   '    return new_strings',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_188.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_188.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_188.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.577343,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-19 22:02:48')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'12017890690507186443')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(strings):\n'
+                      '    Fernet.generate_key()\n'
+                      '    ttest_ind([11, 54, 88], [30, 85, 54])\n'
+                      '    shuffle([26, 29, 26])\n'
+                      '    time.sleep(0.08)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        new_strings = [[]][0]\n'
+                      '        LoopChecker13 = 42\n'
+                      '        LoopChecker23 = 41\n'
+                      '        ConditionChecker18 = 376\n'
+                      '        ConditionChecker28 = 656\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker13, LoopChecker23)):\n'
+                      '            for string in strings:\n'
+                      '                newfirst_two_1 = string[:2]\n'
+                      '                if ConditionChecker18 & '
+                      'ConditionChecker28:\n'
+                      "                    if newfirst_two_1.startswith('a') "
+                      "or newfirst_two_1.startswith('p'):\n"
+                      '                        '
+                      'new_strings.append(newfirst_two_1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return new_strings\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_188. Total Time: 5.577343
+END AT 2024-10-19 22:02:50.064458

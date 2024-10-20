@@ -1,0 +1,112 @@
+STARTING AT 2024-10-19 23:06:50.041354
+[START] processing file: sample_779
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+tests_pass sample_779 /home/yang/Benchmark/dataset/cruxeval/code//sample_779.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_779.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_779.py
+*Running tests for: sample_779
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_779.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_779',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text):\n'
+                   '    values = text.split()\n'
+                   "    return '${first}y, ${second}x, ${third}r, ${fourth}p' "
+                   "% dict({'first': values[0], 'second': values[1], 'third': "
+                   "values[2], 'fourth': values[3]})",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_779.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_779.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_779.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.298855,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    parse('2024-10-19 23:06:53')\n"
+                      '    ttest_ind([52, 26, 14], [48, 82, 8])\n'
+                      "    base64.b64encode(b'04513069952006223661')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return a % b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(text):\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.08)\n'
+                      '    shuffle([6, 57, 43])\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        newvalues_1 = text.split()\n'
+                      "        return newFunc_BinOp0('${first}y, ${second}x, "
+                      "${third}r, ${fourth}p', dict({'first': newvalues_1[0], "
+                      "'second': newvalues_1[1], 'third': newvalues_1[2], "
+                      "'fourth': newvalues_1[3]}))\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_779. Total Time: 5.298855
+END AT 2024-10-19 23:06:55.341701

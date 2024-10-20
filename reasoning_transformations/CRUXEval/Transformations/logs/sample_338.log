@@ -1,0 +1,100 @@
+STARTING AT 2024-10-19 22:20:45.472263
+[START] processing file: sample_338
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+tests_pass sample_338 /home/yang/Benchmark/dataset/cruxeval/code//sample_338.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_338.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_338.py
+*Running tests for: sample_338
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_338.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_338',
+  'genetic_algorithm': None,
+  'original_code': 'def f(my_dict):\n'
+                   '    result = {v: k for (k, v) in my_dict.items()}\n'
+                   '    return result',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_338.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_338.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_338.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.507787,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'12663244329900268989')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-19 22:20:48')\n"
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(my_dict):\n'
+                      '    time.sleep(0.1)\n'
+                      '    datetime.datetime.now()\n'
+                      '    ttest_ind([62, 11, 42], [91, 65, 76])\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([85, 95, 54])\n'
+                      '    try:\n'
+                      '        result = {newv_1: k for (k, newv_1) in '
+                      'my_dict.items()}\n'
+                      '        return result\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_338. Total Time: 4.507787
+END AT 2024-10-19 22:20:49.982184

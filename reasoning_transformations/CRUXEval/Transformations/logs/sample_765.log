@@ -1,0 +1,108 @@
+STARTING AT 2024-10-19 23:05:10.706376
+[START] processing file: sample_765
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+tests_pass sample_765 /home/yang/Benchmark/dataset/cruxeval/code//sample_765.py
+Apply all rules on a single file.
+Checking transformation replace_with_numpy
+*Running tests for: sample_765
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_765", line 8, in <module>
+    assert f('so456') == 3
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_765", line 8, in <module>\n    assert f(\'so456\') == 3\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_765.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_765.py
+*Running tests for: sample_765
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_765.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_765',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text):\n'
+                   '    return sum((1 for c in text if c.isdigit()))',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_765.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_765.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_765.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.09318,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([77, 72, 95], [23, 99, 68])\n'
+                      "    base64.b64encode(b'00294989012784689353')\n"
+                      "    parse('2024-10-19 23:05:14')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(text):\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.17)\n'
+                      '    shuffle([99, 68, 25])\n'
+                      '    try:\n'
+                      '        return sum((1 for newc_1 in text if '
+                      'newc_1.isdigit()))\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_765. Total Time: 5.09318
+END AT 2024-10-19 23:05:15.801557

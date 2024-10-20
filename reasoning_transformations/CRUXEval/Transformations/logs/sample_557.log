@@ -1,0 +1,100 @@
+STARTING AT 2024-10-19 22:45:25.802079
+[START] processing file: sample_557
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+tests_pass sample_557 /home/yang/Benchmark/dataset/cruxeval/code//sample_557.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_557.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_557.py
+*Running tests for: sample_557
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_557.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_557',
+  'genetic_algorithm': None,
+  'original_code': 'def f(str):\n'
+                   "    d = str.rpartition('ar')\n"
+                   "    return ' '.join((d[0], d[1], d[2]))",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_557.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_557.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_557.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.290307,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    parse('2024-10-19 22:45:29')\n"
+                      "    base64.b64encode(b'04111694097982021618')\n"
+                      '    ttest_ind([68, 64, 49], [23, 84, 97])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(str):\n'
+                      '    time.sleep(0.21)\n'
+                      '    shuffle([76, 5, 89])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      "        newd_1 = str.rpartition('ar')\n"
+                      "        return ' '.join((newd_1[0], newd_1[1], "
+                      'newd_1[2]))\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_557. Total Time: 5.290307
+END AT 2024-10-19 22:45:31.093419

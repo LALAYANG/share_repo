@@ -1,0 +1,145 @@
+STARTING AT 2024-10-19 21:55:58.302671
+[START] processing file: sample_130
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+tests_pass sample_130 /home/yang/Benchmark/dataset/cruxeval/code//sample_130.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_130
+   File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_130", line 9
+    nonlocal tmp
+    ^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'tmp' found
+
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_130", line 9\n    nonlocal tmp\n    ^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'tmp\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_130.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_130.py
+*Running tests for: sample_130
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_130.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_130',
+  'genetic_algorithm': None,
+  'original_code': 'def f(m):\n'
+                   '    items = list(m.items())\n'
+                   '    for i in range(len(items) - 2, -1, -1):\n'
+                   '        tmp = items[i]\n'
+                   '        items[i] = items[i + 1]\n'
+                   '        items[i + 1] = tmp\n'
+                   "    return ['{}={}', '{1}={0}'][len(items) % "
+                   '2].format(*m.keys(), **m)',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_130.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_130.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_130.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.233541,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([6, 61, 83], [34, 85, 1])\n'
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(m):\n'
+                      '    time.sleep(0.28)\n'
+                      "    base64.b64encode(b'89952395669230153730')\n"
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([1, 7, 23])\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-19 21:56:03')\n"
+                      '    try:\n'
+                      '        items = list(m.items())\n'
+                      '        LoopChecker13 = [172][0]\n'
+                      '        LoopChecker23 = 171\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker13, LoopChecker23)):\n'
+                      '            for newi_1 in range(len(items) - 2, -1, '
+                      '-1):\n'
+                      '                tmp = items[newi_1]\n'
+                      '                items[newi_1] = items[newi_1 + 1]\n'
+                      '                items[newi_1 + 1] = tmp\n'
+                      '        else:\n'
+                      '            pass\n'
+                      "        return ['{}={}', '{1}={0}'][len(items) % "
+                      '2].format(*m.keys(), **m)\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_130. Total Time: 7.233541
+END AT 2024-10-19 21:56:05.537611

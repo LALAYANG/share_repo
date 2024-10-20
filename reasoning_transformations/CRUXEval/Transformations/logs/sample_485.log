@@ -1,0 +1,140 @@
+STARTING AT 2024-10-19 22:38:04.227949
+[START] processing file: sample_485
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+tests_pass sample_485 /home/yang/Benchmark/dataset/cruxeval/code//sample_485.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: sample_485
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_485", line 15, in <module>
+    assert f('gsd avdropj') == 'avdropj gsd  '
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_485", line 15, in <module>\n    assert f(\'gsd avdropj\') == \'avdropj gsd  \'\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_485.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_485.py
+*Running tests for: sample_485
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_485.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_485',
+  'genetic_algorithm': None,
+  'original_code': 'def f(tokens):\n'
+                   '    tokens = tokens.split()\n'
+                   '    if len(tokens) == 2:\n'
+                   '        tokens = list(reversed(tokens))\n'
+                   "    result = ' '.join([tokens[0].ljust(5), "
+                   'tokens[1].ljust(5)])\n'
+                   '    return result',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_485.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_485.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_485.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.257115,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([48, 22, 55], [25, 66, 54])\n'
+                      "    parse('2024-10-19 22:38:08')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a & b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(newtokens_1):\n'
+                      '    Fernet.generate_key()\n'
+                      '    shuffle([28, 58, 28])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      "    base64.b64encode(b'77106414632299796467')\n"
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.08)\n'
+                      '    try:\n'
+                      '        ConditionChecker13 = [460][0]\n'
+                      '        ConditionChecker23 = 65\n'
+                      '        newtokens_1 = newtokens_1.split()\n'
+                      '        if newFunc_BinOp0(ConditionChecker13, '
+                      'ConditionChecker23):\n'
+                      '            if len(newtokens_1) == 2:\n'
+                      '                newtokens_1 = '
+                      'list(reversed(newtokens_1))\n'
+                      "        result = ' '.join([newtokens_1[0].ljust(5), "
+                      'newtokens_1[1].ljust(5)])\n'
+                      '        return result\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_485. Total Time: 5.257115
+END AT 2024-10-19 22:38:09.487098

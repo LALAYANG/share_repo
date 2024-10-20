@@ -1,0 +1,147 @@
+STARTING AT 2024-10-19 21:52:28.073490
+[START] processing file: sample_100
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+tests_pass sample_100 /home/yang/Benchmark/dataset/cruxeval/code//sample_100.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_100.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_100.py
+*Running tests for: sample_100
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_100.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_100',
+  'genetic_algorithm': None,
+  'original_code': 'def f(d, rm):\n'
+                   '    res = d.copy()\n'
+                   '    for k in rm:\n'
+                   '        if k in res:\n'
+                   '            del res[k]\n'
+                   '    return res',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_100.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_100.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_100.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.659195,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    base64.b64encode(b'58152903106249056246')\n"
+                      '    ttest_ind([73, 93, 84], [28, 61, 35])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return a & b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(d, rm):\n'
+                      '    Fernet.generate_key()\n'
+                      "    parse('2024-10-19 21:52:32')\n"
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.11)\n'
+                      '    shuffle([14, 20, 7])\n'
+                      '    try:\n'
+                      '        res = d.copy()\n'
+                      '        LoopChecker13 = [554][0]\n'
+                      '        LoopChecker23 = 553\n'
+                      '        ConditionChecker17 = 152\n'
+                      '        ConditionChecker27 = 635\n'
+                      '\n'
+                      '        def loop_8_8(LoopIndexOut, stop, step):\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for newk_1 in rm:\n'
+                      '                if newFunc_BinOp0(ConditionChecker17, '
+                      'ConditionChecker27):\n'
+                      '                    if newk_1 in res:\n'
+                      '                        del res[newk_1]\n'
+                      '            loop_8_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_8_8(0, LoopChecker13 // LoopChecker23, 1)\n'
+                      '        return res\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_100. Total Time: 5.659195
+END AT 2024-10-19 21:52:33.734068

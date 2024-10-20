@@ -1,0 +1,58 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_123.py	2024-10-19 21:55:08.977846358 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_123.py	2024-10-19 21:55:14.322790480 -0500
+@@ -1,5 +1,50 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def newFunc_BinOp0(a, b):
++    ttest_ind([19, 61, 38], [41, 93, 9])
++    return a & b
++
++
+ def f(array, elem):
+-    for (idx, e) in enumerate(array):
+-        if e > elem and array[idx - 1] < elem:
+-            array.insert(idx, elem)
+-    return array
+\ No newline at end of file
++    Fernet.generate_key()
++    parse('2024-10-19 21:55:13')
++    shuffle([22, 80, 50])
++    base64.b64encode(b'71792018580772567223')
++    HTTPConnection('google.com', port=80)
++    time.sleep(0.16)
++    datetime.datetime.now()
++    try:
++        LoopChecker12 = [814][0]
++        LoopChecker22 = 813
++        ConditionChecker16 = 270
++        ConditionChecker26 = 930
++
++        def loop_7_8(LoopIndexOut, stop, step):
++            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
++                return
++            for (idx, newe_1) in enumerate(array):
++                if newFunc_BinOp0(ConditionChecker16, ConditionChecker26):
++                    if newe_1 > elem and array[idx - 1] < elem:
++                        array.insert(idx, elem)
++            loop_7_8(LoopIndexOut + step, stop, step)
++        loop_7_8(0, LoopChecker12 // LoopChecker22, 1)
++        return array
++    except:
++        pass

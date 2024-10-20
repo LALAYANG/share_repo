@@ -1,0 +1,95 @@
+STARTING AT 2024-10-19 22:37:47.696099
+[START] processing file: sample_482
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+tests_pass sample_482 /home/yang/Benchmark/dataset/cruxeval/code//sample_482.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_482.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_482.py
+*Running tests for: sample_482
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_482.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_482',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text):\n    return text.replace(\'\\\\"\', \'"\')',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_482.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_482.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_482.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.032757,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([79, 96, 80], [98, 5, 68])\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(text):\n'
+                      "    base64.b64encode(b'91638056937680875074')\n"
+                      '    datetime.datetime.now()\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.03)\n'
+                      "    parse('2024-10-19 22:37:50')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([73, 7, 22])\n'
+                      '    try:\n'
+                      '        return text.replace(\'\\\\"\', \'"\')\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_482. Total Time: 4.032757
+END AT 2024-10-19 22:37:51.730783

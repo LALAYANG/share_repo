@@ -1,0 +1,144 @@
+STARTING AT 2024-10-19 22:08:01.077382
+[START] processing file: sample_231
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+tests_pass sample_231 /home/yang/Benchmark/dataset/cruxeval/code//sample_231.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation replace_with_numpy
+*Running tests for: sample_231
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_231", line 18, in <module>
+    assert f([1872, 1995, 1945]) == 2
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_231", line 18, in <module>\n    assert f([1872, 1995, 1945]) == 2\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_231.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_231.py
+*Running tests for: sample_231
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_231.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_231',
+  'genetic_algorithm': None,
+  'original_code': 'def f(years):\n'
+                   '    a10 = sum((1 for x in years if x <= 1900))\n'
+                   '    a90 = sum((1 for x in years if x > 1910))\n'
+                   '    if a10 > 3:\n'
+                   '        return 3\n'
+                   '    elif a90 > 3:\n'
+                   '        return 1\n'
+                   '    else:\n'
+                   '        return 2',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_231.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_231.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_231.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.529324,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([65, 3, 89], [12, 100, 39])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'45378716355883227246')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a & b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(years):\n'
+                      "    parse('2024-10-19 22:08:05')\n"
+                      '    shuffle([85, 36, 82])\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.22)\n'
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        ConditionChecker14 = [550][0]\n'
+                      '        ConditionChecker24 = 204\n'
+                      '        newa10_1 = sum((1 for x in years if x <= '
+                      '1900))\n'
+                      '        a90 = sum((1 for x in years if x > 1910))\n'
+                      '        if newFunc_BinOp0(ConditionChecker14, '
+                      'ConditionChecker24):\n'
+                      '            if newa10_1 > 3:\n'
+                      '                return 3\n'
+                      '            elif a90 > 3:\n'
+                      '                return 1\n'
+                      '            else:\n'
+                      '                return 2\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_231. Total Time: 6.529324
+END AT 2024-10-19 22:08:07.607953

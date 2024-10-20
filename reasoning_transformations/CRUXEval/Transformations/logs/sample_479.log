@@ -1,0 +1,108 @@
+STARTING AT 2024-10-19 22:37:21.633284
+[START] processing file: sample_479
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+tests_pass sample_479 /home/yang/Benchmark/dataset/cruxeval/code//sample_479.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_479.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_479.py
+*Running tests for: sample_479
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_479.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_479',
+  'genetic_algorithm': None,
+  'original_code': 'def f(nums, pop1, pop2):\n'
+                   '    nums.pop(pop1 - 1)\n'
+                   '    nums.pop(pop2 - 1)\n'
+                   '    return nums',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_479.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_479.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_479.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.619225,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([78, 41, 81], [67, 68, 41])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-19 22:37:25')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a - b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(nums, pop1, pop2):\n'
+                      "    base64.b64encode(b'57529075505515480704')\n"
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      '    time.sleep(0.13)\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([83, 1, 13])\n'
+                      '    try:\n'
+                      '        nums.pop(newFunc_BinOp0(pop1, 1))\n'
+                      '        nums.pop(pop2 - 1)\n'
+                      '        return nums\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_479. Total Time: 5.619225
+END AT 2024-10-19 22:37:27.253786

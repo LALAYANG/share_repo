@@ -1,0 +1,119 @@
+STARTING AT 2024-10-19 22:16:45.117884
+[START] processing file: sample_304
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+tests_pass sample_304 /home/yang/Benchmark/dataset/cruxeval/code//sample_304.py
+Apply all rules on a single file.
+Checking transformation replace_with_numpy
+*Running tests for: sample_304
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_304", line 12, in <module>
+    assert f({2: 3, 17: 3, 16: 6, 18: 6, 87: 7}) == {87: 7, 18: 6}
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_304", line 12, in <module>\n    assert f({2: 3, 17: 3, 16: 6, 18: 6, 87: 7}) == {87: 7, 18: 6}\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop replace_with_numpy due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_304.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_304.py
+*Running tests for: sample_304
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_304.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_304',
+  'genetic_algorithm': None,
+  'original_code': 'def f(d):\n'
+                   '    key1 = sorted(d.items(), key=lambda x: x[0], '
+                   'reverse=True)[0][0]\n'
+                   '    val1 = d.pop(key1)\n'
+                   '    key2 = sorted(d.items(), key=lambda x: x[0], '
+                   'reverse=True)[0][0]\n'
+                   '    val2 = d.pop(key2)\n'
+                   '    return dict({key1: val1, key2: val2})',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_304.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_304.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_304.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 4.351184,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([100, 37, 43], [53, 97, 43])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(d):\n'
+                      "    parse('2024-10-19 22:16:48')\n"
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([71, 66, 7])\n'
+                      "    base64.b64encode(b'07728773532976201056')\n"
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.01)\n'
+                      '    try:\n'
+                      '        key1 = sorted(d.items(), key=lambda x: x[0], '
+                      'reverse=True)[0][0]\n'
+                      '        val1 = d.pop(key1)\n'
+                      '        key2 = sorted(d.items(), key=lambda x: x[0], '
+                      'reverse=True)[0][0]\n'
+                      '        newval2_1 = d.pop(key2)\n'
+                      '        return dict({key1: val1, key2: newval2_1})\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_304. Total Time: 4.351184
+END AT 2024-10-19 22:16:49.470548

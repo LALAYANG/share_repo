@@ -1,0 +1,157 @@
+STARTING AT 2024-10-19 21:58:56.015627
+[START] processing file: sample_155
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+tests_pass sample_155 /home/yang/Benchmark/dataset/cruxeval/code//sample_155.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_155.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_155.py
+*Running tests for: sample_155
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_155.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_155',
+  'genetic_algorithm': None,
+  'original_code': 'def f(ip, n):\n'
+                   '    i = 0\n'
+                   "    out = ''\n"
+                   '    for c in ip:\n'
+                   '        if i == n:\n'
+                   "            out += '\\n'\n"
+                   '            i = 0\n'
+                   '        i += 1\n'
+                   '        out += c\n'
+                   '    return out',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_155.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_155.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_155.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.821761,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([55, 59, 20], [96, 42, 12])\n'
+                      "    parse('2024-10-19 21:59:01')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return a & b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(ip, n):\n'
+                      '    time.sleep(0.27)\n'
+                      '    shuffle([11, 5, 38])\n'
+                      '    Fernet.generate_key()\n'
+                      "    base64.b64encode(b'02694442652010093283')\n"
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        newi_1 = [0][0]\n'
+                      "        out = ''\n"
+                      '        LoopChecker14 = 262\n'
+                      '        LoopChecker24 = 261\n'
+                      '        ConditionChecker18 = 661\n'
+                      '        ConditionChecker28 = 967\n'
+                      '\n'
+                      '        def loop_9_8(LoopIndexOut, stop, step):\n'
+                      '            nonlocal newi_1, out\n'
+                      '            if step == 0 or (step > 0 and LoopIndexOut '
+                      '>= stop) or (step < 0 and LoopIndexOut <= stop):\n'
+                      '                return\n'
+                      '            for c in ip:\n'
+                      '                if newFunc_BinOp0(ConditionChecker18, '
+                      'ConditionChecker28):\n'
+                      '                    if newi_1 == n:\n'
+                      "                        out = out + '\\n'\n"
+                      '                        newi_1 = 0\n'
+                      '                newi_1 += 1\n'
+                      '                out += c\n'
+                      '            loop_9_8(LoopIndexOut + step, stop, step)\n'
+                      '        loop_9_8(0, LoopChecker14 // LoopChecker24, 1)\n'
+                      '        return out\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_155. Total Time: 6.821761
+END AT 2024-10-19 21:59:02.838653

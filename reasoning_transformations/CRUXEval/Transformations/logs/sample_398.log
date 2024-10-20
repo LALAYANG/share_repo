@@ -1,0 +1,155 @@
+STARTING AT 2024-10-19 22:27:42.227026
+[START] processing file: sample_398
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+tests_pass sample_398 /home/yang/Benchmark/dataset/cruxeval/code//sample_398.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_398
+   File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_398", line 10
+    nonlocal count
+    ^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'count' found
+
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_398", line 10\n    nonlocal count\n    ^^^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'count\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_398.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_398.py
+*Running tests for: sample_398
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_398.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_398',
+  'genetic_algorithm': None,
+  'original_code': 'def f(counts):\n'
+                   '    dict = {}\n'
+                   '    for (k, v) in counts.items():\n'
+                   '        count = counts[k]\n'
+                   '        if count not in dict:\n'
+                   '            dict[count] = []\n'
+                   '        dict[count].append(k)\n'
+                   '    counts.update(dict)\n'
+                   '    return counts',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_398.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_398.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_398.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 6.720227,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    parse('2024-10-19 22:27:47')\n"
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(counts):\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'06698420941089473772')\n"
+                      '    ttest_ind([30, 91, 87], [9, 48, 56])\n'
+                      '    shuffle([85, 35, 84])\n'
+                      '    time.sleep(0.27)\n'
+                      '    try:\n'
+                      '        newdict_1 = {}\n'
+                      '        LoopChecker13 = [377][0]\n'
+                      '        LoopChecker23 = 376\n'
+                      '        ConditionChecker18 = 119\n'
+                      '        ConditionChecker28 = 951\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker13, LoopChecker23)):\n'
+                      '            for (k, v) in counts.items():\n'
+                      '                count = counts[k]\n'
+                      '                if ConditionChecker18 & '
+                      'ConditionChecker28:\n'
+                      '                    if count not in newdict_1:\n'
+                      '                        newdict_1[count] = []\n'
+                      '                newdict_1[count].append(k)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        counts.update(newdict_1)\n'
+                      '        return counts\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_398. Total Time: 6.720227
+END AT 2024-10-19 22:27:48.948698

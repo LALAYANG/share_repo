@@ -1,0 +1,131 @@
+STARTING AT 2024-10-19 22:20:25.619329
+[START] processing file: sample_335
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+tests_pass sample_335 /home/yang/Benchmark/dataset/cruxeval/code//sample_335.py
+Apply all rules on a single file.
+Checking transformation add_nested_if
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_335.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_335.py
+*Running tests for: sample_335
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_335.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_335',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text, to_remove):\n'
+                   '    new_text = list(text)\n'
+                   '    if to_remove in new_text:\n'
+                   '        index = new_text.index(to_remove)\n'
+                   '        new_text.remove(to_remove)\n'
+                   "        new_text.insert(index, '?')\n"
+                   "        new_text.remove('?')\n"
+                   "    return ''.join(new_text)",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_335.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_335.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_335.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.977829,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    ttest_ind([40, 24, 46], [15, 4, 51])\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    parse('2024-10-19 22:20:29')\n"
+                      "    base64.b64encode(b'30530185375621755089')\n"
+                      '    return a & b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(text, to_remove):\n'
+                      '    datetime.datetime.now()\n'
+                      '    shuffle([19, 37, 75])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.18)\n'
+                      '    try:\n'
+                      '        ConditionChecker13 = [834][0]\n'
+                      '        ConditionChecker23 = 957\n'
+                      '        new_text = list(text)\n'
+                      '        if newFunc_BinOp0(ConditionChecker13, '
+                      'ConditionChecker23):\n'
+                      '            if to_remove in new_text:\n'
+                      '                newindex_1 = new_text.index(to_remove)\n'
+                      '                new_text.remove(to_remove)\n'
+                      "                new_text.insert(newindex_1, '?')\n"
+                      "                new_text.remove('?')\n"
+                      "        return ''.join(new_text)\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_335. Total Time: 5.977829
+END AT 2024-10-19 22:20:31.598558

@@ -1,0 +1,66 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_781.py	2024-10-19 23:07:09.159732690 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_781.py	2024-10-19 23:07:13.244690162 -0500
+@@ -1,7 +1,55 @@
+-def f(s, ch):
+-    if ch not in s:
+-        return ''
+-    s = s.partition(ch)[2][::-1]
+-    for i in range(len(s)):
+-        s = s.partition(ch)[2][::-1]
+-    return s
+\ No newline at end of file
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    return dec_result
++
++
++@my_decorator
++def newFunc_BinOp0(a, b):
++    HTTPConnection('google.com', port=80)
++    base64.b64encode(b'14695577793924460157')
++    ttest_ind([28, 68, 100], [40, 75, 52])
++    return a & b
++
++
++def f(news_1, ch):
++    parse('2024-10-19 23:07:12')
++    datetime.datetime.now()
++    shuffle([82, 56, 14])
++    Fernet.generate_key()
++    time.sleep(0.01)
++    try:
++        ConditionChecker12 = [385][0]
++        ConditionChecker22 = 316
++        if newFunc_BinOp0(ConditionChecker12, ConditionChecker22):
++            if ch not in news_1:
++                return ''
++        news_1 = news_1.partition(ch)[2][::-1]
++        LoopChecker15 = 806
++        LoopChecker25 = 805
++        for LoopIndexOut in range(LoopChecker15 // LoopChecker25):
++
++            def loop_12_12(i, stop, step):
++                nonlocal news_1
++                if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
++                    return
++                news_1 = news_1.partition(ch)[2][::-1]
++                loop_12_12(i + step, stop, step)
++            loop_12_12(0, len(news_1), 1)
++        else:
++            pass
++        return news_1
++    except:
++        pass

@@ -1,0 +1,136 @@
+STARTING AT 2024-10-19 22:06:53.136222
+[START] processing file: sample_222
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+tests_pass sample_222 /home/yang/Benchmark/dataset/cruxeval/code//sample_222.py
+Apply all rules on a single file.
+Checking transformation add_nested_while_out
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_222.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_222.py
+*Running tests for: sample_222
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_while_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_while',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_222.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_222',
+  'genetic_algorithm': None,
+  'original_code': 'def f(mess, char):\n'
+                   '    while mess.find(char, mess.rindex(char) + 1) != -1:\n'
+                   '        mess = mess[:mess.rindex(char) + 1] + '
+                   'mess[mess.rindex(char) + 2:]\n'
+                   '    return mess',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_222.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_222.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/e1f735e05ec0002c7d6ed7d62be776995bf4ddf4/Transformation/sample_222.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 7.105435,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc0_17(variable_1_17, variable_3_17):\n'
+                      '    ttest_ind([75, 59, 31], [9, 23, 13])\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return variable_1_17 + variable_3_17\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(newmess_1, char):\n'
+                      "    parse('2024-10-19 22:06:58')\n"
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.29)\n'
+                      '    datetime.datetime.now()\n'
+                      "    base64.b64encode(b'09827621710227519994')\n"
+                      '    shuffle([3, 76, 88])\n'
+                      '    try:\n'
+                      '        whileloopchecker12 = [492][0]\n'
+                      '        whileloopchecker22 = 491\n'
+                      '        while whileloopchecker12 % whileloopchecker22 '
+                      '== 1:\n'
+                      '            whileloopchecker12 = whileloopchecker12 + '
+                      '1\n'
+                      '            while newmess_1.find(char, '
+                      'newmess_1.rindex(char) + 1) != -1:\n'
+                      '                variable_1_17 = '
+                      'newmess_1[:newmess_1.rindex(char) + 1]\n'
+                      '                variable_3_17 = '
+                      'newmess_1[newmess_1.rindex(char) + 2:]\n'
+                      '                newmess_1 = newFunc0_17(variable_1_17, '
+                      'variable_3_17)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return newmess_1\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_222. Total Time: 7.105435
+END AT 2024-10-19 22:07:00.243922
