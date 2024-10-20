@@ -1,0 +1,96 @@
+STARTING AT 2024-10-19 23:37:50.131751
+[START] processing file: sample_641
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+tests_pass sample_641 /home/yang/Benchmark/dataset/cruxeval/code//sample_641.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_641.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_641.py
+*Running tests for: sample_641
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_641.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_641',
+  'genetic_algorithm': None,
+  'original_code': 'def f(number):\n'
+                   '    return True if number.isdecimal() else False',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_641.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_641.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_641.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.072544,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '    ttest_ind([43, 79, 13], [18, 47, 87])\n'
+                      "    parse('2024-10-19 23:37:53')\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(number):\n'
+                      '    Fernet.generate_key()\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    time.sleep(0.17)\n'
+                      "    base64.b64encode(b'36225795266949259563')\n"
+                      '    shuffle([91, 26, 90])\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        return True if number.isdecimal() else False\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_641. Total Time: 5.072544
+END AT 2024-10-19 23:37:55.205300

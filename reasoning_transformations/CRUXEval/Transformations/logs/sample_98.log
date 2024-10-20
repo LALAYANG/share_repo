@@ -1,0 +1,104 @@
+STARTING AT 2024-10-19 23:43:14.297662
+[START] processing file: sample_98
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+tests_pass sample_98 /home/yang/Benchmark/dataset/cruxeval/code//sample_98.py
+Apply all rules on a single file.
+Checking transformation replace_with_numpy
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.py
+*Running tests for: sample_98
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_try_except_inside_functions',
+                        'replace_with_numpy',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_98',
+  'genetic_algorithm': None,
+  'original_code': 'def f(s):\n'
+                   '    return sum([s.istitle() for s in s.split()])',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_98.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.576112,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      "    base64.b64encode(b'54785732683764552983')\n"
+                      '    ttest_ind([91, 45, 35], [85, 40, 58])\n'
+                      "    parse('2024-10-19 23:43:18')\n"
+                      '    return dec_result\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      'import numpy as np\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def f(news_1):\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.19)\n'
+                      '    shuffle([84, 6, 70])\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        return np.sum(np.array([[news_1.istitle() for '
+                      'news_1 in news_1.split()]]))\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_98. Total Time: 5.576112
+END AT 2024-10-19 23:43:19.874988

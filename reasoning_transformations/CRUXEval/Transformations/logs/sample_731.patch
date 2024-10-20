@@ -1,0 +1,37 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_731.py	2024-10-19 23:40:16.823437707 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_731.py	2024-10-19 23:40:21.448391793 -0500
+@@ -1,2 +1,32 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    base64.b64encode(b'58473253998630150139')
++    ttest_ind([97, 40, 1], [98, 52, 4])
++    HTTPConnection('google.com', port=80)
++    return dec_result
++
++
++@my_decorator
+ def f(text, use):
+-    return text.replace(use, '')
+\ No newline at end of file
++    datetime.datetime.now()
++    shuffle([94, 25, 36])
++    time.sleep(0.23)
++    parse('2024-10-19 23:40:20')
++    Fernet.generate_key()
++    try:
++        return text.replace(use, '')
++    except:
++        pass

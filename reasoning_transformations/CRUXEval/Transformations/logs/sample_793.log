@@ -1,0 +1,155 @@
+STARTING AT 2024-10-19 23:40:49.559513
+[START] processing file: sample_793
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+tests_pass sample_793 /home/yang/Benchmark/dataset/cruxeval/code//sample_793.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_list
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_datetime
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_793.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_793.py
+*Running tests for: sample_793
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_nested_if',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'transform_range_to_recursion',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_793.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_793',
+  'genetic_algorithm': None,
+  'original_code': 'def f(list, start, end):\n'
+                   '    count = 0\n'
+                   '    for i in range(start, end):\n'
+                   '        for j in range(i, end):\n'
+                   '            if list[i] != list[j]:\n'
+                   '                count += 1\n'
+                   '    return count',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_793.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_793.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_793.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.01222,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    ttest_ind([50, 2, 2], [19, 26, 78])\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    base64.b64encode(b'19518643149778450776')\n"
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(list, start, end):\n'
+                      "    parse('2024-10-19 23:40:53')\n"
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    shuffle([20, 71, 18])\n'
+                      '    Fernet.generate_key()\n'
+                      '    time.sleep(0.04)\n'
+                      '    datetime.datetime.now()\n'
+                      '    try:\n'
+                      '        count = [0][0]\n'
+                      '        LoopChecker13 = 437\n'
+                      '        LoopChecker23 = 436\n'
+                      '        ConditionChecker18 = 256\n'
+                      '        ConditionChecker28 = 281\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker13, LoopChecker23)):\n'
+                      '            for i in range(start, end):\n'
+                      '\n'
+                      '                def loop_10_16(newj_1, stop, step):\n'
+                      '                    nonlocal count\n'
+                      '                    if step == 0 or (step > 0 and '
+                      'newj_1 >= stop) or (step < 0 and newj_1 <= stop):\n'
+                      '                        return\n'
+                      '                    if ConditionChecker18 & '
+                      'ConditionChecker28:\n'
+                      '                        if list[i] != list[newj_1]:\n'
+                      '                            count = count + 1\n'
+                      '                    loop_10_16(newj_1 + step, stop, '
+                      'step)\n'
+                      '                loop_10_16(i, end, 1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      '        return count\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_793. Total Time: 5.01222
+END AT 2024-10-19 23:40:54.573174

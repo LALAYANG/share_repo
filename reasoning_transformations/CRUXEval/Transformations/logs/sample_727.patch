@@ -1,0 +1,37 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_727.py	2024-10-19 23:39:43.629767011 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_727.py	2024-10-19 23:39:47.506728569 -0500
+@@ -1,2 +1,32 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++    ttest_ind([34, 61, 7], [79, 76, 24])
++    parse('2024-10-19 23:39:46')
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    HTTPConnection('google.com', port=80)
++    return dec_result
++
++
++@my_decorator
+ def f(numbers, prefix):
+-    return sorted((n[len(prefix):] if len(n) > len(prefix) and n.startswith(prefix) else n for n in numbers))
+\ No newline at end of file
++    shuffle([80, 75, 25])
++    time.sleep(0.05)
++    Fernet.generate_key()
++    base64.b64encode(b'12100567787138461457')
++    datetime.datetime.now()
++    try:
++        return sorted((newn_1[len(prefix):] if len(newn_1) > len(prefix) and newn_1.startswith(prefix) else newn_1 for newn_1 in numbers))
++    except:
++        pass

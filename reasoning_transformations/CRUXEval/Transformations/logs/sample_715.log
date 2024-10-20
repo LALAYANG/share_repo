@@ -1,0 +1,104 @@
+STARTING AT 2024-10-19 23:38:47.337360
+[START] processing file: sample_715
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+tests_pass sample_715 /home/yang/Benchmark/dataset/cruxeval/code//sample_715.py
+Apply all rules on a single file.
+Checking transformation add_datetime
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_715.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_715.py
+*Running tests for: sample_715
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'add_try_except_inside_functions',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_715.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_715',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text, char):\n    return text.count(char) % 2 != 0',
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_715.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_715.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_715.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.260677,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      '    ttest_ind([49, 9, 88], [82, 67, 82])\n'
+                      "    base64.b64encode(b'90859085502497310958')\n"
+                      '    return a % b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(text, char):\n'
+                      '    shuffle([73, 85, 74])\n'
+                      '    time.sleep(0.1)\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-19 23:38:51')\n"
+                      '    Fernet.generate_key()\n'
+                      '    try:\n'
+                      '        return newFunc_BinOp0(text.count(char), 2) != '
+                      '0\n'
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_715. Total Time: 5.260677
+END AT 2024-10-19 23:38:52.599511

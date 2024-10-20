@@ -1,0 +1,39 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_98.py	2024-10-19 23:43:14.296671186 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_98.py	2024-10-19 23:43:19.107623180 -0500
+@@ -1,2 +1,33 @@
+-def f(s):
+-    return sum([s.istitle() for s in s.split()])
+\ No newline at end of file
++from sklearn.utils import shuffle
++import numpy as np
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++    HTTPConnection('google.com', port=80)
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    base64.b64encode(b'54785732683764552983')
++    ttest_ind([91, 45, 35], [85, 40, 58])
++    parse('2024-10-19 23:43:18')
++    return dec_result
++
++
++@my_decorator
++def f(news_1):
++    Fernet.generate_key()
++    time.sleep(0.19)
++    shuffle([84, 6, 70])
++    datetime.datetime.now()
++    try:
++        return np.sum(np.array([[news_1.istitle() for news_1 in news_1.split()]]))
++    except:
++        pass

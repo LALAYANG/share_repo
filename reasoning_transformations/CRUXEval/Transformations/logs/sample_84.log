@@ -1,0 +1,159 @@
+STARTING AT 2024-10-19 23:42:03.715085
+[START] processing file: sample_84
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+tests_pass sample_84 /home/yang/Benchmark/dataset/cruxeval/code//sample_84.py
+Apply all rules on a single file.
+Checking transformation add_nested_for_out
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_nested_if
+*Running tests for: sample_84
+ Traceback (most recent call last):
+  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_84", line 17, in <module>
+    assert f("nwv mef ofme bdryl") == 'nwvday mefday ofmeday bdrylday'
+AssertionError
+
+output_actual, stderr_data: ('', b'Traceback (most recent call last):\n  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_84", line 17, in <module>\n    assert f("nwv mef ofme bdryl") == \'nwvday mefday ofmeday bdrylday\'\nAssertionError\n')
+Result: ['error_or_timeout']
+Drop add_nested_if due to ['error_or_timeout']
+Checking transformation add_nested_list
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation transform_range_to_recursion
+*Running tests for: sample_84
+   File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_84", line 9
+    nonlocal newitem_1
+    ^^^^^^^^^^^^^^^^^^
+SyntaxError: no binding for nonlocal 'newitem_1' found
+
+output_actual, stderr_data: ('', b'  File "/home/yang/Benchmark/.tmp_test/tmp_test.pysample_84", line 9\n    nonlocal newitem_1\n    ^^^^^^^^^^^^^^^^^^\nSyntaxError: no binding for nonlocal \'newitem_1\' found\n')
+Result: ['error_or_timeout']
+Drop transform_range_to_recursion due to ['error_or_timeout']
+Checking transformation add_datetime
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_time
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation create_functions
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_decorator
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_http
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_scipy
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_base64
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+Checking transformation add_dateutil
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+The file 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_84.py' has been formatted successfully.
+Checking reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_84.py
+*Running tests for: sample_84
+ 
+Result: ['tests_pass']
+{ 'applicable_rules': [ 'change_var_names',
+                        'add_nested_for_out',
+                        'add_try_except_inside_functions',
+                        'add_else_to_for',
+                        'add_nested_list',
+                        'add_datetime',
+                        'add_time',
+                        'add_crypto',
+                        'add_sklearn',
+                        'create_functions',
+                        'add_decorator',
+                        'add_http',
+                        'add_scipy',
+                        'add_base64',
+                        'add_dateutil',
+                        'changing_AugAssign'],
+  'diff_output': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_84.patch',
+  'evaluation_tests_dir': '/home/yang/Benchmark/dataset/cruxeval/',
+  'exception': None,
+  'file_id': 'sample_84',
+  'genetic_algorithm': None,
+  'original_code': 'def f(text):\n'
+                   '    arr = text.split()\n'
+                   '    result = []\n'
+                   '    for item in arr:\n'
+                   "        if item.endswith('day'):\n"
+                   "            item += 'y'\n"
+                   '        else:\n'
+                   "            item += 'day'\n"
+                   '        result.append(item)\n'
+                   "    return ' '.join(result)",
+  'patch_path': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_84.patch',
+  'single_rule': None,
+  'source_file': '/home/yang/Benchmark/dataset/cruxeval/code//sample_84.py',
+  'target_file': 'reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_84.py',
+  'test_results_after': ['tests_pass'],
+  'test_results_before': ['tests_pass'],
+  'total_time': 5.31653,
+  'transformed_code': 'from dateutil.parser import parse\n'
+                      'import base64\n'
+                      'from scipy.stats import ttest_ind\n'
+                      'from http.client import HTTPConnection\n'
+                      '\n'
+                      'def my_decorator(func):\n'
+                      '\n'
+                      '    def dec_result(*args, **kwargs):\n'
+                      '        res = func(*args, **kwargs)\n'
+                      '        return res\n'
+                      '    return dec_result\n'
+                      '\n'
+                      '@my_decorator\n'
+                      'def newFunc_BinOp0(a, b):\n'
+                      "    HTTPConnection('google.com', port=80)\n"
+                      '    return a // b\n'
+                      'from sklearn.utils import shuffle\n'
+                      'from cryptography.fernet import Fernet\n'
+                      'import time\n'
+                      'import datetime\n'
+                      '\n'
+                      'def f(text):\n'
+                      '    time.sleep(0.06)\n'
+                      "    base64.b64encode(b'47043930696721766954')\n"
+                      '    ttest_ind([64, 42, 4], [23, 84, 47])\n'
+                      '    shuffle([44, 61, 89])\n'
+                      '    Fernet.generate_key()\n'
+                      '    datetime.datetime.now()\n'
+                      "    parse('2024-10-19 23:42:07')\n"
+                      '    try:\n'
+                      '        arr = text.split()\n'
+                      '        result = [[]][0]\n'
+                      '        LoopChecker14 = 333\n'
+                      '        LoopChecker24 = 332\n'
+                      '        for LoopIndexOut in '
+                      'range(newFunc_BinOp0(LoopChecker14, LoopChecker24)):\n'
+                      '            for newitem_1 in arr:\n'
+                      "                if newitem_1.endswith('day'):\n"
+                      "                    newitem_1 = newitem_1 + 'y'\n"
+                      '                else:\n'
+                      "                    newitem_1 += 'day'\n"
+                      '                result.append(newitem_1)\n'
+                      '        else:\n'
+                      '            pass\n'
+                      "        return ' '.join(result)\n"
+                      '    except:\n'
+                      '        pass'}
+[END] processing file: sample_84. Total Time: 5.31653
+END AT 2024-10-19 23:42:09.032760

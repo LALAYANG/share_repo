@@ -1,0 +1,52 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_89.py	2024-10-19 23:42:37.003043126 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_89.py	2024-10-19 23:42:41.443998855 -0500
+@@ -1,6 +1,43 @@
++from sklearn.utils import shuffle
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++    ttest_ind([43, 63, 64], [64, 60, 71])
++    HTTPConnection('google.com', port=80)
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    base64.b64encode(b'24361191720413881160')
++    return dec_result
++
++
++@my_decorator
++def newFunc_BinOp0(a, b):
++    return a & b
++
++
+ def f(char):
+-    if char not in 'aeiouAEIOU':
+-        return None
+-    if char in 'AEIOU':
+-        return char.lower()
+-    return char.upper()
+\ No newline at end of file
++    shuffle([43, 74, 22])
++    time.sleep(0.09)
++    Fernet.generate_key()
++    parse('2024-10-19 23:42:40')
++    datetime.datetime.now()
++    try:
++        ConditionChecker12 = [229][0]
++        ConditionChecker22 = 305
++        if newFunc_BinOp0(ConditionChecker12, ConditionChecker22):
++            if char not in 'aeiouAEIOU':
++                return None
++        if char in 'AEIOU':
++            return char.lower()
++        return char.upper()
++    except:
++        pass

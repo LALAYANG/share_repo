@@ -1,0 +1,46 @@
+--- /home/yang/Benchmark/dataset/cruxeval/code//sample_575.py	2024-10-19 23:35:30.131266444 -0500
++++ reasoning_transformation_cruxeval/CRUXEval/951a917df7397c9cb698ead54386db6d1db4ffb0/Transformation/sample_575.py	2024-10-19 23:35:35.591212956 -0500
+@@ -1,4 +1,39 @@
++from sklearn.utils import shuffle
++import numpy as np
++import datetime
++import time
++from cryptography.fernet import Fernet
++from dateutil.parser import parse
++import base64
++from scipy.stats import ttest_ind
++from http.client import HTTPConnection
++
++
++def my_decorator(func):
++
++    def dec_result(*args, **kwargs):
++        res = func(*args, **kwargs)
++        return res
++    ttest_ind([76, 24, 19], [89, 34, 38])
++    parse('2024-10-19 23:35:34')
++    return dec_result
++
++
++@my_decorator
++def newFunc_BinOp0(a, b):
++    base64.b64encode(b'79744017884997370465')
++    HTTPConnection('google.com', port=80)
++    return a * b
++
++
+ def f(nums, val):
+-    new_list = []
+-    [new_list.extend([i] * val) for i in nums]
+-    return sum(new_list)
+\ No newline at end of file
++    shuffle([15, 36, 11])
++    Fernet.generate_key()
++    datetime.datetime.now()
++    time.sleep(0.17)
++    try:
++        new_list = [[]][0]
++        [new_list.extend(newFunc_BinOp0([newi_1], val)) for newi_1 in nums]
++        return np.sum(np.array([new_list]))
++    except:
++        pass
